@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
-import { getCandles, getQuote } from "@/lib/finnhub";
+import { getHistory, getQuote } from "@/lib/finnhub";
 import PriceChart from "@/components/PriceChart";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +13,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const supabase = await supabaseServer();
   const { data: company } = await supabase.from("companies").select("ticker,name,segment,size_tier").eq("ticker", ticker).maybeSingle();
   if (!company) notFound();
-  const [q, c] = await Promise.all([getQuote(ticker), getCandles(ticker)]);
+  const [q, c] = await Promise.all([getQuote(ticker), getHistory(ticker)]);
   return (
     <main>
       <Link href="/">← Search</Link>
