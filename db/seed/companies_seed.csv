@@ -1,0 +1,26 @@
+ticker,name,segment,size_tier,is_hero,note
+UBER,Uber Technologies,consumer,large,true,provisional
+AAPL,Apple,consumer,large,false,provisional
+META,Meta Platforms,consumer,large,false,provisional
+MSFT,Microsoft,business,large,false,provisional
+CRM,Salesforce,business,large,false,provisional
+PLTR,Palantir Technologies,business,large,false,provisional
+NVDA,NVIDIA,infrastructure,large,false,provisional
+TSM,Taiwan Semiconductor Manufacturing,infrastructure,large,false,provisional
+AMD,Advanced Micro Devices,infrastructure,large,false,provisional
+DASH,DoorDash,consumer,mid,false,provisional
+SPOT,Spotify Technology,consumer,mid,false,provisional
+DUOL,Duolingo,consumer,mid,false,provisional
+SNOW,Snowflake,business,mid,false,provisional
+DDOG,Datadog,business,mid,false,provisional
+NET,Cloudflare,business,mid,false,provisional
+CRWV,CoreWeave,infrastructure,mid,true,provisional
+CBRS,Cerebras Systems,infrastructure,mid,false,provisional - confirm name/ticker
+NBIS,Nebius Group,infrastructure,mid,false,provisional
+LYFT,Lyft,consumer,small,true,provisional
+BMBL,Bumble,consumer,small,false,provisional
+BRZE,Braze,business,small,false,provisional
+SPT,Sprout Social,business,small,false,provisional
+FSLY,Fastly,infrastructure,small,false,provisional
+DOCN,DigitalOcean,infrastructure,small,false,provisional
+APLD,Applied Digital,infrastructure,small,false,provisional
