@@ -1,0 +1,8 @@
+# Models are named by role. Fill in ids when chosen; do not invent ids.
+live_cost_cap_usd: 0
+batch_runs: claude_code_subscription   # no per-token fee
+roles:
+  extractor:        { model: TBD, note: "batch, runs in Claude Code" }
+  verifier_cheap:   { model: TBD, note: "free tier; must be a different vendor than extractor" }
+  verifier_strong:  { model: TBD, note: "escalation only" }
+  live_lookup:      { model: TBD, note: "free tier; if none available, queue to lookup_queue" }
