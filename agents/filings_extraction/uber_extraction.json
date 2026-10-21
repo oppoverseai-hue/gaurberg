@@ -1,0 +1,634 @@
+[
+ {
+  "counterparty": "Bolt",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Bolt",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Didi",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Didi",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Lyft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Lyft",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Ola",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Ola",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Tesla",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Tesla",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "DoorDash",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "DoorDash",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Instacart",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Instacart",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Gopuff",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Gopuff",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Rappi",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Rappi",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Delivery Hero",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Delivery Hero",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Just Eat Takeaway",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Just Eat Takeaway",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "C.H. Robinson",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "C.H. Robinson",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Total Quality Logistics",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Total Quality Logistics",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "RXO",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "RXO",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "XPO",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "XPO",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Echo Global Logistics",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "Echo Global Logistics",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "DHL",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "UBER",
+  "target": "DHL",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Aurora",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Aurora",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "a $802 million net unrealized loss on our Aurora investment",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Didi",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Didi",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "a $409 million net unrealized gain on our Didi investment",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Grab",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Grab",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "a $145 million net unrealized gain on our Grab investment",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Lucid",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Lucid",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "a $155 million net unrealized loss on our Lucid investment",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Waabi",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Waabi",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "a $179 million net unrealized gain on our Waabi investment",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Lime",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Lime",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "is considered a related party as a result of our investment in Lime Common Stock",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Moove",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Moove",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "we entered into and completed a series of agreements with Moove, including (i) an equity investment, through preferred shares, (ii) a term loan to Moove, and (iii) a commercial partnership agreement",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Moove",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "UBER",
+  "target": "Moove",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "we entered into and completed a series of agreements with Moove, including (i) an equity investment, through preferred shares, (ii) a term loan to Moove, and (iii) a commercial partnership agreement",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Arizona State University",
+  "entity_type": "organization",
+  "type": "partners",
+  "source": "UBER",
+  "target": "Arizona State University",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "our partnership with Arizona State University",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "ITF",
+  "entity_type": "organization",
+  "type": "partners",
+  "source": "UBER",
+  "target": "ITF",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We renewed our agreement with the ITF (International Transport Workers’ Federation)",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "UGT",
+  "entity_type": "organization",
+  "type": "partners",
+  "source": "UBER",
+  "target": "UGT",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Uber Eats and the UGT (Unión General de Trabajadores) signed a memorandum of understanding",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Waymo",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Waymo",
+  "target": "UBER",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Waymo has introduced a commercialized ridehailing fleet of autonomous vehicles on its own platform in addition to a fleet of autonomous vehicles that it makes available through our platform",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Lucid",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Lucid",
+  "target": "UBER",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "we agreed to purchase, or have our designated fleet operators purchase, a minimum of 20,000 Lucid vehicles equipped with Nuro’s Level 4 autonomous driving systems over a six-year period",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Nuro",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Nuro",
+  "target": "UBER",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "we agreed to purchase, or have our designated fleet operators purchase, a minimum of 20,000 Lucid vehicles equipped with Nuro’s Level 4 autonomous driving systems over a six-year period",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Mobility Drivers",
+  "entity_type": "segment_group",
+  "type": "supplies",
+  "source": "Mobility Drivers",
+  "target": "UBER",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We connect consumers (“Rider(s)”) with independent providers of ride services (“Mobility Driver(s)”) for ridesharing services",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Couriers",
+  "entity_type": "segment_group",
+  "type": "supplies",
+  "source": "Couriers",
+  "target": "UBER",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "with delivery service providers (“Couriers”) for meal preparation, grocery and other delivery services",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ },
+ {
+  "counterparty": "Riders",
+  "entity_type": "segment_group",
+  "type": "sells_to",
+  "source": "UBER",
+  "target": "Riders",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We connect consumers (“Rider(s)”) with independent providers of ride services (“Mobility Driver(s)”) for ridesharing services",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null
+ }
+]
