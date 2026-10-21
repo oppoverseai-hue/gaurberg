@@ -1,0 +1,3470 @@
+[
+ {
+  "id": 1,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Amazon among companies DASH competes with; competes is undirected, so the order does not matter.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 2,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Uber Eats among companies DASH competes with; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 3,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Prosus among companies DASH competes with; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 4,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Delivery Hero among companies DASH competes with; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 5,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "DASH relies on Stripe to process payments, so Stripe is DASH's supplier; supplies fits this service relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 6,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says DASH relies on third-party payment processors, primarily Stripe and PayPal, making PayPal a supplier.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 7,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says DASH has integrations with and relies on Olo, a supplier relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 8,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Google Maps as a vendor, not Alphabet; the parent company is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 9,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence names AWS as the data center provider; Amazon is not named, so the link depends on outside knowledge.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 10,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says 'the Company' acquired Deliveroo plc; 'the Company' is DASH per the focal company.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 11,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a derivative contract with Bank of America, a financial counterparty, not a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 12,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Mentions the SevenRooms acquisition, but the sentence does not name DASH as the acquirer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 13,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Mentions the Symbiosys acquisition, but the sentence does not name DASH as the acquirer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 14,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Refers to the acquisition of Wolt without naming the acquirer, so the source is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 15,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a bridge credit agreement where the bank lends to DASH, which is financing, not a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 16,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 17,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 18,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 19,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 20,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 21,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Grubhub as a competitor to Instacart's restaurant offering. Competes is undirected, so direction is fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 22,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Gopuff as a vertically integrated competitor that CART may not effectively compete with.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 23,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Walmart is described as an advantaged rival, but the sentence never explicitly says it competes with CART.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 24,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states CART acquired Marlin9 Holdings, which operates as Wynshop. Acquirer-to-target direction is correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 25,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence never names PricewaterhouseCoopers. It only says an unnamed firm has been CART's auditor since 2017.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 26,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence refers to an acquisition of Marlin 9 Holdings by 'the Company', but never names CART as the acquirer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 27,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence describes a named collaboration with Samsung to manufacture semiconductors, which fits an undirected partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 28,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Tesla relies on Panasonic as a supplier of cells, so Panasonic supplies Tesla.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 29,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Tesla relies on CATL as a supplier of cells, so CATL supplies Tesla.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 30,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Names xAI only in a section title, and describes an agreement to make a future investment, not an existing holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 31,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States TSLA recognized revenue from xAI for purchasing Megapack products, so TSLA sells to xAI.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 32,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "A framework agreement for evaluating potential collaborations is stated, but no specific partnership is established yet.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 33,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Names a Digital Banking JV with Singtel, a named partnership; the link is undirected, so direction is fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 34,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States GRAB owns a 72.5% equity interest in Jaya Grocer, which is an equity investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 35,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Grab acquired Uber's Southeast Asia business, not Uber itself. The target is misstated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 36,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Uber has a shareholding in the company, so Uber holds equity in GRAB; direction and type are correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 37,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states GRAB faces competition from Foodpanda in deliveries; competes is undirected and correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 38,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states GRAB faces competition from ShopeeFood in deliveries; competes is undirected and correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 39,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states GRAB faces competition from Gojek in deliveries; competes is undirected and correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 40,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Line Man Wongnai among players GRAB faces competition from; competes is correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 41,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says the platform competes with on-demand services such as Lalamove. Competes is undirected, so direction is satisfied.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 42,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names AhaMove as a single-market player the platform competes with in Vietnam.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 43,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Transportify as a single-market player the platform competes with in the Philippines.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 44,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states the company faces competition from Be Group in Vietnam in its mobility segment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 45,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Bolt as a competitor in Thailand and in several Southeast Asian countries.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 46,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "Filing states Grab faces competition from Tada in Singapore; competes is undirected, so direction is irrelevant.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 47,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "Filing states Grab faces competition from Ryde in Singapore; competes is undirected, so direction is irrelevant.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 48,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Xanh SM among companies Grab faces competition from in several Southeast Asian countries.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 49,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Maxim among companies Grab faces competition from in several Southeast Asian countries.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 50,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "Filing lists InDrive among companies Grab faces competition from in several Southeast Asian countries.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 51,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names ComfortDelGro among competitors the company faces in mobility, so the undirected competes link holds.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 52,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence is hypothetical: Didi would compete only if it re-enters the markets, and it says it once operated there, not that it currently competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 53,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing cites partnerships with MUFG for certain digital financial services, matching the undirected partners link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 54,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing cites partnerships with Toyota for certain driver-related services, matching the undirected partners link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 55,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states the company acquired a majority economic interest in Jaya Grocer in 2022, matching the acquires link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 56,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says GRAB acquired a majority stake in 'Everrise, Validus Capital'; unclear whether Validus Capital is the same entity or a separate one.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 57,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states GRAB acquired a majority economic interest in Everrise, matching the acquires link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 58,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states GRAB acquired a majority economic interest in Infermove, matching the acquires link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 59,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says GRAB agreed to acquire Stash, with completion pending approvals; the claimed acquisition is not confirmed as completed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 60,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says GRAB terminated the proposed Trans-cab acquisition and withdrew its merger application, so no acquisition occurred.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 61,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Grab relies on strategic partnerships with Visa; partners is undirected, so the type matches.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 62,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names a strategic partnership with Mastercard as part of payment processing; partners fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 63,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says Grab relies on Adyen to process payments, but frames it as a strategic partnership, not a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 64,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says Grab relies on Stripe to process payments, but frames it as a strategic partnership, not a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 65,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Grab holds less than 50% equity interest in PT Super Bank Indonesia Tbk, matching invests from Grab.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 66,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Grab owns 82.8% of BCP and has control rights, so Grab invests in BCP.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 67,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Grab owns 49% of SPI, an equity investment in SPI.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 68,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Grab completed its 100% ownership investment in OVO.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 69,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Grab has less than 50% equity interest in Super Bank Indonesia, an equity investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 70,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Emtek as a strategic alliance partner of Grab, an undirected partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 71,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence states 49% ownership of Grab Company Limited, but the target \"Grab\" is ambiguous and may refer to the focal company itself.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 72,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states GRAB owns 40% of Grab PH Holdings Inc., which is an equity investment in the named target.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 73,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence describes a completed 100% ownership of OVO, which is an acquisition, though it is worded as an investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 74,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence calls GXS Bank GRAB's digital banking joint venture, a named collaboration matching the partners type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 75,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names GXBank alongside GXS Bank as part of the digital banking joint venture, matching the partners type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 76,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Calling Toyota a principal shareholder implies it holds equity in GRAB; source, target and type all fit.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 77,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence confirms GRAB acquired a 60% stake in 'GOM' but never links GOM to GrabFin Operations (Malaysia).",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 78,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "GrabCar, a wholly-owned GRAB subsidiary, contracted to buy vehicles from MUV Marketplace, so MUV supplies the group.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 79,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes KPMG as auditor only; it says nothing about KPMG supplying goods or services to GRAB.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 80,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence is truncated and names no acquisition target, so Validus is not mentioned and the claim is unsupported.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 81,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states the Group (Grab) took a minority equity stake in Vay Technology; investor-to-target direction and invests type match.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 82,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states AMD acquired ZT Group (ZT Systems); acquirer-to-target direction and acquires type match.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 83,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "AMD sold a business to Sanmina, so Sanmina is the buyer. This is a divestiture, not a customer relationship, so sells_to fits loosely.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 84,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Product purchase agreement with OpenAI to deploy AMD GPUs; AMD supplies OpenAI as customer, so sells_to fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 85,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names a multiyear strategic partnership with OpenAI; undirected partners type matches.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 86,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says AMD competes primarily against Intel in the Data Center segment; competes is undirected, so direction is satisfied.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 87,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Nvidia as a primary Data Center competitor; 'Nvidia' and 'NVIDIA' are the same company.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 88,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states AMD competes against Altera with FPGA and adaptive SoC server products.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 89,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Lattice Semiconductor Corporation among primary FPGA competitors, which supports a competes link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 90,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Microsemi Corporation among primary FPGA competitors, which supports a competes link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 91,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 92,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 93,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 94,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 95,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 96,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lists Qualcomm among ASSP vendors the filer calls its competitors; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 97,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States the filer uses TSMC for wafer production, so TSMC supplies the filer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 98,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States the filer makes wafer purchases from GLOBALFOUNDRIES for HPC products, so GF supplies the filer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 99,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States the filer utilizes UMC for production of its ICs, so UMC supplies the filer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 100,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States the filer utilizes Samsung Electronics for production of its ICs, so Samsung supplies the filer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 101,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 102,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 103,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 104,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 105,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 106,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "sells_to"
+  },
+  "verdict": "uncertain",
+  "reason": "Says AMD chips power Valve's Steam Machine, implying Valve as customer, but no sale to Valve is stated explicitly.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 107,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "supplies"
+  },
+  "verdict": "pass",
+  "reason": "States AMD uses UMC to manufacture its integrated circuits, so UMC supplies AMD in the right direction.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 108,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "supplies"
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes ATMP JVs and never names Tongfu Microelectronics as a supplier.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 109,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "fail",
+  "reason": "Describes AMD's reliance on Microsoft's OS support, a dependency rather than a named partnership or collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 110,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "invests"
+  },
+  "verdict": "fail",
+  "reason": "AMD's equity is in joint ventures with Higon, not in Higon itself; partners would fit better than invests.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 111,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 112,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 113,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 114,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 115,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 116,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 117,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 118,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 119,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 120,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 121,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 122,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 123,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 124,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 125,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 126,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 127,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 128,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 129,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 130,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 131,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 132,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 133,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 134,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 135,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 136,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names SMIC as an Intel Foundry competitor; competes is undirected, so direction is satisfied.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 137,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Intel says it will continue using TSMC as a foundry supplier for key tiles, so TSMC supplies Intel.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 138,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing describes reliance on ASML as a sole-source provider of EUV lithography tools, which is a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 139,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Intel holds equity interests representing an 80% ownership interest in Mobileye, matching invests.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 140,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Intel holds equity interests representing a 68% ownership interest in IMS, matching invests.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 141,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Intel holds a retained equity interest in Altera, accounted for as an equity method investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 142,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Intel issued DOC 275 million shares plus a warrant, which is an equity stake held by DOC in Intel.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 143,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Describes an agreement for Intel to issue and sell SoftBank 87 million shares for $2.0 billion.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 144,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Describes an agreement for Intel to issue and sell NVIDIA 215 million shares for $5.0 billion.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 145,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Describes a joint investment and financing arrangement with Brookfield, which may be a collaboration but is not clearly a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 146,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence describes a joint investment with Apollo in Fab 34, a financing collaboration rather than a clearly named partnership; direction is undirected, so fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 147,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says the U.S. government became one of Intel's largest stockholders, so it holds equity in INTC.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 148,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Intel provides wafer manufacturing and sale services to Altera under an agreement, so Intel sells to Altera as customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 149,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Intel divesting its NAND business to SK hynix, an asset sale, not SK hynix as a customer buying products.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 150,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says IMS is a majority-owned subsidiary consolidated by Intel, which means Intel holds an equity stake.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 151,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 152,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 153,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 154,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 155,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 156,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Indemnity for CPUs implies HPE uses Intel CPUs, but the sentence never states a sale or customer relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 157,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Indemnity for CPUs implies HPI uses Intel CPUs, but the sentence never states a sale or customer relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 158,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Indemnity for CPUs implies IBM uses Intel CPUs, but the sentence never states a sale or customer relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 159,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Indemnity for CPUs implies Lenovo uses Intel CPUs, but the sentence never states a sale or customer relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 160,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Indemnity for CPUs implies Oracle uses Intel CPUs, but the sentence never states a sale or customer relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 161,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 162,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 163,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 164,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 165,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 166,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States TSMC owns about 41.0% of Xintec's equity, matching the source, target, and invests type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 167,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Calls Xintec a supplier and says the stake supports TSMC's business, but the stated link is TSMC's equity stake, not Xintec supplying TSMC.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 168,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "A direct CHIPS Act funding agreement is a funding arrangement, not a named partnership or collaboration; source is TSMC Arizona.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 169,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sony's stake is in JASM, not TSM, so the target is wrong and the sentence does not mention TSM.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 170,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "DENSO's minority stake is in JASM, not TSM, so the target is wrong and the sentence does not mention TSM.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 171,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says 'we' (TSMC, assumed from focal company) and Sony jointly announced JASM investment, a named collaboration; undirected, so direction holds.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 172,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names TSMC ('we') and DENSO jointly announcing JASM investment, a named collaboration; undirected partnership fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 173,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence defines Toyota as Toyota Motor Corporation and names it alongside the filer in a joint JASM investment, a named collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 174,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Bosch's 10% stake is in ESMC, not TSM; the sentence never identifies ESMC as TSM, so the target is unsupported.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 175,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Infineon's 10% stake is in ESMC, not TSM; the sentence does not name TSM as the target, so the claim is unsupported.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 176,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says NXP invested in ESMC, not TSM. TSM is not mentioned, so the target is wrong.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 177,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States TSMC owns about 27.6% of VIS's equity, matching an invests link from TSM to VIS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 178,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "VIS is obligated to manufacture wafers for TSMC under a manufacturing agreement, which is a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 179,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "SSMC is a joint venture TSMC established with Philips and EDB, a named partnership; undirected, so direction is fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 180,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States SSMC's business is exclusively dedicated to manufacturing wafers for TSMC, a supply relationship from SSMC to TSM.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 181,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Describes joint ownership of SSMC by TSM and NXP, not a named partnership. Partners fits weakly; co-ownership is the closer fact.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 182,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States TSM established the SSMC joint venture with Philips, a named collaboration. Partners fits and direction is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 183,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States TSM established the SSMC joint venture with EDB, a named collaboration. Partners fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 184,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States TSM owned about 34.8% of GUC's equity. Source holds the investment in target; invests fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 185,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States TSM had sales of NT$31,094 million to GUC, a customer. Source sells to target; sells_to fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 186,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes Deloitte as auditor assessing internal controls; it states no supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 187,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Fragment names GUC and its subsidiaries only; it states no equity investment in TSM.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 188,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Adobe as a direct competitor to Oracle's enterprise offerings; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 189,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Alphabet among companies whose offerings compete directly with Oracle's; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 190,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Amazon among companies whose offerings compete directly with Oracle's; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 191,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states ORCL's offerings compete directly with Cisco Systems' offerings; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 192,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states ORCL's offerings compete directly with Intel Corporation's offerings; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 193,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states ORCL's offerings compete directly with International Business Machines' offerings; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 194,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states ORCL's offerings compete directly with Microsoft Corporation's offerings; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 195,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states ORCL's offerings compete directly with Salesforce, Inc.'s offerings; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 196,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Oracle's offerings compete directly with SAP SE's offerings; competes is undirected, so the order does not matter.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 197,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Hewlett-Packard Enterprise among companies whose offerings compete directly with Oracle's.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 198,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Workday, Inc. among companies whose offerings compete directly with Oracle's.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 199,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Oracle faces competition from Allscripts Healthcare Solutions, Inc. as a large healthcare IT provider.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 200,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Oracle faces competition from Arcadia Solutions as a large healthcare IT provider.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 201,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Oracle faces competition from athenahealth, a named competitor; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 202,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Oracle faces competition from Epic Systems, a named competitor; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 203,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Oracle faces competition from InterSystems, a named competitor; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 204,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Oracle's acquisition of Cerner Corporation, so Oracle is the acquirer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 205,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Oracle is majority shareholder of Oracle Financial Services Software Limited, an equity investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 206,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states ORCL is majority shareholder of Oracle Corporation Japan, matching an invests link from source to target.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 207,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says ORCL held an investment in Ampere, later sold; the held-then-divested stake still fits invests.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 208,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says ORCL held debt and equity investments with Ampere, an equity method investee.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 209,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says ORCL held investments mostly with TikTok USDS JV, in which it has a 15% ownership interest.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 210,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence describes a data center lease by APLD subsidiaries to CoreWeave, which is not clearly a sale or supply.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 211,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence explicitly names a partnership with Base Electron Corporation; partners is undirected, so it fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 212,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "APLD states it owns approximately 96% of ChronoScale, which is an equity holding matching 'invests'.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 213,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says APLD consolidates purchasing and names ABB for electrical equipment, implying ABB supplies APLD.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 214,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says APLD consolidates purchasing and names BASX for mechanical and cooling systems, implying BASX supplies APLD.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 215,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says APLD consolidates purchasing and names Caterpillar for backup generation, implying Caterpillar supplies APLD.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 216,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes a credit agreement with the bank as administrative and collateral agent. It states no supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 217,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says APLD competes with Digital Realty Trust. Undirected competes link matches.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 218,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says APLD competes with Equinix. Undirected competes link matches.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 219,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names IREN Limited as a competitor, the same entity as target IREN.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 220,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Cipher Digital Inc. as a competitor. Undirected competes link matches.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 221,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names TeraWulf among companies APLD competes with in data centers; competes is undirected, so direction is moot.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 222,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Hut 8 among companies APLD competes with in data centers; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 223,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Riot Platforms among companies APLD competes with in data centers; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 224,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names CleanSpark among companies APLD competes with in data centers; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 225,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names HIVE Digital Technologies among companies APLD competes with in data centers; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 226,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states APLD competes with companies including Core Scientific, Inc., naming it among competitors.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 227,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Bitdeer Technologies Group among companies APLD competes with in HPC infrastructure.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 228,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Galaxy Digital Inc. among companies APLD competes with, as competitors.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 229,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Fermi Inc. among companies APLD competes with, as competitors.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 230,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Keel Infrastructure Corp among companies APLD competes with, as competitors.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 231,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names MARA Holdings among companies APLD competes with; competes is undirected, so direction is satisfied.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 232,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "CoreWeave was issued a warrant to acquire APLD shares, but the sentence does not confirm an equity holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 233,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names MIP HPC Holdings as purchaser, not Macquarie Asset Management; Macquarie is never mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 234,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states APLD holds an investment in BWE common stock, matching the invests link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 235,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing refers to APLD's investment in Base Electron, a related party, supporting an invests link from APLD.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 236,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes APLD's investment in Corintis, not in B&W; B&W is never mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 237,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states the Company invested in Corintis SA for Series A1 preferred shares, an equity investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 238,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes MIP investing in subsidiary APLD HPC TopCo 2, not in APLD itself.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 239,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence mentions a 'transaction' with Ekso but does not say it was an acquisition or who acquired whom.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 240,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names TikTok as a competitive product affecting Meta's engagement, which implies competition; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 241,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Describes Apple's browser and iOS changes hurting Meta's ads and expanding Apple's ad business, but never names Apple as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 242,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Says Google integrated 'competitive products' with Android, implying competition; undirected competes fits, though Meta is not named.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 243,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Refers to divesting Giphy 'post-acquisition', which implies Meta acquired Giphy; the acquires link is correctly directed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 244,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Meta completed its acquisition of Within Unlimited after prevailing in federal court against the FTC.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 245,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lists 'our acquisitions of Instagram and WhatsApp' among lawsuits, directly stating Meta acquired Instagram.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 246,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Meta acquired WhatsApp in 2014, though framed within the FTC's antitrust allegations.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 247,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence names Google LLC, not Alphabet; licensing revenue from Google suggests Apple sells to Google.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 248,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Names Android as a competing platform, not a company; the link to the target organisation is not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 249,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Names Windows as a competing platform, not Microsoft; the company link is not stated in the sentence.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 250,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Names PlayStation as a competing platform, not Sony; the company link is not stated in the sentence.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 251,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 252,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 253,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 254,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 255,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 256,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says the U.S. Army selected PLTR to develop and deliver a system, a customer relationship with PLTR as supplier.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 257,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence names Amazon Web Services, not Amazon itself, as the infrastructure operator PLTR depends on.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 258,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says PLTR depends on computing infrastructure operated by Microsoft, so Microsoft supplies PLTR.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 259,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence cites a commercial relationship and dependency on JD Cloud, which fits supplies better than a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 260,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "JD Cloud provides solutions and operates facilities that are part of NET's network, so JD Cloud supplies NET.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 261,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filer recorded goodwill from its acquisition of Replicate, implying NET acquired Replicate.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 262,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States the Company acquired all outstanding shares of Kivera, directly supporting the acquisition claim.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 263,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Describes a long-term strategic technology and supply arrangement established between Lucid and Aston Martin, a named collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 264,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Says Lucid will supply components to Aston Martin, fitting 'supplies' more closely; no sale or customer relationship is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 265,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Lucid formed a partnership with Uber (and Nuro) for a robotaxi offering, a named undirected partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 266,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 267,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 268,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 269,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 270,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 271,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Tesla among EV manufacturers LCID competes with; competes is undirected and correctly typed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 272,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Rivian among EV manufacturers LCID competes with; competes is undirected and correctly typed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 273,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Nuro installs its software in LCID vehicles under an integration agreement; 'supplies' is plausible, but 'partners' may fit better.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 274,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says LCID acquired select assets and leases from Nikola, not the company; 'acquires' overstates it.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 275,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Under a Vehicle Production Agreement, Uber agrees to buy 20,000 vehicles from LCID; sells_to fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 276,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Describes LCID gaining access to Tesla's Supercharger network under Tesla's conditions, implying a collaboration but not explicitly a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 277,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Ayar beneficially owns a significant equity interest in LCID, so Ayar invests in LCID.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 278,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States PIF beneficially owns a significant equity interest in LCID, so PIF invests in LCID.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 279,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "SMB agreed to purchase LCID common stock in a private placement, which is an equity investment in LCID.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 280,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "LCID received 28,352,273 ordinary shares of Aston Martin, so LCID holds equity in Aston Martin.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 281,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 282,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 283,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 284,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 285,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 286,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes a DDTL credit facility with Ayar, a lending relationship, not a named partnership or collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 287,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lucid LLC contracts Al Bawani for design and construction services, so Al Bawani supplies the company. Lucid LLC is treated as the focal entity.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 288,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The purchase agreement has the Saudi government as buyer and Lucid LLC as seller, matching sells_to from LCID to the government.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 289,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "An auditor consent exhibit that names KPMG as auditor. It states no supply relationship with LCID.",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]
