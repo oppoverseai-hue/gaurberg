@@ -1,0 +1,42 @@
+{
+ "ticker": "NBIS",
+ "edges_in": 30,
+ "edges_out": 28,
+ "edges_merged": 2,
+ "new_nodes": [
+  "Bezos Expeditions",
+  "ClickHouse",
+  "Crusoe",
+  "Fireworks AI",
+  "Grubhub",
+  "Hyundai",
+  "Lambda",
+  "SMB Holding Corporation",
+  "Tavily",
+  "Together AI",
+  "Toloka"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Nvidia",
+   "resolved": "NVIDIA",
+   "how": "normalized"
+  },
+  {
+   "raw": "Lambda Labs",
+   "resolved": "Lambda",
+   "how": "merged_new"
+  },
+  {
+   "raw": "Zoox",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

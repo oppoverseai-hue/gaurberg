@@ -1,0 +1,45 @@
+{
+ "role": "verifier_baseline",
+ "model": "claude-haiku-5-5",
+ "items": 28,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3372,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2225,
+   "cost_usd": 0.0021995699999999997,
+   "seconds": 11.0,
+   "is_error": false,
+   "batch": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3620,
+   "cache_read_tokens": 12597,
+   "output_tokens": 3719,
+   "cost_usd": 0.0031139699999999998,
+   "seconds": 18.2,
+   "is_error": false,
+   "batch": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2453,
+   "cache_read_tokens": 12597,
+   "output_tokens": 688,
+   "cost_usd": 0.0012628700000000001,
+   "seconds": 6.0,
+   "is_error": false,
+   "batch": 3
+  }
+ ],
+ "totals": {
+  "input_tokens": 6,
+  "cache_creation_tokens": 9445,
+  "cache_read_tokens": 37791,
+  "output_tokens": 6632,
+  "cost_usd": 0.0065764099999999995,
+  "seconds": 35.2
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "role": "verifier_baseline",
+ "model": "claude-haiku-5-5",
+ "items": 24,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2643,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1286,
+   "cost_usd": 0.0016233700000000003,
+   "seconds": 7.8,
+   "is_error": false,
+   "batch": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2631,
+   "cache_read_tokens": 12597,
+   "output_tokens": 844,
+   "cost_usd": 0.0014217700000000002,
+   "seconds": 6.4,
+   "is_error": false,
+   "batch": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2659,
+   "cache_read_tokens": 12597,
+   "output_tokens": 874,
+   "cost_usd": 0.00140317,
+   "seconds": 6.4,
+   "is_error": false,
+   "batch": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2588,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2248,
+   "cost_usd": 0.00209687,
+   "seconds": 12.2,
+   "is_error": false,
+   "batch": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2775,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1191,
+   "cost_usd": 0.00161847,
+   "seconds": 7.8,
+   "is_error": false,
+   "batch": 5
+  }
+ ],
+ "totals": {
+  "input_tokens": 10,
+  "cache_creation_tokens": 13296,
+  "cache_read_tokens": 62985,
+  "output_tokens": 6443,
+  "cost_usd": 0.00816365,
+  "seconds": 40.6
+ }
+}
