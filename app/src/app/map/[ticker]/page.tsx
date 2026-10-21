@@ -4,6 +4,8 @@ import { getAccess } from "@/lib/supabase/server";
 import { getCompany, getRels } from "@/lib/data";
 import type { Rel } from "@/lib/graph";
 import MapView from "@/components/MapView";
+import LiveLookup from "@/components/LiveLookup";
+import { isOffline } from "@/lib/mode";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +23,10 @@ export default async function MapPage({ params }: { params: Promise<{ ticker: st
       {error ? (
         <div className="card" style={{ margin: 24 }}><p>Could not load links. <Link href={`/map/${ticker}`}>Retry</Link></p></div>
       ) : rels.length === 0 ? (
-        <div className="card" style={{ margin: 24 }}><p>{focal.is_seed ? "No disclosed relationships found for this company." : "This company is not yet mapped."}</p></div>
+        <div style={{ margin: 24 }}>
+          <div className="card"><p>{focal.is_seed ? "No disclosed relationships found for this company." : "This company is not yet mapped."}</p></div>
+          {!focal.is_seed && (isOffline() ? <p className="muted mono" style={{ fontSize: 12 }}>Live lookup needs the network and is off in the offline demo.</p> : <LiveLookup query={focal.ticker ?? focal.name} />)}
+        </div>
       ) : (
         <MapView focal={focal} rels={rels} isAdmin={access.role === "admin"} />
       )}
