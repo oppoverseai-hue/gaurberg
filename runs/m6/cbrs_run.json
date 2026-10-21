@@ -1,0 +1,129 @@
+{
+ "ticker": "CBRS",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+ "chunks": 11,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31028,
+   "cache_read_tokens": 12600,
+   "output_tokens": 605,
+   "cost_usd": 0.1344783,
+   "seconds": 6.6,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28941,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2197,
+   "cost_usd": 0.1418421,
+   "seconds": 14.9,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28074,
+   "cache_read_tokens": 12600,
+   "output_tokens": 421,
+   "cost_usd": 0.12052590000000002,
+   "seconds": 5.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28785,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1915,
+   "cost_usd": 0.13838150000000002,
+   "seconds": 14.0,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30453,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2218,
+   "cost_usd": 0.1482523,
+   "seconds": 12.6,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32355,
+   "cache_read_tokens": 12600,
+   "output_tokens": 945,
+   "cost_usd": 0.143319,
+   "seconds": 7.6,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32484,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2399,
+   "cost_usd": 0.1583869,
+   "seconds": 14.2,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32824,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1573,
+   "cost_usd": 0.1516714,
+   "seconds": 12.4,
+   "is_error": false,
+   "chunk": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31712,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2862,
+   "cost_usd": 0.1598537,
+   "seconds": 17.8,
+   "is_error": false,
+   "chunk": 9
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29917,
+   "cache_read_tokens": 12600,
+   "output_tokens": 376,
+   "cost_usd": 0.1276332,
+   "seconds": 5.2,
+   "is_error": false,
+   "chunk": 10
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 26745,
+   "cache_read_tokens": 12600,
+   "output_tokens": 837,
+   "cost_usd": 0.1193425,
+   "seconds": 6.7,
+   "is_error": false,
+   "chunk": 11
+  }
+ ],
+ "totals": {
+  "input_tokens": 22,
+  "cache_creation_tokens": 333318,
+  "cache_read_tokens": 138600,
+  "output_tokens": 16348,
+  "cost_usd": 1.5436868000000001,
+  "seconds": 117.8
+ },
+ "edges": 46,
+ "quotes_not_found": 6
+}
