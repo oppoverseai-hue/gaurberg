@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
 import reqData from "../../../data/requirements.json";
 import milestones from "../../../data/milestones.json";
+import superseded from "../../../data/superseded.json";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +15,8 @@ const day = (s: string) => new Date(s).toISOString().slice(0, 10);
 // Latest result per test: the newest row for each saved run (run_id). A test passes only if every one of those latest rows passed.
 // A failure whose run later passed is not listed (PRC-2). A test with no rows is "Not run", never a pass (APP-14).
 function latest(rows: T[]) {
+  // Failures the admin has marked superseded are set aside and shown separately, never counted as passes.
+  rows = rows.filter((r) => !superseded.some((x) => x.test_id === r.test_id && x.run_id === r.run_id));
   const per = new Map<string, Map<string, T>>();
   for (const r of rows) {
     const m = per.get(r.test_id) ?? new Map<string, T>();
@@ -103,6 +106,18 @@ export default async function Hood() {
           <p className="muted mono" style={{ fontSize: 11, marginBottom: 0 }}>Must requirements with no stored result show as <span>Not run</span> (grey): {reqs.filter((r) => !res.has(r.id) && r.priority === "M").map((r) => r.id).join(", ")}.</p>
         )}
       </div>
+
+      {superseded.length > 0 && (
+        <div className="card" id="superseded">
+          <div className="cardhead"><h3>Failures set aside as superseded</h3><span className="tag">{superseded.length}</span></div>
+          {superseded.map((x) => (
+            <div key={x.test_id + x.run_id} className="resrow" style={{ display: "block" }}>
+              <strong>{x.test_id}</strong> <span className="muted mono" style={{ fontSize: 11 }}>run {x.run_id} · {x.decided}</span>
+              <div className="muted mono" style={{ fontSize: 11 }}>{x.reason}</div>
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="card" id="agents">
         <div className="cardhead"><h3>3 · The agents</h3>{isAdmin && <span className="tag">cost ${costTotal.toFixed(2)}</span>}</div>

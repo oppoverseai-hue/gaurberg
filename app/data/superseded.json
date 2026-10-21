@@ -1,0 +1,4 @@
+[
+ {"test_id":"RUN-1","run_id":2,"reason":"Early run from before token counts were logged; every later agent run logs model, tokens and cost.","decided":"2026-10-21 by admin"},
+ {"test_id":"VER-3","run_id":15,"reason":"Verifier and extractor were the same vendor; replaced by run 16 (Gemini verifier, Claude extractor), which passes.","decided":"2026-10-21 by admin"}
+]
