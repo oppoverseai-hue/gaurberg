@@ -1,0 +1,122 @@
+[
+ {
+  "id": 1,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Waymo competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 2,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Tesla competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 3,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Zoox/Amazon competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 4,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Motional competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 5,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Torc Robotics competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 6,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Kodiak Robotics competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 7,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says PlusAI competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 8,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Waabi competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 9,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Stack AV competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 10,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Filer says Mobileye competes with \"us\"; the sentence never names AUR, so the identity of \"us\" is unconfirmed.",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]

@@ -1,0 +1,25 @@
+{
+ "role": "verifier_baseline",
+ "model": "claude-haiku-5-5",
+ "items": 10,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3748,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1836,
+   "cost_usd": 0.00221087,
+   "seconds": 9.8,
+   "is_error": false,
+   "batch": 1
+  }
+ ],
+ "totals": {
+  "input_tokens": 2,
+  "cache_creation_tokens": 3748,
+  "cache_read_tokens": 12597,
+  "output_tokens": 1836,
+  "cost_usd": 0.00221087,
+  "seconds": 9.8
+ }
+}
