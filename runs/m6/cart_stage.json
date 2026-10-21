@@ -1,0 +1,148 @@
+[
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "CART",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "enter into and maintain strategic partnerships, including our partnership with Uber to offer their restaurant delivery services on our platform;",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "With respect to restaurants offered on Instacart\u2019s Marketplace via our partnership with Uber, there are a number of competitors to such offering available through Instacart including, but not limited to: (i) local on-demand delivery companies such as DoorDash, Uber Eats via Uber\u2019s native applications, and Grubhub (acquired by Wonder), (ii) restaurants that have their own online ordering platform or online ordering systems, and (iii) other businesses that offer online ordering of prepared meals.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CART",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "With respect to Instacart Marketplace, our current and potential competitors include, but are not limited to: (i) existing and well-established online grocery or shopping alternatives, including digital-first platforms, such as Amazon and Thrive Market, (ii) brick-and-mortar retailers that have their own digital and fulfillment offerings, such as Target and Walmart, some of which decide to partner with Instacart to complement their own offerings, (iii) companies that provide e-commerce and fulfillment services for third parties, including retailers, whether online or offline, such as DoorDash, Shipt (acquired by Target), and Uber Eats, (iv) digital-first platforms entering the grocery market by owning inventory, including DashMart (owned by DoorDash), Fresh Direct (owned by Getir), and Gopuff, which may include existing retailers on Instacart, which could eventually eliminate their need to partner with us or limit their use of Instacart Marketplace, (v) companies that provide e-commerce and fulfillment services that focus on discrete categories of products, such as alcohol or prescription delivery, and (vi) companies that offer direct to consumer ingredient or meal offerings, such as Blue Apron (owned by Wonder Group) or Misfits Market, some of which may partner with Instacart to complement their own offerings.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "In addition, we may not be able to effectively compete with service offerings from vertically integrated competitors, such as Amazon or Gopuff, which control both the brick-and-mortar retailer and online fulfillment technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "DoorDash",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CART",
+  "target": "DoorDash",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "With respect to restaurants offered on Instacart\u2019s Marketplace via our partnership with Uber, there are a number of competitors to such offering available through Instacart including, but not limited to: (i) local on-demand delivery companies such as DoorDash, Uber Eats via Uber\u2019s native applications, and Grubhub (acquired by Wonder), (ii) restaurants that have their own online ordering platform or online ordering systems, and (iii) other businesses that offer online ordering of prepared meals.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber Eats",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CART",
+  "target": "Uber Eats",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "With respect to restaurants offered on Instacart\u2019s Marketplace via our partnership with Uber, there are a number of competitors to such offering available through Instacart including, but not limited to: (i) local on-demand delivery companies such as DoorDash, Uber Eats via Uber\u2019s native applications, and Grubhub (acquired by Wonder), (ii) restaurants that have their own online ordering platform or online ordering systems, and (iii) other businesses that offer online ordering of prepared meals.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Grubhub",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "CART",
+  "target": "Grubhub",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "With respect to restaurants offered on Instacart\u2019s Marketplace via our partnership with Uber, there are a number of competitors to such offering available through Instacart including, but not limited to: (i) local on-demand delivery companies such as DoorDash, Uber Eats via Uber\u2019s native applications, and Grubhub (acquired by Wonder), (ii) restaurants that have their own online ordering platform or online ordering systems, and (iii) other businesses that offer online ordering of prepared meals.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Gopuff",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "CART",
+  "target": "Gopuff",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In addition, we may not be able to effectively compete with service offerings from vertically integrated competitors, such as Amazon or Gopuff, which control both the brick-and-mortar retailer and online fulfillment technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Marlin9 Holdings (Wynshop)",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CART",
+  "target": "Marlin9 Holdings (Wynshop)",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, in April 2025, we acquired Marlin9 Holdings, Inc., which operates as Wynshop, a provider of e-commerce retail solutions for grocers and retailers.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Based upon this assessment, reductions were made to our net operating loss and tax credit carryforwards under these rules for the acquisition of Marlin9 Holdings, Inc.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On April 30, 2025, pursuant to a Stock Purchase Agreement, the Company acquired a \n100\n% ownership interest in Marlin9 Holdings, Inc. which operates as Wynshop (\u201cWynshop\u201d), a provider of e-commerce retail solutions for grocers and retailers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000018/cart-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ }
+]
