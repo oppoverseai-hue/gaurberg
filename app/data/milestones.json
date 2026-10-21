@@ -1,0 +1,14 @@
+[
+ {"id":"M0","name":"Docs signed off","status":"passed"},
+ {"id":"M1","name":"Walking skeleton: search, price, map, detail panel","status":"passed"},
+ {"id":"M2","name":"Extraction agent on the hero set","status":"passed"},
+ {"id":"M3","name":"Verification and entity resolution","status":"passed"},
+ {"id":"M4","name":"Map and trust badges","status":"passed"},
+ {"id":"M5","name":"Company page and offline data","status":"passed"},
+ {"id":"M6","name":"Scale to 25 companies","status":"passed"},
+ {"id":"M7","name":"Live lookup","status":"passed"},
+ {"id":"M8","name":"Under the hood","status":"in_progress"},
+ {"id":"M9","name":"Should items","status":"not_started"},
+ {"id":"M10","name":"Could items","status":"not_started"},
+ {"id":"M11","name":"Release and demo kit","status":"not_started"}
+]

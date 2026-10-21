@@ -1,0 +1,464 @@
+{
+ "requirements": [
+  {
+   "id": "GRF-1",
+   "what": "The map layout in step 2 (UX-2) , fixed in the same places every time",
+   "priority": "M",
+   "job": "J1",
+   "group": "GRF-1"
+  },
+  {
+   "id": "GRF-2",
+   "what": "Directed, labeled links of the five types",
+   "priority": "M",
+   "job": "J1",
+   "group": "GRF-2"
+  },
+  {
+   "id": "GRF-4",
+   "what": "A \"Recenter map here\" button makes a company the center of the map; unmapped neighbors are greyed as \"not yet mapped\"",
+   "priority": "M",
+   "job": "J1",
+   "group": "GRF-4"
+  },
+  {
+   "id": "GRF-5",
+   "what": "Groups with no stock ticker, such as riders and drivers, can appear on the map",
+   "priority": "M",
+   "job": "J1",
+   "group": "GRF-5"
+  },
+  {
+   "id": "UX-8",
+   "what": "Clear messages for empty and error cases, such as \"not yet mapped\" and \"no disclosed relationships found\"",
+   "priority": "M",
+   "job": "J1",
+   "group": "UX-8"
+  },
+  {
+   "id": "GRF-13",
+   "what": "The company preview pane: clicking a company opens a pane beside the map that shows a short version of the company page in card J6 (the header with price, a few key numbers, the first lines of About, the counts of linked companies and the latest top news headline) , with an \"Open full page\" button and a \"Recenter map here\" button. The map does not move. Clicking another company changes the pane, and the pane can be closed",
+   "priority": "M",
+   "job": "J1",
+   "group": "GRF-13"
+  },
+  {
+   "id": "GRF-6",
+   "what": "Filters: show only some link types, only high-confidence links, or only links the company disclosed",
+   "priority": "S",
+   "job": "J1",
+   "group": "GRF-6"
+  },
+  {
+   "id": "GRF-7",
+   "what": "A company's color shows today's price change, and a line's thickness shows the size of the link",
+   "priority": "C",
+   "job": "J1",
+   "group": "GRF-7"
+  },
+  {
+   "id": "GRF-8",
+   "what": "A switch to show a second ring of neighbors",
+   "priority": "C",
+   "job": "J1",
+   "group": "GRF-8"
+  },
+  {
+   "id": "GRF-10",
+   "what": "The link detail panel (UX-3) with the parts above, and the company preview pane (GRF-13, card J1)",
+   "priority": "M",
+   "job": "J2",
+   "group": "GRF-10"
+  },
+  {
+   "id": "GRF-11",
+   "what": "Link exposure is stored and shown by the rules in part 5",
+   "priority": "M",
+   "job": "J2",
+   "group": "GRF-11"
+  },
+  {
+   "id": "TRM-7",
+   "what": "A Recent news section on the company page, with tabs All, News, Press releases and SEC filings; each item shows a headline, its source, the date and time it was published and a link to the original, with a recency filter (last 24 hours, 7 days, 30 days or all) that hides older items",
+   "priority": "S",
+   "job": "J2",
+   "group": "TRM-7"
+  },
+  {
+   "id": "GRF-12",
+   "what": "A latest top news preview in the link panel: one headline for each of the two companies, from the last 7 days, which opens that company's page at its news section",
+   "priority": "S",
+   "job": "J2",
+   "group": "GRF-12"
+  },
+  {
+   "id": "GRF-15",
+   "what": "In the same panel, the neighbor's price move today",
+   "priority": "C",
+   "job": "J2",
+   "group": "GRF-15"
+  },
+  {
+   "id": "LIV-4",
+   "what": "Partnerships found in news are added to a live lookup",
+   "priority": "C",
+   "job": "J2",
+   "group": "LIV-4"
+  },
+  {
+   "id": "SMX-1",
+   "what": "The largest holders of each mapped company from 13F reports: shares held, share of the company, and the change since last quarter (new, added, trimmed, exited or unchanged)",
+   "priority": "S",
+   "job": "J3",
+   "group": "SMX-1"
+  },
+  {
+   "id": "SMX-2",
+   "what": "Holders appear on the map as \"invests in\" links, with a switch that shows the same investors' positions in the company's customers, suppliers and partners",
+   "priority": "S",
+   "job": "J3",
+   "group": "SMX-2"
+  },
+  {
+   "id": "SMX-3",
+   "what": "Insider trades from Form 4: buy or sell, the insider's role and the date",
+   "priority": "S",
+   "job": "J3",
+   "group": "SMX-3"
+  },
+  {
+   "id": "SMX-4",
+   "what": "Every holdings view shows the filing date, the quarter covered, and a note that 13F data can be up to 45 days late and covers long US stock positions only",
+   "priority": "S",
+   "job": "J3",
+   "group": "SMX-4"
+  },
+  {
+   "id": "SMX-5",
+   "what": "Any summary is descriptive (net buyers and sellers, concentration) and never advises a trade",
+   "priority": "S",
+   "job": "J3",
+   "group": "SMX-5"
+  },
+  {
+   "id": "SMX-6",
+   "what": "Reports of investors passing a 5% stake (13D and 13G)",
+   "priority": "C",
+   "job": "J3",
+   "group": "SMX-6"
+  },
+  {
+   "id": "SMX-7",
+   "what": "Trades disclosed by members of Congress, in neutral wording, with amounts as ranges and the disclosure delay noted. First to cut",
+   "priority": "C",
+   "job": "J3",
+   "group": "SMX-7"
+  },
+  {
+   "id": "GRF-3",
+   "what": "Every link carries its evidence: quote, kind of source, link to the original, date and confidence",
+   "priority": "M",
+   "job": "J4",
+   "group": "GRF-3"
+  },
+  {
+   "id": "UX-4",
+   "what": "One trust badge on every link and every map",
+   "priority": "M",
+   "job": "J4",
+   "group": "UX-4"
+  },
+  {
+   "id": "DEM-2",
+   "what": "The footer on every screen and a sources page",
+   "priority": "M",
+   "job": "J4",
+   "group": "DEM-2"
+  },
+  {
+   "id": "GRF-9",
+   "what": "The panel also lists which checks the link passed and which step decided",
+   "priority": "S",
+   "job": "J4",
+   "group": "GRF-9"
+  },
+  {
+   "id": "LIV-1",
+   "what": "A live lookup that builds the first ring of a map from the company's own filings and shows progress",
+   "priority": "M",
+   "job": "J5",
+   "group": "LIV-1"
+  },
+  {
+   "id": "LIV-2",
+   "what": "The label \"Live-generated, not reviewed\", and saving the result for reuse",
+   "priority": "M",
+   "job": "J5",
+   "group": "LIV-2"
+  },
+  {
+   "id": "LIV-3",
+   "what": "One lookup per person per day , except the admin (ACC-5, NFR-6), and a daily cost cap (NFR-5) set at $0, so only free models are used",
+   "priority": "M",
+   "job": "J5",
+   "group": "LIV-3"
+  },
+  {
+   "id": "UX-5",
+   "what": "Progress shows the current step by name and never blocks the rest of the app",
+   "priority": "S",
+   "job": "J5",
+   "group": "UX-5"
+  },
+  {
+   "id": "GRF-8",
+   "what": "A second ring of neighbors",
+   "priority": "C",
+   "job": "J5",
+   "group": "GRF-8"
+  },
+  {
+   "id": "LIV-4",
+   "what": "Partnerships found in news are added",
+   "priority": "C",
+   "job": "J5",
+   "group": "LIV-4"
+  },
+  {
+   "id": "TRM-9",
+   "what": "The company page that a search opens: the header (name, ticker, latest price, change today, time and the delay note), the price chart, the key numbers, the About section and the \"E cosystem\" button that opens the map",
+   "priority": "M",
+   "job": "J6",
+   "group": "TRM-9"
+  },
+  {
+   "id": "TRM-1",
+   "what": "The command bar, always at the top, taking a company name or ticker plus an optional plain word, which opens the company page at that section , and the help page",
+   "priority": "M",
+   "job": "J6",
+   "group": "TRM-1, UX-1"
+  },
+  {
+   "id": "UX-1",
+   "what": "The command bar, always at the top, taking a company name or ticker plus an optional plain word, which opens the company page at that section , and the help page",
+   "priority": "M",
+   "job": "J6",
+   "group": "TRM-1, UX-1"
+  },
+  {
+   "id": "TRM-2",
+   "what": "The key numbers and About: previous close, day's range, 52-week range, volume, market value, price-to-earnings, earnings per share and the next earnings date when a free source has it; the description, sector, size group, website and number of employees",
+   "priority": "M",
+   "job": "J6",
+   "group": "TRM-2"
+  },
+  {
+   "id": "TRM-3",
+   "what": "The price chart with the four periods, from free delayed data",
+   "priority": "M",
+   "job": "J6",
+   "group": "TRM-3"
+  },
+  {
+   "id": "TRM-4",
+   "what": "Financial highlights: revenue, margins, earnings per share and balance sheet highlights, from filings or free data services",
+   "priority": "M",
+   "job": "J6",
+   "group": "TRM-4"
+  },
+  {
+   "id": "TRM-10",
+   "what": "A preview on the company page of the top five linked companies, each with its link type",
+   "priority": "S",
+   "job": "J6",
+   "group": "TRM-10"
+  },
+  {
+   "id": "TRM-8",
+   "what": "Suggestions as you type, brand names that point to the parent company (searching Google suggests Alphabet) and tolerance for typing errors",
+   "priority": "C",
+   "job": "J6",
+   "group": "TRM-8"
+  },
+  {
+   "id": "UX-9",
+   "what": "Command autocomplete",
+   "priority": "C",
+   "job": "J6",
+   "group": "UX-9"
+  },
+  {
+   "id": "TRM-11",
+   "what": "Performance against the S&P 500 for this year and the last 1, 3 and 5 years",
+   "priority": "C",
+   "job": "J6",
+   "group": "TRM-11"
+  },
+  {
+   "id": "TRM-5",
+   "what": "A screener that filters the mapped companies by segment (consumer, business or infrastructure), size group (large, mid or small) and the price change over 1 month",
+   "priority": "S",
+   "job": "J7",
+   "group": "TRM-5"
+  },
+  {
+   "id": "TRM-6",
+   "what": "A watchlist saved for each person",
+   "priority": "C",
+   "job": "J8",
+   "group": "TRM-6"
+  },
+  {
+   "id": "PRC-1",
+   "what": "The Under the hood page with the five panels as visuals",
+   "priority": "M",
+   "job": "J9",
+   "group": "PRC-1, UX-6"
+  },
+  {
+   "id": "UX-6",
+   "what": "The Under the hood page with the five panels as visuals",
+   "priority": "M",
+   "job": "J9",
+   "group": "PRC-1, UX-6"
+  },
+  {
+   "id": "PRC-2",
+   "what": "The latest test run, with pass or fail for each requirement ID",
+   "priority": "M",
+   "job": "J9",
+   "group": "PRC-2"
+  },
+  {
+   "id": "ACC-1",
+   "what": "Google sign-in only, restricted to the allowlist; any other account sees \"Request access\" and no data",
+   "priority": "M",
+   "job": "J10",
+   "group": "ACC-1"
+  },
+  {
+   "id": "ACC-2",
+   "what": "You can add and remove emails without a code change",
+   "priority": "M",
+   "job": "J10",
+   "group": "ACC-2"
+  },
+  {
+   "id": "ACC-3",
+   "what": "Two roles: Admin (manage the list, see spend , no lookup limit ) and Reviewer (read, and run limited lookups)",
+   "priority": "M",
+   "job": "J10",
+   "group": "ACC-3"
+  },
+  {
+   "id": "ACC-4",
+   "what": "Every live lookup is logged with the person, the company and the cost",
+   "priority": "M",
+   "job": "J10",
+   "group": "ACC-4"
+  },
+  {
+   "id": "NFR-1",
+   "what": "Nothing readable without sign-in; keys never in the browser, repo or logs; one database backup before the demo",
+   "priority": "M",
+   "job": "J10",
+   "group": "NFR-1, NFR-2, NFR-8"
+  },
+  {
+   "id": "NFR-2",
+   "what": "Nothing readable without sign-in; keys never in the browser, repo or logs; one database backup before the demo",
+   "priority": "M",
+   "job": "J10",
+   "group": "NFR-1, NFR-2, NFR-8"
+  },
+  {
+   "id": "NFR-8",
+   "what": "Nothing readable without sign-in; keys never in the browser, repo or logs; one database backup before the demo",
+   "priority": "M",
+   "job": "J10",
+   "group": "NFR-1, NFR-2, NFR-8"
+  },
+  {
+   "id": "DEM-1",
+   "what": "Cached demo mode: the app runs from saved data with the network off",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-1"
+  },
+  {
+   "id": "DEM-3",
+   "what": "A failed data call shows a message and is logged, never a blank screen",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-3"
+  },
+  {
+   "id": "DEM-4",
+   "what": "The script, the one-pager, the recorded walkthrough, the dry run on your laptop and network, and the answers sheet",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-4 to DEM-8"
+  },
+  {
+   "id": "DEM-5",
+   "what": "The script, the one-pager, the recorded walkthrough, the dry run on your laptop and network, and the answers sheet",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-4 to DEM-8"
+  },
+  {
+   "id": "DEM-6",
+   "what": "The script, the one-pager, the recorded walkthrough, the dry run on your laptop and network, and the answers sheet",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-4 to DEM-8"
+  },
+  {
+   "id": "DEM-7",
+   "what": "The script, the one-pager, the recorded walkthrough, the dry run on your laptop and network, and the answers sheet",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-4 to DEM-8"
+  },
+  {
+   "id": "DEM-8",
+   "what": "The script, the one-pager, the recorded walkthrough, the dry run on your laptop and network, and the answers sheet",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-4 to DEM-8"
+  },
+  {
+   "id": "DEM-9",
+   "what": "An outside viewer tries the core slice by Wednesday and their reaction is logged",
+   "priority": "M",
+   "job": "J10",
+   "group": "DEM-9"
+  },
+  {
+   "id": "DEM-10",
+   "what": "Hardening after the demo: monitoring, automated tests, rate limiting and an accessibility check",
+   "priority": "C",
+   "job": "J10",
+   "group": "DEM-10"
+  },
+  {
+   "id": "UX-7",
+   "what": "The app works on a laptop screen first; a phone-friendly layout is not required",
+   "priority": "M",
+   "job": "J10",
+   "group": "UX-7"
+  }
+ ],
+ "job_milestones": {
+  "J1": "M1 (basic v ersion), then M2, M3 and M4",
+  "J2": "M2, M3 and M4",
+  "J3": "M9",
+  "J4": "M2, M3, M4 and M11",
+  "J5": "M7, using the agents from M2 and M3",
+  "J6": "M1 (basic version) and M5",
+  "J7": "M9",
+  "J8": "M10, only if time allows",
+  "J9": "M8",
+  "J10": "M1, M7 and M11"
+ }
+}

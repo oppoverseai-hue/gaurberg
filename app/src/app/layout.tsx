@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <form className="cmd" action="/go" method="get" role="search">
             <input name="q" type="search" placeholder="Company or ticker, plus a word: Uber, Uber chart, Uber map, help" aria-label="Command bar" autoComplete="off" />
           </form>
-          <nav><a href="/help">Help</a><a href="/sources">Sources</a></nav>
+          <nav><a href="/help">Help</a><a href="/sources">Sources</a><a href="/hood">Under the hood</a></nav>
         </header>
         {children}
         <footer className="site"><div className="in">
