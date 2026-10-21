@@ -1,0 +1,42 @@
+{
+ "ticker": "LYFT",
+ "edges_in": 21,
+ "edges_out": 19,
+ "edges_merged": 2,
+ "new_nodes": [
+  "ADT",
+  "Baidu",
+  "Bird",
+  "Dott",
+  "Fifteen",
+  "Flexdrive",
+  "Freenow",
+  "PricewaterhouseCoopers",
+  "RapidSOS",
+  "TBR",
+  "nextbike"
+ ],
+ "needs_review": [
+  {
+   "raw": "Intelligent Apps GmbH (Freenow)",
+   "resolved": "Freenow",
+   "how": "alias"
+  },
+  {
+   "raw": "TBR Global Chauffeuring",
+   "resolved": "TBR",
+   "how": "alias"
+  },
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  },
+  {
+   "raw": "Uber",
+   "resolved": "Uber Technologies",
+   "how": "ticker"
+  }
+ ],
+ "direction_conflicts": []
+}

@@ -1,7 +1,4 @@
-# Agent: verification
-
-Status: not built. Built and reviewed one at a time, in this order: market_data, filings_extraction, entity_resolution, verification, orchestrator.
-
-- Spec: Technical Design doc, agent specs section (rules AGT-1 to AGT-5).
-- Writes only staged rows. Logs model, tokens and cost to agent_runs.
-- Run command: TBD at build time.
+# Agent: verification (M3)
+`verify.py` checks each edge against its own quote: quote_present (free, exact), then supports_claim, direction and type in one model call per batch. Model by role in `config/models.yaml`.
+Test with `evals/seeded_errors/build_seeded.py` (156 items: each Keep edge once correct, once with a planted error) and `evals/harness/score_verification.py` (VER-1 to VER-4).
+Status: baseline only. The Haiku baseline is the same vendor as the extractor, so VER-3 (different vendor) is NOT met. A Gemini or other non-Anthropic key is needed for the real verifier; set it as `verifier_cheap` in the config and rerun.

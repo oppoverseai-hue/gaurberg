@@ -8,13 +8,19 @@ Usage: python3 -I agents/filings_extraction/run_extraction.py TICKER --role extr
 * Every quote is checked word for word against the filing text. Unfound quotes are kept and flagged (EXT-6 counts them).
 * Output is a re-run folder (default runs/<role>/). Nothing is written to the database here and nothing is promoted.
 Environment: EDGAR_UA overrides the SEC user agent (SEC asks for a real contact)."""
-import argparse, json, os, pathlib, re, subprocess, sys, time, urllib.request
+import argparse, json, os, pathlib, re, sys, urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 from split_10k import to_text, split  # noqa: E402
 import yaml  # noqa: E402
+sys.path.insert(0, str(ROOT / "agents" / "common"))
+from claude_cli import call as _call  # noqa: E402
+
+
+def call(model, prompt):
+    return _call(model, prompt, SYSTEM)
 
 CHUNK = 90_000
 NAMES = {"CRWV": "CoreWeave", "LYFT": "Lyft", "UBER": "Uber Technologies"}
@@ -57,21 +63,6 @@ def chunks(text):
             out.append(cur); cur = ""
         cur += para + "\n"
     return out + ([cur] if cur.strip() else [])
-
-
-def call(model, prompt):
-    t = time.time()
-    r = subprocess.run(["claude", "-p", "--model", model, "--output-format", "json", "--tools", "", "--no-session-persistence",
-                        "--disable-slash-commands", "--setting-sources", "", "--system-prompt", SYSTEM],
-                       input=prompt, capture_output=True, text=True, timeout=900)
-    if r.returncode != 0:
-        raise RuntimeError(f"claude exit {r.returncode}: {r.stderr[:500]}")
-    j = json.loads(r.stdout)
-    u = j.get("usage", {})
-    info = {"input_tokens": u.get("input_tokens", 0), "cache_creation_tokens": u.get("cache_creation_input_tokens", 0),
-            "cache_read_tokens": u.get("cache_read_input_tokens", 0), "output_tokens": u.get("output_tokens", 0),
-            "cost_usd": j.get("total_cost_usd", 0), "seconds": round(time.time() - t, 1), "is_error": bool(j.get("is_error"))}
-    return j.get("result", ""), info
 
 
 def parse(txt):

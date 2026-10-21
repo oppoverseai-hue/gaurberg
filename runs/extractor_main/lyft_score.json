@@ -1,20 +1,30 @@
 {
  "LYFT": {
-  "EXT-1": 0.7619047619047619,
-  "EXT-2": 0.6153846153846154,
+  "EXT-1": 0.8095238095238095,
+  "EXT-2": 0.5862068965517241,
   "EXT-3": 1.0,
   "EXT-4": 1.0,
   "EXT-6": 0,
-  "EXT-7": 0.0,
+  "EXT-7": 0.25,
   "counts": {
    "predicted": 21,
-   "gold_true": 26,
-   "matched": 16,
+   "gold_true": 29,
+   "matched": 17,
    "missed": [
     [
      "amazon",
      "lyft",
      "supplies"
+    ],
+    [
+     "lyft",
+     "pacific valley insurance",
+     "invests"
+    ],
+    [
+     "lyft",
+     "transopco",
+     "acquires"
     ],
     [
      "lyft",
@@ -65,21 +75,31 @@
   }
  },
  "ALL": {
-  "EXT-1": 0.7619047619047619,
-  "EXT-2": 0.6153846153846154,
+  "EXT-1": 0.8095238095238095,
+  "EXT-2": 0.5862068965517241,
   "EXT-3": 1.0,
   "EXT-4": 1.0,
   "EXT-6": 0,
-  "EXT-7": 0.0,
+  "EXT-7": 0.08333333333333333,
   "counts": {
    "predicted": 21,
-   "gold_true": 26,
-   "matched": 16,
+   "gold_true": 29,
+   "matched": 17,
    "missed": [
     [
      "amazon",
      "lyft",
      "supplies"
+    ],
+    [
+     "lyft",
+     "pacific valley insurance",
+     "invests"
+    ],
+    [
+     "lyft",
+     "transopco",
+     "acquires"
     ],
     [
      "lyft",

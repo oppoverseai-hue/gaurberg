@@ -1,0 +1,1874 @@
+[
+ {
+  "id": "e001",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says Uber will buy Lucid vehicles equipped with Nuro's systems. Supply is implied but routed through Lucid, not stated directly.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e002",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Dott as a competitor in bike and scooter sharing, not a partner. Type should be competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e003",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns Lucid vehicles and Nuro systems and never mentions Ola.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e004",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filer states it acquired Monolith in November 2025, matching the acquires claim with the filer as source.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e005",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns Meta's commitment to pay for services and never mentions OpenPipe or any acquisition of it.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e006",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Tesla as a current or future competitor, not a partner. Type should be competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e007",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Uber's investment in Grab ('our Grab investment'), so the direction is reversed: UBER invests in Grab.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e008",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Amazon (AWS) as a key competitor. Customer status is noted but no partnership. Type should be competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e009",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes OpenAI as a significant customer committing payments, so the link is sells_to, not competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e010",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes an acquisition of Monolith, not a partnership. Type should be acquires.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e011",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence mentions working with delivery providers ('Couriers') but does not say Uber supplies them; the service direction is unclear.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e012",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Lyft acquired Freenow and TBR and never mentions Bolt or any competition with it.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e013",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Uber competes with ridesharing companies including Bolt, Didi, Lyft, and Ola, matching undirected competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e014",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Tesla as a competitor, not a partner; it says nothing about a partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e015",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Implies NVIDIA GPUs are used in CoreWeave's infrastructure, but does not explicitly state NVIDIA supplies CoreWeave.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e016",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns Microsoft customer concentration and never mentions Intel or any supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e017",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence lists ridesharing rivals Bolt, Didi, Lyft, Ola; Echo Global Logistics is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e018",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Amazon (AWS) as a key competitor in cloud computing services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e019",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Uber acquired or majority-owns Postmates, so the acquirer is UBER, not Postmates.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e020",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Uber's Delivery offering competes with DoorDash among others.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e021",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Microsoft is CoreWeave's customer, so CoreWeave sells to Microsoft; the source and target are reversed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e022",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Says CoreWeave clusters use AMD chips, implying supply, but does not explicitly state AMD supplies CoreWeave.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e023",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "XPO is named as a freight competitor of Uber's Freight offering, not a partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e024",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Tesla among companies that either compete with Lyft or may compete in future.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e025",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Uber acquired Cornershop, so Uber is the acquirer; source and target are reversed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e026",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Meta committed to pay CoreWeave up to $14.2B, making Meta a significant CoreWeave customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e027",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence lists Lyft's bike/scooter competitors; RapidSOS is not mentioned and no partnership is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e028",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Uber's Delivery offering competes with Gopuff.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e029",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "DHL is named as a competitor in freight, not as a partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e030",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Uber competes with other ridesharing companies, including Bolt.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e031",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Amazon (Zoox) is named as a competitor, not a partner, and Lyft is not mentioned as partnering with it.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e032",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Uber acquired Drizly Group; Transplace is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e033",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Uber and Bolt as Lyft's competitors; Bird is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e034",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes a partnership with Arizona State University, not competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e035",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Oracle as a key competitor in cloud computing services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e036",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states a partnership with Arizona State University, matching the partners link type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e037",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Fifteen as a main competitor in the bike and scooter market.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e038",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence refers to Lyft's acquisition of Flexdrive, now a wholly-owned subsidiary.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e039",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Microsoft is CRWV's top customer, with 67% of revenue for 2025.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e040",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Uber retained a minority ownership interest in Careem Technologies, which is an equity investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e041",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Lyft acquired TheBookingRoomGroup Limited (TBR) in October 2025.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e042",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes an investment and an unrealized loss on Lucid, not a named partnership or collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e043",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns a Grab investment gain and never mentions Gopuff or any competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e044",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Uber's Freight offering competes with DHL among freight brokers and providers.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e045",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Uber's Freight offering competes with XPO among freight brokers and providers.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e046",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Uber competes with other ridesharing companies, including Lyft, for Drivers and Riders.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e047",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Uber acquired The Drizly Group; Trendyol GO is never mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e048",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Uber's acquisition of Cornershop, an online grocery delivery provider.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e049",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says CoreWeave clusters use Intel chips, implying supply but not stating a supplier relationship explicitly.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e050",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says e& acquired a majority stake in Careem, so the acquirer and target are reversed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e051",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence lists Delivery Hero among companies competing with Uber's Delivery offering.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e052",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns ridesharing competitors Bolt, Didi, Lyft, and Ola; it says nothing about Mobility Drivers supplying Uber.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e053",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Waymo makes its autonomous fleet available through the filer's platform, which is a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e054",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Bolt is a competitor for drivers and riders, not a named partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e055",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes connecting riders with drivers; it states no sales relationship and Riders is not an organisation.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e056",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence explicitly names Instacart among companies Uber's Delivery offering competes with.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e057",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Lime is not mentioned; the sentence names Bolt, Didi, Lyft and Ola as ridesharing competitors.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e058",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Microsoft is named as a competitor, with a possible customer link; no partnership is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e059",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Uber as Lyft's main ridesharing competitor, not a partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e060",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Magnetar-affiliated funds held equity in CRWV, so Magnetar invests in CRWV, the reverse of the claimed direction.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e061",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states the filer acquired OpenPipe in September 2025.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e062",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "ITF is not mentioned; the sentence is about e& acquiring a stake in Careem Technologies.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e063",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence explicitly lists Echo Global Logistics among companies Uber's Freight offering competes with.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e064",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence explicitly lists RXO among companies Uber's Freight offering competes with.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e065",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence refers to the filer's own Grab investment with a $145 million unrealized gain, indicating an equity holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e066",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lists Amazon (Zoox) among companies that are or may be competing with Lyft in AV and TaaS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e067",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Uber Eats and UGT signed a memorandum of understanding, a named collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e068",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Describes an agreement to acquire Getir's delivery portfolio, not clearly the whole company; scope is ambiguous.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e069",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns the Trendyol GO acquisition and never mentions Amazon or competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e070",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "States CoreWeave acquired Weights & Biases; it names no partnership, so type should be acquires.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e071",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Lists Waymo, Zoox and Tesla as competitors; DoorDash is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e072",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Lists Waymo, Zoox and Tesla as competitors; Delivery Hero is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e073",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Names Google (Google Cloud Platform) as a competitor; Google is an Alphabet subsidiary.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e074",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Refers to Uber's Didi investment, with a $409M unrealized gain, implying an equity stake.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e075",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Lists AV and TaaS competitors including Waymo, Zoox, Baidu, Bolt and Tesla; nextbike is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e076",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes ADT as an integration partner of Lyft, not a competitor; type should be partners.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e077",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "CoreWeave has a master services agreement with OpenAI, which committed to pay it up to $6.5 billion.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e078",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a commitment to buy Lucid vehicles equipped with Nuro's autonomy systems, a supply relationship, not competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e079",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names only ADT and RapidSOS as partners; it says nothing about Alphabet or competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e080",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Refers to Uber's equity investment in Waabi via an unrealized gain on that investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e081",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence lists Delivery competitors and never mentions Waabi or any investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e082",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a memorandum of understanding between Uber Eats and UGT, a partnership, not competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e083",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Lime as a competitor, so the link is competes, not a partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e084",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Implies NVIDIA supplies GPUs to CoreWeave, so the source and target are reversed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e085",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Uber's Freight offering competes with C.H. Robinson, among others.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e086",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Names RapidSOS as a Lyft partner for in-app emergency assistance integration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e087",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States e& acquired a majority stake in Careem Technologies, matching the claimed acquisition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e088",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes Uber divesting dockless assets to Lime, a sale transaction, not a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e089",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States NVIDIA invested $2 billion in the Company's Class A common stock.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e090",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Names ADT as a Lyft partner for in-app emergency assistance integration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e091",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The equity investment described is in Moove; Careem Technologies is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e092",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says Uber connects riders with drivers on its platform; it does not say drivers supply Uber itself.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e093",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Uber agrees to purchase Lucid vehicles, so Lucid is the supplier and Uber the buyer, not the reverse.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e094",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names nextbike as a main competitor in bike and scooter sharing.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e095",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Rappi among companies Uber's Delivery offering competes with.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e096",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence refers to an unrealized loss on Uber's Aurora investment, implying an equity stake held by Uber.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e097",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Bird as a main competitor in bike and scooter sharing.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e098",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence mentions renewing an agreement with ITF, a federation; it does not explicitly describe a partnership or collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e099",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Didi is not named in the sentence, which lists DoorDash, Instacart, Gopuff, Rappi, and others.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e100",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Total Quality Logistics as a competitor of Uber Freight, not a partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e101",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence explicitly describes a commercial partnership agreement with Moove, alongside an equity investment and loan.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e102",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Instacart among companies competing with Uber's Delivery offering, not as a partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e103",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence discusses CoreWeave's chips and compute projects; it says nothing about Meta as a customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e104",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence says Uber works with delivery providers (Couriers) for delivery services, similar to e092; supply role is inferred.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e105",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Lyft acquired Freenow in July 2025; direction and acquires type match.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e106",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence never mentions Oracle; it describes CoreWeave acquiring OpenPipe, not competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e107",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence shows Uber made an equity investment in Moove, so the claimed direction is reversed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e108",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Total Quality Logistics as a competitor of Uber's Freight offering.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e109",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says CoreWeave uses AMD chips, a supplier relationship, not competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e110",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Uber and Bolt as main competitors; Baidu is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e111",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Lyft acquired TBR; the claimed acquirer and target are reversed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e112",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Uber connecting riders with drivers; riders are not a competing organisation.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e113",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes NVIDIA's $2B equity investment, not a named partnership; type should be invests.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e114",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence lists Alphabet as a possible competitor in autonomous vehicles, not a partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e115",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Uber agreeing to acquire Getir's delivery portfolio, not a partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e116",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names ADT and RapidSOS as Lyft partners; Amazon is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e117",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence lists Just Eat Takeaway as a competitor of Uber's Delivery offering, not a partner.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e118",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Fifteen as a competitor in bike and scooter sharing, not a partner. Should be competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e119",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Refers to Uber's Lucid investment with an unrealized loss, so Uber holds an equity stake in Lucid.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e120",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Uber agrees to purchase at least 20,000 Lucid vehicles, so Lucid supplies Uber.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e121",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Flexdrive as a wholly-owned subsidiary from an acquisition, not a partnership. Should be acquires.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e122",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Lime as a main competitor in bike and scooter sharing.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e123",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence lists Lyft among ridesharing competitors for Drivers and Riders. Should be competes, not partners.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e124",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence describes a collaboration framework with NVIDIA, matching an undirected partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e125",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "CRWV acquired Marimo, so CRWV is the acquirer. The claim reverses source and target.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e126",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence mentions Couriers and delivery providers but never names RXO.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e127",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Rappi is named as a competitor in delivery, not a partner. Should be competes.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e128",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Acquisition is by subsidiary Uber Freight, not Uber itself. Parent-level relationship is indirect.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e129",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Uber and Bolt as competitors and never mentions Freenow or an acquisition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e130",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Alphabet (Waymo) as a company competing or may compete in autonomous vehicles.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e131",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Just Eat Takeaway among companies Uber's Delivery offering competes with.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e132",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Uber made an equity investment in Moove through preferred shares.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e133",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence lists freight competitors for Uber's Freight offering and never mentions Moove or any partnership with it.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e134",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Tesla among autonomous vehicle companies that are or may compete with Uber.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e135",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns e& acquiring Careem Technologies; it does not mention Didi or any Uber investment in Didi.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e136",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns e& acquiring Careem Technologies; it says nothing about Waymo or supplying Uber.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e137",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Baidu among companies that are or may compete with Lyft.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e138",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence only mentions the Weights & Biases acquisition; it says nothing about Alphabet or competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e139",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Microsoft (Azure) as a key competitor of CoreWeave's cloud services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e140",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Magnetar-affiliated funds held a significant equity interest in the Company.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e141",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns e& acquiring Careem Technologies; it does not mention C.H. Robinson or competition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e142",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Alphabet (Waymo) among companies that are or may compete with Lyft.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e143",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states CoreWeave acquired Weights & Biases in 2025.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e144",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Dott among its main competitors in bike and scooter sharing, matching the competes link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e145",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes an acquisition of Drizly, not a partnership. The link type should be acquires.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e146",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Amazon (Zoox) is competing with or may compete with Uber in autonomous vehicles.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e147",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence calls Postmates one of Uber's acquired companies, supporting an acquires link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e148",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states the company acquired Marimo in October 2025, matching the acquires link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e149",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence reports closing an 85% controlling-stake acquisition of Trendyol GO by the filer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e150",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Bolt as a main competitor for app-based intermediation services, matching the competes link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e151",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence refers to an unrealized loss on an Aurora investment. It states no partnership; the link should be invests.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e152",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says Uber competes with Ola, among other ridesharing companies, for drivers and riders.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e153",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states Uber is Lyft's main ridesharing competitor, matching the competes link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e154",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states the filer acquired The Drizly Group, matching the acquires link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e155",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns Meta as a customer and says nothing about NVIDIA or any partnership with it.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": "e156",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lyft has a commercial agreement with Amazon Web Services for cloud services, a subsidiary of Amazon; supplies fits.",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]

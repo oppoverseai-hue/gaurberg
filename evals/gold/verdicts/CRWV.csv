@@ -16,3 +16,8 @@ A9,crwv_acq.json,0,Weights & Biases,acquires,keep,,admin 2026-10-21
 A10,crwv_acq.json,1,OpenPipe,acquires,keep,,admin 2026-10-21
 A11,crwv_acq.json,2,Marimo,acquires,keep,,admin 2026-10-21
 A12,crwv_acq.json,3,Monolith,acquires,keep,,admin 2026-10-21
+X1,evals/gold/extras/crwv_extras.json,0,MagAI Ventures,sells_to,drop,Review Q1: admin Drop (incorrect and unverified).,"admin 2026-10-21 (M3 review, extra links)"
+X2,evals/gold/extras/crwv_extras.json,1,Magnetar,invests,drop,"Review Q2: admin Fix, the other way around (Magnetar invests in CoreWeave). This reversed edge is a confirmed negative; the corrected edge is already gold as C13.","admin 2026-10-21 (M3 review, extra links)"
+X5,evals/gold/extras/crwv_extras.json,2,Deloitte & Touche LLP,supplies,keep,Review Q5: admin Keep (auditor).,"admin 2026-10-21 (M3 review, extra links)"
+X6,evals/gold/extras/crwv_extras.json,3,NVIDIA,sells_to,keep,Review Q6: admin Keep.,"admin 2026-10-21 (M3 review, extra links)"
+X7,evals/gold/extras/crwv_extras.json,4,OpenAI,invests,keep,Review Q7: admin Keep.,"admin 2026-10-21 (M3 review, extra links)"

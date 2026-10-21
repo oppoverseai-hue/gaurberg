@@ -1,6 +1,6 @@
 """Score extracted edges against the gold set: EXT-1 to EXT-7 (Eval Spec thresholds accepted by the admin on 2026-10-21).
 
-Usage:  python3 -I evals/harness/score_extraction.py [--negatives] [--selftest] [--out report.json]
+Usage:  python3 -I evals/harness/score_extraction.py [--selftest] [--out report.json]
 Predictions are the staged extraction JSON files (the same files that were loaded into the staging tables).
 
 Matching, one-to-one per company, in three passes: (1) same pair, type and direction; (2) same pair and type;
@@ -10,12 +10,14 @@ Matching, one-to-one per company, in three passes: (1) same pair, type and direc
   EXT-4 type      = among matched edges, share with the right type
   EXT-5 quote support = admin review (every staged 10-K edge was marked Keep); reported, not computed here
   EXT-6 unsupported = predicted edges with no quote, or a quote not found in the filing (must be zero)
-  EXT-7 false-positive rate = share of gold negatives the agent also produced (needs confirmed negatives)"""
+  EXT-7 false-positive rate = share of gold negatives the agent also produced (admin-confirmed negatives only)"""
 import argparse, copy, csv, json, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "evals" / "gold"))
-import goldlib  # noqa: E402  (coverage check and file discovery; no per-company lists live here)
+sys.path.insert(0, str(ROOT / "agents" / "entity_resolution"))
+import goldlib  # noqa: E402
+from resolve import match_key  # noqa: E402  (same name rules as the entity resolution agent)  (coverage check and file discovery; no per-company lists live here)
 EXTR, GOLD = goldlib.EXTR, goldlib.GOLD
 DIRECTED = {"supplies", "sells_to", "invests", "acquires"}
 ALIAS = {"waymo": "alphabet", "google": "alphabet", "intel corporation": "intel"}
@@ -23,7 +25,7 @@ THRESH = {"EXT-1": (0.90, ">="), "EXT-2": (0.60, ">="), "EXT-3": (0.95, ">="), "
 
 
 def norm(s):
-    s = s.strip().lower()
+    s = match_key(s.strip())
     return ALIAS.get(s, s)
 
 
@@ -129,7 +131,7 @@ def selftest(gold, pred):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--negatives", action="store_true", help="also score EXT-7 with the draft negatives (provisional)")
+    ap.add_argument("--no-ext7", action="store_true", help="skip EXT-7 (it uses the admin-confirmed negatives by default)")
     ap.add_argument("--selftest", action="store_true"); ap.add_argument("--out")
     ap.add_argument("--pred-dir", help="score a re-run's output folder instead of the staged extraction files")
     ap.add_argument("--only", help="comma list of tickers to score (default: every company with a verdict file)")
@@ -147,16 +149,14 @@ def main():
     if a.selftest:
         f = selftest(gold, pred)
         print("selftest:", "ok" if not f else f); sys.exit(1 if f else 0)
-    neg = None
-    if a.negatives:
-        neg = load_gold("gold_negatives_draft.csv", "false") + load_gold("gold_edges.csv", "false")
+    neg = None if a.no_ext7 else load_gold("gold_negatives.csv", "false") + load_gold("gold_edges.csv", "false")
     res = run(gold, pred, neg, "m3")
     for focal, r in res.items():
         print(f"\n== {focal}: predicted {r['counts']['predicted']}, gold {r['counts']['gold_true']}, matched {r['counts']['matched']}")
         for tid in ("EXT-1", "EXT-2", "EXT-3", "EXT-4", "EXT-6", "EXT-7"):
             v = r.get(tid)
             shown = "n/a" if v is None else (f"{v:.1%}" if tid != "EXT-6" else str(v))
-            print(f"  {tid}: {shown:>7}  {verdict(tid, v)}" + ("  (provisional: draft negatives)" if tid == "EXT-7" and v is not None else ""))
+            print(f"  {tid}: {shown:>7}  {verdict(tid, v)}" )
         if r["counts"]["missed"]:
             print("  missed:", "; ".join(" ".join(m) for m in r["counts"]["missed"]))
     if a.out:
