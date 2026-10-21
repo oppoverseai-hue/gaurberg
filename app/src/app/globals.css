@@ -108,3 +108,5 @@ main.wide { max-width:none; padding:0; display:flex; flex-direction:column; }
 .sidefoot { position:sticky; bottom:0; display:flex; gap:8px; padding:8px 16px; background:var(--surface-mid); border-top:1px solid var(--line); font:10px var(--mono); color:var(--fg2); align-items:center; }
 kbd { padding:1px 6px; background:#0d1117; border:1px solid var(--line); border-radius:2px; color:var(--fg); font:10px var(--mono); }
 .more { display:flex; gap:8px; flex-wrap:wrap; padding:8px 16px; border-top:1px solid var(--line); background:var(--surface); }
+
+.fund { margin:0; font:12px var(--mono); } .fund > div { display:flex; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid var(--line-subtle); } .fund > div:last-child { border:0; } .fund dt { color:var(--muted); } .fund dd { margin:0; color:var(--fg); font-feature-settings:"tnum" 1; }
