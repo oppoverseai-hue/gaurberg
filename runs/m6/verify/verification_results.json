@@ -1,0 +1,338 @@
+[
+ {
+  "id": 1,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States a global strategic partnership between AUR and PACCAR; partners is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 2,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Volvo selected AUR as technology provider to jointly commercialize trucks, which is a named collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 3,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Explicitly describes a long-term strategic collaboration between AUR and Toyota.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 4,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Same sentence explicitly describes a strategic collaboration between AUR and DENSO.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 5,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Explicitly states a strategic partnership between AUR and Uber.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 6,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "AUR acquired Uber's self-driving unit, a division, not Uber itself as the target.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 7,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Uber invested $400 million in Aurora, matching source, target and equity investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 8,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Exclusive partnership with Continental, now AUMOVIO, which is the same entity.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 9,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Aurora pays for hardware but never names AUMOVIO or any supplier relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 10,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Describes a strategic collaboration with Ryder Systems; partners is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 11,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Launching commercial operations with Hirschbach implies a commercial tie, but customer status is not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 12,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Launching commercial operations with Uber Freight implies a commercial tie, but customer status is not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 13,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Lists Waymo among firms building the same technology, implying rivalry, but never explicitly calls them competitors.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 14,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 15,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 16,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 17,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 18,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 19,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 20,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 21,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 22,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names other companies' AI-driving investment; AUR is never mentioned, so no competition with AUR is stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 23,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Says AUR relies on Amazon Web Services, implying a supplier, but the sentence does not state a supply link explicitly.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 24,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a sales-agent agreement for AUR's stock offering, not a goods or service supply link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 25,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a sales-agent agreement for AUR's stock offering, not a goods or service supply link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 26,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a sales-agent agreement for AUR's stock offering, not a goods or service supply link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 27,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence never names PwC and describes an auditing role, not a supply relationship; 'supplies' is the wrong type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 28,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names a Strategic Partnership Agreement between the Registrant and Continental entities; partners is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]

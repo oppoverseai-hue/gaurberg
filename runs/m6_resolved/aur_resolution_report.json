@@ -1,0 +1,35 @@
+{
+ "ticker": "AUR",
+ "edges_in": 28,
+ "edges_out": 28,
+ "edges_merged": 0,
+ "new_nodes": [
+  "AUMOVIO",
+  "Allen & Company",
+  "Cantor Fitzgerald",
+  "Continental",
+  "DENSO",
+  "Hirschbach",
+  "Kodiak Robotics",
+  "Mobileye",
+  "Motional",
+  "PACCAR",
+  "PlusAI",
+  "Ryder Systems",
+  "Stack AV",
+  "TD Securities",
+  "Torc Robotics",
+  "Toyota",
+  "Uber Freight",
+  "Volvo",
+  "Zoox/Amazon"
+ ],
+ "needs_review": [
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

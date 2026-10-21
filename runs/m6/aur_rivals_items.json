@@ -1,0 +1,102 @@
+[
+ {
+  "id": 1,
+  "focal": "AUR",
+  "counterparty": "Waymo",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Waymo",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 2,
+  "focal": "AUR",
+  "counterparty": "Tesla",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Tesla",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 3,
+  "focal": "AUR",
+  "counterparty": "Zoox",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Zoox",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 4,
+  "focal": "AUR",
+  "counterparty": "Motional",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Motional",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 5,
+  "focal": "AUR",
+  "counterparty": "Torc Robotics",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Torc Robotics",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 6,
+  "focal": "AUR",
+  "counterparty": "Kodiak Robotics",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Kodiak Robotics",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 7,
+  "focal": "AUR",
+  "counterparty": "PlusAI",
+  "type": "competes",
+  "source": "AUR",
+  "target": "PlusAI",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 8,
+  "focal": "AUR",
+  "counterparty": "Waabi",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Waabi",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 9,
+  "focal": "AUR",
+  "counterparty": "Stack AV",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Stack AV",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ },
+ {
+  "id": 10,
+  "focal": "AUR",
+  "counterparty": "Mobileye",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Mobileye",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+  "quote_found": true
+ }
+]

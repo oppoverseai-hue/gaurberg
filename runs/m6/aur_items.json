@@ -1,0 +1,282 @@
+[
+ {
+  "id": 1,
+  "focal": "AUR",
+  "counterparty": "PACCAR",
+  "type": "partners",
+  "source": "AUR",
+  "target": "PACCAR",
+  "quote": "In January 2021, we entered into a global strategic partnership with PACCAR.",
+  "quote_found": true
+ },
+ {
+  "id": 2,
+  "focal": "AUR",
+  "counterparty": "Volvo",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Volvo",
+  "quote": "In March 2021, Volvo selected us as its technology provider to develop and jointly commercialize Level 4 Class 8 trucks in North America.",
+  "quote_found": true
+ },
+ {
+  "id": 3,
+  "focal": "AUR",
+  "counterparty": "Toyota",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Toyota",
+  "quote": "In February 2021, we announced a long-term, global, and strategic collaboration with Toyota and DENSO, one of the largest global automotive manufacturers and tier-one automotive suppliers, respectively, to build and globally deploy self-driving cars at scale.",
+  "quote_found": true
+ },
+ {
+  "id": 4,
+  "focal": "AUR",
+  "counterparty": "DENSO",
+  "type": "partners",
+  "source": "AUR",
+  "target": "DENSO",
+  "quote": "In February 2021, we announced a long-term, global, and strategic collaboration with Toyota and DENSO, one of the largest global automotive manufacturers and tier-one automotive suppliers, respectively, to build and globally deploy self-driving cars at scale.",
+  "quote_found": true
+ },
+ {
+  "id": 5,
+  "focal": "AUR",
+  "counterparty": "Uber",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Uber",
+  "quote": "In addition to acquiring Uber\u2019s self-driving unit, we announced a strategic partnership with Uber that connects our technology to the world\u2019s leading ride-hailing platform and strengthens our position to deliver the Aurora Driver broadly.",
+  "quote_found": true
+ },
+ {
+  "id": 6,
+  "focal": "AUR",
+  "counterparty": "Uber",
+  "type": "acquires",
+  "source": "AUR",
+  "target": "Uber",
+  "quote": "In January 2021, we acquired Uber\u2019s self-driving unit.",
+  "quote_found": true
+ },
+ {
+  "id": 7,
+  "focal": "AUR",
+  "counterparty": "Uber",
+  "type": "invests",
+  "source": "Uber",
+  "target": "AUR",
+  "quote": "In support of our partnership with Uber, and concurrent with the acquisition of Uber\u2019s self-driving unit, Uber invested $400 million in Aurora.",
+  "quote_found": true
+ },
+ {
+  "id": 8,
+  "focal": "AUR",
+  "counterparty": "AUMOVIO",
+  "type": "partners",
+  "source": "AUR",
+  "target": "AUMOVIO",
+  "quote": "In April 2023, we entered into an exclusive partnership with Continental, now AUMOVIO, to deliver the first commercially scalable future generation of the Aurora Driver.",
+  "quote_found": true
+ },
+ {
+  "id": 9,
+  "focal": "AUR",
+  "counterparty": "AUMOVIO",
+  "type": "supplies",
+  "source": "AUMOVIO",
+  "target": "AUR",
+  "quote": "Under the \u201cHardware-as-a-Service\u201d business model, Aurora will pay for the hardware and related services on a per mile basis.",
+  "quote_found": true
+ },
+ {
+  "id": 10,
+  "focal": "AUR",
+  "counterparty": "Ryder Systems",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Ryder Systems",
+  "quote": "Further, we continued our strategic collaboration with Ryder Systems, piloting on-site fleet maintenance to support current autonomous freight pilot operations and prepare for commercial operation at scale.",
+  "quote_found": true
+ },
+ {
+  "id": 11,
+  "focal": "AUR",
+  "counterparty": "Hirschbach",
+  "type": "sells_to",
+  "source": "AUR",
+  "target": "Hirschbach",
+  "quote": "In April 2025, we launched driverless commercial operations with Hirschbach and Uber Freight and have since expanded our driverless customer cohort.",
+  "quote_found": true
+ },
+ {
+  "id": 12,
+  "focal": "AUR",
+  "counterparty": "Uber Freight",
+  "type": "sells_to",
+  "source": "AUR",
+  "target": "Uber Freight",
+  "quote": "In April 2025, we launched driverless commercial operations with Hirschbach and Uber Freight and have since expanded our driverless customer cohort.",
+  "quote_found": true
+ },
+ {
+  "id": 13,
+  "focal": "AUR",
+  "counterparty": "Waymo",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Waymo",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 14,
+  "focal": "AUR",
+  "counterparty": "Tesla",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Tesla",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 15,
+  "focal": "AUR",
+  "counterparty": "Zoox/Amazon",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Zoox/Amazon",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 16,
+  "focal": "AUR",
+  "counterparty": "Motional",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Motional",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 17,
+  "focal": "AUR",
+  "counterparty": "Torc Robotics",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Torc Robotics",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 18,
+  "focal": "AUR",
+  "counterparty": "Kodiak Robotics",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Kodiak Robotics",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 19,
+  "focal": "AUR",
+  "counterparty": "PlusAI",
+  "type": "competes",
+  "source": "AUR",
+  "target": "PlusAI",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 20,
+  "focal": "AUR",
+  "counterparty": "Waabi",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Waabi",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 21,
+  "focal": "AUR",
+  "counterparty": "Stack AV",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Stack AV",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 22,
+  "focal": "AUR",
+  "counterparty": "Mobileye",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Mobileye",
+  "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+  "quote_found": true
+ },
+ {
+  "id": 23,
+  "focal": "AUR",
+  "counterparty": "Amazon",
+  "type": "supplies",
+  "source": "Amazon",
+  "target": "AUR",
+  "quote": "Interruption or failure of Amazon Web Services or other information technology and communications systems that we rely upon could materially and adversely affect our business, financial condition and results of operations.",
+  "quote_found": true
+ },
+ {
+  "id": 24,
+  "focal": "AUR",
+  "counterparty": "Cantor Fitzgerald",
+  "type": "supplies",
+  "source": "Cantor Fitzgerald",
+  "target": "AUR",
+  "quote": "On February 14, 2025, we entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC, as sales agents (the \u201cSales Agents\u201d), pursuant to which we may, from time to time, sell up to an aggregate amount of $500 million of the Company\u2019s Class A common stock through the Sales Agents in an \u201cat-the-market\u201d offering (the \u201cATM Program\u201d).",
+  "quote_found": true
+ },
+ {
+  "id": 25,
+  "focal": "AUR",
+  "counterparty": "TD Securities",
+  "type": "supplies",
+  "source": "TD Securities",
+  "target": "AUR",
+  "quote": "On February 14, 2025, we entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC, as sales agents (the \u201cSales Agents\u201d), pursuant to which we may, from time to time, sell up to an aggregate amount of $500 million of the Company\u2019s Class A common stock through the Sales Agents in an \u201cat-the-market\u201d offering (the \u201cATM Program\u201d).",
+  "quote_found": true
+ },
+ {
+  "id": 26,
+  "focal": "AUR",
+  "counterparty": "Allen & Company",
+  "type": "supplies",
+  "source": "Allen & Company",
+  "target": "AUR",
+  "quote": "On February 14, 2025, we entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC, as sales agents (the \u201cSales Agents\u201d), pursuant to which we may, from time to time, sell up to an aggregate amount of $500 million of the Company\u2019s Class A common stock through the Sales Agents in an \u201cat-the-market\u201d offering (the \u201cATM Program\u201d).",
+  "quote_found": true
+ },
+ {
+  "id": 27,
+  "focal": "AUR",
+  "counterparty": "PricewaterhouseCoopers",
+  "type": "supplies",
+  "source": "PricewaterhouseCoopers",
+  "target": "AUR",
+  "quote": "We have served as the Company\u2019s auditor since 2023.",
+  "quote_found": true
+ },
+ {
+  "id": 28,
+  "focal": "AUR",
+  "counterparty": "Continental",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Continental",
+  "quote": "Amended and Restated Strategic Partnership Agreement, dated September 27, 2023, by and among the Registrant and Aurora Operations, Inc., and Continental Automotive Technologies GmbH and Continental Autonomous Mobility Germany GmbH",
+  "quote_found": true
+ }
+]

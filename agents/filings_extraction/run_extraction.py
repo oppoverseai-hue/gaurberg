@@ -23,7 +23,7 @@ def call(model, prompt):
     return _call(model, prompt, SYSTEM)
 
 CHUNK = 90_000
-NAMES = {"CRWV": "CoreWeave", "LYFT": "Lyft", "UBER": "Uber Technologies"}
+NAMES = {"CRWV": "CoreWeave", "LYFT": "Lyft", "UBER": "Uber Technologies", "AUR": "Aurora Innovation"}
 SYSTEM = """You extract company relationships from SEC filings for a market-data product. You output JSON only."""
 RULES = """Find every relationship in the filing text below between the focal company and another NAMED company or organisation.
 Allowed types (use exactly these words):
