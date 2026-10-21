@@ -22,12 +22,10 @@ export default async function MapPage({ params }: { params: Promise<{ ticker: st
   const rels = (data ?? []) as unknown as Rel[];
   return (
     <main className="wide">
-      <div className="top"><Link href="/">← Search</Link><span className="muted">{access.email} ({access.role})</span></div>
-      <h1>{focal.name} <span className="muted">({focal.ticker})</span> ecosystem</h1>
       {error ? (
-        <div className="card"><p>Could not load links. <Link href={`/map/${ticker}`}>Retry</Link></p></div>
+        <div className="card" style={{ margin: 24 }}><p>Could not load links. <Link href={`/map/${ticker}`}>Retry</Link></p></div>
       ) : rels.length === 0 ? (
-        <div className="card"><p>{focal.is_seed ? "No disclosed relationships found for this company." : "This company is not yet mapped."}</p></div>
+        <div className="card" style={{ margin: 24 }}><p>{focal.is_seed ? "No disclosed relationships found for this company." : "This company is not yet mapped."}</p></div>
       ) : (
         <MapView focal={focal} rels={rels} isAdmin={access.role === "admin"} />
       )}
