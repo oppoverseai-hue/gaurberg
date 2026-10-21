@@ -56,7 +56,7 @@ export function badgeOf(r: Rel): { label: string; cls: string } {
   switch (r.trust_status) {
     case "verified": return { label: "Verified", cls: "b-verified" };
     case "curated": return { label: "Curated", cls: "b-curated" };
-    case "live_generated": return { label: "Live-generated", cls: "b-live" };
+    case "live_generated": return { label: "Live-generated, not reviewed", cls: "b-live" };
     case "sample": return { label: "Sample data", cls: "b-sample" };
     default: return { label: "Staged, not reviewed", cls: "b-staged" };
   }

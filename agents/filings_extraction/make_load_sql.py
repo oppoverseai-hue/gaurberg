@@ -9,8 +9,11 @@ ap.add_argument("extraction"); ap.add_argument("seed")
 ap.add_argument("--ticker", default="UBER"); ap.add_argument("--filed", default="2026-02-13")
 ap.add_argument("--aliases", default="Lyft=LYFT,DoorDash=DASH")
 ap.add_argument("--target", default="UBER FY2025 10-K (spike)")
+ap.add_argument("--live-queue-id", type=int, default=0)  # M7: write status live / live_generated and finish this lookup_queue row
 ap.add_argument("--cost", type=float, default=0.0)  # real cost_usd from the run file, never a placeholder
 a = ap.parse_args()
+TRUST = "$q$live_generated$q$" if a.live_queue_id else "null"
+STATUS = "$q$live$q$" if a.live_queue_id else "$q$staged$q$"
 edges = json.load(open(a.extraction))
 seed = list(csv.DictReader(open(a.seed)))
 alias = dict(x.split("=") for x in a.aliases.split(",") if x)
@@ -52,10 +55,12 @@ L.append("for r in select * from _e order by n loop "
          "if r.ty in ('competes','partners') and a > b then rid := a; a := b; b := rid; end if; "
          "isnew := false; rid := null; select id into rid from public.relationships where source_id=a and target_id=b and relationship_type=r.ty order by id limit 1; "
          "if rid is null then "
-         "insert into public.relationships(source_id,target_id,relationship_type,exposure_pct,exposure_qualifier,exposure_basis,exposure_as_of,source_type,status,run_id,as_of_date,note) "
-         "values (a,b,r.ty,r.pct,r.qual,case when r.pct is null then 'none' else r.basis end,case when r.pct is null then null else '2025-12-31'::date end,'sec_filing','staged',run_id,'2025-12-31',r.note) returning id into rid; isnew := true; end if; "
+         "insert into public.relationships(source_id,target_id,relationship_type,exposure_pct,exposure_qualifier,exposure_basis,exposure_as_of,source_type,status,trust_status,run_id,as_of_date,note) "
+         f"values (a,b,r.ty,r.pct,r.qual,case when r.pct is null then 'none' else r.basis end,case when r.pct is null then null else '2025-12-31'::date end,'sec_filing',{STATUS},{TRUST},run_id,'2025-12-31',r.note) returning id into rid; isnew := true; end if; "
          "if isnew then for k in 1..array_length(r.qs,1) loop "
          f"insert into public.evidence(relationship_id,document_url,section,quote,quote_found,published_at) "
          f"select rid,{q(URL)},r.sec[k],t,true,{q(a.filed)} from _q where i=r.qs[k]; end loop; end if; end loop;")
+if a.live_queue_id:
+    L.append(f"update public.lookup_queue set status='done', step='Done', links_found=(select count(*) from _e), run_id=run_id, finished_at=now(), company_id=pg_temp.nid({q(a.ticker)}) where id={a.live_queue_id};")
 L.append("end $do$;")
 print("\n".join(L))

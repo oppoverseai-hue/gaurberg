@@ -10,4 +10,4 @@ roles:
   verifier_baseline: { model: claude-haiku-5-5, note: "NOT independent of the extractor (same vendor): a baseline to measure VER-1 and VER-2 until a different-vendor verifier key exists; VER-3 stays unmet" }
   verifier_cheap:   { model: gemini-3.1-flash-lite, note: "different vendor (Google) than the extractor, satisfies VER-3; called via the gemini-proxy edge function; list price $0.25 in / $1.50 out per M tokens" }
   verifier_strong:  { model: TBD, note: "escalation only" }
-  live_lookup:      { model: TBD, note: "free tier; if none available, queue to lookup_queue" }
+  live_lookup:      { model: gemini-3.1-flash-lite, note: "decided by the admin 2026-10-21: free-tier Gemini, server-side only (edge function live-lookup reads it from the LIVE_LOOKUP_MODEL secret); if the free allowance is used up, queue to lookup_queue for Claude Code" }
