@@ -9,7 +9,7 @@ Run: python3 -I evals/gold/build_gold_set.py   (fails if any extracted edge lack
 Requirements: EXT-1..EXT-7 (Eval Spec, gold set specification)."""
 import csv, json, sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from goldlib import EXTR, GOLD, check_coverage, load_verdicts, news_files, negative_picks, confirmed_negatives
+from goldlib import path_of, GOLD, check_coverage, load_verdicts, news_files, negative_picks, confirmed_negatives
 
 COLS = ["focal_ticker", "counterparty", "relationship_type", "direction", "evidence_url", "quote", "as_of",
         "label", "exposure_pct", "exposure_basis", "exposure_qualifier", "notes"]
@@ -30,7 +30,7 @@ def main():
     pos, neg, cache = [], [], {}
     for t, rows in load_verdicts().items():
         for r in rows:
-            edges = cache.setdefault(r["file"], json.load(open(EXTR / r["file"])))
+            edges = cache.setdefault(r["file"], json.load(open(path_of(r["file"]))))
             e = edges[int(r["pos"])]
             pct = e.get("exposure_pct")
             pos.append({"focal_ticker": t, "counterparty": e["counterparty"], "relationship_type": e["type"],

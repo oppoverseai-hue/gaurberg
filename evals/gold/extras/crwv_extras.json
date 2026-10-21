@@ -1,0 +1,102 @@
+[
+ {
+  "counterparty": "MagAI Ventures",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "MagAI Ventures",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In August 2024, the Company entered into an AI Computing Service Reserved Capacity and Prepayment Agreement with MagAI Ventures (the \"MagAI Capacity Agreement\"). Under this arrangement, the Company agreed to provide portfolio companies of MagAI Ventures with a pre-determined amount of cloud computing services at a pre-negotiated hourly rate.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "note": "Review Q1: admin Drop (incorrect and unverified)."
+ },
+ {
+  "counterparty": "Magnetar",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "CRWV",
+  "target": "Magnetar",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In June 2024, the Company contributed $\n50\n million to a fund managed by Magnetar in connection with the fund's purchase of a third-party's preferred stock.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "note": "Review Q2: admin Fix, the other way around (Magnetar invests in CoreWeave). This reversed edge is a confirmed negative; the corrected edge is already gold as C13."
+ },
+ {
+  "counterparty": "Deloitte & Touche LLP",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Deloitte & Touche LLP",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "/s/ Deloitte & Touche LLP",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We have served as the Company's auditor since 2024.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "note": "Review Q5: admin Keep (auditor)."
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Master Services Agreement between CoreWeave, Inc. and NVIDIA Corporation, dated April 10, 2023",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "note": "Review Q6: admin Keep."
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "OpenAI",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Stock Issuance Agreement between CoreWeave, Inc. and OpenAI OpCo, LLC, dated March 7, 2025",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "note": "Review Q7: admin Keep."
+ }
+]

@@ -16,3 +16,7 @@ L14,lyft_extraction.json,13,RapidSOS,partners,keep,,admin 2026-10-21
 A13,lyft_acq.json,0,Freenow,acquires,keep,,admin 2026-10-21
 A14,lyft_acq.json,1,TBR,acquires,keep,,admin 2026-10-21
 A15,lyft_acq.json,2,Flexdrive,acquires,keep,,admin 2026-10-21
+X3,evals/gold/extras/lyft_extras.json,0,Flexdrive,invests,drop,Review Q3: admin Fix (Lyft acquired Flexdrive). The invests type is a confirmed negative; the corrected edge is already gold as A15.,"admin 2026-10-21 (M3 review, extra links)"
+X4,evals/gold/extras/lyft_extras.json,1,PricewaterhouseCoopers,supplies,keep,Review Q4: admin Keep (auditor).,"admin 2026-10-21 (M3 review, extra links)"
+X8,evals/gold/extras/lyft_extras.json,2,"Pacific Valley Insurance Company, Inc.",invests,keep,Review Q8: admin Keep.,"admin 2026-10-21 (M3 review, extra links)"
+X9,evals/gold/extras/lyft_extras.json,3,Transopco,acquires,keep,Review Q9: admin Keep.,"admin 2026-10-21 (M3 review, extra links)"

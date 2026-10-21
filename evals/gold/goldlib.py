@@ -14,6 +14,11 @@ VERD = GOLD / "verdicts"
 VALID = {"keep", "drop", "fix"}
 
 
+def path_of(fname):
+    """Verdict files name a staged extraction file (relative to agents/filings_extraction) or an admin-reviewed extras file (path from the repo root)."""
+    return ROOT / fname if fname.startswith("evals/") else EXTR / fname
+
+
 def extraction_files():
     """{TICKER: [filenames]} for every staged extraction output (<ticker>_extraction.json, <ticker>_acq.json)."""
     out = {}
@@ -61,7 +66,7 @@ def check_coverage():
             if r["verdict"] == "fix" and not r["note"].strip():
                 errs.append(f"{t} {r['row_id']}: fix needs the admin's note")
         for f in ext[t]:
-            edges = json.load(open(EXTR / f))
+            edges = json.load(open(path_of(f)))
             by = {int(r["pos"]): r for r in rows if r["file"] == f}
             for pos, e in enumerate(edges):
                 r = by.pop(pos, None)
@@ -73,6 +78,14 @@ def check_coverage():
                     errs.append(f"{t} {f}[{pos}] {e['counterparty']}: quote not found in filing")
             for r in by.values():
                 errs.append(f"{t} {r['row_id']}: verdict points at {f}[{r['pos']}] which does not exist")
+        for f in sorted({r["file"] for r in rows if r["file"].startswith("evals/")}):
+            edges = json.load(open(path_of(f)))
+            for r in (x for x in rows if x["file"] == f):
+                e = edges[int(r["pos"])] if int(r["pos"]) < len(edges) else None
+                if e is None or (e["counterparty"], e["type"]) != (r["counterparty"], r["type"]):
+                    errs.append(f"{t} {r['row_id']}: extras file does not match its verdict row")
+                elif not all(v.get("quote_found") for v in e["evidence"]):
+                    errs.append(f"{t} {r['row_id']}: quote not found in filing")
         # EXT-7 needs 2-3 negatives per ticker: confirmed drops plus draft picks
         n = sum(r["verdict"] == "drop" for r in rows) + len(confirmed_negatives().get(t, []))
         if n < 2:

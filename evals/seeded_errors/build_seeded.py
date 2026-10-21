@@ -8,7 +8,7 @@ import json, pathlib, random, sys
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT / "evals" / "gold"))
-from goldlib import EXTR, load_verdicts, check_coverage  # noqa: E402
+from goldlib import path_of, load_verdicts, check_coverage  # noqa: E402
 
 DIRECTED = {"supplies", "sells_to", "invests", "acquires"}
 WRONG = {"competes": "partners", "partners": "competes", "invests": "partners", "sells_to": "competes", "supplies": "competes", "acquires": "partners"}
@@ -20,7 +20,7 @@ def main():
     rng = random.Random(7)
     items = []
     for t, rows in load_verdicts().items():
-        edges = {r["row_id"]: json.load(open(EXTR / r["file"]))[int(r["pos"])] for r in rows if r["verdict"] == "keep"}
+        edges = {r["row_id"]: json.load(open(path_of(r["file"])))[int(r["pos"])] for r in rows if r["verdict"] == "keep" and not r["file"].startswith("evals/")}
         pool = list(edges.items())
         for n, (rid, e) in enumerate(pool):
             base = {"focal": t, "counterparty": e["counterparty"], "type": e["type"], "source": e["source"], "target": e["target"],
