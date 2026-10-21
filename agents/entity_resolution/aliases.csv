@@ -7,3 +7,6 @@ Intelligent Apps GmbH,Freenow,same_entity,"Legal entity named in the Lyft FY2025
 TBR Global Chauffeuring,TBR,same_entity,"Lyft FY2025 10-K: TheBookingRoomGroup Limited (d/b/a TBR Global Chauffeuring, or TBR)"
 TheBookingRoomGroup Limited,TBR,same_entity,"Legal name of TBR in the same sentence"
 Continental,AUMOVIO,same_entity,"Continental spun off its automotive business as AUMOVIO; Aurora 10-K says Continental, now AUMOVIO (2026-10-21)"
+Zoox,Amazon,same_entity,"Parent rule (admin, 2026-10-21): Zoox is an Amazon unit, shown under Amazon"
+Zoox/Amazon,Amazon,same_entity,"Parent rule (admin, 2026-10-21): the filing writes Zoox/Amazon; shown under Amazon"
+Uber Freight,Uber Technologies,same_entity,"Parent rule (admin, 2026-10-21): Uber Freight is an Uber unit, shown under Uber"
