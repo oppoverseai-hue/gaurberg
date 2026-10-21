@@ -1,0 +1,10 @@
+focal_ticker,counterparty,relationship_type,direction,evidence_url,quote,as_of,label,exposure_pct,exposure_basis,exposure_qualifier,notes
+CRWV,Microsoft,sells_to,Microsoft>CRWV,,,2025-12-31,false,,,,Negative C1: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+CRWV,NVIDIA,supplies,CRWV>NVIDIA,,,2025-12-31,false,,,,Negative C4: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+CRWV,NVIDIA,invests,CRWV>NVIDIA,,,2025-12-31,false,,,,Negative C5: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+LYFT,Amazon,supplies,LYFT>Amazon,,,2025-12-31,false,,,,Negative L12: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+LYFT,Freenow,acquires,Freenow>LYFT,,,2025-12-31,false,,,,Negative A13: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+LYFT,TBR,acquires,TBR>LYFT,,,2025-12-31,false,,,,Negative A14: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+UBER,Aurora,invests,Aurora>UBER,,,2025-12-31,false,,,,Negative U20: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+UBER,Waymo,supplies,UBER>Waymo,,,2025-12-31,false,,,,Negative U31: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21
+UBER,Trendyol GO,acquires,Trendyol GO>UBER,,,2025-12-31,false,,,,Negative A1: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21

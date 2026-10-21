@@ -38,6 +38,11 @@ def negative_picks():
     return json.load(open(p)) if p.exists() else {}
 
 
+def confirmed_negatives():
+    p = GOLD / "negatives_confirmed.json"
+    return json.load(open(p))["rows"] if p.exists() else {}
+
+
 def check_coverage():
     """Return a list of problems (empty = every extracted edge has a verdict and every verdict has an edge)."""
     errs, ext, ver = [], extraction_files(), load_verdicts()
@@ -69,9 +74,9 @@ def check_coverage():
             for r in by.values():
                 errs.append(f"{t} {r['row_id']}: verdict points at {f}[{r['pos']}] which does not exist")
         # EXT-7 needs 2-3 negatives per ticker: confirmed drops plus draft picks
-        n = sum(r["verdict"] == "drop" for r in rows) + len(negative_picks().get(t, []))
+        n = sum(r["verdict"] == "drop" for r in rows) + len(confirmed_negatives().get(t, []))
         if n < 2:
-            errs.append(f"{t}: only {n} negatives (drops + picks); EXT-7 needs 2-3 per ticker")
+            errs.append(f"{t}: only {n} negatives (drops + admin-confirmed picks); EXT-7 needs 2-3 per ticker")
     return errs
 
 

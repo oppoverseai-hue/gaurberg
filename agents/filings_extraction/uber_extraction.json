@@ -630,5 +630,24 @@
   "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
   "as_of": "2025-12-31",
   "exposure_pct": null
+ },
+ {
+  "counterparty": "Lime",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "UBER",
+  "target": "Lime",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In addition, while we divested certain assets of our dockless e-bikes and e-scooters business to Lime in May 2020, consumers in certain cities continue to have access to dockless e-bikes and e-scooters through our app.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "note": "Added 2026-10-21 at the admin's direction (M2 review #25 Fix: Uber also partners with Lime). Filing text only; news source N5 not used."
  }
 ]

@@ -3,12 +3,13 @@
 Inputs : evals/gold/verdicts/<TICKER>.csv (admin verdicts), the staged extraction JSON they refer to,
          evals/gold/*_news.csv (admin-approved news rows), evals/gold/negative_picks.json (draft negatives).
 Outputs: evals/gold/gold_edges.csv  (label = true | false | pending)
+         evals/gold/gold_negatives.csv (admin-confirmed negatives, listed in negatives_confirmed.json)
          evals/gold/gold_negatives_draft.csv (label = false, DRAFT until the admin confirms each row)
 Run: python3 -I evals/gold/build_gold_set.py   (fails if any extracted edge lacks a verdict: see goldlib.check_coverage)
 Requirements: EXT-1..EXT-7 (Eval Spec, gold set specification)."""
 import csv, json, sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from goldlib import EXTR, GOLD, check_coverage, load_verdicts, news_files, negative_picks
+from goldlib import EXTR, GOLD, check_coverage, load_verdicts, news_files, negative_picks, confirmed_negatives
 
 COLS = ["focal_ticker", "counterparty", "relationship_type", "direction", "evidence_url", "quote", "as_of",
         "label", "exposure_pct", "exposure_basis", "exposure_qualifier", "notes"]
@@ -49,19 +50,25 @@ def main():
     with open(GOLD / "gold_edges.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, COLS); w.writeheader(); w.writerows(pos)
     # DRAFT negatives: the direction-reversed copy of a Keep edge is false by construction (no new facts are claimed).
-    rows = []
+    rows, conf = [], []
+    ok = confirmed_negatives()
     for ident, e, focal in neg:
         other = e["target"] if e["source"] == focal else e["source"]
-        rows.append({"focal_ticker": focal, "counterparty": other, "relationship_type": e["type"],
-                     "direction": f"{e['target']}>{e['source']}", "evidence_url": "", "quote": "", "as_of": e["as_of"],
-                     "label": "false", "exposure_pct": "", "exposure_basis": "", "exposure_qualifier": "",
-                     "notes": f"DRAFT negative: reversed direction of {ident}. Awaiting admin confirmation"})
+        row = {"focal_ticker": focal, "counterparty": other, "relationship_type": e["type"],
+               "direction": f"{e['target']}>{e['source']}", "evidence_url": "", "quote": "", "as_of": e["as_of"],
+               "label": "false", "exposure_pct": "", "exposure_basis": "", "exposure_qualifier": ""}
+        if ident in ok.get(focal, []):
+            conf.append({**row, "notes": f"Negative {ident}: reversed direction of a Keep edge. Confirmed by the admin 2026-10-21"})
+        else:
+            rows.append({**row, "notes": f"DRAFT negative: reversed direction of {ident}. Awaiting admin confirmation"})
+    with open(GOLD / "gold_negatives.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, COLS); w.writeheader(); w.writerows(conf)
     with open(GOLD / "gold_negatives_draft.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, COLS); w.writeheader(); w.writerows(rows)
     by = {}
     for r in pos:
         k = (r["focal_ticker"], r["label"]); by[k] = by.get(k, 0) + 1
-    print("gold_edges.csv:", len(pos), "rows", dict(sorted(by.items())), "| draft negatives:", len(rows))
+    print("gold_edges.csv:", len(pos), "rows", dict(sorted(by.items())), "| confirmed negatives:", len(conf), "| draft negatives:", len(rows))
 
 
 if __name__ == "__main__":

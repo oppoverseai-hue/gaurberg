@@ -5,7 +5,8 @@ roles:
   # Candidates for the extractor role, compared on the CRWV gold set (see runs/ and eval_results). Not a decision yet.
   extractor_small:  { model: claude-haiku-5-5,  note: "candidate A for extractor" }
   extractor_main:   { model: claude-sonnet-5-5, note: "candidate B for extractor" }
-  extractor:        { model: TBD, note: "batch, runs in Claude Code; set after the Haiku vs Sonnet comparison" }
+  extractor:        { model: claude-sonnet-5-5, note: "decided by the admin 2026-10-21 after the CRWV and LYFT comparison (Haiku wrote 2 unsupported quotes)" }
+  extractor_second_pass: { model: claude-haiku-5-5, note: "cheap second pass; to be added once the verification step exists" }
   verifier_cheap:   { model: TBD, note: "free tier; must be a different vendor than extractor" }
   verifier_strong:  { model: TBD, note: "escalation only" }
   live_lookup:      { model: TBD, note: "free tier; if none available, queue to lookup_queue" }
