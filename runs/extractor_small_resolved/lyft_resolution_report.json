@@ -1,0 +1,39 @@
+{
+ "ticker": "LYFT",
+ "edges_in": 21,
+ "edges_out": 20,
+ "edges_merged": 1,
+ "new_nodes": [
+  "ADT",
+  "Baidu",
+  "Bird",
+  "Dott",
+  "Fifteen",
+  "Flexdrive",
+  "Freenow",
+  "Pacific Valley Insurance Company, Inc.",
+  "PricewaterhouseCoopers",
+  "RapidSOS",
+  "TBR",
+  "Transopco",
+  "nextbike"
+ ],
+ "needs_review": [
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  },
+  {
+   "raw": "Uber",
+   "resolved": "Uber Technologies",
+   "how": "ticker"
+  },
+  {
+   "raw": "AWS",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

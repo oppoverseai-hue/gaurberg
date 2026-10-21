@@ -1,0 +1,43 @@
+{
+ "ticker": "CRWV",
+ "edges_in": 21,
+ "edges_out": 20,
+ "edges_merged": 1,
+ "new_nodes": [
+  "Deloitte & Touche LLP",
+  "MagAI Ventures",
+  "Magnetar",
+  "Marimo",
+  "Monolith",
+  "OpenAI",
+  "OpenPipe",
+  "Weights & Biases"
+ ],
+ "needs_review": [
+  {
+   "raw": "Meta",
+   "resolved": "Meta Platforms",
+   "how": "ticker"
+  },
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Monolith AI",
+   "resolved": "Monolith",
+   "how": "merged_new"
+  }
+ ],
+ "direction_conflicts": [
+  {
+   "counterparty": "magnetar",
+   "type": "invests",
+   "directions": [
+    "CRWV>Magnetar",
+    "Magnetar>CRWV"
+   ]
+  }
+ ]
+}

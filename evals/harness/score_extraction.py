@@ -15,7 +15,9 @@ import argparse, copy, csv, json, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "evals" / "gold"))
-import goldlib  # noqa: E402  (coverage check and file discovery; no per-company lists live here)
+sys.path.insert(0, str(ROOT / "agents" / "entity_resolution"))
+import goldlib  # noqa: E402
+from resolve import match_key  # noqa: E402  (same name rules as the entity resolution agent)  (coverage check and file discovery; no per-company lists live here)
 EXTR, GOLD = goldlib.EXTR, goldlib.GOLD
 DIRECTED = {"supplies", "sells_to", "invests", "acquires"}
 ALIAS = {"waymo": "alphabet", "google": "alphabet", "intel corporation": "intel"}
@@ -23,7 +25,7 @@ THRESH = {"EXT-1": (0.90, ">="), "EXT-2": (0.60, ">="), "EXT-3": (0.95, ">="), "
 
 
 def norm(s):
-    s = s.strip().lower()
+    s = match_key(s.strip())
     return ALIAS.get(s, s)
 
 

@@ -1,0 +1,22 @@
+{
+ "VER-1": 1.0,
+ "VER-2": 0.02564102564102564,
+ "VER-3": false,
+ "VER-4": 0.00019788487179487178,
+ "detail": {
+  "planted": 78,
+  "correct": 78,
+  "flagged": 78,
+  "strict_fail": 77,
+  "correct_marked_fail": 2,
+  "correct_marked_uncertain": 9,
+  "catch_by_kind": {
+   "type": "33/33",
+   "unsupported": "33/33",
+   "direction": "12/12"
+  },
+  "verifier_model": "claude-haiku-5-5",
+  "verifier_vendor": "anthropic",
+  "extractor_vendor": "anthropic"
+ }
+}

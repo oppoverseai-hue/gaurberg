@@ -1,0 +1,427 @@
+[
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We recognized an aggregate of approximately 67% of our revenue from our top customer, Microsoft, for the year ended December 31, 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Other significant customers include Microsoft and Meta.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Master Services Agreement between CoreWeave, Inc. and Microsoft Corporation, dated February 22, 2023",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 67,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC (\"OpenAI\") and in September 2025, we entered into an order form under this master services agreement pursuant to which OpenAI has committed to pay us up to approximately $6.5 billion through May 31, 2031 and, as a result, we expect OpenAI to be a significant customer in future periods.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "For example, in March 2025, we entered into a master services agreement with OpenAI, a private company, pursuant to which OpenAI has committed to pay us up to approximately $11.9 billion through October 2030.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Master Services Agreement between CoreWeave, Inc. and OpenAI OpCo, LLC, dated March 7, 2025",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Master Services Agreement between CoreWeave, Inc. and OpenAI OpCo, LLC, dated May 8, 2025",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Meta Platforms",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "Meta Platforms",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Similarly, in September 2025, we entered into an order form under an existing master services agreement pursuant to which Meta Platforms, Inc. (\"Meta\") initially committed to pay us up to approximately $14.2 billion through December 2031 and, as a result, we also expect Meta to be a significant customer in future periods.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Other significant customers include Microsoft and Meta.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Master Services Agreement between CoreWeave, Inc. and Meta Platforms, Inc., dated December 10, 2023",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "NVIDIA",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, as a result of our obligations in our current customer contracts, all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Weights & Biases",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "Weights & Biases",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "With Weights & Biases (acquired by CoreWeave in 2025), we provide a comprehensive, proven AI development platform and cutting-edge tools for AI development—including model pre-training (W&B Models), post-training (W&B Training), model serving (W&B Inference), and agent evaluation and monitoring (W&B Weave).",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On May 5, 2025, the Company acquired all of the outstanding equity interests of Weights and Biases, Inc. (\"Weights & Biases\"), an AI developer platform.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenPipe",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "OpenPipe",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "And in September 2025, we acquired OpenPipe, a leading platform for training AI agents with RL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Marimo",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "Marimo",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In October 2025, we also acquired Marimo, creator of the marimo notebook, an open-source, AI-native environment, to unify the generative AI development workflow and enable faster, smarter AI development.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In connection with the closing of our acquisition of Marimo Inc., on October 30, 2025, we issued an aggregate of 844,735 shares of our Class A common stock to former holders of shares of Marimo Inc. common stock in reliance on an exemption from the registration requirements of the Securities Act pursuant to Section 4(a)(2) thereof and/or Rule 506 of Regulation D promulgated thereunder as a transaction by an issuer not involving a public offering.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Monolith",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "Monolith",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "To meet the specialized needs of industrial customers, in November 2025 we acquired Monolith, which provides a full-stack platform for enterprises that want to accelerate industrial innovation in the physical world through simulation and machine learning capabilities.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "For example, in November 2025, we acquired Monolith AI Limited, a pioneer in applying artificial intelligence and high performance computing to solve complex physics and engineering challenges.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In connection with the closing of our acquisition of Monolith AI Limited, on November 5, 2025, we issued $185 million in aggregate principal amount of convertible notes, $13 million of which included vesting conditions, to certain former holders of shares of Monolith AI Limited in reliance on an exemption from the registration requirements of the Securities Act pursuant to Section 4(a)(2) thereof.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Oracle",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Oracle",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "CRWV",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, in January 2026, we announced that we entered into a collaboration framework with NVIDIA Corporation to expand our long-standing complementary relationship to advance AI adoption at global scale.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Deloitte & Touche LLP",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Deloitte & Touche LLP",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "/s/ Deloitte & Touche LLP",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We have served as the Company's auditor since 2024.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "MagAI Ventures",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "MagAI Ventures",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Under this arrangement, the Company agreed to provide portfolio companies of MagAI Ventures with a pre-determined amount of cloud computing services at a pre-negotiated hourly rate.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In connection with the MagAI Capacity Agreement with MagAI Ventures, the Company had a deposit from MagAI Ventures",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "NVIDIA",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2026, NVIDIA Corporation invested",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Master Services Agreement between CoreWeave, Inc. and NVIDIA Corporation, dated April 10, 2023",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "OpenAI",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Stock Issuance Agreement between CoreWeave, Inc. and OpenAI OpCo, LLC, dated March 7, 2025",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Magnetar",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Magnetar",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "and such funds or accounts collectively held a significant equity interest in the Company",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Magnetar",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "CRWV",
+  "target": "Magnetar",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In June 2024, the Company contributed",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

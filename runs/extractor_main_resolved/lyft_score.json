@@ -1,0 +1,122 @@
+{
+ "LYFT": {
+  "EXT-1": 0.8947368421052632,
+  "EXT-2": 0.6538461538461539,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 19,
+   "gold_true": 26,
+   "matched": 17,
+   "missed": [
+    [
+     "lyft",
+     "mobileye",
+     "partners"
+    ],
+    [
+     "lyft",
+     "may mobility",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nexar",
+     "partners"
+    ],
+    [
+     "lyft",
+     "marubeni",
+     "partners"
+    ],
+    [
+     "alphabet",
+     "lyft",
+     "partners"
+    ],
+    [
+     "baidu",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "tensor",
+     "partners"
+    ],
+    [
+     "benteler mobility",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nvidia",
+     "partners"
+    ]
+   ]
+  }
+ },
+ "ALL": {
+  "EXT-1": 0.8947368421052632,
+  "EXT-2": 0.6538461538461539,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 19,
+   "gold_true": 26,
+   "matched": 17,
+   "missed": [
+    [
+     "lyft",
+     "mobileye",
+     "partners"
+    ],
+    [
+     "lyft",
+     "may mobility",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nexar",
+     "partners"
+    ],
+    [
+     "lyft",
+     "marubeni",
+     "partners"
+    ],
+    [
+     "alphabet",
+     "lyft",
+     "partners"
+    ],
+    [
+     "baidu",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "tensor",
+     "partners"
+    ],
+    [
+     "benteler mobility",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nvidia",
+     "partners"
+    ]
+   ]
+  }
+ }
+}
