@@ -2,9 +2,14 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { buildNodes, shown, badgeOf, exposureText, isMapped, TYPE_LABEL, type Co, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { buildNodes, shown, badgeOf, exposureText, isMapped, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 
-const W = 1200, H = 660, NW = 150, NH = 46;
+const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
+const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
+const ALL_BADGES = [{ label: "Verified", cls: "b-verified" }, { label: "Curated", cls: "b-curated" }, { label: "Live-generated", cls: "b-live" }, { label: "Sample data", cls: "b-sample" }, { label: "Staged, not reviewed", cls: "b-staged" }];
+const FILTERS: { key: LinkType; label: string }[] = [{ key: "supplies", label: "Supplies" }, { key: "sells_to", label: "Sells to" }, { key: "competes", label: "Competes" }, { key: "invests", label: "Invests in" }, { key: "acquires", label: "Acquired" }, { key: "partners", label: "Partners" }];
+
+const W = 1200, H = 660, NW = 150, NH = 50;
 const FOCAL = { x: W / 2, y: H / 2 };
 
 function slots(side: Side, n: number): { x: number; y: number }[] {
@@ -25,8 +30,10 @@ function edgePoint(c: { x: number; y: number }, to: { x: number; y: number }, hw
 
 type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
 
-export default function MapView({ focal, rels, isAdmin }: { focal: Co; rels: Rel[]; isAdmin: boolean }) {
+export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; rels: Rel[]; isAdmin: boolean }) {
   const router = useRouter();
+  const [filter, setFilter] = useState<LinkType | "all">("all");
+  const rels = useMemo(() => (filter === "all" ? allRels : allRels.filter((r) => r.relationship_type === filter)), [allRels, filter]);
   const nodes = useMemo(() => buildNodes(rels, focal.id), [rels, focal.id]);
   const [expanded, setExpanded] = useState<Record<Side, boolean>>({ left: false, right: false, top: false, bottom: false });
   const [panel, setPanel] = useState<{ kind: "link"; rel: Rel } | { kind: "company"; co: Co } | null>(null);
@@ -49,16 +56,37 @@ export default function MapView({ focal, rels, isAdmin }: { focal: Co; rels: Rel
     return () => window.removeEventListener("keydown", k);
   }, []);
 
-  const tally = rels.reduce<Record<string, number>>((a, r) => { const b = badgeOf(r).label; a[b] = (a[b] ?? 0) + 1; return a; }, {});
+  const tally = allRels.reduce<Record<string, { cls: string; n: number }>>((a, r) => { const b = badgeOf(r); a[b.label] = { cls: b.cls, n: (a[b.label]?.n ?? 0) + 1 }; return a; }, {});
 
   return (
-    <div className="mapwrap">
-      <div className="maptop">
-        <span className="muted">{rels.length} links, {nodes.length} companies. Left: into {focal.name}. Right: out of it. Above: competitors. Below: partners.</span>
-        <span className="badges">{Object.entries(tally).map(([k, v]) => <span key={k} className={`badge ${k.startsWith("Staged") ? "b-staged" : ""}`}>{k}: {v}</span>)}</span>
+    <div className="mapshell">
+      <div className="mapbar">
+        <div className="crumb">
+          <Link href={`/company/${focal.ticker}`}>← Back to company page</Link><span className="muted">|</span>
+          <strong>{focal.name}</strong><span className="tag">{focal.ticker}</span><span>/</span><span>Ecosystem map</span>
+        </div>
+        <span style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          {Object.entries(tally).map(([k, v]) => <span key={k} className={`badge ${v.cls}`}><span aria-hidden>{glyph(v.cls)}</span>{k}: {v.n}</span>)}
+        </span>
       </div>
-      {!isAdmin && null}
+      <div className="filters">
+        <div className="pills" role="group" aria-label="Filter by relationship type">
+          <span className="label" style={{ marginRight: 4 }}>Filter</span>
+          <button className={`fpill ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")}>All ({allRels.length})</button>
+          {FILTERS.map((f) => { const n = allRels.filter((r) => r.relationship_type === f.key).length; return n === 0 ? null : (
+            <button key={f.key} className={`fpill ${filter === f.key ? "on" : ""}`} onClick={() => setFilter(f.key)}>{f.label} ({n})</button>
+          ); })}
+        </div>
+        <div className="legend">
+          <span><svg width="22" height="8"><line x1="0" y1="4" x2="14" y2="4" stroke="var(--accent)" strokeWidth="2" /><polygon points="14,0 22,4 14,8" fill="var(--accent)" /></svg>Supplies / invests / acquired</span>
+          <span><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="var(--fg2)" strokeWidth="1.5" strokeDasharray="4 4" /></svg>Competes</span>
+          <span><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="#60a5fa" strokeWidth="1.5" /></svg>Partners</span>
+          <span className="muted">Thicker line = larger disclosed size</span>
+        </div>
+      </div>
       <div className="mapbody">
+        <div className="canvas">
+          <div className="info">{rels.length} links, {nodes.length} companies<small>Left: into {focal.name} · Right: out of it · Above: competitors · Below: partners</small></div>
         <svg viewBox={`0 0 ${W} ${H}`} className="map" role="img" aria-label={`Ecosystem map of ${focal.name}`}>
           <defs>
             <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent)" /></marker>
@@ -68,8 +96,8 @@ export default function MapView({ focal, rels, isAdmin }: { focal: Co; rels: Rel
             const directed = r.relationship_type !== "competes" && r.relationship_type !== "partners";
             const a = toFocal || !directed ? { x, y } : FOCAL, b = toFocal || !directed ? FOCAL : { x, y };
             const off = (k - (node.links.length - 1) / 2) * 14;
-            const p1 = edgePoint(a, b, a === FOCAL ? 86 : NW / 2, a === FOCAL ? 30 : NH / 2);
-            const p2 = edgePoint(b, a, b === FOCAL ? 86 : NW / 2, b === FOCAL ? 30 : NH / 2);
+            const p1 = edgePoint(a, b, a === FOCAL ? 86 : NW / 2, a === FOCAL ? 34 : NH / 2);
+            const p2 = edgePoint(b, a, b === FOCAL ? 86 : NW / 2, b === FOCAL ? 34 : NH / 2);
             const mx = (p1.x + p2.x) / 2, my = (p1.y + p2.y) / 2;
             const nx = -(p2.y - p1.y), ny = p2.x - p1.x, len = Math.hypot(nx, ny) || 1;
             const cx = mx + (nx / len) * off * 4, cy = my + (ny / len) * off * 4;
@@ -79,12 +107,12 @@ export default function MapView({ focal, rels, isAdmin }: { focal: Co; rels: Rel
               <g key={r.id} className={`link ${sel ? "sel" : ""} ${isMapped(node.co) ? "" : "dim"}`} onClick={() => setPanel({ kind: "link", rel: r })} tabIndex={0} role="button"
                  aria-label={`${r.source.name} ${TYPE_LABEL[r.relationship_type]} ${r.target.name}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "link", rel: r })}>
                 <path d={`M${p1.x},${p1.y} Q${cx},${cy} ${p2.x},${p2.y}`} className="hit" />
-                <path d={`M${p1.x},${p1.y} Q${cx},${cy} ${p2.x},${p2.y}`} className={`line ${r.relationship_type === "competes" ? "dash" : ""}`} strokeWidth={lw} markerEnd={directed ? "url(#arr)" : undefined} />
+                <path d={`M${p1.x},${p1.y} Q${cx},${cy} ${p2.x},${p2.y}`} className={`line ${r.relationship_type === "competes" ? "dash" : r.relationship_type === "partners" ? "plain" : ""}`} strokeWidth={lw} markerEnd={directed ? "url(#arr)" : undefined} />
                 {(directed || sel) && <text x={(p1.x + 2 * cx + p2.x) / 4} y={(p1.y + 2 * cy + p2.y) / 4 - 4} className="lbl" textAnchor="middle">{TYPE_LABEL[r.relationship_type]}</text>}
               </g>
             );
           }))}
-          <g className="focal"><rect x={FOCAL.x - 86} y={FOCAL.y - 30} width={172} height={60} rx={10} /><text x={FOCAL.x} y={FOCAL.y - 2} textAnchor="middle" className="fn">{focal.name}</text><text x={FOCAL.x} y={FOCAL.y + 16} textAnchor="middle" className="ft">{focal.ticker}</text></g>
+          <g className="focal"><rect x={FOCAL.x - 86} y={FOCAL.y - 34} width={172} height={68} rx={10} /><text x={FOCAL.x} y={FOCAL.y - 14} textAnchor="middle" className="fl">FOCAL ENTITY</text><text x={FOCAL.x} y={FOCAL.y + 5} textAnchor="middle" className="fn">{focal.name}</text><text x={FOCAL.x} y={FOCAL.y + 22} textAnchor="middle" className="ft">{focal.ticker}</text></g>
           {placed.out.map(({ node, x, y }) => {
             const m = isMapped(node.co);
             const sel = panel?.kind === "company" && panel.co.id === node.co.id;
@@ -92,16 +120,19 @@ export default function MapView({ focal, rels, isAdmin }: { focal: Co; rels: Rel
               <g key={node.co.id} className={`node ${m ? "" : "unmapped"} ${sel ? "sel" : ""}`} onClick={() => setPanel({ kind: "company", co: node.co })} tabIndex={0} role="button"
                  aria-label={`${node.co.name}${m ? "" : ", not yet mapped"}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "company", co: node.co })}>
                 <rect x={x - NW / 2} y={y - NH / 2} width={NW} height={NH} rx={8} />
-                <text x={x} y={m ? y - 1 : y + 4} textAnchor="middle" className="nn">{node.co.name.length > 22 ? node.co.name.slice(0, 21) + "…" : node.co.name}</text>
+                <text x={x} y={y - 2} textAnchor="middle" className="nn">{node.co.name.length > 22 ? node.co.name.slice(0, 21) + "…" : node.co.name}</text>
                 {m && <text x={x} y={y + 14} textAnchor="middle" className="nt">{node.co.ticker}</text>}
-                {!m && <title>{`${node.co.name}: not yet mapped`}</title>}
+                {!m && <text x={x} y={y + 14} textAnchor="middle" className="nt">Not yet mapped</text>}
               </g>
             );
           })}
         </svg>
-        <aside className={`side ${panel ? "open" : ""}`}>
+        </div>
+        <aside className="side">
           {panel?.kind === "link" && <LinkPanel rel={panel.rel} onClose={() => setPanel(null)} />}
           {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/map/${t}`)} />}
+          {!panel && <div className="empty">Select a link to see what the filings say, or a company to preview it.</div>}
+          <div className="sidefoot"><kbd>Esc</kbd><span>closes this pane</span></div>
         </aside>
       </div>
       <div className="more">
@@ -115,29 +146,43 @@ export default function MapView({ focal, rels, isAdmin }: { focal: Co; rels: Rel
   );
 }
 
-function Badge({ rel }: { rel: Rel }) { const b = badgeOf(rel); return <span className={`badge ${b.cls}`}>{b.label}</span>; }
+function Badge({ rel }: { rel: Rel }) { const b = badgeOf(rel); return <span className={`badge ${b.cls}`}><span aria-hidden>{glyph(b.cls)}</span>{b.label}</span>; }
 
 function LinkPanel({ rel, onClose }: { rel: Rel; onClose: () => void }) {
+  const active = badgeOf(rel).label;
   return (
     <div className="panel">
       <button className="x" onClick={onClose} aria-label="Close">×</button>
-      <h3>{rel.source.name} {TYPE_LABEL[rel.relationship_type]} {rel.target.name}</h3>
-      <p><Badge rel={rel} /></p>
-      <dl>
-        <dt>Size of the link</dt><dd>{exposureText(rel)}</dd>
-        <dt>Confidence</dt><dd>{rel.confidence == null ? "Not scored yet" : rel.confidence.toFixed(2)}</dd>
-        <dt>As of</dt><dd>{rel.as_of_date ?? "Date not given"}</dd>
-        <dt>Kind of source</dt><dd>{rel.source_type === "sec_filing" ? "SEC filing (10-K)" : rel.source_type ?? "Not given"}</dd>
-      </dl>
-      <h4>Evidence</h4>
-      {rel.evidence.length === 0 ? <p className="muted">No source quote saved for this link.</p> : rel.evidence.map((e, i) => (
-        <blockquote key={i}>
-          “{e.quote}”
-          <footer>{e.section ? `${e.section.replace("_", " ")} · ` : ""}{e.published_at ? `filed ${e.published_at} · ` : ""}{e.quote_found ? "quote found word for word · " : ""}
-            {e.document_url && <a href={e.document_url} target="_blank" rel="noreferrer">original document</a>}</footer>
-        </blockquote>
-      ))}
-      <p className="muted small">The panel shows what the sources say. It does not say a news item or price move caused a link.</p>
+      <div>
+        <div className="kicker"><span>Disclosed relationship</span></div>
+        <h3 style={{ marginTop: 4 }}><span className="em">{rel.source.name}</span> {TYPE_LABEL[rel.relationship_type]} <span className="em">{rel.target.name}</span></h3>
+      </div>
+      <div className="trust">
+        <span className="label">Trust and review status</span>
+        <div className="set">
+          {[...ALL_BADGES].sort((a, b) => (b.label === active ? 1 : 0) - (a.label === active ? 1 : 0)).map((b) => (
+            <span key={b.label} className={`badge ${b.cls} ${b.label === active ? "active" : ""}`}><span aria-hidden>{glyph(b.cls)}</span>{b.label}{b.label === active && <span style={{ marginLeft: "auto", fontSize: 9, textTransform: "uppercase" }}>This link</span>}</span>
+          ))}
+        </div>
+      </div>
+      <div className="attrs">
+        <div className="h">Disclosed attributes</div>
+        <div className="r"><span>Size</span><span>{exposureText(rel)}</span></div>
+        <div className="r"><span>Confidence</span><span className={rel.confidence == null ? "warn" : ""}>{rel.confidence == null ? "Not scored yet" : rel.confidence.toFixed(2)}</span></div>
+        <div className="r"><span>As of</span><span>{rel.as_of_date ?? "Date not given"}</span></div>
+        <div className="r"><span>Kind of source</span><span>{rel.source_type === "sec_filing" ? "SEC filing (10-K)" : rel.source_type ?? "Not given"}</span></div>
+      </div>
+      <div>
+        <div className="sub"><span>Evidence</span></div>
+        {rel.evidence.length === 0 ? <p className="muted">No source quote saved for this link.</p> : rel.evidence.map((e, i) => (
+          <blockquote key={i}>
+            “{e.quote}”
+            <footer>{e.section ? `${e.section.replace("_", " ")} · ` : ""}{e.published_at ? `filed ${e.published_at} · ` : ""}{e.quote_found ? "quote found word for word · " : ""}
+              {e.document_url && <a href={e.document_url} target="_blank" rel="noreferrer">View source ↗</a>}</footer>
+          </blockquote>
+        ))}
+      </div>
+      <div className="disc">Shows a disclosed relationship, not a prediction. The panel shows what the sources say. It does not say a news item or price move caused a link.</div>
     </div>
   );
 }
@@ -156,27 +201,28 @@ function CompanyPane({ co, focal, onClose, onRecenter }: { co: Co; focal: Co; on
   return (
     <div className="panel">
       <button className="x" onClick={onClose} aria-label="Close">×</button>
-      <h3>{co.name} {co.ticker && <span className="muted">({co.ticker})</span>}</h3>
+      <div>
+        <div className="kicker"><span>Company</span></div>
+        <h3 style={{ marginTop: 4 }}>{co.name} {co.ticker && <span className="tag">{co.ticker}</span>}</h3>
+      </div>
       {!mapped ? (
-        <>
-          <p className="muted">{co.entity_type === "group" ? "A group with no stock ticker." : "This company is not yet mapped."} The map shows only what {focal.name}'s filings say about it.</p>
-        </>
+        <p className="muted">{co.entity_type === "group" ? "A group with no stock ticker." : "This company is not yet mapped."} The map shows only what {focal.name}'s filings say about it.</p>
       ) : err ? (
         <p>Could not load this company. <button className="chip" onClick={() => setN(n + 1)}>Retry</button></p>
       ) : !data ? <p className="muted">Loading…</p> : (
-        <>
+        <div className="pv">
           {q ? (
-            <p className="price sm">${q.price.toFixed(2)} <span className={q.change >= 0 ? "up" : "down"}>{q.change >= 0 ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span></p>
+            <div className="price">${q.price.toFixed(2)} <span className={`pill ${q.change >= 0 ? "up" : "down"}`}>{q.change >= 0 ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span></div>
           ) : <p className="muted">Data unavailable: {data.quoteError}</p>}
-          {q && <p className="muted small">Prev close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} to {q.high.toFixed(2)}</p>}
-          <p className="muted small">{data.company.segment} · {data.company.size_tier} cap</p>
-          <p className="small">Mapped links: {data.counts.suppliers} suppliers, {data.counts.customers} customers, {data.counts.partners} partners, {data.counts.rivals} rivals.</p>
-          <p className="muted small">About: not available yet. Latest news: not available right now.</p>
+          {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Prev close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} to {q.high.toFixed(2)}</p>}
+          <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{data.company.segment} · {data.company.size_tier} cap</p>
+          <div className="counts"><div><b>{data.counts.suppliers}</b>Suppliers</div><div><b>{data.counts.customers}</b>Customers</div><div><b>{data.counts.partners}</b>Partners</div><div><b>{data.counts.rivals}</b>Rivals</div></div>
+          <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: not available yet<br />Latest news: not available right now</p>
           <div className="actions">
             <Link className="chip" href={`/company/${co.ticker}`}>Open full page</Link>
             {co.id !== focal.id && <button className="chip" onClick={() => onRecenter(co.ticker!)}>Recenter map here</button>}
           </div>
-        </>
+        </div>
       )}
     </div>
   );

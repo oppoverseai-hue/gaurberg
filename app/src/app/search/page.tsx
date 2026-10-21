@@ -18,7 +18,7 @@ export default async function Search({ searchParams }: { searchParams: Promise<{
     .limit(10);
   if (data && data.length === 1) redirect(`/company/${data[0].ticker}`);
   return (
-    <main>
+    <main className="narrow">
       <Link href="/">← Back</Link>
       <h1>Results for “{q}”</h1>
       {!data?.length && <p className="muted">No match yet. Only the seed companies are loaded in this prototype.</p>}
