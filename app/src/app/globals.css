@@ -110,3 +110,14 @@ kbd { padding:1px 6px; background:#0d1117; border:1px solid var(--line); border-
 .more { display:flex; gap:8px; flex-wrap:wrap; padding:8px 16px; border-top:1px solid var(--line); background:var(--surface); }
 
 .fund { margin:0; font:12px var(--mono); } .fund > div { display:flex; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid var(--line-subtle); } .fund > div:last-child { border:0; } .fund dt { color:var(--muted); } .fund dd { margin:0; color:var(--fg); font-feature-settings:"tnum" 1; }
+
+/* M5: period tabs, saved-data and offline banners, section highlight when a command jumps to it */
+.seg { display:inline-flex; gap:0; margin-bottom:8px; border:1px solid var(--line); border-radius:6px; padding:2px; background:var(--canvas); font:11px var(--mono); }
+.seg button { background:none; border:0; color:var(--muted); padding:4px 10px; border-radius:4px; cursor:pointer; font:inherit; } .seg button:hover { color:var(--fg); } .seg button.on { background:var(--surface-mid); color:var(--accent); border:1px solid var(--line-subtle); }
+.savedbar { margin:0 0 16px; padding:8px 12px; border:1px dashed var(--b-staged); border-radius:6px; background:rgba(251,191,36,.08); color:var(--b-staged); font:11px var(--mono); }
+.offbar { background:rgba(251,191,36,.12); color:var(--b-staged); border-bottom:1px solid var(--b-staged); text-align:center; padding:4px 12px; font:12px var(--mono); }
+.card:target, .card.hl { animation:flash 1.8s ease-out; } @keyframes flash { 0% { box-shadow:0 0 0 2px var(--accent), 0 0 18px rgba(56,189,248,.45); } 100% { box-shadow:0 0 0 0 transparent; } }
+.cmd { display:flex; align-items:center; flex:1; max-width:520px; margin:0 16px; } .cmd input { width:100%; background:#070a0e; color:var(--fg); border:1px solid var(--line); border-radius:4px; padding:6px 10px; font:12px var(--mono); } .cmd input:focus { border-color:var(--accent); outline:none; }
+.helptable { width:100%; border-collapse:collapse; font:12px var(--mono); } .helptable td, .helptable th { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line-subtle); vertical-align:top; } .helptable th { color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:11px; }
+.resrow { display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 12px; margin-top:6px; border:1px solid var(--line-subtle); background:var(--surface-low); border-radius:4px; color:var(--fg); font:13px var(--sans); } .resrow:first-child { margin-top:0; } .resrow:hover { border-color:var(--accent-border); text-decoration:none; background:var(--surface-mid); }
+.srclist { margin:0; padding-left:18px; font-size:13px; line-height:20px; color:var(--fg2); } .srclist li { margin:8px 0; } .srclist b { color:var(--fg); font-weight:600; }

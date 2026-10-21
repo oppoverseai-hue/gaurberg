@@ -217,7 +217,7 @@ function CompanyPane({ co, focal, onClose, onRecenter }: { co: Co; focal: Co; on
           {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Prev close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} to {q.high.toFixed(2)}</p>}
           <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{data.company.segment} · {data.company.size_tier} cap</p>
           <div className="counts"><div><b>{data.counts.suppliers}</b>Suppliers</div><div><b>{data.counts.customers}</b>Customers</div><div><b>{data.counts.partners}</b>Partners</div><div><b>{data.counts.rivals}</b>Rivals</div></div>
-          <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: not available yet<br />Latest news: not available right now</p>
+          <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: {data.about ? data.about.split(/(?<=\.)\s/).slice(0, 2).join(" ") : "not available yet"}<br />Latest news: not available right now</p>
           <div className="actions">
             <Link className="chip" href={`/company/${co.ticker}`}>Open full page</Link>
             {co.id !== focal.id && <button className="chip" onClick={() => onRecenter(co.ticker!)}>Recenter map here</button>}

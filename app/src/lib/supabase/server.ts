@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { isOffline } from "@/lib/mode";
 
 export async function supabaseServer() {
   const store = await cookies();
@@ -28,6 +29,7 @@ export type Access =
 
 // Signed-in users who are not on the allowlist see nothing (RLS also enforces this in the database).
 export async function getAccess(): Promise<Access> {
+  if (isOffline()) return { state: "ok", email: "offline demo", role: "admin" };
   const supabase = await supabaseServer();
   const { data } = await supabase.auth.getUser();
   const email = data.user?.email;

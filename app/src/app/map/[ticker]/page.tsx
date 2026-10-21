@@ -1,25 +1,21 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import { getAccess, supabaseServer } from "@/lib/supabase/server";
+import { getAccess } from "@/lib/supabase/server";
+import { getCompany, getRels } from "@/lib/data";
 import type { Rel } from "@/lib/graph";
 import MapView from "@/components/MapView";
 
 export const dynamic = "force-dynamic";
 
-const SEL = "id,relationship_type,exposure_pct,exposure_basis,exposure_qualifier,exposure_as_of,confidence,trust_status,source_type,status,as_of_date," +
-  "source:companies!relationships_source_id_fkey(id,ticker,name,is_seed,entity_type),target:companies!relationships_target_id_fkey(id,ticker,name,is_seed,entity_type)," +
-  "evidence(quote,document_url,section,published_at,quote_found)";
-
 export default async function MapPage({ params }: { params: Promise<{ ticker: string }> }) {
   const access = await getAccess();
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const supabase = await supabaseServer();
-  const { data: focal } = await supabase.from("companies").select("id,ticker,name,is_seed,entity_type").eq("ticker", ticker).maybeSingle();
+  const focal = await getCompany(ticker);
   if (!focal) notFound();
-  // RLS decides what is visible: allowed users see promoted links only; the admin also sees staged links.
-  const { data, error } = await supabase.from("relationships").select(SEL).or(`source_id.eq.${focal.id},target_id.eq.${focal.id}`);
-  const rels = (data ?? []) as unknown as Rel[];
+  // RLS decides what is visible online: allowed users see promoted links only; the admin also sees staged links. Offline shows the saved promoted links.
+  const { rels, error: relError } = await getRels(focal.id);
+  const error = relError;
   return (
     <main className="wide">
       {error ? (

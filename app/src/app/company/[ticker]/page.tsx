@@ -1,106 +1,116 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import { getAccess, supabaseServer } from "@/lib/supabase/server";
-import { fmtBig, fmtShares, getFundamentals, getHistory, getQuote } from "@/lib/finnhub";
-import PriceChart from "@/components/PriceChart";
-import { isMapped, sideOf, type Rel } from "@/lib/graph";
+import { getAccess } from "@/lib/supabase/server";
+import { fmtBig, fmtShares } from "@/lib/finnhub";
+import { getCompany, getRels } from "@/lib/data";
+import { getMarket } from "@/lib/market";
+import PeriodChart from "@/components/PeriodChart";
+import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
 
-const SEL = "id,relationship_type,status," +
-  "source:companies!relationships_source_id_fkey(id,ticker,name,is_seed,entity_type),target:companies!relationships_target_id_fkey(id,ticker,name,is_seed,entity_type)";
+const NA = "Not available";
+const cap = (v: string | null | undefined) => (v ? v.charAt(0).toUpperCase() + v.slice(1) : null);
+const pct = (v: number | null | undefined) => (v == null ? null : `${v.toFixed(1)}%`);
+const n2 = (v: number | null | undefined) => (v == null ? null : v.toFixed(2));
+
+function Rows({ rows }: { rows: [string, string | null | undefined][] }) {
+  return <dl className="fund">{rows.map(([k, v]) => <div key={k}><dt>{k}</dt><dd className={v == null ? "muted" : ""}>{v ?? NA}</dd></div>)}</dl>;
+}
 
 export default async function Company({ params }: { params: Promise<{ ticker: string }> }) {
   const access = await getAccess();
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const supabase = await supabaseServer();
-  const { data: company } = await supabase.from("companies").select("id,ticker,name,segment,size_tier").eq("ticker", ticker).maybeSingle();
+  const company = await getCompany(ticker);
   if (!company) notFound();
-  const [q, c, fund, rr] = await Promise.all([
-    getQuote(ticker), getHistory(ticker), getFundamentals(ticker),
-    supabase.from("relationships").select(SEL).or(`source_id.eq.${company.id},target_id.eq.${company.id}`),
-  ]);
-  const rels = (rr.data ?? []) as unknown as Rel[];
-  // Key relationships come from the same visible links as the map. Left side = into the company, right = out of it.
-  const groups: { title: string; items: { name: string; note: string }[] }[] = [
-    { title: "Into this company", items: [] }, { title: "Competitors", items: [] }, { title: "Partners", items: [] },
-  ];
-  const seen = new Set<string>();
-  for (const r of rels) {
-    const s = sideOf(r, company.id);
-    const other = r.source.id === company.id ? r.target : r.source;
-    const g = s === "top" ? groups[1] : s === "bottom" ? groups[2] : s === "left" ? groups[0] : null;
-    const key = `${g?.title}|${other.id}`;
-    if (!g || seen.has(key)) continue;
-    seen.add(key);
-    g.items.push({ name: isMapped(other) ? `${other.name} (${other.ticker})` : other.name, note: r.relationship_type === "supplies" ? "supplies" : r.relationship_type === "sells_to" ? "sells to" : r.relationship_type === "invests" ? "invests" : r.relationship_type === "acquires" ? "acquired" : "" });
-  }
-  const up = q.ok && q.quote.change >= 0;
+  const [m, { rels }] = await Promise.all([getMarket(ticker), getRels(company.id)]);
+  const q = m.quote, f = m.f ?? {}, p = m.profile;
+  const up = !!q && q.change >= 0;
+  const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
+  const top = buildNodes(rels, company.id).slice(0, 5);
   return (
     <main>
       <Link href="/" className="mono" style={{ fontSize: 12 }}>← Search</Link>
       <div className="head">
         <div className="row1">
           <h1>{company.name}</h1>
-          <span className="tag">{company.ticker}</span>
+          <span className="tag">{company.ticker}</span>{p?.exchange && <span className="tag">{p.exchange}</span>}
         </div>
         <div className="meta">
-          <span>{company.segment}</span><span className="muted">•</span><span>{company.size_tier} cap</span><span className="muted">•</span>
+          <span>{cap(company.segment) ?? NA}</span><span className="muted">•</span><span>{company.size_tier ? `${cap(company.size_tier)} cap` : NA}</span><span className="muted">•</span>
           <Link className="linkchip" href={`/map/${company.ticker}`}>Ecosystem map →</Link>
         </div>
       </div>
+      {m.saved && <p className="savedbar">Showing saved data{m.saved.parts.length ? ` for ${m.saved.parts.join(", ")}` : ""} from {m.saved.at}{m.saved.source === "manual" ? " (provided by admin)" : ""}. Live data was not available.</p>}
       <div className="grid2">
         <section className="stack">
-          <div className="card">
-            {q.ok ? (
+          <div className="card" id="price">
+            {q ? (
               <>
-                <div className="price">${q.quote.price.toFixed(2)}
-                  <span className={`pill ${up ? "up" : "down"}`}>{up ? "▲" : "▼"} {up ? "+" : ""}{q.quote.change.toFixed(2)} ({q.quote.changePct.toFixed(2)}%)</span>
+                <div className="price">${q.price.toFixed(2)}
+                  <span className={`pill ${up ? "up" : "down"}`}>{up ? "▲" : "▼"} {up ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span>
                 </div>
+                <p className="muted mono" style={{ fontSize: 11, margin: "8px 0 0" }}>{asOf ? `Price as of ${asOf}. ` : ""}Prices are delayed.</p>
                 <div className="stats">
-                  <div><div className="k">Open</div><div className="v">{q.quote.open.toFixed(2)}</div></div>
-                  <div><div className="k">High</div><div className="v">{q.quote.high.toFixed(2)}</div></div>
-                  <div><div className="k">Low</div><div className="v">{q.quote.low.toFixed(2)}</div></div>
-                  <div><div className="k">Prev close</div><div className="v">{q.quote.prevClose.toFixed(2)}</div></div>
+                  <div><div className="k">Open</div><div className="v">{q.open.toFixed(2)}</div></div>
+                  <div><div className="k">Day range</div><div className="v">{q.low.toFixed(2)} - {q.high.toFixed(2)}</div></div>
+                  <div><div className="k">Prev close</div><div className="v">{q.prevClose.toFixed(2)}</div></div>
+                  <div><div className="k">52-week range</div><div className={`v ${f.low52 == null ? "muted" : ""}`}>{f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} - ${f.high52.toFixed(2)}` : NA}</div></div>
                 </div>
               </>
             ) : (
               <div className="errcard" style={{ border: 0, padding: 0 }}>
-                <p>⚠ Data unavailable: {q.reason}</p>
+                <p>⚠ Data unavailable: {m.quoteError ?? "no price"}</p>
                 <p className="sub"><Link href={`/company/${company.ticker}`}>Retry</Link></p>
               </div>
             )}
           </div>
-          <div className="card">
-            <div className="cardhead"><span className="t">Price, last 12 months <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span></div>
-            {c.ok ? <PriceChart points={c.points} /> : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {c.reason}</p></div>}
+          <div className="card" id="chart">
+            <div className="cardhead"><span className="t">Price <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span></div>
+            {m.daily ? <PeriodChart daily={m.daily} weekly={m.weekly} /> : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {m.historyError ?? "no price history"}</p></div>}
+          </div>
+          <div className="card" id="highlights">
+            <div className="cardhead"><h3>Financial highlights</h3><span className="label">Finnhub, trailing 12 months</span></div>
+            <Rows rows={[
+              ["Revenue growth (year on year)", pct(f.revGrowth)], ["Revenue per share", n2(f.revPerShare) && `$${n2(f.revPerShare)}`],
+              ["Gross margin", pct(f.grossMargin)], ["Operating margin", pct(f.opMargin)], ["Net margin", pct(f.netMargin)],
+              ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Current ratio", n2(f.currentRatio)], ["Debt to equity", n2(f.debtEquity)],
+            ]} />
+          </div>
+          <div className="card" id="news">
+            <div className="cardhead"><h3>Recent news</h3></div>
+            <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>Not available yet. News, press releases and filings are not built in this version.</p>
           </div>
         </section>
         <aside className="stack">
-          <div className="card">
-            <div className="cardhead"><h3>Quick fundamentals</h3><span className="label">Finnhub</span></div>
-            {fund.ok ? (
-              <dl className="fund">
-                {([
-                  ["Market cap", fund.f.marketCap == null ? null : fmtBig(fund.f.marketCap)],
-                  ["P/E (trailing)", fund.f.pe == null ? null : fund.f.pe.toFixed(2)],
-                  ["Beta", fund.f.beta == null ? null : fund.f.beta.toFixed(2)],
-                  ["52-week range", fund.f.low52 == null || fund.f.high52 == null ? null : `${fund.f.low52.toFixed(2)} - ${fund.f.high52.toFixed(2)}`],
-                  ["Shares outstanding", fund.f.shares == null ? null : fmtShares(fund.f.shares)],
-                ] as [string, string | null][]).map(([k, v]) => <div key={k}><dt>{k}</dt><dd className={v == null ? "muted" : ""}>{v ?? "Not available"}</dd></div>)}
-              </dl>
-            ) : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {fund.reason}</p></div>}
+          <div className="card" id="numbers">
+            <div className="cardhead"><h3>Key numbers</h3><span className="label">Finnhub</span></div>
+            <Rows rows={[
+              ["Previous close", q ? q.prevClose.toFixed(2) : null],
+              ["Day range", q ? `${q.low.toFixed(2)} - ${q.high.toFixed(2)}` : null],
+              ["52-week range", f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} - ${f.high52.toFixed(2)}` : null],
+              ["Avg volume (10-day)", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
+              ["Market cap", f.marketCap == null ? null : fmtBig(f.marketCap)],
+              ["P/E (trailing)", n2(f.pe)], ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Beta", n2(f.beta)],
+              ["Shares outstanding", f.shares == null ? null : fmtShares(f.shares)],
+              ["Next earnings", m.nextEarnings],
+            ]} />
           </div>
-          <div className="card" style={{ marginTop: 24 }}>
-            <div className="cardhead"><h3>Key relationships</h3><span className="tag">{rels.length} links</span></div>
-            {rels.length === 0 ? <p className="muted">No disclosed relationships found for this company.</p> : (
+          <div className="card" id="about" style={{ marginTop: 24 }}>
+            <div className="cardhead"><h3>About</h3></div>
+            {p?.description ? <p style={{ margin: "0 0 12px", fontSize: 13, lineHeight: "20px" }}>{p.description}</p> : <p className="muted mono" style={{ fontSize: 12, margin: "0 0 12px" }}>Description: not available yet.</p>}
+            <Rows rows={[
+              ["Sector", p?.industry ?? cap(company.segment)], ["Size group", company.size_tier ? `${cap(company.size_tier)} cap` : null],
+              ["Website", p?.website ?? null], ["Employees", p?.employees == null ? null : p.employees.toLocaleString("en-US")],
+            ]} />
+          </div>
+          <div className="card" id="relationships" style={{ marginTop: 24 }}>
+            <div className="cardhead"><h3>Top linked companies</h3><span className="tag">{rels.length} links</span></div>
+            {top.length === 0 ? <p className="muted">No disclosed relationships found for this company.</p> : (
               <>
-                {groups.filter((g) => g.items.length > 0).map((g) => (
-                  <div className="relgroup" key={g.title}>
-                    <div className="label">{g.title} ({g.items.length})</div>
-                    {g.items.slice(0, 3).map((i) => <div className="relitem" key={i.name}><span>{i.name}</span><span>{i.note}</span></div>)}
-                  </div>
+                {top.map((n) => (
+                  <div className="relitem" key={n.co.id}><span>{isMapped(n.co) ? `${n.co.name} (${n.co.ticker})` : n.co.name}</span><span>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</span></div>
                 ))}
                 <Link className="cta" href={`/map/${company.ticker}`}>Open the ecosystem map →</Link>
               </>
@@ -108,7 +118,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           </div>
         </aside>
       </div>
-      <p className="note">Prices and fundamentals from Finnhub, delayed or end-of-day on the free plan.</p>
+      <p className="note">Prices and fundamentals from Finnhub, history from Twelve Data; delayed or end-of-day on the free plans.</p>
     </main>
   );
 }
