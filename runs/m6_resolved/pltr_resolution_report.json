@@ -1,0 +1,25 @@
+{
+ "ticker": "PLTR",
+ "edges_in": 7,
+ "edges_out": 6,
+ "edges_merged": 1,
+ "new_nodes": [
+  "Fujitsu",
+  "HD Hyundai",
+  "SOMPO Holdings",
+  "U.S. Army"
+ ],
+ "needs_review": [
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  },
+  {
+   "raw": "AWS",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

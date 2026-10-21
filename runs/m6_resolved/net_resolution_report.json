@@ -1,0 +1,13 @@
+{
+ "ticker": "NET",
+ "edges_in": 4,
+ "edges_out": 4,
+ "edges_merged": 0,
+ "new_nodes": [
+  "JD Cloud",
+  "Kivera",
+  "Replicate"
+ ],
+ "needs_review": [],
+ "direction_conflicts": []
+}

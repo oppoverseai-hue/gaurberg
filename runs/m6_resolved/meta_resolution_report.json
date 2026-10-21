@@ -1,0 +1,23 @@
+{
+ "ticker": "META",
+ "edges_in": 9,
+ "edges_out": 9,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Giphy",
+  "Instagram",
+  "Jio Platforms",
+  "Scale AI",
+  "TikTok",
+  "WhatsApp",
+  "Within Unlimited"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

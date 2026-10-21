@@ -1,0 +1,25 @@
+{
+ "ticker": "LCID",
+ "edges_in": 27,
+ "edges_out": 27,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Al Bawani",
+  "Aston Martin",
+  "Ayar",
+  "Ayar Third Investment Company",
+  "BofA Securities",
+  "GIB",
+  "Government of Saudi Arabia",
+  "Government of the Kingdom of Saudi Arabia",
+  "KPMG",
+  "Nikola",
+  "PIF",
+  "Rivian",
+  "SIDF",
+  "SMB",
+  "SMB Holding Corporation"
+ ],
+ "needs_review": [],
+ "direction_conflicts": []
+}

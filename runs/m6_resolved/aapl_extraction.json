@@ -1,0 +1,110 @@
+[
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "AAPL",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, the Company earns revenue from licensing arrangements with Google LLC (“Google”) and other companies to offer their search services on the Company’s platforms and applications, and certain of these arrangements are currently subject to government investigations and legal proceedings.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Android",
+  "entity_type": "other",
+  "type": "competes",
+  "source": "AAPL",
+  "target": "Android",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "The Company believes that third-party developer support depends on the perceived benefits of creating software and services for the Company’s products compared to competitors’ platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AAPL",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "The Company believes that third-party developer support depends on the perceived benefits of creating software and services for the Company’s products compared to competitors’ platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sony",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AAPL",
+  "target": "Sony",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "The Company believes that third-party developer support depends on the perceived benefits of creating software and services for the Company’s products compared to competitors’ platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Nintendo",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AAPL",
+  "target": "Nintendo",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "The Company believes that third-party developer support depends on the perceived benefits of creating software and services for the Company’s products compared to competitors’ platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Epic Games",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "AAPL",
+  "target": "Epic Games",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Epic Games, Inc. filed a lawsuit in the U.S. District Court for the Northern District of California (“California District Court”) against the Company alleging violations of federal and state antitrust laws and California’s unfair competition law based upon the Company’s operation of its App Store.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

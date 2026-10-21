@@ -1,0 +1,20 @@
+{
+ "ticker": "AAPL",
+ "edges_in": 6,
+ "edges_out": 6,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Android",
+  "Epic Games",
+  "Nintendo",
+  "Sony"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}
