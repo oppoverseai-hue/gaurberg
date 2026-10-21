@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { buildNodes, shown, badgeOf, exposureText, isMapped, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { buildNodes, shown, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
 const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
@@ -120,7 +120,7 @@ export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; 
               <g key={node.co.id} className={`node ${m ? "" : "unmapped"} ${sel ? "sel" : ""}`} onClick={() => setPanel({ kind: "company", co: node.co })} tabIndex={0} role="button"
                  aria-label={`${node.co.name}${m ? "" : ", not yet mapped"}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "company", co: node.co })}>
                 <rect x={x - NW / 2} y={y - NH / 2} width={NW} height={NH} rx={8} />
-                <text x={x} y={y - 2} textAnchor="middle" className="nn">{node.co.name.length > 22 ? node.co.name.slice(0, 21) + "…" : node.co.name}</text>
+                <text x={x} y={y - 2} textAnchor="middle" className="nn">{(() => { const v = viaLabel(node), t = v ? `${node.co.name} (${v})` : node.co.name; return t.length > 22 ? t.slice(0, 21) + "…" : t; })()}</text>
                 {m && <text x={x} y={y + 14} textAnchor="middle" className="nt">{node.co.ticker}</text>}
                 {!m && <text x={x} y={y + 14} textAnchor="middle" className="nt">Not yet mapped</text>}
               </g>

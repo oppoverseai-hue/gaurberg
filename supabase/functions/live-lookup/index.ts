@@ -11,13 +11,17 @@ const json = (b: unknown, s = 200) => new Response(JSON.stringify(b), { status: 
 const admin = () => createClient(URLS.url, URLS.svc);
 const norm = (s: string) => s.replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/\s+/g, " ").trim().toLowerCase();
 
+// Units and brands show under their parent (parent rule, aliases live in companies.aliases and are shared with the batch resolver); trustees, auditors and press mentions are not business links.
+const NOISE = /trust company|national association|indenture|trustee|\bllp\b|kpmg|deloitte|pricewaterhouse|ernst & young|forbes/i;
+const core = (s: string) => norm(s).replace(/[.,]/g, "").replace(/\b(inc|corp|corporation|llc|ltd|plc|co|company|limited)\b/g, "").replace(/\s+/g, " ").trim();
+
 const RULES = `You extract company relationships from SEC filings for a market-data product. Output JSON only.
 Find every relationship in the filing text between the focal company and another NAMED company or organisation.
 Allowed types: supplies (source = supplier, target = customer), sells_to (source = seller, target = buyer), partners (focal as source), competes (focal as source), invests (source = investor, target = investee), acquires (source = acquirer, target = acquired).
-Rules: use only what the text states; "quotes" must be copied character for character from the text (one or two sentences), otherwise leave the link out; skip generic groups and the focal company itself; one object per counterparty and type; counterparty is the common short name; entity_type is one of public_company, private_company, institution, organization; exposure_pct only when the text states a percentage for this link, else null.
-Return a JSON array of objects with keys counterparty, entity_type, type, source, target, quotes (list of strings), exposure_pct. Return [] if none. Source and target are "FOCAL" or the counterparty name.`;
+Rules: use only what the text states; "quotes" must be copied character for character from the text (one or two sentences), otherwise leave the link out; skip generic groups and the focal company itself; one object per counterparty and type; counterparty is the common short name; entity_type is one of public_company, private_company, institution, organization; exposure_pct only when the text states a percentage for this link, else null; parent only when the filing text itself says the counterparty is a unit, brand or subsidiary of a larger named company (give that company), else null.
+Return a JSON array of objects with keys counterparty, entity_type, type, source, target, quotes (list of strings), exposure_pct, parent. Return [] if none. Source and target are "FOCAL" or the counterparty name.`;
 
-type Edge = { counterparty: string; entity_type?: string; type: string; source: string; target: string; quotes: string[]; exposure_pct?: number | null };
+type Edge = { counterparty: string; entity_type?: string; type: string; source: string; target: string; quotes: string[]; exposure_pct?: number | null; parent?: string | null };
 
 async function sec(url: string, text = true) {
   const r = await fetch(url, { headers: { "User-Agent": UA } });
@@ -108,23 +112,38 @@ async function run(id: number, q: { ticker: string; name: string; cik: string })
     if (!focal) focal = (await db.from("companies").insert({ ticker: q.ticker, name: q.name, cik: q.cik, entity_type: "public_company", is_seed: false }).select("id").single()).data;
     const ar = await db.from("agent_runs").insert({ agent_name: "live_lookup", mode: "live", target: q.ticker, model, tokens_in: tin, tokens_out: tout, cost_usd: 0, status: "completed", review_status: "unreviewed", finished_at: new Date().toISOString() }).select("id").single();
     runId = ar.data?.id ?? null;
+    const aliased = (await db.from("companies").select("id,name,aliases").neq("aliases", "{}")).data ?? [];
     let saved = 0;
     for (const e of edges) {
-      let other = (await db.from("companies").select("id").ilike("name", e.counterparty.replace(/[%_]/g, "")).limit(1)).data?.[0];
+      if (NOISE.test(e.counterparty)) continue;
+      let nm = e.counterparty, via: string | null = null;
+      let other: { id: number } | undefined;
+      const hit = aliased.find((p) => p.aliases.some((x: string) => norm(x) === norm(e.counterparty)));
+      if (hit) { other = hit; nm = hit.name; via = e.counterparty; } // unit or brand shows under its parent
+      if (!other && e.parent) { // the filing names a parent: use it only if that company is already in our list (nothing is invented)
+        const pc = (await db.from("companies").select("id,name").ilike("name", `%${core(e.parent).replace(/[%_]/g, "")}%`).limit(20)).data ?? [];
+        const pm = pc.find((x) => core(x.name) === core(e.parent!));
+        if (pm) { other = pm; nm = pm.name; via = e.counterparty; }
+      }
+      const c = core(nm).replace(/[%_]/g, "");
       if (!other) {
-        const seed = (await db.from("companies").select("id").ilike("name", `${e.counterparty.replace(/[%_]/g, "")} %`).eq("is_seed", true).limit(2)).data;
+        const cands = (await db.from("companies").select("id,name").ilike("name", `%${c}%`).limit(20)).data ?? [];
+        other = cands.find((x) => core(x.name) === core(nm));
+      }
+      if (!other) {
+        const seed = (await db.from("companies").select("id").ilike("name", `${c} %`).eq("is_seed", true).limit(2)).data;
         if (seed?.length === 1) other = seed[0];
       }
       if (!other) {
         const t = ["public_company", "private_company", "institution", "organization"].includes(e.entity_type ?? "") ? e.entity_type : "organization";
-        other = (await db.from("companies").insert({ name: e.counterparty, entity_type: t, is_seed: false }).select("id").single()).data!;
+        other = (await db.from("companies").insert({ name: nm, entity_type: t, is_seed: false }).select("id").single()).data!;
       }
       let a = e.source === "FOCAL" ? focal!.id : other.id, b = e.target === "FOCAL" ? focal!.id : other.id;
       if (a === b) continue;
       if ((e.type === "partners" || e.type === "competes") && a > b) [a, b] = [b, a];
       const ex = (await db.from("relationships").select("id").eq("source_id", a).eq("target_id", b).eq("relationship_type", e.type).limit(1)).data?.[0];
       if (ex) continue;
-      const rel = await db.from("relationships").insert({ source_id: a, target_id: b, relationship_type: e.type, exposure_pct: null, exposure_basis: "none", source_type: "sec_filing", status: "live", trust_status: "live_generated", run_id: runId, as_of_date: f.period }).select("id").single();
+      const rel = await db.from("relationships").insert({ source_id: a, target_id: b, relationship_type: e.type, exposure_pct: null, exposure_basis: "none", source_type: "sec_filing", status: "live", trust_status: "live_generated", run_id: runId, as_of_date: f.period, note: via ? `via ${via}` : null }).select("id").single();
       if (!rel.data) continue;
       await db.from("evidence").insert(e.quotes.map((x) => ({ relationship_id: rel.data!.id, document_url: f.url, section: "filing", quote: x, quote_found: true, published_at: f.filed })));
       saved++;
