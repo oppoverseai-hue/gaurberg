@@ -13,7 +13,8 @@ import argparse, json, pathlib, re, sys
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT / "agents" / "common"))
-from claude_cli import call  # noqa: E402
+from claude_cli import call as claude_call  # noqa: E402
+from gemini_call import call as gemini_call  # noqa: E402
 import yaml  # noqa: E402
 
 SYSTEM = "You are a strict fact-checker for a market-data product. You output JSON only."
@@ -48,7 +49,7 @@ def main():
     for k in range(0, len(items), a.batch):
         chunk = items[k:k + a.batch]
         body = "\n\n".join(f'id: {i["id"]}\nfocal company: {i["focal"]}\nclaim: source "{i["source"]}" --{i["type"]}--> target "{i["target"]}"\nsentence: "{i["quote"]}"' for i in chunk)
-        res, info = call(model, f"{RULES}\n\n{body}", SYSTEM)
+        res, info = (gemini_call if model.startswith('gemini') else claude_call)(model, f"{RULES}\n\n{body}", SYSTEM)
         info["batch"] = k // a.batch + 1
         try:
             got = {r["id"]: r for r in parse(res)}
