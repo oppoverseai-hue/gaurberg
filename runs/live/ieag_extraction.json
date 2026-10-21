@@ -1,0 +1,217 @@
+[
+ {
+  "counterparty": "Efficiency INC.",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Efficiency INC.",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "was placed in a U.S.-based trust account (the “Trust Account”) at J.P. Morgan Chase Bank, N.A., maintained by Efficiency INC., acting as trustee.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "we may, at any time, instruct Efficiency INC., the trustee with respect to the Trust Account, to liquidate the U.S. government treasury obligations or money market funds held in the Trust Account and thereafter to hold all funds in the Trust Account in cash",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Investment Management Trust Agreement, dated January 15, 2026, by and between the Company and Efficiency INC., as trustee",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "maintained by Efficiency INC., acting as trustee.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "J.P. Morgan Chase Bank",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "J.P. Morgan Chase Bank",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "was placed in a U.S.-based trust account (the “Trust Account”) at J.P. Morgan Chase Bank, N.A., maintained by Efficiency INC., acting as trustee.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "at J.P. Morgan Chase Bank, N.A. maintained by Efficiency INC., acting as trustee.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "WithumSmith+Brown",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "WithumSmith+Brown",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "WithumSmith+Brown, PC, our independent registered public accounting firm, and the underwriters of the Initial Public Offering will not execute agreements with us waiving such claims to the monies held in the Trust Account.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The firm of WithumSmith+Brown, PC acts as our independent registered public accounting firm.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Eagle Equity Partners, LLC",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Eagle Equity Partners, LLC",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We currently sub-lease our executive offices at 955 Fifth Avenue, New York, NY, 10075 from Eagle Equity Partners, LLC, an entity affiliated with our Sponsor and the members of our management team.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Eagle Equity Partners",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Eagle Equity Partners",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We currently sub-lease our executive offices at 955 Fifth Avenue, New York, NY 10075 from Eagle Equity Partners, LLC, an entity affiliated with our Sponsor and the members of our management team.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Goldman Sachs",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Goldman Sachs",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Goldman Sachs & Co. LLC acted as the sole book-running manager.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Underwriting Agreement, dated January 15, 2026, by and among the Company and Goldman Sachs & Co. LLC as representative of the underwriters",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Conyers Dill & Pearman",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Conyers Dill & Pearman",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We have been advised by Conyers Dill & Pearman LLP, our Cayman Islands legal counsel, that the courts of the Cayman Islands are unlikely (i) to recognize or enforce against us judgments of courts of the United States predicated upon the civil liability provisions of the federal securities laws of the United States or any state; and (ii) in original actions brought in the Cayman Islands, to impose liabilities against us predicated upon the civil liability provisions of the federal securities laws of the United States or any state, so far as the liabilities imposed by those provisions are penal in nature.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Eagle Equity Partners VI, LLC",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Eagle Equity Partners VI, LLC",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our Sponsor purchased an aggregate of 350,000 Private Placement Shares, at a price of $10.00 per share, or $3,500,000 in the aggregate, in a private placement that closed simultaneously with the closing of the Initial Public Offering.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Eagle Equity Partners VI, LLC at the initial public offering price of $",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Point72 Asset Management",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Point72 Asset Management",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "According to a Schedule 13G filed on January 21, 2026 by Point72 Asset Management, L.P., Point72 Capital Advisors, Inc. and Steven A. Cohen, interests shown are held by Point72 Associates, LLC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 5.8,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "Integrated Core Strategies (US) LLC",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Integrated Core Strategies (US) LLC",
+  "target": "IEAG",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "According to a Schedule 13G filed on January 23, 2026 by Integrated Core Strategies (US) LLC, Millennium Management LLC, Millennium Group Management LLC and Israel A. Englander, interests shown are held by entities subject to voting control and investment discretion by Millennium Management LLC and/or other investment managers that may be controlled by Millennium Group Management LLC (the managing member of Millennium Management LLC) and Mr. Englander (the sole voting trustee of the managing member of Millennium Group Management LLC).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 9.8,
+  "exposure_qualifier": "approximate"
+ }
+]

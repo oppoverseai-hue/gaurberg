@@ -1,0 +1,79 @@
+{
+ "ticker": "IEAG",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/2084396/000121390026033017/ea0277483-10k_infinite.htm",
+ "chunks": 6,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29402,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1113,
+   "cost_usd": 0.1328957,
+   "seconds": 10.4,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28532,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1221,
+   "cost_usd": 0.1304032,
+   "seconds": 10.0,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27868,
+   "cache_read_tokens": 12600,
+   "output_tokens": 151,
+   "cost_usd": 0.1169833,
+   "seconds": 7.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30232,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1082,
+   "cost_usd": 0.13598269999999998,
+   "seconds": 12.5,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32151,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1951,
+   "cost_usd": 0.1525466,
+   "seconds": 15.4,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 14377,
+   "cache_read_tokens": 12600,
+   "output_tokens": 896,
+   "cost_usd": 0.0691187,
+   "seconds": 8.0,
+   "is_error": false,
+   "chunk": 6
+  }
+ ],
+ "totals": {
+  "input_tokens": 12,
+  "cache_creation_tokens": 162562,
+  "cache_read_tokens": 75600,
+  "output_tokens": 6414,
+  "cost_usd": 0.7379302,
+  "seconds": 64.1
+ },
+ "edges": 10,
+ "quotes_not_found": 0
+}

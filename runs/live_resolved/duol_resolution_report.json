@@ -1,0 +1,32 @@
+{
+ "ticker": "DUOL",
+ "edges_in": 12,
+ "edges_out": 11,
+ "edges_merged": 1,
+ "new_nodes": [
+  "Deloitte & Touche",
+  "Facebook",
+  "Google Cloud",
+  "Hobbes",
+  "Music Learning Services Limited",
+  "Stripe"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  },
+  {
+   "raw": "AWS",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

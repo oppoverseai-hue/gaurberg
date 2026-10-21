@@ -1,0 +1,25 @@
+{
+ "ticker": "IEAG",
+ "edges_in": 10,
+ "edges_out": 9,
+ "edges_merged": 1,
+ "new_nodes": [
+  "Conyers Dill & Pearman",
+  "Eagle Equity Partners VI, LLC",
+  "Eagle Equity Partners, LLC",
+  "Efficiency INC.",
+  "Goldman Sachs",
+  "Integrated Core Strategies (US) LLC",
+  "J.P. Morgan Chase Bank",
+  "Point72 Asset Management",
+  "WithumSmith+Brown"
+ ],
+ "needs_review": [
+  {
+   "raw": "Eagle Equity Partners",
+   "resolved": "Eagle Equity Partners, LLC",
+   "how": "merged_new"
+  }
+ ],
+ "direction_conflicts": []
+}

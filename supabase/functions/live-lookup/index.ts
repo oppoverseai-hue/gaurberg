@@ -12,13 +12,13 @@ const admin = () => createClient(URLS.url, URLS.svc);
 const norm = (s: string) => s.replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/\s+/g, " ").trim().toLowerCase();
 
 // Units and brands show under their parent (parent rule, aliases live in companies.aliases and are shared with the batch resolver); trustees, auditors and press mentions are not business links.
-const NOISE = /trust company|national association|indenture|trustee|\bllp\b|kpmg|deloitte|pricewaterhouse|ernst & young|forbes/i;
+const NOISE = /trust company|national association|indenture|trustee|\bllp\b|kpmg|deloitte|pricewaterhouse|ernst & young|forbes|underwriter/i;
 const core = (s: string) => norm(s).replace(/[.,]/g, "").replace(/\b(inc|corp|corporation|llc|ltd|plc|co|company|limited)\b/g, "").replace(/\s+/g, " ").trim();
 
 const RULES = `You extract company relationships from SEC filings for a market-data product. Output JSON only.
 Find every relationship in the filing text between the focal company and another NAMED company or organisation.
 Allowed types: supplies (source = supplier, target = customer), sells_to (source = seller, target = buyer), partners (focal as source), competes (focal as source), invests (source = investor, target = investee), acquires (source = acquirer, target = acquired).
-Rules: use only what the text states; "quotes" must be copied character for character from the text (one or two sentences), otherwise leave the link out; skip generic groups and the focal company itself; one object per counterparty and type; counterparty is the common short name; entity_type is one of public_company, private_company, institution, organization; exposure_pct only when the text states a percentage for this link, else null; parent only when the filing text itself says the counterparty is a unit, brand or subsidiary of a larger named company (give that company), else null.
+Rules: use only what the text states; "quotes" must be copied character for character from the text (one or two sentences), otherwise leave the link out; skip generic groups and the focal company itself; skip auditors, law firms, underwriters, trustees, transfer agents, and banks that only act as lender, custodian or trustee; one object per counterparty and type; counterparty is the common short name; entity_type is one of public_company, private_company, institution, organization; exposure_pct only when the text states a percentage for this link, else null; parent only when the filing text itself says the counterparty is a unit, brand or subsidiary of a larger named company (give that company), else null.
 Return a JSON array of objects with keys counterparty, entity_type, type, source, target, quotes (list of strings), exposure_pct, parent. Return [] if none. Source and target are "FOCAL" or the counterparty name.`;
 
 type Edge = { counterparty: string; entity_type?: string; type: string; source: string; target: string; quotes: string[]; exposure_pct?: number | null; parent?: string | null };

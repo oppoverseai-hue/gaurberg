@@ -10,3 +10,6 @@ Continental,AUMOVIO,same_entity,"Continental spun off its automotive business as
 Zoox,Amazon,same_entity,"Parent rule (admin, 2026-10-21): Zoox is an Amazon unit, shown under Amazon"
 Zoox/Amazon,Amazon,same_entity,"Parent rule (admin, 2026-10-21): the filing writes Zoox/Amazon; shown under Amazon"
 Uber Freight,Uber Technologies,same_entity,"Parent rule (admin, 2026-10-21): Uber Freight is an Uber unit, shown under Uber"
+Google Cloud,Alphabet,same_entity,"Alphabet cloud unit; shown under Alphabet (parent rule, 2026-10-21)"
+Google Cloud Platform,Alphabet,same_entity,"Alphabet cloud unit; shown under Alphabet (parent rule, 2026-10-21)"
+Facebook,Meta Platforms,same_entity,"Meta Platforms product name used in filings"

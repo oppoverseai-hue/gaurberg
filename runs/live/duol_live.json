@@ -1,0 +1,189 @@
+[
+ {
+  "counterparty": "Apple",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Apple",
+  "target": "DUOL",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We depend on Apple and Google approving our mobile applications to be distributed on their respective platforms.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "In the twelve months ended December 31, 2025, we derived 62% of our revenue and 61% of our total bookings from the Apple App Store, and 20% of our revenue and 21% of our total bookings from the Google Play Store.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The top three service providers, Apple, Google, and Stripe accounted for",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Alphabet",
+  "target": "DUOL",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We depend on Apple and Google approving our mobile applications to be distributed on their respective platforms.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "In the twelve months ended December 31, 2025, we derived 62% of our revenue and 61% of our total bookings from the Apple App Store, and 20% of our revenue and 21% of our total bookings from the Google Play Store.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The top three service providers, Apple, Google, and Stripe accounted for",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon",
+  "target": "DUOL",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "AWS and Google Cloud provide us with computing and storage capacity pursuant to agreements that continue until terminated by either party.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Any failure, disruption or interference with our use of hosted cloud computing services and systems provided by third-parties, like AWS or Google Cloud, could adversely impact our business, financial condition or results of operations.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DUOL",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Many large companies, such as Amazon, Facebook and Google, invest significantly in data analytics to make their websites and platforms more attractive to advertisers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Meta Platforms",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DUOL",
+  "target": "Meta Platforms",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Many large companies, such as Amazon, Facebook and Google, invest significantly in data analytics to make their websites and platforms more attractive to advertisers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DUOL",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Many large companies, such as Amazon, Facebook and Google, invest significantly in data analytics to make their websites and platforms more attractive to advertisers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Music Learning Services Limited",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DUOL",
+  "target": "Music Learning Services Limited",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, in July 2025, we completed the acquisition of the team behind NextBeat through the purchase of Music Learning Services Limited, a U.K.-based entity, and in July 2024, we completed the acquisition of Hobbes, an animation and motion design studio based in Detroit, Michigan.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hobbes",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DUOL",
+  "target": "Hobbes",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, in July 2025, we completed the acquisition of the team behind NextBeat through the purchase of Music Learning Services Limited, a U.K.-based entity, and in July 2024, we completed the acquisition of Hobbes, an animation and motion design studio based in Detroit, Michigan.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Stripe",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Stripe",
+  "target": "DUOL",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The top three service providers, Apple, Google, and Stripe accounted for",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

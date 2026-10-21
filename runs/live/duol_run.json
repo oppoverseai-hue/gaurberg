@@ -1,0 +1,69 @@
+{
+ "ticker": "DUOL",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+ "chunks": 5,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 41459,
+   "cache_read_tokens": 0,
+   "output_tokens": 600,
+   "cost_usd": 0.1746754,
+   "seconds": 7.0,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27574,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1007,
+   "cost_usd": 0.1243359,
+   "seconds": 9.9,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29388,
+   "cache_read_tokens": 12600,
+   "output_tokens": 96,
+   "cost_usd": 0.1226638,
+   "seconds": 9.2,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32106,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1025,
+   "cost_usd": 0.1430981,
+   "seconds": 13.2,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 17940,
+   "cache_read_tokens": 12600,
+   "output_tokens": 160,
+   "cost_usd": 0.0763675,
+   "seconds": 9.3,
+   "is_error": false,
+   "chunk": 5
+  }
+ ],
+ "totals": {
+  "input_tokens": 10,
+  "cache_creation_tokens": 148467,
+  "cache_read_tokens": 50400,
+  "output_tokens": 2888,
+  "cost_usd": 0.6411407,
+  "seconds": 48.6
+ },
+ "edges": 12,
+ "quotes_not_found": 0
+}

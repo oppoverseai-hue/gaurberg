@@ -13,6 +13,7 @@ ap.add_argument("--live-queue-id", type=int, default=0)  # M7: write status live
 ap.add_argument("--cost", type=float, default=0.0)  # real cost_usd from the run file, never a placeholder
 a = ap.parse_args()
 TRUST = "$q$live_generated$q$" if a.live_queue_id else "null"
+MODE = "live" if a.live_queue_id else "batch"
 STATUS = "$q$live$q$" if a.live_queue_id else "$q$staged$q$"
 edges = json.load(open(a.extraction))
 seed = list(csv.DictReader(open(a.seed)))
@@ -49,7 +50,7 @@ L.append("create or replace function pg_temp.nid(l text) returns bigint language
          + " ".join(f"when {q(k)} then ticker={q(v)}" for k, v in alias.items()) +
          " else lower(name)=lower(l) end order by id limit 1 $f$;")
 L.append("insert into public.agent_runs(agent_name,mode,target,model,cost_usd,status,review_status) values "
-         f"('filings_extraction','batch',{q(a.target)},'claude-sonnet-5-5 via Claude Code session',{a.cost},'completed','unreviewed') returning id into run_id;")
+         f"('filings_extraction','{MODE}',{q(a.target)},'claude-sonnet-5-5 via Claude Code session',{a.cost},'completed','unreviewed') returning id into run_id;")
 L.append("for r in select * from _e order by n loop "
          "a := pg_temp.nid(r.s); b := pg_temp.nid(r.g); "
          "if r.ty in ('competes','partners') and a > b then rid := a; a := b; b := rid; end if; "
@@ -61,6 +62,6 @@ L.append("for r in select * from _e order by n loop "
          f"insert into public.evidence(relationship_id,document_url,section,quote,quote_found,published_at) "
          f"select rid,{q(URL)},r.sec[k],t,true,{q(a.filed)} from _q where i=r.qs[k]; end loop; end if; end loop;")
 if a.live_queue_id:
-    L.append(f"update public.lookup_queue set status='done', step='Done', links_found=(select count(*) from _e), run_id=run_id, finished_at=now(), company_id=pg_temp.nid({q(a.ticker)}) where id={a.live_queue_id};")
+    L.append(f"update public.lookup_queue set status='done', step='Done', links_found=(select count(*) from _e), run_id=(select max(id) from public.agent_runs), finished_at=now(), company_id=pg_temp.nid({q(a.ticker)}) where id={a.live_queue_id};")
 L.append("end $do$;")
 print("\n".join(L))
