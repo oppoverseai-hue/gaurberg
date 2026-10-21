@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Sources() {
   return (
-    <main>
+    <main className="narrow">
       <Link href="/">← Home</Link>
       <h1>Sources</h1>
       <p className="muted">Where each kind of data comes from.</p>

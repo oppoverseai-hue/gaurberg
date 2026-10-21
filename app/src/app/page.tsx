@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   const access = await getAccess();
   return (
-    <main>
+    <main className="narrow">
       <h1>Gaurberg</h1>
       <p className="muted">Company pages and ecosystem maps for independent analysts and small funds.</p>
       {access.state === "signed_out" && (

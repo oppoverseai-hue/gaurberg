@@ -9,5 +9,5 @@ export default function DevMap() {
   const f = process.env.DEV_MAP_FIXTURE;
   if (process.env.NODE_ENV === "production" || !f) notFound();
   const { focal, rels } = JSON.parse(fs.readFileSync(f, "utf8")) as { focal: never; rels: Rel[] };
-  return <main className="wide"><h1>Dev map preview</h1><MapView focal={focal} rels={rels} isAdmin /></main>;
+  return <main className="wide"><MapView focal={focal} rels={rels} isAdmin /></main>;
 }
