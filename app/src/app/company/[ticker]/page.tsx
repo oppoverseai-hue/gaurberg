@@ -100,6 +100,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           <div className="card" id="about" style={{ marginTop: 24 }}>
             <div className="cardhead"><h3>About</h3></div>
             {p?.description ? <p style={{ margin: "0 0 12px", fontSize: 13, lineHeight: "20px" }}>{p.description}</p> : <p className="muted mono" style={{ fontSize: 12, margin: "0 0 12px" }}>Description: not available yet.</p>}
+            {p?.description && p.about_source && <p className="muted mono" style={{ fontSize: 10, margin: "-4px 0 12px" }}>Source: {p.about_source}</p>}
             <Rows rows={[
               ["Sector", p?.industry ?? cap(company.segment)], ["Size group", company.size_tier ? `${cap(company.size_tier)} cap` : null],
               ["Website", p?.website ?? null], ["Employees", p?.employees == null ? null : p.employees.toLocaleString("en-US")],
