@@ -1,0 +1,59 @@
+{
+ "ticker": "MSFT",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+ "chunks": 4,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29095,
+   "cache_read_tokens": 12600,
+   "output_tokens": 224,
+   "cost_usd": 0.1227465,
+   "seconds": 4.6,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30983,
+   "cache_read_tokens": 12600,
+   "output_tokens": 215,
+   "cost_usd": 0.1303938,
+   "seconds": 4.8,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 34892,
+   "cache_read_tokens": 12600,
+   "output_tokens": 524,
+   "cost_usd": 0.1495112,
+   "seconds": 6.5,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 23773,
+   "cache_read_tokens": 12600,
+   "output_tokens": 309,
+   "cost_usd": 0.1017733,
+   "seconds": 6.7,
+   "is_error": false,
+   "chunk": 4
+  }
+ ],
+ "totals": {
+  "input_tokens": 8,
+  "cache_creation_tokens": 118743,
+  "cache_read_tokens": 50400,
+  "output_tokens": 1272,
+  "cost_usd": 0.5044248,
+  "seconds": 22.6
+ },
+ "edges": 4,
+ "quotes_not_found": 3
+}

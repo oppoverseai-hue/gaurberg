@@ -1,0 +1,595 @@
+{
+ "role": "verifier_baseline",
+ "model": "claude-haiku-5-5",
+ "items": 289,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2651,
+   "cache_read_tokens": 12597,
+   "output_tokens": 912,
+   "cost_usd": 0.0014332700000000002,
+   "seconds": 6.8,
+   "is_error": false,
+   "batch": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2685,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1557,
+   "cost_usd": 0.00177647,
+   "seconds": 9.4,
+   "is_error": false,
+   "batch": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2885,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1995,
+   "cost_usd": 0.00203447,
+   "seconds": 11.6,
+   "is_error": false,
+   "batch": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3226,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1011,
+   "cost_usd": 0.0016992700000000001,
+   "seconds": 7.2,
+   "is_error": false,
+   "batch": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2805,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1292,
+   "cost_usd": 0.0017099700000000001,
+   "seconds": 8.9,
+   "is_error": false,
+   "batch": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2686,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1954,
+   "cost_usd": 0.0019807699999999998,
+   "seconds": 10.9,
+   "is_error": false,
+   "batch": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2781,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1385,
+   "cost_usd": 0.0017647700000000001,
+   "seconds": 8.6,
+   "is_error": false,
+   "batch": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2769,
+   "cache_read_tokens": 12597,
+   "output_tokens": 810,
+   "cost_usd": 0.00131117,
+   "seconds": 6.4,
+   "is_error": false,
+   "batch": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2858,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1009,
+   "cost_usd": 0.00159487,
+   "seconds": 6.7,
+   "is_error": false,
+   "batch": 9
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3094,
+   "cache_read_tokens": 12597,
+   "output_tokens": 680,
+   "cost_usd": 0.0014691700000000001,
+   "seconds": 5.9,
+   "is_error": false,
+   "batch": 10
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2875,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1433,
+   "cost_usd": 0.00174997,
+   "seconds": 9.1,
+   "is_error": false,
+   "batch": 11
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2765,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1654,
+   "cost_usd": 0.00182047,
+   "seconds": 10.0,
+   "is_error": false,
+   "batch": 12
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2764,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1395,
+   "cost_usd": 0.0016991699999999998,
+   "seconds": 8.9,
+   "is_error": false,
+   "batch": 13
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2782,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1024,
+   "cost_usd": 0.00154257,
+   "seconds": 7.1,
+   "is_error": false,
+   "batch": 14
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2808,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2043,
+   "cost_usd": 0.0020218700000000003,
+   "seconds": 11.6,
+   "is_error": false,
+   "batch": 15
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2708,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2208,
+   "cost_usd": 0.00210487,
+   "seconds": 12.2,
+   "is_error": false,
+   "batch": 16
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2700,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1368,
+   "cost_usd": 0.00169797,
+   "seconds": 8.8,
+   "is_error": false,
+   "batch": 17
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2802,
+   "cache_read_tokens": 12597,
+   "output_tokens": 891,
+   "cost_usd": 0.00146557,
+   "seconds": 6.3,
+   "is_error": false,
+   "batch": 18
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3059,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1461,
+   "cost_usd": 0.0018331699999999999,
+   "seconds": 9.3,
+   "is_error": false,
+   "batch": 19
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2882,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2680,
+   "cost_usd": 0.0023705700000000002,
+   "seconds": 15.0,
+   "is_error": false,
+   "batch": 20
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2696,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1385,
+   "cost_usd": 0.00167677,
+   "seconds": 8.7,
+   "is_error": false,
+   "batch": 21
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2710,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2087,
+   "cost_usd": 0.00202947,
+   "seconds": 12.4,
+   "is_error": false,
+   "batch": 22
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2680,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1482,
+   "cost_usd": 0.0017119700000000002,
+   "seconds": 9.6,
+   "is_error": false,
+   "batch": 23
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2696,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1994,
+   "cost_usd": 0.00200177,
+   "seconds": 11.4,
+   "is_error": false,
+   "batch": 24
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2672,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1142,
+   "cost_usd": 0.00151857,
+   "seconds": 8.0,
+   "is_error": false,
+   "batch": 25
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3321,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1302,
+   "cost_usd": 0.00184727,
+   "seconds": 8.8,
+   "is_error": false,
+   "batch": 26
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2546,
+   "cache_read_tokens": 12597,
+   "output_tokens": 761,
+   "cost_usd": 0.00132927,
+   "seconds": 6.3,
+   "is_error": false,
+   "batch": 27
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2654,
+   "cache_read_tokens": 12597,
+   "output_tokens": 796,
+   "cost_usd": 0.0013636700000000002,
+   "seconds": 6.2,
+   "is_error": false,
+   "batch": 28
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2757,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1388,
+   "cost_usd": 0.00169007,
+   "seconds": 8.5,
+   "is_error": false,
+   "batch": 29
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2654,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1552,
+   "cost_usd": 0.00173817,
+   "seconds": 10.3,
+   "is_error": false,
+   "batch": 30
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2743,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1616,
+   "cost_usd": 0.00170587,
+   "seconds": 9.8,
+   "is_error": false,
+   "batch": 31
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2751,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1561,
+   "cost_usd": 0.00181977,
+   "seconds": 9.5,
+   "is_error": false,
+   "batch": 32
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2676,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1358,
+   "cost_usd": 0.00168277,
+   "seconds": 8.5,
+   "is_error": false,
+   "batch": 33
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2630,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2613,
+   "cost_usd": 0.00227547,
+   "seconds": 14.9,
+   "is_error": false,
+   "batch": 34
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2778,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1296,
+   "cost_usd": 0.00155637,
+   "seconds": 9.4,
+   "is_error": false,
+   "batch": 35
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2725,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1279,
+   "cost_usd": 0.0016499699999999997,
+   "seconds": 8.2,
+   "is_error": false,
+   "batch": 36
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2644,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2043,
+   "cost_usd": 0.00198867,
+   "seconds": 11.8,
+   "is_error": false,
+   "batch": 37
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2947,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1011,
+   "cost_usd": 0.0016520699999999998,
+   "seconds": 7.4,
+   "is_error": false,
+   "batch": 38
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3208,
+   "cache_read_tokens": 12597,
+   "output_tokens": 625,
+   "cost_usd": 0.00144437,
+   "seconds": 5.9,
+   "is_error": false,
+   "batch": 39
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3095,
+   "cache_read_tokens": 12597,
+   "output_tokens": 853,
+   "cost_usd": 0.00152197,
+   "seconds": 6.5,
+   "is_error": false,
+   "batch": 40
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2897,
+   "cache_read_tokens": 12597,
+   "output_tokens": 964,
+   "cost_usd": 0.00154707,
+   "seconds": 6.6,
+   "is_error": false,
+   "batch": 41
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2929,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1965,
+   "cost_usd": 0.00204917,
+   "seconds": 11.3,
+   "is_error": false,
+   "batch": 42
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2885,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1257,
+   "cost_usd": 0.00166247,
+   "seconds": 8.4,
+   "is_error": false,
+   "batch": 43
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3552,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1343,
+   "cost_usd": 0.0018960700000000001,
+   "seconds": 9.0,
+   "is_error": false,
+   "batch": 44
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3633,
+   "cache_read_tokens": 12597,
+   "output_tokens": 717,
+   "cost_usd": 0.00161337,
+   "seconds": 6.1,
+   "is_error": false,
+   "batch": 45
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3637,
+   "cache_read_tokens": 12597,
+   "output_tokens": 780,
+   "cost_usd": 0.00165307,
+   "seconds": 6.4,
+   "is_error": false,
+   "batch": 46
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 3109,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1661,
+   "cost_usd": 0.00192567,
+   "seconds": 10.1,
+   "is_error": false,
+   "batch": 47
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2698,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2903,
+   "cost_usd": 0.0024468700000000003,
+   "seconds": 16.6,
+   "is_error": false,
+   "batch": 48
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2806,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1644,
+   "cost_usd": 0.00187627,
+   "seconds": 10.5,
+   "is_error": false,
+   "batch": 49
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2815,
+   "cache_read_tokens": 12597,
+   "output_tokens": 3713,
+   "cost_usd": 0.0028629700000000003,
+   "seconds": 19.4,
+   "is_error": false,
+   "batch": 50
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2797,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1071,
+   "cost_usd": 0.00163657,
+   "seconds": 7.1,
+   "is_error": false,
+   "batch": 51
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2795,
+   "cache_read_tokens": 12597,
+   "output_tokens": 2118,
+   "cost_usd": 0.00206547,
+   "seconds": 12.3,
+   "is_error": false,
+   "batch": 52
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2873,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1825,
+   "cost_usd": 0.00195637,
+   "seconds": 11.2,
+   "is_error": false,
+   "batch": 53
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2845,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1452,
+   "cost_usd": 0.00175297,
+   "seconds": 9.2,
+   "is_error": false,
+   "batch": 54
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2777,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1304,
+   "cost_usd": 0.00165807,
+   "seconds": 8.5,
+   "is_error": false,
+   "batch": 55
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2746,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1432,
+   "cost_usd": 0.0017147699999999998,
+   "seconds": 8.8,
+   "is_error": false,
+   "batch": 56
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2777,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1554,
+   "cost_usd": 0.0017785700000000002,
+   "seconds": 9.8,
+   "is_error": false,
+   "batch": 57
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 2569,
+   "cache_read_tokens": 12597,
+   "output_tokens": 1956,
+   "cost_usd": 0.0019271699999999998,
+   "seconds": 11.5,
+   "is_error": false,
+   "batch": 58
+  }
+ ],
+ "totals": {
+  "input_tokens": 116,
+  "cache_creation_tokens": 165308,
+  "cache_read_tokens": 730626,
+  "output_tokens": 86565,
+  "cost_usd": 0.10330766,
+  "seconds": 545.6
+ }
+}

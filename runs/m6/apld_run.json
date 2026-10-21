@@ -1,0 +1,90 @@
+{
+ "ticker": "APLD",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+ "chunks": 7,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29436,
+   "cache_read_tokens": 12600,
+   "output_tokens": 6309,
+   "cost_usd": 0.18499010000000002,
+   "seconds": 30.5,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28682,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1292,
+   "cost_usd": 0.1317287,
+   "seconds": 11.6,
+   "is_error": false,
+   "chunk": 2,
+   "parse_error": "Extra data: line 3 column 1 (char 1982)"
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 35752,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1182,
+   "cost_usd": 0.15962120000000002,
+   "seconds": 9.4,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 35000,
+   "cache_read_tokens": 12600,
+   "output_tokens": 906,
+   "cost_usd": 0.1537725,
+   "seconds": 9.2,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36281,
+   "cache_read_tokens": 12600,
+   "output_tokens": 591,
+   "cost_usd": 0.1558761,
+   "seconds": 7.4,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36763,
+   "cache_read_tokens": 12600,
+   "output_tokens": 735,
+   "cost_usd": 0.1592928,
+   "seconds": 7.2,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 10902,
+   "cache_read_tokens": 12600,
+   "output_tokens": 546,
+   "cost_usd": 0.0513717,
+   "seconds": 7.2,
+   "is_error": false,
+   "chunk": 7
+  }
+ ],
+ "totals": {
+  "input_tokens": 14,
+  "cache_creation_tokens": 212816,
+  "cache_read_tokens": 88200,
+  "output_tokens": 11561,
+  "cost_usd": 0.9966531000000001,
+  "seconds": 82.5
+ },
+ "edges": 31,
+ "quotes_not_found": 2
+}

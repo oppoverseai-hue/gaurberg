@@ -1,0 +1,90 @@
+{
+ "ticker": "TSM",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+ "chunks": 7,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33581,
+   "cache_read_tokens": 12600,
+   "output_tokens": 696,
+   "cost_usd": 0.14585510000000002,
+   "seconds": 11.1,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 35370,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2752,
+   "cost_usd": 0.17375,
+   "seconds": 19.4,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 35739,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1580,
+   "cost_usd": 0.1635429,
+   "seconds": 11.7,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33452,
+   "cache_read_tokens": 12600,
+   "output_tokens": 719,
+   "cost_usd": 0.1455572,
+   "seconds": 13.6,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 38455,
+   "cache_read_tokens": 12600,
+   "output_tokens": 588,
+   "cost_usd": 0.16475700000000001,
+   "seconds": 12.9,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 43751,
+   "cache_read_tokens": 12600,
+   "output_tokens": 162,
+   "cost_usd": 0.1822111,
+   "seconds": 5.8,
+   "is_error": false,
+   "chunk": 6,
+   "parse_error": "Extra data: line 3 column 1 (char 313)"
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 10708,
+   "cache_read_tokens": 12600,
+   "output_tokens": 376,
+   "cost_usd": 0.0488743,
+   "seconds": 5.2,
+   "is_error": false,
+   "chunk": 7
+  }
+ ],
+ "totals": {
+  "input_tokens": 14,
+  "cache_creation_tokens": 231056,
+  "cache_read_tokens": 88200,
+  "output_tokens": 6873,
+  "cost_usd": 1.0245476,
+  "seconds": 79.7
+ },
+ "edges": 32,
+ "quotes_not_found": 7
+}

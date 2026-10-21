@@ -1,0 +1,922 @@
+[
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "INTC",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also announced a strategic partnership with NVIDIA to co-develop custom client and data center products combining our x86 CPU technologies with NVIDIA's AI and accelerated computing capabilities.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "UMC",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "INTC",
+  "target": "UMC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In 2024, we announced a strategic collaboration with UMC to develop a 12 nm process platform that expands our mature‑node process portfolio and strengthens our U.S.-based manufacturing foundry capabilities, with production expected to begin in 2027.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AMD",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "CCG's primary competitor is AMD, which like us designs processors based on the x86 architecture.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "DCAI competitors include AMD, which utilizes the x86 architecture and competes with us across the full spectrum of CPUs, GPUs, accelerators and other products; providers of GPU systems such as NVIDIA, whose GPU systems have experienced the highest demand in the market as AI workloads have become the dominant source of compute demand; companies developing their own custom silicon, including many hyperscalers such as Amazon, Google, Meta and Microsoft; and both new entrants and incumbents developing ARM- and RISC-V-based products tailored to specific data center and AI workloads.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Our competitors include companies offering platform products, such as AMD and Qualcomm; accelerator products such as GPUs, including those offered by NVIDIA and AMD; other accelerator products such as ASICs, application-specific standard products and FPGAs; memory and storage products; connectivity and networking products; and other semiconductor products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Apple",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Apple",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also face significant competition from companies that design processors based on the ARM architecture, such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek with its Kompanio products.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "For example, in 2020, Apple introduced PC products utilizing its own internally developed ARM-based semiconductor designs in place of our client CPUs, and we face increasing competition from Apple's products and ecosystem.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Qualcomm",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Qualcomm",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also face significant competition from companies that design processors based on the ARM architecture, such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek with its Kompanio products.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Our competitors include companies offering platform products, such as AMD and Qualcomm; accelerator products such as GPUs, including those offered by NVIDIA and AMD; other accelerator products such as ASICs, application-specific standard products and FPGAs; memory and storage products; connectivity and networking products; and other semiconductor products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "MediaTek",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "MediaTek",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also face significant competition from companies that design processors based on the ARM architecture, such as Apple with its M series products, Qualcomm with its Snapdragon products and MediaTek with its Kompanio products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "DCAI competitors include AMD, which utilizes the x86 architecture and competes with us across the full spectrum of CPUs, GPUs, accelerators and other products; providers of GPU systems such as NVIDIA, whose GPU systems have experienced the highest demand in the market as AI workloads have become the dominant source of compute demand; companies developing their own custom silicon, including many hyperscalers such as Amazon, Google, Meta and Microsoft; and both new entrants and incumbents developing ARM- and RISC-V-based products tailored to specific data center and AI workloads.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Our competitors include companies offering platform products, such as AMD and Qualcomm; accelerator products such as GPUs, including those offered by NVIDIA and AMD; other accelerator products such as ASICs, application-specific standard products and FPGAs; memory and storage products; connectivity and networking products; and other semiconductor products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "DCAI competitors include AMD, which utilizes the x86 architecture and competes with us across the full spectrum of CPUs, GPUs, accelerators and other products; providers of GPU systems such as NVIDIA, whose GPU systems have experienced the highest demand in the market as AI workloads have become the dominant source of compute demand; companies developing their own custom silicon, including many hyperscalers such as Amazon, Google, Meta and Microsoft; and both new entrants and incumbents developing ARM- and RISC-V-based products tailored to specific data center and AI workloads.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "DCAI competitors include AMD, which utilizes the x86 architecture and competes with us across the full spectrum of CPUs, GPUs, accelerators and other products; providers of GPU systems such as NVIDIA, whose GPU systems have experienced the highest demand in the market as AI workloads have become the dominant source of compute demand; companies developing their own custom silicon, including many hyperscalers such as Amazon, Google, Meta and Microsoft; and both new entrants and incumbents developing ARM- and RISC-V-based products tailored to specific data center and AI workloads.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Meta",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Meta",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "DCAI competitors include AMD, which utilizes the x86 architecture and competes with us across the full spectrum of CPUs, GPUs, accelerators and other products; providers of GPU systems such as NVIDIA, whose GPU systems have experienced the highest demand in the market as AI workloads have become the dominant source of compute demand; companies developing their own custom silicon, including many hyperscalers such as Amazon, Google, Meta and Microsoft; and both new entrants and incumbents developing ARM- and RISC-V-based products tailored to specific data center and AI workloads.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "DCAI competitors include AMD, which utilizes the x86 architecture and competes with us across the full spectrum of CPUs, GPUs, accelerators and other products; providers of GPU systems such as NVIDIA, whose GPU systems have experienced the highest demand in the market as AI workloads have become the dominant source of compute demand; companies developing their own custom silicon, including many hyperscalers such as Amazon, Google, Meta and Microsoft; and both new entrants and incumbents developing ARM- and RISC-V-based products tailored to specific data center and AI workloads.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Broadcom",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Broadcom",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also compete with Broadcom in the custom ASICs development market.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TSMC",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "TSMC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our primary competitor in leading-edge semiconductor process technology is TSMC, which holds a leading position in manufacturing at scale for the most advanced nodes.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As we pursue our strategy to establish Intel Foundry as a major provider of foundry capacity to manufacture semiconductors for others, we face intense competition from well-established competitors such as TSMC, Samsung, Global Foundries, UMC and SMIC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Samsung",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "Samsung",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also compete directly with Samsung in this market.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As we pursue our strategy to establish Intel Foundry as a major provider of foundry capacity to manufacture semiconductors for others, we face intense competition from well-established competitors such as TSMC, Samsung, Global Foundries, UMC and SMIC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GlobalFoundries",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "GlobalFoundries",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Other Intel Foundry competitors include GlobalFoundries, UMC and SMIC, which primarily focus on mature process technologies.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As we pursue our strategy to establish Intel Foundry as a major provider of foundry capacity to manufacture semiconductors for others, we face intense competition from well-established competitors such as TSMC, Samsung, Global Foundries, UMC and SMIC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "UMC",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "UMC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Other Intel Foundry competitors include GlobalFoundries, UMC and SMIC, which primarily focus on mature process technologies.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As we pursue our strategy to establish Intel Foundry as a major provider of foundry capacity to manufacture semiconductors for others, we face intense competition from well-established competitors such as TSMC, Samsung, Global Foundries, UMC and SMIC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SMIC",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "SMIC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Other Intel Foundry competitors include GlobalFoundries, UMC and SMIC, which primarily focus on mature process technologies.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As we pursue our strategy to establish Intel Foundry as a major provider of foundry capacity to manufacture semiconductors for others, we face intense competition from well-established competitors such as TSMC, Samsung, Global Foundries, UMC and SMIC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TSMC",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "TSMC",
+  "target": "INTC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We expect to continue to use TSMC and other third-party foundry suppliers for various key tiles in a number of current and future products.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Some of our most advanced current and future products are or will be either exclusively manufactured by TSMC or reliant upon critical components, including various compute die, manufactured by TSMC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ASML",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "ASML",
+  "target": "INTC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In some cases, however, we are reliant upon sole-source providers, such as with the EUV lithography tools manufactured by ASML that are required for leading-edge process technologies, or providers that are substantially concentrated in a single country, such as with certain rare earth minerals critical to the functioning of a range of technology products and processes where China is the primary source of global supply.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "For example, ASML Holding N.V. (ASML) is currently the sole supplier of EUV lithography tools that we are deploying in our Intel 4, Intel 3, Intel 18A and planned future leading-edge manufacturing process nodes.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mobileye",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "INTC",
+  "target": "Mobileye",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of December 27, 2025, we continued to consolidate Mobileye and held equity interests representing an 80% ownership interest in Mobileye;",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We consolidate our majority owned subsidiary Mobileye pursuant to the voting interest model.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 80,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "IMS",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "INTC",
+  "target": "IMS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of December 27, 2025, we continued to consolidate IMS and held equity interests representing a 68% ownership interest in IMS; and",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 68,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Altera",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "INTC",
+  "target": "Altera",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of and after September 12, 2025, our retained non-marketable equity interest in Altera is accounted for as an equity method investment.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Upon closing the transaction, we deconsolidated Altera from our Consolidated Financial Statements and retained a 49% minority investment in Altera which we accounted for under the equity method of accounting.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Effective September 12, 2025, Altera, previously a wholly-owned subsidiary, was deconsolidated from our Consolidated Financial Statements following the closing of the sale of 51% of Altera's issued and outstanding common stock.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As of September 12, 2025, our retained interest in Altera is accounted for as an equity method investment.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In the third quarter of 2025, we closed the sale of Altera and retained a 49% interest in the business (refer to \"Note 10: Acquisitions and Divestitures\" within Notes to Consolidated Financial Statements).",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "U.S. Department of Commerce",
+  "entity_type": "government",
+  "type": "invests",
+  "source": "U.S. Department of Commerce",
+  "target": "INTC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "we issued to the DOC 275 million shares of our common stock and a warrant to purchase up to 241 million shares of our common stock at $20.00 per share if we were to cease to directly or indirectly own at least 51% of our Intel Foundry business",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SoftBank Group",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "SoftBank Group",
+  "target": "INTC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "on August 18, 2025, we entered into an agreement with SoftBank Group to issue and sell to SoftBank Group 87 million shares of our common stock at $23.00 per share, representing an aggregate cash purchase price of $2.0 billion.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On August 18, 2025, we entered into an agreement to issue and sell 87 million shares of our common stock to SoftBank Group at $23.00 per share, representing an aggregate cash purchase price of $2.0 billion.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "NVIDIA",
+  "target": "INTC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "on September 15, 2025, we entered into an agreement with NVIDIA to issue and sell to NVIDIA 215 million shares of our common stock at $23.28 per share for an aggregate cash purchase price of $5.0 billion.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On September 15, 2025, we entered into an agreement to issue and sell 215 million shares of our common stock to NVIDIA at a price of $23.28 per share, representing an aggregate cash purchase price of $5.0 billion.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SLP",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "SLP",
+  "target": "SLP",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On April 14, 2025, we signed a transaction agreement with SLP VII Gryphon Aggregator, L.P., an affiliate of SLP, to sell 51% of all issued and outstanding common stock of Altera, our wholly owned subsidiary as of that date.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 51,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Mentee Robotics",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "Mentee Robotics",
+  "target": "Mentee Robotics",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2026, Mobileye entered into a definitive agreement to acquire Mentee Robotics for an aggregate purchase price of approximately $900 million, subject to customary adjustments and closing conditions.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Brookfield",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "INTC",
+  "target": "Brookfield",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "To support our capital investments, we have pursued alternative financing arrangements, such as our 2022 joint investment with Brookfield in the manufacturing expansion of our Arizona campus, and our 2024 joint investment with Apollo related to Fab 34 in Ireland, and may enter into similar arrangements in the future.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Contributions and distributions made between Arizona SCIP and investors are generally made based on our and Brookfield's proportional ownership interest in Arizona SCIP.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Other purchase commitments also include our unrecognized commitment to fund our respective share of the total construction costs of Arizona SCIP in connection with the definitive agreement entered into with Brookfield during 2022 (refer to Note 4: Non-Controlling Interests\" within Notes to Consolidated Financial Statements).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Apollo",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "INTC",
+  "target": "Apollo",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "To support our capital investments, we have pursued alternative financing arrangements, such as our 2022 joint investment with Brookfield in the manufacturing expansion of our Arizona campus, and our 2024 joint investment with Apollo related to Fab 34 in Ireland, and may enter into similar arrangements in the future.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In the second quarter of 2024, we closed a transaction with Apollo involving the sale of 49% of our interest in an Irish limited liability company (Ireland SCIP) for net proceeds of $11.0 billion, which increased our capital in excess of par value.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "U.S. government",
+  "entity_type": "government",
+  "type": "invests",
+  "source": "U.S. government",
+  "target": "INTC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The transactions resulted in the U.S. government becoming one of our largest stockholders.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Apollo",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Apollo",
+  "target": "Apollo",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In the second quarter of 2024, we closed a transaction with Apollo involving the sale of 49% of our interest in an Irish limited liability company (Ireland SCIP) for net proceeds of $11.0 billion, which increased our capital in excess of par value.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 49,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Altera",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "Altera",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We provide semiconductor wafer manufacturing services to Altera, a related party, in accordance with a wafer manufacturing and sale agreement.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SK hynix",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "SK hynix",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We sold our NAND memory technology and manufacturing business to SK hynix, which we deconsolidated upon closing the first phase of the transaction on December 29, 2021.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "IMS Nanofabrication",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "INTC",
+  "target": "IMS Nanofabrication",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We continue to consolidate IMS results as a majority owned subsidiary pursuant to the voting interest model into our Consolidated Financial Statements.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tower",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "INTC",
+  "target": "Tower",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The 2023 charges also included a $353 million termination fee in connection with our inability to timely obtain required regulatory approvals needed to acquire Tower in accordance with the contractual terms of the terminated acquisition agreement and a $401 million charge for the original EC-imposed fine.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "VLSI Technology",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "INTC",
+  "target": "VLSI Technology",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In October 2017, VLSI Technology LLC (VLSI) filed a complaint against us in the U.S. District Court for the Northern District of California alleging that various Intel FPGA and processor products infringe",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Acer",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "Acer",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Cisco",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "Cisco",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Dell",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "Dell",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "HPE",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "HPE",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "HPI",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "HPI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "IBM",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "IBM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lenovo",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "Lenovo",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Oracle",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "INTC",
+  "target": "Oracle",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Intel is indemnifying Acer, Amazon Web Services (AWS), Cisco, Dell, HPE, HPI, IBM, Lenovo, and Oracle in connection with Intel CPUs accused of infringing",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

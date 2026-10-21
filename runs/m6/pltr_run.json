@@ -1,0 +1,89 @@
+{
+ "ticker": "PLTR",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+ "chunks": 7,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28692,
+   "cache_read_tokens": 12600,
+   "output_tokens": 194,
+   "cost_usd": 0.1207902,
+   "seconds": 5.7,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27018,
+   "cache_read_tokens": 12600,
+   "output_tokens": 790,
+   "cost_usd": 0.1198878,
+   "seconds": 7.5,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27918,
+   "cache_read_tokens": 12600,
+   "output_tokens": 246,
+   "cost_usd": 0.1181378,
+   "seconds": 7.0,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28616,
+   "cache_read_tokens": 12600,
+   "output_tokens": 84,
+   "cost_usd": 0.11937709999999999,
+   "seconds": 4.5,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32057,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.13268770000000002,
+   "seconds": 3.5,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33131,
+   "cache_read_tokens": 12600,
+   "output_tokens": 140,
+   "cost_usd": 0.1384511,
+   "seconds": 5.2,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 4885,
+   "cache_read_tokens": 12600,
+   "output_tokens": 102,
+   "cost_usd": 0.0222605,
+   "seconds": 6.4,
+   "is_error": false,
+   "chunk": 7
+  }
+ ],
+ "totals": {
+  "input_tokens": 14,
+  "cache_creation_tokens": 182317,
+  "cache_read_tokens": 88200,
+  "output_tokens": 1560,
+  "cost_usd": 0.7715922,
+  "seconds": 39.8
+ },
+ "edges": 7,
+ "quotes_not_found": 0
+}

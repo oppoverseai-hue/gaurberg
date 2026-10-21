@@ -1,0 +1,109 @@
+{
+ "ticker": "LCID",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+ "chunks": 9,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32099,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1468,
+   "cost_usd": 0.14749840000000003,
+   "seconds": 10.4,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28476,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1037,
+   "cost_usd": 0.1283361,
+   "seconds": 9.3,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27555,
+   "cache_read_tokens": 12600,
+   "output_tokens": 429,
+   "cost_usd": 0.1184775,
+   "seconds": 6.9,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28533,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1521,
+   "cost_usd": 0.1334083,
+   "seconds": 10.2,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29954,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1600,
+   "cost_usd": 0.1400264,
+   "seconds": 14.0,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33896,
+   "cache_read_tokens": 12600,
+   "output_tokens": 565,
+   "cost_usd": 0.1460016,
+   "seconds": 6.9,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32106,
+   "cache_read_tokens": 12600,
+   "output_tokens": 728,
+   "cost_usd": 0.14012760000000002,
+   "seconds": 7.7,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 34596,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1371,
+   "cost_usd": 0.1567656,
+   "seconds": 11.6,
+   "is_error": false,
+   "chunk": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 11577,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1047,
+   "cost_usd": 0.059149700000000006,
+   "seconds": 9.1,
+   "is_error": false,
+   "chunk": 9
+  }
+ ],
+ "totals": {
+  "input_tokens": 18,
+  "cache_creation_tokens": 258792,
+  "cache_read_tokens": 113400,
+  "output_tokens": 9766,
+  "cost_usd": 1.1697912000000001,
+  "seconds": 86.1
+ },
+ "edges": 27,
+ "quotes_not_found": 3
+}

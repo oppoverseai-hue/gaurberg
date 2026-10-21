@@ -1,0 +1,194 @@
+[
+ {
+  "counterparty": "TikTok",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "META",
+  "target": "TikTok",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "User growth and engagement are also impacted by a number of other factors, including competitive products and services, such as TikTok, that have reduced some users' engagement with our products and services, as well as global and regional business, macroeconomic, and geopolitical conditions.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Apple",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "META",
+  "target": "Apple",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, Apple previously released an update to its Safari browser that limits the use of third-party cookies, which reduces our ability to provide the most relevant ads to our users and impacts monetization, and also released changes to iOS that limit our ability to target and measure ads effectively, while expanding their own advertising business.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "For example, each of Apple and Google have integrated competitive products with iOS and Android, respectively.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "In addition, Apple has released changes to iOS that limit our ability, and the ability of others in the digital advertising industry, to target and measure ads effectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Google",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "META",
+  "target": "Google",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, each of Apple and Google have integrated competitive products with iOS and Android, respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Giphy",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "META",
+  "target": "Giphy",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, we completed our divestiture of Giphy in 2023 following the United Kingdom Competition and Markets Authority's order directing us to divest Giphy post-acquisition.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Within Unlimited",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "META",
+  "target": "Within Unlimited",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In addition, although we were able to successfully complete the acquisition after prevailing in federal court, the FTC sought to enjoin our proposed acquisition of Within Unlimited.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Instagram",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "META",
+  "target": "Instagram",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, we are currently the subject of multiple putative class action suits in connection with our platform and user data practices and the misuse of certain data by a developer that shared such data with third parties in violation of our terms and policies; the disclosure of our earnings results for the second quarter of 2018; our acquisitions of Instagram and WhatsApp, as well as other alleged anticompetitive conduct; a former employee's allegations and release of internal company documents beginning in September 2021; the disclosure of our earnings results for the fourth quarter of 2021; and allegations that we inflated our estimates of the potential audience size for advertisements, resulting in artificially increased demand and higher prices.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Beginning in 2020, we became subject to a lawsuit by the FTC alleging that we violated antitrust laws, including by acquiring Instagram in 2012 and WhatsApp in 2014.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "including by acquiring Instagram in 2012 and WhatsApp in 2014 and by maintaining conditions on access to our platform.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "WhatsApp",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "META",
+  "target": "WhatsApp",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, we are currently the subject of multiple putative class action suits in connection with our platform and user data practices and the misuse of certain data by a developer that shared such data with third parties in violation of our terms and policies; the disclosure of our earnings results for the second quarter of 2018; our acquisitions of Instagram and WhatsApp, as well as other alleged anticompetitive conduct; a former employee's allegations and release of internal company documents beginning in September 2021; the disclosure of our earnings results for the second quarter of 2018; our acquisitions of Instagram and WhatsApp, as well as other alleged anticompetitive conduct; a former employee's allegations and release of internal company documents beginning in September 2021; the disclosure of our earnings results for the fourth quarter of 2021; and allegations that we inflated our estimates of the potential audience size for advertisements, resulting in artificially increased demand and higher prices.",
+    "quote_found": false
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Beginning in 2020, we became subject to a lawsuit by the FTC alleging that we violated antitrust laws, including by acquiring Instagram in 2012 and WhatsApp in 2014.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "including by acquiring Instagram in 2012 and WhatsApp in 2014 and by maintaining conditions on access to our platform.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Scale AI",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "META",
+  "target": "Scale AI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our non-marketable equity investments accounted for under the measurement alternative mostly consist of our minority investments in Scale AI for $13.80 billion, which was closed during 2025, and our investment in Jio Platforms Limited of $5.82 billion as of December 31, 2025.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Jio Platforms",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "META",
+  "target": "Jio Platforms",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our non-marketable equity investments accounted for under the measurement alternative mostly consist of our minority investments in Scale AI for $13.80 billion, which was closed during 2025, and our investment in Jio Platforms Limited of $5.82 billion as of December 31, 2025.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

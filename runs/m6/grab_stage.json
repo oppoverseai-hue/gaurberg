@@ -1,0 +1,811 @@
+[
+ {
+  "counterparty": "Singtel",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "GRAB",
+  "target": "Singtel",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "These arrangements include joint ventures and minority equity investments, such as our Digital Banking JV with Singtel and partnerships with strategic investors such as Mitsubishi UFJ Financial Group Inc. (\u201cMUFG\u201d) for certain digital financial services and Toyota for certain driver-related services.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We have also successfully pursued a strategy of making strategic alliances with suitable partners such as Singtel in Singapore and Emtek in Indonesia, and we expect to continue to do so in the future.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Jaya Grocer",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GRAB",
+  "target": "Jaya Grocer",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We own 72.5% equity interest in Jaya Grocer that carry 50.0% voting power in Jaya Grocer outright.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Uber",
+  "target": "GRAB",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Both Uber and Didi could have certain competitive advantages compared to other new entrants into our markets given their familiarity with the markets, and in the case of Uber, due also to their shareholding in us and previous operations in Southeast Asia.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Completed the acquisition of Uber\u2019s business in Southeast Asia through an all-share deal following which Uber became a major strategic shareholder in Grab",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Foodpanda",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Foodpanda",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our deliveries segment, we face competition from regional players such as Foodpanda, ShopeeFood and Gojek (primarily in Indonesia) and single market players in Southeast Asia, including Line Man Wongnai in Thailand.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ShopeeFood",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "ShopeeFood",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our deliveries segment, we face competition from regional players such as Foodpanda, ShopeeFood and Gojek (primarily in Indonesia) and single market players in Southeast Asia, including Line Man Wongnai in Thailand.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Gojek",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Gojek",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our deliveries segment, we face competition from regional players such as Foodpanda, ShopeeFood and Gojek (primarily in Indonesia) and single market players in Southeast Asia, including Line Man Wongnai in Thailand.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Line Man Wongnai",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Line Man Wongnai",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our deliveries segment, we face competition from regional players such as Foodpanda, ShopeeFood and Gojek (primarily in Indonesia) and single market players in Southeast Asia, including Line Man Wongnai in Thailand.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lalamove",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Lalamove",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our platform also competes with last-mile package delivery services including on-demand services such as Gojek and Lalamove, and single market players such as AhaMove in Vietnam and Transportify in the Philippines.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AhaMove",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "AhaMove",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our platform also competes with last-mile package delivery services including on-demand services such as Gojek and Lalamove, and single market players such as AhaMove in Vietnam and Transportify in the Philippines.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Transportify",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Transportify",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our platform also competes with last-mile package delivery services including on-demand services such as Gojek and Lalamove, and single market players such as AhaMove in Vietnam and Transportify in the Philippines.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Be Group",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Be Group",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bolt",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Bolt",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tada",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Tada",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ryde",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Ryde",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Xanh SM",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Xanh SM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Maxim",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "Maxim",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "InDrive",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "InDrive",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ComfortDelGro",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "GRAB",
+  "target": "ComfortDelGro",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In our mobility segment, we face competition from Gojek in Indonesia and Singapore, Be Group in Vietnam, Bolt in Thailand, Tada and Ryde in Singapore, as well as Xanh SM, Bolt, Maxim and InDrive in several Southeast Asian countries, licensed taxi operators such as ComfortDelGro in Singapore, and traditional ground transportation services, including taxi-hailing.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "MUFG",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "GRAB",
+  "target": "MUFG",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "These arrangements include joint ventures and minority equity investments, such as our Digital Banking JV with Singtel and partnerships with strategic investors such as Mitsubishi UFJ Financial Group Inc. (\u201cMUFG\u201d) for certain digital financial services and Toyota for certain driver-related services.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Toyota",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "GRAB",
+  "target": "Toyota",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "These arrangements include joint ventures and minority equity investments, such as our Digital Banking JV with Singtel and partnerships with strategic investors such as Mitsubishi UFJ Financial Group Inc. (\u201cMUFG\u201d) for certain digital financial services and Toyota for certain driver-related services.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "We are party to a Framework Collaboration Agreement dated June 13, 2018 and renewed and amended on August 15, 2021, August 16, 2022 and August 1, 2023 (collectively the \u201cFCA\u201d) with Toyota Motor Corp. (\u201cToyota\u201d), a principal shareholder.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Jaya Grocer",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GRAB",
+  "target": "Jaya Grocer",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, in 2022, we acquired a majority economic interest in Jaya Grocer.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Completed acquisition of a majority economic interest in Jaya Grocer",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In 2022, we acquired a majority economic interest in Jaya Grocer in Malaysia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Validus Capital",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GRAB",
+  "target": "Validus Capital",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In 2025, we acquired a majority economic interest in Everrise, Validus Capital, a digital SME lending platform in Singapore, and Infermove, a Chinese AI robotics company.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "GXS Bank completed acquisition of Validus Capital, a digital SME lending platform in Singapore to expand our small, medium-sized enterprise lending footprint",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Everrise",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GRAB",
+  "target": "Everrise",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In 2025, we acquired a majority economic interest in Everrise, Validus Capital, a digital SME lending platform in Singapore, and Infermove, a Chinese AI robotics company.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Completed acquisition of a majority economic interest in Everrise",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In 2025, we acquired a majority interest in Everrise, a premium supermarket chain that operates predominately in East Malaysia, and acquired certain assets and businesses to accelerate the growth of our financial services and AI/robotics capabilities.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Infermove",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GRAB",
+  "target": "Infermove",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In 2025, we acquired a majority economic interest in Everrise, Validus Capital, a digital SME lending platform in Singapore, and Infermove, a Chinese AI robotics company.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Completed acquisition of Chinese AI robotics company, Infermove, which is focused on autonomous robotics for first and last-mile delivery",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Includes 865 employees of Everrise, a supermarket chainsin Malaysia, which we acquired in March 2025 and 22 employees of Infermove, an AI robotics startup in China, which we acquired in December 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Stash Financial",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GRAB",
+  "target": "Stash Financial",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In early 2026, we agreed to acquire Stash Financial, Inc., a digital investing platform in the U.S. (the completion of which remains subject to regulatory approvals and other customary closing conditions).",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In February 2026, the Group has entered into definitive agreements to acquire ",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "% equity interest in Stash Financial, Inc., a digital financial services provider in the United States.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "note": "Agreement to acquire; check completion."
+ },
+ {
+  "counterparty": "Visa",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "GRAB",
+  "target": "Visa",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We rely on strategic partnerships with financial institutions such as Visa and Mastercard and third parties such as Adyen and Stripe to process and remit payments to and from consumers and driver- and merchant-partners.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mastercard",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "GRAB",
+  "target": "Mastercard",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We rely on strategic partnerships with financial institutions such as Visa and Mastercard and third parties such as Adyen and Stripe to process and remit payments to and from consumers and driver- and merchant-partners.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Adyen",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Adyen",
+  "target": "GRAB",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We rely on strategic partnerships with financial institutions such as Visa and Mastercard and third parties such as Adyen and Stripe to process and remit payments to and from consumers and driver- and merchant-partners.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Stripe",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Stripe",
+  "target": "GRAB",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We rely on strategic partnerships with financial institutions such as Visa and Mastercard and third parties such as Adyen and Stripe to process and remit payments to and from consumers and driver- and merchant-partners.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PT Bumi Cakrawala Perkasa",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GRAB",
+  "target": "PT Bumi Cakrawala Perkasa",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We own 82.8% of BCP, which, due to a dual-class structure, represents a 38.9% voting interest, and we also have contractual rights to (a) control the appointment of the Chief Executive Officer, and the Chief Financial Officer (including the right to nominate any such officers as directors or as president director), (b) approve the budget and business plan of BCP and its subsidiaries; (c) approve future funding of BCP and its subsidiaries, whether through debt, equity or otherwise, and (d) certain economic rights with respect to the remaining shareholding of BCP.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Further, we own OVO and conduct our financial services businesses in Indonesia through PT Bumi Cakrawala Perkasa (\u201cBCP\u201d), which has a dual class share structure that gives us a 38.9% voting right while we own 82.8% of the shares in BCP.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 82.8,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "PT Solusi Pengiriman Indonesia",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GRAB",
+  "target": "PT Solusi Pengiriman Indonesia",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In addition, we conduct our point-to-point courier delivery business through PT Solusi Pengiriman Indonesia (\u201cSPI\u201d), in which we own 49%.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We conduct our point-to-point courier delivery business through PT Solusi Pengiriman Indonesia (\u201cSPI\u201d), in which we own 49%.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 49,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "OVO",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GRAB",
+  "target": "OVO",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Completed our 100% ownership investment in OVO",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "PT Super Bank Indonesia",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "GRAB",
+  "target": "PT Super Bank Indonesia",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "PT Super Bank Indonesia Tbk, in which we have less than 50% equity interest, successfully completed its initial public offering on the Indonesia Stock Exchange",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Emtek",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "GRAB",
+  "target": "Emtek",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We have also successfully pursued a strategy of making strategic alliances with suitable partners such as Singtel in Singapore and Emtek in Indonesia, and we expect to continue to do so in the future.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Grab PH Holdings Inc.",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GRAB",
+  "target": "Grab PH Holdings Inc.",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The shares of Grab PH Holdings Inc. are 40% legal and/or beneficially owned by us, with the balance 60% of the shares held by an entity owned by our local partner, Mr. Jesse Stefan H. Maxwell, a Philippine national who is a director of certain of our Philippine operating entities, including MyTaxi.PH, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 40,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "OVO",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GRAB",
+  "target": "OVO",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In 2021, we completed our 100% ownership investment in OVO.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "GXBank",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "GRAB",
+  "target": "GXBank",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In 2022 and 2023, our digital banking joint venture GXS Bank and GXBank were publicly launched in Singapore and Malaysia, respectively, and are continuing to build their customer base and expand their product offerings.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Toyota",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Toyota",
+  "target": "GRAB",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "We are party to a Framework Collaboration Agreement dated June 13, 2018 and renewed and amended on August 15, 2021, August 16, 2022 and August 1, 2023 (collectively the \u201cFCA\u201d) with Toyota Motor Corp. (\u201cToyota\u201d), a principal shareholder.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 5.4,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "GrabFin Operations (Malaysia)",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GRAB",
+  "target": "GrabFin Operations (Malaysia)",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "In May 2023, we acquired Mr. Tong's 60% interest in GOM and we now wholly own GOM.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 60,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "MUV Marketplace",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "MUV Marketplace",
+  "target": "GRAB",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "On December 31, 2024, one of our wholly-owned subsidiaries, GrabCar Sdn Bhd, awarded a contract to purchase 281 units of Perodua Bezza to MUV Marketplace Sdn. Bhd. for MYR 4.7 million ($1.1 million).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Vay Technology",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GRAB",
+  "target": "Vay Technology",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2026, the Group has acquired a minority equity interest in Vay Technology GmbH, a remote driving technology company that commercially operates in the United States, for cash consideration of $",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1855612/000185561226000020/ck0001855612-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

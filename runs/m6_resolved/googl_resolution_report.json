@@ -1,0 +1,12 @@
+{
+ "ticker": "GOOGL",
+ "edges_in": 3,
+ "edges_out": 3,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Intersect",
+  "Wiz"
+ ],
+ "needs_review": [],
+ "direction_conflicts": []
+}

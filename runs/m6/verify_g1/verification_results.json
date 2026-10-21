@@ -1,0 +1,1094 @@
+[
+ {
+  "id": 1,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says NVDA uses TSMC as a foundry to produce its semiconductor wafers, a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 2,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says NVDA uses Samsung as a foundry for wafers and purchases memory from Samsung.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 3,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states NVDA purchases memory from SK Hynix, a direct supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 4,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing states NVDA purchases memory from Micron Technology, a direct supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 5,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Hon Hai is engaged as a contract manufacturer for assembly, testing and packaging, which is a service rather than clear goods supply.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 6,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says NVDA engages Wistron as a contract manufacturer for assembly and testing, which is a supply relationship with Wistron as source.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 7,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says NVDA engages Fabrinet as a contract manufacturer for assembly, testing and packaging, a supply relationship with Fabrinet as source.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 8,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes an intellectual property license with Groq involving payments, not a supply of goods or services; 'supplies' is the wrong type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 9,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states NVDA's acquisition of Mellanox in 2020, with NVDA as acquirer and Mellanox as target.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 10,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence names AMD only as a supplier and licensor of GPU-related hardware and software, not as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 11,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence never mentions NVDA. It only lists Huawei among AI GPU solution suppliers, with no stated competitive link to NVDA.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 12,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence never mentions NVDA. It only lists Intel among AI GPU solution suppliers, with no stated competitive link to NVDA.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 13,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence never mentions NVDA. It describes Alibaba as a cloud company with in-house AI hardware teams, not as a competitor of NVDA.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 14,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence never mentions NVDA. It describes Alphabet as a cloud company with in-house AI hardware teams, not as a competitor of NVDA.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 15,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence never mentions NVDA. It describes Amazon as a cloud company with in-house AI hardware teams, not as a competitor of NVDA.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 16,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Baidu is named among companies designing competing AI hardware, but the sentence never says 'compete' explicitly.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 17,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Microsoft is named among companies designing competing AI hardware, but the sentence never says 'compete' explicitly.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 18,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Ambarella is listed among SoC hardware and software suppliers, but competition with NVDA is not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 19,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Broadcom is listed among SoC hardware and software suppliers, but competition with NVDA is not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 20,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Qualcomm is listed among SoC hardware and software suppliers, but competition with NVDA is not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 21,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "NVDA is never named. Renesas is listed only as an SoC hardware/software supplier, not as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 22,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "NVDA is never named. Samsung is listed only as an SoC hardware/software supplier, not as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 23,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "NVDA is never named. Tesla is listed only as a company designing SoC products in-house, not as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 24,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "NVDA is never named. Arista is listed only among networking product providers, not as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 25,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "NVDA is never named. Cisco is listed only among networking product providers, not as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 26,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lists Hewlett Packard Enterprise among companies offering competing networking products; the competitor framing is implied, not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 27,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lists Lumentum among companies offering competing networking and optical module products; the competitor framing is implied.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 28,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lists Marvell among companies offering competing networking products; the competitor framing is implied, not stated.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 29,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Says an investment agreement is being finalized, so an equity investment is prospective, not yet held or made.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 30,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Names a partnership with OpenAI, though the partnership agreement is still being finalized.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 31,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence confirms an agreement with Microsoft for Xbox but not a named partnership; it is a stock right-of-refusal clause.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 32,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States NVDA's previously announced investment in Intel's common stock, matching source, target and invests type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 33,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Names a non-exclusive license agreement with Groq, which is a commercial license, not an explicitly stated partnership or collaboration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 34,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Describes Amazon's investments in Anthropic convertible notes; convertible notes are not strictly equity, so 'invests' is only approximate.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 35,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Refers to Amazon's equity investment in Rivian Automotive, matching source, target and invests type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 36,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes an unnamed AWS services counterparty; Anthropic is never mentioned, so the claim is unsupported.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 37,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States Amazon acquired 1Life Healthcare (One Medical) on a stated date for cash consideration.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 38,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Names Ernst & Young as the auditor's report author, an audit role, not a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 39,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Citibank is administrative agent on a credit agreement, a lending role rather than a supply of goods or services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 40,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Wells Fargo is indenture trustee for a bond, a trustee role rather than a supply of goods or services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 41,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence is a trustee succession indenture; it states no supply relationship. Computershare's trustee role is not supplies.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 42,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "States a definitive agreement to acquire Wiz, not a completed acquisition as the acquires type implies.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 43,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "States a definitive agreement to acquire Intersect, not a completed acquisition as the acquires type implies.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 44,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Waymo is never named; 'which' has no stated referent, so the sentence does not establish an Alphabet investment in Waymo.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 45,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filer states it completed its acquisition of Activision Blizzard, Inc.; 'we' is inferred as MSFT from the focal company.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 46,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence explicitly names a long-term strategic partnership between Microsoft and OpenAI.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 47,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Microsoft is a major investor in OpenAI, so Microsoft is the correct source.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 48,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Cerebras agrees to supply compute to OpenAI under a deal, so Cerebras sells to OpenAI as customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 49,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Co-design implies collaboration, but the sentence frames the relationship as a compute customer deal, not a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 50,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "The partnership is with AWS, Amazon's subsidiary; the sentence does not name Amazon itself.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 51,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Compares product specs against NVIDIA's B200 but never states the filing names NVIDIA as a competitor.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 52,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States G42 accounted for 24% and 85% of CBRS revenue, which indicates G42 is a customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 53,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States MBZUAI accounted for 62% of CBRS total revenue, which indicates it is a customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 54,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Says CBRS relies on AWS for data transmission. AWS is an Amazon unit, but the sentence names AWS, not Amazon.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 55,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States CBRS is dependent on TSMC to produce all wafers used in its products, a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 56,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names AMD as a competitor in hardware; competes is undirected, so direction is fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 57,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Intel as a hardware competitor; competes is the correct undirected type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 58,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Amazon (AWS) as a cloud competitor; competes is the correct type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 59,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Microsoft (Azure) as a cloud competitor; competes is the correct type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 60,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Alphabet (Google Cloud Platform) as a cloud competitor; competes is the correct type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 61,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Oracle Corporation among cloud providers CBRS competes against; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 62,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names CoreWeave, Inc. as an AI-optimized specialized cloud CBRS competes against.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 63,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence calls G42 one of CBRS's strategic partners, matching a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 64,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence calls MBZUAI one of CBRS's strategic partners, matching a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 65,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence names AWS, not Amazon, as a purchaser; it does not state Amazon itself is a customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 66,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Warrant issued to OpenAI implies an equity link, but it is tied to an MRA and the sentence never calls it an investment.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 67,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "A warrant to buy shares at $0.01 issued to G42 is an equity-linked stake, so investment is a fair reading.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 68,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Microsoft Marketplace as a partner channel for CBRS services; partnership is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 69,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names IBM watsonx Model Gateway among CBRS partners for its services; partnership is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 70,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Vercel AI Gateway among CBRS partners for its services; partnership is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 71,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States CBRS services are available through partners, explicitly including OpenRouter. Partnership is undirected, so direction is fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 72,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "States CBRS services are available through partners, explicitly including Hugging Face. Partnership is undirected, so direction is fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 73,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a revolving credit facility from a lender agent. That is financing, not a supply of goods or services, so 'supplies' is the wrong type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 74,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "ASE performs wafer deposition processes that CBRS relies on, which is a supply of services from ASE to CBRS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 75,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Lists the U.S. Department of Defense among CBRS's on-premises customers, which matches a sells_to relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 76,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "'Uses Cerebras' implies GSK is a customer of Cerebras, so Cerebras sells to GSK.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 77,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Names AlphaSense as a company that uses Cerebras, implying it is a customer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 78,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Affiliates of Alpha Wave beneficially own over 5% of Cerebras stock, which is an equity holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 79,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Affiliates of Benchmark beneficially own over 5% of Cerebras stock, which is an equity holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 80,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Affiliates of Fidelity beneficially own over 5% of Cerebras stock, which is an equity holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 81,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Eclipse-affiliated entities each hold over 5% of CBRS capital stock, which is an equity holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 82,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says Foundation Capital-affiliated entities each hold over 5% of CBRS capital stock, which is an equity holding.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 83,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Morgan Stanley or its affiliates as lenders under a credit facility, not as a supplier of goods or services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 84,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Citigroup or its affiliates as lenders under a credit facility, not as a supplier of goods or services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 85,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Barclays or its affiliates as lenders under a credit facility, not as a supplier of goods or services.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 86,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Says UBS Securities or its affiliates are lenders under a credit facility, not that UBS supplies CBRS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 87,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Says Mizuho or its affiliates are lenders under a credit facility, not that Mizuho supplies CBRS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 88,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Says TD Securities or its affiliates are lenders under a credit facility, not that TD supplies CBRS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 89,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Credit Agricole is CBRS's offering financial advisor paid a fee; advisory engagement is not a supply link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 90,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Says MUFG or its affiliates are lenders under a credit facility, not that MUFG supplies CBRS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 91,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]

@@ -1,0 +1,756 @@
+[
+ {
+  "counterparty": "ZT Systems",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "AMD",
+  "target": "ZT Systems",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In March 2025, we acquired ZT Group Int’l, Inc. (ZT Systems), where we retained certain intellectual property and employees associated with the design operations (ZT Design Business).",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "For example, in March 2025, we completed our acquisition of ZT Systems.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On March 31, 2025 (the Acquisition Date), the Company completed the acquisition of all issued and outstanding shares of ZT Systems, a provider of AI and general-purpose compute infrastructure for hyperscale computing companies, for a total purchase consideration of $\n4.4\n billion.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sanmina",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "AMD",
+  "target": "Sanmina",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In October 2025, we sold the ZT data center infrastructure manufacturing business (ZT Manufacturing Business) to Sanmina Corporation (Sanmina).",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "We retained select intellectual property and employees associated with the design operations (ZT Design Business), and in October 2025, we sold the ZT data center infrastructure manufacturing business (ZT Manufacturing Business) to Sanmina Corporation (Sanmina) for $2.4 billion in cash, subject to certain purchase price adjustments, and 1.2 million shares of Sanmina common stock.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On October 27, 2025, the Company completed the sale of the ZT Manufacturing Business to Sanmina Corporation (Sanmina) for $\n2.4\n billion in cash, subject to certain purchase price adjustments and \n1,151,052\n shares of Sanmina common stock.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "AMD",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In October 2025, we entered into a product purchase agreement with OpenAI OpCo, LLC, (OpenAI) to deploy 6 gigawatts of AMD GPUs, with the deployment of the first gigawatt of capacity powered by our AMD Instinct MI450 series products.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The warrant shares will vest in tranches based on AMD Instinct GPU purchase milestones by the Warrantholder, or its affiliates, or indirectly through third parties, and achievement of specified Company stock price targets and stock performance.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AMD",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "This multiyear strategic partnership with OpenAI demonstrates our continued execution of hardware, software and full-stack solutions roadmaps.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Intel",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Intel",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia with our CPU, GPU DPU and AI NIC server products.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "In addition, our microprocessors are not designed to function with motherboards and chipsets designed to work with Intel microprocessors.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In the Data Center segment, we compete primarily against Intel Corporation (Intel) and Nvidia Corporation (Nvidia with our CPU, GPU DPU and AI NIC server products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Altera",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Altera",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In addition, we compete against Altera with our FPGA and adaptive SoC server products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lattice Semiconductor",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Lattice Semiconductor",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsemi",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Microsemi",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Broadcom",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Broadcom",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Marvell",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Marvell",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Analog Devices",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Analog Devices",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Texas Instruments",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Texas Instruments",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NXP Semiconductors",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "NXP Semiconductors",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Qualcomm",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AMD",
+  "target": "Qualcomm",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We expect continued competition from our primary FPGA competitors such as Altera, Lattice Semiconductor Corporation and Microsemi Corporation, and from ASSP vendors such as Broadcom Corporation, Marvell Technology Group, Ltd., Analog Devices, Texas Instruments Incorporated, NXP Semiconductors N.V., Qualcomm Incorporated and NVIDIA.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TSMC",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "TSMC",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We utilize Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of wafers for our HPC, FPGA and adaptive SoC products and GLOBALFOUNDRIES Inc. (GF), with respect to wafer purchases for our HPC products at the 12 nm and 14 nm technology nodes.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "We rely on Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of all wafers for microprocessor and GPU products at 7 nanometer (nm) or smaller nodes, and we rely primarily on GLOBALFOUNDRIES Inc. (GF) for wafers for microprocessor and GPU products manufactured at process nodes larger than 7 nm.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GLOBALFOUNDRIES",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "GLOBALFOUNDRIES",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We utilize Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of wafers for our HPC, FPGA and adaptive SoC products and GLOBALFOUNDRIES Inc. (GF), with respect to wafer purchases for our HPC products at the 12 nm and 14 nm technology nodes.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "We rely on Taiwan Semiconductor Manufacturing Company Limited (TSMC) for the production of all wafers for microprocessor and GPU products at 7 nanometer (nm) or smaller nodes, and we rely primarily on GLOBALFOUNDRIES Inc. (GF) for wafers for microprocessor and GPU products manufactured at process nodes larger than 7 nm.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "We are party to a wafer supply agreement with GF where GF will provide a minimum annual capacity allocation to us and set pricing through 2026.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "UMC",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "UMC",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Additionally, we utilize TSMC, United Microelectronics Corporation (UMC) and Samsung Electronics Co., Ltd. for the production of our ICs in the form of programmable logic devices.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Samsung Electronics",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Samsung Electronics",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Additionally, we utilize TSMC, United Microelectronics Corporation (UMC) and Samsung Electronics Co., Ltd. for the production of our ICs in the form of programmable logic devices.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "We also utilize TSMC, United Microelectronics Corporation (UMC) and Samsung Electronics Co., Ltd. for our integrated circuits (IC) in the form of programmable logic devices.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tongfu Microelectronics",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AMD",
+  "target": "Tongfu Microelectronics",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We are party to two ATMP joint ventures (collectively, the ATMP JVs) with Tongfu Microelectronics Co., Ltd.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "We are party to two ATMP joint ventures (collectively, the ATMP JVs) with affiliates of Tongfu Microelectronics Co., Ltd.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The Company holds a \n15\n% equity interest in \ntwo\n joint ventures (collectively, the ATMP JV) with affiliates of Tongfu Microelectronics Co., Ltd, a Chinese joint stock company.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SPIL",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "SPIL",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "The ATMP JVs, Siliconware Precision Industries Ltd. (SPIL) and King Yuan Electronics Company (KYEC) provide ATMP services for our products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "KYEC",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "KYEC",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "The ATMP JVs, Siliconware Precision Industries Ltd. (SPIL) and King Yuan Electronics Company (KYEC) provide ATMP services for our products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sony",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "AMD",
+  "target": "Sony",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "AMD semi-custom SoC products power the Sony PlayStation\n®\n5, the Microsoft\n® \nXbox Series S™ and X™ game consoles, as well as the recently revealed Valve Steam Machine PC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "AMD",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "AMD semi-custom SoC products power the Sony PlayStation\n®\n5, the Microsoft\n® \nXbox Series S™ and X™ game consoles, as well as the recently revealed Valve Steam Machine PC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Valve",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "AMD",
+  "target": "Valve",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "AMD semi-custom SoC products power the Sony PlayStation\n®\n5, the Microsoft\n® \nXbox Series S™ and X™ game consoles, as well as the recently revealed Valve Steam Machine PC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "United Microelectronics Corporation",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "United Microelectronics Corporation",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We also utilize TSMC, United Microelectronics Corporation (UMC) and Samsung Electronics Co., Ltd. for our integrated circuits (IC) in the form of programmable logic devices.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tongfu Microelectronics",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Tongfu Microelectronics",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "The majority of our ATMP services are provided by the ATMP JVs and there is no guarantee that the ATMP JVs will be able to fulfill our long-term ATMP requirements.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AMD",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Our ability to innovate beyond the x86 instruction set controlled by Intel depends partially on Microsoft designing and developing its operating systems to run on or support our x86-based microprocessor products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Higon Information Technology",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "AMD",
+  "target": "Higon Information Technology",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We have equity interests in two joint ventures (collectively, the THATIC JV) with Higon Information Technology Co., Ltd. (THATIC), a third-party Chinese entity.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Higon Information Technology",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AMD",
+  "target": "Higon Information Technology",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We have equity interests in two joint ventures (collectively, the THATIC JV) with Higon Information Technology Co., Ltd. (THATIC), a third-party Chinese entity.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sanmina",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AMD",
+  "target": "Sanmina",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "Sanmina will also be our preferred partner for manufacturing capabilities in building complex AI solutions.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The Company also entered into a Manufacturing Services Agreement with Sanmina with an initial term of five years.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sanmina",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "AMD",
+  "target": "Sanmina",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "In October 2025, upon completion of the sale of the ZT Manufacturing Business to Sanmina Corporation (Sanmina), we received a total of $1.4 billion in cash, net of cash divested, and 1.2 million shares of Sanmina common stock valued at $154 million.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Upon close of the sale, the Company received cash of $\n1.4\n billion, net of cash divested and purchase price adjustments, and shares of Sanmina common stock valued at $\n154\n million.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "OpenAI",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "Concurrent with the agreement, we issued to OpenAI a warrant to purchase up to an aggregate of 160 million shares of AMD’s common stock at an exercise price of $0.01 per share.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Silo AI",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "AMD",
+  "target": "Silo AI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On August 9, 2024, the Company completed the acquisition of Silo AI Oy (Silo AI), an AI lab based in Finland, for $665 million in cash.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ATMP JV",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "AMD",
+  "target": "ATMP JV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The Company holds a \n15\n% equity interest in \ntwo\n joint ventures (collectively, the ATMP JV) with affiliates of Tongfu Microelectronics Co., Ltd, a Chinese joint stock company.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 15,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "ATMP JV",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "ATMP JV",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The ATMP JV provides assembly, test, mark and packaging (ATMP) services to the Company.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Xilinx",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "AMD",
+  "target": "Xilinx",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Agreement and Plan of Merger by and among Advanced Micro Devices, Inc., Thrones Merger Sub, Inc., and Xilinx, Inc. dated October 26, 2020",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ZT Group",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "AMD",
+  "target": "ZT Group",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Stock Purchase Agreement dated as of August 17, 2024, by and among Advanced Micro Devices, Inc., ZT Group Int’l, Inc., the Sellers listed therein and Frank Zhang, as the representative of the Sellers",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

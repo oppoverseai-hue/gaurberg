@@ -1,0 +1,40 @@
+{
+ "ticker": "TSM",
+ "edges_in": 32,
+ "edges_out": 32,
+ "edges_merged": 0,
+ "new_nodes": [
+  "DENSO",
+  "Deloitte & Touche",
+  "EDB",
+  "EDB Investment",
+  "GUC",
+  "Global Unichip",
+  "Infineon",
+  "Koninklijke Philips",
+  "NXP",
+  "National Development Fund of the R.O.C.",
+  "OmniVision Technologies",
+  "Philips",
+  "Robert Bosch",
+  "SSMC",
+  "Sony",
+  "Toyota",
+  "U.S. Department of Commerce",
+  "VIS",
+  "Vanguard International Semiconductor",
+  "VisEra Technologies",
+  "Xintec"
+ ],
+ "needs_review": [],
+ "direction_conflicts": [
+  {
+   "counterparty": "guc",
+   "type": "invests",
+   "directions": [
+    "GUC>TSM",
+    "TSM>GUC"
+   ]
+  }
+ ]
+}

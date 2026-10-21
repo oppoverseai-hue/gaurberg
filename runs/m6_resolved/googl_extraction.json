@@ -1,0 +1,66 @@
+[
+ {
+  "counterparty": "Wiz",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GOOGL",
+  "target": "Wiz",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "In March 2025, we entered into a definitive agreement to acquire Wiz, Inc. (\"Wiz\"), a leading cloud security platform, for $32.0 billion, subject to closing adjustments, in an all-cash transaction.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In March 2025, we entered into a definitive agreement to acquire Wiz, a leading cloud security platform, for $\n32.0\n billion, subject to closing adjustments, in an all-cash transaction.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Intersect",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "GOOGL",
+  "target": "Intersect",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "In December 2025, we entered into a definitive agreement to acquire Intersect, which provides data center and energy infrastructure solutions, for $4.8 billion in cash, plus the assumption of debt.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In December 2025, we entered into a definitive agreement to acquire Intersect, which provides data center and energy infrastructure solutions, for $\n4.8\n billion in cash, plus the assumption of debt.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Waymo",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GOOGL",
+  "target": "Waymo",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "the significant majority of which was funded by Alphabet.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

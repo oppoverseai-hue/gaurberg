@@ -1,0 +1,120 @@
+[
+ {
+  "counterparty": "Fujitsu",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "PLTR",
+  "target": "Fujitsu",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "For example, we, through Palantir Technologies Japan KK, entered into a strategic global partnership with Fujitsu Limited through which the parties will incorporate the capabilities of Foundry and AIP as a key element in the data infrastructure for Fujitsu Uvance, a portfolio of global solutions that address business challenges and solve societal issues.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SOMPO Holdings",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "PLTR",
+  "target": "SOMPO Holdings",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, in November 2019, we created a jointly controlled entity in Japan with SOMPO Holdings, Inc., in which we subsequently obtained a controlling interest in November 2022.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "HD Hyundai",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "PLTR",
+  "target": "HD Hyundai",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also created a jointly-owned entity in South Korea with HD Hyundai Co. Ltd. in December 2022 in which we have a controlling interest.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "U.S. Army",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "PLTR",
+  "target": "U.S. Army",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, in March 2024, we were selected by the U.S. Army to develop and deliver the Tactical Intelligence Targeting Access Node ground station system, the Army’s first AI-defined vehicle, which involves coordination with third parties such as hardware manufacturers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon",
+  "target": "PLTR",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We depend on computing infrastructure operated by Amazon Web Services (“AWS”), Microsoft, and other third parties to support some of our customers and any errors, disruption, performance problems, or failure in their or our operational infrastructure could adversely affect our business, financial condition, and results of operations.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "AWS, Microsoft Azure, and other third parties have no obligation to renew their agreements with us on commercially reasonable terms, or at all.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Microsoft",
+  "target": "PLTR",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We depend on computing infrastructure operated by Amazon Web Services (“AWS”), Microsoft, and other third parties to support some of our customers and any errors, disruption, performance problems, or failure in their or our operational infrastructure could adversely affect our business, financial condition, and results of operations.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "AWS, Microsoft Azure, and other third parties have no obligation to renew their agreements with us on commercially reasonable terms, or at all.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

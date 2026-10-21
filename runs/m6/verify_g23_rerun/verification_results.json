@@ -1,0 +1,782 @@
+[
+ {
+  "id": 16,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes KPMG as DASH's auditor (audit report on internal controls), not a supplier relationship. Auditor is not the supplies type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 17,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names a Instacart-Uber strategic partnership for restaurant delivery services on the platform. Partnership is undirected, so direction is irrelevant.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 18,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing lists Amazon among current and potential competitors of Instacart Marketplace. Competes is undirected, so direction is irrelevant.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 19,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names DoorDash as a competitor to Instacart's restaurant offering; competes is the right undirected type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 20,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Uber Eats (via Uber's native apps) as a competitor to Instacart's restaurant offering.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 91,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence lists Broadcom Corporation among ASSP vendors AMD faces continued competition from.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 92,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 93,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 94,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 95,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names NXP Semiconductors N.V. among ASSP vendors the filer expects competition from; \"we\" is taken as the focal company.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 101,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states the filer is party to ATMP joint ventures with Tongfu Microelectronics; a joint venture fits the undirected partners type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 102,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "SPIL is named as a party to the ATMP JVs that provide ATMP services for the filer's products; supply runs via the JV, not SPIL directly.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 103,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says KYEC, a JV, provides ATMP services for AMD's products, which fits a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 104,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Says AMD chips power the PlayStation 5, implying a customer relationship, but never states a sale to Sony.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 105,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Says AMD chips power the Xbox Series X|S, implying a customer relationship, but never states a sale to Microsoft.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 111,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names AMD's equity interests in joint ventures with Higon, a named partnership; partners is the right type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 112,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence calls Sanmina AMD's preferred partner for manufacturing, a named partnership; partners fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 113,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states AMD received 1.2 million Sanmina shares, an equity holding in Sanmina; invests fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 114,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 115,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 116,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 117,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says the ATMP JV provides assembly and test services to 'the Company', the filer AMD, which is a supply relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 118,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Merger agreement among AMD, its merger sub, and Xilinx indicates AMD acquiring Xilinx. The title alone does not confirm completion.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 119,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Names AMD and ZT Group in a stock purchase agreement with sellers, but never states AMD is the buyer.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 120,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states a strategic partnership with NVIDIA to co-develop products; partners is undirected and correctly typed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 121,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence describes a strategic collaboration with UMC on a 12 nm process platform, which matches the partners type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 122,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence names AMD as primary competitor of CCG, a segment, not the focal company as a whole; INTC is not named.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 123,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says INTC faces significant competition from Apple's M series processors, which is a named competitor relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 124,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says INTC faces significant competition from Qualcomm's Snapdragon processors, a named competitor relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 125,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says INTC faces significant competition from MediaTek's Kompanio processors, a named competitor relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 126,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 127,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 128,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 129,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Meta, among hyperscalers developing custom silicon, as a DCAI competitor; competes is undirected, so direction holds.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 130,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Microsoft, among hyperscalers developing custom silicon, as a DCAI competitor; competes matches the sentence.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 131,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Intel competes with Broadcom in custom ASIC development; competes is the correct undirected type.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 132,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The filing names TSMC as Intel's primary competitor in leading-edge process technology, which matches an undirected competes link.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 133,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The filing states Intel competes directly with Samsung. 'This market' is vague but does not undermine the competitor relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 134,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The filing lists GlobalFoundries as an Intel Foundry competitor, which supports an undirected competes link to INTC.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 135,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names UMC as a competitor of Intel Foundry; competes is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 151,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes a patent infringement lawsuit by VLSI, not a competitive relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 152,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence describes Intel indemnifying Acer over CPU infringement claims; it does not state a sales relationship.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 153,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence states Intel indemnifies AWS over CPU infringement claims; it does not state a sale to Amazon.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 154,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence states Intel indemnifies Cisco over CPU infringement claims; it does not state a sale to Cisco.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 155,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence states Intel indemnifies Dell over CPU infringement claims; it does not state a sale to Dell.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 161,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 162,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 163,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 164,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says TSM acquired OVT's equity interest in VisEra Technologies, not OmniVision itself; target is wrong.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 165,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence describes TSM and OVT agreeing to form VisEra, a joint venture, which is a named partnership.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 251,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Nintendo's gaming platforms among competitors' platforms that Apple's developer support is compared against.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 252,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Epic Games suing AAPL over antitrust claims; it does not say they compete.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 253,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states a strategic global partnership between Palantir (via its Japan KK) and Fujitsu Limited.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 254,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "uncertain",
+  "reason": "Describes a jointly controlled entity with SOMPO, a joint venture, later controlled by PLTR; partners is arguable, but control implies acquisition.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 255,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "pass",
+  "reason": "Sentence describes a jointly-owned South Korean entity formed with HD Hyundai, a joint venture implying a named collaboration; partners fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 266,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Lucid formed a partnership with Uber and Nuro, directly supporting the Lucid\u2013Nuro partnership claim.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 267,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "invests"
+  },
+  "verdict": "pass",
+  "reason": "Sentence states SMB Holding Corporation made a $300 million strategic investment in Lucid; source, target and type match.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 268,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence names a partnership with NVIDIA, and partners is undirected, so the claim matches.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 269,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Ayar Third Investment Company is described as LCID's controlling stockholder, which implies an equity holding in the target.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 270,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The Saudi government undertook to purchase vehicles from LCID under an agreement, matching a sells_to relationship with correct direction.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 281,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes BofA as underwriter buying shares from LCID in an offering. Nothing says BofA supplies LCID; the flow runs the other way.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 282,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Uber's subsidiary SMB agrees to buy LCID common stock in a private placement, an equity investment. Investor is the subsidiary, not Uber itself.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 283,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Mentions supply arrangements with Aston Martin, but does not say which company supplies which, so direction is unclear.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 284,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a debt facility agreement with GIB as lender, not a supply relationship; the link type is wrong.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 285,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Describes a loan agreement with SIDF, not a supply relationship; SIDF is the lender and the link type is wrong.",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]

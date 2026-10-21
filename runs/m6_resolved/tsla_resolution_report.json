@@ -1,0 +1,14 @@
+{
+ "ticker": "TSLA",
+ "edges_in": 6,
+ "edges_out": 6,
+ "edges_merged": 0,
+ "new_nodes": [
+  "CATL",
+  "Panasonic",
+  "Samsung",
+  "xAI"
+ ],
+ "needs_review": [],
+ "direction_conflicts": []
+}

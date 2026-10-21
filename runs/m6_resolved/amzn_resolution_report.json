@@ -1,0 +1,17 @@
+{
+ "ticker": "AMZN",
+ "edges_in": 8,
+ "edges_out": 8,
+ "edges_merged": 0,
+ "new_nodes": [
+  "1Life Healthcare (One Medical)",
+  "Anthropic",
+  "Citibank",
+  "Computershare",
+  "Ernst & Young",
+  "Rivian",
+  "Wells Fargo"
+ ],
+ "needs_review": [],
+ "direction_conflicts": []
+}

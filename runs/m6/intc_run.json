@@ -1,0 +1,79 @@
+{
+ "ticker": "INTC",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+ "chunks": 6,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30349,
+   "cache_read_tokens": 12600,
+   "output_tokens": 3703,
+   "cost_usd": 0.1626734,
+   "seconds": 23.4,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31930,
+   "cache_read_tokens": 12600,
+   "output_tokens": 930,
+   "cost_usd": 0.14142549999999998,
+   "seconds": 11.9,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28205,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2210,
+   "cost_usd": 0.138954,
+   "seconds": 18.0,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31523,
+   "cache_read_tokens": 12600,
+   "output_tokens": 743,
+   "cost_usd": 0.13788830000000002,
+   "seconds": 9.7,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36429,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1714,
+   "cost_usd": 0.1677134,
+   "seconds": 15.1,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28501,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1679,
+   "cost_usd": 0.1348551,
+   "seconds": 16.5,
+   "is_error": false,
+   "chunk": 6
+  }
+ ],
+ "totals": {
+  "input_tokens": 12,
+  "cache_creation_tokens": 186937,
+  "cache_read_tokens": 75600,
+  "output_tokens": 10979,
+  "cost_usd": 0.8835097000000001,
+  "seconds": 94.6
+ },
+ "edges": 45,
+ "quotes_not_found": 6
+}

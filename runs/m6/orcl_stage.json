@@ -1,0 +1,359 @@
+[
+ {
+  "counterparty": "Adobe",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Adobe",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "OCI\u2019s multicloud services work with a number of our competitors\u2019 products, including Microsoft Azure, Amazon Web Services and Google Cloud.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "OCI\u2019s multicloud services work with a number of our competitors\u2019 products, including Microsoft Azure, Amazon Web Services and Google Cloud.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Cisco",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Cisco",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Intel",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Intel",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "IBM",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "IBM",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "OCI\u2019s multicloud services work with a number of our competitors\u2019 products, including Microsoft Azure, Amazon Web Services and Google Cloud.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Salesforce",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Salesforce",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SAP",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "SAP",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hewlett-Packard Enterprise",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Hewlett-Packard Enterprise",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Workday",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Workday",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our enterprise cloud, software and hardware offerings compete directly with certain offerings from some of the largest and most competitive companies in the world, including Adobe Systems Incorporated, Alphabet Inc., Amazon.com, Inc., Cisco Systems, Inc., Intel Corporation, International Business Machines Corporation, Microsoft Corporation, Salesforce, Inc. and SAP SE, as well as other companies like Hewlett-Packard Enterprise and Workday, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Allscripts Healthcare Solutions",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Allscripts Healthcare Solutions",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation, among others.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Arcadia Solutions",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Arcadia Solutions",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation, among others.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "athenahealth",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "athenahealth",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation, among others.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Epic Systems",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "Epic Systems",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation, among others.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "InterSystems",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "ORCL",
+  "target": "InterSystems",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation, among others.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Cerner",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "ORCL",
+  "target": "Cerner",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "For example, following our acquisition of Cerner Corporation, we also face competition from large healthcare IT providers such as Allscripts Healthcare Solutions, Inc., Arcadia Solutions, athenahealth, Inc., Epic Systems Corporation and InterSystems Corporation, among others.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ampere Computing",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "ORCL",
+  "target": "Ampere Computing",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The majority of the non-marketable debt and equity investments we held as of May 31, 2025 were with Ampere Computing Holdings LLC (Ampere), an equity method investee.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TikTok USDS Joint Venture",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "ORCL",
+  "target": "TikTok USDS Joint Venture",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The substantial majority of the non-marketable investments we held as of May 31, 2026\n were with TikTok USDS Joint Venture LLC, an equity method investee in which we have an ownership interest of \n15\n%.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 15,
+  "exposure_qualifier": "exact"
+ }
+]

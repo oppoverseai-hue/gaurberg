@@ -1,0 +1,59 @@
+{
+ "ticker": "AMZN",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+ "chunks": 4,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29426,
+   "cache_read_tokens": 12600,
+   "output_tokens": 137,
+   "cost_usd": 0.1232296,
+   "seconds": 4.6,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32259,
+   "cache_read_tokens": 12600,
+   "output_tokens": 315,
+   "cost_usd": 0.1366244,
+   "seconds": 5.8,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 34364,
+   "cache_read_tokens": 12600,
+   "output_tokens": 460,
+   "cost_usd": 0.14670640000000001,
+   "seconds": 8.7,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 8642,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1238,
+   "cost_usd": 0.04902770000000001,
+   "seconds": 11.0,
+   "is_error": false,
+   "chunk": 4
+  }
+ ],
+ "totals": {
+  "input_tokens": 8,
+  "cache_creation_tokens": 104691,
+  "cache_read_tokens": 50400,
+  "output_tokens": 2150,
+  "cost_usd": 0.45558810000000005,
+  "seconds": 30.099999999999998
+ },
+ "edges": 8,
+ "quotes_not_found": 0
+}

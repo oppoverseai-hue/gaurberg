@@ -1,0 +1,47 @@
+{
+ "ticker": "CBRS",
+ "edges_in": 46,
+ "edges_out": 44,
+ "edges_merged": 2,
+ "new_nodes": [
+  "ASE",
+  "Alpha Wave",
+  "AlphaSense",
+  "Barclays",
+  "Benchmark",
+  "Citigroup",
+  "Credit Agricole",
+  "Eclipse",
+  "Fidelity",
+  "First Citizens",
+  "Foundation Capital",
+  "G42",
+  "GSK",
+  "Hugging Face",
+  "IBM",
+  "MBZUAI",
+  "MUFG",
+  "Mizuho",
+  "Morgan Stanley",
+  "Morgan Stanley Senior Funding",
+  "OpenRouter",
+  "TD Securities",
+  "TSMC",
+  "U.S. Department of Defense",
+  "UBS",
+  "Vercel"
+ ],
+ "needs_review": [
+  {
+   "raw": "AWS",
+   "resolved": "Amazon",
+   "how": "alias"
+  },
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

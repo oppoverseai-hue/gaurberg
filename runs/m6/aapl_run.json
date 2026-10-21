@@ -1,0 +1,49 @@
+{
+ "ticker": "AAPL",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+ "chunks": 3,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28456,
+   "cache_read_tokens": 12600,
+   "output_tokens": 840,
+   "cost_usd": 0.1262841,
+   "seconds": 6.7,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 35534,
+   "cache_read_tokens": 12600,
+   "output_tokens": 168,
+   "cost_usd": 0.14858590000000002,
+   "seconds": 4.6,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 13301,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.0557886,
+   "seconds": 3.5,
+   "is_error": false,
+   "chunk": 3
+  }
+ ],
+ "totals": {
+  "input_tokens": 6,
+  "cache_creation_tokens": 77291,
+  "cache_read_tokens": 37800,
+  "output_tokens": 1012,
+  "cost_usd": 0.3306586,
+  "seconds": 14.8
+ },
+ "edges": 6,
+ "quotes_not_found": 0
+}

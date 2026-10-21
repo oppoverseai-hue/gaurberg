@@ -1,0 +1,11 @@
+{
+ "ticker": "MSFT",
+ "edges_in": 4,
+ "edges_out": 4,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Activision Blizzard"
+ ],
+ "needs_review": [],
+ "direction_conflicts": []
+}

@@ -1,0 +1,595 @@
+[
+ {
+  "counterparty": "CoreWeave",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "APLD",
+  "target": "CoreWeave",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "On May 28, 2025, our subsidiaries APLD ELN-02 LLC and APLD ELN-03 LLC each entered into a data center lease (the \"ELN-02 Lease\" and the \"ELN-03 Lease”) with CoreWeave, Inc. (“CoreWeave”) to deliver an aggregate of 250 MW of capacity to host CoreWeave’s HPC operations at Polaris Forge 1.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "On May 28, 2025, APLD ELN-02 LLC and APLD ELN-03 LLC, our subsidiaries, each entered into a data center lease (the “ELN-02 Lease” and the “ELN-03 Lease”) with CoreWeave, Inc. (“CoreWeave”) to deliver an aggregate of 250 MW of infrastructure to host CoreWeave’s HPC operations at Polaris Forge 1.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "On May 28, 2025, in connection with the entry into the data center leases with CoreWeave for Building 2 and Building 3 (the \"CoreWeave Leases\"), the Company issued to CoreWeave a warrant (the “CoreWeave Warrant”) to acquire up to ",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On May 28, 2025, APLD ELN-02 LLC and APLD ELN-03 LLC, the Company's subsidiaries, each entered into a data center lease with CoreWeave, Inc. (together, the \"CoreWeave Leases\") to deliver up to an aggregate of 250 MW of infrastructure to host CoreWeave’s HPC operations at Polaris Forge 1.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Base Electron",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "APLD",
+  "target": "Base Electron",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In addition, through our partnership with Base Electron Corporation (\"Base Electron\"), an independent power producer, we are pursuing the development of approximately 1.2 GW of front-of-the-meter, natural gas-fired generation in the Dakotas, which we expect to unlock additional power capacity for our development pipeline.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ChronoScale",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "APLD",
+  "target": "ChronoScale",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We recently completed the separation of our cloud business segment into a separate publicly traded company, ChronoScale, of which we currently own approximately 96%.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "Immediately following the closing of the Cloud Business Combination, the Company (on an aggregate basis with Contributor), owned approximately 97% of the issued and outstanding equity of ChronoScale.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As a result of the transaction, at closing, the Company owned approximately 97% of ChronoScale’s outstanding common stock, and legacy Ekso shareholders retained approximately 3% (before giving effect to any dilution from new investments) which represents a noncontrolling interest in ChronoScale.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 96,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "ABB",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "ABB",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Because power distribution, cooling architecture, and data hall layouts are standardized across our campuses, we are able to consolidate purchasing around a common set of trusted, qualified partners—including ABB for electrical equipment, BASX for mechanical and cooling systems, and Caterpillar for backup generation—and to place bulk orders against a multi-gigawatt development pipeline.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "BASX",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "BASX",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Because power distribution, cooling architecture, and data hall layouts are standardized across our campuses, we are able to consolidate purchasing around a common set of trusted, qualified partners—including ABB for electrical equipment, BASX for mechanical and cooling systems, and Caterpillar for backup generation—and to place bulk orders against a multi-gigawatt development pipeline.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Caterpillar",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Caterpillar",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Because power distribution, cooling architecture, and data hall layouts are standardized across our campuses, we are able to consolidate purchasing around a common set of trusted, qualified partners—including ABB for electrical equipment, BASX for mechanical and cooling systems, and Caterpillar for backup generation—and to place bulk orders against a multi-gigawatt development pipeline.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "First National Bank of Omaha",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "First National Bank of Omaha",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Covenants in the Credit Agreement entered into on May 29, 2026 by and among APLD Intermediate HoldCo LLC, a first-tier subsidiary of the Company (“APLD Intermediate HoldCo”), and certain other subsidiaries of the Company as subsidiary guarantors with First National Bank of Omaha, as administrative agent and collateral agent, and the lenders and issuing banks party thereto (the “Revolving Credit Agreement”) and the indentures governing our notes contain a number",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Digital Realty Trust",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Digital Realty Trust",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Equinix",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Equinix",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "IREN",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "IREN",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Cipher Digital",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Cipher Digital",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TeraWulf",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "TeraWulf",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hut 8",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Hut 8",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Riot Platforms",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Riot Platforms",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "CleanSpark",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "CleanSpark",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "HIVE Digital Technologies",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "HIVE Digital Technologies",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Core Scientific",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Core Scientific",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bitdeer Technologies Group",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Bitdeer Technologies Group",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Galaxy Digital",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Galaxy Digital",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fermi",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Fermi",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Keel Infrastructure",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "Keel Infrastructure",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "MARA Holdings",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "APLD",
+  "target": "MARA Holdings",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We compete with established data center owners and operators, including Digital Realty Trust, Inc. and Equinix, Inc., as well as hyperscalers that develop their own capacity, independent and private data center developers, and other power-advantaged developers, including companies that have expanded from blockchain hosting into HPC infrastructure, such as IREN Limited, Cipher Digital Inc., TeraWulf Inc., Hut 8 Corp., Riot Platforms, Inc., CleanSpark, Inc., HIVE Digital Technologies Ltd., Core Scientific, Inc., Bitdeer Technologies Group, Galaxy Digital Inc., Fermi Inc., Keel Infrastructure Corp, and MARA Holdings, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "CoreWeave",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "CoreWeave",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "On May 28, 2025, in connection with the entry into the data center leases with CoreWeave for Building 2 and Building 3 (the \"CoreWeave Leases\"), the Company issued to CoreWeave a warrant (the “CoreWeave Warrant”) to acquire up to 13,062,521 shares of the Company's common stock at an exercise price of $7.19 per share, subject to adjustment in accordance with the terms and conditions set forth in the CoreWeave Warrant.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Macquarie Asset Management",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Macquarie Asset Management",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "APLD HPC TopCo 2 LLC, an indirect wholly-owned subsidiary of the Company (“TopCo 2”), and MIP HPC Holdings, LLC (formerly, MIP VI HPC Holdings, LLC) (the “Purchaser”) entered into an Amended and Restated Unit Purchase Agreement (the “A&R UPA”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 13.5,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Babcock & Wilcox Enterprises",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "APLD",
+  "target": "Babcock & Wilcox Enterprises",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "Gain on change in fair value of investment was $10.8 million for the fiscal year ended May 31, 2026, due to an increase of $8.8 million in fair value of our investment in BWE common stock and an increase of $2.0 million in fair value of our investment in Base Electron, a related party.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Base Electron",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "APLD",
+  "target": "Base Electron",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "Gain on change in fair value of investment was $10.8 million for the fiscal year ended May 31, 2026, due to an increase of $8.8 million in fair value of our investment in BWE common stock and an increase of $2.0 million in fair value of our investment in Base Electron, a related party.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In connection with and as partial consideration for the Company’s entry into the Guarantee, Base Electron issued to the Company approximately ",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The investment in Base Electron will be accounted for at cost under ASC 321 as it is an equity security without a readily determinable fair value and will be evaluated quarterly for impairment indicators.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "B&W",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "APLD",
+  "target": "B&W",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The balance also includes an investment by the Company in Corintis SA (\"Corintis\") in exchange for Series A1 preferred shares.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Corintis",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "APLD",
+  "target": "Corintis",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The balance also includes an investment by the Company in Corintis SA (\"Corintis\") in exchange for Series A1 preferred shares.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 4,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "MIP HPC Holdings",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "MIP HPC Holdings",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "APLD HPC TopCo 2 LLC (“TopCo 2”) completed four closings under its A&R UPA as of May 31, 2026, issuing \n1,825,000\n preferred units and \n144,593\n corresponding common units for $\n1.8\n billion to MIP HPC Holdings, LLC, which resulted in a redeemable noncontrolling interest.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ekso Bionics",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "APLD",
+  "target": "Ekso Bionics",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We completed our transaction with Ekso Bionics Holdings, Inc. (\"Ekso\") on May 5, 2026.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Texas Capital Bank",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Texas Capital Bank",
+  "target": "APLD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On June 30, 2026, the Company entered into a Loan and Security Agreement (the \"Texas Capital Loan Agreement\") with Texas Capital Bank (\"Texas Capital\") and a related Promissory Note in favor of Texas Capital in the stated principal amount of $\n58.5\n million.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

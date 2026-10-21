@@ -1,0 +1,59 @@
+{
+ "ticker": "GOOGL",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+ "chunks": 4,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28893,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1197133,
+   "seconds": 6.0,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31041,
+   "cache_read_tokens": 12600,
+   "output_tokens": 298,
+   "cost_usd": 0.1314661,
+   "seconds": 4.8,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33414,
+   "cache_read_tokens": 12600,
+   "output_tokens": 498,
+   "cost_usd": 0.14319189999999998,
+   "seconds": 7.4,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31800,
+   "cache_read_tokens": 12600,
+   "output_tokens": 290,
+   "cost_usd": 0.13449350000000002,
+   "seconds": 5.3,
+   "is_error": false,
+   "chunk": 4
+  }
+ ],
+ "totals": {
+  "input_tokens": 8,
+  "cache_creation_tokens": 125148,
+  "cache_read_tokens": 50400,
+  "output_tokens": 1090,
+  "cost_usd": 0.5288648,
+  "seconds": 23.5
+ },
+ "edges": 3,
+ "quotes_not_found": 0
+}

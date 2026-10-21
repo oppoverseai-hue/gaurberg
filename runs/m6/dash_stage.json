@@ -1,0 +1,246 @@
+[
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber Eats",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Uber Eats",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Prosus",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Prosus",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Delivery Hero",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Delivery Hero",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Stripe",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Stripe",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We primarily rely on a third-party payment processor, Stripe, to process payments made to merchants and Dashers and third-party payment processors to process payments made by consumers, primarily Stripe and PayPal.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PayPal",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "PayPal",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We primarily rely on a third-party payment processor, Stripe, to process payments made to merchants and Dashers and third-party payment processors to process payments made by consumers, primarily Stripe and PayPal.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Olo",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Olo",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We also have integrations with or otherwise utilize or rely on PayPal, Stripe, Olo, Google Maps, Amazon Web Services (\"AWS\"), and a variety of other third-party vendors.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Alphabet",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We also have integrations with or otherwise utilize or rely on PayPal, Stripe, Olo, Google Maps, Amazon Web Services (\"AWS\"), and a variety of other third-party vendors.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We primarily host our platform and support our operations on data centers provided by AWS, a third-party provider of cloud infrastructure services, in a limited number of locations.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Deliveroo",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "Deliveroo",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As discussed in Note 4 to the consolidated financial statements, on October 2, 2025, the Company acquired Deliveroo plc (Deliveroo) in a business combination for $3,724 million.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On October 2, 2025, the Company completed the acquisition of substantially all of the outstanding equity interests of Deliveroo plc (\u201cDeliveroo\u201d), which was accounted for under the acquisition method of accounting.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On May 6, 2025, the Company issued an announcement (the \u201cRule 2.7 Announcement\u201d) pursuant to Rule 2.7 of the UK City Code on Takeovers and Mergers (the \"Code\"), disclosing that the board of directors of the Company and the board of directors of Deliveroo, a company incorporated in England and Wales, had reached agreement on the terms of a recommended final cash offer by the Company for the entire issued and to be issued share capital of Deliveroo (the \"Deliveroo Transaction\").",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SevenRooms",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "SevenRooms",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On June 13, 2025, the Company completed the acquisition of 100 percent of the outstanding equity interests of SevenRooms Inc. (\u201cSevenRooms\u201d)",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Symbiosys",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "Symbiosys",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On May 28, 2025, the Company acquired Symbiosys Corp. (\u201cSymbiosys\u201d), a retail media platform company, to expand offsite advertising capabilities.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Wolt",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "Wolt",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "The Company granted restricted stock to certain continuing employees in connection with the acquisition of Wolt Enterprises Oy on May 31, 2022.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]
