@@ -1,0 +1,61 @@
+[
+ {
+  "counterparty": "JD Cloud",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "JD Cloud",
+  "target": "NET",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We have a strategic agreement with JD Cloud to provide solutions that accommodate the requirements imposed by Chinese regulations through JD Cloud's development and operation of facilities in China that are included as part of our network.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000016/cloud-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Replicate",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "NET",
+  "target": "Replicate",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "During the year ended December 31, 2025, the Company recorded $\n46.6\n million of goodwill in connection with the acquisition of Replicate, Inc. (Replicate).",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On December 1, 2025, the Company acquired all of the outstanding shares of Replicate, a company that has developed an artificial intelligence (AI) platform that enables developers to deploy and run AI models, for a total purchase cash consideration of $\n57.4\n million.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000016/cloud-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Kivera",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "NET",
+  "target": "Kivera",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On October 7, 2024, the Company acquired all of the outstanding shares of Kivera, a company that has developed cloud security, data protection, and compliance technology, for a total purchase consideration of $\n28.0\n million.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000016/cloud-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ }
+]
