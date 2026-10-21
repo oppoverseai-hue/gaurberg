@@ -6,7 +6,7 @@ import { buildNodes, shown, badgeOf, exposureText, isMapped, TYPE_LABEL, type Co
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
 const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
-const ALL_BADGES = [{ label: "Verified", cls: "b-verified" }, { label: "Curated", cls: "b-curated" }, { label: "Live-generated", cls: "b-live" }, { label: "Sample data", cls: "b-sample" }, { label: "Staged, not reviewed", cls: "b-staged" }];
+const ALL_BADGES = [{ label: "Verified", cls: "b-verified" }, { label: "Curated", cls: "b-curated" }, { label: "Live-generated, not reviewed", cls: "b-live" }, { label: "Sample data", cls: "b-sample" }, { label: "Staged, not reviewed", cls: "b-staged" }];
 const FILTERS: { key: LinkType; label: string }[] = [{ key: "supplies", label: "Supplies" }, { key: "sells_to", label: "Sells to" }, { key: "competes", label: "Competes" }, { key: "invests", label: "Invests in" }, { key: "acquires", label: "Acquired" }, { key: "partners", label: "Partners" }];
 
 const W = 1200, H = 660, NW = 150, NH = 50;
