@@ -1,0 +1,51 @@
+{
+ "ticker": "INTC",
+ "edges_in": 45,
+ "edges_out": 45,
+ "edges_merged": 0,
+ "new_nodes": [
+  "ASML",
+  "Acer",
+  "Altera",
+  "Apollo",
+  "Broadcom",
+  "Brookfield",
+  "Cisco",
+  "Dell",
+  "GlobalFoundries",
+  "HPE",
+  "HPI",
+  "IBM",
+  "IMS",
+  "IMS Nanofabrication",
+  "Lenovo",
+  "MediaTek",
+  "Mentee Robotics",
+  "Mobileye",
+  "Qualcomm",
+  "SK hynix",
+  "SLP",
+  "SMIC",
+  "Samsung",
+  "SoftBank Group",
+  "TSMC",
+  "Tower",
+  "U.S. Department of Commerce",
+  "U.S. government",
+  "UMC",
+  "VLSI Technology"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}

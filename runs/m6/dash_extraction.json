@@ -1,0 +1,330 @@
+[
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber Eats",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Uber Eats",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Prosus",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Prosus",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Delivery Hero",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "DASH",
+  "target": "Delivery Hero",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Globally, we compete with other local on-demand delivery companies, including Amazon, Uber Eats, Prosus, Delivery Hero, and other local incumbents.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Stripe",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Stripe",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We primarily rely on a third-party payment processor, Stripe, to process payments made to merchants and Dashers and third-party payment processors to process payments made by consumers, primarily Stripe and PayPal.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PayPal",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "PayPal",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We primarily rely on a third-party payment processor, Stripe, to process payments made to merchants and Dashers and third-party payment processors to process payments made by consumers, primarily Stripe and PayPal.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Olo",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Olo",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We also have integrations with or otherwise utilize or rely on PayPal, Stripe, Olo, Google Maps, Amazon Web Services (\"AWS\"), and a variety of other third-party vendors.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Google",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Google",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We also have integrations with or otherwise utilize or rely on PayPal, Stripe, Olo, Google Maps, Amazon Web Services (\"AWS\"), and a variety of other third-party vendors.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon Web Services",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon Web Services",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We primarily host our platform and support our operations on data centers provided by AWS, a third-party provider of cloud infrastructure services, in a limited number of locations.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Deliveroo",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "Deliveroo",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As discussed in Note 4 to the consolidated financial statements, on October 2, 2025, the Company acquired Deliveroo plc (Deliveroo) in a business combination for $3,724 million.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On October 2, 2025, the Company completed the acquisition of substantially all of the outstanding equity interests of Deliveroo plc (“Deliveroo”), which was accounted for under the acquisition method of accounting.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On May 6, 2025, the Company issued an announcement (the “Rule 2.7 Announcement”) pursuant to Rule 2.7 of the UK City Code on Takeovers and Mergers (the \"Code\"), disclosing that the board of directors of the Company and the board of directors of Deliveroo, a company incorporated in England and Wales, had reached agreement on the terms of a recommended final cash offer by the Company for the entire issued and to be issued share capital of Deliveroo (the \"Deliveroo Transaction\").",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On October 2, 2025, the Company completed the Deliveroo Transaction.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bank of America",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Bank of America",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "loss on the settlement of the deal-contingent forward contract (the \"Deal-Contingent Forward\") that we entered into with Bank of America, N.A. which settled upon the closing of the Deliveroo acquisition.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In connection with the acquisition of Deliveroo, the Company entered into a deal-contingent foreign exchange forward transaction with Bank of America, N.A. (the \"Deal-Contingent Forward\") on May 6, 2025\nto manage the risk of variability in foreign exchange rates related to the GBP-denominated purchase price.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SevenRooms",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "SevenRooms",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "The decrease in income tax expense was primarily attributable to a one-time tax benefit from the release of a portion of the U.S. valuation allowance in connection with the SevenRooms Inc. and Symbiosys Corp. acquisitions, as well as the enactment of the One Big Beautiful Bill Act that occurred during the year.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On June 13, 2025, the Company completed the acquisition of \n100\n percent of the outstanding equity interests of SevenRooms Inc. (“SevenRooms”), which was accounted for under the acquisition method of accounting.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Our management's evaluation of internal control over financial reporting excluded SevenRooms and Deliveroo, which we acquired on June 13, 2025 and October 2, 2025, respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Symbiosys",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "Symbiosys",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "The decrease in income tax expense was primarily attributable to a one-time tax benefit from the release of a portion of the U.S. valuation allowance in connection with the SevenRooms Inc. and Symbiosys Corp. acquisitions, as well as the enactment of the One Big Beautiful Bill Act that occurred during the year.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On May 28, 2025, the Company acquired Symbiosys Corp. (“Symbiosys”), a retail media platform company, to expand offsite advertising capabilities.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Wolt",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "DASH",
+  "target": "Wolt",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Cancellation of escrow shares related to the acquisition of Wolt",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The Company granted restricted stock to certain continuing employees in connection with the acquisition of Wolt Enterprises Oy on May 31, 2022.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "JPMorgan Chase",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "JPMorgan Chase",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In connection with the Deliveroo Transaction, the Company entered into a Bridge Term Loan Credit and Guaranty Agreement (the “Bridge Credit Agreement”) with J.P. Morgan Chase Bank, N.A. on May 6, 2025 to provide the Company certain borrowings in an aggregate amount of up to $\n2.85\n billion, consisting of (i) $\n1.50\n billion of tranche A commitments (the \"Tranche A Commitments\") and (ii) $\n1.35\n billion of tranche B commitments (the \"Tranche B Commitments\").",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "KPMG",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "KPMG",
+  "target": "DASH",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our independent registered public accounting firm, KPMG LLP, who audited the Consolidated Financial Statements included in this Annual Report on Form 10-K, issued an audit report on the Company's internal control over financial reporting.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

@@ -1,0 +1,608 @@
+[
+ {
+  "counterparty": "National Development Fund of the R.O.C.",
+  "entity_type": "government",
+  "type": "invests",
+  "source": "National Development Fund of the R.O.C.",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "the National Development Fund of the R.O.C., which owned 6.38% of TSMC’s outstanding shares as of February 28, 2026, had from time to time in the past sold our shares in the form of ADSs in several transactions.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 6.38,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Vanguard International Semiconductor",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "TSM",
+  "target": "Vanguard International Semiconductor",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of February 28, 2026, we owned approximately 27.6% of the equity interest in VIS.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 27.6,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "SSMC",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "TSM",
+  "target": "SSMC",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of February 28, 2026, we owned approximately 38.8% of the equity interest in SSMC.",
+    "quote_found": false
+   },
+   {
+    "section": "mdna",
+    "quote": "our current ownership in SSMC is \n38.8%, with NXP holding the remaining 61.2%.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 38.8,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "Koninklijke Philips",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "Koninklijke Philips",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In March 1999, we entered into an agreement with Koninklijke Philips NV (“Philips”) and EDB Investment Pte. Ltd. (“EDB”) to found a joint venture, SSMC, and build",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "EDB Investment",
+  "entity_type": "other",
+  "type": "partners",
+  "source": "TSM",
+  "target": "EDB Investment",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In March 1999, we entered into an agreement with Koninklijke Philips NV (“Philips”) and EDB Investment Pte. Ltd. (“EDB”) to found a joint venture, SSMC, and build",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Global Unichip",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "TSM",
+  "target": "Global Unichip",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of February 28, 2026, we owned approximately 34.8% of the equity interest in GUC.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 34.8,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "VisEra Technologies",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "TSM",
+  "target": "VisEra Technologies",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of February 28, 2026, we owned approximately 67.2% of the equity interest in VisEra Technologies.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 67.2,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "OmniVision Technologies",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "TSM",
+  "target": "OmniVision Technologies",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In November 2015, we acquired all of OVT’s equity interest in VisEra Technologies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OmniVision Technologies",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "OmniVision Technologies",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In October 2003, we and OmniVision Technologies Inc. (“OVT”), entered into an agreement to form VisEra Technologies, a joint venture in Taiwan, for the purpose of providing back-end service for CMOS image sensor manufacturing business.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Xintec",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "TSM",
+  "target": "Xintec",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "As of February 28, 2026, we owned approximately 41.0% of the equity interest in Xintec.",
+    "quote_found": false
+   },
+   {
+    "section": "mdna",
+    "quote": "As of \nFebruary 28, 2026\n, we \nowned approximately 41.0% of the equity interest in Xintec.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 41.0,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "Xintec",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Xintec",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "In January 2007, we acquired a 51.2% equity interest in Xintec, a supplier of wafer level packaging service, to support our CMOS image sensor manufacturing business.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "In January 2007, we acquired a 51.2% equity interest in Xintec, a supplier of wafer level packaging service, to \nsupport our CMOS image sensor manufacturing business.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "U.S. Department of Commerce",
+  "entity_type": "government",
+  "type": "partners",
+  "source": "TSM",
+  "target": "U.S. Department of Commerce",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In November 2024, TSMC Arizona entered into a direct funding agreement (the “Direct Funding Agreement”) with the U.S. Department of Commerce (the “DOC”) under the U.S. CHIPS Act.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sony",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Sony",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2022, Sony Semiconductor Solution Corporation (“Sony”) acquired a less than 20% equity interest in JASM.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "DENSO",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "DENSO",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In April 2022, DENSO Corporation (“DENSO”) acquired a more than 10% minority equity interest in JASM.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Toyota",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Toyota",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "By way of such investment, Toyota also took a minority stake in JASM.",
+    "quote_found": false
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sony",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "Sony",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In February 2024, we, Sony, DENSO and Toyota Motor Corporation (“Toyota”) announced further investment into JASM to build and operate a second semiconductor manufacturing facility.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "DENSO",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "DENSO",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In February 2024, we, Sony, DENSO and Toyota Motor Corporation (“Toyota”) announced further investment into JASM to build and operate a second semiconductor manufacturing facility.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Toyota",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "Toyota",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In February 2024, we, Sony, DENSO and Toyota Motor Corporation (“Toyota”) announced further investment into JASM to build and operate a second semiconductor manufacturing facility.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Robert Bosch",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Robert Bosch",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2024, Robert Bosch GmbH, Infineon Technologies AG, and NXP Semiconductors Germany GmbH, a wholly-owned subsidiary of NXP Semiconductors N.V. (“NXP”), each acquired 10% equity interest and together acquired 30% equity interest in ESMC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 10,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Infineon",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Infineon",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2024, Robert Bosch GmbH, Infineon Technologies AG, and NXP Semiconductors Germany GmbH, a wholly-owned subsidiary of NXP Semiconductors N.V. (“NXP”), each acquired 10% equity interest and together acquired 30% equity interest in ESMC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 10,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "NXP",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "NXP",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2024, Robert Bosch GmbH, Infineon Technologies AG, and NXP Semiconductors Germany GmbH, a wholly-owned subsidiary of NXP Semiconductors N.V. (“NXP”), each acquired 10% equity interest and together acquired 30% equity interest in ESMC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 10,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "VIS",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "TSM",
+  "target": "VIS",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "As of February 28, \n2026\n, we owned approximately 27.6\n% of the equity interest in VIS.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 27.6,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "VIS",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "VIS",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "Pursuant to the terms of a manufacturing agreement between both parties, VIS was obligated to use its best \ncommercial efforts to manufacture wafers at specified yield rates for us up to a fixed amount of reserved capacity per \nmonth, and TSMC was required to use its best commercial efforts to maintain utilization of such reserved capacity.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SSMC",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "SSMC",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "SSMC is a joint venture in Singapore that we established with Philips and EDB to produce integrated circuits by \nmeans of advanced submicron manufacturing processes.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Under a Shareholders Agreement entered into with Philips and EDB Investments Pte Ltd. on March\n30, 1999, the parties formed a joint venture company, SSMC, which is an integrated circuit foundry\nin Singapore.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SSMC",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "SSMC",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "SSMC’s business is exclusively dedicated to the manufacturing of wafers \nfor us, our subsidiaries, NXP and its subsidiaries.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NXP",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "NXP",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "Following the 2006 assignment by Philips of its rights and \nobligations to NXP, and the subsequent purchase of EDB’s shares by NXP and us, our current ownership in SSMC is \n38.8%, with NXP holding the remaining 61.2%.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "After the purchase, TSMC and NXP B.V. currently\nown approximately \n39\n%\n and \n61\n%\n of the SSMC shares, respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Philips",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "TSM",
+  "target": "Philips",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "SSMC is a joint venture in Singapore that we established with Philips and EDB to produce integrated circuits by \nmeans of advanced submicron manufacturing processes.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "EDB",
+  "entity_type": "government",
+  "type": "partners",
+  "source": "TSM",
+  "target": "EDB",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "SSMC is a joint venture in Singapore that we established with Philips and EDB to produce integrated circuits by \nmeans of advanced submicron manufacturing processes.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GUC",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "TSM",
+  "target": "GUC",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "As of \nFebruary 28, 2026\n, we owned approximately 34.8% of the equity interest in GUC.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 34.8,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "GUC",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "TSM",
+  "target": "GUC",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "In \n2025\n, we had total sales of NT\n$31,094\n million (US\n$991\n million) to GUC, representing \n0.8%\n of our total revenue.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 0.8,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Deloitte & Touche",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Deloitte & Touche",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our independent registered public accounting firm, Deloitte & Touche, independently assessed the effectiveness of our company’s internal control over financial reporting.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We have served as the Company’s auditor since 1987.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GUC",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "GUC",
+  "target": "TSM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "GUC and its subsidiaries (GUC) \nAssociates",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1046179/000162828026025362/tsm-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

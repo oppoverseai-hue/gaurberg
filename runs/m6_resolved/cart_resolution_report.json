@@ -1,0 +1,26 @@
+{
+ "ticker": "CART",
+ "edges_in": 12,
+ "edges_out": 10,
+ "edges_merged": 2,
+ "new_nodes": [
+  "Grubhub",
+  "Marlin 9 Holdings",
+  "Marlin9 Holdings (Wynshop)",
+  "Uber Eats",
+  "Walmart"
+ ],
+ "needs_review": [
+  {
+   "raw": "Marlin9 Holdings",
+   "resolved": "Marlin9 Holdings (Wynshop)",
+   "how": "merged_new"
+  },
+  {
+   "raw": "Marlin9 Holdings, Inc. (Wynshop)",
+   "resolved": "Marlin9 Holdings (Wynshop)",
+   "how": "merged_new"
+  }
+ ],
+ "direction_conflicts": []
+}

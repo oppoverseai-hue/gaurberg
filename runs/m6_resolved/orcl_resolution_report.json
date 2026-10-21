@@ -1,0 +1,40 @@
+{
+ "ticker": "ORCL",
+ "edges_in": 25,
+ "edges_out": 23,
+ "edges_merged": 2,
+ "new_nodes": [
+  "Adobe",
+  "Allscripts Healthcare Solutions",
+  "Ampere",
+  "Ampere Computing",
+  "Arcadia Solutions",
+  "Cerner",
+  "Cisco",
+  "Epic Systems",
+  "Hewlett-Packard Enterprise",
+  "IBM",
+  "InterSystems",
+  "Oracle Corporation Japan",
+  "Oracle Financial Services Software Limited",
+  "SAP",
+  "Salesforce",
+  "SoftBank",
+  "TikTok USDS Joint Venture",
+  "Workday",
+  "athenahealth"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Oracle Financial Services Software",
+   "resolved": "Oracle Financial Services Software Limited",
+   "how": "merged_new"
+  }
+ ],
+ "direction_conflicts": []
+}

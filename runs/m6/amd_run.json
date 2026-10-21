@@ -1,0 +1,69 @@
+{
+ "ticker": "AMD",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/amd-20251227.htm",
+ "chunks": 5,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30508,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4188,
+   "cost_usd": 0.1681758,
+   "seconds": 21.3,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27960,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1595,
+   "cost_usd": 0.1317995,
+   "seconds": 11.8,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31669,
+   "cache_read_tokens": 12600,
+   "output_tokens": 899,
+   "cost_usd": 0.14004590000000003,
+   "seconds": 9.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 34146,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1319,
+   "cost_usd": 0.1544011,
+   "seconds": 9.9,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 17773,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1034,
+   "cost_usd": 0.0844233,
+   "seconds": 8.8,
+   "is_error": false,
+   "chunk": 5
+  }
+ ],
+ "totals": {
+  "input_tokens": 10,
+  "cache_creation_tokens": 142056,
+  "cache_read_tokens": 63000,
+  "output_tokens": 9035,
+  "cost_usd": 0.6788456,
+  "seconds": 61.6
+ },
+ "edges": 38,
+ "quotes_not_found": 0
+}

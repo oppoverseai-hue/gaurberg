@@ -1,0 +1,42 @@
+{
+ "ticker": "AMD",
+ "edges_in": 38,
+ "edges_out": 38,
+ "edges_merged": 0,
+ "new_nodes": [
+  "ATMP JV",
+  "Altera",
+  "Analog Devices",
+  "Broadcom",
+  "GLOBALFOUNDRIES",
+  "Higon Information Technology",
+  "KYEC",
+  "Lattice Semiconductor",
+  "Marvell",
+  "Microsemi",
+  "NXP Semiconductors",
+  "Qualcomm",
+  "SPIL",
+  "Samsung Electronics",
+  "Sanmina",
+  "Silo AI",
+  "Sony",
+  "TSMC",
+  "Texas Instruments",
+  "Tongfu Microelectronics",
+  "UMC",
+  "United Microelectronics Corporation",
+  "Valve",
+  "Xilinx",
+  "ZT Group",
+  "ZT Systems"
+ ],
+ "needs_review": [
+  {
+   "raw": "Nvidia",
+   "resolved": "NVIDIA",
+   "how": "normalized"
+  }
+ ],
+ "direction_conflicts": []
+}

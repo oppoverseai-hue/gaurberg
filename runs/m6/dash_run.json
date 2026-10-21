@@ -1,0 +1,79 @@
+{
+ "ticker": "DASH",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm",
+ "chunks": 6,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29203,
+   "cache_read_tokens": 12600,
+   "output_tokens": 518,
+   "cost_usd": 0.1261258,
+   "seconds": 7.8,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27922,
+   "cache_read_tokens": 12600,
+   "output_tokens": 222,
+   "cost_usd": 0.1179112,
+   "seconds": 7.6,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28494,
+   "cache_read_tokens": 12600,
+   "output_tokens": 691,
+   "cost_usd": 0.12494939999999999,
+   "seconds": 10.0,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33350,
+   "cache_read_tokens": 12600,
+   "output_tokens": 761,
+   "cost_usd": 0.14555649999999998,
+   "seconds": 22.2,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31000,
+   "cache_read_tokens": 12600,
+   "output_tokens": 442,
+   "cost_usd": 0.1327315,
+   "seconds": 7.4,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 24921,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1165,
+   "cost_usd": 0.1150396,
+   "seconds": 8.2,
+   "is_error": false,
+   "chunk": 6
+  }
+ ],
+ "totals": {
+  "input_tokens": 12,
+  "cache_creation_tokens": 174890,
+  "cache_read_tokens": 75600,
+  "output_tokens": 3799,
+  "cost_usd": 0.7623139999999999,
+  "seconds": 63.199999999999996
+ },
+ "edges": 16,
+ "quotes_not_found": 0
+}

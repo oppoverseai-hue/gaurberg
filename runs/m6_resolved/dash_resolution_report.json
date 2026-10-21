@@ -1,0 +1,33 @@
+{
+ "ticker": "DASH",
+ "edges_in": 16,
+ "edges_out": 16,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Bank of America",
+  "Deliveroo",
+  "JPMorgan Chase",
+  "KPMG",
+  "Olo",
+  "PayPal",
+  "Prosus",
+  "SevenRooms",
+  "Stripe",
+  "Symbiosys",
+  "Uber Eats",
+  "Wolt"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Amazon Web Services",
+   "resolved": "Amazon",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": []
+}
