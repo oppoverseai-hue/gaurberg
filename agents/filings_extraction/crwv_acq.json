@@ -1,0 +1,87 @@
+[
+ {
+  "counterparty": "Weights & Biases",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "Weights & Biases",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "With Weights & Biases (acquired by CoreWeave in 2025)",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+ },
+ {
+  "counterparty": "OpenPipe",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "OpenPipe",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "in September 2025, we acquired OpenPipe, a leading platform for training AI agents with RL",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+ },
+ {
+  "counterparty": "Marimo",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "Marimo",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In October 2025, we also acquired Marimo, creator of the marimo notebook, an open-source, AI-native environment",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+ },
+ {
+  "counterparty": "Monolith",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CRWV",
+  "target": "Monolith",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "in November 2025 we acquired Monolith, which provides a full-stack platform for enterprises that want to accelerate industrial innovation in the physical world",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "in November 2025, we acquired Monolith AI Limited, a pioneer in applying artificial intelligence and high performance computing to solve complex physics and engineering challenges",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+ }
+]

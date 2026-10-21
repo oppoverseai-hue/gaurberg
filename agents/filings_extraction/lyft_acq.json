@@ -1,0 +1,62 @@
+[
+ {
+  "counterparty": "Freenow",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "Freenow",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In July 2025, we acquired Freenow, and in October 2025, we acquired TBR.",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm"
+ },
+ {
+  "counterparty": "TBR",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "TBR",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In October 2025, we acquired TheBookingRoomGroup Limited (d/b/a TBR Global Chauffeuring, or “TBR”), a global luxury chauffeuring company that operates in thousands of cities worldwide.",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm"
+ },
+ {
+  "counterparty": "Flexdrive",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "Flexdrive",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "in connection with our acquisition of Flexdrive, which is an independently managed, wholly-owned subsidiary",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact",
+  "exposure_basis": "ownership",
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm"
+ }
+]
