@@ -1,9 +1,29 @@
 {
  "saved_at": "2026-10-21",
- "source": "sec_10k",
+ "source": "manual",
  "profile": {
   "description": "Uber is a technology platform that uses a massive network, leading technology, operational excellence and product expertise to power movement from point A to point B. It connects riders with independent ride providers, and connects consumers with restaurants, grocers and other stores through delivery providers.",
   "employees": 34000,
   "about_source": "Uber Form 10-K for 2025, Item 1 (employees: approximately, as of Dec 31, 2025)"
- }
+ },
+ "quote": {
+  "price": 68.94,
+  "change": -1.02,
+  "changePct": -1.46,
+  "high": 69.75,
+  "low": 68.4,
+  "open": 69.01,
+  "prevClose": 69.96,
+  "t": 1792526403
+ },
+ "fundamentals": {
+  "marketCap": 140814,
+  "pe": 15.12,
+  "beta": 1.26,
+  "high52": 100.35,
+  "low52": 65.41,
+  "eps": 4.56,
+  "avgVolume": 17.994367
+ },
+ "nextEarnings": "2026-11-04"
 }

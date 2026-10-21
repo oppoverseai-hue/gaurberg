@@ -90,7 +90,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               ["Previous close", q ? q.prevClose.toFixed(2) : null],
               ["Day range", q ? `${q.low.toFixed(2)} - ${q.high.toFixed(2)}` : null],
               ["52-week range", f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} - ${f.high52.toFixed(2)}` : null],
-              ["Avg volume (10-day)", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
+              ["Avg volume", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
               ["Market cap", f.marketCap == null ? null : fmtBig(f.marketCap)],
               ["P/E (trailing)", n2(f.pe)], ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Beta", n2(f.beta)],
               ["Shares outstanding", f.shares == null ? null : fmtShares(f.shares)],
