@@ -52,10 +52,15 @@ class ModelUnavailable extends Error {}
 async function gemini(prompt: string) {
   const key = Deno.env.get("GEMINI_API_KEY"), model = Deno.env.get("LIVE_LOOKUP_MODEL");
   if (!key || !model) throw new ModelUnavailable("model not configured");
-  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-    method: "POST", headers: { "Content-Type": "application/json", "x-goog-api-key": key },
-    body: JSON.stringify({ systemInstruction: { parts: [{ text: RULES }] }, contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", temperature: 0 } }),
-  });
+  let r!: Response;
+  for (let tries = 0; tries < 3; tries++) { // a busy model (503) is retried twice before the lookup is queued
+    r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+      method: "POST", headers: { "Content-Type": "application/json", "x-goog-api-key": key },
+      body: JSON.stringify({ systemInstruction: { parts: [{ text: RULES }] }, contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig: { responseMimeType: "application/json", temperature: 0 } }),
+    });
+    if (r.status !== 503) break;
+    await new Promise((res) => setTimeout(res, 3000 * (tries + 1)));
+  }
   if (r.status === 429 || r.status === 403 || r.status === 503) throw new ModelUnavailable(`free allowance used up or model busy (${r.status})`);
   if (!r.ok) throw new Error(`model error ${r.status}`);
   const b = await r.json();
