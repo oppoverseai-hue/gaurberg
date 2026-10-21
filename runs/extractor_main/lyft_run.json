@@ -1,0 +1,91 @@
+{
+ "ticker": "LYFT",
+ "role": "extractor_main",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+ "chunks": 7,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29314,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2362,
+   "cost_usd": 0.14502089999999998,
+   "seconds": 13.0,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27711,
+   "cache_read_tokens": 12600,
+   "output_tokens": 572,
+   "cost_usd": 0.1205491,
+   "seconds": 6.3,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27910,
+   "cache_read_tokens": 12600,
+   "output_tokens": 632,
+   "cost_usd": 0.1219645,
+   "seconds": 7.5,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32820,
+   "cache_read_tokens": 12600,
+   "output_tokens": 535,
+   "cost_usd": 0.1411245,
+   "seconds": 14.7,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31606,
+   "cache_read_tokens": 12600,
+   "output_tokens": 811,
+   "cost_usd": 0.1389076,
+   "seconds": 7.8,
+   "is_error": false,
+   "chunk": 5,
+   "parse_error": "Invalid \\escape: line 1 column 980 (char 979)"
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33959,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2504,
+   "cost_usd": 0.1654864,
+   "seconds": 15.4,
+   "is_error": false,
+   "chunk": 6,
+   "parse_error": "Extra data: line 3 column 1 (char 2126)"
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 4032,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.0177837,
+   "seconds": 3.3,
+   "is_error": false,
+   "chunk": 7
+  }
+ ],
+ "totals": {
+  "input_tokens": 14,
+  "cache_creation_tokens": 187352,
+  "cache_read_tokens": 88200,
+  "output_tokens": 7420,
+  "cost_usd": 0.8508367,
+  "seconds": 68.0
+ },
+ "edges": 21,
+ "quotes_not_found": 0
+}

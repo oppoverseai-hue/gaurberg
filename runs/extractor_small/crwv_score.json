@@ -1,0 +1,52 @@
+{
+ "CRWV": {
+  "EXT-1": 0.7142857142857143,
+  "EXT-2": 0.8823529411764706,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 21,
+   "gold_true": 17,
+   "matched": 15,
+   "missed": [
+    [
+     "amd",
+     "crwv",
+     "supplies"
+    ],
+    [
+     "crwv",
+     "intel",
+     "supplies"
+    ]
+   ]
+  }
+ },
+ "ALL": {
+  "EXT-1": 0.7142857142857143,
+  "EXT-2": 0.8823529411764706,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 21,
+   "gold_true": 17,
+   "matched": 15,
+   "missed": [
+    [
+     "amd",
+     "crwv",
+     "supplies"
+    ],
+    [
+     "crwv",
+     "intel",
+     "supplies"
+    ]
+   ]
+  }
+ }
+}

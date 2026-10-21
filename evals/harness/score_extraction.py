@@ -14,9 +14,9 @@ Matching, one-to-one per company, in three passes: (1) same pair, type and direc
 import argparse, copy, csv, json, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-EXTR = ROOT / "agents" / "filings_extraction"
-GOLD = ROOT / "evals" / "gold"
-FILES = [("crwv_extraction.json", "CRWV"), ("crwv_acq.json", "CRWV"), ("lyft_extraction.json", "LYFT"), ("lyft_acq.json", "LYFT")]
+sys.path.insert(0, str(ROOT / "evals" / "gold"))
+import goldlib  # noqa: E402  (coverage check and file discovery; no per-company lists live here)
+EXTR, GOLD = goldlib.EXTR, goldlib.GOLD
 DIRECTED = {"supplies", "sells_to", "invests", "acquires"}
 ALIAS = {"waymo": "alphabet", "google": "alphabet", "intel corporation": "intel"}
 THRESH = {"EXT-1": (0.90, ">="), "EXT-2": (0.60, ">="), "EXT-3": (0.95, ">="), "EXT-4": (0.90, ">="), "EXT-6": (0, "=="), "EXT-7": (0.10, "<=")}
@@ -32,13 +32,17 @@ def key(focal, other, typ, src, tgt):
     return {"pair": frozenset([norm(focal), norm(other)]), "type": typ, "dir": d}
 
 
-def load_pred():
+def load_pred(pred_dir=None):
+    """Predictions: the staged extraction files (default) or a re-run's output folder. Companies come from the files."""
     out = []
-    for fname, focal in FILES:
-        for e in json.load(open(EXTR / fname)):
+    src = pathlib.Path(pred_dir) if pred_dir else EXTR
+    files = [(f, t) for t, fs in goldlib.extraction_files().items() for f in fs] if not pred_dir else [
+        (p.name, p.name.split("_")[0].upper()) for p in sorted(src.glob("*.json")) if p.name.split("_")[0].isalpha() and p.name.endswith(("_extraction.json", "_acq.json"))]
+    for fname, focal in files:
+        for e in json.load(open(src / fname)):
             other = e["target"] if e["source"] == focal else e["source"]
             out.append({**key(focal, other, e["type"], e["source"], e["target"]), "focal": focal,
-                        "supported": bool(e["evidence"]) and all(v["quote_found"] and v["quote"] for v in e["evidence"])})
+                        "supported": bool(e["evidence"]) and all(v.get("quote_found") and v["quote"] for v in e["evidence"])})
     return out
 
 
@@ -95,7 +99,7 @@ def verdict(tid, v):
 
 def run(gold_all, pred_all, neg_all, tag):
     res = {}
-    for focal in ("CRWV", "LYFT", "ALL"):
+    for focal in sorted({x["focal"] for x in gold_all}) + ["ALL"]:
         g = [x for x in gold_all if focal in ("ALL", x["focal"])]
         p = [x for x in pred_all if focal in ("ALL", x["focal"])]
         n = None if neg_all is None else [x for x in neg_all if focal in ("ALL", x["focal"])]
@@ -127,12 +131,25 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--negatives", action="store_true", help="also score EXT-7 with the draft negatives (provisional)")
     ap.add_argument("--selftest", action="store_true"); ap.add_argument("--out")
+    ap.add_argument("--pred-dir", help="score a re-run's output folder instead of the staged extraction files")
+    ap.add_argument("--only", help="comma list of tickers to score (default: every company with a verdict file)")
     a = ap.parse_args()
-    gold, pred = load_gold("gold_edges.csv", "true"), load_pred()
+    if not a.pred_dir:
+        errs = goldlib.check_coverage()
+        if errs:
+            print("COVERAGE CHECK FAILED (a company has extraction output without a full gold set):\n  " + "\n  ".join(errs)); sys.exit(2)
+    gold, pred = load_gold("gold_edges.csv", "true"), load_pred(a.pred_dir)
+    pending = load_gold("gold_edges.csv", "pending")
+    pred = [p for p in pred if not any(p["pair"] == q["pair"] and p["type"] == q["type"] for q in pending)]  # held out: admin Fix not yet resolved
+    if a.only:
+        keep = {t.strip().upper() for t in a.only.split(",")}
+        gold, pred = [x for x in gold if x["focal"] in keep], [x for x in pred if x["focal"] in keep]
     if a.selftest:
         f = selftest(gold, pred)
         print("selftest:", "ok" if not f else f); sys.exit(1 if f else 0)
-    neg = load_gold("gold_negatives_draft.csv", "false") if a.negatives else None
+    neg = None
+    if a.negatives:
+        neg = load_gold("gold_negatives_draft.csv", "false") + load_gold("gold_edges.csv", "false")
     res = run(gold, pred, neg, "m3")
     for focal, r in res.items():
         print(f"\n== {focal}: predicted {r['counts']['predicted']}, gold {r['counts']['gold_true']}, matched {r['counts']['matched']}")

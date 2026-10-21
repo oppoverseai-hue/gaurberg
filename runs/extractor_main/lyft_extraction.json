@@ -1,0 +1,410 @@
+[
+ {
+  "counterparty": "Intelligent Apps GmbH (Freenow)",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "Intelligent Apps GmbH (Freenow)",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We entered nine new countries and more than 180 cities through our acquisition of Intelligent Apps GmbH (d/b/a Freenow) in July 2025, a leading European multimodal app with taxi offering at its core.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TBR Global Chauffeuring",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "TBR Global Chauffeuring",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In October 2025, we acquired TheBookingRoomGroup Limited (d/b/a TBR Global Chauffeuring, or “TBR”), a global luxury chauffeuring company that operates in thousands of cities worldwide.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon Web Services",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon Web Services",
+  "target": "LYFT",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We have a commercial agreement with Amazon Web Services (“AWS”) for cloud services to help deliver and host our platform.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "We currently host our platform and support our operations using Amazon Web Services (“AWS”), a third-party provider of cloud infrastructure services.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ADT",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "LYFT",
+  "target": "ADT",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In the United States, we have a dedicated safety response team for live support available via phone or chat 24/7, Emergency Help with ADT, Inc. (“ADT”), and partnerships with leading national organizations to inform our safety policies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "RapidSOS",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "LYFT",
+  "target": "RapidSOS",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Additionally, if a rider or driver needs emergency assistance at any point, Lyft offers tools to help beyond 911 in-app integration with partners like ADT and RapidSOS.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bolt",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Bolt",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lime",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Lime",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bird",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Bird",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fifteen",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Fifteen",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "nextbike",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "nextbike",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Dott",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Dott",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Baidu",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Baidu",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tesla",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Tesla",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Flexdrive",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "Flexdrive",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "If Flexdrive, Lyft’s independently managed subsidiary, is unable to manage costs of operating Flexdrive’s fleet and potential shortfalls between such costs and the rental fees collected from drivers, Lyft and Flexdrive may update the pricing methodologies related to Flexdrive’s offering in Lyft’s Express Drive program which could increase prices, and in turn adversely affect our ability to attract and retain qualified drivers through the Express Drive program.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "In addition, in connection with our acquisition of Flexdrive, which is an independently managed, wholly-owned subsidiary, Flexdrive remained responsible for its obligations under a Loan and Security Agreement, as amended, with a third-party lender, a Master Vehicle Acquisition Financing and Security Agreement, as amended, with a third-party lender and a Vehicle Procurement Agreement, as amended, with a third-party; and, following the acquisition, we continued to guarantee the",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Freenow",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "Freenow",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In July 2025, we acquired Freenow, and in October 2025, we acquired TBR.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "As part of our business strategy, we will continue to consider a wide array of potential strategic transactions, including acquisitions of businesses, new technologies, services and other assets, joint ventures and strategic investments that complement our business, such as our acquisition of Freenow in July 2025 and our acquisition of TBR in October 2025, as well as divestitures, partnerships and other transactions.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "On July 31, 2025, we completed the previously announced acquisition of Freenow, a European multimodal application with a taxi offering at its core.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TBR",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "TBR",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In July 2025, we acquired Freenow, and in October 2025, we acquired TBR.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "As part of our business strategy, we will continue to consider a wide array of potential strategic transactions, including acquisitions of businesses, new technologies, services and other assets, joint ventures and strategic investments that complement our business, such as our acquisition of Freenow in July 2025 and our acquisition of TBR in October 2025, as well as divestitures, partnerships and other transactions.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "On October 14, 2025, we completed the acquisition of TBR, a global premium ground transportation and chauffeur service company, for a total purchase price of approximately £86.4 million ($115.2 million), inclusive of an immaterial amount of contingent consideration.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Flexdrive",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "LYFT",
+  "target": "Flexdrive",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "Revenue also consists of rental revenues recognized through leases or subleases of vehicles primarily from our wholly-owned subsidiary, Flexdrive Services, LLC (“Flexdrive”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "PricewaterhouseCoopers",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "PricewaterhouseCoopers",
+  "target": "LYFT",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We have served as the Company’s auditor since 2015.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

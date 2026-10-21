@@ -1,34 +1,19 @@
-"""Build the first gold set (CRWV, LYFT) from the admin's Keep verdicts in the M3 review doc.
+"""Build the gold set from the admin's verdicts. Nothing is hardcoded per company any more.
 
-Rows come straight from the staged extraction JSON (quotes are not retyped) plus the admin-approved
-news rows in lyft_av_news.csv. Run from anywhere: python3 -I evals/gold/build_gold_set.py
-Writes evals/gold/gold_edges.csv (label=true) and evals/gold/gold_negatives_draft.csv (label=false, DRAFT).
+Inputs : evals/gold/verdicts/<TICKER>.csv (admin verdicts), the staged extraction JSON they refer to,
+         evals/gold/*_news.csv (admin-approved news rows), evals/gold/negative_picks.json (draft negatives).
+Outputs: evals/gold/gold_edges.csv  (label = true | false | pending)
+         evals/gold/gold_negatives_draft.csv (label = false, DRAFT until the admin confirms each row)
+Run: python3 -I evals/gold/build_gold_set.py   (fails if any extracted edge lacks a verdict: see goldlib.check_coverage)
 Requirements: EXT-1..EXT-7 (Eval Spec, gold set specification)."""
-import csv, json, pathlib
+import csv, json, sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from goldlib import EXTR, GOLD, check_coverage, load_verdicts, news_files, negative_picks
 
-ROOT = pathlib.Path(__file__).resolve().parents[2]
-EXTR = ROOT / "agents" / "filings_extraction"
-GOLD = ROOT / "evals" / "gold"
 COLS = ["focal_ticker", "counterparty", "relationship_type", "direction", "evidence_url", "quote", "as_of",
         "label", "exposure_pct", "exposure_basis", "exposure_qualifier", "notes"]
 DIRECTED = {"supplies", "sells_to", "invests", "acquires"}  # partners and competes are stored undirected
-
-# Admin verdicts (Keep) from the M3 review doc, in file order. Names are checked so a reordered file fails loudly.
-SOURCES = [
-    ("crwv_extraction.json", "CRWV", "C", 1, ["Microsoft", "OpenAI", "Meta", "NVIDIA", "NVIDIA", "NVIDIA", "Amazon", "Alphabet",
-                                              "Microsoft", "Oracle", "AMD", "Intel", "Magnetar"]),
-    ("lyft_extraction.json", "LYFT", "L", 1, ["Uber", "Bolt", "Lime", "Bird", "Fifteen", "nextbike", "Dott", "Alphabet", "Amazon",
-                                              "Baidu", "Tesla", "Amazon", "ADT", "RapidSOS"]),
-    ("crwv_acq.json", "CRWV", "A", 9, ["Weights & Biases", "OpenPipe", "Marimo", "Monolith"]),
-    ("lyft_acq.json", "LYFT", "A", 13, ["Freenow", "TBR", "Flexdrive"]),
-]
-VERDICT = "Keep (admin, 2026-10-21)"
-
-
-def direction(e, focal):
-    if e["type"] not in DIRECTED:
-        return "undirected"
-    return f"{e['source']}>{e['target']}"
+LABEL = {"keep": "true", "drop": "false", "fix": "pending"}
 
 
 def basis(e):
@@ -38,47 +23,45 @@ def basis(e):
 
 
 def main():
-    pos, neg = [], []
-    for fname, focal, prefix, start, names in SOURCES:
-        edges = json.load(open(EXTR / fname))
-        got = [e["counterparty"] for e in edges]
-        assert got == names, f"{fname}: order or names changed vs the review doc: {got}"
-        for i, e in enumerate(edges, start):
-            assert all(v["quote_found"] for v in e["evidence"]), f"{prefix}{i}: quote not found"
+    errs = check_coverage()
+    if errs:
+        print("COVERAGE CHECK FAILED:\n  " + "\n  ".join(errs)); sys.exit(1)
+    pos, neg, cache = [], [], {}
+    for t, rows in load_verdicts().items():
+        for r in rows:
+            edges = cache.setdefault(r["file"], json.load(open(EXTR / r["file"])))
+            e = edges[int(r["pos"])]
             pct = e.get("exposure_pct")
-            pos.append({
-                "focal_ticker": focal, "counterparty": e["counterparty"], "relationship_type": e["type"],
-                "direction": direction(e, focal), "evidence_url": e["document_url"], "quote": e["evidence"][0]["quote"],
-                "as_of": e["as_of"], "label": "true", "exposure_pct": "" if pct is None else pct,
-                "exposure_basis": basis(e), "exposure_qualifier": e.get("exposure_qualifier") or ("exact" if pct is not None else ""),
-                "notes": f"{prefix}{i}; {VERDICT}; source=sec_filing"})
-            if e["type"] in DIRECTED:
-                neg.append((f"{prefix}{i}", e, focal))
-    for r in csv.DictReader(open(GOLD / "lyft_av_news.csv", encoding="utf-8")):
-        pos.append({"focal_ticker": r["focal_ticker"], "counterparty": r["counterparty"], "relationship_type": r["relationship_type"],
-                    "direction": r["direction"], "evidence_url": r["evidence_url"], "quote": r["quote"], "as_of": r["as_of"],
-                    "label": "true", "exposure_pct": "", "exposure_basis": "", "exposure_qualifier": "",
-                    "notes": f"{r['id']}; {VERDICT}; source=news; {r['notes']}"})
+            pos.append({"focal_ticker": t, "counterparty": e["counterparty"], "relationship_type": e["type"],
+                        "direction": f"{e['source']}>{e['target']}" if e["type"] in DIRECTED else "undirected",
+                        "evidence_url": e["document_url"], "quote": e["evidence"][0]["quote"], "as_of": e["as_of"],
+                        "label": LABEL[r["verdict"]], "exposure_pct": "" if pct is None else pct,
+                        "exposure_basis": basis(e), "exposure_qualifier": e.get("exposure_qualifier") or ("exact" if pct is not None else ""),
+                        "notes": f"{r['row_id']}; {r['verdict'].title()} ({r['reviewed']}); source=sec_filing" + (f"; {r['note']}" if r["note"] else "")})
+            if r["verdict"] == "keep" and e["type"] in DIRECTED and r["row_id"] in negative_picks().get(t, []):
+                neg.append((r["row_id"], e, t))
+    for p in news_files():
+        for r in csv.DictReader(open(p, encoding="utf-8")):
+            pos.append({"focal_ticker": r["focal_ticker"], "counterparty": r["counterparty"], "relationship_type": r["relationship_type"],
+                        "direction": r["direction"], "evidence_url": r["evidence_url"], "quote": r["quote"], "as_of": r["as_of"],
+                        "label": "true", "exposure_pct": "", "exposure_basis": "", "exposure_qualifier": "",
+                        "notes": f"{r['id']}; Keep (admin, 2026-10-21); source=news; {r['notes']}"})
     with open(GOLD / "gold_edges.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, COLS); w.writeheader(); w.writerows(pos)
-
     # DRAFT negatives: the direction-reversed copy of a Keep edge is false by construction (no new facts are claimed).
-    # Three per company, not counted as gold until the admin confirms each row.
-    pick = {"CRWV": ["C1", "C4", "C5"], "LYFT": ["L12", "A13", "A14"]}
     rows = []
     for ident, e, focal in neg:
-        if ident in pick[focal]:
-            other = e["target"] if e["source"] == focal else e["source"]
-            rows.append({"focal_ticker": focal, "counterparty": other, "relationship_type": e["type"],
-                         "direction": f"{e['target']}>{e['source']}", "evidence_url": "", "quote": "", "as_of": e["as_of"],
-                         "label": "false", "exposure_pct": "", "exposure_basis": "", "exposure_qualifier": "",
-                         "notes": f"DRAFT negative: reversed direction of {ident}. Awaiting admin confirmation"})
+        other = e["target"] if e["source"] == focal else e["source"]
+        rows.append({"focal_ticker": focal, "counterparty": other, "relationship_type": e["type"],
+                     "direction": f"{e['target']}>{e['source']}", "evidence_url": "", "quote": "", "as_of": e["as_of"],
+                     "label": "false", "exposure_pct": "", "exposure_basis": "", "exposure_qualifier": "",
+                     "notes": f"DRAFT negative: reversed direction of {ident}. Awaiting admin confirmation"})
     with open(GOLD / "gold_negatives_draft.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, COLS); w.writeheader(); w.writerows(rows)
     by = {}
     for r in pos:
-        by[r["focal_ticker"]] = by.get(r["focal_ticker"], 0) + 1
-    print(f"gold_edges.csv: {len(pos)} true edges {by}; gold_negatives_draft.csv: {len(rows)} draft negatives")
+        k = (r["focal_ticker"], r["label"]); by[k] = by.get(k, 0) + 1
+    print("gold_edges.csv:", len(pos), "rows", dict(sorted(by.items())), "| draft negatives:", len(rows))
 
 
 if __name__ == "__main__":

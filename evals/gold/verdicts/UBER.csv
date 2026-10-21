@@ -1,0 +1,45 @@
+row_id,file,pos,counterparty,type,verdict,note,reviewed
+U1,uber_extraction.json,0,Bolt,competes,keep,,admin 2026-10-21
+U2,uber_extraction.json,1,Didi,competes,keep,,admin 2026-10-21
+U3,uber_extraction.json,2,Lyft,competes,keep,,admin 2026-10-21
+U4,uber_extraction.json,3,Ola,competes,keep,,admin 2026-10-21
+U5,uber_extraction.json,4,Alphabet,competes,keep,,admin 2026-10-21
+U6,uber_extraction.json,5,Amazon,competes,keep,,admin 2026-10-21
+U7,uber_extraction.json,6,Tesla,competes,keep,,admin 2026-10-21
+U8,uber_extraction.json,7,DoorDash,competes,keep,,admin 2026-10-21
+U9,uber_extraction.json,8,Instacart,competes,keep,,admin 2026-10-21
+U10,uber_extraction.json,9,Gopuff,competes,keep,,admin 2026-10-21
+U11,uber_extraction.json,10,Rappi,competes,keep,,admin 2026-10-21
+U12,uber_extraction.json,11,Delivery Hero,competes,keep,,admin 2026-10-21
+U13,uber_extraction.json,12,Just Eat Takeaway,competes,keep,,admin 2026-10-21
+U14,uber_extraction.json,13,C.H. Robinson,competes,keep,,admin 2026-10-21
+U15,uber_extraction.json,14,Total Quality Logistics,competes,keep,,admin 2026-10-21
+U16,uber_extraction.json,15,RXO,competes,keep,,admin 2026-10-21
+U17,uber_extraction.json,16,XPO,competes,keep,,admin 2026-10-21
+U18,uber_extraction.json,17,Echo Global Logistics,competes,keep,,admin 2026-10-21
+U19,uber_extraction.json,18,DHL,competes,keep,,admin 2026-10-21
+U20,uber_extraction.json,19,Aurora,invests,keep,,admin 2026-10-21
+U21,uber_extraction.json,20,Didi,invests,keep,,admin 2026-10-21
+U22,uber_extraction.json,21,Grab,invests,keep,,admin 2026-10-21
+U23,uber_extraction.json,22,Lucid,invests,keep,,admin 2026-10-21
+U24,uber_extraction.json,23,Waabi,invests,keep,,admin 2026-10-21
+U25,uber_extraction.json,24,Lime,invests,fix,"Admin: Fix. Uber also partners with Lime (M2 review, 2026-10-21). Corrected row not yet supplied or sourced; held as pending, not scored.",admin 2026-10-21
+U26,uber_extraction.json,25,Moove,invests,keep,,admin 2026-10-21
+U27,uber_extraction.json,26,Moove,partners,keep,,admin 2026-10-21
+U28,uber_extraction.json,27,Arizona State University,partners,keep,,admin 2026-10-21
+U29,uber_extraction.json,28,ITF,partners,keep,,admin 2026-10-21
+U30,uber_extraction.json,29,UGT,partners,keep,,admin 2026-10-21
+U31,uber_extraction.json,30,Waymo,supplies,keep,,admin 2026-10-21
+U32,uber_extraction.json,31,Lucid,supplies,keep,,admin 2026-10-21
+U33,uber_extraction.json,32,Nuro,supplies,keep,,admin 2026-10-21
+U34,uber_extraction.json,33,Mobility Drivers,supplies,keep,,admin 2026-10-21
+U35,uber_extraction.json,34,Couriers,supplies,keep,,admin 2026-10-21
+U36,uber_extraction.json,35,Riders,sells_to,keep,,admin 2026-10-21
+A1,uber_acq.json,0,Trendyol GO,acquires,keep,,admin 2026-10-21
+A2,uber_acq.json,1,Cornershop,acquires,keep,,admin 2026-10-21
+A3,uber_acq.json,2,Drizly,acquires,keep,,admin 2026-10-21
+A4,uber_acq.json,3,Transplace,acquires,keep,,admin 2026-10-21
+A5,uber_acq.json,4,Postmates,acquires,keep,,admin 2026-10-21
+A6,uber_acq.json,5,Getir,acquires,keep,,admin 2026-10-21
+A7,uber_acq.json,6,Careem Technologies,invests,keep,,admin 2026-10-21
+A8,uber_acq.json,7,e&,acquires,keep,,admin 2026-10-21
