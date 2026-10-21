@@ -1,0 +1,20 @@
+[
+ {
+  "counterparty": "Nintendo",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AAPL",
+  "target": "Nintendo",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "The Company believes that third-party developer support depends on the perceived benefits of creating software and services for the Company\u2019s products compared to competitors\u2019 platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

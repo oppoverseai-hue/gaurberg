@@ -1,0 +1,278 @@
+[
+ {
+  "counterparty": "Aston Martin",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "LCID",
+  "target": "Aston Martin",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In June 2023, we entered into an agreement (the \u201cImplementation Agreement\u201d) with Aston Martin Lagonda Global Holdings plc (together with its subsidiaries, \u201cAston Martin\u201d), under which we and Aston Martin have established a long-term strategic technology and supply arrangement.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "In June 2023, we entered into the Implementation Agreement with Aston Martin under which we and Aston Martin have established a long-term strategic technology arrangement.",
+    "quote_found": true
+   },
+   {
+    "section": "mdna",
+    "quote": "On November 6, 2023, in connection with the commencement of the Strategic Technology Arrangement with Aston Martin, we received 28,352,273 ordinary shares of Aston Martin.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "LCID",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In 2025, Lucid formed a partnership with Uber Technologies, Inc. (\u201cUber\u201d) and Nuro, Inc. (\u201cNuro\u201d) to launch a next-generation autonomous robotaxi leveraging Lucid Gravity\u2019s advanced technology platform, redundant electrical and controls architectures, and long range, which together make it an ideal fit for use in a scalable robotaxi offering.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "For example, in July 2025, we entered into an integration agreement with Nuro to install autonomous driving software in Lucid Gravity vehicles, in conjunction with our agreement with Uber, to enable Uber and its designated fleet operators to operate the vehicles with Level 4 autonomy.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Increasing use of such products and services in our vehicles, including with our partnerships with Nuro and Uber for AV capabilities, heightens the risk and potential impacts of a cybersecurity breach of our or our third-party partners\u2019 systems.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Nuro",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "LCID",
+  "target": "Nuro",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In 2025, Lucid formed a partnership with Uber Technologies, Inc. (\u201cUber\u201d) and Nuro, Inc. (\u201cNuro\u201d) to launch a next-generation autonomous robotaxi leveraging Lucid Gravity\u2019s advanced technology platform, redundant electrical and controls architectures, and long range, which together make it an ideal fit for use in a scalable robotaxi offering.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "For example, in July 2025, we entered into an integration agreement with Nuro to install autonomous driving software in Lucid Gravity vehicles, in conjunction with our agreement with Uber, to enable Uber and its designated fleet operators to operate the vehicles with Level 4 autonomy.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Increasing use of such products and services in our vehicles, including with our partnerships with Nuro and Uber for AV capabilities, heightens the risk and potential impacts of a cybersecurity breach of our or our third-party partners\u2019 systems.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "LCID",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "our ability to realize the anticipated benefits of our partnerships with Aston Martin, Uber, Nuro, and NVIDIA;",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Government of Saudi Arabia",
+  "entity_type": "institution",
+  "type": "sells_to",
+  "source": "LCID",
+  "target": "Government of Saudi Arabia",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We have an agreement with the Government of Saudi Arabia, as represented by the Ministry of Finance, under which the Government of Saudi Arabia and its entities and corporate subsidiaries and other beneficiaries undertook to purchase up to 100,000 vehicles, with a minimum purchase quantity of 50,000 vehicles and an option to purchase up to an additional 50,000 vehicles over a ten-year period.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Pursuant to the terms of the EV Purchase Agreement, the Government of Saudi Arabia and its entities and corporate subsidiaries and other beneficiaries (collectively, the \u201cPurchaser\u201d) may purchase up to 100,000 vehicles, with a minimum purchase quantity of 50,000 vehicles and an option to purchase up to an additional 50,000 vehicles during a ten-year period.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In August 2023, Lucid LLC entered into the EV Purchase Agreement with the Government of Saudi Arabia, a related party of the PIF, which is an affiliate of Ayar, as represented by the Ministry of Finance.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tesla",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LCID",
+  "target": "Tesla",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "EV manufacturers with which we compete include Tesla, Rivian, an increasing number of U.S.-based and international entrants and traditional automotive manufacturers, many of which have begun, or announced plans to begin, selling their own EVs in the near-term.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Rivian",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LCID",
+  "target": "Rivian",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "EV manufacturers with which we compete include Tesla, Rivian, an increasing number of U.S.-based and international entrants and traditional automotive manufacturers, many of which have begun, or announced plans to begin, selling their own EVs in the near-term.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "LCID",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In July 2025, we entered into the Vehicle Production Agreement (\u201cVPA\u201d) with Uber under which Uber and its designated fleet operators have agreed to purchase a minimum commitment of 20,000 Lucid Gravity Plus vehicles over a six-year period following the start of production.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Under the VPA, Uber and its designated fleet operators have agreed to purchase a minimum commitment of 20,000 (the \u201cMinimum Quantity Guarantee\u201d) Lucid Gravity vehicles that have been modified to include certain autonomous driving hardware and other features (the \u201cLucid Gravity Plus vehicles\u201d).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PIF",
+  "entity_type": "institution",
+  "type": "invests",
+  "source": "PIF",
+  "target": "LCID",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "The PIF and Ayar beneficially own a significant equity interest in us and may take actions that conflict with other stockholders\u2019 interests.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Aston Martin",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "LCID",
+  "target": "Aston Martin",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "On November 6, 2023, in connection with the commencement of the Strategic Technology Arrangement with Aston Martin, we received 28,352,273 ordinary shares of Aston Martin.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We hold equity securities of Aston Martin.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On November 6, 2023, the Company received \n28,352,273\n ordinary shares of Aston Martin with an initial fair value of $\n73.2\n million.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Uber",
+  "target": "LCID",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In July 2025, the Company entered into the 2025 Subscription Agreement with SMB, a subsidiary of Uber, under which the Company agreed to issue and SMB agreed to purchase, in a private placement, the Company\u2019s common stock equal to (i) $\n300.0\n million in cash divided by (ii) an amount equal to the arithmetic average of the daily volume-weighted average price of the common stock over a period of \n30\n consecutive trading days ending on, and including, July 15, 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On July 16, 2025, the Company entered into the VPA with Uber and the 2025 Subscription Agreement with SMB, a subsidiary of Uber.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Al Bawani",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Al Bawani",
+  "target": "LCID",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Lucid LLC entered into agreements with Al Bawani Company Limited (\u201cAl Bawani\u201d), an affiliate of the PIF, which is an affiliate of Ayar, for certain design and construction services in connection with the development of AMP-2.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011053/lcid-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]
