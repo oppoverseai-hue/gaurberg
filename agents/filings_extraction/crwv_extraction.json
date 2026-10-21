@@ -1,0 +1,251 @@
+[
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We recognized an aggregate of approximately 67% of our revenue from our top customer, Microsoft, for the year ended December 31, 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Other significant customers include Microsoft and Meta.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 67,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC (\"OpenAI\") and in September 2025, we entered into an order form under this master services agreement pursuant to which OpenAI has committed to pay us up to approximately $6.5 billion through May 31, 2031 and, as a result, we expect OpenAI to be a significant customer in future periods.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "For example, in March 2025, we entered into a master services agreement with OpenAI, a private company, pursuant to which OpenAI has committed to pay us up to approximately $11.9 billion through October 2030.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Meta",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "CRWV",
+  "target": "Meta",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Similarly, in September 2025, we entered into an order form under an existing master services agreement pursuant to which Meta Platforms, Inc. (\"Meta\") initially committed to pay us up to approximately $14.2 billion through December 2031 and, as a result, we also expect Meta to be a significant customer in future periods.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Other significant customers include Microsoft and Meta.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "NVIDIA",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, as a result of our obligations in our current customer contracts, all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "NVIDIA",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2026, NVIDIA Corporation invested $ 2 billion in the Company's Class A common stock at a purchase price of $ 87.20 per share.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "CRWV",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, in January 2026, we announced that we entered into a collaboration framework with NVIDIA Corporation to expand our long-standing complementary relationship to advance AI adoption at global scale.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Oracle",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CRWV",
+  "target": "Oracle",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AMD",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "AMD",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help our customers get more out of GPU compute.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Intel",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Intel",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help our customers get more out of GPU compute.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Magnetar",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Magnetar",
+  "target": "CRWV",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Magnetar was a related party of the Company through March 2025, as Magnetar-affiliated funds collectively held a significant equity interest in the Company and Magnetar had representation on the Company's Board.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]
