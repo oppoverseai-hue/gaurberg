@@ -9,3 +9,6 @@ Run order:
 4. `make_load_sql.py uber_extraction.json ../../db/seed/companies_seed.csv`: SQL that writes staged rows only.
 
 Known gaps in this spike: token counts were not captured (session run); entity types for companies the filing does not describe are the extractor's judgement; Risk Factors and MD&A were searched for named companies rather than read in full.
+
+## Batch runner with token logging (M3)
+`run_extraction.py TICKER --role extractor_small|extractor_main` fetches the 10-K, sends it in chunks to `claude -p` (model id read from `config/models.yaml` by role), checks every quote word for word, and writes `runs/<role>/<ticker>_extraction.json` plus `<ticker>_run.json` (tokens, cost and seconds for every call). Score it with `evals/harness/score_extraction.py --pred-dir runs/<role> --only TICKER --out runs/<role>/<ticker>_score.json`, record it with `evals/harness/record_run.py`. Output is a re-run folder: nothing is staged or promoted.

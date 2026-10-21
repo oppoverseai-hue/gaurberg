@@ -1,0 +1,10 @@
+focal_ticker,counterparty,relationship_type,direction,evidence_url,quote,as_of,label,exposure_pct,exposure_basis,exposure_qualifier,notes
+CRWV,Microsoft,sells_to,Microsoft>CRWV,,,2025-12-31,false,,,,DRAFT negative: reversed direction of C1. Awaiting admin confirmation
+CRWV,NVIDIA,supplies,CRWV>NVIDIA,,,2025-12-31,false,,,,DRAFT negative: reversed direction of C4. Awaiting admin confirmation
+CRWV,NVIDIA,invests,CRWV>NVIDIA,,,2025-12-31,false,,,,DRAFT negative: reversed direction of C5. Awaiting admin confirmation
+LYFT,Amazon,supplies,LYFT>Amazon,,,2025-12-31,false,,,,DRAFT negative: reversed direction of L12. Awaiting admin confirmation
+LYFT,Freenow,acquires,Freenow>LYFT,,,2025-12-31,false,,,,DRAFT negative: reversed direction of A13. Awaiting admin confirmation
+LYFT,TBR,acquires,TBR>LYFT,,,2025-12-31,false,,,,DRAFT negative: reversed direction of A14. Awaiting admin confirmation
+UBER,Aurora,invests,Aurora>UBER,,,2025-12-31,false,,,,DRAFT negative: reversed direction of U20. Awaiting admin confirmation
+UBER,Waymo,supplies,UBER>Waymo,,,2025-12-31,false,,,,DRAFT negative: reversed direction of U31. Awaiting admin confirmation
+UBER,Trendyol GO,acquires,Trendyol GO>UBER,,,2025-12-31,false,,,,DRAFT negative: reversed direction of A1. Awaiting admin confirmation

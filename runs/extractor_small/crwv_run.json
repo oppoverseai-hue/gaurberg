@@ -1,0 +1,89 @@
+{
+ "ticker": "CRWV",
+ "role": "extractor_small",
+ "model": "claude-haiku-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+ "chunks": 7,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 42211,
+   "cache_read_tokens": 0,
+   "output_tokens": 5205,
+   "cost_usd": 0.0139563,
+   "seconds": 21.7,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27684,
+   "cache_read_tokens": 12600,
+   "output_tokens": 3172,
+   "cost_usd": 0.0099682,
+   "seconds": 14.2,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27645,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1035,
+   "cost_usd": 0.008889,
+   "seconds": 7.4,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29722,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1931,
+   "cost_usd": 0.0099591,
+   "seconds": 10.6,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32345,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1480,
+   "cost_usd": 0.01052,
+   "seconds": 9.7,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32547,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2692,
+   "cost_usd": 0.0111876,
+   "seconds": 13.7,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 25114,
+   "cache_read_tokens": 12600,
+   "output_tokens": 6070,
+   "cost_usd": 0.010644200000000001,
+   "seconds": 26.6,
+   "is_error": false,
+   "chunk": 7
+  }
+ ],
+ "totals": {
+  "input_tokens": 14,
+  "cache_creation_tokens": 217268,
+  "cache_read_tokens": 75600,
+  "output_tokens": 21585,
+  "cost_usd": 0.07512440000000001,
+  "seconds": 103.9
+ },
+ "edges": 21,
+ "quotes_not_found": 0
+}

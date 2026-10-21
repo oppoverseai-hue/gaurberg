@@ -1,0 +1,89 @@
+{
+ "ticker": "LYFT",
+ "role": "extractor_small",
+ "model": "claude-haiku-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+ "chunks": 7,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29311,
+   "cache_read_tokens": 12600,
+   "output_tokens": 7694,
+   "cost_usd": 0.012715800000000001,
+   "seconds": 30.3,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27708,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4206,
+   "cost_usd": 0.0104919,
+   "seconds": 19.4,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27907,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4631,
+   "cost_usd": 0.0107636,
+   "seconds": 20.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32817,
+   "cache_read_tokens": 12600,
+   "output_tokens": 3030,
+   "cost_usd": 0.0114356,
+   "seconds": 14.6,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31603,
+   "cache_read_tokens": 12600,
+   "output_tokens": 6586,
+   "cost_usd": 0.0128494,
+   "seconds": 27.7,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33956,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4914,
+   "cost_usd": 0.0127208,
+   "seconds": 22.4,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 4029,
+   "cache_read_tokens": 12600,
+   "output_tokens": 172,
+   "cost_usd": 0.0013707,
+   "seconds": 4.4,
+   "is_error": false,
+   "chunk": 7
+  }
+ ],
+ "totals": {
+  "input_tokens": 14,
+  "cache_creation_tokens": 187331,
+  "cache_read_tokens": 88200,
+  "output_tokens": 31233,
+  "cost_usd": 0.0723478,
+  "seconds": 139.6
+ },
+ "edges": 21,
+ "quotes_not_found": 2
+}

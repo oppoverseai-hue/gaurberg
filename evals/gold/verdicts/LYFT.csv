@@ -1,0 +1,18 @@
+row_id,file,pos,counterparty,type,verdict,note,reviewed
+L1,lyft_extraction.json,0,Uber,competes,keep,,admin 2026-10-21
+L2,lyft_extraction.json,1,Bolt,competes,keep,,admin 2026-10-21
+L3,lyft_extraction.json,2,Lime,competes,keep,,admin 2026-10-21
+L4,lyft_extraction.json,3,Bird,competes,keep,,admin 2026-10-21
+L5,lyft_extraction.json,4,Fifteen,competes,keep,,admin 2026-10-21
+L6,lyft_extraction.json,5,nextbike,competes,keep,,admin 2026-10-21
+L7,lyft_extraction.json,6,Dott,competes,keep,,admin 2026-10-21
+L8,lyft_extraction.json,7,Alphabet,competes,keep,,admin 2026-10-21
+L9,lyft_extraction.json,8,Amazon,competes,keep,,admin 2026-10-21
+L10,lyft_extraction.json,9,Baidu,competes,keep,,admin 2026-10-21
+L11,lyft_extraction.json,10,Tesla,competes,keep,,admin 2026-10-21
+L12,lyft_extraction.json,11,Amazon,supplies,keep,,admin 2026-10-21
+L13,lyft_extraction.json,12,ADT,partners,keep,,admin 2026-10-21
+L14,lyft_extraction.json,13,RapidSOS,partners,keep,,admin 2026-10-21
+A13,lyft_acq.json,0,Freenow,acquires,keep,,admin 2026-10-21
+A14,lyft_acq.json,1,TBR,acquires,keep,,admin 2026-10-21
+A15,lyft_acq.json,2,Flexdrive,acquires,keep,,admin 2026-10-21
