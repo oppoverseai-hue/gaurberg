@@ -3,24 +3,24 @@ UBER,Uber Technologies,consumer,large,true,provisional
 AAPL,Apple,consumer,large,false,provisional
 META,Meta Platforms,consumer,large,false,provisional
 MSFT,Microsoft,business,large,false,provisional
-CRM,Salesforce,business,large,false,provisional
 PLTR,Palantir Technologies,business,large,false,provisional
 NVDA,NVIDIA,infrastructure,large,false,provisional
 TSM,Taiwan Semiconductor Manufacturing,infrastructure,large,false,provisional
 AMD,Advanced Micro Devices,infrastructure,large,false,provisional
 DASH,DoorDash,consumer,mid,false,provisional
-SPOT,Spotify Technology,consumer,mid,false,provisional
-DUOL,Duolingo,consumer,mid,false,provisional
-SNOW,Snowflake,business,mid,false,provisional
-DDOG,Datadog,business,mid,false,provisional
 NET,Cloudflare,business,mid,false,provisional
 CRWV,CoreWeave,infrastructure,mid,true,provisional
 CBRS,Cerebras Systems,infrastructure,mid,false,provisional - confirm name/ticker
 NBIS,Nebius Group,infrastructure,mid,false,provisional
 LYFT,Lyft,consumer,small,true,provisional
-BMBL,Bumble,consumer,small,false,provisional
-BRZE,Braze,business,small,false,provisional
-SPT,Sprout Social,business,small,false,provisional
-FSLY,Fastly,infrastructure,small,false,provisional
-DOCN,DigitalOcean,infrastructure,small,false,provisional
 APLD,Applied Digital,infrastructure,small,false,provisional
+AMZN,Amazon,consumer,large,false,provisional (set swap Oct 21)
+GOOGL,Alphabet,consumer,large,false,provisional (set swap Oct 21)
+TSLA,Tesla,consumer,large,false,provisional (set swap Oct 21)
+ORCL,Oracle,business,large,false,provisional (set swap Oct 21)
+INTC,Intel,infrastructure,large,false,provisional (set swap Oct 21)
+LCID,Lucid,consumer,small,false,provisional (set swap Oct 21)
+LIME,Lime,consumer,small,false,provisional (set swap Oct 21)
+CART,Instacart,consumer,mid,false,provisional (set swap Oct 21)
+GRAB,Grab,consumer,mid,false,provisional (set swap Oct 21)
+AUR,Aurora,business,small,false,provisional (set swap Oct 21)

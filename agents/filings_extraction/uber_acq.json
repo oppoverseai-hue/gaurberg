@@ -1,0 +1,177 @@
+[
+ {
+  "counterparty": "Trendyol GO",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "UBER",
+  "target": "Trendyol GO",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On June 17, 2025, we closed the acquisition of an 85 % controlling stake in Trendyol GO.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "As of December 31, 2025, our controlling stake in Trendyol GO was 86 %.",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": 86,
+  "exposure_qualifier": "exact",
+  "exposure_basis": "ownership",
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ },
+ {
+  "counterparty": "Cornershop",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "UBER",
+  "target": "Cornershop",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "For example, through our acquisition of Cornershop, a provider of online grocery delivery in several countries including Mexico and Chile, we expanded our Delivery offering to grocery delivery.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "some of our acquired and majority-owned companies, including Careem, Postmates and Cornershop, have or will continue to use their own brands",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ },
+ {
+  "counterparty": "Drizly",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "UBER",
+  "target": "Drizly",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Additionally, in October 2021, we acquired The Drizly Group, Inc. in order to further expand our Delivery offering to alcohol.",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ },
+ {
+  "counterparty": "Transplace",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "UBER",
+  "target": "Transplace",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "In November 2021, our subsidiary Uber Freight acquired Transplace, expanding Uber Freight’s business through Transplace’s expertise in transportation management.",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ },
+ {
+  "counterparty": "Postmates",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "UBER",
+  "target": "Postmates",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "some of our acquired and majority-owned companies, including Careem, Postmates and Cornershop, have or will continue to use their own brands",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ },
+ {
+  "counterparty": "Getir",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "UBER",
+  "target": "Getir",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "we entered into an agreement with Mubadala Investment Company to acquire Getir Perakende Lojistik A.Ş.'s (“Getir”) delivery portfolio in Türkiye.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "the agreement to acquire 100 % of Getir’s food delivery business and a minority interest in its grocery delivery business at the outset, for $ 435 million in cash",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": "Pending: food delivery business expected to close in the second half of 2026, subject to regulatory approval",
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ },
+ {
+  "counterparty": "Careem Technologies",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "UBER",
+  "target": "Careem Technologies",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Upon closing of the transaction in December 2023, e& acquired a majority stake in Careem Technologies and we retained a minority ownership interest.",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": null,
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ },
+ {
+  "counterparty": "e&",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "e&",
+  "target": "Careem Technologies",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Upon closing of the transaction in December 2023, e& acquired a majority stake in Careem Technologies and we retained a minority ownership interest.",
+    "quote_found": true
+   }
+  ],
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "exposure_basis": null,
+  "note": "Majority stake; share not stated in the filing",
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm"
+ }
+]
