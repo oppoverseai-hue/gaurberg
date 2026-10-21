@@ -1,0 +1,59 @@
+{
+ "ticker": "NVDA",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+ "chunks": 4,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30369,
+   "cache_read_tokens": 12600,
+   "output_tokens": 6755,
+   "cost_usd": 0.1932769,
+   "seconds": 33.9,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27739,
+   "cache_read_tokens": 12600,
+   "output_tokens": 475,
+   "cost_usd": 0.1196949,
+   "seconds": 6.2,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32508,
+   "cache_read_tokens": 12600,
+   "output_tokens": 388,
+   "cost_usd": 0.13837680000000002,
+   "seconds": 7.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30509,
+   "cache_read_tokens": 12600,
+   "output_tokens": 259,
+   "cost_usd": 0.1288909,
+   "seconds": 5.6,
+   "is_error": false,
+   "chunk": 4
+  }
+ ],
+ "totals": {
+  "input_tokens": 8,
+  "cache_creation_tokens": 121125,
+  "cache_read_tokens": 50400,
+  "output_tokens": 7877,
+  "cost_usd": 0.5802395,
+  "seconds": 53.5
+ },
+ "edges": 33,
+ "quotes_not_found": 0
+}

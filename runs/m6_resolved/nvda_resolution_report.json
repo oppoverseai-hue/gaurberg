@@ -1,0 +1,30 @@
+{
+ "ticker": "NVDA",
+ "edges_in": 33,
+ "edges_out": 33,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Alibaba",
+  "Ambarella",
+  "Arista Networks",
+  "Broadcom",
+  "Cisco",
+  "Fabrinet",
+  "Groq",
+  "Hewlett Packard Enterprise",
+  "Hon Hai",
+  "Huawei",
+  "Lumentum",
+  "Marvell",
+  "Mellanox",
+  "Micron",
+  "Qualcomm",
+  "Renesas",
+  "SK Hynix",
+  "Samsung",
+  "TSMC",
+  "Wistron"
+ ],
+ "needs_review": [],
+ "direction_conflicts": []
+}

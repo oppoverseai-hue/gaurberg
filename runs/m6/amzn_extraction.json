@@ -1,0 +1,151 @@
+[
+ {
+  "counterparty": "Anthropic",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "AMZN",
+  "target": "Anthropic",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "We made cash payments, net of acquired cash, related to acquisition and other investment activity of $7.1 billion and $3.8 billion in 2024 and 2025, which primarily reflect investments in convertible notes from Anthropic, PBC (“Anthropic”), including $2.7 billion we invested in 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "From Q3 2023 to Q4 2024, we invested $\n5.3\n billion in convertible notes from Anthropic, which are classified as available-for-sale and as Level 3 assets, and as of December 31, 2024 had an estimated fair value of approximately $\n13.8\n billion.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Rivian",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "AMZN",
+  "target": "Rivian",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "The net loss of $(2.3) billion in 2024 is primarily from the marketable securities loss from our equity investment in Rivian Automotive, Inc. (“Rivian”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Anthropic",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "AMZN",
+  "target": "Anthropic",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also have a commercial arrangement primarily for the provision of AWS cloud services, which includes the use of AWS chips.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "1Life Healthcare (One Medical)",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "AMZN",
+  "target": "1Life Healthcare (One Medical)",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On February 22, 2023, we acquired 1Life Healthcare, Inc. (One Medical), for cash consideration of approximately $\n3.5\n billion, net of cash acquired, to provide healthcare options for customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ernst & Young",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Ernst & Young",
+  "target": "AMZN",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Report of Ernst & Young LLP, Independent Registered Public Accounting Firm",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Citibank",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Citibank",
+  "target": "AMZN",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Five-Year Revolving Credit Agreement, dated as of November 1, 2023, among Amazon.com, Inc., Citibank N.A., as administrative agent, and the lenders party thereto (incorporated by reference to the Company’s Current Report on Form 8-K, filed November 1, 2023).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Wells Fargo",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Wells Fargo",
+  "target": "AMZN",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Indenture, dated as of November 29, 2012, between Amazon.com, Inc. and Wells Fargo Bank, National Association, as trustee (incorporated by reference to the Company’s Current Report on Form 8-K, filed November 29, 2012).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Computershare",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Computershare",
+  "target": "AMZN",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Supplemental Indenture, dated as of April 13, 2022, among Amazon.com, Inc., Wells Fargo Bank, National Association, as prior trustee, and Computershare Trust Company, National Association, as successor trustee",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]
