@@ -6,7 +6,7 @@ import type { Co, Rel } from "@/lib/graph";
 export type Pt = { t: number; c: number };
 export type SavedQuote = { price: number; change: number; changePct: number; high: number; low: number; open: number; prevClose: number; t: number | null };
 export type SavedFund = Partial<Record<"marketCap" | "pe" | "beta" | "high52" | "low52" | "shares" | "eps" | "avgVolume" | "revGrowth" | "grossMargin" | "opMargin" | "netMargin" | "revPerShare" | "currentRatio" | "debtEquity", number | null>>;
-export type SavedProfile = { exchange?: string | null; industry?: string | null; website?: string | null; employees?: number | null; description?: string | null };
+export type SavedProfile = { exchange?: string | null; industry?: string | null; website?: string | null; employees?: number | null; description?: string | null; about_source?: string | null };
 export type SavedMarket = {
   saved_at: string; source: string; // "finnhub+twelvedata" or "manual"
   quote?: SavedQuote | null; daily?: Pt[] | null; weekly?: Pt[] | null;
