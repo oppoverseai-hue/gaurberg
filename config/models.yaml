@@ -8,6 +8,6 @@ roles:
   extractor:        { model: claude-sonnet-5-5, note: "decided by the admin 2026-10-21 after the CRWV and LYFT comparison (Haiku wrote 2 unsupported quotes)" }
   extractor_second_pass: { model: claude-haiku-5-5, note: "cheap second pass; to be added once the verification step exists" }
   verifier_baseline: { model: claude-haiku-5-5, note: "NOT independent of the extractor (same vendor): a baseline to measure VER-1 and VER-2 until a different-vendor verifier key exists; VER-3 stays unmet" }
-  verifier_cheap:   { model: TBD, note: "free tier; must be a different vendor than extractor" }
+  verifier_cheap:   { model: gemini-3.1-flash-lite, note: "different vendor (Google) than the extractor, satisfies VER-3; called via the gemini-proxy edge function; list price $0.25 in / $1.50 out per M tokens" }
   verifier_strong:  { model: TBD, note: "escalation only" }
   live_lookup:      { model: TBD, note: "free tier; if none available, queue to lookup_queue" }

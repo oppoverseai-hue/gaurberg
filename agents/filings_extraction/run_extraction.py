@@ -7,7 +7,7 @@ Usage: python3 -I agents/filings_extraction/run_extraction.py TICKER --role extr
 * Every call's usage (input, cache, output tokens, cost, seconds) is written to <out>/<ticker>_run.json.
 * Every quote is checked word for word against the filing text. Unfound quotes are kept and flagged (EXT-6 counts them).
 * Output is a re-run folder (default runs/<role>/). Nothing is written to the database here and nothing is promoted.
-Environment: EDGAR_UA overrides the SEC user agent (SEC asks for a real contact)."""
+Environment: EDGAR_UA overrides the SEC user agent (default is the admin contact email)."""
 import argparse, json, os, pathlib, re, sys, urllib.request
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -51,7 +51,7 @@ def fetch(url, cache):
     cache.mkdir(parents=True, exist_ok=True)
     f = cache / re.sub(r"\W+", "_", url)[-80:]
     if not f.exists():
-        req = urllib.request.Request(url, headers={"User-Agent": os.environ.get("EDGAR_UA", "Gaurberg Research gaurberg-research@example.com")})
+        req = urllib.request.Request(url, headers={"User-Agent": os.environ.get("EDGAR_UA", "Gaurberg Research abhishek.g16@fms.edu")})
         f.write_bytes(urllib.request.urlopen(req, timeout=120).read())
     return f
 

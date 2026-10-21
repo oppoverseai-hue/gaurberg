@@ -295,5 +295,59 @@
   "as_of": "2025-12-31",
   "exposure_pct": null,
   "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PricewaterhouseCoopers",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "PricewaterhouseCoopers",
+  "target": "LYFT",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We have served as the Company’s auditor since 2015.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Pacific Valley Insurance Company, Inc.",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "LYFT",
+  "target": "Pacific Valley Insurance Company, Inc.",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On February 19, 2025, the Company’s wholly-owned subsidiary, Pacific Valley Insurance Company, Inc. (“PVIC”), entered into a Loss Portfolio Transfer Reinsurance Agreement (the “Reinsurance Agreement”) with Riverstone International Insurance, Inc. (“Riverstone”)",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Transopco",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "LYFT",
+  "target": "Transopco",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Starting in June 2022, in compliance with local regulations, \nTransopco UK Ltd. (“Transopco”), a newly acquired subsidiary of the Company, modified its private hire business model in London and began applying the Tour Operator Margin Scheme (“TOMS”) to its services, including value added tax (“VAT”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
  }
 ]

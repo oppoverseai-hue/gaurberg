@@ -3,7 +3,7 @@ export const metadata = { title: "Gaurberg", description: "Company pages and eco
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}<footer className="site">Company links come from SEC filings; prices from Finnhub (delayed). Links not yet reviewed are tagged Staged. <a href="/sources">Sources</a> · Not investment advice.</footer></body>
     </html>
   );
 }

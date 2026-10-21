@@ -1,0 +1,1874 @@
+[
+ {
+  "id": "e001",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Nuro supplies autonomous systems for vehicles purchased by Uber.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e002",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Dott as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e003",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses vehicle purchases and Nuro, not Ola.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e004",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly states CRWV acquired Monolith.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e005",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses Meta, not OpenPipe.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e006",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Tesla as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e007",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence indicates Uber invested in Grab, not the reverse.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e008",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Amazon as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e009",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes OpenAI as a customer, not a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e010",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes an acquisition, not a partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e011",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence describes Uber working with delivery service providers.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e012",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses Freenow and TBR, not Bolt.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e013",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Didi as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e014",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Tesla as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e015",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "supplies"
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms NVIDIA GPUs are used in the company's infrastructure.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e016",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "supplies"
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses revenue from Microsoft, not Intel supplying the company.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e017",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "fail",
+  "reason": "Echo Global Logistics is not listed in the provided sentence as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e018",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly names Amazon as a key competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e019",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "acquires"
+  },
+  "verdict": "fail",
+  "reason": "UBER acquired Postmates; the direction is reversed.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e020",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly names DoorDash as a competitor in the delivery space.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e021",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "sells_to"
+  },
+  "verdict": "fail",
+  "reason": "CRWV sells to Microsoft; the direction is reversed.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e022",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "supplies"
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms the company uses AMD chips, implying a supply relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e023",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies XPO as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e024",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly names Tesla as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e025",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "acquires"
+  },
+  "verdict": "fail",
+  "reason": "UBER acquired Cornershop; the direction is reversed.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e026",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "sells_to"
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms Meta is a significant customer of the company.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e027",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence lists competitors in the bike/scooter market and does not mention RapidSOS.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e028",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Gopuff as a competitor in the delivery space.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e029",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies DHL as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e030",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Bolt as a competitor in the ridesharing market.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e031",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Amazon as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e032",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses the acquisition of Drizly, not Transplace.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e033",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention Bird as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e034",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes a partnership, not a competitive relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e035",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Oracle as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e036",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly confirms a partnership with Arizona State University.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e037",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Fifteen as a competitor in the bike/scooter market.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e038",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms the acquisition of Flexdrive.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e039",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence identifies Microsoft as a customer, supporting the sells_to relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e040",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms Uber retained a minority ownership interest in Careem Technologies.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e041",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly states the acquisition of TBR by the company.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e042",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes an investment, not a partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e043",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses a Grab investment and does not mention Gopuff.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e044",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists DHL as a competitor to Uber's Freight offering.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e045",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists XPO as a competitor to Uber's Freight offering.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e046",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Lyft as a competitor to Uber.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e047",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses the acquisition of Drizly, not Trendyol GO.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e048",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms the acquisition of Cornershop by Uber.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e049",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms CoreWeave uses Intel chips, implying a supply relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e050",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence states e& acquired Careem, not the reverse.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e051",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Delivery Hero as a competitor to Uber's Delivery offering.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e052",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes competition for drivers, not a supply relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e053",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Waymo makes autonomous vehicles available through Uber's platform, which constitutes a supply relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e054",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence explicitly identifies Bolt as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e055",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Uber connects riders to drivers, effectively selling its platform services to riders.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e056",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Instacart as a competitor in the delivery space.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e057",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention Lime; it lists other competitors.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e058",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Microsoft as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e059",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Uber as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e060",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Magnetar holds an equity interest in CRWV, so the direction should be Magnetar invests in CRWV.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e061",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly states that CRWV acquired OpenPipe.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e062",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses e& and Careem Technologies, not ITF.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e063",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Echo Global Logistics as a competitor to Uber Freight.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e064",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists RXO as a competitor to Uber Freight.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e065",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms an investment by Uber in Grab.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e066",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Amazon (Zoox) as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e067",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms a partnership via a signed memorandum of understanding.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e068",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence mentions an agreement with Mubadala to acquire Getir, not Uber acquiring Getir.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e069",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses an acquisition of Trendyol GO, not competition with Amazon.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e070",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence states CoreWeave acquired Weights & Biases, not that they are partners.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e071",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention DoorDash as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e072",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention Delivery Hero as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e073",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence identifies Google (Alphabet) as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e074",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms an investment in Didi.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e075",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention nextbike as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e076",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies ADT as a partner, not a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e077",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms OpenAI is a significant customer.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e078",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes a purchase agreement involving Nuro's technology, not competition.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e079",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence mentions partners, not Alphabet, and does not mention competition with Alphabet.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e080",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly refers to a Waabi investment held by the company.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e081",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses competitors, not an investment in Waabi.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e082",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes a partnership/MOU, not a competitive relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e083",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Lime as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e084",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "NVIDIA supplies CRWV, not the other way around.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e085",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists C.H. Robinson as a competitor to the Freight offering.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e086",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly identifies RapidSOS as a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e087",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms e& acquired a majority stake in Careem Technologies.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e088",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes a divestiture of assets, not a partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e089",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms NVIDIA invested in the company.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e090",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly identifies ADT as a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e091",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses Moove, not Careem Technologies.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e092",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms drivers provide ride services to the platform.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e093",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Uber is the customer purchasing vehicles, not the supplier.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e094",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The filing explicitly lists nextbike as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e095",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The filing explicitly lists Rappi as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e096",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms an investment relationship.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e097",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The filing explicitly lists Bird as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e098",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms a formal agreement/partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e099",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Didi is not mentioned in the provided sentence.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e100",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Total Quality Logistics as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e101",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly mentions a commercial partnership agreement.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e102",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Instacart as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e103",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Meta is not mentioned in the provided sentence.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e104",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Couriers provide delivery services to the platform.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e105",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly states the acquisition of Freenow by the company.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e106",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence mentions an acquisition of OpenPipe, not competition with Oracle.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e107",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes UBER investing in Moove, not Moove investing in UBER.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e108",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Total Quality Logistics as a competitor to the company's Freight offering.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e109",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes using AMD chips as a supplier, not as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e110",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention Baidu as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e111",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence states LYFT acquired TBR, not the reverse.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e112",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "Riders are customers, not competitors.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e113",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes an investment, not a partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e114",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Alphabet as a potential competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e115",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes an acquisition of a portfolio, not a partnership with Getir.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e116",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence mentions ADT and RapidSOS, not Amazon.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e117",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Just Eat Takeaway as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e118",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "competes"
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Fifteen as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e119",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "invests"
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms an investment in Lucid.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e120",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "supplies"
+  },
+  "verdict": "pass",
+  "reason": "Lucid is supplying vehicles to Uber.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e121",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "acquires"
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes an acquisition, not a partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e122",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Lime as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e123",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "competes"
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Lyft as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e124",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly mentions a collaboration framework.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e125",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": false,
+   "type": "acquires"
+  },
+  "verdict": "fail",
+  "reason": "The sentence states CRWV acquired Marimo, not the reverse.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e126",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "competes"
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention RXO.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e127",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "competes"
+  },
+  "verdict": "fail",
+  "reason": "The sentence identifies Rappi as a competitor, not a partner.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e128",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "acquires"
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms Uber acquired Transplace.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e129",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": "acquires"
+  },
+  "verdict": "fail",
+  "reason": "The sentence does not mention Freenow or an acquisition.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e130",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Alphabet as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e131",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Just Eat Takeaway as a competitor in the delivery space.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e132",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms an equity investment by Uber in Moove.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e133",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses freight competitors, not a partnership with Moove.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e134",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence identifies Tesla as a company competing with Uber in autonomous technologies.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e135",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses Careem Technologies, not Didi.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e136",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses Careem Technologies, not Waymo.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e137",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Baidu as a competitor in AV technology and TaaS.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e138",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence mentions an acquisition, not competition with Alphabet.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e139",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence identifies Microsoft as a key competitor in cloud computing services.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e140",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms Magnetar-affiliated funds held a significant equity interest in CoreWeave.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e141",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses Careem Technologies, not C.H. Robinson.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e142",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Alphabet as a competitor in AV technology and TaaS.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e143",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly states Weights & Biases was acquired by CoreWeave.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e144",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Dott as a competitor to Lyft.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e145",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes an acquisition, not a partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e146",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence identifies Amazon (Zoox) as a competitor.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e147",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms Uber acquired Postmates.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e148",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly states CRWV acquired Marimo.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e149",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms the acquisition of a controlling stake in Trendyol GO.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e150",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Bolt as a competitor to Lyft.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e151",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence describes an investment, not a partnership.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e152",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Ola as a competitor to Uber.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e153",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly lists Uber as a competitor to Lyft.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e154",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence explicitly states Uber acquired The Drizly Group.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e155",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": false
+  },
+  "verdict": "fail",
+  "reason": "The sentence discusses Meta, not NVIDIA.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ },
+ {
+  "id": "e156",
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "The sentence confirms AWS supplies cloud services to Lyft.",
+  "verifier_model": "gemini-3.1-flash-lite"
+ }
+]
