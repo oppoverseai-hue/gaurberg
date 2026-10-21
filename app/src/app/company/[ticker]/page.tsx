@@ -72,6 +72,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           </div>
           <div className="card" id="highlights">
             <div className="cardhead"><h3>Financial highlights</h3><span className="label">Finnhub, trailing 12 months</span></div>
+            {m.filingNote && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 8px" }}>{m.filingNote}</p>}
             <Rows rows={[
               ["Revenue growth (year on year)", pct(f.revGrowth)], ["Revenue per share", n2(f.revPerShare) && `$${n2(f.revPerShare)}`],
               ["Gross margin", pct(f.grossMargin)], ["Operating margin", pct(f.opMargin)], ["Net margin", pct(f.netMargin)],
