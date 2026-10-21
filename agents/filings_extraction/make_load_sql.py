@@ -47,8 +47,10 @@ L.append("insert into public.agent_runs(agent_name,mode,target,model,cost_usd,st
 L.append("for r in select * from _e order by n loop "
          "a := pg_temp.nid(r.s); b := pg_temp.nid(r.g); "
          "if r.ty in ('competes','partners') and a > b then rid := a; a := b; b := rid; end if; "
+         "rid := null; select id into rid from public.relationships where source_id=a and target_id=b and relationship_type=r.ty order by id limit 1; "
+         "if rid is null then "
          "insert into public.relationships(source_id,target_id,relationship_type,exposure_pct,exposure_qualifier,exposure_basis,exposure_as_of,source_type,status,run_id,as_of_date) "
-         "values (a,b,r.ty,r.pct,r.qual,case when r.pct is null then 'none' else 'source_revenue' end,case when r.pct is null then null else '2025-12-31'::date end,'sec_filing','staged',run_id,'2025-12-31') returning id into rid; "
+         "values (a,b,r.ty,r.pct,r.qual,case when r.pct is null then 'none' else 'source_revenue' end,case when r.pct is null then null else '2025-12-31'::date end,'sec_filing','staged',run_id,'2025-12-31') returning id into rid; end if; "
          "for k in 1..array_length(r.qs,1) loop "
          f"insert into public.evidence(relationship_id,document_url,section,quote,quote_found,published_at) "
          f"select rid,{q(URL)},r.sec[k],t,true,{q(a.filed)} from _q where i=r.qs[k]; end loop; end loop;")

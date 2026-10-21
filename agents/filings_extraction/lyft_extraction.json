@@ -1,0 +1,299 @@
+[
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Our main ridesharing competitor in the U.S. and Canada is Uber, and in Europe, our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs and taxicab and livery companies, as well as traditional automotive manufacturers and technology companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bolt",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Bolt",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Our main ridesharing competitor in the U.S. and Canada is Uber, and in Europe, our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs and taxicab and livery companies, as well as traditional automotive manufacturers and technology companies.",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lime",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Lime",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bird",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Bird",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fifteen",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Fifteen",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "nextbike",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "nextbike",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Dott",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Dott",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Baidu",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Baidu",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tesla",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "LYFT",
+  "target": "Tesla",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon",
+  "target": "LYFT",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We have a commercial agreement with Amazon Web Services (“AWS”) for cloud services to help deliver and host our platform.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "On December 30, 2025, we entered into an addendum to our commercial agreement with AWS, pursuant to which we committed to spend an aggregate of at least $562.5 million between January 2026 and December 2030 on AWS services, with a minimum amount of $100 million in each of the five years.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ADT",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "LYFT",
+  "target": "ADT",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Additionally, if a rider or driver needs emergency assistance at any point, Lyft offers tools to help beyond 911 in-app integration with partners like ADT and RapidSOS.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "RapidSOS",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "LYFT",
+  "target": "RapidSOS",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Additionally, if a rider or driver needs emergency assistance at any point, Lyft offers tools to help beyond 911 in-app integration with partners like ADT and RapidSOS.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

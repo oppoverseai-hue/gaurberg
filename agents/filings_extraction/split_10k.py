@@ -1,7 +1,8 @@
 """Cut a 10-K (iXBRL .htm) into plain-text sections by standard Item headings.
 
 Usage: python split_10k.py <10k.htm> <out_dir>
-Keeps: Item 1 (Business), Item 1A (Risk Factors), Item 7 (MD&A), Item 8 notes mentioning customers/partners.
+Keeps: Item 1 (Business), Item 1A (Risk Factors), Item 7 (MD&A) as separate files.
+Item 8 notes are NOT split out: the extractor searches the whole filing text (full.txt, from to_text) for them.
 Writes one .txt per kept section plus sections.json with character counts.
 """
 import json, re, sys
