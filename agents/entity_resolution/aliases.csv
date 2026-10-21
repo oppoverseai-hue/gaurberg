@@ -1,6 +1,6 @@
 alias,canonical,kind,note
 Google,Alphabet,same_entity,"10-K text 'Google (Google Cloud Platform)' means Alphabet; the admin's gold set counts it as Alphabet (2026-10-21)"
-Waymo,Alphabet,subsidiary,"Alphabet unit. Kept as its own node for now; the gold scorer counts Waymo as Alphabet. Admin decision pending: separate node with a parent link, or merge"
+Waymo,Alphabet,same_entity,"Alphabet unit. Admin decision 2026-10-21: Waymo is shown under Alphabet, no separate node. UBER link 31 (staged) moved to Alphabet in the database"
 Amazon Web Services,Amazon,same_entity,"AWS is Amazon's cloud unit; the gold set records the AWS agreement as Amazon (Lyft L12)"
 AWS,Amazon,same_entity,"Short name of Amazon Web Services"
 Intelligent Apps GmbH,Freenow,same_entity,"Legal entity named in the Lyft FY2025 10-K as the company acquired (d/b/a Freenow)"
