@@ -1,0 +1,292 @@
+[
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "AUR",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In January 2021, we acquired Uber’s self-driving unit.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AUMOVIO",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "AUMOVIO",
+  "target": "AUR",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Under the “Hardware-as-a-Service” business model, Aurora will pay for the hardware and related services on a per mile basis.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Pursuant to the Strategic Partnership Agreement, AUMOVIO will, as our “Hardware-as-a-Service” partner, develop the necessary hardware, firmware, fallback system integration, and related services to allow for the integration of the Aurora Driver into production vehicles at OEMs.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tesla",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Tesla",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Zoox/Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Zoox/Amazon",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Motional",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Motional",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Torc Robotics",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Torc Robotics",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Kodiak Robotics",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Kodiak Robotics",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PlusAI",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "PlusAI",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Waabi",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Waabi",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Stack AV",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Stack AV",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mobileye",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Mobileye",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Cantor Fitzgerald",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Cantor Fitzgerald",
+  "target": "AUR",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "On February 14, 2025, we entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC, as sales agents (the “Sales Agents”), pursuant to which we may, from time to time, sell up to an aggregate amount of $500 million of the Company’s Class A common stock through the Sales Agents in an “at-the-market” offering (the “ATM Program”).",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On February 14, 2025, the Company entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC (the “Sales Agents”) pursuant to which the Company may offer and sell, from time to time and at its sole discretion, up to an aggregate amount of $\n500\n million of the Company’s Class A common stock through the Sales Agents in an “at-the-market” offering (the “ATM Program”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "TD Securities",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "TD Securities",
+  "target": "AUR",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "On February 14, 2025, we entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC, as sales agents (the “Sales Agents”), pursuant to which we may, from time to time, sell up to an aggregate amount of $500 million of the Company’s Class A common stock through the Sales Agents in an “at-the-market” offering (the “ATM Program”).",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On February 14, 2025, the Company entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC (the “Sales Agents”) pursuant to which the Company may offer and sell, from time to time and at its sole discretion, up to an aggregate amount of $\n500\n million of the Company’s Class A common stock through the Sales Agents in an “at-the-market” offering (the “ATM Program”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Allen & Company",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Allen & Company",
+  "target": "AUR",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "On February 14, 2025, we entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC, as sales agents (the “Sales Agents”), pursuant to which we may, from time to time, sell up to an aggregate amount of $500 million of the Company’s Class A common stock through the Sales Agents in an “at-the-market” offering (the “ATM Program”).",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "On February 14, 2025, the Company entered into a sales agreement with Cantor Fitzgerald & Co., TD Securities (USA) LLC, and Allen & Company LLC (the “Sales Agents”) pursuant to which the Company may offer and sell, from time to time and at its sole discretion, up to an aggregate amount of $\n500\n million of the Company’s Class A common stock through the Sales Agents in an “at-the-market” offering (the “ATM Program”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PricewaterhouseCoopers",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "PricewaterhouseCoopers",
+  "target": "AUR",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We have served as the Company’s auditor since 2023.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

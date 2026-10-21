@@ -1,0 +1,233 @@
+[
+ {
+  "counterparty": "PACCAR",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AUR",
+  "target": "PACCAR",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In January 2021, we entered into a global strategic partnership with PACCAR.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Volvo",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Volvo",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In March 2021, Volvo selected us as its technology provider to develop and jointly commercialize Level 4 Class 8 trucks in North America.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Toyota",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Toyota",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In February 2021, we announced a long-term, global, and strategic collaboration with Toyota and DENSO, one of the largest global automotive manufacturers and tier-one automotive suppliers, respectively, to build and globally deploy self-driving cars at scale.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "DENSO",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AUR",
+  "target": "DENSO",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In February 2021, we announced a long-term, global, and strategic collaboration with Toyota and DENSO, one of the largest global automotive manufacturers and tier-one automotive suppliers, respectively, to build and globally deploy self-driving cars at scale.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In addition to acquiring Uber’s self-driving unit, we announced a strategic partnership with Uber that connects our technology to the world’s leading ride-hailing platform and strengthens our position to deliver the Aurora Driver broadly.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Uber",
+  "target": "AUR",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In support of our partnership with Uber, and concurrent with the acquisition of Uber’s self-driving unit, Uber invested $400 million in Aurora.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AUMOVIO",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AUR",
+  "target": "AUMOVIO",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In April 2023, we entered into an exclusive partnership with Continental, now AUMOVIO, to deliver the first commercially scalable future generation of the Aurora Driver.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "On April 26, 2023, we entered into the Strategic Partnership Agreement with Continental, now AUMOVIO, which was amended and restated on September 27, 2023.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Amended and Restated Strategic Partnership Agreement, dated September 27, 2023, by and among the Registrant and Aurora Operations, Inc., and Continental Automotive Technologies GmbH and Continental Autonomous Mobility Germany GmbH",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ryder Systems",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AUR",
+  "target": "Ryder Systems",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Further, we continued our strategic collaboration with Ryder Systems, piloting on-site fleet maintenance to support current autonomous freight pilot operations and prepare for commercial operation at scale.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hirschbach",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "AUR",
+  "target": "Hirschbach",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In April 2025, we launched driverless commercial operations with Hirschbach and Uber Freight and have since expanded our driverless customer cohort.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber Freight",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "AUR",
+  "target": "Uber Freight",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "In April 2025, we launched driverless commercial operations with Hirschbach and Uber Freight and have since expanded our driverless customer cohort.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Waymo",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "AUR",
+  "target": "Waymo",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon",
+  "target": "AUR",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "Interruption or failure of Amazon Web Services or other information technology and communications systems that we rely upon could materially and adversely affect our business, financial condition and results of operations.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "We currently rely on Amazon Web Services (“AWS”) to host our technology and support our technology development.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

@@ -1,0 +1,59 @@
+{
+ "ticker": "AUR",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+ "chunks": 4,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 42618,
+   "cache_read_tokens": 0,
+   "output_tokens": 3319,
+   "cost_usd": 0.2066173,
+   "seconds": 18.1,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27692,
+   "cache_read_tokens": 12600,
+   "output_tokens": 430,
+   "cost_usd": 0.11905120000000001,
+   "seconds": 5.6,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29824,
+   "cache_read_tokens": 12600,
+   "output_tokens": 790,
+   "cost_usd": 0.13139289999999998,
+   "seconds": 7.4,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 25785,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1590,
+   "cost_usd": 0.122832,
+   "seconds": 16.5,
+   "is_error": false,
+   "chunk": 4
+  }
+ ],
+ "totals": {
+  "input_tokens": 8,
+  "cache_creation_tokens": 125919,
+  "cache_read_tokens": 37800,
+  "output_tokens": 6129,
+  "cost_usd": 0.5798934,
+  "seconds": 47.6
+ },
+ "edges": 28,
+ "quotes_not_found": 0
+}
