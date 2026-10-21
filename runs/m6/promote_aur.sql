@@ -1,5 +1,5 @@
 -- M6 Aurora: apply the parent rule to two staged links, then promote all 20 as Curated.
--- Admin approved promotion in chat on 2026-10-21 (Keep on all Aurora links). Touches only run 17 rows (ids 82 to 101).
+-- Admin approved in chat on 2026-10-21 and ran this block in the Supabase SQL editor the same day (100 promoted, 1 staged afterwards). Touches only run 17 rows (ids 82 to 101).
 do $do$
 declare aur bigint; amz bigint; ub bigint;
 begin
