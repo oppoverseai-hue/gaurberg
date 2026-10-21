@@ -1,0 +1,66 @@
+[
+ {
+  "counterparty": "Activision Blizzard",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "MSFT",
+  "target": "Activision Blizzard",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, in \nOctober 2023 we completed our acquisition of\nActivision Blizzard\n, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "MSFT",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Additionally, we have a long-term strategic partnership with OpenAI.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We have a long-term strategic partnership with OpenAI which was originally established in 2019.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We have a long-term strategic partnership with OpenAI.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "MSFT",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

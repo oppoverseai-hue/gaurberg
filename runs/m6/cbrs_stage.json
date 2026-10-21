@@ -1,0 +1,715 @@
+[
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "CBRS",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In January 2026, we announced a multi-year deal with OpenAI valued at more than $20 billion dollars. OpenAI has agreed to deploy 750 megawatts of Cerebras\u2019s high-speed AI compute, and OpenAI and Cerebras have agreed to co-design future models for future Cerebras hardware.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "a material reduction in purchases by OpenAI, G42, MBZUAI, or AWS, or the anticipation of such events",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "OpenAI has committed to purchase 750MW of Cerebras inference compute capacity over the next three years.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In December 2025, we entered into the MRA with OpenAI, under which OpenAI agreed to purchase the Committed Capacity and related services.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In December 2025, the Company entered into a Master Relationship Agreement (the \u201cMRA\u201d) with OpenAI OpCo, LLC (\u201cOpenAI\u201d) to provide 750MW of AI inference compute capacity that OpenAI is contractually committed to purchase (the \u201cCommitted Capacity\u201d) and related services over a multi-year term.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Concurrent with the MRA, as discussed in Note 5 \u2013 Revenue, the Company issued to OpenAI a warrant to\npurchase up to an aggregate of up to 33,445,026 shares of the Company\u2019s Class N common stock at an exercise\nprice of $0.00001 per share (the \u201cOpenAI Warrant\u201d).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In March 2026, we started a multi-year partnership with AWS to bring fast inference to an even bigger scale through global distribution.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The term sheet, which is binding with respect to pricing, exclusivity, minimum capacity, and certain other protections in favor of AWS, contemplates a multi-year strategic collaboration to deploy AI inference compute infrastructure and related services, and includes a binding initial multi-year lease.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "For example, our high-speed inference services are available through partners, including AWS Marketplace, Microsoft Marketplace, IBM watsonx Model Gateway, Vercel AI Gateway, OpenRouter, and Hugging Face, enabling seamless adoption within existing workflows.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "AWS, the world\u2019s leading hyperscale cloud, has signed a binding term sheet with us to become the first hyperscaler\nto deploy Cerebras in its own data centers, providing massive distribution to a broad base of enterprise customers.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Pursuant to the term sheet, we will create a co-designed, disaggregated inference-serving solution that will integrate AWS Trainium3 chips with Cerebras CS-3 systems, connected via high-bandwidth networking, to partition inference workloads across Trainium3 and CS-3.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In March 2026, the Company entered into a term sheet with Amazon Web Services, Inc. for a multi-year\nstrategic collaboration to deploy AI inference compute infrastructure and related services.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "With respect to hardware, we compete against semiconductor companies such as NVIDIA Corporation, a dominant market leader, Advanced Micro Devices, Inc., Intel Corporation, as well as AI accelerators developed by hyperscalers and private companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "G42",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "CBRS",
+  "target": "G42",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Group 42 Holding Ltd (together with its affiliates, \u201cG42\u201d) accounted for 24.0% and 85.0% of our total revenue for the years ended December 31, 2025 and 2024, respectively",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "a material reduction in purchases by OpenAI, G42, MBZUAI, or AWS, or the anticipation of such events",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "G42 accounted for 24% and 85% of our total revenue for the years ended December 31, 2025 and 2024, respectively.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "primarily due to\n increased services and support revenues for the larger installed\nbase\n of on-premises systems sold to our strategic partners G42 and MBZUAI, and growing demand for our cloud\ninference services in the second half of 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "The Company recorded a customer warrant asset of $152.4 million as of December 31, 2025, all of which will\nbe recognized as a reduction of revenue in the consolidated statement of operations in proportion to the amount of\nrelated revenues, which could occur until October 2031.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 24.0,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "MBZUAI",
+  "entity_type": "other",
+  "type": "sells_to",
+  "source": "CBRS",
+  "target": "MBZUAI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "in the year ended December 31, 2025, Mohamed bin Zayed University of Artificial Intelligence (\u201cMBZUAI\u201d) accounted for 62.0% of our total revenue.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "a material reduction in purchases by OpenAI, G42, MBZUAI, or AWS, or the anticipation of such events",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "G42 and MBZUAI have been significant customers. For the year ended December 31, 2025, MBZUAI accounted for 62% of our total revenue.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "This increase was primarily due to demand for on-premises hardware solutions from our\nstrategic partner MBZUAI.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": 62.0,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "TSMC",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "TSMC",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We are currently dependent on TSMC to produce all of the wafers that we use in our products.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We rely heavily on our foundry partner, currently TSMC, for successful transitions to next generation products and for the manufacture of all of our wafers.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "TSMC, a leading semiconductor foundry, fabricates our cutting-edge WSEs.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AMD",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "With respect to hardware, we compete against semiconductor companies such as NVIDIA Corporation, a dominant market leader, Advanced Micro Devices, Inc., Intel Corporation, as well as AI accelerators developed by hyperscalers and private companies.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Our hardware primarily competes against solutions from\nNVIDIA Corporation, Advanced Micro Devices, Inc., Intel Corporation, as well as AI accelerators developed by\nhyperscalers and private companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Intel",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "Intel",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "With respect to hardware, we compete against semiconductor companies such as NVIDIA Corporation, a dominant market leader, Advanced Micro Devices, Inc., Intel Corporation, as well as AI accelerators developed by hyperscalers and private companies.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Our hardware primarily competes against solutions from\nNVIDIA Corporation, Advanced Micro Devices, Inc., Intel Corporation, as well as AI accelerators developed by\nhyperscalers and private companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as Amazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle Corporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as\nAmazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle\nCorporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as Amazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle Corporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as\nAmazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle\nCorporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as Amazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle Corporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as\nAmazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle\nCorporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Oracle",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "Oracle",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as Amazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle Corporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as\nAmazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle\nCorporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "CoreWeave",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "CBRS",
+  "target": "CoreWeave",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as Amazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle Corporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "We also compete against full-service cloud service providers such as\nAmazon.com, Inc. (AWS), Microsoft Corporation (Azure), Alphabet Inc. (Google Cloud Platform), and Oracle\nCorporation, as well as AI-optimized specialized clouds such as CoreWeave, Inc. and other neo-clouds.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "G42",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "G42",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In particular,\nthe war in the Middle East, where our \nstrategic partners G42 and MBZUAI are headquartered\n, may negatively\nimpact our business, including exposing local infrastructure and operations to heightened risk.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "D:4 (which includes the United Arab Emirates, where our strategic partners, G42 and MBZUAI, are headquartered), and D:5.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "MBZUAI",
+  "entity_type": "other",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "MBZUAI",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In particular,\nthe war in the Middle East, where our \nstrategic partners G42 and MBZUAI are headquartered\n, may negatively\nimpact our business, including exposing local infrastructure and operations to heightened risk.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "D:4 (which includes the United Arab Emirates, where our strategic partners, G42 and MBZUAI, are headquartered), and D:5.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "OpenAI",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In December 2025, we issued the OpenAI Warrant to OpenAI in connection with the execution of the MRA.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Pursuant to the OpenAI Warrant, OpenAI has the right to purchase up to 33,445,026 shares of our Class N common stock at an exercise price of $0.00001 per share.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "Concurrent with the MRA, as discussed in Note 5 \u2013 Revenue, the Company issued to OpenAI a warrant to\npurchase up to an aggregate of up to 33,445,026 shares of the Company\u2019s Class N common stock at an exercise\nprice of $0.00001 per share (the \u201cOpenAI Warrant\u201d).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "G42",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "G42",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "In April 2026, we issued a warrant to G42 to purchase an aggregate of up to 1,655,975 shares of our Class N common stock, with an exercise price of $0.01 per share.",
+    "quote_found": true
+   },
+   {
+    "section": "notes",
+    "quote": "In December 2025, the Company issued a warrant to G42 to purchase an aggregate of up to \n1,857,516\n shares of\nClass N Common Stock at an exercise price of $0.01 per share (\u201cthe G42 Warrant\u201d).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, our high-speed inference services are available through partners, including AWS Marketplace, Microsoft Marketplace, IBM watsonx Model Gateway, Vercel AI Gateway, OpenRouter, and Hugging Face, enabling seamless adoption within existing workflows.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "IBM",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "IBM",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, our high-speed inference services are available through partners, including AWS Marketplace, Microsoft Marketplace, IBM watsonx Model Gateway, Vercel AI Gateway, OpenRouter, and Hugging Face, enabling seamless adoption within existing workflows.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Vercel",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "Vercel",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, our high-speed inference services are available through partners, including AWS Marketplace, Microsoft Marketplace, IBM watsonx Model Gateway, Vercel AI Gateway, OpenRouter, and Hugging Face, enabling seamless adoption within existing workflows.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenRouter",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "OpenRouter",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, our high-speed inference services are available through partners, including AWS Marketplace, Microsoft Marketplace, IBM watsonx Model Gateway, Vercel AI Gateway, OpenRouter, and Hugging Face, enabling seamless adoption within existing workflows.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hugging Face",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "CBRS",
+  "target": "Hugging Face",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "For example, our high-speed inference services are available through partners, including AWS Marketplace, Microsoft Marketplace, IBM watsonx Model Gateway, Vercel AI Gateway, OpenRouter, and Hugging Face, enabling seamless adoption within existing workflows.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ASE",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "ASE",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Advanced Semiconductor\nEngineering (\u201cASE\u201d) handles specialized processes, including the deposition of redistribution layers, and we\nmanage final wafer packaging, assembly, and testing in our Sunnyvale, California facility.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "U.S. Department of Defense",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "CBRS",
+  "target": "U.S. Department of Defense",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Our on-premises customers\ninclude large enterprises, national laboratories, the U.S. Department of Defense, and Sovereign AI initiatives.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GSK",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "CBRS",
+  "target": "GSK",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "GSK uses Cerebras to speed up drug discovery.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AlphaSense",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "CBRS",
+  "target": "AlphaSense",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Al-native companies like AlphaSense use Cerebras to turn speed into actionable intelligence.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alpha Wave",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Alpha Wave",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Entities affiliated with Alpha Wave collectively beneficially own more than 5% of our outstanding capital stock.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Benchmark",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Benchmark",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Entities affiliated with Benchmark collectively beneficially own more than 5% of our outstanding capital stock.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fidelity",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Fidelity",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "Entities affiliated with Fidelity collectively beneficially own more than 5% of our outstanding capital stock.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Eclipse",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Eclipse",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "certain holders of our capital stock, including entities affiliated with Alpha Wave, Benchmark, Eclipse, Fidelity, and Foundation Capital, each of which hold more than 5% of our outstanding capital stock, have the right to demand that we file a registration statement.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Foundation Capital",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Foundation Capital",
+  "target": "CBRS",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "certain holders of our capital stock, including entities affiliated with Alpha Wave, Benchmark, Eclipse, Fidelity, and Foundation Capital, each of which hold more than 5% of our outstanding capital stock, have the right to demand that we file a registration statement.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/0002021728/000162828026035214/cerebras-424b4.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

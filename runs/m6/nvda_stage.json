@@ -1,0 +1,356 @@
+[
+ {
+  "counterparty": "TSMC",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "TSMC",
+  "target": "NVDA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Samsung",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Samsung",
+  "target": "NVDA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We utilize foundries, such as Taiwan Semiconductor Manufacturing Company Limited, or TSMC, and Samsung Electronics Co., Ltd., or Samsung, to produce our semiconductor wafers. We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SK Hynix",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "SK Hynix",
+  "target": "NVDA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Micron",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Micron",
+  "target": "NVDA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We purchase memory from SK Hynix Inc., Micron Technology, Inc., and Samsung.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hon Hai",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Hon Hai",
+  "target": "NVDA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Wistron",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Wistron",
+  "target": "NVDA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fabrinet",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Fabrinet",
+  "target": "NVDA",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "We engage with independent subcontractors and contract manufacturers such as Hon Hai Precision Industry Co., Ltd., Wistron Corporation, and Fabrinet to perform assembly, testing and packaging of our final products.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mellanox",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "NVDA",
+  "target": "Mellanox",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our acquisition of Mellanox in 2020 expanded our offerings to include networking, enabled our platforms to be data center scale, and led to the introduction of a new processor class \u2013 the data processing unit, or DPU.",
+    "quote_found": true
+   },
+   {
+    "section": "risk_factors",
+    "quote": "Regulators in China have inquired about our sales and efforts to supply the China market and our fulfillment of the commitments we entered at the close of our Mellanox acquisition.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Baidu",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Baidu",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our current competitors include:",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "large cloud services companies with internal teams designing hardware and software that incorporate accelerated or AI computing functionality as part of their internal solutions or platforms, such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our current competitors include:",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "large cloud services companies with internal teams designing hardware and software that incorporate accelerated or AI computing functionality as part of their internal solutions or platforms, such as Alibaba Group, Alphabet Inc., Amazon, Inc., or Amazon, Baidu, Inc., Huawei, and Microsoft Corporation, or Microsoft;",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ambarella",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Ambarella",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our current competitors include:",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "suppliers of hardware and software for SoC products that are used in servers or embedded into automobiles, autonomous machines, and gaming devices, such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Broadcom",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Broadcom",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our current competitors include:",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "suppliers of hardware and software for SoC products that are used in servers or embedded into automobiles, autonomous machines, and gaming devices, such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Qualcomm",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Qualcomm",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "Our current competitors include:",
+    "quote_found": true
+   },
+   {
+    "section": "business",
+    "quote": "suppliers of hardware and software for SoC products that are used in servers or embedded into automobiles, autonomous machines, and gaming devices, such as Ambarella, Inc., AMD, Broadcom, Intel, Qualcomm Incorporated, Renesas Electronics Corporation, and Samsung, or companies with internal teams designing SoC products for their own products and services, such as Tesla, Inc.;",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hewlett Packard Enterprise",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Hewlett Packard Enterprise",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "networking products consisting of switches, network adapters (including DPUs), and cable solutions (including optical modules) include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lumentum",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Lumentum",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "networking products consisting of switches, network adapters (including DPUs), and cable solutions (including optical modules) include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Marvell",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "NVDA",
+  "target": "Marvell",
+  "evidence": [
+   {
+    "section": "business",
+    "quote": "networking products consisting of switches, network adapters (including DPUs), and cable solutions (including optical modules) include such as AMD, Arista Networks, Broadcom, Cisco Systems, Inc., Hewlett Packard Enterprise Company, Huawei, Intel, Lumentum Holdings Inc., and Marvell Technology, Inc, as well as internal teams of system vendors and large cloud services companies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "OpenAI",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "NVDA",
+  "target": "OpenAI",
+  "evidence": [
+   {
+    "section": "risk_factors",
+    "quote": "We are finalizing an investment and partnership agreement with OpenAI.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Intel",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "NVDA",
+  "target": "Intel",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "The change in Other income, net, compared to fiscal year 2025, was primarily driven by unrealized gains in non-marketable and publicly-held equity securities, including gains from our previously announced investment in Intel\u2019s common stock.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

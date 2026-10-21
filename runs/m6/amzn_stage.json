@@ -1,0 +1,56 @@
+[
+ {
+  "counterparty": "Anthropic",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "AMZN",
+  "target": "Anthropic",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "which primarily reflect investments in convertible notes from Anthropic, PBC (\u201cAnthropic\u201d), including $2.7 billion we invested in 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Rivian",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "AMZN",
+  "target": "Rivian",
+  "evidence": [
+   {
+    "section": "mdna",
+    "quote": "The net loss of $(2.3) billion in 2024 is primarily from the marketable securities loss from our equity investment in Rivian Automotive, Inc. (\u201cRivian\u201d).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "1Life Healthcare (One Medical)",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "AMZN",
+  "target": "1Life Healthcare (One Medical)",
+  "evidence": [
+   {
+    "section": "notes",
+    "quote": "On February 22, 2023, we acquired 1Life Healthcare, Inc. (One Medical), for cash consideration of approximately $\n3.5\n billion, net of cash acquired, to provide healthcare options for customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]
