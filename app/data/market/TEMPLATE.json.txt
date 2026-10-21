@@ -1,0 +1,14 @@
+Copy this to data/market/<TICKER>.json (for example UBER.json), remove the notes, and fill what you have. Every field is optional.
+Anything you type is shown as saved data "provided by admin" when "source" is "manual". Figures are not estimated if left out: the page says "Not available".
+Market cap, shares and avgVolume are in millions. Margins and growth are percent numbers (12.5 means 12.5%). t is a unix time in seconds.
+
+{
+  "saved_at": "2026-10-21",
+  "source": "manual",
+  "quote": { "price": 0, "change": 0, "changePct": 0, "high": 0, "low": 0, "open": 0, "prevClose": 0, "t": 1761000000 },
+  "daily": [ { "t": 1761000000, "c": 0 } ],
+  "weekly": [ { "t": 1761000000, "c": 0 } ],
+  "fundamentals": { "marketCap": 0, "pe": 0, "beta": 0, "high52": 0, "low52": 0, "shares": 0, "eps": 0, "avgVolume": 0, "revGrowth": 0, "grossMargin": 0, "opMargin": 0, "netMargin": 0, "revPerShare": 0, "currentRatio": 0, "debtEquity": 0 },
+  "profile": { "exchange": "NYSE", "industry": "", "website": "", "employees": 0, "description": "" },
+  "nextEarnings": "2026-11-05"
+}

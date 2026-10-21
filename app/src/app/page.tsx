@@ -27,10 +27,10 @@ export default async function Home() {
             <span className="muted">{access.email} ({access.role})</span>
             <form action="/auth/signout" method="post"><button className="btn">Sign out</button></form>
           </div>
-          <form action="/search" method="get">
+          <form action="/go" method="get">
             <input type="search" name="q" placeholder="Search a company or ticker, e.g. Uber" autoFocus />
           </form>
-          <p className="muted">Try: Uber</p>
+          <p className="muted">Try: Uber, Uber chart, Uber map, or help</p>
         </>
       )}
     </main>
