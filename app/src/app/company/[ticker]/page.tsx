@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
-import { getHistory, getQuote } from "@/lib/finnhub";
+import { fmtBig, fmtShares, getFundamentals, getHistory, getQuote } from "@/lib/finnhub";
 import PriceChart from "@/components/PriceChart";
 import { isMapped, sideOf, type Rel } from "@/lib/graph";
 
@@ -17,8 +17,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const supabase = await supabaseServer();
   const { data: company } = await supabase.from("companies").select("id,ticker,name,segment,size_tier").eq("ticker", ticker).maybeSingle();
   if (!company) notFound();
-  const [q, c, rr] = await Promise.all([
-    getQuote(ticker), getHistory(ticker),
+  const [q, c, fund, rr] = await Promise.all([
+    getQuote(ticker), getHistory(ticker), getFundamentals(ticker),
     supabase.from("relationships").select(SEL).or(`source_id.eq.${company.id},target_id.eq.${company.id}`),
   ]);
   const rels = (rr.data ?? []) as unknown as Rel[];
@@ -79,6 +79,20 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
         </section>
         <aside className="stack">
           <div className="card">
+            <div className="cardhead"><h3>Quick fundamentals</h3><span className="label">Finnhub</span></div>
+            {fund.ok ? (
+              <dl className="fund">
+                {([
+                  ["Market cap", fund.f.marketCap == null ? null : fmtBig(fund.f.marketCap)],
+                  ["P/E (trailing)", fund.f.pe == null ? null : fund.f.pe.toFixed(2)],
+                  ["Beta", fund.f.beta == null ? null : fund.f.beta.toFixed(2)],
+                  ["52-week range", fund.f.low52 == null || fund.f.high52 == null ? null : `${fund.f.low52.toFixed(2)} - ${fund.f.high52.toFixed(2)}`],
+                  ["Shares outstanding", fund.f.shares == null ? null : fmtShares(fund.f.shares)],
+                ] as [string, string | null][]).map(([k, v]) => <div key={k}><dt>{k}</dt><dd className={v == null ? "muted" : ""}>{v ?? "Not available"}</dd></div>)}
+              </dl>
+            ) : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {fund.reason}</p></div>}
+          </div>
+          <div className="card" style={{ marginTop: 24 }}>
             <div className="cardhead"><h3>Key relationships</h3><span className="tag">{rels.length} links</span></div>
             {rels.length === 0 ? <p className="muted">No disclosed relationships found for this company.</p> : (
               <>
@@ -94,7 +108,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           </div>
         </aside>
       </div>
-      <p className="note">Prices from Finnhub, delayed or end-of-day on the free plan.</p>
+      <p className="note">Prices and fundamentals from Finnhub, delayed or end-of-day on the free plan.</p>
     </main>
   );
 }

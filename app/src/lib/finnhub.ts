@@ -57,3 +57,28 @@ export async function getHistory(symbol: string, days = 365): Promise<Candles> {
     return { ok: false, reason: "History service is unreachable." };
   }
 }
+
+export type Fundamentals = { marketCap: number | null; pe: number | null; beta: number | null; high52: number | null; low52: number | null; shares: number | null };
+
+const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
+
+// Fundamentals from Finnhub's free endpoints (/stock/metric and /stock/profile2). Values are as Finnhub reports them; missing ones stay null.
+// Market cap and shares come back in millions.
+export async function getFundamentals(symbol: string): Promise<{ ok: true; f: Fundamentals } | { ok: false; reason: string }> {
+  const [m, p] = await Promise.all([call("/stock/metric", { symbol, metric: "all" }), call("/stock/profile2", { symbol })]);
+  if (!m.ok && !p.ok) return m;
+  const mm = (m.ok ? m.json?.metric : null) ?? {};
+  const pp = (p.ok ? p.json : null) ?? {};
+  const f: Fundamentals = {
+    marketCap: num(pp.marketCapitalization) ?? num(mm.marketCapitalization),
+    pe: num(mm.peTTM) ?? num(mm.peBasicExclExtraTTM),
+    beta: num(mm.beta),
+    high52: num(mm["52WeekHigh"]), low52: num(mm["52WeekLow"]),
+    shares: num(pp.shareOutstanding),
+  };
+  if (Object.values(f).every((v) => v === null)) return { ok: false, reason: "No fundamentals returned for this company." };
+  return { ok: true, f };
+}
+
+export const fmtBig = (millions: number) => (millions >= 1e6 ? `$${(millions / 1e6).toFixed(2)}T` : millions >= 1e3 ? `$${(millions / 1e3).toFixed(2)}B` : `$${millions.toFixed(0)}M`);
+export const fmtShares = (millions: number) => (millions >= 1e3 ? `${(millions / 1e3).toFixed(2)}B` : `${millions.toFixed(1)}M`);

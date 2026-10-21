@@ -89,7 +89,7 @@ export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; 
           <div className="info">{rels.length} links, {nodes.length} companies<small>Left: into {focal.name} · Right: out of it · Above: competitors · Below: partners</small></div>
         <svg viewBox={`0 0 ${W} ${H}`} className="map" role="img" aria-label={`Ecosystem map of ${focal.name}`}>
           <defs>
-            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent)" /></marker>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent)" /></marker>
           </defs>
           {placed.out.map(({ node, x, y }) => node.links.map((r, k) => {
             const toFocal = r.target.id === focal.id;
