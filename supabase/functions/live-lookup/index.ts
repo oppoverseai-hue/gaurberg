@@ -11,6 +11,11 @@ const json = (b: unknown, s = 200) => new Response(JSON.stringify(b), { status: 
 const admin = () => createClient(URLS.url, URLS.svc);
 const norm = (s: string) => s.replace(/[’‘]/g, "'").replace(/[“”]/g, '"').replace(/\s+/g, " ").trim().toLowerCase();
 
+// Units and brands show under their parent (parent rule); trustees, auditors and press mentions are not business links.
+const PARENT: Record<string, string> = { "aws": "Amazon", "amazon web services": "Amazon", "azure": "Microsoft", "microsoft azure": "Microsoft", "gcp": "Alphabet", "google cloud": "Alphabet", "google cloud platform": "Alphabet" };
+const NOISE = /trust company|national association|indenture|trustee|\bllp\b|kpmg|deloitte|pricewaterhouse|ernst & young|forbes/i;
+const core = (s: string) => norm(s).replace(/[.,]/g, "").replace(/\b(inc|corp|corporation|llc|ltd|plc|co|company|limited)\b/g, "").replace(/\s+/g, " ").trim();
+
 const RULES = `You extract company relationships from SEC filings for a market-data product. Output JSON only.
 Find every relationship in the filing text between the focal company and another NAMED company or organisation.
 Allowed types: supplies (source = supplier, target = customer), sells_to (source = seller, target = buyer), partners (focal as source), competes (focal as source), invests (source = investor, target = investee), acquires (source = acquirer, target = acquired).
@@ -110,14 +115,18 @@ async function run(id: number, q: { ticker: string; name: string; cik: string })
     runId = ar.data?.id ?? null;
     let saved = 0;
     for (const e of edges) {
-      let other = (await db.from("companies").select("id").ilike("name", e.counterparty.replace(/[%_]/g, "")).limit(1)).data?.[0];
+      const nm = PARENT[norm(e.counterparty)] ?? e.counterparty;
+      if (NOISE.test(nm)) continue;
+      const c = core(nm).replace(/[%_]/g, "");
+      const cands = (await db.from("companies").select("id,name").ilike("name", `%${c}%`).limit(20)).data ?? [];
+      let other = cands.find((x) => core(x.name) === core(nm));
       if (!other) {
-        const seed = (await db.from("companies").select("id").ilike("name", `${e.counterparty.replace(/[%_]/g, "")} %`).eq("is_seed", true).limit(2)).data;
+        const seed = (await db.from("companies").select("id").ilike("name", `${c} %`).eq("is_seed", true).limit(2)).data;
         if (seed?.length === 1) other = seed[0];
       }
       if (!other) {
         const t = ["public_company", "private_company", "institution", "organization"].includes(e.entity_type ?? "") ? e.entity_type : "organization";
-        other = (await db.from("companies").insert({ name: e.counterparty, entity_type: t, is_seed: false }).select("id").single()).data!;
+        other = (await db.from("companies").insert({ name: nm, entity_type: t, is_seed: false }).select("id").single()).data!;
       }
       let a = e.source === "FOCAL" ? focal!.id : other.id, b = e.target === "FOCAL" ? focal!.id : other.id;
       if (a === b) continue;
