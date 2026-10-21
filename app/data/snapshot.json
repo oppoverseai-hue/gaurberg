@@ -1,1 +1,3365 @@
-{"generated_at":"2026-10-21","companies":[{"id":1,"ticker":"UBER","name":"Uber Technologies","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"large"},{"id":3,"ticker":"AAPL","name":"Apple","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"large"},{"id":4,"ticker":"META","name":"Meta Platforms","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"large"},{"id":5,"ticker":"MSFT","name":"Microsoft","is_seed":true,"entity_type":"public_company","segment":"business","size_tier":"large"},{"id":7,"ticker":"PLTR","name":"Palantir Technologies","is_seed":true,"entity_type":"public_company","segment":"business","size_tier":"large"},{"id":8,"ticker":"NVDA","name":"NVIDIA","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"large"},{"id":9,"ticker":"TSM","name":"Taiwan Semiconductor Manufacturing","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"large"},{"id":10,"ticker":"AMD","name":"Advanced Micro Devices","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"large"},{"id":11,"ticker":"DASH","name":"DoorDash","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"mid"},{"id":16,"ticker":"NET","name":"Cloudflare","is_seed":true,"entity_type":"public_company","segment":"business","size_tier":"mid"},{"id":17,"ticker":"CRWV","name":"CoreWeave","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"mid"},{"id":18,"ticker":"CBRS","name":"Cerebras Systems","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"mid"},{"id":19,"ticker":"NBIS","name":"Nebius Group","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"mid"},{"id":20,"ticker":"LYFT","name":"Lyft","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"small"},{"id":26,"ticker":"APLD","name":"Applied Digital","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"small"},{"id":27,"ticker":null,"name":"Ola","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":28,"ticker":null,"name":"RXO","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":29,"ticker":null,"name":"C.H. Robinson","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":30,"ticker":null,"name":"Echo Global Logistics","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":31,"ticker":null,"name":"Mobility Drivers","is_seed":false,"entity_type":"segment_group","segment":null,"size_tier":null},{"id":32,"ticker":null,"name":"Delivery Hero","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":33,"ticker":"LCID","name":"Lucid","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"small"},{"id":34,"ticker":"GRAB","name":"Grab","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"mid"},{"id":35,"ticker":null,"name":"Gopuff","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":36,"ticker":null,"name":"Didi","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":37,"ticker":null,"name":"DHL","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":38,"ticker":null,"name":"Rappi","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":39,"ticker":null,"name":"UGT","is_seed":false,"entity_type":"organization","segment":null,"size_tier":null},{"id":40,"ticker":"GOOGL","name":"Alphabet","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"large"},{"id":41,"ticker":"CART","name":"Instacart","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"mid"},{"id":42,"ticker":"LIME","name":"Lime","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"small"},{"id":43,"ticker":"TSLA","name":"Tesla","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"large"},{"id":44,"ticker":null,"name":"ITF","is_seed":false,"entity_type":"organization","segment":null,"size_tier":null},{"id":45,"ticker":null,"name":"Bolt","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":46,"ticker":null,"name":"Riders","is_seed":false,"entity_type":"segment_group","segment":null,"size_tier":null},{"id":47,"ticker":"AMZN","name":"Amazon","is_seed":true,"entity_type":"public_company","segment":"consumer","size_tier":"large"},{"id":49,"ticker":null,"name":"Nuro","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":50,"ticker":null,"name":"Couriers","is_seed":false,"entity_type":"segment_group","segment":null,"size_tier":null},{"id":51,"ticker":null,"name":"Moove","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":52,"ticker":null,"name":"Arizona State University","is_seed":false,"entity_type":"organization","segment":null,"size_tier":null},{"id":53,"ticker":"AUR","name":"Aurora","is_seed":true,"entity_type":"public_company","segment":"business","size_tier":"small"},{"id":54,"ticker":null,"name":"Total Quality Logistics","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":55,"ticker":null,"name":"XPO","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":56,"ticker":null,"name":"Waabi","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":57,"ticker":null,"name":"Just Eat Takeaway","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":58,"ticker":null,"name":"Magnetar","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":59,"ticker":null,"name":"OpenAI","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":60,"ticker":"INTC","name":"Intel","is_seed":true,"entity_type":"public_company","segment":"infrastructure","size_tier":"large"},{"id":61,"ticker":"ORCL","name":"Oracle","is_seed":true,"entity_type":"public_company","segment":"business","size_tier":"large"},{"id":62,"ticker":null,"name":"RapidSOS","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":63,"ticker":null,"name":"Baidu","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":64,"ticker":null,"name":"Bird","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":65,"ticker":null,"name":"Fifteen","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":66,"ticker":null,"name":"ADT","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":67,"ticker":null,"name":"Dott","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":68,"ticker":null,"name":"nextbike","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":69,"ticker":null,"name":"OpenPipe","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":70,"ticker":null,"name":"Monolith","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":71,"ticker":null,"name":"Marimo","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":72,"ticker":null,"name":"Weights & Biases","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":73,"ticker":null,"name":"Freenow","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":74,"ticker":null,"name":"Flexdrive","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":75,"ticker":null,"name":"TBR","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":76,"ticker":null,"name":"Getir","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":77,"ticker":null,"name":"e&","is_seed":false,"entity_type":"public_company","segment":null,"size_tier":null},{"id":78,"ticker":null,"name":"Careem Technologies","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":79,"ticker":null,"name":"Transplace","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":80,"ticker":null,"name":"Cornershop","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":81,"ticker":null,"name":"Trendyol GO","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":82,"ticker":null,"name":"Drizly","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":83,"ticker":null,"name":"Postmates","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":84,"ticker":null,"name":"Pacific Valley Insurance Company, Inc.","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":85,"ticker":null,"name":"Transopco","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null},{"id":86,"ticker":null,"name":"PricewaterhouseCoopers","is_seed":false,"entity_type":"private_company","segment":null,"size_tier":null}],"rels":[{"id":1,"relationship_type":"competes","source_id":1,"target_id":45,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":2,"relationship_type":"competes","source_id":1,"target_id":36,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":3,"relationship_type":"competes","source_id":1,"target_id":20,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true},{"quote":"Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"Our main ridesharing competitor in the U.S. and Canada is Uber, and in Europe, our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs and taxicab and livery companies, as well as traditional automotive manufacturers and technology companies.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":4,"relationship_type":"competes","source_id":1,"target_id":27,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":5,"relationship_type":"competes","source_id":1,"target_id":40,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":6,"relationship_type":"competes","source_id":1,"target_id":47,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true},{"quote":"Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":7,"relationship_type":"competes","source_id":1,"target_id":43,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":8,"relationship_type":"competes","source_id":1,"target_id":11,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":9,"relationship_type":"competes","source_id":1,"target_id":41,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":10,"relationship_type":"competes","source_id":1,"target_id":35,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":11,"relationship_type":"competes","source_id":1,"target_id":38,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":12,"relationship_type":"competes","source_id":1,"target_id":32,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":13,"relationship_type":"competes","source_id":1,"target_id":57,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":14,"relationship_type":"competes","source_id":1,"target_id":29,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":15,"relationship_type":"competes","source_id":1,"target_id":54,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":16,"relationship_type":"competes","source_id":1,"target_id":28,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":17,"relationship_type":"competes","source_id":1,"target_id":55,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":18,"relationship_type":"competes","source_id":1,"target_id":30,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":19,"relationship_type":"competes","source_id":1,"target_id":37,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":20,"relationship_type":"invests","source_id":1,"target_id":53,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"a $802 million net unrealized loss on our Aurora investment","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"mdna","published_at":"2026-02-13","quote_found":true},{"quote":"a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":21,"relationship_type":"invests","source_id":1,"target_id":36,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"a $409 million net unrealized gain on our Didi investment","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"mdna","published_at":"2026-02-13","quote_found":true},{"quote":"a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":22,"relationship_type":"invests","source_id":1,"target_id":34,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"a $145 million net unrealized gain on our Grab investment","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"mdna","published_at":"2026-02-13","quote_found":true},{"quote":"a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":23,"relationship_type":"invests","source_id":1,"target_id":33,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"a $155 million net unrealized loss on our Lucid investment","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"mdna","published_at":"2026-02-13","quote_found":true}]},{"id":24,"relationship_type":"invests","source_id":1,"target_id":56,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"a $179 million net unrealized gain on our Waabi investment","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"mdna","published_at":"2026-02-13","quote_found":true}]},{"id":26,"relationship_type":"invests","source_id":1,"target_id":51,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"we entered into and completed a series of agreements with Moove, including (i) an equity investment, through preferred shares, (ii) a term loan to Moove, and (iii) a commercial partnership agreement","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":27,"relationship_type":"partners","source_id":1,"target_id":51,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"we entered into and completed a series of agreements with Moove, including (i) an equity investment, through preferred shares, (ii) a term loan to Moove, and (iii) a commercial partnership agreement","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":28,"relationship_type":"partners","source_id":1,"target_id":52,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"our partnership with Arizona State University","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":29,"relationship_type":"partners","source_id":1,"target_id":44,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We renewed our agreement with the ITF (International Transport Workers’ Federation)","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":30,"relationship_type":"partners","source_id":1,"target_id":39,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Uber Eats and the UGT (Unión General de Trabajadores) signed a memorandum of understanding","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":31,"relationship_type":"supplies","source_id":40,"target_id":1,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Waymo has introduced a commercialized ridehailing fleet of autonomous vehicles on its own platform in addition to a fleet of autonomous vehicles that it makes available through our platform","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":32,"relationship_type":"supplies","source_id":33,"target_id":1,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"we agreed to purchase, or have our designated fleet operators purchase, a minimum of 20,000 Lucid vehicles equipped with Nuro’s Level 4 autonomous driving systems over a six-year period","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"mdna","published_at":"2026-02-13","quote_found":true}]},{"id":33,"relationship_type":"supplies","source_id":49,"target_id":1,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"we agreed to purchase, or have our designated fleet operators purchase, a minimum of 20,000 Lucid vehicles equipped with Nuro’s Level 4 autonomous driving systems over a six-year period","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"mdna","published_at":"2026-02-13","quote_found":true}]},{"id":34,"relationship_type":"supplies","source_id":31,"target_id":1,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We connect consumers (“Rider(s)”) with independent providers of ride services (“Mobility Driver(s)”) for ridesharing services","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":35,"relationship_type":"supplies","source_id":50,"target_id":1,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"with delivery service providers (“Couriers”) for meal preparation, grocery and other delivery services","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":36,"relationship_type":"sells_to","source_id":1,"target_id":46,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We connect consumers (“Rider(s)”) with independent providers of ride services (“Mobility Driver(s)”) for ridesharing services","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"business","published_at":"2026-02-13","quote_found":true}]},{"id":37,"relationship_type":"sells_to","source_id":17,"target_id":5,"exposure_pct":67,"exposure_basis":"source_revenue","exposure_qualifier":"approximate","exposure_as_of":"2025-12-31","confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We recognized an aggregate of approximately 67% of our revenue from our top customer, Microsoft, for the year ended December 31, 2025.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true},{"quote":"Other significant customers include Microsoft and Meta.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":38,"relationship_type":"sells_to","source_id":17,"target_id":59,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC (\"OpenAI\") and in September 2025, we entered into an order form under this master services agreement pursuant to which OpenAI has committed to pay us up to approximately $6.5 billion through May 31, 2031 and, as a result, we expect OpenAI to be a significant customer in future periods.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true},{"quote":"For example, in March 2025, we entered into a master services agreement with OpenAI, a private company, pursuant to which OpenAI has committed to pay us up to approximately $11.9 billion through October 2030.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":39,"relationship_type":"sells_to","source_id":17,"target_id":4,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Similarly, in September 2025, we entered into an order form under an existing master services agreement pursuant to which Meta Platforms, Inc. (\"Meta\") initially committed to pay us up to approximately $14.2 billion through December 2031 and, as a result, we also expect Meta to be a significant customer in future periods.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true},{"quote":"Other significant customers include Microsoft and Meta.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":40,"relationship_type":"supplies","source_id":8,"target_id":17,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"For example, as a result of our obligations in our current customer contracts, all of the GPUs used in our infrastructure today are NVIDIA GPUs.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":41,"relationship_type":"invests","source_id":8,"target_id":17,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"In January 2026, NVIDIA Corporation invested $ 2 billion in the Company's Class A common stock at a purchase price of $ 87.20 per share.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"notes","published_at":"2026-03-02","quote_found":true}]},{"id":42,"relationship_type":"partners","source_id":8,"target_id":17,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"For example, in January 2026, we announced that we entered into a collaboration framework with NVIDIA Corporation to expand our long-standing complementary relationship to advance AI adoption at global scale.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":43,"relationship_type":"competes","source_id":17,"target_id":47,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":44,"relationship_type":"competes","source_id":17,"target_id":40,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":45,"relationship_type":"competes","source_id":5,"target_id":17,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":46,"relationship_type":"competes","source_id":17,"target_id":61,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":47,"relationship_type":"supplies","source_id":10,"target_id":17,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help our customers get more out of GPU compute.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"business","published_at":"2026-03-02","quote_found":true}]},{"id":48,"relationship_type":"supplies","source_id":60,"target_id":17,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help our customers get more out of GPU compute.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"business","published_at":"2026-03-02","quote_found":true}]},{"id":49,"relationship_type":"invests","source_id":58,"target_id":17,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Magnetar was a related party of the Company through March 2025, as Magnetar-affiliated funds collectively held a significant equity interest in the Company and Magnetar had representation on the Company's Board.","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"notes","published_at":"2026-03-02","quote_found":true}]},{"id":50,"relationship_type":"competes","source_id":20,"target_id":45,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"Our main ridesharing competitor in the U.S. and Canada is Uber, and in Europe, our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs and taxicab and livery companies, as well as traditional automotive manufacturers and technology companies.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true},{"quote":"There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":51,"relationship_type":"competes","source_id":20,"target_id":42,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":52,"relationship_type":"competes","source_id":20,"target_id":64,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":53,"relationship_type":"competes","source_id":20,"target_id":65,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":54,"relationship_type":"competes","source_id":20,"target_id":68,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":55,"relationship_type":"competes","source_id":20,"target_id":67,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":56,"relationship_type":"competes","source_id":20,"target_id":40,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":57,"relationship_type":"competes","source_id":20,"target_id":47,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":58,"relationship_type":"competes","source_id":20,"target_id":63,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":59,"relationship_type":"competes","source_id":20,"target_id":43,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":60,"relationship_type":"supplies","source_id":47,"target_id":20,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We have a commercial agreement with Amazon Web Services (“AWS”) for cloud services to help deliver and host our platform.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true},{"quote":"On December 30, 2025, we entered into an addendum to our commercial agreement with AWS, pursuant to which we committed to spend an aggregate of at least $562.5 million between January 2026 and December 2030 on AWS services, with a minimum amount of $100 million in each of the five years.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":61,"relationship_type":"partners","source_id":20,"target_id":66,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Additionally, if a rider or driver needs emergency assistance at any point, Lyft offers tools to help beyond 911 in-app integration with partners like ADT and RapidSOS.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":62,"relationship_type":"partners","source_id":20,"target_id":62,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Additionally, if a rider or driver needs emergency assistance at any point, Lyft offers tools to help beyond 911 in-app integration with partners like ADT and RapidSOS.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":63,"relationship_type":"acquires","source_id":17,"target_id":72,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"With Weights & Biases (acquired by CoreWeave in 2025)","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"business","published_at":"2026-03-02","quote_found":true}]},{"id":64,"relationship_type":"acquires","source_id":17,"target_id":69,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"in September 2025, we acquired OpenPipe, a leading platform for training AI agents with RL","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"business","published_at":"2026-03-02","quote_found":true}]},{"id":65,"relationship_type":"acquires","source_id":17,"target_id":71,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"In October 2025, we also acquired Marimo, creator of the marimo notebook, an open-source, AI-native environment","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"business","published_at":"2026-03-02","quote_found":true}]},{"id":66,"relationship_type":"acquires","source_id":17,"target_id":70,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"in November 2025 we acquired Monolith, which provides a full-stack platform for enterprises that want to accelerate industrial innovation in the physical world","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"business","published_at":"2026-03-02","quote_found":true},{"quote":"in November 2025, we acquired Monolith AI Limited, a pioneer in applying artificial intelligence and high performance computing to solve complex physics and engineering challenges","document_url":"https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm","section":"risk_factors","published_at":"2026-03-02","quote_found":true}]},{"id":67,"relationship_type":"acquires","source_id":20,"target_id":73,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"In July 2025, we acquired Freenow, and in October 2025, we acquired TBR.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":68,"relationship_type":"acquires","source_id":20,"target_id":75,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"In October 2025, we acquired TheBookingRoomGroup Limited (d/b/a TBR Global Chauffeuring, or “TBR”), a global luxury chauffeuring company that operates in thousands of cities worldwide.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"business","published_at":"2026-02-11","quote_found":true}]},{"id":69,"relationship_type":"acquires","source_id":20,"target_id":74,"exposure_pct":100,"exposure_basis":"ownership","exposure_qualifier":"exact","exposure_as_of":"2025-12-31","confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"in connection with our acquisition of Flexdrive, which is an independently managed, wholly-owned subsidiary","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"risk_factors","published_at":"2026-02-11","quote_found":true}]},{"id":70,"relationship_type":"acquires","source_id":1,"target_id":81,"exposure_pct":86,"exposure_basis":"ownership","exposure_qualifier":"exact","exposure_as_of":"2025-12-31","confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"On June 17, 2025, we closed the acquisition of an 85 % controlling stake in Trendyol GO.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true},{"quote":"As of December 31, 2025, our controlling stake in Trendyol GO was 86 %.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":71,"relationship_type":"acquires","source_id":1,"target_id":80,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"For example, through our acquisition of Cornershop, a provider of online grocery delivery in several countries including Mexico and Chile, we expanded our Delivery offering to grocery delivery.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true},{"quote":"some of our acquired and majority-owned companies, including Careem, Postmates and Cornershop, have or will continue to use their own brands","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":72,"relationship_type":"acquires","source_id":1,"target_id":82,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Additionally, in October 2021, we acquired The Drizly Group, Inc. in order to further expand our Delivery offering to alcohol.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":73,"relationship_type":"acquires","source_id":1,"target_id":79,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"In November 2021, our subsidiary Uber Freight acquired Transplace, expanding Uber Freight’s business through Transplace’s expertise in transportation management.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":74,"relationship_type":"acquires","source_id":1,"target_id":83,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"some of our acquired and majority-owned companies, including Careem, Postmates and Cornershop, have or will continue to use their own brands","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":75,"relationship_type":"acquires","source_id":1,"target_id":76,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"we entered into an agreement with Mubadala Investment Company to acquire Getir Perakende Lojistik A.Ş.'s (“Getir”) delivery portfolio in Türkiye.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true},{"quote":"the agreement to acquire 100 % of Getir’s food delivery business and a minority interest in its grocery delivery business at the outset, for $ 435 million in cash","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":76,"relationship_type":"invests","source_id":1,"target_id":78,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Upon closing of the transaction in December 2023, e& acquired a majority stake in Careem Technologies and we retained a minority ownership interest.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":77,"relationship_type":"acquires","source_id":77,"target_id":78,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Upon closing of the transaction in December 2023, e& acquired a majority stake in Careem Technologies and we retained a minority ownership interest.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":78,"relationship_type":"partners","source_id":1,"target_id":42,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"In addition, while we divested certain assets of our dockless e-bikes and e-scooters business to Lime in May 2020, consumers in certain cities continue to have access to dockless e-bikes and e-scooters through our app.","document_url":"https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm","section":"risk_factors","published_at":"2026-02-13","quote_found":true}]},{"id":79,"relationship_type":"supplies","source_id":86,"target_id":20,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"We have served as the Company’s auditor since 2015.","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":80,"relationship_type":"invests","source_id":20,"target_id":84,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"On February 19, 2025, the Company’s wholly-owned subsidiary, Pacific Valley Insurance Company, Inc. (“PVIC”), entered into a Loss Portfolio Transfer Reinsurance Agreement (the “Reinsurance Agreement”) with Riverstone International Insurance, Inc. (“Riverstone”)","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]},{"id":81,"relationship_type":"acquires","source_id":20,"target_id":85,"exposure_pct":null,"exposure_basis":"none","exposure_qualifier":null,"exposure_as_of":null,"confidence":null,"trust_status":"curated","source_type":"sec_filing","status":"promoted","as_of_date":"2025-12-31","evidence":[{"quote":"Starting in June 2022, in compliance with local regulations, \nTransopco UK Ltd. (“Transopco”), a newly acquired subsidiary of the Company, modified its private hire business model in London and began applying the Tour Operator Margin Scheme (“TOMS”) to its services, including value added tax (“VAT”).","document_url":"https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm","section":"notes","published_at":"2026-02-13","quote_found":true}]}]}
+{
+ "generated_at": "2026-10-21",
+ "companies": [
+  {
+   "id": 1,
+   "name": "Uber Technologies",
+   "ticker": "UBER",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 3,
+   "name": "Apple",
+   "ticker": "AAPL",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 4,
+   "name": "Meta Platforms",
+   "ticker": "META",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 5,
+   "name": "Microsoft",
+   "ticker": "MSFT",
+   "is_seed": true,
+   "segment": "business",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 7,
+   "name": "Palantir Technologies",
+   "ticker": "PLTR",
+   "is_seed": true,
+   "segment": "business",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 8,
+   "name": "NVIDIA",
+   "ticker": "NVDA",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 9,
+   "name": "Taiwan Semiconductor Manufacturing",
+   "ticker": "TSM",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 10,
+   "name": "Advanced Micro Devices",
+   "ticker": "AMD",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 11,
+   "name": "DoorDash",
+   "ticker": "DASH",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "mid",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 16,
+   "name": "Cloudflare",
+   "ticker": "NET",
+   "is_seed": true,
+   "segment": "business",
+   "size_tier": "mid",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 17,
+   "name": "CoreWeave",
+   "ticker": "CRWV",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "mid",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 18,
+   "name": "Cerebras Systems",
+   "ticker": "CBRS",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "mid",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 19,
+   "name": "Nebius Group",
+   "ticker": "NBIS",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "mid",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 20,
+   "name": "Lyft",
+   "ticker": "LYFT",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "small",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 26,
+   "name": "Applied Digital",
+   "ticker": "APLD",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "small",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 27,
+   "name": "Ola",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 28,
+   "name": "RXO",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 29,
+   "name": "C.H. Robinson",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 30,
+   "name": "Echo Global Logistics",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 31,
+   "name": "Mobility Drivers",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "segment_group"
+  },
+  {
+   "id": 32,
+   "name": "Delivery Hero",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 33,
+   "name": "Lucid",
+   "ticker": "LCID",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "small",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 34,
+   "name": "Grab",
+   "ticker": "GRAB",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "mid",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 35,
+   "name": "Gopuff",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 36,
+   "name": "Didi",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 37,
+   "name": "DHL",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 38,
+   "name": "Rappi",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 39,
+   "name": "UGT",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "organization"
+  },
+  {
+   "id": 40,
+   "name": "Alphabet",
+   "ticker": "GOOGL",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 41,
+   "name": "Instacart",
+   "ticker": "CART",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "mid",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 42,
+   "name": "Lime",
+   "ticker": "LIME",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "small",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 43,
+   "name": "Tesla",
+   "ticker": "TSLA",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 44,
+   "name": "ITF",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "organization"
+  },
+  {
+   "id": 45,
+   "name": "Bolt",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 46,
+   "name": "Riders",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "segment_group"
+  },
+  {
+   "id": 47,
+   "name": "Amazon",
+   "ticker": "AMZN",
+   "is_seed": true,
+   "segment": "consumer",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 49,
+   "name": "Nuro",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 50,
+   "name": "Couriers",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "segment_group"
+  },
+  {
+   "id": 51,
+   "name": "Moove",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 52,
+   "name": "Arizona State University",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "organization"
+  },
+  {
+   "id": 53,
+   "name": "Aurora",
+   "ticker": "AUR",
+   "is_seed": true,
+   "segment": "business",
+   "size_tier": "small",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 54,
+   "name": "Total Quality Logistics",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 55,
+   "name": "XPO",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 56,
+   "name": "Waabi",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 57,
+   "name": "Just Eat Takeaway",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 58,
+   "name": "Magnetar",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 59,
+   "name": "OpenAI",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 60,
+   "name": "Intel",
+   "ticker": "INTC",
+   "is_seed": true,
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 61,
+   "name": "Oracle",
+   "ticker": "ORCL",
+   "is_seed": true,
+   "segment": "business",
+   "size_tier": "large",
+   "entity_type": "public_company"
+  },
+  {
+   "id": 62,
+   "name": "RapidSOS",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 63,
+   "name": "Baidu",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 64,
+   "name": "Bird",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 65,
+   "name": "Fifteen",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 66,
+   "name": "ADT",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 67,
+   "name": "Dott",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 68,
+   "name": "nextbike",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 69,
+   "name": "OpenPipe",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 70,
+   "name": "Monolith",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 71,
+   "name": "Marimo",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 72,
+   "name": "Weights & Biases",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 73,
+   "name": "Freenow",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 74,
+   "name": "Flexdrive",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 75,
+   "name": "TBR",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 76,
+   "name": "Getir",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 77,
+   "name": "e&",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 78,
+   "name": "Careem Technologies",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 79,
+   "name": "Transplace",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 80,
+   "name": "Cornershop",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 81,
+   "name": "Trendyol GO",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 82,
+   "name": "Drizly",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 83,
+   "name": "Postmates",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 84,
+   "name": "Pacific Valley Insurance Company, Inc.",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 85,
+   "name": "Transopco",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 86,
+   "name": "PricewaterhouseCoopers",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 88,
+   "name": "Toyota",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 90,
+   "name": "Volvo",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 91,
+   "name": "Hirschbach",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 92,
+   "name": "DENSO",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 93,
+   "name": "PACCAR",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 94,
+   "name": "AUMOVIO",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 95,
+   "name": "Ryder Systems",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  },
+  {
+   "id": 99,
+   "name": "Stack AV",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 100,
+   "name": "Torc Robotics",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 101,
+   "name": "PlusAI",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "organization"
+  },
+  {
+   "id": 102,
+   "name": "Kodiak Robotics",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "organization"
+  },
+  {
+   "id": 103,
+   "name": "Motional",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "private_company"
+  },
+  {
+   "id": 105,
+   "name": "Mobileye",
+   "ticker": null,
+   "is_seed": false,
+   "segment": null,
+   "size_tier": null,
+   "entity_type": "public_company"
+  }
+ ],
+ "rels": [
+  {
+   "id": 1,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 45,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 2,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 36,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 3,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Our main ridesharing competitor in the U.S. and Canada is Uber, and in Europe, our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs and taxicab and livery companies, as well as traditional automotive manufacturers and technology companies.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 20,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 4,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We also compete with other ridesharing companies for Drivers and Riders, including Bolt, Didi, Lyft, and Ola.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 27,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 5,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 40,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 6,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 47,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 7,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "There are also a number of companies developing and introducing autonomous vehicles and technologies that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), and Tesla.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 43,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 8,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 11,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 9,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 41,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 10,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 35,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 11,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 38,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 12,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 32,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 13,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Delivery offering competes with numerous companies in the meal, grocery and other delivery space in various regions for Drivers, consumers, and merchants, including DoorDash, Instacart, Gopuff, Rappi, Delivery Hero, Just Eat Takeaway, and Amazon.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 57,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 14,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 29,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 15,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 54,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 16,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 28,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 17,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 55,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 18,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 30,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 19,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our Freight offering competes with global and North American freight brokers and managed transportation providers such as C.H. Robinson, Total Quality Logistics, RXO, XPO, Echo Global Logistics, and DHL.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 37,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 20,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "a $802 million net unrealized loss on our Aurora investment",
+     "section": "mdna",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "In support of our partnership with Uber, and concurrent with the acquisition of Uber’s self-driving unit, Uber invested $400 million in Aurora.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 53,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 21,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "a $409 million net unrealized gain on our Didi investment",
+     "section": "mdna",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 36,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 22,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "a $145 million net unrealized gain on our Grab investment",
+     "section": "mdna",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "a significant portion of our assets includes minority ownership positions, including in Didi, Grab, and Aurora.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 34,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 23,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "a $155 million net unrealized loss on our Lucid investment",
+     "section": "mdna",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 33,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 24,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "a $179 million net unrealized gain on our Waabi investment",
+     "section": "mdna",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 56,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 26,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "we entered into and completed a series of agreements with Moove, including (i) an equity investment, through preferred shares, (ii) a term loan to Moove, and (iii) a commercial partnership agreement",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 51,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 27,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "we entered into and completed a series of agreements with Moove, including (i) an equity investment, through preferred shares, (ii) a term loan to Moove, and (iii) a commercial partnership agreement",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 51,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 28,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "our partnership with Arizona State University",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 52,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 29,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We renewed our agreement with the ITF (International Transport Workers’ Federation)",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 44,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 30,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Uber Eats and the UGT (Unión General de Trabajadores) signed a memorandum of understanding",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 39,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 31,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Waymo has introduced a commercialized ridehailing fleet of autonomous vehicles on its own platform in addition to a fleet of autonomous vehicles that it makes available through our platform",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 40,
+   "target_id": 1,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 32,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "we agreed to purchase, or have our designated fleet operators purchase, a minimum of 20,000 Lucid vehicles equipped with Nuro’s Level 4 autonomous driving systems over a six-year period",
+     "section": "mdna",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 33,
+   "target_id": 1,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 33,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "we agreed to purchase, or have our designated fleet operators purchase, a minimum of 20,000 Lucid vehicles equipped with Nuro’s Level 4 autonomous driving systems over a six-year period",
+     "section": "mdna",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 49,
+   "target_id": 1,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 34,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We connect consumers (“Rider(s)”) with independent providers of ride services (“Mobility Driver(s)”) for ridesharing services",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 31,
+   "target_id": 1,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 35,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "with delivery service providers (“Couriers”) for meal preparation, grocery and other delivery services",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 50,
+   "target_id": 1,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 36,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We connect consumers (“Rider(s)”) with independent providers of ride services (“Mobility Driver(s)”) for ridesharing services",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 46,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "sells_to",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 37,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We recognized an aggregate of approximately 67% of our revenue from our top customer, Microsoft, for the year ended December 31, 2025.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    },
+    {
+     "quote": "Other significant customers include Microsoft and Meta.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 5,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": 67,
+   "trust_status": "curated",
+   "exposure_as_of": "2025-12-31",
+   "exposure_basis": "source_revenue",
+   "relationship_type": "sells_to",
+   "exposure_qualifier": "approximate"
+  },
+  {
+   "id": 38,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In May 2025, we entered into a master services agreement with OpenAI OpCo, LLC (\"OpenAI\") and in September 2025, we entered into an order form under this master services agreement pursuant to which OpenAI has committed to pay us up to approximately $6.5 billion through May 31, 2031 and, as a result, we expect OpenAI to be a significant customer in future periods.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    },
+    {
+     "quote": "For example, in March 2025, we entered into a master services agreement with OpenAI, a private company, pursuant to which OpenAI has committed to pay us up to approximately $11.9 billion through October 2030.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 59,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "sells_to",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 39,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Similarly, in September 2025, we entered into an order form under an existing master services agreement pursuant to which Meta Platforms, Inc. (\"Meta\") initially committed to pay us up to approximately $14.2 billion through December 2031 and, as a result, we also expect Meta to be a significant customer in future periods.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    },
+    {
+     "quote": "Other significant customers include Microsoft and Meta.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 4,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "sells_to",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 40,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "For example, as a result of our obligations in our current customer contracts, all of the GPUs used in our infrastructure today are NVIDIA GPUs.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 8,
+   "target_id": 17,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 41,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In January 2026, NVIDIA Corporation invested $ 2 billion in the Company's Class A common stock at a purchase price of $ 87.20 per share.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 8,
+   "target_id": 17,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 42,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "For example, in January 2026, we announced that we entered into a collaboration framework with NVIDIA Corporation to expand our long-standing complementary relationship to advance AI adoption at global scale.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 8,
+   "target_id": 17,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 43,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 47,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 44,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 40,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 45,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 5,
+   "target_id": 17,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 46,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Key competitors that offer general purpose cloud computing services as part of a broader, diversified product portfolio include Amazon (AWS), Google (Google Cloud Platform), Microsoft (Azure), and Oracle, a number of which are also our current customers.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 61,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 47,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help our customers get more out of GPU compute.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 10,
+   "target_id": 17,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 48,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "CoreWeave clusters also use cutting edge CPUs, including AMD and Intel chips, to power compute-intensive projects and to help our customers get more out of GPU compute.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 60,
+   "target_id": 17,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 49,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Magnetar was a related party of the Company through March 2025, as Magnetar-affiliated funds collectively held a significant equity interest in the Company and Magnetar had representation on the Company's Board.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 58,
+   "target_id": 17,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 50,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our main ridesharing competitor is Uber and our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs, taxi cab and livery companies as well as traditional automotive manufacturers and technology companies.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Our main ridesharing competitor in the U.S. and Canada is Uber, and in Europe, our main competitors for app-based intermediation services for taxi and private hire vehicles are Uber and Bolt, though we also compete with other TNCs and taxicab and livery companies, as well as traditional automotive manufacturers and technology companies.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 45,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 51,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 42,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 52,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 64,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 53,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 65,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 54,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 68,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 55,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Our main competitors in the bike and scooter sharing market include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Our main competitors in bike and scooter sharing include Lime, Bird, Fifteen, nextbike and Dott.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 67,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 56,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 40,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 57,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 47,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 58,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 63,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 59,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "There are also a number of companies developing and introducing AV technology and TaaS offerings that either are competing with us or may compete with us in the future, including Alphabet (Waymo), Amazon (Zoox), Baidu, Bolt, and Tesla as well as many other technology companies and automobile manufacturers and suppliers.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 43,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 60,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We have a commercial agreement with Amazon Web Services (“AWS”) for cloud services to help deliver and host our platform.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "On December 30, 2025, we entered into an addendum to our commercial agreement with AWS, pursuant to which we committed to spend an aggregate of at least $562.5 million between January 2026 and December 2030 on AWS services, with a minimum amount of $100 million in each of the five years.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 47,
+   "target_id": 20,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 61,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Additionally, if a rider or driver needs emergency assistance at any point, Lyft offers tools to help beyond 911 in-app integration with partners like ADT and RapidSOS.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 66,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 62,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Additionally, if a rider or driver needs emergency assistance at any point, Lyft offers tools to help beyond 911 in-app integration with partners like ADT and RapidSOS.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 62,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 63,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "With Weights & Biases (acquired by CoreWeave in 2025)",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 72,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 64,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "in September 2025, we acquired OpenPipe, a leading platform for training AI agents with RL",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 69,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 65,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In October 2025, we also acquired Marimo, creator of the marimo notebook, an open-source, AI-native environment",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 71,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 66,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "in November 2025 we acquired Monolith, which provides a full-stack platform for enterprises that want to accelerate industrial innovation in the physical world",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    },
+    {
+     "quote": "in November 2025, we acquired Monolith AI Limited, a pioneer in applying artificial intelligence and high performance computing to solve complex physics and engineering challenges",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
+     "published_at": "2026-03-02"
+    }
+   ],
+   "source_id": 17,
+   "target_id": 70,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 67,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In July 2025, we acquired Freenow, and in October 2025, we acquired TBR.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 73,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 68,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In October 2025, we acquired TheBookingRoomGroup Limited (d/b/a TBR Global Chauffeuring, or “TBR”), a global luxury chauffeuring company that operates in thousands of cities worldwide.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 75,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 69,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "in connection with our acquisition of Flexdrive, which is an independently managed, wholly-owned subsidiary",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 74,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": 100,
+   "trust_status": "curated",
+   "exposure_as_of": "2025-12-31",
+   "exposure_basis": "ownership",
+   "relationship_type": "acquires",
+   "exposure_qualifier": "exact"
+  },
+  {
+   "id": 70,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "On June 17, 2025, we closed the acquisition of an 85 % controlling stake in Trendyol GO.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "As of December 31, 2025, our controlling stake in Trendyol GO was 86 %.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 81,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": 86,
+   "trust_status": "curated",
+   "exposure_as_of": "2025-12-31",
+   "exposure_basis": "ownership",
+   "relationship_type": "acquires",
+   "exposure_qualifier": "exact"
+  },
+  {
+   "id": 71,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "For example, through our acquisition of Cornershop, a provider of online grocery delivery in several countries including Mexico and Chile, we expanded our Delivery offering to grocery delivery.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "some of our acquired and majority-owned companies, including Careem, Postmates and Cornershop, have or will continue to use their own brands",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 80,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 72,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Additionally, in October 2021, we acquired The Drizly Group, Inc. in order to further expand our Delivery offering to alcohol.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 82,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 73,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In November 2021, our subsidiary Uber Freight acquired Transplace, expanding Uber Freight’s business through Transplace’s expertise in transportation management.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 79,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 74,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "some of our acquired and majority-owned companies, including Careem, Postmates and Cornershop, have or will continue to use their own brands",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 83,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 75,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "we entered into an agreement with Mubadala Investment Company to acquire Getir Perakende Lojistik A.Ş.'s (“Getir”) delivery portfolio in Türkiye.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    },
+    {
+     "quote": "the agreement to acquire 100 % of Getir’s food delivery business and a minority interest in its grocery delivery business at the outset, for $ 435 million in cash",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 76,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 76,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Upon closing of the transaction in December 2023, e& acquired a majority stake in Careem Technologies and we retained a minority ownership interest.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 78,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 77,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Upon closing of the transaction in December 2023, e& acquired a majority stake in Careem Technologies and we retained a minority ownership interest.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 77,
+   "target_id": 78,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 78,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In addition, while we divested certain assets of our dockless e-bikes and e-scooters business to Lime in May 2020, consumers in certain cities continue to have access to dockless e-bikes and e-scooters through our app.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 42,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 79,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "We have served as the Company’s auditor since 2015.",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 86,
+   "target_id": 20,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 80,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "On February 19, 2025, the Company’s wholly-owned subsidiary, Pacific Valley Insurance Company, Inc. (“PVIC”), entered into a Loss Portfolio Transfer Reinsurance Agreement (the “Reinsurance Agreement”) with Riverstone International Insurance, Inc. (“Riverstone”)",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 84,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "invests",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 81,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Starting in June 2022, in compliance with local regulations, \nTransopco UK Ltd. (“Transopco”), a newly acquired subsidiary of the Company, modified its private hire business model in London and began applying the Tour Operator Margin Scheme (“TOMS”) to its services, including value added tax (“VAT”).",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm",
+     "published_at": "2026-02-13"
+    }
+   ],
+   "source_id": 20,
+   "target_id": 85,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "acquires",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 82,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In January 2021, we entered into a global strategic partnership with PACCAR.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 93,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 83,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In March 2021, Volvo selected us as its technology provider to develop and jointly commercialize Level 4 Class 8 trucks in North America.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 90,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 84,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In February 2021, we announced a long-term, global, and strategic collaboration with Toyota and DENSO, one of the largest global automotive manufacturers and tier-one automotive suppliers, respectively, to build and globally deploy self-driving cars at scale.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 88,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 85,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In February 2021, we announced a long-term, global, and strategic collaboration with Toyota and DENSO, one of the largest global automotive manufacturers and tier-one automotive suppliers, respectively, to build and globally deploy self-driving cars at scale.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 92,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 86,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In addition to acquiring Uber’s self-driving unit, we announced a strategic partnership with Uber that connects our technology to the world’s leading ride-hailing platform and strengthens our position to deliver the Aurora Driver broadly.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 1,
+   "target_id": 53,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 87,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In April 2023, we entered into an exclusive partnership with Continental, now AUMOVIO, to deliver the first commercially scalable future generation of the Aurora Driver.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "On April 26, 2023, we entered into the Strategic Partnership Agreement with Continental, now AUMOVIO, which was amended and restated on September 27, 2023.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "Amended and Restated Strategic Partnership Agreement, dated September 27, 2023, by and among the Registrant and Aurora Operations, Inc., and Continental Automotive Technologies GmbH and Continental Autonomous Mobility Germany GmbH",
+     "section": "notes",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 94,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 88,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Further, we continued our strategic collaboration with Ryder Systems, piloting on-site fleet maintenance to support current autonomous freight pilot operations and prepare for commercial operation at scale.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 95,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "partners",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 89,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In April 2025, we launched driverless commercial operations with Hirschbach and Uber Freight and have since expanded our driverless customer cohort.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 91,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "sells_to",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 90,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "In April 2025, we launched driverless commercial operations with Hirschbach and Uber Freight and have since expanded our driverless customer cohort.",
+     "section": "business",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 1,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "sells_to",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 91,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 40,
+   "target_id": 53,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 92,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Interruption or failure of Amazon Web Services or other information technology and communications systems that we rely upon could materially and adversely affect our business, financial condition and results of operations.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    },
+    {
+     "quote": "We currently rely on Amazon Web Services (“AWS”) to host our technology and support our technology development.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 47,
+   "target_id": 53,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "supplies",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 93,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 43,
+   "target_id": 53,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 94,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 47,
+   "target_id": 53,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 95,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 103,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 96,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 100,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 97,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 102,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 98,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 101,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 99,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 56,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 100,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 99,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  },
+  {
+   "id": 101,
+   "status": "promoted",
+   "evidence": [
+    {
+     "quote": "Several companies, including, but not limited to, Waymo, Tesla, Zoox/Amazon, Motional, Torc Robotics, Kodiak Robotics, PlusAI, Waabi, Stack AV and Mobileye are investing heavily in building this technology. These companies compete with us directly by offering self-driving technology for the same or similar use cases.",
+     "section": "risk_factors",
+     "quote_found": true,
+     "document_url": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000016/aur-20251231.htm",
+     "published_at": "2026-02-11"
+    }
+   ],
+   "source_id": 53,
+   "target_id": 105,
+   "as_of_date": "2025-12-31",
+   "confidence": null,
+   "source_type": "sec_filing",
+   "exposure_pct": null,
+   "trust_status": "curated",
+   "exposure_as_of": null,
+   "exposure_basis": "none",
+   "relationship_type": "competes",
+   "exposure_qualifier": null
+  }
+ ]
+}
