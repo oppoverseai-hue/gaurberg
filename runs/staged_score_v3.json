@@ -1,0 +1,181 @@
+{
+ "CRWV": {
+  "EXT-1": 1.0,
+  "EXT-2": 0.85,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 17,
+   "gold_true": 20,
+   "matched": 17,
+   "missed": [
+    [
+     "crwv",
+     "deloitte and touche",
+     "supplies"
+    ],
+    [
+     "crwv",
+     "nvidia",
+     "sells_to"
+    ],
+    [
+     "crwv",
+     "openai",
+     "invests"
+    ]
+   ]
+  }
+ },
+ "LYFT": {
+  "EXT-1": 1.0,
+  "EXT-2": 0.6896551724137931,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 20,
+   "gold_true": 29,
+   "matched": 20,
+   "missed": [
+    [
+     "lyft",
+     "mobileye",
+     "partners"
+    ],
+    [
+     "lyft",
+     "may mobility",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nexar",
+     "partners"
+    ],
+    [
+     "lyft",
+     "marubeni",
+     "partners"
+    ],
+    [
+     "alphabet",
+     "lyft",
+     "partners"
+    ],
+    [
+     "baidu",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "tensor",
+     "partners"
+    ],
+    [
+     "benteler mobility",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nvidia",
+     "partners"
+    ]
+   ]
+  }
+ },
+ "UBER": {
+  "EXT-1": 1.0,
+  "EXT-2": 1.0,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 44,
+   "gold_true": 44,
+   "matched": 44,
+   "missed": []
+  }
+ },
+ "ALL": {
+  "EXT-1": 1.0,
+  "EXT-2": 0.8709677419354839,
+  "EXT-3": 1.0,
+  "EXT-4": 1.0,
+  "EXT-6": 0,
+  "EXT-7": 0.0,
+  "counts": {
+   "predicted": 81,
+   "gold_true": 93,
+   "matched": 81,
+   "missed": [
+    [
+     "crwv",
+     "deloitte and touche",
+     "supplies"
+    ],
+    [
+     "crwv",
+     "nvidia",
+     "sells_to"
+    ],
+    [
+     "crwv",
+     "openai",
+     "invests"
+    ],
+    [
+     "lyft",
+     "mobileye",
+     "partners"
+    ],
+    [
+     "lyft",
+     "may mobility",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nexar",
+     "partners"
+    ],
+    [
+     "lyft",
+     "marubeni",
+     "partners"
+    ],
+    [
+     "alphabet",
+     "lyft",
+     "partners"
+    ],
+    [
+     "baidu",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "tensor",
+     "partners"
+    ],
+    [
+     "benteler mobility",
+     "lyft",
+     "partners"
+    ],
+    [
+     "lyft",
+     "nvidia",
+     "partners"
+    ]
+   ]
+  }
+ }
+}
