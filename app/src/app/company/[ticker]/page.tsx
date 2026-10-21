@@ -18,7 +18,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
     <main>
       <Link href="/">← Search</Link>
       <h1>{company.name} <span className="muted">({company.ticker})</span></h1>
-      <p className="muted">{company.segment} · {company.size_tier} cap</p>
+      <p className="muted">{company.segment} · {company.size_tier} cap · <Link href={`/map/${company.ticker}`}>Ecosystem map</Link></p>
       <div className="card">
         {q.ok ? (
           <>
