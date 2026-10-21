@@ -5,7 +5,7 @@ export type Evidence = { quote: string | null; document_url: string | null; sect
 export type Rel = {
   id: number; relationship_type: LinkType; source: Co; target: Co;
   exposure_pct: number | null; exposure_basis: string | null; exposure_qualifier: string | null; exposure_as_of: string | null;
-  confidence: number | null; trust_status: string | null; source_type: string | null; status: string; as_of_date: string | null;
+  confidence: number | null; trust_status: string | null; source_type: string | null; status: string; as_of_date: string | null; note?: string | null;
   evidence: Evidence[];
 };
 export type Side = "left" | "right" | "top" | "bottom";
@@ -69,4 +69,10 @@ export function exposureText(r: Rel): string {
   const of = r.exposure_basis === "source_revenue" ? `of ${r.source.name}'s revenue` : r.exposure_basis === "target_cost" ? `of ${r.target.name}'s costs` : "ownership";
   const per = r.exposure_as_of ? `, ${r.exposure_as_of.slice(0, 4)}` : "";
   return `${q}${r.exposure_pct}% ${of}${per}`;
+}
+
+// A unit or brand shown under its parent keeps its own name in brackets: "Amazon (AWS)".
+export function viaLabel(n: MapNode): string | null {
+  const v = [...new Set(n.links.map((l) => l.note?.startsWith("via ") ? l.note.slice(4) : null))];
+  return v.length === 1 && v[0] ? v[0] : null;
 }

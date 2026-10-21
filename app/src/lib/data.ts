@@ -7,7 +7,7 @@ import type { Rel } from "@/lib/graph";
 
 export type { CoRow };
 const CO = "id,ticker,name,is_seed,entity_type,segment,size_tier";
-export const REL_SEL = "id,relationship_type,exposure_pct,exposure_basis,exposure_qualifier,exposure_as_of,confidence,trust_status,source_type,status,as_of_date," +
+export const REL_SEL = "id,relationship_type,exposure_pct,exposure_basis,exposure_qualifier,exposure_as_of,confidence,trust_status,source_type,status,as_of_date,note," +
   "source:companies!relationships_source_id_fkey(id,ticker,name,is_seed,entity_type),target:companies!relationships_target_id_fkey(id,ticker,name,is_seed,entity_type)," +
   "evidence(quote,document_url,section,published_at,quote_found)";
 
