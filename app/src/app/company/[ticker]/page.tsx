@@ -90,7 +90,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               ["Previous close", q ? q.prevClose.toFixed(2) : null],
               ["Day range", q ? `${q.low.toFixed(2)} - ${q.high.toFixed(2)}` : null],
               ["52-week range", f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} - ${f.high52.toFixed(2)}` : null],
-              ["Avg volume (10-day)", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
+              ["Avg volume", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
               ["Market cap", f.marketCap == null ? null : fmtBig(f.marketCap)],
               ["P/E (trailing)", n2(f.pe)], ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Beta", n2(f.beta)],
               ["Shares outstanding", f.shares == null ? null : fmtShares(f.shares)],
@@ -100,6 +100,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           <div className="card" id="about" style={{ marginTop: 24 }}>
             <div className="cardhead"><h3>About</h3></div>
             {p?.description ? <p style={{ margin: "0 0 12px", fontSize: 13, lineHeight: "20px" }}>{p.description}</p> : <p className="muted mono" style={{ fontSize: 12, margin: "0 0 12px" }}>Description: not available yet.</p>}
+            {p?.description && p.about_source && <p className="muted mono" style={{ fontSize: 10, margin: "-4px 0 12px" }}>Source: {p.about_source}</p>}
             <Rows rows={[
               ["Sector", p?.industry ?? cap(company.segment)], ["Size group", company.size_tier ? `${cap(company.size_tier)} cap` : null],
               ["Website", p?.website ?? null], ["Employees", p?.employees == null ? null : p.employees.toLocaleString("en-US")],

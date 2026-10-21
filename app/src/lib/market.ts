@@ -8,7 +8,7 @@ export type Market = {
   quote: Quote | null; quoteError: string | null;
   daily: Pt[] | null; weekly: Pt[] | null; historyError: string | null;
   f: Partial<Fundamentals> | null; fundError: string | null;
-  profile: (Profile & { employees?: number | null; description?: string | null }) | null;
+  profile: (Profile & { employees?: number | null; description?: string | null; about_source?: string | null }) | null;
   nextEarnings: string | null;
   saved: { at: string; source: string; parts: string[] } | null; // which parts came from saved data
 };
@@ -37,7 +37,7 @@ export async function getMarket(ticker: string): Promise<Market> {
       m.profile = { exchange: null, industry: null, website: null, ...(m.profile ?? {}), ...Object.fromEntries(Object.entries(sv.profile).filter(([k, v]) => v != null && (m.profile as Record<string, unknown> | null)?.[k] == null)) };
     }
     if (!m.nextEarnings && sv.nextEarnings) m.nextEarnings = sv.nextEarnings;
-    if (used.length || sv.profile?.description || sv.profile?.employees) m.saved = { at: sv.saved_at, source: sv.source, parts: used };
+    if (used.length) m.saved = { at: sv.saved_at, source: sv.source, parts: used };
   }
   return m;
 }
