@@ -1,0 +1,338 @@
+[
+ {
+  "id": 1,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names CoreWeave as a key competitor; competes is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 2,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Crusoe as a key competitor; competes is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 3,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Lambda as a key competitor; competes is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 4,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Amazon (AWS) as a competing cloud provider; competes fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 5,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "uncertain",
+  "reason": "Sentence names Google, not Alphabet; the parent-subsidiary link is not stated in the sentence.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 6,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Microsoft (Azure) as a competing cloud provider; competes fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 7,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Oracle as a competing cloud provider; competes fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 8,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says NBIS has longer-term customer contracts with Meta; sells_to fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 9,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says NBIS has longer-term customer contracts with Microsoft; sells_to fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 10,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": false,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Uber invested in Avride; claimed Uber-to-Uber pair is self-referential and wrong.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 11,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says NBIS relies on Nvidia for GPU chips; Nvidia supplies NBIS, supplies fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 12,
+  "checks": {
+   "quote_present": false,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing describes a strategic partnership with Nvidia; partners is undirected and fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 13,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says 'we completed the acquisition of Tavily', with 'we' referring to NBIS; acquires fits.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 14,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 15,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 16,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 17,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 18,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 19,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 20,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 21,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 22,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 23,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 24,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 25,
+  "checks": {
+   "quote_present": false,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 26,
+  "checks": {
+   "quote_present": false,
+   "supports_claim": null,
+   "direction": null,
+   "type": null
+  },
+  "verdict": "uncertain",
+  "reason": "verifier returned no answer for this item",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 27,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing says NBIS received data labeling services from Toloka Group, so Toloka supplies NBIS as claimed.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 28,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "NBIS recognized revenue from Toloka for transitional services and cloud services, so NBIS sells to Toloka.",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]

@@ -1,0 +1,290 @@
+[
+ {
+  "id": 1,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names CoreWeave as a key competitor in AI infrastructure; competes is undirected, so direction is fine.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 2,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Crusoe as a key competitor in AI infrastructure.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 3,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names Lambda as a key competitor in AI infrastructure.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 4,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states the company competes with Amazon (AWS) among general purpose cloud providers.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 5,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence names Google (Google Cloud Platform), not Alphabet; linking the two requires outside knowledge.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 6,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Microsoft (Azure) among cloud providers NBIS competes with; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 7,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Filing names Oracle among general purpose cloud providers NBIS competes with; competes is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 8,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Longer-term customer contracts with Meta imply NBIS sells to Meta; source and target order is correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 9,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Longer-term customer contracts with Microsoft imply NBIS sells to Microsoft; source and target order is correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 10,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "NBIS relies on Nvidia for GPU chips, so Nvidia supplies NBIS; source and target order is correct.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 11,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence names a long-standing partnership and collaboration with NVIDIA; partners is undirected, so direction is satisfied.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 12,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "\"We completed the acquisition of Tavily\" states NBIS acquired Tavily, matching the source-to-target order.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 13,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence states Data Ops is delivered in partnership with Toloka, a named partnership; partners is undirected.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 14,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "\"We also hold a significant equity stake in Toloka\" states NBIS holds an equity investment in Toloka, in the correct direction.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 15,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "\"We hold a significant minority stake in ClickHouse\" states NBIS holds an equity investment in ClickHouse, in the correct direction.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 16,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "fail",
+  "reason": "Sentence concerns Avride and Uber; NBIS is not named in the sentence.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 17,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Avride partnered with Grubhub; NBIS is not mentioned.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 18,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": "partners"
+  },
+  "verdict": "fail",
+  "reason": "Sentence describes Avride's partnership with Hyundai; NBIS is not named.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 19,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "uncertain",
+  "reason": "Names Fireworks AI as competitor to Token Factory, not NBIS; hedged 'may face' wording.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 20,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": "competes"
+  },
+  "verdict": "uncertain",
+  "reason": "Names Together AI as competitor to Token Factory, not NBIS; hedged 'may face' wording.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 21,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": false,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "fail",
+  "reason": "Sentence says Avride, not NBIS, competes with Waymo; NBIS is never named.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 22,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "NVIDIA bought a pre-funded warrant for about $2B in NBIS shares, an equity investment in NBIS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 23,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence says NBIS received data labeling services from Toloka, so Toloka supplies NBIS.",
+  "verifier_model": "claude-haiku-5-5"
+ },
+ {
+  "id": 24,
+  "checks": {
+   "quote_present": true,
+   "supports_claim": true,
+   "direction": true,
+   "type": true
+  },
+  "verdict": "pass",
+  "reason": "Sentence reports NBIS revenue from Toloka under a services agreement and cloud services, so NBIS sells to Toloka.",
+  "verifier_model": "claude-haiku-5-5"
+ }
+]

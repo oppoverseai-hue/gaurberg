@@ -1,0 +1,89 @@
+{
+ "ticker": "NBIS",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "filing": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm",
+ "chunks": 7,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28803,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1608,
+   "cost_usd": 0.13538630000000001,
+   "seconds": 10.8,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29193,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2920,
+   "cost_usd": 0.1501033,
+   "seconds": 16.3,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33455,
+   "cache_read_tokens": 12600,
+   "output_tokens": 580,
+   "cost_usd": 0.1441775,
+   "seconds": 6.5,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30407,
+   "cache_read_tokens": 12600,
+   "output_tokens": 791,
+   "cost_usd": 0.13379270000000001,
+   "seconds": 12.6,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36255,
+   "cache_read_tokens": 12600,
+   "output_tokens": 952,
+   "cost_usd": 0.1593785,
+   "seconds": 7.6,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 37699,
+   "cache_read_tokens": 12600,
+   "output_tokens": 587,
+   "cost_usd": 0.16164940000000003,
+   "seconds": 8.1,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 20519,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1263,
+   "cost_usd": 0.0979704,
+   "seconds": 10.5,
+   "is_error": false,
+   "chunk": 7
+  }
+ ],
+ "totals": {
+  "input_tokens": 14,
+  "cache_creation_tokens": 216331,
+  "cache_read_tokens": 88200,
+  "output_tokens": 8701,
+  "cost_usd": 0.9824581,
+  "seconds": 72.4
+ },
+ "edges": 30,
+ "quotes_not_found": 5
+}
