@@ -9,7 +9,7 @@ export default async function Home() {
   const access = await getAccess();
   return (
     <main className="narrow hero">
-      <h1>Gaur<span>berg</span></h1>
+      <h1>Gaurberg</h1>
       <p className="muted">Research any company through the businesses around it.</p>
       {access.state === "signed_out" && (
         <div className="card">

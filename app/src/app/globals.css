@@ -178,3 +178,9 @@ main.hero h1 span { color:var(--accent); }
 main.hero > p.muted { font-size:16px; line-height:24px; margin:0 0 44px; }
 main.hero .lsearch { margin-top:0; }
 @media (max-width:600px) { main.hero { padding-top:12vh; } main.hero h1 { font-size:44px; } }
+
+/* Serif v3: Newsreader for the landing wordmark and company names in page headings. Everything else stays Inter and JetBrains Mono. */
+:root { --serif:Newsreader,"Iowan Old Style",Georgia,serif; }
+main.hero h1 { font:500 52px/1.05 var(--serif); letter-spacing:-.01em; color:#f8fafc; margin:0 0 24px; font-optical-sizing:auto; }
+.head h1 { font:500 30px/36px var(--serif); letter-spacing:-.005em; color:#f8fafc; }
+@media (max-width:600px) { main.hero h1 { font-size:42px; } }
