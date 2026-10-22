@@ -46,7 +46,6 @@ create table if not exists public.company_geo_revenue (
   quote_found boolean,
   note text,
   created_at timestamptz not null default now(),
-  check (country is not null or bucket_region is not null or label ~* '(other|rest|unallocated|total)'),
   check (revenue_pct is not null or revenue_amount is not null)
 );
 create index if not exists company_geo_revenue_company_idx on public.company_geo_revenue(company_id, period_end desc);
