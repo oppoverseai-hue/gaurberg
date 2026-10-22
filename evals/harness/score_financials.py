@@ -54,6 +54,11 @@ for t in tickers:
                 check(m is None, f"FIN-3 {t}: {sub} shown for column {i} without inputs")
             else:
                 check(m is not None and abs(m - v / rev["values"][i] * 100) < 0.11, f"FIN-3 {t}: {sub} col {i} = {m}, recomputed {v / rev['values'][i] * 100:.1f}")
+    gp, cost = row(d, "is", "Gross profit"), row(d, "is", "Cost of revenue")
+    if "derived" in gp["label"]:  # FIN-3: a derived gross profit must equal revenue minus the tagged cost of revenue
+        for i in range(n):
+            a, b = rev["values"][i], cost["values"][i]
+            check((gp["values"][i] is None) if (a is None or b is None) else abs(gp["values"][i] - (a - b)) < 1.01, f"FIN-3 {t}: derived gross profit col {i} != revenue - cost of revenue")
     g = rev["subs"][0]["values"]
     for i, c in enumerate(cols):
         if c["kind"] == "LTM" or i == 0:

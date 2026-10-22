@@ -15,6 +15,11 @@ const get = async (url) => { await sleep(150); const r = await fetch(url, { head
 const FLOW = {
   revenue: ["Revenues", "RevenueFromContractWithCustomerExcludingAssessedTax", "RevenueFromContractWithCustomerIncludingAssessedTax", "SalesRevenueNet"],
   grossProfit: ["GrossProfit"],
+  costRev: ["CostOfRevenue", "CostOfGoodsAndServicesSold", "CostOfGoodsSold", "CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization"],
+  rd: ["ResearchAndDevelopmentExpense", "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost"],
+  sm: ["SellingAndMarketingExpense", "SellingExpense"],
+  ga: ["GeneralAndAdministrativeExpense"],
+  sga: ["SellingGeneralAndAdministrativeExpense"],
   opIncome: ["OperatingIncomeLoss"],
   da: ["DepreciationDepletionAndAmortization", "DepreciationAndAmortization", "DepreciationAmortizationAndAccretionNet"],
   netIncome: ["NetIncomeLoss", "ProfitLoss"],
@@ -96,6 +101,9 @@ function build(cf) {
   const ratio = (a, b) => a.map((v, i) => (v == null || !b[i] ? null : +((v / b[i]) * 100).toFixed(1)));
   // Growth is shown for fiscal years only: an LTM column has no prior-year LTM in the 10-K facts, so it is left empty rather than compared with a different period.
   const yoy = (a) => a.map((v, i) => { if (v == null || cols[i].kind === "LTM" || i === 0) return null; const base = a[i - 1]; return base ? +(((v - base) / Math.abs(base)) * 100).toFixed(1) : null; });
+  // Gross profit is the filer's own tag when there is one. If the filer never tags it, it is derived from revenue minus cost of revenue and labelled that way.
+  const gpDerived = val.grossProfit.every((x) => x == null) && val.costRev.some((x) => x != null);
+  const gp = gpDerived ? val.revenue.map((r, i) => (r == null || val.costRev[i] == null ? null : r - val.costRev[i])) : val.grossProfit;
   const rev = val.revenue, ebitda = add(val.opIncome, val.da), fcf = sub(val.ocf, val.capex);
   const line = (label, values, fmt, subs = [], note) => ({ label, values: fmt === "eps" ? values : M(values), fmt, subs, note });
   const pctRow = (label, values) => ({ label, values, fmt: "pct" });
@@ -103,7 +111,9 @@ function build(cf) {
     columns: cols,
     is: [
       line("Revenue", rev, "usd", [pctRow("Growth, YoY", yoy(rev))]),
-      line("Gross profit", val.grossProfit, "usd", [pctRow("Gross margin", ratio(val.grossProfit, rev))]),
+      line("Cost of revenue", val.costRev, "usd", [pctRow("% of revenue", ratio(val.costRev, rev))]),
+      line(gpDerived ? "Gross profit (derived: revenue - cost of revenue as tagged)" : "Gross profit", gp, "usd", [pctRow("Gross margin", ratio(gp, rev))]),
+      ...[["Research and development", val.rd], ["Sales and marketing", val.sm], ["General and administrative", val.ga], ["Selling, general and administrative", val.sga]].filter(([, v]) => v.some((x) => x != null)).map(([l, v]) => line(l, v, "usd", [pctRow("% of revenue", ratio(v, rev))])),
       line("EBITDA (derived: operating income + D&A)", ebitda, "usd", [pctRow("EBITDA margin", ratio(ebitda, rev))]),
       line("Operating income", val.opIncome, "usd", [pctRow("Operating margin", ratio(val.opIncome, rev))]),
       line("Net income", val.netIncome, "usd", [pctRow("Net margin", ratio(val.netIncome, rev))]),
