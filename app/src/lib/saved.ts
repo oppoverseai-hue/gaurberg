@@ -10,7 +10,9 @@ export type SavedProfile = { exchange?: string | null; industry?: string | null;
 export type SavedMarket = {
   saved_at: string; source: string; // "finnhub+twelvedata" or "manual"
   quote?: SavedQuote | null; daily?: Pt[] | null; weekly?: Pt[] | null;
-  fundamentals?: SavedFund | null; profile?: SavedProfile | null; nextEarnings?: string | null;
+  fundamentals?: SavedFund | null;
+  // filing: annual figures from the 10-K, used only where the data service has none
+  filing?: { period: string; filed: string; source: string; url: string; revGrowth?: number; opMargin?: number; netMargin?: number } | null; profile?: SavedProfile | null; nextEarnings?: string | null;
 };
 export type CoRow = Co & { segment: string | null; size_tier: string | null };
 export type Snapshot = { generated_at: string; companies: CoRow[]; rels: Rel[] };

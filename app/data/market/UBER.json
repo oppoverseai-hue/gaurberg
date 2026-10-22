@@ -2081,5 +2081,14 @@
    "t": 1792526400,
    "c": 68.94
   }
- ]
+ ],
+ "filing": {
+  "period": "FY2025",
+  "filed": "2026-02-13",
+  "source": "Uber Form 10-K for 2025 (SEC XBRL: revenue $52,017M vs $43,978M; operating income $5,565M; net income $10,053M)",
+  "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+  "revGrowth": 18.28,
+  "opMargin": 10.7,
+  "netMargin": 19.33
+ }
 }

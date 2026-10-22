@@ -10,13 +10,14 @@ export type Market = {
   f: Partial<Fundamentals> | null; fundError: string | null;
   profile: (Profile & { employees?: number | null; description?: string | null; about_source?: string | null }) | null;
   nextEarnings: string | null;
+  filingNote: string | null; // set when a highlight comes from the 10-K, not the data service
   saved: { at: string; source: string; parts: string[] } | null; // which parts came from saved data
 };
 
 export async function getMarket(ticker: string): Promise<Market> {
   const sv: SavedMarket | null = readMarket(ticker);
   const used: string[] = [];
-  const m: Market = { quote: null, quoteError: null, daily: null, weekly: null, historyError: null, f: null, fundError: null, profile: null, nextEarnings: null, saved: null };
+  const m: Market = { quote: null, quoteError: null, daily: null, weekly: null, historyError: null, f: null, fundError: null, profile: null, nextEarnings: null, filingNote: null, saved: null };
   if (!isOffline()) {
     const [q, d, w, f, ne] = await Promise.all([getQuote(ticker), getHistory(ticker), getHistory(ticker, 1825, "1week"), getFundamentals(ticker), getNextEarnings(ticker)]);
     if (q.ok) m.quote = q.quote; else { m.quoteError = q.reason; console.error("[market] quote", ticker, q.reason); }
@@ -35,6 +36,11 @@ export async function getMarket(ticker: string): Promise<Market> {
     if (sv.profile) {
       // About text and employees are not on Finnhub's free plan; they come from saved or admin-provided data.
       m.profile = { exchange: null, industry: null, website: null, ...(m.profile ?? {}), ...Object.fromEntries(Object.entries(sv.profile).filter(([k, v]) => v != null && (m.profile as Record<string, unknown> | null)?.[k] == null)) };
+    }
+    if (sv.filing) { // fill only the gaps, label the source
+      const g = { ...(m.f ?? {}) } as Record<string, number | null | undefined>; let filled = false;
+      for (const k of ["revGrowth", "opMargin", "netMargin"] as const) if (g[k] == null && sv.filing[k] != null) { g[k] = sv.filing[k]; filled = true; }
+      if (filled) { m.f = g as Partial<Fundamentals>; m.filingNote = `Revenue growth and margins shown where the data service has none: ${sv.filing.period} annual figures from the 10-K filed ${sv.filing.filed}.`; }
     }
     if (!m.nextEarnings && sv.nextEarnings) m.nextEarnings = sv.nextEarnings;
     if (used.length) m.saved = { at: sv.saved_at, source: sv.source, parts: used };
