@@ -45,7 +45,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           <span className="tag">{company.ticker}</span>{p?.exchange && <span className="tag">{p.exchange}</span>}{(company.markets ?? []).map((m) => <span className="tag" key={m}>{m}</span>)}
         </div>
         <div className="meta">
-          <span>{cap(company.segment) ?? NA}</span><span className="muted">•</span><span>{company.size_tier ? `${cap(company.size_tier)} cap` : NA}</span><span className="muted">•</span>
+          <span>{cap(company.segment) ?? NA}</span><span className="muted">•</span><span>{company.size_tier ? `${cap(company.size_tier)} cap` : NA}</span>
         </div>
       </div>
       <CompanyTabs ticker={company.ticker ?? ticker} active="overview" />
