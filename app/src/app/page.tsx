@@ -1,5 +1,6 @@
 import { getAccess } from "@/lib/supabase/server";
 import LoginButton from "@/components/LoginButton";
+import LandingSearch from "@/components/LandingSearch";
 
 export const dynamic = "force-dynamic";
 
@@ -27,10 +28,7 @@ export default async function Home() {
             <span className="muted">{access.email} ({access.role}){access.role === "admin" && <> · <a href="/admin">Admin</a></>}</span>
             <form action="/auth/signout" method="post"><button className="btn">Sign out</button></form>
           </div>
-          <form action="/go" method="get">
-            <input type="search" name="q" placeholder="Search a company or ticker, e.g. Uber" autoFocus />
-          </form>
-          <p className="muted">Try: Uber, Uber chart, Uber map, or help</p>
+          <LandingSearch />
         </>
       )}
     </main>
