@@ -190,7 +190,7 @@ function LinkPanel({ rel, onClose }: { rel: Rel; onClose: () => void }) {
         <div className="r"><span>Size</span><span>{exposureText(rel)}</span></div>
         <div className="r"><span>Confidence</span><span className={rel.confidence == null ? "warn" : ""}>{rel.confidence == null ? "Not scored yet" : rel.confidence.toFixed(2)}</span></div>
         <div className="r"><span>As of</span><span>{rel.as_of_date ?? "Date not given"}</span></div>
-        <div className="r"><span>Kind of source</span><span>{rel.source_type === "sec_filing" ? "SEC filing (10-K)" : rel.source_type ?? "Not given"}</span></div>
+        <div className="r"><span>Kind of source</span><span>{rel.source_type === "sec_filing" ? "SEC filing (10-K or 20-F)" : rel.source_type === "annual_report" ? "Company annual report" : rel.source_type ?? "Not given"}</span></div>
       </div>
       <div>
         <div className="sub"><span>Evidence</span></div>

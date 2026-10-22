@@ -1,6 +1,10 @@
 // Map layout rules (card J1, GRF-1, GRF-2, GRF-4, GRF-5). Pure functions: no data access here.
 export type LinkType = "supplies" | "sells_to" | "partners" | "competes" | "invests" | "acquires";
-export type Co = { id: number; ticker: string | null; name: string; is_seed: boolean | null; entity_type: string | null };
+export type Market = "US" | "LSE" | "HKEX";
+export const MARKETS: Market[] = ["US", "LSE", "HKEX"];
+export const MARKET_LABEL: Record<Market, string> = { US: "US", LSE: "London (LSE)", HKEX: "Hong Kong (HKEX)" };
+// markets is empty when the listing is not yet known. A company can list in more than one market.
+export type Co = { id: number; ticker: string | null; name: string; is_seed: boolean | null; entity_type: string | null; markets?: string[] | null; exchange?: string | null; country?: string | null };
 export type Evidence = { quote: string | null; document_url: string | null; section: string | null; published_at: string | null; quote_found: boolean | null };
 export type Rel = {
   id: number; relationship_type: LinkType; source: Co; target: Co;
