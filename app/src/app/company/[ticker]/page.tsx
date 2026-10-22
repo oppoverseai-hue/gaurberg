@@ -9,6 +9,7 @@ import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels } from "@/lib/data";
 import { getMarket } from "@/lib/market";
 import PeriodChart from "@/components/PeriodChart";
+import CompanyTabs from "@/components/CompanyTabs";
 import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
@@ -44,9 +45,9 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
         </div>
         <div className="meta">
           <span>{cap(company.segment) ?? NA}</span><span className="muted">•</span><span>{company.size_tier ? `${cap(company.size_tier)} cap` : NA}</span><span className="muted">•</span>
-          <Link className="linkchip" href={`/map/${company.ticker}`}>Ecosystem map →</Link>
         </div>
       </div>
+      <CompanyTabs ticker={company.ticker ?? ticker} active="overview" />
       {m.saved && <p className="savedbar">Showing saved data{m.saved.parts.length ? ` for ${m.saved.parts.join(", ")}` : ""} from {m.saved.at}{m.saved.source === "manual" ? " (provided by admin)" : ""}. Live data was not available.</p>}
       <div className="grid2">
         <section className="stack">
