@@ -1,3 +1,7 @@
+import { isOffline } from "@/lib/mode";
+import NewsPanel from "@/components/NewsPanel";
+import { getNews } from "@/lib/news";
+import { getInsiderTrades } from "@/lib/insiders";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
@@ -24,7 +28,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const ticker = (await params).ticker.toUpperCase();
   const company = await getCompany(ticker);
   if (!company) notFound();
-  const [m, { rels }] = await Promise.all([getMarket(ticker), getRels(company.id)]);
+  const insiders = isOffline() ? { trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } : await getInsiderTrades(ticker);
+  const [m, { rels }, news] = await Promise.all([getMarket(ticker), getRels(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(ticker)]);
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
@@ -72,15 +77,36 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           </div>
           <div className="card" id="highlights">
             <div className="cardhead"><h3>Financial highlights</h3><span className="label">Finnhub, trailing 12 months</span></div>
+            {m.filingNote && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 8px" }}>{m.filingNote}</p>}
             <Rows rows={[
               ["Revenue growth (year on year)", pct(f.revGrowth)], ["Revenue per share", n2(f.revPerShare) && `$${n2(f.revPerShare)}`],
               ["Gross margin", pct(f.grossMargin)], ["Operating margin", pct(f.opMargin)], ["Net margin", pct(f.netMargin)],
               ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Current ratio", n2(f.currentRatio)], ["Debt to equity", n2(f.debtEquity)],
             ]} />
           </div>
+          <div className="card" id="insiders">
+            <div className="cardhead"><h3>Insider trades</h3><span className="label">SEC Form 4</span></div>
+            {insiders.error && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 6px" }}>⚠ {insiders.error}</p>}
+            {!insiders.trades.length ? <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{insiders.error ? "Insider trades are not available right now." : `No open-market buys or sells in the last 90 days (${insiders.checked} Form 4 filings read).`}</p> : (() => {
+              const b = insiders.trades.filter((t) => t.side === "Buy"), sl = insiders.trades.filter((t) => t.side === "Sell");
+              const sum = (a: { shares: number }[]) => a.reduce((n, t) => n + t.shares, 0).toLocaleString("en-US");
+              return (
+                <>
+                  <p style={{ margin: "0 0 8px", fontSize: 13 }}>Last 90 days: {sl.length} sale{sl.length === 1 ? "" : "s"} ({sum(sl)} shares) by {new Set(sl.map((t) => t.insider)).size} insider{new Set(sl.map((t) => t.insider)).size === 1 ? "" : "s"}; {b.length} purchase{b.length === 1 ? "" : "s"} ({sum(b)} shares) by {new Set(b.map((t) => t.insider)).size}.</p>
+                  {insiders.trades.slice(0, 10).map((t, i) => (
+                    <a key={t.url + i} className="resrow" style={{ display: "block" }} href={t.url} target="_blank" rel="noopener noreferrer">
+                      <div><strong>{t.side}</strong> {t.shares.toLocaleString("en-US")} shares{t.price ? ` at $${t.price.toFixed(2)}` : ""} · {t.insider}</div>
+                      <div className="muted mono" style={{ fontSize: 11 }}>{t.role} · traded {t.date} · filed {t.filed}</div>
+                    </a>
+                  ))}
+                </>
+              );
+            })()}
+            <p className="muted mono" style={{ fontSize: 10, margin: "8px 0 0" }}>Open-market purchases and sales only, from the latest {insiders.checked} Form 4 filings (within 90 days). Plans set in advance are not separated. This describes filings and is not a recommendation.</p>
+          </div>
           <div className="card" id="news">
-            <div className="cardhead"><h3>Recent news</h3></div>
-            <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>Not available yet. News, press releases and filings are not built in this version.</p>
+            <div className="cardhead"><h3>Recent news</h3><span className="label">Finnhub and SEC EDGAR</span></div>
+            <NewsPanel items={news.items} errors={news.errors} />
           </div>
         </section>
         <aside className="stack">

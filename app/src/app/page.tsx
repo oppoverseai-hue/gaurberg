@@ -24,7 +24,7 @@ export default async function Home() {
       {access.state === "ok" && (
         <>
           <div className="top">
-            <span className="muted">{access.email} ({access.role})</span>
+            <span className="muted">{access.email} ({access.role}){access.role === "admin" && <> · <a href="/admin">Admin</a></>}</span>
             <form action="/auth/signout" method="post"><button className="btn">Sign out</button></form>
           </div>
           <form action="/go" method="get">
