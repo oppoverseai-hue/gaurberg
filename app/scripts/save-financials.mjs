@@ -26,6 +26,8 @@ const INST = {
   cash: ["CashAndCashEquivalentsAtCarryingValue", "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"],
   assets: ["Assets"], liabilities: ["Liabilities"],
   equity: ["StockholdersEquity", "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"],
+  nci: ["MinorityInterest"],
+  temp: ["TemporaryEquityCarryingAmountIncludingPortionAttributableToNoncontrollingInterests", "TemporaryEquityCarryingAmountAttributableToParent", "RedeemableNoncontrollingInterestEquityCarryingAmount"],
   debtTotal: ["LongTermDebt", "DebtAndCapitalLeaseObligations"],
   debtNonCurrent: ["LongTermDebtNoncurrent"], debtCurrent: ["LongTermDebtCurrent", "DebtCurrent", "ShortTermBorrowings"],
 };
@@ -109,13 +111,19 @@ function build(cf) {
     ],
     bs: [
       line("Cash and equivalents", inst.cash, "usd"), line("Total debt (excludes leases where tagged separately)", debt, "usd"),
-      line("Total assets", inst.assets, "usd"), line("Total liabilities", inst.liabilities, "usd"), line("Shareholders' equity", inst.equity, "usd"),
+      line("Total assets", inst.assets, "usd"), line("Total liabilities", inst.liabilities, "usd"), line("Shareholders' equity (parent)", inst.equity, "usd"),
+      line("Non-controlling and redeemable interests", inst.nci.map((v, i) => (v == null && inst.temp[i] == null ? null : (v ?? 0) + (inst.temp[i] ?? 0))), "usd"),
     ],
     cf: [
       line("Operating cash flow", val.ocf, "usd"), line("Capital expenditure", val.capex, "usd"),
       line("Free cash flow (derived: operating cash flow - capex)", fcf, "usd", [pctRow("FCF margin", ratio(fcf, rev))]),
     ],
     hasLtm: ltm,
+    // A column whose assets differ from liabilities + equity + non-controlling/redeemable interests by 3% or more is flagged, not hidden or "fixed".
+    flags: cols.flatMap((c, i) => {
+      const A = inst.assets[i], L = inst.liabilities[i], E = inst.equity[i], N = (inst.nci[i] ?? 0) + (inst.temp[i] ?? 0);
+      return A && L != null && E != null && Math.abs(A - L - E - N) / Math.abs(A) >= 0.03 ? [`${c.label}: balance sheet does not balance in the tagged data (assets ${Math.round(A / 1e6)}M vs liabilities + equity ${Math.round((L + E + N) / 1e6)}M); verify against the 10-K.`] : [];
+    }),
   };
 }
 

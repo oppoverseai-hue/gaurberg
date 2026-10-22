@@ -8,6 +8,8 @@ export type Financials = {
   status: "ok" | "no_filer" | "no_10k" | "error"; note?: string;
   columns?: { label: string; end: string; kind: "FY" | "LTM" }[];
   is?: FinRow[]; bs?: FinRow[]; cf?: FinRow[];
+  flags?: string[];
+  segments?: { measure: string; columns: string[]; rows: FinRow[]; note: string } | null;
 };
 
 export function readFinancials(ticker: string): Financials | null {
