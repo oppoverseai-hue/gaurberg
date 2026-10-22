@@ -9,6 +9,8 @@ import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels } from "@/lib/data";
 import { getMarket } from "@/lib/market";
 import PeriodChart from "@/components/PeriodChart";
+import FinancialsTable from "@/components/FinancialsTable";
+import { readFinancials } from "@/lib/financials";
 import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
@@ -33,6 +35,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
+  const fin = readFinancials(ticker);
   const top = buildNodes(rels, company.id).slice(0, 5);
   return (
     <main>
@@ -83,6 +86,17 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               ["Gross margin", pct(f.grossMargin)], ["Operating margin", pct(f.opMargin)], ["Net margin", pct(f.netMargin)],
               ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Current ratio", n2(f.currentRatio)], ["Debt to equity", n2(f.debtEquity)],
             ]} />
+          </div>
+          <div className="card" id="financials">
+            <div className="cardhead"><h3>Financial statements</h3><span className="label">{fin?.status === "ok" ? "SEC EDGAR, 10-K and 10-Q" : "Sample"}</span></div>
+            {fin?.status === "ok" ? (
+              <>
+                <FinancialsTable fin={fin} marketCap={f.marketCap ?? null} />
+                <p className="muted mono" style={{ fontSize: 10, margin: "8px 0 0" }}>Last 4 fiscal years plus LTM (latest year plus year-to-date, minus the same period a year earlier), from filings as of {fin.saved_at}. Lines the filer did not tag show n/a. EBITDA and free cash flow are derived. No analyst estimates are shown. This describes filings and is not a recommendation.</p>
+              </>
+            ) : (
+              <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>Sample: {fin?.note ?? "no saved statements for this company."}</p>
+            )}
           </div>
           <div className="card" id="insiders">
             <div className="cardhead"><h3>Insider trades</h3><span className="label">SEC Form 4</span></div>
