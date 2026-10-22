@@ -162,3 +162,4 @@ body:has(.ixbar) footer.site { padding-bottom:44px; }
 .ls-k { position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--muted); }
 .ls-enter { color:var(--accent); border-color:var(--accent-border); } .ls-unm { font:700 10px var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--b-staged); border:1px solid var(--b-staged); border-radius:3px; padding:1px 6px; margin-left:6px; }
 .ls-row .ls-name b { display:inline-block; margin-top:4px; } .ls-row .ls-name:has(.ls-unm) { white-space:normal; }
+body:has(.lsearch) .brand { visibility:hidden; }

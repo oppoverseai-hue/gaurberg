@@ -64,7 +64,8 @@ const eodhd: Fn = async (s) => {
     return p && p > 0 ? { price: p, change: num(j.change) ?? 0, changePct: num(j.change_p) ?? 0 } : `empty: ${t.slice(0, 80)}`;
   } catch { return "unreachable"; }
 };
-const PROVIDERS = [["finnhub", finnhub], ["twelvedata", twelvedata], ["fmp", fmp], ["eodhd", eodhd]] as const;
+// Twelve Data is not used for indices: its short symbols (for example "DAX") match funds, not the index, and returned a fund price of 44.02.
+const PROVIDERS = [["finnhub", finnhub], ["fmp", fmp], ["eodhd", eodhd]] as const;
 
 // probe=true tries every provider and symbol so the admin can see what answers; otherwise it stops at the first answer.
 export async function getIndices(probe = false): Promise<{ items: IndexQuote[]; probes: Probe[] }> {
