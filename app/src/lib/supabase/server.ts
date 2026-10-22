@@ -34,7 +34,9 @@ export async function getAccess(): Promise<Access> {
   const { data } = await supabase.auth.getUser();
   const email = data.user?.email;
   if (!email) return { state: "signed_out" };
-  const { data: row } = await supabase.from("allowlist").select("role").maybeSingle();
+  // The admin can read every allowlist row, so pick this user's own row by email (case-insensitive), never "the only row".
+  const { data: rows } = await supabase.from("allowlist").select("email,role");
+  const row = (rows ?? []).find((r: { email: string }) => r.email.toLowerCase() === email.toLowerCase());
   if (!row) return { state: "not_invited", email };
   return { state: "ok", email, role: row.role };
 }
