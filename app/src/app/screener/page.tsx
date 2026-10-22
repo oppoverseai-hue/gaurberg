@@ -3,29 +3,19 @@ import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
-import { readSnapshot, readMarket, type CoRow } from "@/lib/saved";
 import { MARKETS, MARKET_LABEL, type Market } from "@/lib/graph";
+import { loadRows, parseFilters, hasFilter, SEG, SIZE, type Filters } from "@/lib/screener";
+import FilterBar from "@/components/FilterBar";
 
 export const dynamic = "force-dynamic";
 
-// Screener (TRM-5): mapped companies filtered by segment, size group and the price change over 1 month.
-// The 1-month change is computed from saved daily closes (data/market/<TICKER>.json). A company with no saved history shows
-// "no saved price history" and is left out as soon as a price-change filter is set. Nothing is estimated.
-const SEG = ["consumer", "business", "infrastructure"], SIZE = ["large", "mid", "small"];
-
-function monthChange(ticker: string): { pct: number; from: string } | null {
-  const d = readMarket(ticker)?.daily;
-  if (!d || d.length < 2) return null;
-  const last = d[d.length - 1], target = last.t - 30 * 86400;
-  const base = [...d].reverse().find((p) => p.t <= target);
-  if (!base || base.c === 0) return null;
-  return { pct: ((last.c - base.c) / base.c) * 100, from: new Date(base.t * 1000).toISOString().slice(0, 10) };
-}
-
-type Past = { id: number; filters: { segment?: string; size?: string; market?: string; dir?: string }; used_at: string };
+// Screener (TRM-5): mapped companies by market, segment, size and 1-month change, from saved daily closes.
+// A company with no saved price history shows "no saved price history" and is left out once a change filter is set. Nothing is estimated.
+type Past = { id: number; filters: Partial<Filters>; used_at: string };
+const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
 const DIRW: Record<string, string> = { up: "up over 1 month", down: "down over 1 month" };
-const label = (f: Past["filters"]) => [f.market ? MARKET_LABEL[f.market as Market] ?? f.market : "", f.segment ? f.segment[0].toUpperCase() + f.segment.slice(1) : "", f.size ? `${f.size} size` : "", f.dir ? DIRW[f.dir] : ""].filter(Boolean).join(" · ");
-const href = (f: Past["filters"]) => "/screener?" + new URLSearchParams(Object.entries(f).filter(([, v]) => v) as [string, string][]).toString();
+const label = (f: Partial<Filters>) => [f.market ? MARKET_LABEL[f.market as Market] ?? f.market : "", f.segment ? cap(f.segment) : "", f.size ? `${f.size} size` : "", f.dir ? DIRW[f.dir] : ""].filter(Boolean).join(" · ");
+const qs = (o: Record<string, string>) => { const p = new URLSearchParams(Object.entries(o).filter(([, v]) => v)); const s = p.toString(); return s ? "?" + s : ""; };
 
 async function forget(fd: FormData) {
   "use server";
@@ -36,65 +26,105 @@ async function forget(fd: FormData) {
   revalidatePath("/screener");
 }
 
+function Spark({ v, up }: { v: number[]; up: boolean }) {
+  if (v.length < 2) return null;
+  const w = 80, h = 22, lo = Math.min(...v), hi = Math.max(...v), r = hi - lo || 1;
+  const pts = v.map((y, i) => `${((i / (v.length - 1)) * w).toFixed(1)},${(h - 2 - ((y - lo) / r) * (h - 4)).toFixed(1)}`).join(" ");
+  return <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true"><polyline points={pts} fill="none" stroke={up ? "var(--up)" : "var(--down)"} strokeWidth="1.5" strokeLinejoin="round" /></svg>;
+}
+
 export default async function Screener({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
   const access = await getAccess();
   if (access.state !== "ok") redirect("/");
-  const q = await searchParams;
-  const seg = SEG.includes(q.segment ?? "") ? q.segment : "", size = SIZE.includes(q.size ?? "") ? q.size : "";
-  const mkt = MARKETS.includes(q.market as Market) ? (q.market as Market) : "";
-  const dir = q.dir === "down" ? "down" : q.dir === "up" ? "up" : "";
-  let cos: CoRow[] = [];
-  if (isOffline()) cos = (readSnapshot()?.companies ?? []).filter((c) => c.is_seed && c.ticker);
-  else {
-    const supabase = await supabaseServer();
-    cos = ((await supabase.from("companies").select("id,ticker,name,is_seed,entity_type,segment,size_tier,markets").eq("is_seed", true).not("ticker", "is", null)).data ?? []) as CoRow[];
-  }
-  const rows = cos.map((c) => ({ c, ch: monthChange(c.ticker!) }))
-    .filter(({ c, ch }) => (!seg || c.segment === seg) && (!size || c.size_tier === size) && (!mkt || (c.markets ?? []).includes(mkt)) && (!dir || (ch && (dir === "up" ? ch.pct >= 0 : ch.pct < 0))))
-    .sort((a, b) => (b.ch?.pct ?? -1e9) - (a.ch?.pct ?? -1e9) || a.c.name.localeCompare(b.c.name));
-  // Previous screens: remember this screen if it has a filter, then list the latest eight (this user only; row-level security).
+  const f = parseFilters(await searchParams);
+  const { rows, total, up, withData } = await loadRows(f);
+
   let past: Past[] = [];
   if (!isOffline()) {
     const supabase = await supabaseServer();
-    const filters = { segment: seg, size, market: mkt, dir };
-    if (seg || size || mkt || dir) await supabase.from("saved_screens").upsert({ filters, filters_key: [seg, size, mkt, dir].join("|"), used_at: new Date().toISOString() }, { onConflict: "user_id,filters_key" });
+    if (hasFilter(f)) await supabase.from("saved_screens").upsert({ filters: { segment: f.segment, size: f.size, market: f.market, dir: f.dir }, filters_key: [f.segment, f.size, f.market, f.dir].join("|"), used_at: new Date().toISOString() }, { onConflict: "user_id,filters_key" });
     past = ((await supabase.from("saved_screens").select("id,filters,used_at").order("used_at", { ascending: false }).limit(8)).data ?? []) as Past[];
   }
-  const withData = cos.filter((c) => monthChange(c.ticker!)).length;
+
+  const base: Record<string, string> = { segment: f.segment, size: f.size, market: f.market, dir: f.dir, scope: f.scope === "viewed" ? "viewed" : "" };
+  const sortHref = (key: string) => {
+    const next = f.sort === key ? (f.order === "asc" ? "desc" : "asc") : key === "name" ? "asc" : "desc";
+    return "/screener" + qs({ ...base, sort: key, order: next });
+  };
+  const arrow = (key: string) => (f.sort === key ? (f.order === "asc" ? " ↑" : " ↓") : "");
+  const scopeHref = (s: string) => "/screener" + qs({ ...base, scope: s === "viewed" ? "viewed" : "" });
+  const exportHref = "/screener/export" + qs({ ...base, sort: f.sort, order: f.order });
+
   return (
-    <main className="narrow">
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Home</Link>
-      <h1 style={{ marginTop: 12 }}>Screener</h1>
-      <p className="muted">Mapped companies, filtered by market, segment, size group and price change over 1 month.</p>
-      <form method="get" className="card" style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-        <select name="segment" defaultValue={seg}><option value="">All segments</option>{SEG.map((s) => <option key={s} value={s}>{s[0].toUpperCase() + s.slice(1)}</option>)}</select>
-        <select name="size" defaultValue={size}><option value="">All sizes</option>{SIZE.map((s) => <option key={s} value={s}>{s[0].toUpperCase() + s.slice(1)}</option>)}</select>
-        <select name="market" defaultValue={mkt}><option value="">All markets</option>{MARKETS.map((m) => <option key={m} value={m}>{MARKET_LABEL[m]}</option>)}</select>
-        <select name="dir" defaultValue={dir}><option value="">Any 1-month change</option><option value="up">Up over 1 month</option><option value="down">Down over 1 month</option></select>
-        <button className="btn">Apply</button> <Link href="/screener" className="mono" style={{ fontSize: 12 }}>Reset</Link>
-      </form>
+    <main className="narrow scr">
+      <div className="scr-head">
+        <div>
+          <h1>Screener</h1>
+          <p className="muted">{rows.length} of {total} mapped companies · {up} up over 1 month · {withData} with saved price history</p>
+        </div>
+        <a className="btn" href={exportHref}>Export CSV</a>
+      </div>
+
+      <div className="scr-bar">
+        <div className="scr-scope" role="tablist" aria-label="Scope">
+          <Link href={scopeHref("all")} className={f.scope === "all" ? "on" : ""}>All mapped</Link>
+          <Link href={scopeHref("viewed")} className={f.scope === "viewed" ? "on" : ""}>Viewed by me</Link>
+        </div>
+        <FilterBar
+          values={{ market: f.market, segment: f.segment, size: f.size, dir: f.dir }}
+          markets={MARKETS.map((m) => ({ v: m, l: MARKET_LABEL[m] }))}
+          segments={SEG.map((s) => ({ v: s, l: cap(s) }))}
+          sizes={SIZE.map((s) => ({ v: s, l: cap(s) }))}
+          hidden={{ scope: f.scope === "viewed" ? "viewed" : "", sort: f.sort, order: f.order }}
+        />
+      </div>
+
       {past.length > 0 && (
-        <div className="card">
-          <div className="cardhead"><h3>Previous screens</h3><span className="tag">{past.length}</span></div>
+        <div className="scr-past">
+          <span className="muted mono">Previous</span>
           {past.map((p) => (
-            <div key={p.id} className="resrow" style={{ cursor: "default" }}>
-              <Link href={href(p.filters)} style={{ flex: 1 }}>{label(p.filters)} <span className="muted mono" style={{ fontSize: 11 }}>· last run {p.used_at.slice(0, 10)}</span></Link>
-              <form action={forget}><input type="hidden" name="id" value={p.id} /><button className="linkbtn" aria-label="Forget this screen" title="Forget this screen">×</button></form>
-            </div>
+            <span key={p.id} className="chip">
+              <Link href={"/screener" + qs(Object.fromEntries(Object.entries(p.filters).filter(([, v]) => v)) as Record<string, string>)}>{label(p.filters)}</Link>
+              <form action={forget}><input type="hidden" name="id" value={p.id} /><button aria-label="Forget this screen" title="Forget this screen">×</button></form>
+            </span>
           ))}
         </div>
       )}
-      <div className="card">
-        <div className="cardhead"><h3>Results</h3><span className="tag">{rows.length} companies</span></div>
-        {!rows.length && <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>No company matches these filters.</p>}
-        {rows.map(({ c, ch }) => (
-          <Link key={c.id} href={`/company/${c.ticker}`} className="resrow">
-            <span><strong>{c.name}</strong> <span className="muted mono" style={{ fontSize: 11 }}>{c.ticker} · {(c.markets ?? []).join("/") || "n/a"} · {c.segment ?? "n/a"} · {c.size_tier ?? "n/a"}</span></span>
-            <span className="mono" style={{ fontSize: 12, color: ch ? (ch.pct >= 0 ? "var(--ok, #34d399)" : "var(--bad, #f87171)") : "var(--muted)" }}>{ch ? `${ch.pct >= 0 ? "+" : ""}${ch.pct.toFixed(1)}% since ${ch.from}` : "no saved price history"}</span>
-          </Link>
-        ))}
-        <p className="muted mono" style={{ fontSize: 11, marginBottom: 0 }}>{withData} of {cos.length} companies have saved price history. Run <code>node --env-file=.env scripts/save-market.mjs</code> to save the rest. Prices are end-of-day closes from saved data.</p>
+
+      <div className="card scr-card">
+        {!rows.length ? (
+          <p className="muted mono" style={{ fontSize: 12, margin: 12 }}>{f.scope === "viewed" && !hasFilter(f) ? "You have not opened any company yet. Open a company or its map and it will appear here." : "No company matches these filters."}</p>
+        ) : (
+          <table className="scr-table">
+            <thead>
+              <tr>
+                <th><Link href={sortHref("name")}>Company{arrow("name")}</Link></th>
+                <th className="num"><Link href={sortHref("links")}>Links{arrow("links")}</Link></th>
+                <th className="num"><Link href={sortHref("ret")}>1M change{arrow("ret")}</Link></th>
+                <th>30-day trend</th>
+                <th aria-label="Actions" />
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map(({ c, links, ch, spark }) => (
+                <tr key={c.id}>
+                  <td>
+                    <Link href={`/company/${c.ticker}`} className="scr-name"><strong>{c.name}</strong></Link>
+                    <span className="muted mono scr-sub">{c.ticker} · {(c.markets ?? []).join("/") || "n/a"} · {c.segment ?? "n/a"}</span>
+                  </td>
+                  <td className="num mono">{links}</td>
+                  <td className="num mono" style={{ color: ch ? (ch.pct >= 0 ? "var(--up)" : "var(--down)") : "var(--fg2)" }}>
+                    {ch ? <>{ch.pct >= 0 ? "+" : ""}{ch.pct.toFixed(1)}%<span className="muted scr-sub">since {ch.from}</span></> : <span className="muted">no saved price history</span>}
+                  </td>
+                  <td>{spark && ch ? <Spark v={spark} up={ch.pct >= 0} /> : null}</td>
+                  <td className="num"><Link href={`/map/${c.ticker}`} className="mono scr-map">Map →</Link></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
+      <p className="muted mono" style={{ fontSize: 11 }}>Prices are end-of-day closes from saved data. Companies without saved history are listed last and dropped when a change filter is set.</p>
     </main>
   );
 }

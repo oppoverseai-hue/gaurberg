@@ -6,7 +6,7 @@ import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
 import { fmtBig, fmtShares } from "@/lib/finnhub";
-import { getCompany, getRels } from "@/lib/data";
+import { getCompany, getRels, recordView } from "@/lib/data";
 import { getMarket } from "@/lib/market";
 import PeriodChart from "@/components/PeriodChart";
 import CompanyTabs from "@/components/CompanyTabs";
@@ -29,6 +29,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const ticker = (await params).ticker.toUpperCase();
   const company = await getCompany(ticker);
   if (!company) notFound();
+  await recordView(company.id);
   const insiders = isOffline() ? { trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } : await getInsiderTrades(ticker);
   const [m, { rels }, news] = await Promise.all([getMarket(ticker), getRels(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(ticker)]);
   const q = m.quote, f = m.f ?? {}, p = m.profile;

@@ -57,3 +57,16 @@ export async function getGeo(companyIds: number[]): Promise<{ geo: GeoMap; count
   const countryRegion: CountryRegion = Object.fromEntries(((c.data ?? []) as { country: string; region: string }[]).map((x) => [x.country, x.region]));
   return { geo, countryRegion };
 }
+
+// Remember that this user opened a company (feeds Screener "Viewed by me"). Best effort: skipped offline, never blocks the page.
+export async function recordView(companyId: number): Promise<void> {
+  if (isOffline()) return;
+  try {
+    const supabase = await supabaseServer();
+    const { data: u } = await supabase.auth.getUser();
+    if (!u.user) return;
+    const { data: row } = await supabase.from("viewed_companies").select("id,views").eq("company_id", companyId).maybeSingle();
+    if (row) await supabase.from("viewed_companies").update({ views: row.views + 1, last_viewed_at: new Date().toISOString() }).eq("id", row.id);
+    else await supabase.from("viewed_companies").insert({ company_id: companyId });
+  } catch { /* ignore */ }
+}

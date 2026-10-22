@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
-import { getCompany, getRels, getGeo } from "@/lib/data";
+import { getCompany, getRels, getGeo, recordView } from "@/lib/data";
 import type { Rel } from "@/lib/graph";
 import MapView from "@/components/MapView";
 import LiveLookup from "@/components/LiveLookup";
@@ -15,6 +15,7 @@ export default async function MapPage({ params }: { params: Promise<{ ticker: st
   const ticker = (await params).ticker.toUpperCase();
   const focal = await getCompany(ticker);
   if (!focal) notFound();
+  await recordView(focal.id);
   // RLS decides what is visible online: allowed users see promoted links only; the admin also sees staged links. Offline shows the saved promoted links.
   const { rels, error: relError } = await getRels(focal.id);
   const error = relError;
