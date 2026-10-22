@@ -1,0 +1,30 @@
+{
+ "ticker": "SCT",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Softcat plc Preliminary results for the year ended 31 July 2026",
+ "as_of": "2026-07-31",
+ "chunks": 1,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31071,
+   "cache_read_tokens": 10986,
+   "output_tokens": 478,
+   "cost_usd": 0.1330586,
+   "seconds": 7.1,
+   "is_error": false,
+   "chunk": 1
+  }
+ ],
+ "totals": {
+  "input_tokens": 2,
+  "cache_creation_tokens": 31071,
+  "cache_read_tokens": 10986,
+  "output_tokens": 478,
+  "cost_usd": 0.1330586,
+  "seconds": 7.1
+ },
+ "edges": 3,
+ "quotes_not_found": 0
+}

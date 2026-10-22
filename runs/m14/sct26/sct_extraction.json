@@ -1,0 +1,59 @@
+[
+ {
+  "counterparty": "GDT",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "SCT",
+  "target": "GDT",
+  "evidence": [
+   {
+    "section": "p31",
+    "quote": "On 17 September 2026, Softcat signed an agreement to acquire General Datatech, L.P. (‘GDT’), a leading US-based, multi-vendor IT solutions provider.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Preliminary results for the year ended 31 July 2026",
+  "as_of": "2026-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Oakland",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "SCT",
+  "target": "Oakland",
+  "evidence": [
+   {
+    "section": "p31",
+    "quote": "On 4 April 2025, the Group acquired 100% of the share capital of Oakland Group Services Limited, a non-listed company based in the United Kingdom and specialising in the provision of data platform, data strategy, data governance, data analytics and artificial intelligence consultancy.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Preliminary results for the year ended 31 July 2026",
+  "as_of": "2026-07-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Microsoft",
+  "target": "SCT",
+  "evidence": [
+   {
+    "section": "p9",
+    "quote": "In addition, Microsoft grew strongly with margin impacted by the fee structure changes which caused a mix from EAs (Enterprise Agreements) into CSPs (Cloud Solution Providers) and larger solution deals at low margins had a dilutive impact, with these two factors mainly impacting H1.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Preliminary results for the year ended 31 July 2026",
+  "as_of": "2026-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]
