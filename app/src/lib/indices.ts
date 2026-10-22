@@ -14,7 +14,10 @@ const INDICES = [
   { id: "HSI", label: "Hang Seng", syms: { finnhub: "^HSI", twelvedata: "HSI", fmp: "^HSI", eodhd: "HSI.INDX" }, proxy: "EWH" },
 ] as const;
 const num = (v: unknown) => { const n = Number(v); return Number.isFinite(n) ? n : null; };
+// Cache time per provider so the free daily limits hold: Finnhub 60/min, Twelve Data 800/day, FMP 250/day, EODHD 20/day (about 6 indices, so 1h, 1h, 3h).
 const RV = { next: { revalidate: 900 } };
+const RV1H = { next: { revalidate: 3600 } };
+const RV3H = { next: { revalidate: 10800 } };
 
 const finnhub: Fn = async (s) => {
   const k = process.env.FINNHUB_API_KEY; if (!k) return "no key";
@@ -28,7 +31,7 @@ const finnhub: Fn = async (s) => {
 const twelvedata: Fn = async (s) => {
   const k = process.env.TWELVEDATA_API_KEY; if (!k) return "no key";
   try {
-    const r = await fetch(`https://api.twelvedata.com/quote?symbol=${encodeURIComponent(s)}&apikey=${k}`, RV);
+    const r = await fetch(`https://api.twelvedata.com/quote?symbol=${encodeURIComponent(s)}&apikey=${k}`, RV1H);
     const j = await r.json();
     if (j.status === "error" || j.code) return `${j.code ?? r.status}: ${String(j.message ?? "error").slice(0, 80)}`;
     const p = num(j.close);
@@ -38,7 +41,7 @@ const twelvedata: Fn = async (s) => {
 const fmp: Fn = async (s) => {
   const k = process.env.FMP_API_KEY; if (!k) return "no key";
   try {
-    const r = await fetch(`https://financialmodelingprep.com/stable/quote?symbol=${encodeURIComponent(s)}&apikey=${k}`, RV);
+    const r = await fetch(`https://financialmodelingprep.com/stable/quote?symbol=${encodeURIComponent(s)}&apikey=${k}`, RV1H);
     const t = await r.text();
     if (!r.ok) return `HTTP ${r.status}: ${t.slice(0, 80)}`;
     let j: unknown; try { j = JSON.parse(t); } catch { return `not json: ${t.slice(0, 60)}`; }
@@ -53,7 +56,7 @@ const fmp: Fn = async (s) => {
 const eodhd: Fn = async (s) => {
   const k = process.env.EODHD_API_KEY; if (!k) return "no key";
   try {
-    const r = await fetch(`https://eodhd.com/api/real-time/${encodeURIComponent(s)}?api_token=${k}&fmt=json`, RV);
+    const r = await fetch(`https://eodhd.com/api/real-time/${encodeURIComponent(s)}?api_token=${k}&fmt=json`, RV3H);
     const t = await r.text();
     if (!r.ok) return `HTTP ${r.status}: ${t.slice(0, 80)}`;
     let j: Record<string, unknown>; try { j = JSON.parse(t); } catch { return `not json: ${t.slice(0, 60)}`; }
