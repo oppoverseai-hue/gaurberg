@@ -1,0 +1,11 @@
+chunk 3/10: 0 items, in=42922 out=120 $0.1267 4.8s
+chunk 2/10: 3 items, in=42731 out=866 $0.1334 8.6s
+chunk 1/10: 6 items, in=44436 out=929 $0.1410 10.3s
+chunk 4/10: 2 items, in=43146 out=717 $0.1336 8.2s
+chunk 5/10: 0 items, in=42845 out=4 $0.1253 6.2s
+chunk 7/10: 0 items, in=42848 out=4 $0.1253 4.3s
+chunk 6/10: 2 items, in=44548 out=700 $0.1392 9.7s
+chunk 10/10: 0 items, in=27495 out=90 $0.0632 3.8s
+chunk 9/10: 2 items, in=48672 out=334 $0.1524 6.7s
+chunk 8/10: 1 items, in=45151 out=494 $0.1396 10.0s
+CCC extractor (claude-sonnet-5-5): 14 edges, tokens in=424794 out=4258 cost=$1.2797

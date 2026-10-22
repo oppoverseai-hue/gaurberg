@@ -1,0 +1,100 @@
+{
+ "ticker": "BYIT",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+ "as_of": "2026-03-31",
+ "chunks": 8,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 44087,
+   "cache_read_tokens": 0,
+   "output_tokens": 6109,
+   "cost_usd": 0.24053989999999997,
+   "seconds": 34.0,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 42708,
+   "cache_read_tokens": 0,
+   "output_tokens": 1453,
+   "cost_usd": 0.188328,
+   "seconds": 12.7,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 43919,
+   "cache_read_tokens": 0,
+   "output_tokens": 306,
+   "cost_usd": 0.18182410000000002,
+   "seconds": 8.6,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29651,
+   "cache_read_tokens": 12600,
+   "output_tokens": 796,
+   "cost_usd": 0.1307448,
+   "seconds": 9.3,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31916,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1250,
+   "cost_usd": 0.14457129999999999,
+   "seconds": 12.1,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29474,
+   "cache_read_tokens": 12600,
+   "output_tokens": 287,
+   "cost_usd": 0.1249276,
+   "seconds": 8.9,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31748,
+   "cache_read_tokens": 12600,
+   "output_tokens": 504,
+   "cost_usd": 0.1364225,
+   "seconds": 7.4,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 13182,
+   "cache_read_tokens": 12600,
+   "output_tokens": 238,
+   "cost_usd": 0.057642399999999996,
+   "seconds": 6.0,
+   "is_error": false,
+   "chunk": 8
+  }
+ ],
+ "totals": {
+  "input_tokens": 16,
+  "cache_creation_tokens": 266685,
+  "cache_read_tokens": 63000,
+  "output_tokens": 10943,
+  "cost_usd": 1.2050006,
+  "seconds": 99.0
+ },
+ "edges": 43,
+ "quotes_not_found": 0
+}

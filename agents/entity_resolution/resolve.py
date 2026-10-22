@@ -107,9 +107,21 @@ def main():
         # An end counts as the focal company when it is the ticker or resolves to the focal company's name (for example a unit under the parent rule).
         is_focal = {k: e[k] == t or (focal is not None and resolve(e[k])[0] == focal) for k in ("source", "target")}
         if not any(is_focal.values()):
-            # A deal between two other companies (for example a buyer and a unit the focal company sold) is not a link of the focal company
-            # and would become a self-link. It is dropped and listed in the report for the admin.
-            dropped.append({"source": e["source"], "type": e["type"], "target": e["target"], "quote": (e["evidence"] or [{}])[0].get("quote", "")})
+            # A deal between two other companies (for example a buyer and a unit the focal company sold) is not a link of the focal company.
+            # It is kept as an extension edge: both ends are resolved on their own, the unit becomes an unresearched node, and it shows
+            # when that node is opened. If both ends resolve to the same node it would be a self-link, so it is dropped and listed.
+            a_, b_ = resolve(e["source"])[0], resolve(e["target"])[0]
+            if a_ == b_:
+                dropped.append({"source": e["source"], "type": e["type"], "target": e["target"], "quote": (e["evidence"] or [{}])[0].get("quote", "")})
+                continue
+            e["source"], e["target"], e["extension"] = a_, b_, True
+            key = (canon.lower(), e["type"], a_.lower(), b_.lower())
+            if key in out:
+                merged += 1
+                seen = {v["quote"] for v in out[key]["evidence"]}
+                out[key]["evidence"] += [v for v in e["evidence"] if v["quote"] not in seen]
+            else:
+                out[key] = e
             continue
         for k in ("source", "target"):
             e[k] = t if is_focal[k] else canon

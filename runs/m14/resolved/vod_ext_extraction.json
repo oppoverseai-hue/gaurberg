@@ -1,0 +1,187 @@
+[
+ {
+  "counterparty": "Liberty Global",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Liberty Global",
+  "target": "VodafoneZiggo",
+  "evidence": [
+   {
+    "section": "p19",
+    "quote": "In February 2026, we announced that we agreed to sell our interests in VodafoneZiggo to Liberty Global for €1.0 billion in cash and a 10% equity stake in a soon-to-be-formed Benelux entity (Ziggo Group), which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding2.",
+    "quote_found": true
+   },
+   {
+    "section": "p87",
+    "quote": "The Board approved the sale of Vodafone’s interests in VodafoneZiggo to Liberty Global for €1 billion in cash and a 10% shareholding in a future Benelux entity comprising VodafoneZiggo and Telenet.",
+    "quote_found": true
+   },
+   {
+    "section": "p165",
+    "quote": "On 18 February 2026, the Group announced that it has agreed to sell its interests in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc for €1.0 billion in cash and a 10% stake in the new Ziggo Group which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding.",
+    "quote_found": true
+   },
+   {
+    "section": "p244",
+    "quote": "On 18 February 2026, Vodafone Group Plc announced that it agreed to sell its 50% interest in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc (‘Liberty Global’) for €1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity (‘Ziggo Group’), which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding (‘Telenet’).",
+    "quote_found": true
+   },
+   {
+    "section": "p74",
+    "quote": "On 18 February 2026, we announced our agreement to sell our interests in VodafoneZiggo Group Holding B.V. to Liberty Global plc for €1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity, which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "extension": true
+ },
+ {
+  "counterparty": "Zegona",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Zegona",
+  "target": "Vodafone Spain",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "settlement in the current year of redeemable preference shares provided by Zegona Communications Plc as part of the disposal of Vodafone Spain",
+    "quote_found": true
+   },
+   {
+    "section": "p164",
+    "quote": "On 31 October 2023, the Group announced that it had entered into binding agreements with Zegona Communications plc (’Zegona’) in relation to the disposal of 100% of Vodafone Holdings Europe, S.L.U. (‘Vodafone Spain’).",
+    "quote_found": true
+   },
+   {
+    "section": "p194",
+    "quote": "Following the completion of the sale of Vodafone Spain on 31 May 2024 (See note 7 ‘Discontinued operations and assets held for sale’), the Group received the non-cash consideration component in the form of €900 million Redeemable Preference Shares (‘RPS’) issued by EJLSHM Funding Ltd (‘EJLSHM’). The RPS were redeemed in January 2026. The Zegona shares were recorded at fair value through profit and loss and had a fair value of €937 million on 31 March 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "p203",
+    "quote": "In the comparative year, on 31 May 2024, the Group announced it had completed the sale of Vodafone Holdings Europe, S.L.U. (‘Vodafone Spain’) to Zegona Communications plc (‘Zegona’) for €4,069 million in cash (subject to closing accounts adjustments, which were finalised during the year ended 31 March 2026) and up to €900 million of non-cash consideration in the form of redeemable preference shares, which were settled during the year ended 31 March 2026.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "extension": true
+ },
+ {
+  "counterparty": "Safaricom",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Safaricom",
+  "target": "M-Pesa Holding Company Limited",
+  "evidence": [
+   {
+    "section": "p23",
+    "quote": "On 28 September 2023, the Group sold M-Pesa Holding Company Limited which holds funds on trust for M-Pesa customers, to Safaricom Plc for US$1.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "extension": true
+ },
+ {
+  "counterparty": "CK Hutchison",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "CK Hutchison",
+  "target": "VodafoneThree",
+  "evidence": [
+   {
+    "section": "p87",
+    "quote": "The Board approved the buyout of CK Hutchison Group Telecom Holding Limited from the VodafoneThree joint venture for £4.3 billion (€4.9 billion) via a cancellation of shares.",
+    "quote_found": true
+   },
+   {
+    "section": "p220",
+    "quote": "On 5 May 2026, the Group announced that it had reached an agreement for the buyout of CK Hutchison Group Telecom Holding Limited’s (‘CKHGT’) 49% interest in VodafoneThree Holdings Limited (‘VodafoneThree’) for £4.3 billion (€4.9 billion) cash, implemented through a cancellation of CKHGT’s shares.",
+    "quote_found": true
+   },
+   {
+    "section": "p20",
+    "quote": "Following completion, VTHL is a subsidiary of the Group, in which the Group owns 51% of the issued share capital and CKHGT indirectly owns 49%, and Vodafone UK and Three UK are wholly owned subsidiaries of VTHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "extension": true
+ },
+ {
+  "counterparty": "Swisscom",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Swisscom",
+  "target": "Vodafone Italia",
+  "evidence": [
+   {
+    "section": "p164",
+    "quote": "On 15 March 2024, the Group announced that it had entered into a binding agreement with Swisscom AG (‘Swisscom’) in relation to the disposal of 100% of Vodafone Italia S.p.A. (’Vodafone Italy’).",
+    "quote_found": true
+   },
+   {
+    "section": "p203",
+    "quote": "In the comparative year, on 31 December 2024, the Group announced it had completed the sale of Vodafone Italia S.p.A. (‘Vodafone Italy’) to Swisscom AG for €7,885 million in cash (subject to closing accounts adjustments, which were finalised during the year ended 31 March 2026).",
+    "quote_found": true
+   },
+   {
+    "section": "p239",
+    "quote": "Between (i) 20 May 2025 and 23 July 2025, (ii) 24 July 2025 and 10 November 2025, (iii) 11 November 2025 and 4 February 2026 and (iv) 5 February 2026 and 11 May 2026, Vodafone undertook non-discretionary share buyback programmes with Citigroup Global Markets Limited, Goldman Sachs International, Merrill Lynch International and Goldman Sachs International respectively following the sale of Vodafone Italy to Swisscom AG.",
+    "quote_found": true
+   },
+   {
+    "section": "p196",
+    "quote": "Vodafone Italia S.p.A’s (‘Vodafone Italy’s’) defined contribution and defined benefit schemes have been transferred to Swisscom AG (see note 27 ‘Acquisitions and disposals’).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact",
+  "extension": true
+ },
+ {
+  "counterparty": "Accenture",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Accenture",
+  "target": "Vodafone Shared Operations",
+  "evidence": [
+   {
+    "section": "p202",
+    "quote": "The aggregate net cash received in respect of other transactions with non-controlling shareholders in subsidiaries was €100 million (2025: €8 million) including €125 million (2025: €25 million) received from Accenture Holdings B.V. for a non-controlling interest in Vodafone Shared Operations Limited.",
+    "quote_found": true
+   },
+   {
+    "section": "p219",
+    "quote": "Accenture Holdings B.V. holds 20% of the total voting rights in Vodafone Shared Operations Limited.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "extension": true
+ }
+]

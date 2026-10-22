@@ -1,0 +1,110 @@
+{
+ "ticker": "AML",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+ "as_of": "2025-12-31",
+ "chunks": 9,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 47415,
+   "cache_read_tokens": 0,
+   "output_tokens": 1806,
+   "cost_usd": 0.2111562,
+   "seconds": 17.0,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 45845,
+   "cache_read_tokens": 0,
+   "output_tokens": 126,
+   "cost_usd": 0.18792069999999997,
+   "seconds": 9.2,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 46067,
+   "cache_read_tokens": 0,
+   "output_tokens": 1816,
+   "cost_usd": 0.2057309,
+   "seconds": 15.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30216,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1590,
+   "cost_usd": 0.1410018,
+   "seconds": 11.7,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33673,
+   "cache_read_tokens": 12600,
+   "output_tokens": 537,
+   "cost_usd": 0.144646,
+   "seconds": 10.7,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32782,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1483,
+   "cost_usd": 0.15045039999999998,
+   "seconds": 13.4,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31177,
+   "cache_read_tokens": 12600,
+   "output_tokens": 503,
+   "cost_usd": 0.1340714,
+   "seconds": 8.5,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36648,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1604,
+   "cost_usd": 0.16751249999999998,
+   "seconds": 12.5,
+   "is_error": false,
+   "chunk": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32843,
+   "cache_read_tokens": 12600,
+   "output_tokens": 3196,
+   "cost_usd": 0.16783199999999998,
+   "seconds": 20.9,
+   "is_error": false,
+   "chunk": 9
+  }
+ ],
+ "totals": {
+  "input_tokens": 18,
+  "cache_creation_tokens": 336666,
+  "cache_read_tokens": 75600,
+  "output_tokens": 12661,
+  "cost_usd": 1.5103218999999999,
+  "seconds": 119.7
+ },
+ "edges": 32,
+ "quotes_not_found": 0
+}

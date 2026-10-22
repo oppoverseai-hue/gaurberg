@@ -12,11 +12,11 @@ Likely Drop or Fix:
 - `invests` VOD -> Liberty Global: the 10% stake is in the new Ziggo Group, not Liberty Global, so the percentage was removed.
 Aliases added for admin confirmation: Vodacom and Vodacom Group Limited -> Vodafone Group; CK Hutchison Group Telecom Holding Limited -> CK Hutchison.
 
-## Deals dropped because they do not involve Vodafone Group itself (10)
-Liberty Global acquires VodafoneZiggo (x2), Swisscom acquires Vodafone Italia (x2), Zegona acquires Vodafone Spain, Safaricom acquires M-Pesa Holding, CK Hutchison invests VodafoneThree (x2), Accenture invests Vodafone Shared Operations (x2).
-The schema cannot show a sale of a unit (Vodafone Italia, Vodafone Spain) without a node for the unit. Listed in resolved/vod_resolution_report.json (`dropped_not_focal`).
+## Deals between two other companies (6, kept as extension edges)
+Agent run 49, links 464-469, all staged: Liberty Global acquires VodafoneZiggo, Zegona acquires Vodafone Spain, Swisscom acquires Vodafone Italia, Safaricom acquires M-Pesa Holding, CK Hutchison invests VodafoneThree, Accenture invests Vodafone Shared Operations.
+The unit is a new unresearched node. These links show on the map when that node is opened, not on Vodafone's own map.
 
 ## Loader and resolver fixes made in this run (also apply to later US runs)
 - Ownership percentages are stored with basis `ownership` for invests/acquires (they used to default to source revenue).
 - entity_type `government` maps to `institution` and `other` to `organization` (the companies table does not allow the first two).
-- resolve.py now resolves a unit to the focal company by alias and drops deals between two other companies instead of producing a self-link.
+- resolve.py now resolves a unit to the focal company by alias, and keeps deals between two other companies as extension edges instead of producing a self-link (only a true self-link is dropped).

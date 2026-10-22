@@ -30,6 +30,11 @@ cp = {}
 for e in edges:
     # The companies table allows public_company, private_company, institution, organization and segment_group.
     cp.setdefault(e["counterparty"], {"government": "institution", "other": "organization"}.get(e["entity_type"], e["entity_type"]))
+# Extension edges (a deal between two other companies, for example a buyer and a unit the focal company sold): both ends need a node.
+for e in edges:
+    for end in (e["source"], e["target"]):
+        if end != a.ticker and end not in alias:
+            cp.setdefault(end, "private_company")  # unresearched extension node; entity type not stated by the report
 skip = set(alias)  # already in the seed list, matched by ticker
 L = ["do $do$", "declare run_id bigint; rid bigint; a bigint; b bigint; r record; k int; isnew boolean;", "begin"]
 # Optional seed columns: markets (US|LSE|HKEX, joined with |), exchange, country. A blank value stays null / empty. Nothing is guessed.

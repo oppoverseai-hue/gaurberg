@@ -1,0 +1,120 @@
+{
+ "ticker": "CCC",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Computacenter plc Annual Report and Accounts 2025",
+ "as_of": "2025-12-31",
+ "chunks": 10,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31834,
+   "cache_read_tokens": 12600,
+   "output_tokens": 929,
+   "cost_usd": 0.14102160000000002,
+   "seconds": 10.3,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30129,
+   "cache_read_tokens": 12600,
+   "output_tokens": 866,
+   "cost_usd": 0.1334026,
+   "seconds": 8.6,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30320,
+   "cache_read_tokens": 12600,
+   "output_tokens": 120,
+   "cost_usd": 0.1267267,
+   "seconds": 4.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30544,
+   "cache_read_tokens": 12600,
+   "output_tokens": 717,
+   "cost_usd": 0.1336136,
+   "seconds": 8.2,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30243,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.125252,
+   "seconds": 6.2,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31946,
+   "cache_read_tokens": 12600,
+   "output_tokens": 700,
+   "cost_usd": 0.1391913,
+   "seconds": 9.7,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30246,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1252623,
+   "seconds": 4.3,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32549,
+   "cache_read_tokens": 12600,
+   "output_tokens": 494,
+   "cost_usd": 0.1396056,
+   "seconds": 10.0,
+   "is_error": false,
+   "chunk": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36070,
+   "cache_read_tokens": 12600,
+   "output_tokens": 334,
+   "cost_usd": 0.15244069999999998,
+   "seconds": 6.7,
+   "is_error": false,
+   "chunk": 9
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 14893,
+   "cache_read_tokens": 12600,
+   "output_tokens": 90,
+   "cost_usd": 0.063175,
+   "seconds": 3.8,
+   "is_error": false,
+   "chunk": 10
+  }
+ ],
+ "totals": {
+  "input_tokens": 20,
+  "cache_creation_tokens": 298774,
+  "cache_read_tokens": 126000,
+  "output_tokens": 4258,
+  "cost_usd": 1.2796914,
+  "seconds": 72.6
+ },
+ "edges": 14,
+ "quotes_not_found": 0
+}
