@@ -1,0 +1,14 @@
+chunk 1/13: 0 items, in=56985 out=4 $0.2324 5.3s
+chunk 2/13: 2 items, in=40756 out=301 $0.1688 6.0s
+chunk 3/13: 1 items, in=39128 out=201 $0.1611 10.6s
+chunk 4/13: 0 items, in=39920 out=4 $0.1133 7.3s
+chunk 5/13: 8 items, in=41588 out=1307 $0.1331 9.0s
+chunk 7/13: 0 items, in=43237 out=4 $0.1269 4.0s
+chunk 8/13: 6 items, in=44171 out=1426 $0.1449 11.8s
+chunk 6/13: 21 items, in=40412 out=2639 $0.1416 17.0s
+chunk 11/13: 0 items, in=45019 out=4 $0.1342 5.6s
+chunk 12/13: 0 items, in=51822 out=4 $0.1621 3.8s
+chunk 10/13: 9 items, in=45252 out=2618 $0.1613 17.7s
+chunk 13/13: 2 items, in=28536 out=1270 $0.0792 10.5s
+chunk 9/13: 18 items, in=42459 out=5824 $0.1819 30.9s
+WRD extractor (claude-sonnet-5-5): 48 edges, tokens in=559285 out=15606 cost=$1.9406

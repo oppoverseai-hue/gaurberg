@@ -1,0 +1,150 @@
+{
+ "ticker": "WRD",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "WeRide Inc. Form 20-F for 2025",
+ "as_of": "2025-12-31",
+ "chunks": 13,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 56983,
+   "cache_read_tokens": 0,
+   "output_tokens": 4,
+   "cost_usd": 0.23236159999999997,
+   "seconds": 5.3,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 40754,
+   "cache_read_tokens": 0,
+   "output_tokens": 301,
+   "cost_usd": 0.16879319999999998,
+   "seconds": 6.0,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 39126,
+   "cache_read_tokens": 0,
+   "output_tokens": 201,
+   "cost_usd": 0.16111689999999998,
+   "seconds": 10.6,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27318,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1132536,
+   "seconds": 7.3,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28986,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1307,
+   "cost_usd": 0.1331254,
+   "seconds": 9.0,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27810,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2639,
+   "cost_usd": 0.1416233,
+   "seconds": 17.0,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30635,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1268548,
+   "seconds": 4.0,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31569,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1426,
+   "cost_usd": 0.1449022,
+   "seconds": 11.8,
+   "is_error": false,
+   "chunk": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29857,
+   "cache_read_tokens": 12600,
+   "output_tokens": 5824,
+   "cost_usd": 0.181866,
+   "seconds": 30.9,
+   "is_error": false,
+   "chunk": 9
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32650,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2618,
+   "cost_usd": 0.1612563,
+   "seconds": 17.7,
+   "is_error": false,
+   "chunk": 10
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32417,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.134162,
+   "seconds": 5.6,
+   "is_error": false,
+   "chunk": 11
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 39220,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1620508,
+   "seconds": 3.8,
+   "is_error": false,
+   "chunk": 12
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 15934,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1270,
+   "cost_usd": 0.07924070000000001,
+   "seconds": 10.5,
+   "is_error": false,
+   "chunk": 13
+  }
+ ],
+ "totals": {
+  "input_tokens": 26,
+  "cache_creation_tokens": 433259,
+  "cache_read_tokens": 126000,
+  "output_tokens": 15606,
+  "cost_usd": 1.9406067999999999,
+  "seconds": 139.5
+ },
+ "edges": 48,
+ "quotes_not_found": 0
+}

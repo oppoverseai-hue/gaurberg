@@ -1,0 +1,1009 @@
+[
+ {
+  "counterparty": "Guangzhou Yuji",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Guangzhou Yuji",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk20",
+    "quote": "Pursuant to the agreement, Guangzhou Yuji provides certain mapping and data services to us and our subsidiaries for ordinary business purposes, including high-precision map collection, production and manufacturing services, as well as data collection and compliance services.",
+    "quote_found": true
+   },
+   {
+    "section": "blk39",
+    "quote": "We currently collaborate with Guangzhou Yuji Technology Co., Ltd., or Guangzhou Yuji, a service provider that possesses a navigation electronic map production and surveying license, to provide surveying and mapping services to our company. Under the cooperation, the service provider provides us with HD maps services to complement the vision of our sensors.",
+    "quote_found": true
+   },
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31, 2023, 2024 and 2025, Guangzhou Yuji provided surveying and mapping services to our company in the amount of RMB111.5 million, RMB90.1 million and RMB66.8 million (US$9.6 million), respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bosch",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Bosch",
+  "evidence": [
+   {
+    "section": "blk23",
+    "quote": "For example, we entered into a strategic partnership with Bosch in 2022 under which we, as a Tier 2 supplier, provide research and development services, key technologies and ecosystem support.",
+    "quote_found": true
+   },
+   {
+    "section": "blk68",
+    "quote": "In 2026, our one‑stage end‑to‑end ADAS solution, jointly developed with Bosch, has achieved four consecutive championship wins in the Second China Urban Intelligent Driving Competition, making WeRide WRD 3.0 the first and only solution in the competition’s history to secure this record and underscoring its breakthrough leadership in complex urban driving environments.",
+    "quote_found": true
+   },
+   {
+    "section": "blk71",
+    "quote": "In our Bosch partnership, we provide leading ADAS tec",
+    "quote_found": true
+   },
+   {
+    "section": "blk137",
+    "quote": "Cooperation Agreement between Bosch Automotive Products (Suzhou) Co., Ltd. and WFOE, dated May 24, 2022",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "blk69",
+    "quote": "In December 2025, we launched public robotaxi passenger rides in Dubai in partnership with Uber and Dubai’s Roads and Transport Authority (RTA), with riders able to book through the “Autonomous” option on the Uber app.",
+    "quote_found": true
+   },
+   {
+    "section": "blk71",
+    "quote": "most notably our collaboration with Uber and Grab to scale robotaxi services across additional international markets.",
+    "quote_found": true
+   },
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Dubai Roads and Transport Authority",
+  "entity_type": "government",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Dubai Roads and Transport Authority",
+  "evidence": [
+   {
+    "section": "blk69",
+    "quote": "In December 2025, we launched public robotaxi passenger rides in Dubai in partnership with Uber and Dubai’s Roads and Transport Authority (RTA), with riders able to book through the “Autonomous” option on the Uber app.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ELEVATE Slovakia",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "ELEVATE Slovakia",
+  "evidence": [
+   {
+    "section": "blk69",
+    "quote": "In March 2026, we entered Slovakia through a strategic partnership with ELEVATE Slovakia to deploy autonomous vehicles including robotaxi, robobus, robovan, and robosweeper, launching the country’s first autonomous vehicle program and Europe’s first large-scale, multi-product autonomous driving commercial deployment, bringing our global footprint to over 40 cities across 12 countries.",
+    "quote_found": true
+   },
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Grab",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Grab",
+  "evidence": [
+   {
+    "section": "blk69",
+    "quote": "In Southeast Asia, in March 2026, we officially commenced public operations of the Ai.R (Autonomously Intelligent Ride) service in Punggol with Grab, marking the first deployment of an autonomous passenger service in a residential estate in Singapore.",
+    "quote_found": true
+   },
+   {
+    "section": "blk71",
+    "quote": "most notably our collaboration with Uber and Grab to scale robotaxi services across additional international markets.",
+    "quote_found": true
+   },
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Uber",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk69",
+    "quote": "For example, we have received investment commitments from ride-hailing giants such as Uber and Grab, highlighting our strategic position and leading role in the industry.",
+    "quote_found": true
+   },
+   {
+    "section": "blk112",
+    "quote": "Uber Technologies, Inc (13) 56,618,266 — 5.6 3.8",
+    "quote_found": true
+   },
+   {
+    "section": "blk114",
+    "quote": "Represents 23,038,300 Class A ordinary shares and 33,579,966 Class A ordinary shares represented by 11,193,322 ADSs held by SMB Holding Corporation, a wholly-owned subsidiary of Uber Technologies, Inc., a publicly traded company.",
+    "quote_found": true
+   },
+   {
+    "section": "blk138",
+    "quote": "Equity Commitment Letter between the Registrant and Uber Technologies, Inc., dated May 5, 2025",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Grab",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Grab",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk69",
+    "quote": "For example, we have received investment commitments from ride-hailing giants such as Uber and Grab, highlighting our strategic position and leading role in the industry.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Geely Farizon",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Geely Farizon",
+  "evidence": [
+   {
+    "section": "blk70",
+    "quote": "In 2025, we deepened our collaboration with Geely Farizon to deliver the next-generation robotaxi GXR as a purpose-built, factory pre-installed autonomous vehicle—eliminating post-production retrofitting and delivering higher safety consistency, lower unit costs and faster assembly.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Yutong",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Yutong",
+  "evidence": [
+   {
+    "section": "blk71",
+    "quote": "We partner with Yutong and Golden Dragon to produce robobuses.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Golden Dragon",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Golden Dragon",
+  "evidence": [
+   {
+    "section": "blk71",
+    "quote": "We partner with Yutong and Golden Dragon to produce robobuses.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "JMC-Ford Motors",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "JMC-Ford Motors",
+  "evidence": [
+   {
+    "section": "blk71",
+    "quote": "We partner with JMC-Ford Motors and Ecar Tech to manufacture our robovans.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ecar Tech",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Ecar Tech",
+  "evidence": [
+   {
+    "section": "blk71",
+    "quote": "We partner with JMC-Ford Motors and Ecar Tech to manufacture our robovans.",
+    "quote_found": true
+   },
+   {
+    "section": "blk71",
+    "quote": "We currently partner with Yutong and Ecar Tech to manufacture our robosweepers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bosch",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Bosch",
+  "evidence": [
+   {
+    "section": "blk71",
+    "quote": "We provide ADAS and research and development services to Bosch.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Nissan",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Nissan",
+  "evidence": [
+   {
+    "section": "blk72",
+    "quote": "In addition, we also provide ADAS and research and development services to Bosch and autonomous driving research and development services to Nissan.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Chery",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Chery",
+  "evidence": [
+   {
+    "section": "blk71",
+    "quote": "Our L2+ ADAS,  WePilot 3.0 , has been adopted by OEMs and Tier-1 suppliers, including Chery, GAC, and Bosch, across multiple vehicle models.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GAC",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "GAC",
+  "evidence": [
+   {
+    "section": "blk71",
+    "quote": "Our L2+ ADAS,  WePilot 3.0 , has been adopted by OEMs and Tier-1 suppliers, including Chery, GAC, and Bosch, across multiple vehicle models.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AiDriver",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "AiDriver",
+  "evidence": [
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Baiyun Taxi Group",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Baiyun Taxi Group",
+  "evidence": [
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lenovo Vehicle Computing",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Lenovo Vehicle Computing",
+  "evidence": [
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ioki",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "ioki",
+  "evidence": [
+   {
+    "section": "blk72",
+    "quote": "Such ecosystem partners include Uber, AiDriver, Baiyun Taxi Group, NVIDIA, Lenovo Vehicle Computing, ioki, Grab and ELEVATE Slovakia.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Hyundai",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Hyundai",
+  "evidence": [
+   {
+    "section": "blk73",
+    "quote": "We are also working with our partners, such as Hyundai, to promote sustainable mobility and the adoption of clean energy.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Yutong",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Yutong",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk112",
+    "quote": "Yutong entities (10) 65,659,592 — 6.5 4.4",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 6.5,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Qiming",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Qiming",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk112",
+    "quote": "Qiming entities (11) 62,865,042 — 6.3 4.2",
+    "quote_found": true
+   },
+   {
+    "section": "blk113",
+    "quote": "This information is based on the information reported on the Schedule 13G filed by the Qiming entities (as defined below) on February 10, 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 6.3,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Alliance Ventures",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Alliance Ventures",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk112",
+    "quote": "Alliance Ventures B.V. (12) 63,680,080 — 6.3 4.2",
+    "quote_found": true
+   },
+   {
+    "section": "blk114",
+    "quote": "Represents (i) 34,573,269 Class A ordinary shares directly owned by Alliance Ventures B.V., (ii) 10,616,604 Class A ordinary shares beneficially owned by Renault s.a.s., and Renault S.A., and (iii) 18,490,206 Class A ordinary shares beneficially owned by Nissan Motor Co., Ltd., as reported on the Schedule 13D/A filed by Alliance Ventures B.V., Renault s.a.s., Renault S.A. and Nissan Motor Co., Ltd. on October 29, 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "blk137",
+    "quote": "Share Subscription Agreement between the Registrant and Alliance Ventures, B.V., dated July 26, 2024 and as amended on October 21, 2024",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 6.3,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Yutong",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Yutong",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk102",
+    "quote": "a decrease in amounts due to related parties of RMB68.4 million for settlement of purchase orders to Yutong affiliates and Yuji affiliates",
+    "quote_found": true
+   },
+   {
+    "section": "blk171",
+    "quote": "A vehicle purchase agreement with Zhengzhou Yutong Bus Co., Ltd. (“Yutong”), an affiliate of a shareholder of the Company, pursuant to which the Group committed to purchase vehicles manufactured by Yutong with an aggregated purchase amount of RMB   100.3    million in 2024.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Yuji",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Yuji",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk102",
+    "quote": "a decrease in amounts due to related parties of RMB68.4 million for settlement of purchase orders to Yutong affiliates and Yuji affiliates",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Renault",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Renault",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk114",
+    "quote": "Represents (i) 34,573,269 Class A ordinary shares directly owned by Alliance Ventures B.V., (ii) 10,616,604 Class A ordinary shares beneficially owned by Renault s.a.s., and Renault S.A., and (iii) 18,490,206 Class A ordinary shares beneficially owned by Nissan Motor Co., Ltd., as reported on the Schedule 13D/A filed by Alliance Ventures B.V., Renault s.a.s., Renault S.A. and Nissan Motor Co., Ltd. on October 29, 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Nissan",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Nissan",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk114",
+    "quote": "Represents (i) 34,573,269 Class A ordinary shares directly owned by Alliance Ventures B.V., (ii) 10,616,604 Class A ordinary shares beneficially owned by Renault s.a.s., and Renault S.A., and (iii) 18,490,206 Class A ordinary shares beneficially owned by Nissan Motor Co., Ltd., as reported on the Schedule 13D/A filed by Alliance Ventures B.V., Renault s.a.s., Renault S.A. and Nissan Motor Co., Ltd. on October 29, 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Yutong entities",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Yutong entities",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk113",
+    "quote": "This information is based on the information reported on the Schedule 13G/A filed by the Yutong entities (as defined below) on February 13, 2026.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Guangqizhixing Holdings",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Guangqizhixing Holdings",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk115",
+    "quote": "including (i) US$97 million by Alliance Ventures B.V., or Alliance Ventures, the venture capital fund of the Renault Nissan Mitsubishi Alliance, and (ii) US$20 million by Guangqizhixing Holdings Limited and Gac Capital International Ltd.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GAC Capital International",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GAC Capital International",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk115",
+    "quote": "including (i) US$97 million by Alliance Ventures B.V., or Alliance Ventures, the venture capital fund of the Renault Nissan Mitsubishi Alliance, and (ii) US$20 million by Guangqizhixing Holdings Limited and Gac Capital International Ltd.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Yutong Bus",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Yutong Bus",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31, 2023 and 2024, we sold goods to Yutong Bus Co., Ltd., an affiliate of our shareholder, the Yutong entities, with an aggregate amount of RMB5.7 million and nil, respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Yutong Bus",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Yutong Bus",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31, 2023 and 2024, we purchased goods from Yutong Bus Co., Ltd. with an aggregate amount of RMB18.4 million and RMB71.0 million, respectively.",
+    "quote_found": true
+   },
+   {
+    "section": "blk137",
+    "quote": "English translation of Form of Agreement on Vehicle Purchase between Yutong Bus Co., Ltd. and WFOE, and a schedule of all executed Agreements on Vehicle Purchase adopting the same form",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Zhengzhou Yutong Heavy Industries",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Zhengzhou Yutong Heavy Industries",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31, 2023 and 2024, we purchased goods from Zhengzhou Yutong Heavy Industries Co., Ltd., an affiliate of the Yutong entities, with an aggregate amount of nil and RMB3.0 million, respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Zhengzhou Yutong Heavy Industries",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Zhengzhou Yutong Heavy Industries",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the year ended December 31, 2024, we provided services to Zhengzhou Yutong Heavy Industries Co., Ltd. with an aggregate amount of RMB189 thousand.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ourland Environmental Technical",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Ourland Environmental Technical",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31, 2023 and 2024, we provided services to Ourland Environmental Technical Ltd. with an aggregate amount of nil and RMB11.1 million, respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Ourland Environmental Technical",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Ourland Environmental Technical",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "Additionally, for the years ended December 31, 2023 and 2024, we purchased goods from Ourland Environmental Technical Ltd. in an aggregate amount of nil, RMB0.8 million (US$0.1 million), respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alliance Automotive R&D (Shanghai)",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Alliance Automotive R&D (Shanghai)",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31 2023, 2024 and 2025, we provided services to Alliance Automotive R&D (Shanghai) Co., Ltd., an affiliate of our shareholder, Alliance Ventures B.V., with an aggregate amount of RMB9.2 million, RMB7.9 million and RMB60.8 thousand (US$8.7 thousand), respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Nissan Mobility Service",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Nissan Mobility Service",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31, 2023, 2024 and 2025, we provided services to Nissan Mobility Service Co., Ltd with an aggregate amount of RMB5.7 million, RMB7.1 million and RMB7.6 million (US$1.1 million), respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Guangzhou Yuji",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "WRD",
+  "target": "Guangzhou Yuji",
+  "evidence": [
+   {
+    "section": "blk116",
+    "quote": "For the years ended December 31, 2023, 2024 and 2025, we provided services to Guangzhou Yuji in the amount of nil, RMB528 thousand and nil, respectively.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alliance Automotive Research & Development (Shanghai)",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Alliance Automotive Research & Development (Shanghai)",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk137",
+    "quote": "Goods Purchase Agreement between Alliance Automotive Research & Development (Shanghai) Co., Ltd. and WFOE, dated July 31, 2023",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Renault",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "WRD",
+  "target": "Renault",
+  "evidence": [
+   {
+    "section": "blk138",
+    "quote": "Co-operation Agreement between the Registrant and Renault s.a.s., dated July 17, 2024",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "JSC International Investment Fund SPC",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "JSC International Investment Fund SPC",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk138",
+    "quote": "Subscription Agreement between the Registrant and JSC International Investment Fund SPC, dated August 9, 2024",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Get Ride",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Get Ride",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk138",
+    "quote": "Subscription Agreement between the Registrant and Get Ride Inc., dated August 8, 2024",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "GAC Capital",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "GAC Capital",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk138",
+    "quote": "Subscription Agreement between the Registrant, Guangqizhixing Holdings Limited and Gac Capital International Ltd., dated July 17, 2024",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alliance affiliates",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Alliance affiliates",
+  "target": "WRD",
+  "evidence": [
+   {
+    "section": "blk172",
+    "quote": "The Group entered into a share subscription agreement with one of Alliance affiliates in July 2024, who committed to subscribe shares of the Company as a cornerstone investor with an aggregate purchase price of USD   97.0    million (equivalent to RMB   689.6    million).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm",
+  "document": "WeRide Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

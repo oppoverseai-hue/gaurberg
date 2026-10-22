@@ -1,0 +1,140 @@
+{
+ "ticker": "PONY",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Pony AI Inc. Form 20-F for 2025",
+ "as_of": "2025-12-31",
+ "chunks": 12,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 38576,
+   "cache_read_tokens": 12600,
+   "output_tokens": 591,
+   "cost_usd": 0.1652819,
+   "seconds": 10.9,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29584,
+   "cache_read_tokens": 12600,
+   "output_tokens": 711,
+   "cost_usd": 0.1296157,
+   "seconds": 9.9,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 26107,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.10828950000000001,
+   "seconds": 10.8,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27708,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1148521,
+   "seconds": 4.0,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28150,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1166653,
+   "seconds": 4.2,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29629,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1938,
+   "cost_usd": 0.1420682,
+   "seconds": 12.1,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27789,
+   "cache_read_tokens": 12600,
+   "output_tokens": 3390,
+   "cost_usd": 0.14904720000000002,
+   "seconds": 17.4,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30919,
+   "cache_read_tokens": 12600,
+   "output_tokens": 504,
+   "cost_usd": 0.1330197,
+   "seconds": 6.7,
+   "is_error": false,
+   "chunk": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32203,
+   "cache_read_tokens": 12600,
+   "output_tokens": 799,
+   "cost_usd": 0.14123360000000001,
+   "seconds": 7.1,
+   "is_error": false,
+   "chunk": 9
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30725,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1272238,
+   "seconds": 7.3,
+   "is_error": false,
+   "chunk": 10
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 35067,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.145023,
+   "seconds": 4.9,
+   "is_error": false,
+   "chunk": 11
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36878,
+   "cache_read_tokens": 12600,
+   "output_tokens": 792,
+   "cost_usd": 0.1603291,
+   "seconds": 10.3,
+   "is_error": false,
+   "chunk": 12
+  }
+ ],
+ "totals": {
+  "input_tokens": 24,
+  "cache_creation_tokens": 373335,
+  "cache_read_tokens": 151200,
+  "output_tokens": 8745,
+  "cost_usd": 1.6326491,
+  "seconds": 105.6
+ },
+ "edges": 38,
+ "quotes_not_found": 0
+}
