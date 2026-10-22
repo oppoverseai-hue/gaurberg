@@ -27,7 +27,7 @@ async function finnhubNews(symbol: string): Promise<{ items: NewsItem[]; error?:
   }
 }
 
-async function cikFor(ticker: string): Promise<string | null> {
+export async function cikFor(ticker: string): Promise<string | null> {
   const res = await fetch("https://www.sec.gov/files/company_tickers.json", { headers: { "User-Agent": UA }, next: { revalidate: 86400 } });
   if (!res.ok) return null;
   const j = (await res.json()) as Record<string, { cik_str: number; ticker: string }>;
