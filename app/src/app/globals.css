@@ -156,3 +156,9 @@ main.hero .lsearch { text-align:left; margin-top:28px; } main.hero .card { text-
 .who { margin-top:40px; font-size:11px; } .linkbtn { background:none; border:0; padding:0; color:var(--accent); font:inherit; cursor:pointer; } .linkbtn:hover { text-decoration:underline; }
 body:has(.lsearch) .cmd { visibility:hidden; }
 body:has(.ixbar) footer.site { padding-bottom:44px; }
+.ls-field { position:relative; } .ls-field input[type=search] { padding-left:44px; padding-right:72px; } .ls-field input[type=search]::-webkit-search-cancel-button { display:none; }
+.ls-ico { position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--accent); pointer-events:none; }
+.ls-clear { position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:0; color:var(--fg2); font-size:22px; line-height:1; cursor:pointer; } .ls-clear:hover { color:var(--fg); }
+.ls-k { position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--muted); }
+.ls-enter { color:var(--accent); border-color:var(--accent-border); } .ls-unm { font:700 10px var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--b-staged); border:1px solid var(--b-staged); border-radius:3px; padding:1px 6px; margin-left:6px; }
+.ls-row .ls-name b { display:inline-block; margin-top:4px; } .ls-row .ls-name:has(.ls-unm) { white-space:normal; }

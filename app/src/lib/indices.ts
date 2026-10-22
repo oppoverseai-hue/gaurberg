@@ -9,6 +9,8 @@ const INDICES = [
   { id: "SPX", label: "S&P 500", syms: { finnhub: "^GSPC", twelvedata: "SPX", fmp: "^GSPC", eodhd: "GSPC.INDX" }, proxy: "SPY" },
   { id: "NDX", label: "Nasdaq 100", syms: { finnhub: "^NDX", twelvedata: "NDX", fmp: "^NDX", eodhd: "NDX.INDX" }, proxy: "QQQ" },
   { id: "FTSE", label: "FTSE 100", syms: { finnhub: "^FTSE", twelvedata: "FTSE", fmp: "^FTSE", eodhd: "FTSE.INDX" }, proxy: null },
+  { id: "N225", label: "Nikkei 225", syms: { finnhub: "^N225", twelvedata: "N225", fmp: "^N225", eodhd: "N225.INDX" }, proxy: null },
+  { id: "DAX", label: "DAX", syms: { finnhub: "^GDAXI", twelvedata: "DAX", fmp: "^GDAXI", eodhd: "GDAXI.INDX" }, proxy: null },
   { id: "HSI", label: "Hang Seng", syms: { finnhub: "^HSI", twelvedata: "HSI", fmp: "^HSI", eodhd: "HSI.INDX" }, proxy: "EWH" },
 ] as const;
 const num = (v: unknown) => { const n = Number(v); return Number.isFinite(n) ? n : null; };

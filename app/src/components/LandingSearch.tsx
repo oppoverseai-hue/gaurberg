@@ -23,7 +23,12 @@ export default function LandingSearch() {
   const box = useRef<HTMLDivElement>(null);
   const typed = q.trim().length > 0;
 
+  const inp = useRef<HTMLInputElement>(null);
   useEffect(() => { setRecent(readRecent()); }, []);
+  useEffect(() => {
+    const k = (e: KeyboardEvent) => { if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); inp.current?.focus(); setOpen(true); } };
+    window.addEventListener("keydown", k); return () => window.removeEventListener("keydown", k);
+  }, []);
   useEffect(() => {
     const id = ++seq.current;
     setBusy(true);
@@ -43,7 +48,7 @@ export default function LandingSearch() {
   }, []);
 
   const rows: Row[] = typed ? items
-    : [...recent.map((r) => ({ ...r, group: "Recent" })), ...items.filter((i) => !recent.some((r) => r.ticker === i.ticker)).slice(0, 5).map((r) => ({ ...r, group: "Try" }))];
+    : [...recent.map((r) => ({ ...r, group: "Recent" })), ...items.filter((i) => !recent.some((r) => r.ticker === i.ticker)).slice(0, 3).map((r) => ({ ...r, group: "Try" }))];
   const live = typed && !busy && items.length === 0;
   const go = (r: Suggestion, map = false) => { saveRecent(r); setOpen(false); router.push(`/${map ? "map" : "company"}/${r.ticker}`); };
   const lookup = () => router.push(`/search?q=${encodeURIComponent(q.trim())}`);
@@ -62,8 +67,12 @@ export default function LandingSearch() {
   let lastGroup = "";
   return (
     <div className="lsearch" ref={box}>
-      <input type="search" value={q} onChange={(e) => { setQ(e.target.value); setOpen(true); }} onFocus={() => setOpen(true)} onKeyDown={onKey}
-        placeholder="Search a company or ticker" aria-label="Search a company or ticker" role="combobox" aria-expanded={open} aria-controls="ls-list" aria-autocomplete="list" autoComplete="off" autoFocus />
+      <div className="ls-field">
+        <svg className="ls-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+        <input ref={inp} type="search" value={q} onChange={(e) => { setQ(e.target.value); setOpen(true); }} onFocus={() => setOpen(true)} onKeyDown={onKey}
+          placeholder="Search a company or ticker" aria-label="Search a company or ticker" role="combobox" aria-expanded={open} aria-controls="ls-list" aria-autocomplete="list" autoComplete="off" autoFocus />
+        {typed ? <button type="button" className="ls-clear" aria-label="Clear search" onClick={() => { setQ(""); inp.current?.focus(); }}>×</button> : <kbd className="ls-k">Ctrl K</kbd>}
+      </div>
       {open && (rows.length > 0 || live) && (
         <div className="ls-pop" id="ls-list" role="listbox">
           {rows.map((r, i) => {
@@ -75,14 +84,14 @@ export default function LandingSearch() {
                   <span className="tag">{r.ticker}</span>
                   <span className="ls-name">{r.name}</span>
                   {r.markets.map((m) => <span key={m} className="mk">{m}</span>)}
-                  <span className="ls-n">{r.links} links</span>
+                  <span className="ls-n">{r.links} links</span>{i === sel && <kbd className="ls-enter">Enter</kbd>}
                 </div>
               </div>
             );
           })}
           {live && (
             <div className={`ls-row${sel === 0 ? " on" : ""}`} role="option" aria-selected={sel === 0} onMouseDown={(e) => { e.preventDefault(); lookup(); }}>
-              <span className="ls-name">“{q.trim()}” is not mapped yet. <b>Look it up live</b> from its latest annual report</span>
+              <span className="ls-name">“{q.trim()}” is not mapped yet <span className="ls-unm">Unmapped</span><br /><b>Look it up live from its latest annual report →</b></span>
             </div>
           )}
           <div className="ls-foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> company</span><span><kbd>Shift</kbd>+<kbd>Enter</kbd> map</span><span><kbd>Esc</kbd> close</span></div>
