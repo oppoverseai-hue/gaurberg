@@ -149,3 +149,10 @@ table.fa td.trend { width:72px; text-align:center; } table.fa th:last-child { te
 .ix-note { margin-left:auto; padding:8px 12px; color:var(--muted); background:var(--surface); border-left:1px solid var(--line); position:relative; }
 @keyframes ixmove { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 @media (prefers-reduced-motion:reduce) { .ix-track { animation:none; overflow-x:auto; } }
+
+/* Landing hero: one search, centred, nothing else. The sitebar command bar is hidden here so there is only one search box. */
+main.hero { padding-top:14vh; text-align:center; } main.hero h1 { font-size:36px; letter-spacing:.02em; margin:0 0 8px; } main.hero > p.muted { margin:0 0 8px; font-size:15px; }
+main.hero .lsearch { text-align:left; margin-top:28px; } main.hero .card { text-align:left; }
+.who { margin-top:40px; font-size:11px; } .linkbtn { background:none; border:0; padding:0; color:var(--accent); font:inherit; cursor:pointer; } .linkbtn:hover { text-decoration:underline; }
+body:has(.lsearch) .cmd { visibility:hidden; }
+body:has(.ixbar) footer.site { padding-bottom:44px; }

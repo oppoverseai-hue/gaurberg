@@ -12,13 +12,14 @@ export default function IndexTicker() {
     return () => { live = false; clearInterval(t); };
   }, []);
   if (!items.length) return null;
-  const row = items.map((i) => (
-    <span key={i.id} className="ix">
+  const reps = Math.max(1, Math.ceil(8 / items.length));
+  const row = Array.from({ length: reps }, (_, k) => items.map((i) => (
+    <span key={`${k}-${i.id}`} className="ix">
       <span className="ix-n">{i.label}</span>
       <span className="ix-p">{i.price.toLocaleString("en-US", { maximumFractionDigits: 2 })}</span>
       <span className={i.changePct >= 0 ? "ix-up" : "ix-dn"}>{i.changePct >= 0 ? "▲" : "▼"} {i.changePct >= 0 ? "+" : ""}{i.changePct.toFixed(2)}%</span>
     </span>
-  ));
+  ))).flat();
   return (
     <div className="ixbar" role="region" aria-label="Market indices, delayed">
       <div className="ix-track" aria-hidden={false}>{row}<span aria-hidden="true" style={{ display: "contents" }}>{row}</span></div>

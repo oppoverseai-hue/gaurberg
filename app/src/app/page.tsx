@@ -8,9 +8,9 @@ export const dynamic = "force-dynamic";
 export default async function Home() {
   const access = await getAccess();
   return (
-    <main className="narrow">
+    <main className="narrow hero">
       <h1>Gaurberg</h1>
-      <p className="muted">Company pages and ecosystem maps for independent analysts and small funds.</p>
+      <p className="muted">Research any company through the businesses around it.</p>
       {access.state === "signed_out" && (
         <div className="card">
           <p>This is an invite-only prototype. Sign in with the Google account you were invited with.</p>
@@ -25,11 +25,8 @@ export default async function Home() {
       )}
       {access.state === "ok" && (
         <>
-          <div className="top">
-            <span className="muted">{access.email} ({access.role}){access.role === "admin" && <> · <a href="/admin">Admin</a></>}</span>
-            <form action="/auth/signout" method="post"><button className="btn">Sign out</button></form>
-          </div>
           <LandingSearch />
+          <div className="who muted mono">{access.email} ({access.role}){access.role === "admin" && <> · <a href="/admin">Admin</a></>} · <form action="/auth/signout" method="post" style={{ display: "inline" }}><button className="linkbtn">Sign out</button></form></div>
           <IndexTicker />
         </>
       )}
