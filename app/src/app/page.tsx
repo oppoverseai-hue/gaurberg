@@ -26,7 +26,6 @@ export default async function Home() {
       {access.state === "ok" && (
         <>
           <LandingSearch />
-          <div className="who muted mono">{access.email} ({access.role}){access.role === "admin" && <> · <a href="/admin">Admin</a></>} · <form action="/auth/signout" method="post" style={{ display: "inline" }}><button className="linkbtn">Sign out</button></form></div>
           <IndexTicker />
         </>
       )}
