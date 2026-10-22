@@ -1,0 +1,60 @@
+{
+ "ticker": "BYIT",
+ "edges_in": 43,
+ "edges_out": 43,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Adobe",
+  "BeyondTrust",
+  "Biltron",
+  "Blaby District Council",
+  "BlackRock",
+  "Camissa Asset Management",
+  "Check Point",
+  "Citrix",
+  "Cloud Bridge Technologies",
+  "Commvault",
+  "Coronation Fund Managers",
+  "CrowdStrike",
+  "Crown Commercial Services",
+  "Darktrace",
+  "Dell",
+  "Home Office",
+  "M&G Investments",
+  "Mimecast",
+  "NHS",
+  "National Express",
+  "Palo Alto",
+  "Public Investment Corporation",
+  "Recorded Future",
+  "Rubrik",
+  "SecurityHQ",
+  "ServiceNow",
+  "Sophos",
+  "Tanium",
+  "VMware",
+  "Vanguard Group",
+  "West Yorkshire Fire and Rescue Service",
+  "Wiz",
+  "Zscaler"
+ ],
+ "needs_review": [
+  {
+   "raw": "AWS",
+   "resolved": "Amazon",
+   "how": "alias"
+  },
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Oracle NetSuite",
+   "resolved": "Oracle",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": []
+}

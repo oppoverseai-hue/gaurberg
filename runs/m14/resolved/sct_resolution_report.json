@@ -1,0 +1,45 @@
+{
+ "ticker": "SCT",
+ "edges_in": 19,
+ "edges_out": 16,
+ "edges_merged": 3,
+ "new_nodes": [
+  "11:11 Systems",
+  "Blaby District Council",
+  "Capital Group",
+  "Commvault",
+  "Exertis",
+  "Lenovo",
+  "Mawer Investment Management",
+  "Nutanix",
+  "Park Place Technologies",
+  "Perspicuity",
+  "Peter Kelly",
+  "Samsung",
+  "Steel and Alloy"
+ ],
+ "needs_review": [
+  {
+   "raw": "Oakland",
+   "resolved": "Oakland Group Services Limited",
+   "how": "alias"
+  },
+  {
+   "raw": "Oakland Group",
+   "resolved": "Oakland Group Services Limited",
+   "how": "alias"
+  },
+  {
+   "raw": "Oakland Group Services Limited",
+   "resolved": "Oakland Group Services Limited",
+   "how": "alias"
+  },
+  {
+   "raw": "Oakland Group Services",
+   "resolved": "Oakland Group Services Limited",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": []
+}

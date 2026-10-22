@@ -1,0 +1,564 @@
+[
+ {
+  "counterparty": "Yew Tree Consortium",
+  "entity_type": "other",
+  "type": "invests",
+  "source": "Yew Tree Consortium",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p15",
+    "quote": "Following shareholder approval in May 2025, this increased the Consortium’s shareholding to c. 33%, through the acquisition of 75 million new shares at a c. 7% premium to the closing price on 28 March 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "p96",
+    "quote": "The Company has four groups of significant shareholders, the Yew Tree Consortium, Mercedes-Benz AG, the Public Investment Fund and Geely.",
+    "quote_found": true
+   },
+   {
+    "section": "p101",
+    "quote": "Before the additional investment, the Yew Tree Consortium owned 28% of the issued share capital of the Company. The additional investment took the Consortium’s ownership to approximately 33%.",
+    "quote_found": true
+   },
+   {
+    "section": "p211",
+    "quote": "In May 2025 the Group issued 75,000,000 ordinary shares through a non pre-emptive placing and retail offer to Yew Tree Consortium with net proceeds of £51.2m.",
+    "quote_found": true
+   },
+   {
+    "section": "p241",
+    "quote": "Relationship Agreements between the Company and the Yew Tree Consortium dated 27 February 2020, MBAG dated 27 October 2020, the Public Investment Fund dated 29 July 2022 and Geely dated 18 May 2023 which govern the relationship between the Company and each of these shareholder groups",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 33,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "AMR GP",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "AML",
+  "target": "AMR GP",
+  "evidence": [
+   {
+    "section": "p34",
+    "quote": "Further enhanced by the proposed sale of the Aston Martin naming rights to AMR GP for a consideration of £50m in cash in Q1 2026",
+    "quote_found": true
+   },
+   {
+    "section": "p223",
+    "quote": "During the year ended 31 December 2025, AMR GP also purchased two used vehicles for £0.3m from a Group company of which £nil was outstanding as at 31 December 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "p165",
+    "quote": "Obtaining the circular and shareholder irrevocable undertakings relating to the sale of Naming Rights to AMR GP Holdings Limited (“AMR”) for £50m (‘the transaction’) in order to determine if there are any conditions which could prevent or delay the receipt of the cash.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "BERO",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "BERO",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "Successfully launched new brand partnerships and collaborations further expanding the impact of our brand globally, including BERO, Champagne Bollinger, Glenfiddich, ELEMIS",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Champagne Bollinger",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "Champagne Bollinger",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "Successfully launched new brand partnerships and collaborations further expanding the impact of our brand globally, including BERO, Champagne Bollinger, Glenfiddich, ELEMIS",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Glenfiddich",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "Glenfiddich",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "Successfully launched new brand partnerships and collaborations further expanding the impact of our brand globally, including BERO, Champagne Bollinger, Glenfiddich, ELEMIS",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ELEMIS",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "ELEMIS",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "Successfully launched new brand partnerships and collaborations further expanding the impact of our brand globally, including BERO, Champagne Bollinger, Glenfiddich, ELEMIS",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mercedes-Benz AG",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "Mercedes-Benz AG",
+  "evidence": [
+   {
+    "section": "p74",
+    "quote": "Strategic arrangements with key partners, including Mercedes Benz AG, Lucid and Geely",
+    "quote_found": true
+   },
+   {
+    "section": "p157",
+    "quote": "Under the amended agreement, the Company and MBAG will continue long-term strategic co-operation, supporting the delivery of current and future generation Aston Martin vehicles.",
+    "quote_found": true
+   },
+   {
+    "section": "p177",
+    "quote": "The Group has a Strategic Cooperation Agreement with MercedesBenz AG.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lucid",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "Lucid",
+  "evidence": [
+   {
+    "section": "p74",
+    "quote": "Strategic arrangements with key partners, including Mercedes Benz AG, Lucid and Geely",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Geely",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "Geely",
+  "evidence": [
+   {
+    "section": "p74",
+    "quote": "Strategic arrangements with key partners, including Mercedes Benz AG, Lucid and Geely",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mercedes-Benz AG",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Mercedes-Benz AG",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p96",
+    "quote": "The Company has four groups of significant shareholders, the Yew Tree Consortium, Mercedes-Benz AG, the Public Investment Fund and Geely.",
+    "quote_found": true
+   },
+   {
+    "section": "p156",
+    "quote": "Mercedes-Benz AG 76,320,195 7.54",
+    "quote_found": true
+   },
+   {
+    "section": "p107",
+    "quote": "Franz Reiner represents Mercedes-BenzAG, Scott Robertson represents the Public Investment Fund, Daniel Li represents Geely and Andrew McNaught represents Ernesto Bertarelli.",
+    "quote_found": true
+   },
+   {
+    "section": "p241",
+    "quote": "Relationship Agreements between the Company and the Yew Tree Consortium dated 27 February 2020, MBAG dated 27 October 2020, the Public Investment Fund dated 29 July 2022 and Geely dated 18 May 2023 which govern the relationship between the Company and each of these shareholder groups",
+    "quote_found": true
+   },
+   {
+    "section": "p195",
+    "quote": "On 7 December 2020, the Company issued 224,657,287 shares to MBAG as consideration for access to the first tranche of powertrain and electronic architecture via a Strategic Cooperation Agreement (“SCA”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Geely",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Geely",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p96",
+    "quote": "The Company has four groups of significant shareholders, the Yew Tree Consortium, Mercedes-Benz AG, the Public Investment Fund and Geely.",
+    "quote_found": true
+   },
+   {
+    "section": "p107",
+    "quote": "Franz Reiner represents Mercedes-BenzAG, Scott Robertson represents the Public Investment Fund, Daniel Li represents Geely and Andrew McNaught represents Ernesto Bertarelli.",
+    "quote_found": true
+   },
+   {
+    "section": "p156",
+    "quote": "Li Shufu (Geely) 142,530,859 14.08",
+    "quote_found": true
+   },
+   {
+    "section": "p241",
+    "quote": "Relationship Agreements between the Company and the Yew Tree Consortium dated 27 February 2020, MBAG dated 27 October 2020, the Public Investment Fund dated 29 July 2022 and Geely dated 18 May 2023 which govern the relationship between the Company and each of these shareholder groups",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Public Investment Fund",
+  "entity_type": "government",
+  "type": "invests",
+  "source": "Public Investment Fund",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p96",
+    "quote": "The Company has four groups of significant shareholders, the Yew Tree Consortium, Mercedes-Benz AG, the Public Investment Fund and Geely.",
+    "quote_found": true
+   },
+   {
+    "section": "p107",
+    "quote": "Franz Reiner represents Mercedes-BenzAG, Scott Robertson represents the Public Investment Fund, Daniel Li represents Geely and Andrew McNaught represents Ernesto Bertarelli.",
+    "quote_found": true
+   },
+   {
+    "section": "p156",
+    "quote": "The Public Investment Fund 140,504,260 13.88",
+    "quote_found": true
+   },
+   {
+    "section": "p223",
+    "quote": "PIF are a substantial shareholder of the Group, and two members of the Group’s KMP and Non-Executive Directors are members of PIF’s KMP.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Aston Martin Aramco Formula One Team",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "AML",
+  "target": "Aston Martin Aramco Formula One Team",
+  "evidence": [
+   {
+    "section": "p100",
+    "quote": "In March, the Board approved the sale of the Group’s minority investment in the Aston Martin Aramco Formula One™ Team.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "St James Invest",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "St James Invest",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p150",
+    "quote": "Held via St James Invest SA",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mercedes-Benz AG",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Mercedes-Benz AG",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p157",
+    "quote": "In addition to the terms agreed in the Strategic Co-operation Agreement, the Group has a long-standing technical partnership with MBAG for the provision of engines, electrical architecture and entertainment systems.",
+    "quote_found": true
+   },
+   {
+    "section": "p177",
+    "quote": "The agreement provides the Company with access to a wide range of world-class technologies for the current generation of luxury vehicles and future derivatives.",
+    "quote_found": true
+   },
+   {
+    "section": "p195",
+    "quote": "On 2 July 2024 the Group entered a further agreement with MBAG relating to the future supply of engine units at a total cost of £63.2m.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Yew Tree Overseas Ltd",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Yew Tree Overseas Ltd",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p156",
+    "quote": "Yew Tree Overseas Ltd 163,799,934 16.18",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 16.18,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Lucid",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Lucid",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p158",
+    "quote": "On 26 June 2023 the Company announced its intention to enter into a supply arrangement with Lucid to access Lucid’s powertrain components to promote the Company’s electrification strategy and long term growth.",
+    "quote_found": true
+   },
+   {
+    "section": "p177",
+    "quote": "The Group has a supply agreement with Lucid Group, Inc., which will help drive the Group’s electrification strategy and long-term growth.",
+    "quote_found": true
+   },
+   {
+    "section": "p195",
+    "quote": "On 26 June 2023, the Aston Martin Lagonda Global Holdings plc confirmed a strategic supply arrangement with Lucid Group, Inc. (“Lucid”) providing the Group with access to select powertrain components for future BEV vehicles (collectively the “technology”).",
+    "quote_found": true
+   },
+   {
+    "section": "p223",
+    "quote": "During the year ended 31 December 2025, the Group incurred expenses of £1.6m from Lucid, Inc relating to the implementation work for the technology purchased in 2023.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Aston Martin Cognizant Formula One team",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "Aston Martin Cognizant Formula One team",
+  "evidence": [
+   {
+    "section": "p158",
+    "quote": "In early 2020, the Group entered into a sponsorship agreement, as amended in 2022, for a ten-year initial term under which the Racing Point Formula One™ team was re-launched as the Aston Martin Cognizant Formula One™ team with effect from the 2021 season, bringing an Aston Martin team back to the Formula One™ grid for the first time since 1960.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AMR GP",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "AML",
+  "target": "AMR GP",
+  "evidence": [
+   {
+    "section": "p189",
+    "quote": "On 29 September 2025 the Group completed the sale of the significant portion of its shareholding in AMR GP Holdings Limited having early exercised an option to subscribe for additional equity for a fixed value.",
+    "quote_found": true
+   },
+   {
+    "section": "p198",
+    "quote": "On 15 November 2023, the Group subscribed for shares in AMR GP Holdings Limited (“AMR GP”) by exercising its primary warrant option and subscribing for reward shares it was entitled to under the initial sponsorship term.",
+    "quote_found": true
+   },
+   {
+    "section": "p223",
+    "quote": "During the year ended 31 December 2025 the Group incurred expenses of £0.4m due to AMR GP in relation to costs for supporting the sale of the significant portion of the Group’s investment holding in AMR GP.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AMR GP",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "AML",
+  "target": "AMR GP",
+  "evidence": [
+   {
+    "section": "p227",
+    "quote": "In 2024, Aston Martin extended its long-term Sponsorship Arrangement until at least 2045, with the Naming Arrangements for AMR to use the ‘Aston Martin’ name in F1 until 2055 at the latest.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Aston Martin Performance Technologies",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Aston Martin Performance Technologies",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p223",
+    "quote": "In addition, the Group incurred costs of £3.1m associated with engineering design on upcoming vehicle programmes from Aston Martin Performance Technologies Limited (“AMPT”) of which £1.2m is outstanding to AMPT at 31 December 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Geely",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Geely",
+  "target": "AML",
+  "evidence": [
+   {
+    "section": "p223",
+    "quote": "During the year ended 31 December 2025, the Group incurred costs of £0.2m for safety testing services from companies within the Geely Holding Group of companies of which £nil was outstanding as at 31 December 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Classic Automobiles",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "AML",
+  "target": "Classic Automobiles",
+  "evidence": [
+   {
+    "section": "p223",
+    "quote": "During the year ended 31 December 2025, Classic Automobiles Inc. purchased a vehicle for £3.6m of which £1.1m was outstanding at 31 December 2025.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

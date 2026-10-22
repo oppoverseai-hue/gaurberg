@@ -25,3 +25,7 @@ CART,Instacart,consumer,mid,false,provisional (set swap Oct 21),US,,
 GRAB,Grab,consumer,mid,false,provisional (set swap Oct 21),US,,
 AUR,Aurora,business,small,false,provisional (set swap Oct 21),US,,
 VOD,Vodafone Group,,,false,M14 London; segment and size group not set yet,LSE|US,,GB
+AML,Aston Martin Lagonda,,,false,M14 London; segment and size group not set yet,LSE,,GB
+SCT,Softcat,,,false,M14 London; segment and size group not set yet,LSE,,GB
+BYIT,Bytes Technology Group,,,false,M14 London; segment and size group not set yet,LSE,,GB
+CCC,Computacenter,,,false,M14 London; segment and size group not set yet,LSE,,GB

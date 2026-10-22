@@ -1,0 +1,854 @@
+[
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "p5",
+    "quote": "We are one of Microsoft’s largest UK partners by revenue and work hand in hand with more than 100 other world-leading vendors that make or distribute software, hardware and other IT products.",
+    "quote_found": true
+   },
+   {
+    "section": "p41",
+    "quote": "We maintain excellent relationships with all our vendors, and have a particularly good relationship with Microsoft, which relies on us as a key partner in the UK.",
+    "quote_found": true
+   },
+   {
+    "section": "p152",
+    "quote": "Microsoft relationship strength, with 68% of the Group’s GII and 50% of GP generated from sales of Microsoft products and associated service solutions, this continues to be a very important partnership for both sides.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Microsoft",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p27",
+    "quote": "Microsoft has always been our biggest and most important vendor, and remained so this year.",
+    "quote_found": true
+   },
+   {
+    "section": "p55",
+    "quote": "Microsoft is our largest supplier and formed 59% of our emissions in 2025/26.",
+    "quote_found": true
+   },
+   {
+    "section": "p66",
+    "quote": "A large percentage of our supply chain is with Microsoft, which has a ‘carbon negative’ date of 2030.",
+    "quote_found": true
+   },
+   {
+    "section": "p92",
+    "quote": "Long-standing relationships between our non‑executive directors and the industry, which includes material vendors and partners, including Microsoft, which again this year gave a presentation to the Board.",
+    "quote_found": true
+   },
+   {
+    "section": "p152",
+    "quote": "Microsoft relationship strength, with 68% of the Group’s GII and 50% of GP generated from sales of Microsoft products and associated service solutions, this continues to be a very important partnership for both sides.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Amazon",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Palo Alto",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Palo Alto",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Check Point",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Check Point",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mimecast",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Mimecast",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Adobe",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Adobe",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Darktrace",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Darktrace",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SecurityHQ",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "SecurityHQ",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Commvault",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Commvault",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ServiceNow",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "ServiceNow",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Wiz",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Wiz",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Recorded Future",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Recorded Future",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "CrowdStrike",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "CrowdStrike",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Zscaler",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Zscaler",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, Palo Alto, Check Point, Mimecast, Adobe, Darktrace, SecurityHQ, Commvault, ServiceNow, Wiz, Recorded Future, CrowdStrike, Zscaler and Google",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "VMware",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "VMware",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, VMware, Dell, Adobe, Sophos, Citrix, Mimecast, Rubrik, ServiceNow, BeyondTrust, Tanium and Zscaler",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Dell",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Dell",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, VMware, Dell, Adobe, Sophos, Citrix, Mimecast, Rubrik, ServiceNow, BeyondTrust, Tanium and Zscaler",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Sophos",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Sophos",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, VMware, Dell, Adobe, Sophos, Citrix, Mimecast, Rubrik, ServiceNow, BeyondTrust, Tanium and Zscaler",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Citrix",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Citrix",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, VMware, Dell, Adobe, Sophos, Citrix, Mimecast, Rubrik, ServiceNow, BeyondTrust, Tanium and Zscaler",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Rubrik",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Rubrik",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, VMware, Dell, Adobe, Sophos, Citrix, Mimecast, Rubrik, ServiceNow, BeyondTrust, Tanium and Zscaler",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "BeyondTrust",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "BeyondTrust",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, VMware, Dell, Adobe, Sophos, Citrix, Mimecast, Rubrik, ServiceNow, BeyondTrust, Tanium and Zscaler",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tanium",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BYIT",
+  "target": "Tanium",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Our partners include Microsoft, AWS, VMware, Dell, Adobe, Sophos, Citrix, Mimecast, Rubrik, ServiceNow, BeyondTrust, Tanium and Zscaler",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Cloud Bridge Technologies",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "BYIT",
+  "target": "Cloud Bridge Technologies",
+  "evidence": [
+   {
+    "section": "p31",
+    "quote": "Following the acquisition of a 25.1% interest in Cloud Bridge Technologies in April 2023, in accordance with IAS 28 Investments in Associates and Joint Ventures we account for the Group’s share of its profit/loss.",
+    "quote_found": true
+   },
+   {
+    "section": "p171",
+    "quote": "The Group has a 25.1% interest in Cloud Bridge Technologies Limited, a company with a principal place of business in the United Kingdom.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 25.1,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "National Express",
+  "entity_type": "other",
+  "type": "sells_to",
+  "source": "BYIT",
+  "target": "National Express",
+  "evidence": [
+   {
+    "section": "p14",
+    "quote": "In early 2025, National Express partnered with Bytes to move from an on-premises VMware environment to a cloud-based infrastructure on Amazon Web Services (AWS).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "West Yorkshire Fire and Rescue Service",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "BYIT",
+  "target": "West Yorkshire Fire and Rescue Service",
+  "evidence": [
+   {
+    "section": "p14",
+    "quote": "Working with Phoenix, the fire service embarked on an ambitious, multi-year digital transformation programme to modernise its systems, while also supporting people with accessibility needs.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Blaby District Council",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "BYIT",
+  "target": "Blaby District Council",
+  "evidence": [
+   {
+    "section": "p16",
+    "quote": "The Phoenix Protect active response managed service was the ideal fit.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Home Office",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "BYIT",
+  "target": "Home Office",
+  "evidence": [
+   {
+    "section": "p26",
+    "quote": "We did more business with established customers such as the Home Office and the NHS.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NHS",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "BYIT",
+  "target": "NHS",
+  "evidence": [
+   {
+    "section": "p26",
+    "quote": "We did more business with established customers such as the Home Office and the NHS.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Adobe",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Adobe",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p55",
+    "quote": "This is largely because our suppliers, such as Microsoft, Adobe and AWS, reduced their emissions intensity.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Amazon",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Amazon",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p55",
+    "quote": "This is largely because our suppliers, such as Microsoft, Adobe and AWS, reduced their emissions intensity.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Palo Alto",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Palo Alto",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p55",
+    "quote": "However, its emissions intensity decreased by 9% in the past year, with AWS, Adobe and Palo Alto also making energy intensity reductions.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Crown Commercial Services",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "BYIT",
+  "target": "Crown Commercial Services",
+  "evidence": [
+   {
+    "section": "p77",
+    "quote": "Our approved supplier status under the main public sector framework agreement with Crown Commercial Services (RM6098 Technology Products & Associated Services 2 (TePAS 2)) to 7 October 2027, which covers over half of the viability period, and taking into account of our long history of successfully retaining our position at previous renewal dates",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Oracle",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Oracle",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p101",
+    "quote": "Oracle NetSuite implementation (new accounting system at Bytes)",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Coronation Fund Managers",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Coronation Fund Managers",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "Coronation Fund Managers 67,159,310 28.41",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 28.41,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Camissa Asset Management",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Camissa Asset Management",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "Camissa Asset Management 36,845,706 15.59",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 15.59,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Biltron",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Biltron",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "Biltron (Pty) Ltd 18,262,478 7.73",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 7.73,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "BlackRock",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "BlackRock",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "BlackRock 13,732,017 5.81",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 5.81,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Public Investment Corporation",
+  "entity_type": "government",
+  "type": "invests",
+  "source": "Public Investment Corporation",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "Public Investment Corporation (PIC) 11,510,744 4.87",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 4.87,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Vanguard Group",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Vanguard Group",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "Vanguard Group 9,909,131 4.19",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 4.19,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "M&G Investments",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "M&G Investments",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "M&G Investments 7,166,647 3.03",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": 3.03,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Cloud Bridge Technologies",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Cloud Bridge Technologies",
+  "target": "BYIT",
+  "evidence": [
+   {
+    "section": "p179",
+    "quote": "Group companies made purchases from the associate of £6.7 million (2025: £4.9 million) and sales to the associate of £0.2 million (2025: £0.1 million) during the year with a trade payable balance of £0.9 million (2025: £0.1 million) at the year end.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Cloud Bridge Technologies",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "BYIT",
+  "target": "Cloud Bridge Technologies",
+  "evidence": [
+   {
+    "section": "p179",
+    "quote": "Group companies made purchases from the associate of £6.7 million (2025: £4.9 million) and sales to the associate of £0.2 million (2025: £0.1 million) during the year with a trade payable balance of £0.9 million (2025: £0.1 million) at the year end.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

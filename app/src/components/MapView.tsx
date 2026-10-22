@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { buildNodes, shown, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { MARKETS, MARKET_LABEL, type Market, buildNodes, shown, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
 const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
@@ -33,7 +33,18 @@ type Preview = { company: { name: string; ticker: string; segment: string; size_
 export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; rels: Rel[]; isAdmin: boolean }) {
   const router = useRouter();
   const [filter, setFilter] = useState<LinkType | "all">("all");
-  const rels = useMemo(() => (filter === "all" ? allRels : allRels.filter((r) => r.relationship_type === filter)), [allRels, filter]);
+  // Market filter: a link belongs to the market(s) of the company on its other end. "unknown" = that company's listing is not yet recorded.
+  const [market, setMarket] = useState<string>("all");
+  const marketsOf = (r: Rel): string[] => { const o = r.source.id === focal.id ? r.target : r.source; return o.markets && o.markets.length ? o.markets : ["unknown"]; };
+  const marketCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    allRels.forEach((r) => marketsOf(r).forEach((m) => { c[m] = (c[m] ?? 0) + 1; }));
+    return c;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allRels, focal.id]);
+  const rels = useMemo(() => allRels.filter((r) => (filter === "all" || r.relationship_type === filter) && (market === "all" || marketsOf(r).includes(market))),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [allRels, filter, market, focal.id]);
   const nodes = useMemo(() => buildNodes(rels, focal.id), [rels, focal.id]);
   const [expanded, setExpanded] = useState<Record<Side, boolean>>({ left: false, right: false, top: false, bottom: false });
   const [panel, setPanel] = useState<{ kind: "link"; rel: Rel } | { kind: "company"; co: Co } | null>(null);
@@ -77,6 +88,15 @@ export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; 
             <button key={f.key} className={`fpill ${filter === f.key ? "on" : ""}`} onClick={() => setFilter(f.key)}>{f.label} ({n})</button>
           ); })}
         </div>
+        {Object.keys(marketCounts).some((m) => m !== "US" && m !== "unknown") && (
+          <div className="pills" role="group" aria-label="Filter by market of the other company">
+            <span className="label" style={{ marginRight: 4 }}>Market</span>
+            <button className={`fpill ${market === "all" ? "on" : ""}`} onClick={() => setMarket("all")}>All markets</button>
+            {[...MARKETS, "unknown"].filter((m) => marketCounts[m]).map((m) => (
+              <button key={m} className={`fpill ${market === m ? "on" : ""}`} onClick={() => setMarket(m)}>{m === "unknown" ? "Not yet known" : MARKET_LABEL[m as Market]} ({marketCounts[m]})</button>
+            ))}
+          </div>
+        )}
         <div className="legend">
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="14" y2="4" stroke="var(--accent)" strokeWidth="2" /><polygon points="14,0 22,4 14,8" fill="var(--accent)" /></svg>Supplies / invests / acquired</span>
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="var(--fg2)" strokeWidth="1.5" strokeDasharray="4 4" /></svg>Competes</span>

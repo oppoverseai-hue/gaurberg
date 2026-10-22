@@ -1,3 +1,9 @@
 chunk 1/8: 8 items, in=43412 out=1000 $0.1375 9.2s
 chunk 3/8: 1 items, in=42827 out=430 $0.1294 9.5s
 chunk 2/8: 6 items, in=42439 out=854 $0.1322 10.1s
+chunk 5/8: 1 items, in=44643 out=368 $0.1363 6.0s
+chunk 4/8: 1 items, in=42118 out=449 $0.1267 7.2s
+chunk 6/8: 4 items, in=42058 out=580 $0.1278 7.5s
+chunk 7/8: 1 items, in=42795 out=247 $0.1275 5.1s
+chunk 8/8: 1 items, in=40648 out=505 $0.1213 6.7s
+SCT extractor (claude-sonnet-5-5): 19 edges, tokens in=340940 out=4433 cost=$1.0387
