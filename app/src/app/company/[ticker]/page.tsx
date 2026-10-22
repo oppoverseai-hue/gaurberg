@@ -1,3 +1,6 @@
+import { isOffline } from "@/lib/mode";
+import NewsPanel from "@/components/NewsPanel";
+import { getNews } from "@/lib/news";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
@@ -24,7 +27,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const ticker = (await params).ticker.toUpperCase();
   const company = await getCompany(ticker);
   if (!company) notFound();
-  const [m, { rels }] = await Promise.all([getMarket(ticker), getRels(company.id)]);
+  const [m, { rels }, news] = await Promise.all([getMarket(ticker), getRels(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(ticker)]);
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
@@ -79,8 +82,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             ]} />
           </div>
           <div className="card" id="news">
-            <div className="cardhead"><h3>Recent news</h3></div>
-            <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>Not available yet. News, press releases and filings are not built in this version.</p>
+            <div className="cardhead"><h3>Recent news</h3><span className="label">Finnhub and SEC EDGAR</span></div>
+            <NewsPanel items={news.items} errors={news.errors} />
           </div>
         </section>
         <aside className="stack">
