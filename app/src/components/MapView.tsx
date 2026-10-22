@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { MARKETS, MARKET_LABEL, type Market, buildNodes, shown, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, shown, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
 const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
@@ -30,21 +30,21 @@ function edgePoint(c: { x: number; y: number }, to: { x: number; y: number }, hw
 
 type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
 
-export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; rels: Rel[]; isAdmin: boolean }) {
+export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, countryRegion = {} }: { focal: Co; rels: Rel[]; isAdmin: boolean; geo?: GeoMap; countryRegion?: CountryRegion }) {
   const router = useRouter();
   const [filter, setFilter] = useState<LinkType | "all">("all");
-  // Market filter: a link belongs to the market(s) of the company on its other end. "unknown" = that company's listing is not yet recorded.
-  const [market, setMarket] = useState<string>("all");
-  const marketsOf = (r: Rel): string[] => { const o = r.source.id === focal.id ? r.target : r.source; return o.markets && o.markets.length ? o.markets : ["unknown"]; };
-  const marketCounts = useMemo(() => {
+  // Region filter (M16): keep links whose other company reports revenue in the chosen region. A company with no revenue row is not guessed into any region.
+  const [region, setRegion] = useState<string>("all");
+  const otherOf = (r: Rel) => (r.source.id === focal.id ? r.target : r.source);
+  const regionCounts = useMemo(() => {
     const c: Record<string, number> = {};
-    allRels.forEach((r) => marketsOf(r).forEach((m) => { c[m] = (c[m] ?? 0) + 1; }));
+    REGIONS.forEach((g) => { const n = allRels.filter((r) => hasRegion(geo[otherOf(r).id], g, countryRegion)).length; if (n) c[g] = n; });
     return c;
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allRels, focal.id]);
-  const rels = useMemo(() => allRels.filter((r) => (filter === "all" || r.relationship_type === filter) && (market === "all" || marketsOf(r).includes(market))),
+  }, [allRels, geo, countryRegion, focal.id]);
+  const rels = useMemo(() => allRels.filter((r) => (filter === "all" || r.relationship_type === filter) && (region === "all" || hasRegion(geo[otherOf(r).id], region, countryRegion))),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [allRels, filter, market, focal.id]);
+    [allRels, filter, region, geo, countryRegion, focal.id]);
   const nodes = useMemo(() => buildNodes(rels, focal.id), [rels, focal.id]);
   const [expanded, setExpanded] = useState<Record<Side, boolean>>({ left: false, right: false, top: false, bottom: false });
   const [panel, setPanel] = useState<{ kind: "link"; rel: Rel } | { kind: "company"; co: Co } | null>(null);
@@ -88,13 +88,14 @@ export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; 
             <button key={f.key} className={`fpill ${filter === f.key ? "on" : ""}`} onClick={() => setFilter(f.key)}>{f.label} ({n})</button>
           ); })}
         </div>
-        {Object.keys(marketCounts).some((m) => m !== "US" && m !== "unknown") && (
-          <div className="pills" role="group" aria-label="Filter by market of the other company">
-            <span className="label" style={{ marginRight: 4 }}>Market</span>
-            <button className={`fpill ${market === "all" ? "on" : ""}`} onClick={() => setMarket("all")}>All markets</button>
-            {[...MARKETS, "unknown"].filter((m) => marketCounts[m]).map((m) => (
-              <button key={m} className={`fpill ${market === m ? "on" : ""}`} onClick={() => setMarket(m)}>{m === "unknown" ? "Not yet known" : MARKET_LABEL[m as Market]} ({marketCounts[m]})</button>
+        {(Object.keys(regionCounts).length > 0 || (geo[focal.id] ?? []).length > 0) && (
+          <div className="pills" role="group" aria-label="Filter by region where the other company earns revenue">
+            <span className="label" style={{ marginRight: 4 }}>Region</span>
+            <button className={`fpill ${region === "all" ? "on" : ""}`} onClick={() => setRegion("all")}>All regions</button>
+            {REGIONS.filter((g) => regionCounts[g]).map((g) => (
+              <button key={g} className={`fpill ${region === g ? "on" : ""}`} onClick={() => setRegion(g)}>{g} ({regionCounts[g]})</button>
             ))}
+            {Object.keys(regionCounts).length === 0 && <span className="muted" style={{ fontSize: 12 }}>No other company on this map has reported revenue by region yet.</span>}
           </div>
         )}
         <div className="legend">
@@ -141,8 +142,8 @@ export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; 
                  aria-label={`${node.co.name}${m ? "" : ", not yet mapped"}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "company", co: node.co })}>
                 <rect x={x - NW / 2} y={y - NH / 2} width={NW} height={NH} rx={8} />
                 <text x={x} y={y - 2} textAnchor="middle" className="nn">{(() => { const v = viaLabel(node), t = v ? `${node.co.name} (${v})` : node.co.name; return t.length > 22 ? t.slice(0, 21) + "…" : t; })()}</text>
-                {m && <text x={x} y={y + 14} textAnchor="middle" className="nt">{node.co.ticker}</text>}
-                {!m && <text x={x} y={y + 14} textAnchor="middle" className="nt">Not yet mapped</text>}
+                {m && <text x={x} y={y + 14} textAnchor="middle" className="nt">{node.co.ticker}{region !== "all" ? (() => { const sh = regionShare(geo[node.co.id], region, countryRegion); return sh != null ? ` · ${sh}% ${region}` : ""; })() : ""}</text>}
+                {!m && <text x={x} y={y + 14} textAnchor="middle" className="nt">Not yet mapped{region !== "all" ? (() => { const sh = regionShare(geo[node.co.id], region, countryRegion); return sh != null ? ` · ${sh}% ${region}` : ""; })() : ""}</text>}
               </g>
             );
           })}
@@ -150,7 +151,7 @@ export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; 
         </div>
         <aside className="side">
           {panel?.kind === "link" && <LinkPanel rel={panel.rel} onClose={() => setPanel(null)} />}
-          {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/map/${t}`)} />}
+          {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} geo={geo[panel.co.id]} countryRegion={countryRegion} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/map/${t}`)} />}
           {!panel && <div className="empty">Select a link to see what the filings say, or a company to preview it.</div>}
           <div className="sidefoot"><kbd>Esc</kbd><span>closes this pane</span></div>
         </aside>
@@ -232,7 +233,18 @@ function LinkPanel({ rel, onClose }: { rel: Rel; onClose: () => void }) {
   );
 }
 
-function CompanyPane({ co, focal, onClose, onRecenter }: { co: Co; focal: Co; onClose: () => void; onRecenter: (t: string) => void }) {
+function GeoBlock({ rows, cr }: { rows?: GeoRow[]; cr: CountryRegion }) {
+  if (!rows || rows.length === 0) return <p className="muted mono" style={{ fontSize: 11, margin: "8px 0 0" }}>Revenue by region: not reported in a source we have read.</p>;
+  const unit = rows[0].unit ? ` ${rows[0].unit}` : "";
+  return (
+    <div className="attrs">
+      <div className="h">Revenue by region · year to {rows[0].period_end}{rows.some((g) => g.status !== "promoted" && g.status !== "live") ? " · staged, not reviewed" : ""}</div>
+      {rows.map((g, i) => <div className="r" key={i}><span>{g.label}{regionOf(g, cr) ? <span className="muted"> · {regionOf(g, cr)}</span> : <span className="warn"> · region not mapped</span>}</span><span>{g.revenue_pct != null ? `${g.revenue_pct}%` : "n/a"}{g.revenue_amount != null ? ` (${g.currency ?? ""}${g.revenue_amount.toLocaleString()}${unit})` : ""}</span></div>)}
+    </div>
+  );
+}
+
+function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { co: Co; focal: Co; onClose: () => void; onRecenter: (t: string) => void; geo?: GeoRow[]; countryRegion: CountryRegion }) {
   const mapped = isMapped(co);
   const [data, setData] = useState<Preview | null>(null);
   const [err, setErr] = useState(false);
@@ -250,6 +262,7 @@ function CompanyPane({ co, focal, onClose, onRecenter }: { co: Co; focal: Co; on
         <div className="kicker"><span>Company</span></div>
         <h3 style={{ marginTop: 4 }}>{co.name} {co.ticker && <span className="tag">{co.ticker}</span>}</h3>
       </div>
+      <GeoBlock rows={geo} cr={countryRegion} />
       {!mapped ? (
         <p className="muted">{co.entity_type === "group" ? "A group with no stock ticker." : "This company is not yet mapped."} The map shows only what {focal.name}'s filings say about it.</p>
       ) : err ? (
