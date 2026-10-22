@@ -1,3 +1,13 @@
 chunk 2/12: 4 items, in=42186 out=711 $0.1296 9.9s
 chunk 3/12: 0 items, in=38709 out=4 $0.1083 10.8s
 chunk 1/12: 1 items, in=51178 out=591 $0.1653 10.9s
+chunk 4/12: 0 items, in=40310 out=4 $0.1149 4.0s
+chunk 5/12: 0 items, in=40752 out=4 $0.1167 4.2s
+chunk 8/12: 3 items, in=43521 out=504 $0.1330 6.7s
+chunk 6/12: 14 items, in=42231 out=1938 $0.1421 12.1s
+chunk 9/12: 6 items, in=44805 out=799 $0.1412 7.1s
+chunk 10/12: 0 items, in=43327 out=4 $0.1272 7.3s
+chunk 7/12: 20 items, in=40391 out=3390 $0.1490 17.4s
+chunk 11/12: 0 items, in=47669 out=4 $0.1450 4.9s
+chunk 12/12: 5 items, in=49480 out=792 $0.1603 10.3s
+PONY extractor (claude-sonnet-5-5): 38 edges, tokens in=524559 out=8745 cost=$1.6326
