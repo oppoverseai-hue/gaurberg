@@ -1,0 +1,714 @@
+[
+ {
+  "counterparty": "Trip.com",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "BIDU",
+  "target": "Trip.com",
+  "evidence": [
+   {
+    "section": "blk1",
+    "quote": "The Group adopted a one-quarter lag in reporting for its share of equity earnings (losses) to a majority of equity method investees excluding Trip.",
+    "quote_found": true
+   },
+   {
+    "section": "blk1",
+    "quote": "The Group adopted a one-quarter lag in reporting for its share of equity earnings (losses) to Trip.",
+    "quote_found": true
+   },
+   {
+    "section": "blk35",
+    "quote": "For example, we invested in Trip.com Group Limited.",
+    "quote_found": true
+   },
+   {
+    "section": "blk143",
+    "quote": "Subject to certain conditions, we may elect to deliver Trip.com Shares held by us in lieu of cash or a combination of cash and Trip.com Shares.",
+    "quote_found": true
+   },
+   {
+    "section": "blk206",
+    "quote": "As of December 31, 2024 and 2025, the Group held approximately 7 % and  7 % equity interest in Trip, respectively, and the Group can actively participate in the operating and financing policies of Trip through its one seat on Trip’s board of directors with a total of eight members.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "JOYY",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "BIDU",
+  "target": "JOYY",
+  "evidence": [
+   {
+    "section": "blk23",
+    "quote": "After negotiation with JOYY on next steps following the termination, Baidu (Hong Kong) Limited entered into new agreements on February 25, 2025 with JOYY to acquire, and acquired, YY Live for an aggregate price of approximately US$2.1 billion.",
+    "quote_found": true
+   },
+   {
+    "section": "blk205",
+    "quote": "On February 25, 2025, the Group entered into new agreements with JOYY Inc. and acquired 100 % equity interests in YY Live.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "iQIYI",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "BIDU",
+  "target": "iQIYI",
+  "evidence": [
+   {
+    "section": "blk42",
+    "quote": "iQIYI, our controlled subsidiary listed on the Nasdaq Global Select Market, had experienced a working capital deficit as of December 31, 2023, 2024 and 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "blk80",
+    "quote": "In November 2012, we obtained the controlling interest in iQIYI, Inc., or iQIYI, a prior equity method investee, and have since then consolidated its financial results into our consolidated financial statements.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Du Xiaoman",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "BIDU",
+  "target": "Du Xiaoman",
+  "evidence": [
+   {
+    "section": "blk32",
+    "quote": "After the divestiture, we hold  a non-controlling equity  interest in Du Xiaoman and have since then deconsolidated the financial results of Du Xiaoman from our consolidated financial statements in accordance with U.S. GAAP.",
+    "quote_found": true
+   },
+   {
+    "section": "blk80",
+    "quote": "The divestiture was completed in August 2018, following which we held a minority equity interest in Du Xiaoman, which was accounted for as an equity method investment.",
+    "quote_found": true
+   },
+   {
+    "section": "blk158",
+    "quote": "In August 2018, we completed the divestiture of Du Xiaoman, following which we recognized  our non-controlling equity  interest in Du Xiaoman as an equity method investment and Du Xiaoman became a related party.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "China Telecom",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "China Telecom",
+  "target": "BIDU",
+  "evidence": [
+   {
+    "section": "blk47-48",
+    "quote": "We rely heavily on China Telecommunications Corporation, China United Network Communications Group Company Limited, and China Mobile Communications Corporation to provide us with network services and data center hosting services.",
+    "quote_found": true
+   },
+   {
+    "section": "blk130",
+    "quote": "Our servers are hosted at the internet data centers of major telecom operators, including China Telecom, China Unicom and China Mobile, in over ten selected cities across China.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "China Unicom",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "China Unicom",
+  "target": "BIDU",
+  "evidence": [
+   {
+    "section": "blk47-48",
+    "quote": "We rely heavily on China Telecommunications Corporation, China United Network Communications Group Company Limited, and China Mobile Communications Corporation to provide us with network services and data center hosting services.",
+    "quote_found": true
+   },
+   {
+    "section": "blk130",
+    "quote": "Our servers are hosted at the internet data centers of major telecom operators, including China Telecom, China Unicom and China Mobile, in over ten selected cities across China.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "China Mobile",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "China Mobile",
+  "target": "BIDU",
+  "evidence": [
+   {
+    "section": "blk47-48",
+    "quote": "We rely heavily on China Telecommunications Corporation, China United Network Communications Group Company Limited, and China Mobile Communications Corporation to provide us with network services and data center hosting services.",
+    "quote_found": true
+   },
+   {
+    "section": "blk130",
+    "quote": "Our servers are hosted at the internet data centers of major telecom operators, including China Telecom, China Unicom and China Mobile, in over ten selected cities across China.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PPStream",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "BIDU",
+  "target": "PPStream",
+  "evidence": [
+   {
+    "section": "blk80",
+    "quote": "In May 2013, we acquired the online video business of PPStream Inc. and merged it with iQIYI, and since then have consolidated its financial results into our consolidated financial statements.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Uber",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BIDU",
+  "target": "Uber",
+  "evidence": [
+   {
+    "section": "blk82",
+    "quote": "In July 2025, Apollo Go entered into a multi-year strategic partnership with Uber Technologies, Inc. to deploy thousands of Apollo Go’s fully autonomous vehicles on the Uber platform across multiple international markets, with initial deployments planned for Asia and the Middle Ea",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lyft",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "BIDU",
+  "target": "Lyft",
+  "evidence": [
+   {
+    "section": "blk83",
+    "quote": "In August 2025, Apollo Go entered into a strategic partnership with Lyft, Inc. to deploy fully autonomous vehicles across key European markets through the Lyft platform, starting with Germany and the United Kingdom.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PostBus",
+  "entity_type": "other",
+  "type": "partners",
+  "source": "BIDU",
+  "target": "PostBus",
+  "evidence": [
+   {
+    "section": "blk83",
+    "quote": "In October 2025, Apollo Go established a strategic partnership with PostBus, Switzerland’s leading public transport operator, to launch an  on-demand  autonomous mobility service.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AutoGo",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BIDU",
+  "target": "AutoGo",
+  "evidence": [
+   {
+    "section": "blk82",
+    "quote": "In the Middle East, Apollo Go officially launched fully autonomous ride-hailing services in Abu Dhabi with AutoGo, secured Dubai’s first fully driverless testing permit, and partnered with Uber to bring Apollo Go to the Uber platform in Dubai.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alibaba",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Alibaba",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "Chinese internet companies, such as Alibaba, Tencent, ByteDance, and Xiaomi offer a broad range of online services, including search, feed, cloud services and smart devices, as well as foundation models and a diversified of AI native applications powered by foundation models.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tencent",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Tencent",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "Chinese internet companies, such as Alibaba, Tencent, ByteDance, and Xiaomi offer a broad range of online services, including search, feed, cloud services and smart devices, as well as foundation models and a diversified of AI native applications powered by foundation models.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ByteDance",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "ByteDance",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "Chinese internet companies, such as Alibaba, Tencent, ByteDance, and Xiaomi offer a broad range of online services, including search, feed, cloud services and smart devices, as well as foundation models and a diversified of AI native applications powered by foundation models.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Xiaomi",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Xiaomi",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "Chinese internet companies, such as Alibaba, Tencent, ByteDance, and Xiaomi offer a broad range of online services, including search, feed, cloud services and smart devices, as well as foundation models and a diversified of AI native applications powered by foundation models.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "U.S.-based internet search providers and online marketing platforms, such as Microsoft, Google and Facebook, have a strong global presence, well established brand names, more users and customers and significantly greater financial resources than we do.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alphabet",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Alphabet",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "U.S.-based internet search providers and online marketing platforms, such as Microsoft, Google and Facebook, have a strong global presence, well established brand names, more users and customers and significantly greater financial resources than we do.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Meta Platforms",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Meta Platforms",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "U.S.-based internet search providers and online marketing platforms, such as Microsoft, Google and Facebook, have a strong global presence, well established brand names, more users and customers and significantly greater financial resources than we do.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Alibaba Cloud",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Alibaba Cloud",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "We compete with Alibaba Cloud, Volcano Engine, Huawei and Kingsoft cloud for our cloud offerings.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Volcano Engine",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Volcano Engine",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "We compete with Alibaba Cloud, Volcano Engine, Huawei and Kingsoft cloud for our cloud offerings.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Huawei",
+  "entity_type": "private_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Huawei",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "We compete with Alibaba Cloud, Volcano Engine, Huawei and Kingsoft cloud for our cloud offerings.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Kingsoft Cloud",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Kingsoft Cloud",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "We compete with Alibaba Cloud, Volcano Engine, Huawei and Kingsoft cloud for our cloud offerings.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Tencent Video",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Tencent Video",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "iQIYI faces competition for content sourcing, user traffic and advertising customers from other providers of online entertainment video services in Chinese mainland, primarily including Tencent Video, Youku, Mango TV and Bilibili.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Youku",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Youku",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "iQIYI faces competition for content sourcing, user traffic and advertising customers from other providers of online entertainment video services in Chinese mainland, primarily including Tencent Video, Youku, Mango TV and Bilibili.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mango TV",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Mango TV",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "iQIYI faces competition for content sourcing, user traffic and advertising customers from other providers of online entertainment video services in Chinese mainland, primarily including Tencent Video, Youku, Mango TV and Bilibili.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Bilibili",
+  "entity_type": "public_company",
+  "type": "competes",
+  "source": "BIDU",
+  "target": "Bilibili",
+  "evidence": [
+   {
+    "section": "blk90",
+    "quote": "iQIYI faces competition for content sourcing, user traffic and advertising customers from other providers of online entertainment video services in Chinese mainland, primarily including Tencent Video, Youku, Mango TV and Bilibili.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "YY Live",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "BIDU",
+  "target": "YY Live",
+  "evidence": [
+   {
+    "section": "blk147",
+    "quote": "On February 25, 2025, Baidu (Hong Kong) Limited entered into new agreements with JOYY Inc and completed the acquisition of 100% equity interests in YY Live.",
+    "quote_found": true
+   },
+   {
+    "section": "blk173",
+    "quote": "Management’s assessment of and conclusion on the effectiveness of internal control over financial reporting did not include the internal controls of YY Live that was acquired in 2025, which is included in our 2025 consolidated financial statements and constituted less than 1% of total assets as of December 31, 2025 and less than 3% of revenues for the year then ended.",
+    "quote_found": true
+   },
+   {
+    "section": "blk185",
+    "quote": "As indicated in the accompanying Management’s Annual Report on Internal Control over Financial Reporting, management’s assessment of and conclusion on the effectiveness of internal control over financial reporting did not include the internal controls of YY Live that was acquired in 2025, which is included in the 2025 consolidated financial statements of the Company and constituted less than 1% of total assets as of December 31, 2025 and less than 3% of revenue for the year then ended.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Geely",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "BIDU",
+  "target": "Geely",
+  "evidence": [
+   {
+    "section": "blk158",
+    "quote": "Jidu Auto is a joint venture that we established with Zhejiang Geely Holding Group (Geely).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "BlackRock",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "BlackRock",
+  "target": "BIDU",
+  "evidence": [
+   {
+    "section": "blk156",
+    "quote": "Includes 128,640,168 Class A ordinary shares beneficially owned by BlackRock, Inc., over which BlackRock, Inc. has sole dispositive power, as of December 31, 2023.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 4.7,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Handsome Reward Limited",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Handsome Reward Limited",
+  "target": "BIDU",
+  "evidence": [
+   {
+    "section": "blk156",
+    "quote": "(3) Includes (i) 439,200,000 Class B ordinary shares held by Handsome Reward Limited, a British Virgin Islands company wholly owned and controlled by Mr. Robin Yanhong Li",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 16.5,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Integrity Partners V",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Integrity Partners V",
+  "target": "BIDU",
+  "evidence": [
+   {
+    "section": "blk157",
+    "quote": "To our knowledge, Integrity Partners V, LLC holds 100,320 Class B ordinary shares of our company and was not a record shareholder of any Class A ordinary shares as at January 31, 2026.",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "PAG",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "PAG",
+  "target": "iQIYI",
+  "evidence": [
+   {
+    "section": "blk1",
+    "quote": "Both loans will due on the date which PAG and its affiliates cease to hold any portion of the iQIYI PAG Convertible Notes (Note 15).",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null,
+  "extension": true
+ },
+ {
+  "counterparty": "Trip",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "BIDU",
+  "target": "Trip",
+  "evidence": [
+   {
+    "section": "blk218",
+    "quote": "which mainly arose from the disposal of the Group’s partial interests in Trip",
+    "quote_found": true
+   }
+  ],
+  "document_url": "https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm",
+  "document": "Baidu, Inc. Form 20-F for 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

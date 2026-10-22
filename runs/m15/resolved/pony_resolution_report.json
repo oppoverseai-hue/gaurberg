@@ -1,0 +1,50 @@
+{
+ "ticker": "PONY",
+ "edges_in": 38,
+ "edges_out": 36,
+ "edges_merged": 2,
+ "new_nodes": [
+  "ATBB",
+  "Alipay",
+  "Amap",
+  "BAIC",
+  "Cainiao",
+  "Cyantron",
+  "Cyantron Logistics Technology Co., Ltd.",
+  "GAC",
+  "GTMC",
+  "HongShan",
+  "Meituan",
+  "NavInfo",
+  "Neolix",
+  "OnTime Mobility",
+  "Roads and Transport Authority in Dubai",
+  "SAIC",
+  "SAIC Motor",
+  "SANY",
+  "Sinotrans",
+  "Sunlight Mobility",
+  "Tencent",
+  "Toyota",
+  "Xianli",
+  "Zhuifeng Intelligent"
+ ],
+ "needs_review": [
+  {
+   "raw": "Zhuifeng Intelligent Technology (Guangzhou)",
+   "resolved": "Zhuifeng Intelligent",
+   "how": "merged_new"
+  }
+ ],
+ "direction_conflicts": [
+  {
+   "counterparty": "sinotrans",
+   "type": "invests",
+   "directions": [
+    "Sinotrans>Cyantron Logistics Technology Co., Ltd.",
+    "Sinotrans>PONY"
+   ]
+  }
+ ],
+ "dropped_not_focal": []
+}
