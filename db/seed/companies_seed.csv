@@ -1,26 +1,27 @@
-ticker,name,segment,size_tier,is_hero,note
-UBER,Uber Technologies,consumer,large,true,provisional
-AAPL,Apple,consumer,large,false,provisional
-META,Meta Platforms,consumer,large,false,provisional
-MSFT,Microsoft,business,large,false,provisional
-PLTR,Palantir Technologies,business,large,false,provisional
-NVDA,NVIDIA,infrastructure,large,false,provisional
-TSM,Taiwan Semiconductor Manufacturing,infrastructure,large,false,provisional
-AMD,Advanced Micro Devices,infrastructure,large,false,provisional
-DASH,DoorDash,consumer,mid,false,provisional
-NET,Cloudflare,business,mid,false,provisional
-CRWV,CoreWeave,infrastructure,mid,true,provisional
-CBRS,Cerebras Systems,infrastructure,mid,false,provisional - confirm name/ticker
-NBIS,Nebius Group,infrastructure,mid,false,provisional
-LYFT,Lyft,consumer,small,true,provisional
-APLD,Applied Digital,infrastructure,small,false,provisional
-AMZN,Amazon,consumer,large,false,provisional (set swap Oct 21)
-GOOGL,Alphabet,consumer,large,false,provisional (set swap Oct 21)
-TSLA,Tesla,consumer,large,false,provisional (set swap Oct 21)
-ORCL,Oracle,business,large,false,provisional (set swap Oct 21)
-INTC,Intel,infrastructure,large,false,provisional (set swap Oct 21)
-LCID,Lucid,consumer,small,false,provisional (set swap Oct 21)
-LIME,Lime,consumer,small,false,provisional (set swap Oct 21)
-CART,Instacart,consumer,mid,false,provisional (set swap Oct 21)
-GRAB,Grab,consumer,mid,false,provisional (set swap Oct 21)
-AUR,Aurora,business,small,false,provisional (set swap Oct 21)
+ticker,name,segment,size_tier,is_hero,note,markets,exchange,country
+UBER,Uber Technologies,consumer,large,true,provisional,US,,
+AAPL,Apple,consumer,large,false,provisional,US,,
+META,Meta Platforms,consumer,large,false,provisional,US,,
+MSFT,Microsoft,business,large,false,provisional,US,,
+PLTR,Palantir Technologies,business,large,false,provisional,US,,
+NVDA,NVIDIA,infrastructure,large,false,provisional,US,,
+TSM,Taiwan Semiconductor Manufacturing,infrastructure,large,false,provisional,US,,
+AMD,Advanced Micro Devices,infrastructure,large,false,provisional,US,,
+DASH,DoorDash,consumer,mid,false,provisional,US,,
+NET,Cloudflare,business,mid,false,provisional,US,,
+CRWV,CoreWeave,infrastructure,mid,true,provisional,US,,
+CBRS,Cerebras Systems,infrastructure,mid,false,provisional - confirm name/ticker,US,,
+NBIS,Nebius Group,infrastructure,mid,false,provisional,US,,
+LYFT,Lyft,consumer,small,true,provisional,US,,
+APLD,Applied Digital,infrastructure,small,false,provisional,US,,
+AMZN,Amazon,consumer,large,false,provisional (set swap Oct 21),US,,
+GOOGL,Alphabet,consumer,large,false,provisional (set swap Oct 21),US,,
+TSLA,Tesla,consumer,large,false,provisional (set swap Oct 21),US,,
+ORCL,Oracle,business,large,false,provisional (set swap Oct 21),US,,
+INTC,Intel,infrastructure,large,false,provisional (set swap Oct 21),US,,
+LCID,Lucid,consumer,small,false,provisional (set swap Oct 21),US,,
+LIME,Lime,consumer,small,false,provisional (set swap Oct 21),US,,
+CART,Instacart,consumer,mid,false,provisional (set swap Oct 21),US,,
+GRAB,Grab,consumer,mid,false,provisional (set swap Oct 21),US,,
+AUR,Aurora,business,small,false,provisional (set swap Oct 21),US,,
+VOD,Vodafone Group,,,false,M14 London; segment and size group not set yet,LSE|US,,GB

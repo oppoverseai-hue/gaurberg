@@ -99,13 +99,20 @@ def main():
             review.append({"raw": raw, "resolved": res[0], "how": res[1]})
         return res
 
-    out, merged = {}, 0
+    out, merged, dropped = {}, 0, []
+    focal = by_ticker.get(t.lower(), {}).get("name")
     for e in edges:
         canon, how = resolve(e["counterparty"])
         e = dict(e, counterparty=canon)
+        # An end counts as the focal company when it is the ticker or resolves to the focal company's name (for example a unit under the parent rule).
+        is_focal = {k: e[k] == t or (focal is not None and resolve(e[k])[0] == focal) for k in ("source", "target")}
+        if not any(is_focal.values()):
+            # A deal between two other companies (for example a buyer and a unit the focal company sold) is not a link of the focal company
+            # and would become a self-link. It is dropped and listed in the report for the admin.
+            dropped.append({"source": e["source"], "type": e["type"], "target": e["target"], "quote": (e["evidence"] or [{}])[0].get("quote", "")})
+            continue
         for k in ("source", "target"):
-            if e[k] != t:
-                e[k] = canon
+            e[k] = t if is_focal[k] else canon
         key = (canon.lower(), e["type"], e["source"].lower(), e["target"].lower())
         if key in out:
             merged += 1
@@ -127,9 +134,10 @@ def main():
     outd = pathlib.Path(a.out); outd.mkdir(parents=True, exist_ok=True)
     json.dump(res_edges, open(outd / f"{t.lower()}_extraction.json", "w"), ensure_ascii=False, indent=1)
     rep = {"ticker": t, "edges_in": len(edges), "edges_out": len(res_edges), "edges_merged": merged,
-           "new_nodes": sorted(new.values()), "needs_review": review, "direction_conflicts": conflicts}
+           "new_nodes": sorted(new.values()), "needs_review": review, "direction_conflicts": conflicts, "dropped_not_focal": dropped}
     json.dump(rep, open(outd / f"{t.lower()}_resolution_report.json", "w"), indent=1)
     print(f"{t}: {len(edges)} edges in, {len(res_edges)} out, {merged} merged, {len(new)} new nodes, {len(review)} non-exact matches, {len(conflicts)} direction conflicts")
+    for d in dropped: print("  dropped (not the focal company):", d["source"], d["type"], d["target"])
     for r in review: print("  review:", r)
     for c in conflicts: print("  conflict:", c)
 

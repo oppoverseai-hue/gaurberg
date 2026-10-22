@@ -75,22 +75,12 @@
   "evidence": [
    {
     "section": "p19",
-    "quote": "Vodafone and CK Hutchison agreed to reinvest the funds to its 50:50 joint venture for the purpose of repaying A $1.4 billion of its multicurrency loan facility.",
+    "quote": "The Group owns an equivalent economic interest of 23.7%, via an 11% direct stake in TPG and a 13% indirect stake, held through a 50:50 joint venture with CK Hutchison.",
     "quote_found": true
    },
    {
-    "section": "p74",
-    "quote": "On 5 May 2026, we announced our agreement for the buyout of CK Hutchison Group Telecom Holding Limited from the VodafoneThree joint venture for £4.3 billion (€4.9 billion) via a cancellation of shares.",
-    "quote_found": true
-   },
-   {
-    "section": "p146",
-    "quote": "The Group has concluded that it controls VodafoneThree Holdings Limited (‘VTHL’) through its 51% shareholding and associated rights. In certain very limited circumstances, including the significant financial underperformance of VTHL, CK Hutchison Group Telecom Holdings Limited may acquire additional rights that might result in the Group’s loss of control of VTHL for accounting purposes.",
-    "quote_found": true
-   },
-   {
-    "section": "p20",
-    "quote": "Following completion, VTHL is a subsidiary of the Group, in which the Group owns 51% of the issued share capital and CKHGT indirectly owns 49%, and Vodafone UK and Three UK are wholly owned subsidiaries of VTHL.",
+    "section": "p201",
+    "quote": "On 31 May 2025, the Group and CK Hutchison Group Telecom Holdings Limited (‘CKHGT’), a wholly owned subsidiary of CK Hutchison Holdings Limited (‘Hutchison’), transferred their UK telecommunication businesses, respectively Vodafone Limited (‘Vodafone UK’) and Hutchison 3G UK Holdings Limited (‘Three UK’), into VodafoneThree Holdings Limited (‘VTHL’).",
     "quote_found": true
    },
    {
@@ -109,6 +99,93 @@
   "as_of": "2026-03-31",
   "exposure_pct": null,
   "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Liberty Global",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Liberty Global",
+  "target": "VodafoneZiggo",
+  "evidence": [
+   {
+    "section": "p19",
+    "quote": "In February 2026, we announced that we agreed to sell our interests in VodafoneZiggo to Liberty Global for €1.0 billion in cash and a 10% equity stake in a soon-to-be-formed Benelux entity (Ziggo Group), which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding2.",
+    "quote_found": true
+   },
+   {
+    "section": "p87",
+    "quote": "The Board approved the sale of Vodafone’s interests in VodafoneZiggo to Liberty Global for €1 billion in cash and a 10% shareholding in a future Benelux entity comprising VodafoneZiggo and Telenet.",
+    "quote_found": true
+   },
+   {
+    "section": "p165",
+    "quote": "On 18 February 2026, the Group announced that it has agreed to sell its interests in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc for €1.0 billion in cash and a 10% stake in the new Ziggo Group which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding.",
+    "quote_found": true
+   },
+   {
+    "section": "p244",
+    "quote": "On 18 February 2026, Vodafone Group Plc announced that it agreed to sell its 50% interest in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc (‘Liberty Global’) for €1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity (‘Ziggo Group’), which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding (‘Telenet’).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "VodafoneZiggo",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "VOD",
+  "target": "VodafoneZiggo",
+  "evidence": [
+   {
+    "section": "p19",
+    "quote": "VodafoneZiggo Joint Venture (Netherlands) – 50.0% ownership",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": 50.0,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Safaricom",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "VOD",
+  "target": "Safaricom",
+  "evidence": [
+   {
+    "section": "p19",
+    "quote": "Safaricom Associate (Kenya) – 27.8% ownership",
+    "quote_found": true
+   },
+   {
+    "section": "p87",
+    "quote": "The Board approved Vodacom’s purchase of an additional 15% stake in Safaricom, increasing Vodacom’s shareholding and giving the Group greater strategic and operational alignment across Kenya and the broader region.",
+    "quote_found": true
+   },
+   {
+    "section": "p96",
+    "quote": "In December 2025, the Group announced that the Vodacom Group has agreed to increase its stake in Safaricom to 55%.",
+    "quote_found": true
+   },
+   {
+    "section": "p174",
+    "quote": "Safaricom PLC2 TPG Telecom Limited3 Maziv Proprietary Limited Indus Towers Limited Principal activity Network operator Network operator Network infrastructure Network infrastructure Country of incorporation or registration Kenya Australia South Africa India Percentage shareholding1 2026 39.9 23.7 30.0 – Percentage shareholding1 2025 39.9 25.1 – –",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": 27.8,
+  "exposure_qualifier": "exact"
  },
  {
   "counterparty": "Skaylink",
@@ -135,6 +212,11 @@
    {
     "section": "p96",
     "quote": "In December 2025, the Group completed the acquisition of Skaylink GmbH.",
+    "quote_found": true
+   },
+   {
+    "section": "p202",
+    "quote": "On 17 December 2025, the Group announced it had completed the acquisition of Cloudforce 1 GmbH (‘Skaylink’) for a total cash consideration of €175 million.",
     "quote_found": true
    },
    {
@@ -179,57 +261,22 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Safaricom",
-  "entity_type": "public_company",
+  "counterparty": "Vantage Towers",
+  "entity_type": "private_company",
   "type": "invests",
   "source": "VOD",
-  "target": "Safaricom",
+  "target": "Vantage Towers",
   "evidence": [
    {
-    "section": "p19",
-    "quote": "Safaricom Associate (Kenya) – 27.8% ownership",
-    "quote_found": true
-   },
-   {
-    "section": "p74",
-    "quote": "Vodacom will acquire 15% from the Government of Kenya for a cash consideration of €1.36 billion, and 5% from Vodafone for a cash consideration of €0.45 billion.",
-    "quote_found": true
-   },
-   {
-    "section": "p87",
-    "quote": "The Board approved Vodacom’s purchase of an additional 15% stake in Safaricom, increasing Vodacom’s shareholding and giving the Group greater strategic and operational alignment across Kenya and the broader region.",
-    "quote_found": true
-   },
-   {
-    "section": "p96",
-    "quote": "In December 2025, the Group announced that the Vodacom Group has agreed to increase its stake in Safaricom to 55%.",
-    "quote_found": true
-   },
-   {
-    "section": "p174",
-    "quote": "In December 2025, the Group announced that Vodacom had agreed to acquire a further 20% of the issued share capital in Safaricom PLC.",
-    "quote_found": true
-   },
-   {
-    "section": "p217",
-    "quote": "LR No. 13263 Safaricom House, PO Box 66827, 00800, Nairobi, Kenya ACS Plaza 5th Floor, Lenana Road, Kilimani, Nairobi, Kenya Luxembourg 15 rue Edward Steichen, Luxembourg, 2540, Luxembourg SatCo SCS Boldizsár utca 2, Budapest, 1112, Hungary Vodafone Idea Limited 9th Floor, Williamson House, 4th Ngong Avenue, PO Box 40111 - 00100, Nairobi, Kenya M-PESA Holding Co. Limited Other information 50.00 Ordinary shares VTPC General Partner S.à r.l.",
-    "quote_found": true
-   },
-   {
-    "section": "p241",
-    "quote": "the Share Purchase Agreement dated 3 December 2025 between Vodafone Kenya Limited and the Government of the Republic of Kenya relating to the acquisition of 6,009,814,200 ordinary shares in Safaricom PLC from the Government of the Republic of Kenya by Vodafone Kenya Limited, as amended on 26 February 2026 and 22 April 2026.",
-    "quote_found": true
-   },
-   {
-    "section": "p244",
-    "quote": "Vodacom will acquire 15% from the Government of Kenya (the ‘GOK’) for a cash consideration of €1.36 billion (KES 204 billion), and 5% from Vodafone for a cash consideration of €0.45 billion (KES 68 billion).",
+    "section": "p18",
+    "quote": "Vantage Towers Joint Venture – 44.7% ownership",
     "quote_found": true
    }
   ],
   "document_url": null,
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
-  "exposure_pct": 27.8,
+  "exposure_pct": 44.7,
   "exposure_qualifier": "exact"
  },
  {
@@ -241,17 +288,12 @@
   "evidence": [
    {
     "section": "p19",
-    "quote": "The Group owns an equivalent economic interest of 23.7%, via an 11% direct stake in TPG and a 13% indirect stake, held through a 50:50 joint venture with CK Hutchison.",
+    "quote": "TPG Telecom Limited Associate (Australia) – 23.7% ownership",
     "quote_found": true
    },
    {
     "section": "p174",
     "quote": "The shares issued by TPG resulted in Vodafone’s and Hutchison Telecommunications (Australia) Limited’s respective economic interest decreasing to 23.7%, with the remaining 52.6% listed as free float on the ASX.",
-    "quote_found": true
-   },
-   {
-    "section": "p187",
-    "quote": "Principally comprises Vodafone Group Plc’s guarantee of the Group’s share in a multicurrency loan facility, amounting to US$0.5 billion and €0.6 billion (2025: US$1.0 billion and €0.6 billion), which forms part of its overall joint venture investment in TPG Telecom Ltd.",
     "quote_found": true
    }
   ],
@@ -291,93 +333,6 @@
   "exposure_qualifier": "exact"
  },
  {
-  "counterparty": "Vantage Towers",
-  "entity_type": "private_company",
-  "type": "invests",
-  "source": "VOD",
-  "target": "Vantage Towers",
-  "evidence": [
-   {
-    "section": "p18",
-    "quote": "Vantage Towers Joint Venture – 44.7% ownership",
-    "quote_found": true
-   },
-   {
-    "section": "p219",
-    "quote": "4. Shareholding is indirect through Vantage Towers A.G.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": 44.7,
-  "exposure_qualifier": "exact"
- },
- {
-  "counterparty": "VodafoneZiggo",
-  "entity_type": "private_company",
-  "type": "invests",
-  "source": "VOD",
-  "target": "VodafoneZiggo",
-  "evidence": [
-   {
-    "section": "p19",
-    "quote": "VodafoneZiggo Joint Venture (Netherlands) – 50.0% ownership",
-    "quote_found": true
-   },
-   {
-    "section": "p74",
-    "quote": "On 18 February 2026, we announced our agreement to sell our interests in VodafoneZiggo Group Holding B.V. to Liberty Global plc for €1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity, which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding.",
-    "quote_found": true
-   },
-   {
-    "section": "p172",
-    "quote": "On 18 February 2026, the Group announced that it has agreed to sell its 50% interest in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc and has classified its investment in VodafoneZiggo within Assets held for sale accordingly.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": 50.0,
-  "exposure_qualifier": "exact"
- },
- {
-  "counterparty": "Maziv",
-  "entity_type": "private_company",
-  "type": "invests",
-  "source": "VOD",
-  "target": "Maziv",
-  "evidence": [
-   {
-    "section": "p20",
-    "quote": "This was offset by the acquisition of a 30% interest for €0.6 billion in Maziv Proprietary Limited by Vodacom.",
-    "quote_found": true
-   },
-   {
-    "section": "p22",
-    "quote": "€410 million in relation to the acquisition of a 30% interest in Maziv Proprietary Limited",
-    "quote_found": true
-   },
-   {
-    "section": "p96",
-    "quote": "In December 2025, Vodacom completed the acquisition of a stake in Maziv.",
-    "quote_found": true
-   },
-   {
-    "section": "p175",
-    "quote": "On 2 December, Vodacom (Pty) Limited (‘Vodacom’) acquired a 30% interest in Maziv Proprietary Limited (‘Maziv’) for €620 million, of which €410 million was settled in cash and included in Purchase of interests in associates and joint ventures in the Consolidated statement of cashflows.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": 30,
-  "exposure_qualifier": "exact"
- },
- {
   "counterparty": "Community Fibre",
   "entity_type": "private_company",
   "type": "partners",
@@ -387,25 +342,6 @@
    {
     "section": "p16",
     "quote": "In June 2025, we announced a wholesale strategic agreement with Community Fibre in London.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "OXG",
-  "entity_type": "private_company",
-  "type": "partners",
-  "source": "VOD",
-  "target": "OXG",
-  "evidence": [
-   {
-    "section": "p16",
-    "quote": "Our OXG joint venture’s buildout is continuing to progress with almost 600,000 homes passed and we are now able to market to 1.5 million homes.",
     "quote_found": true
    }
   ],
@@ -443,7 +379,41 @@
   "evidence": [
    {
     "section": "p15",
-    "quote": "Mobile service revenue grew 3.0% (Q3: 2.8%, Q4: 2.7%), supported by higher wholesale revenue, as we completed the migration of 1&1 customers onto our network, partially offset by continued ARPU pressure, and a lower customer base.",
+    "quote": "We now have more than 12 million 1&1 customers using our nationwide 5G network and revenue contribution reached full run-rate in Q4.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Zegona",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Zegona",
+  "target": "Vodafone Spain",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "settlement in the current year of redeemable preference shares provided by Zegona Communications Plc as part of the disposal of Vodafone Spain",
+    "quote_found": true
+   },
+   {
+    "section": "p164",
+    "quote": "On 31 October 2023, the Group announced that it had entered into binding agreements with Zegona Communications plc (’Zegona’) in relation to the disposal of 100% of Vodafone Holdings Europe, S.L.U. (‘Vodafone Spain’).",
+    "quote_found": true
+   },
+   {
+    "section": "p194",
+    "quote": "Following the completion of the sale of Vodafone Spain on 31 May 2024 (See note 7 ‘Discontinued operations and assets held for sale’), the Group received the non-cash consideration component in the form of €900 million Redeemable Preference Shares (‘RPS’) issued by EJLSHM Funding Ltd (‘EJLSHM’). The RPS were redeemed in January 2026. The Zegona shares were recorded at fair value through profit and loss and had a fair value of €937 million on 31 March 2025.",
+    "quote_found": true
+   },
+   {
+    "section": "p203",
+    "quote": "In the comparative year, on 31 May 2024, the Group announced it had completed the sale of Vodafone Holdings Europe, S.L.U. (‘Vodafone Spain’) to Zegona Communications plc (‘Zegona’) for €4,069 million in cash (subject to closing accounts adjustments, which were finalised during the year ended 31 March 2026) and up to €900 million of non-cash consideration in the form of redeemable preference shares, which were settled during the year ended 31 March 2026.",
     "quote_found": true
    }
   ],
@@ -456,9 +426,9 @@
  {
   "counterparty": "Safaricom",
   "entity_type": "public_company",
-  "type": "sells_to",
-  "source": "VOD",
-  "target": "Safaricom",
+  "type": "acquires",
+  "source": "Safaricom",
+  "target": "M-Pesa Holding Company Limited",
   "evidence": [
    {
     "section": "p23",
@@ -473,62 +443,23 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Swisscom",
-  "entity_type": "public_company",
-  "type": "sells_to",
+  "counterparty": "Maziv",
+  "entity_type": "private_company",
+  "type": "invests",
   "source": "VOD",
-  "target": "Swisscom",
+  "target": "Maziv",
   "evidence": [
    {
-    "section": "p21",
-    "quote": "offset by payments from Swisscom and Zegona in respect of the future use of the Vodafone brand of €491 million",
-    "quote_found": true
-   },
-   {
-    "section": "p196",
-    "quote": "Vodafone Italia S.p.A’s (‘Vodafone Italy’s’) defined contribution and defined benefit schemes have been transferred to Swisscom AG (see note 27 ‘Acquisitions and disposals’).",
-    "quote_found": true
-   },
-   {
-    "section": "p203",
-    "quote": "In the comparative year, on 31 December 2024, the Group announced it had completed the sale of Vodafone Italia S.p.A. (‘Vodafone Italy’) to Swisscom AG for €7,885 million in cash (subject to closing accounts adjustments, which were finalised during the year ended 31 March 2026).",
-    "quote_found": true
-   },
-   {
-    "section": "p239",
-    "quote": "In May 2025, following a comprehensive capital allocation review and evaluation of the investment opportunities across the Group’s strategic footprint, we announced the intention to commence a share buyback programme following the sale of Vodafone Italy to Swisscom AG.",
+    "section": "p22",
+    "quote": "€410 million in relation to the acquisition of a 30% interest in Maziv Proprietary Limited",
     "quote_found": true
    }
   ],
   "document_url": null,
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Zegona",
-  "entity_type": "public_company",
-  "type": "sells_to",
-  "source": "VOD",
-  "target": "Zegona",
-  "evidence": [
-   {
-    "section": "p21",
-    "quote": "offset by payments from Swisscom and Zegona in respect of the future use of the Vodafone brand of €491 million",
-    "quote_found": true
-   },
-   {
-    "section": "p203",
-    "quote": "In the comparative year, on 31 May 2024, the Group announced it had completed the sale of Vodafone Holdings Europe, S.L.U. (‘Vodafone Spain’) to Zegona Communications plc (‘Zegona’) for €4,069 million in cash (subject to closing accounts adjustments, which were finalised during the year ended 31 March 2026) and up to €900 million of non-cash consideration in the form of redeemable preference shares, which were settled during the year ended 31 March 2026.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
+  "exposure_pct": 30,
+  "exposure_qualifier": "exact"
  },
  {
   "counterparty": "Telenor",
@@ -569,25 +500,6 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "WWF",
-  "entity_type": "other",
-  "type": "partners",
-  "source": "VOD",
-  "target": "WWF",
-  "evidence": [
-   {
-    "section": "p34",
-    "quote": "Since 2022, we have partnered with the World Wide Fund for Nature (‘WWF’) to collect 1 million used mobile phone devices for reuse, recycling or donation.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
   "counterparty": "Recommerce",
   "entity_type": "private_company",
   "type": "partners",
@@ -607,15 +519,15 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "The Economist",
+  "counterparty": "OXG",
   "entity_type": "private_company",
   "type": "partners",
   "source": "VOD",
-  "target": "The Economist",
+  "target": "OXG",
   "evidence": [
    {
-    "section": "p34",
-    "quote": "raised awareness among enterprise customers by hosting a series of roundtables on sustainability topics in partnership with the Economist.",
+    "section": "p35",
+    "quote": "Through strategic investments in the latest technologies such as our OXG joint venture in Germany and wholesale partnerships, our Gigabit-capable broadband now reaches 66 million European homes, an increase of 6 million in FY26.",
     "quote_found": true
    }
   ],
@@ -657,84 +569,8 @@
     "quote_found": true
    },
    {
-    "section": "p96",
-    "quote": "In May 2025, Vodafone UK completed its merger with Three UK.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "WageIndicator Foundation",
-  "entity_type": "other",
-  "type": "partners",
-  "source": "VOD",
-  "target": "WageIndicator Foundation",
-  "evidence": [
-   {
-    "section": "p41",
-    "quote": "One of these principles is ensuring our people have a good standard of living and for this we partner with the independent organisation, WageIndicator Foundation, to assess how our pay compares to the living wage in the relevant country, and in the UK we are recognised as an Accredited Living Wage employer by the Living Wage Foundation.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Stonewall",
-  "entity_type": "other",
-  "type": "partners",
-  "source": "VOD",
-  "target": "Stonewall",
-  "evidence": [
-   {
-    "section": "p42",
-    "quote": "This year we partnered with Stonewall to deliver a leadership development programme for 31 LGBT+ employees across 6 different markets.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Radius",
-  "entity_type": "private_company",
-  "type": "partners",
-  "source": "VOD",
-  "target": "Radius",
-  "evidence": [
-   {
-    "section": "p41",
-    "quote": "We offered development workshops to all our employee networks via our partner Radius, providing network leads the ability to track their progress, identify strengths and areas for improvement.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Joint Alliance for CSR",
-  "entity_type": "other",
-  "type": "partners",
-  "source": "VOD",
-  "target": "Joint Alliance for CSR",
-  "evidence": [
-   {
-    "section": "p50",
-    "quote": "Through the Joint Alliance for CSR (‘JAC’) we collaborate with other telecommunications operators to address ESG risks as well as improve standards in the technology supply chain.",
+    "section": "p100",
+    "quote": "Following approval from the UK Competition and Markets Authority (CMA) for Vodafone UK’s merger with Three UK and launching the VodafoneThree Joint Venture in June 2025, we reviewed our five-year investment strategies, execution plans, and necessary governance required to integrate the network and IT estates of both entities.",
     "quote_found": true
    }
   ],
@@ -764,35 +600,15 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Ernst & Young",
+  "counterparty": "CK Hutchison Group Telecom Holding",
   "entity_type": "private_company",
-  "type": "supplies",
-  "source": "Ernst & Young",
-  "target": "VOD",
+  "type": "acquires",
+  "source": "VOD",
+  "target": "CK Hutchison Group Telecom Holding",
   "evidence": [
    {
-    "section": "p60",
-    "quote": "Ernst & Young LLP has provided independent limited assurance over selected data within our ESG Addendum and this report, using the assurance standards ISAE (UK) 3000 and ISAE (UK) 3410 for selected ESG data.",
-    "quote_found": true
-   },
-   {
-    "section": "p99",
-    "quote": "The last external audit tender took place in 2019, which resulted in the appointment of Ernst & Young LLP (‘EY’) for the financial year ended 31 March 2020.",
-    "quote_found": true
-   },
-   {
-    "section": "p138",
-    "quote": "Following the recommendation from the Audit and Risk Committee, we were appointed by the Parent company on 23 July 2019 to audit the financial statements for the year ending 31 March 2020 and subsequent financial periods.",
-    "quote_found": true
-   },
-   {
-    "section": "p153",
-    "quote": "The total remuneration of the Group’s auditor, Ernst & Young LLP and other member firms of Ernst & Young Global Limited, for services provided to the Group during the year ended 31 March 2026 is analysed below.",
-    "quote_found": true
-   },
-   {
-    "section": "p227",
-    "quote": "The total remuneration of the Company’s auditor, Ernst & Young LLP and other member firms of Ernst & Young Global Limited, during the year ended 31 March 2026 was €13 million (2025: €10 million).",
+    "section": "p74",
+    "quote": "On 5 May 2026, we announced our agreement for the buyout of CK Hutchison Group Telecom Holding Limited from the VodafoneThree joint venture for £4.3 billion (€4.9 billion) via a cancellation of shares.",
     "quote_found": true
    }
   ],
@@ -813,6 +629,11 @@
     "section": "p74",
     "quote": "On 1 October 2025, we completed the acquisition of assets of Telekom Romania Mobile Communications S.A for €30 million, strengthening our position in the market.",
     "quote_found": true
+   },
+   {
+    "section": "p244",
+    "quote": "Vodafone acquired TKRM and its post-paid customer base for €30 million (before standard closing adjustments), while Digi has agreed to acquire its pre-paid customer business.",
+    "quote_found": true
    }
   ],
   "document_url": null,
@@ -824,24 +645,14 @@
  {
   "counterparty": "Liberty Global",
   "entity_type": "public_company",
-  "type": "sells_to",
-  "source": "VOD",
-  "target": "Liberty Global",
+  "type": "acquires",
+  "source": "Liberty Global",
+  "target": "VodafoneZiggo Group Holding B.V.",
   "evidence": [
    {
     "section": "p74",
     "quote": "On 18 February 2026, we announced our agreement to sell our interests in VodafoneZiggo Group Holding B.V. to Liberty Global plc for €1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity, which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding.",
     "quote_found": true
-   },
-   {
-    "section": "p241",
-    "quote": "the Sale and Purchase Agreement dated 18 February 2026, between, inter alia, Vodafone Europe B.V. and Liberty Global Holdings Limited relating to 50 per cent. Of the issued share capital of VodafoneZiggo Group Holding B.V.",
-    "quote_found": true
-   },
-   {
-    "section": "p244",
-    "quote": "On 18 February 2026, Vodafone Group Plc announced that it agreed to sell its 50% interest in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc (‘Liberty Global’) for €1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity (‘Ziggo Group’), which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding (‘Telenet’).",
-    "quote_found": true
    }
   ],
   "document_url": null,
@@ -851,68 +662,20 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "VodafoneThree",
-  "entity_type": "private_company",
+  "counterparty": "CK Hutchison",
+  "entity_type": "public_company",
   "type": "invests",
-  "source": "VOD",
+  "source": "CK Hutchison",
   "target": "VodafoneThree",
   "evidence": [
    {
-    "section": "p74",
-    "quote": "Following completion, Vodafone will become the sole owner of VodafoneThree, the UK’s largest mobile operator and one of the fastest growing broadband providers.",
+    "section": "p87",
+    "quote": "The Board approved the buyout of CK Hutchison Group Telecom Holding Limited from the VodafoneThree joint venture for £4.3 billion (€4.9 billion) via a cancellation of shares.",
     "quote_found": true
    },
    {
-    "section": "p146",
-    "quote": "The Group has concluded that it controls VodafoneThree Holdings Limited (‘VTHL’) through its 51% shareholding and associated rights.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Egon Zehnder",
-  "entity_type": "private_company",
-  "type": "supplies",
-  "source": "Egon Zehnder",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p74",
-    "quote": "Concluding an extensive and rigorous international recruitment process, supported by Egon Zehnder and MWM, Pilar López was formally appointed as Chief Financial Officer and Executive Director to the Board on 1 December 2025, following Luka Mucic’s departure on 30 November 2025.",
-    "quote_found": true
-   },
-   {
-    "section": "p91",
-    "quote": "The search was supported by Egon Zehnder and MWM, both independent external search firms.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "MWM",
-  "entity_type": "private_company",
-  "type": "supplies",
-  "source": "MWM",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p74",
-    "quote": "Concluding an extensive and rigorous international recruitment process, supported by Egon Zehnder and MWM, Pilar López was formally appointed as Chief Financial Officer and Executive Director to the Board on 1 December 2025, following Luka Mucic’s departure on 30 November 2025.",
-    "quote_found": true
-   },
-   {
-    "section": "p91",
-    "quote": "The search was supported by Egon Zehnder and MWM, both independent external search firms.",
+    "section": "p220",
+    "quote": "On 5 May 2026, the Group announced that it had reached an agreement for the buyout of CK Hutchison Group Telecom Holding Limited’s (‘CKHGT’) 49% interest in VodafoneThree Holdings Limited (‘VodafoneThree’) for £4.3 billion (€4.9 billion) cash, implemented through a cancellation of CKHGT’s shares.",
     "quote_found": true
    }
   ],
@@ -930,56 +693,8 @@
   "target": "CK Hutchison",
   "evidence": [
    {
-    "section": "p87",
-    "quote": "The Board approved the buyout of CK Hutchison Group Telecom Holding Limited from the VodafoneThree joint venture for £4.3 billion (€4.9 billion) via a cancellation of shares.",
-    "quote_found": true
-   },
-   {
-    "section": "p201",
-    "quote": "As part of the transaction, Vodafone and Hutchison agreed a framework to enable Vodafone to acquire Hutchison’s 49% shareholding in VTHL through a Vodafone call or a Hutchison put option which may be exercised at fair market value, subject to customary third party approvals and consents, and settled in cash or new Vodafone Group Plc shares, at the Group’s option, subject to certain conditions.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Korn Ferry",
-  "entity_type": "public_company",
-  "type": "supplies",
-  "source": "Korn Ferry",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p91",
-    "quote": "Independent assessments of both internal and external candidates were also undertaken by Korn Ferry.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "CK Hutchison",
-  "entity_type": "public_company",
-  "type": "invests",
-  "source": "CK Hutchison",
-  "target": "VOD",
-  "evidence": [
-   {
     "section": "p97",
-    "quote": "the impact of the agreement for the buyout of CK Hutchison Group Telecom Holding Limited’s 49% interest in VodafoneThree Holdings Limited (‘VodafoneThree’) and Vodacom’s acquisition in Safaricom;",
-    "quote_found": true
-   },
-   {
-    "section": "p244",
-    "quote": "The combined business, named VodafoneThree, is 51% owned by Vodafone and 49% by CKHGT.",
+    "quote": "The assessment of the capacity of the Group to remain viable after consideration of future cash flows, including the impact of the agreement for the buyout of CK Hutchison Group Telecom Holding Limited’s 49% interest in VodafoneThree Holdings Limited (‘VodafoneThree’) and Vodacom’s acquisition in Safaricom;",
     "quote_found": true
    }
   ],
@@ -990,8 +705,27 @@
   "exposure_qualifier": "exact"
  },
  {
+  "counterparty": "Maziv",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "VOD",
+  "target": "Maziv",
+  "evidence": [
+   {
+    "section": "p96",
+    "quote": "In December 2025, Vodacom completed the acquisition of a stake in Maziv.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
   "counterparty": "e&",
-  "entity_type": "other",
+  "entity_type": "public_company",
   "type": "partners",
   "source": "VOD",
   "target": "e&",
@@ -999,49 +733,6 @@
    {
     "section": "p117",
     "quote": "As per the terms of our strategic relationship agreement with e&, Hatem Dowidar does not receive a fee for this role.",
-    "quote_found": true
-   },
-   {
-    "section": "p241",
-    "quote": "the Relationship Agreement entered into with Emirates Telecommunications Group Company PJSC (‘e&’) on 11 May 2023, relating to (i) the proposed appointment of up to two individuals nominated by e& as non-executive directors to the Board of Vodafone Group Plc and (ii) the ongoing relationship between e& and the Company.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "WTW",
-  "entity_type": "other",
-  "type": "supplies",
-  "source": "WTW",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p121",
-    "quote": "WTW has confirmed that it adhered to that Code of Conduct throughout the year for all remuneration services provided to Vodafone and therefore the Committee is satisfied that it is independent and objective.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "J.P. Morgan",
-  "entity_type": "other",
-  "type": "supplies",
-  "source": "J.P. Morgan",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p124",
-    "quote": "The ADSs are evidenced by American Depositary Receipts (‘ADRs’) issued by J.P. Morgan, as depositary, under a deposit agreement, dated 15 February 2022 between the Company, the depositary and the holders from time to time of ADRs issued thereunder.",
     "quote_found": true
    }
   ],
@@ -1114,79 +805,32 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Zegona",
-  "entity_type": "public_company",
-  "type": "acquires",
-  "source": "Zegona",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p164",
-    "quote": "On 31 October 2023, the Group announced that it had entered into binding agreements with Zegona Communications plc (’Zegona’) in relation to the disposal of 100% of Vodafone Holdings Europe, S.L.U. (‘Vodafone Spain’).",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": 100,
-  "exposure_qualifier": "exact"
- },
- {
   "counterparty": "Swisscom",
   "entity_type": "public_company",
   "type": "acquires",
   "source": "Swisscom",
-  "target": "VOD",
+  "target": "Vodafone Italy",
   "evidence": [
    {
     "section": "p164",
     "quote": "On 15 March 2024, the Group announced that it had entered into a binding agreement with Swisscom AG (‘Swisscom’) in relation to the disposal of 100% of Vodafone Italia S.p.A. (’Vodafone Italy’).",
     "quote_found": true
+   },
+   {
+    "section": "p203",
+    "quote": "In the comparative year, on 31 December 2024, the Group announced it had completed the sale of Vodafone Italia S.p.A. (‘Vodafone Italy’) to Swisscom AG for €7,885 million in cash (subject to closing accounts adjustments, which were finalised during the year ended 31 March 2026).",
+    "quote_found": true
+   },
+   {
+    "section": "p239",
+    "quote": "Between (i) 20 May 2025 and 23 July 2025, (ii) 24 July 2025 and 10 November 2025, (iii) 11 November 2025 and 4 February 2026 and (iv) 5 February 2026 and 11 May 2026, Vodafone undertook non-discretionary share buyback programmes with Citigroup Global Markets Limited, Goldman Sachs International, Merrill Lynch International and Goldman Sachs International respectively following the sale of Vodafone Italy to Swisscom AG.",
+    "quote_found": true
    }
   ],
   "document_url": null,
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
   "exposure_pct": 100,
-  "exposure_qualifier": "exact"
- },
- {
-  "counterparty": "Liberty Global",
-  "entity_type": "public_company",
-  "type": "acquires",
-  "source": "Liberty Global",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p165",
-    "quote": "On 18 February 2026, the Group announced that it has agreed to sell its interests in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc for €1.0 billion in cash and a 10% stake in the new Ziggo Group which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Ziggo Group",
-  "entity_type": "private_company",
-  "type": "invests",
-  "source": "VOD",
-  "target": "Ziggo Group",
-  "evidence": [
-   {
-    "section": "p165",
-    "quote": "On 18 February 2026, the Group announced that it has agreed to sell its interests in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc for €1.0 billion in cash and a 10% stake in the new Ziggo Group which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": 10,
   "exposure_qualifier": "exact"
  },
  {
@@ -1209,30 +853,11 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "OXG Glasfaser Beteiligungs",
+  "counterparty": "Oak Holdings",
   "entity_type": "private_company",
   "type": "invests",
   "source": "VOD",
-  "target": "OXG Glasfaser Beteiligungs",
-  "evidence": [
-   {
-    "section": "p172",
-    "quote": "In March 2023, the Group entered into an agreement with Altice Luxembourg S.A. to create a joint venture, OXG Glasfaser Beteiligungs GmbH (‘OXG’), with 50.0% shareholding held by each shareholder.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": 50,
-  "exposure_qualifier": "exact"
- },
- {
-  "counterparty": "Oak Holdings 1 GmbH",
-  "entity_type": "private_company",
-  "type": "invests",
-  "source": "VOD",
-  "target": "Oak Holdings 1 GmbH",
+  "target": "Oak Holdings",
   "evidence": [
    {
     "section": "p172",
@@ -1245,6 +870,68 @@
   "as_of": "2026-03-31",
   "exposure_pct": 50,
   "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Hutchison Telecommunications (Australia)",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "VOD",
+  "target": "Hutchison Telecommunications (Australia)",
+  "evidence": [
+   {
+    "section": "p174",
+    "quote": "Following receipt of the cash return described above, the Group contributed €188 million into the holding structure to reduce borrowings in that structure, with Hutchison Telecommunications (Australia) Limited contributing an equal amount.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Maziv",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Vodacom",
+  "target": "Maziv",
+  "evidence": [
+   {
+    "section": "p175",
+    "quote": "On 2 December, Vodacom (Pty) Limited (‘Vodacom’) acquired a 30% interest in Maziv Proprietary Limited (‘Maziv’) for €620 million, of which €410 million was settled in cash and included in Purchase of interests in associates and joint ventures in the Consolidated statement of cashflows.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": 30,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Zegona",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "VOD",
+  "target": "Zegona",
+  "evidence": [
+   {
+    "section": "p177",
+    "quote": "In the prior year, equity securities with a level 3 classification basis included an investment in Zegona shares (2025: €937 million).",
+    "quote_found": true
+   },
+   {
+    "section": "p203",
+    "quote": "The non-cash consideration comprises an investment in Zegona shares with a fair value of €807 million at the transaction date.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
  },
  {
   "counterparty": "Vantage Towers",
@@ -1285,15 +972,15 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Cloudforce 1 GmbH (Skaylink)",
-  "entity_type": "private_company",
-  "type": "acquires",
+  "counterparty": "TPG Telecom",
+  "entity_type": "public_company",
+  "type": "partners",
   "source": "VOD",
-  "target": "Cloudforce 1 GmbH (Skaylink)",
+  "target": "TPG Telecom",
   "evidence": [
    {
-    "section": "p202",
-    "quote": "On 17 December 2025, the Group announced it had completed the acquisition of Cloudforce 1 GmbH (‘Skaylink’) for a total cash consideration of €175 million.",
+    "section": "p187",
+    "quote": "Principally comprises Vodafone Group Plc’s guarantee of the Group’s share in a multicurrency loan facility, amounting to US$0.5 billion and €0.6 billion (2025: US$1.0 billion and €0.6 billion), which forms part of its overall joint venture investment in TPG Telecom Ltd.",
     "quote_found": true
    }
   ],
@@ -1304,11 +991,49 @@
   "exposure_qualifier": null
  },
  {
+  "counterparty": "Swisscom",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Swisscom",
+  "target": "Vodafone Italia",
+  "evidence": [
+   {
+    "section": "p196",
+    "quote": "Vodafone Italia S.p.A’s (‘Vodafone Italy’s’) defined contribution and defined benefit schemes have been transferred to Swisscom AG (see note 27 ‘Acquisitions and disposals’).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "CK Hutchison",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "CK Hutchison",
+  "target": "VodafoneThree Holdings Limited",
+  "evidence": [
+   {
+    "section": "p20",
+    "quote": "Following completion, VTHL is a subsidiary of the Group, in which the Group owns 51% of the issued share capital and CKHGT indirectly owns 49%, and Vodafone UK and Three UK are wholly owned subsidiaries of VTHL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": 49,
+  "exposure_qualifier": "exact"
+ },
+ {
   "counterparty": "Accenture",
   "entity_type": "public_company",
   "type": "invests",
   "source": "Accenture",
-  "target": "VOD",
+  "target": "Vodafone Shared Operations Limited",
   "evidence": [
    {
     "section": "p202",
@@ -1323,87 +1048,11 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Zegona",
-  "entity_type": "public_company",
-  "type": "invests",
-  "source": "VOD",
-  "target": "Zegona",
-  "evidence": [
-   {
-    "section": "p203",
-    "quote": "The non-cash consideration comprises an investment in Zegona shares with a fair value of €807 million at the transaction date.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Hutchison",
-  "entity_type": "public_company",
-  "type": "partners",
-  "source": "VOD",
-  "target": "Hutchison",
-  "evidence": [
-   {
-    "section": "p204",
-    "quote": "The Group will pay Hutchison for any losses that it incurs, via its 49% equity interest in VodafoneThree, both as a result of any payments to the Vodafone UK plan and of any amounts paid to the THUS Plc Group Scheme in respect of service prior to 31 May 2025.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "CK Hutchison Group Telecom Holding",
-  "entity_type": "public_company",
-  "type": "acquires",
-  "source": "VOD",
-  "target": "CK Hutchison Group Telecom Holding",
-  "evidence": [
-   {
-    "section": "p220",
-    "quote": "On 5 May 2026, the Group announced that it had reached an agreement for the buyout of CK Hutchison Group Telecom Holding Limited’s (‘CKHGT’) 49% interest in VodafoneThree Holdings Limited (‘VodafoneThree’) for £4.3 billion (€4.9 billion) cash, implemented through a cancellation of CKHGT’s shares.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": 49.0,
-  "exposure_qualifier": "exact"
- },
- {
-  "counterparty": "Iliad",
-  "entity_type": "public_company",
-  "type": "competes",
-  "source": "VOD",
-  "target": "Iliad",
-  "evidence": [
-   {
-    "section": "p206",
-    "quote": "In July 2019, Iliad filed a claim for €500 million against Vodafone Italy in the Civil Court of Milan which, following the divestment of Vodafone Italy was subject to an indemnity provided by the Group to Swisscom.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
   "counterparty": "Accenture",
   "entity_type": "public_company",
-  "type": "partners",
-  "source": "VOD",
-  "target": "Accenture",
+  "type": "invests",
+  "source": "Accenture",
+  "target": "Vodafone Shared Operations",
   "evidence": [
    {
     "section": "p219",
@@ -1414,8 +1063,27 @@
   "document_url": null,
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
-  "exposure_pct": 20.0,
-  "exposure_qualifier": "exact"
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Oak Holdings",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Oak Holdings",
+  "target": "VOD",
+  "evidence": [
+   {
+    "section": "p207",
+    "quote": "Amounts are primarily in relation to leases of tower space from Oak Holdings 1 GmbH.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Vodafone Group Plc Annual Report 2026",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
  },
  {
   "counterparty": "e&",
@@ -1434,7 +1102,7 @@
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
   "exposure_pct": 17.005026,
-  "exposure_qualifier": "approximate"
+  "exposure_qualifier": "exact"
  },
  {
   "counterparty": "BlackRock",
@@ -1453,11 +1121,11 @@
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
   "exposure_pct": 6.5,
-  "exposure_qualifier": "approximate"
+  "exposure_qualifier": "exact"
  },
  {
   "counterparty": "Norges Bank",
-  "entity_type": "other",
+  "entity_type": "government",
   "type": "invests",
   "source": "Norges Bank",
   "target": "VOD",
@@ -1472,14 +1140,14 @@
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
   "exposure_pct": 3.0004,
-  "exposure_qualifier": "approximate"
+  "exposure_qualifier": "exact"
  },
  {
-  "counterparty": "Government of Kenya",
-  "entity_type": "government",
-  "type": "sells_to",
-  "source": "Government of Kenya",
-  "target": "VOD",
+  "counterparty": "Safaricom",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "VOD",
+  "target": "Safaricom",
   "evidence": [
    {
     "section": "p241",
@@ -1513,63 +1181,6 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Citigroup Global Markets",
-  "entity_type": "public_company",
-  "type": "supplies",
-  "source": "Citigroup Global Markets",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p239",
-    "quote": "Between (i) 20 May 2025 and 23 July 2025, (ii) 24 July 2025 and 10 November 2025, (iii) 11 November 2025 and 4 February 2026 and (iv) 5 February 2026 and 11 May 2026, Vodafone undertook non-discretionary share buyback programmes with Citigroup Global Markets Limited, Goldman Sachs International, Merrill Lynch International and Goldman Sachs International respectively following the sale of Vodafone Italy to Swisscom AG.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Goldman Sachs",
-  "entity_type": "public_company",
-  "type": "supplies",
-  "source": "Goldman Sachs",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p239",
-    "quote": "Between (i) 20 May 2025 and 23 July 2025, (ii) 24 July 2025 and 10 November 2025, (iii) 11 November 2025 and 4 February 2026 and (iv) 5 February 2026 and 11 May 2026, Vodafone undertook non-discretionary share buyback programmes with Citigroup Global Markets Limited, Goldman Sachs International, Merrill Lynch International and Goldman Sachs International respectively following the sale of Vodafone Italy to Swisscom AG.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Merrill Lynch",
-  "entity_type": "public_company",
-  "type": "supplies",
-  "source": "Merrill Lynch",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p239",
-    "quote": "Between (i) 20 May 2025 and 23 July 2025, (ii) 24 July 2025 and 10 November 2025, (iii) 11 November 2025 and 4 February 2026 and (iv) 5 February 2026 and 11 May 2026, Vodafone undertook non-discretionary share buyback programmes with Citigroup Global Markets Limited, Goldman Sachs International, Merrill Lynch International and Goldman Sachs International respectively following the sale of Vodafone Italy to Swisscom AG.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
   "counterparty": "Digi Romania",
   "entity_type": "public_company",
   "type": "partners",
@@ -1589,61 +1200,42 @@
   "exposure_qualifier": null
  },
  {
-  "counterparty": "Hellenic Telecommunications Organization",
+  "counterparty": "Safaricom",
   "entity_type": "public_company",
-  "type": "acquires",
-  "source": "VOD",
-  "target": "Hellenic Telecommunications Organization",
+  "type": "invests",
+  "source": "Vodacom",
+  "target": "Safaricom",
   "evidence": [
    {
     "section": "p244",
-    "quote": "Vodafone acquired TKRM and its post-paid customer base for €30 million (before standard closing adjustments), while Digi has agreed to acquire its pre-paid customer business.",
+    "quote": "Vodacom will acquire 15% from the Government of Kenya (the ‘GOK’) for a cash consideration of €1.36 billion (KES 204 billion), and 5% from Vodafone for a cash consideration of €0.45 billion (KES 68 billion).",
     "quote_found": true
    }
   ],
   "document_url": null,
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
+  "exposure_pct": 55,
+  "exposure_qualifier": "exact"
  },
  {
-  "counterparty": "Waterland",
-  "entity_type": "private_company",
-  "type": "sells_to",
-  "source": "Waterland",
-  "target": "VOD",
-  "evidence": [
-   {
-    "section": "p244",
-    "quote": "On 30 October 2025, Vodafone Group announced that it had entered into a binding agreement to acquire 100% of Skaylink GmbH (‘Skaylink’) primarily from funds managed by Waterland for a total consideration of €175m.",
-    "quote_found": true
-   }
-  ],
-  "document_url": null,
-  "document": "Vodafone Group Plc Annual Report 2026",
-  "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
- },
- {
-  "counterparty": "Vodafone Idea",
+  "counterparty": "Liberty Global",
   "entity_type": "public_company",
-  "type": "partners",
+  "type": "invests",
   "source": "VOD",
-  "target": "Vodafone Idea",
+  "target": "Liberty Global",
   "evidence": [
    {
     "section": "p244",
-    "quote": "On 31 December 2025, Vodafone Group Plc announced that it has reached an agreement with Vodafone Idea Limited (‘Vi’) in relation to the final amount payable under the Contingent Liability Adjustment Mechanism (‘CLAM’), which was due to expire on 31 December 2025, as well as an agreement for Vi to settle outstanding Vodafone Group service charges.",
+    "quote": "On 18 February 2026, Vodafone Group Plc announced that it agreed to sell its 50% interest in VodafoneZiggo Group Holding B.V. (‘VodafoneZiggo’) to Liberty Global plc (‘Liberty Global’) for €1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity (‘Ziggo Group’), which will own 100% of both VodafoneZiggo and Liberty Global’s Belgian subsidiary, Telenet Group Holding (‘Telenet’).",
     "quote_found": true
    }
   ],
   "document_url": null,
   "document": "Vodafone Group Plc Annual Report 2026",
   "as_of": "2026-03-31",
-  "exposure_pct": null,
-  "exposure_qualifier": null
+  "exposure_pct": 10,
+  "exposure_qualifier": "exact"
  },
  {
   "counterparty": "Virgin Media O2",

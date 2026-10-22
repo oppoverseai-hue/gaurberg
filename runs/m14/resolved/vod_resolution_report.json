@@ -1,0 +1,151 @@
+{
+ "ticker": "VOD",
+ "edges_in": 58,
+ "edges_out": 45,
+ "edges_merged": 3,
+ "new_nodes": [
+  "1&1",
+  "AST SpaceMobile",
+  "Accenture",
+  "Altice Luxembourg",
+  "BlackRock",
+  "CK Hutchison",
+  "Community Fibre",
+  "Digi Romania",
+  "Hutchison Telecommunications (Australia)",
+  "IBM",
+  "Idea Group",
+  "Indus Towers",
+  "Liberty Global",
+  "M-Pesa Holding Company Limited",
+  "Maziv",
+  "Norges Bank",
+  "OXG",
+  "Oak Holdings",
+  "Oak Holdings 1 GmbH",
+  "Recommerce",
+  "SIRO",
+  "Safaricom",
+  "Skaylink",
+  "Swisscom",
+  "TPG Telecom",
+  "Telecommunication Infrastructure Company of Iran",
+  "Telekom Romania",
+  "Telekom Romania Mobile Communications",
+  "Telenor",
+  "Three UK",
+  "Vantage Towers",
+  "Virgin Media O2",
+  "Vodafone Idea",
+  "Vodafone Italia",
+  "Vodafone Spain",
+  "VodafoneThree",
+  "VodafoneZiggo",
+  "Zegona"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "CK Hutchison Group Telecom Holding",
+   "resolved": "CK Hutchison",
+   "how": "alias"
+  },
+  {
+   "raw": "VodafoneZiggo Group Holding B.V.",
+   "resolved": "VodafoneZiggo",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodafone Italy",
+   "resolved": "Vodafone Italia",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodacom",
+   "resolved": "Vodafone Group",
+   "how": "alias"
+  },
+  {
+   "raw": "VodafoneThree Holdings Limited",
+   "resolved": "VodafoneThree",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodafone Shared Operations Limited",
+   "resolved": "Vodafone Shared Operations",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodafone Shared Operations",
+   "resolved": "Vodafone Shared Operations",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": [
+  {
+   "source": "Liberty Global",
+   "type": "acquires",
+   "target": "VodafoneZiggo",
+   "quote": "In February 2026, we announced that we agreed to sell our interests in VodafoneZiggo to Liberty Global for \u20ac1.0 billion in cash and a 10% equity stake in a soon-to-be-formed Benelux entity (Ziggo Group), which will own 100% of both VodafoneZiggo and Liberty Global\u2019s Belgian subsidiary, Telenet Group Holding2."
+  },
+  {
+   "source": "Zegona",
+   "type": "acquires",
+   "target": "Vodafone Spain",
+   "quote": "settlement in the current year of redeemable preference shares provided by Zegona Communications Plc as part of the disposal of Vodafone Spain"
+  },
+  {
+   "source": "Safaricom",
+   "type": "acquires",
+   "target": "M-Pesa Holding Company Limited",
+   "quote": "On 28 September 2023, the Group sold M-Pesa Holding Company Limited which holds funds on trust for M-Pesa customers, to Safaricom Plc for US$1."
+  },
+  {
+   "source": "Liberty Global",
+   "type": "acquires",
+   "target": "VodafoneZiggo Group Holding B.V.",
+   "quote": "On 18 February 2026, we announced our agreement to sell our interests in VodafoneZiggo Group Holding B.V. to Liberty Global plc for \u20ac1.0 billion in cash and a 10% shareholding in a soon-to-be-formed Benelux entity, which will own 100% of both VodafoneZiggo and Liberty Global\u2019s Belgian subsidiary, Telenet Group Holding."
+  },
+  {
+   "source": "CK Hutchison",
+   "type": "invests",
+   "target": "VodafoneThree",
+   "quote": "The Board approved the buyout of CK Hutchison Group Telecom Holding Limited from the VodafoneThree joint venture for \u00a34.3 billion (\u20ac4.9 billion) via a cancellation of shares."
+  },
+  {
+   "source": "Swisscom",
+   "type": "acquires",
+   "target": "Vodafone Italy",
+   "quote": "On 15 March 2024, the Group announced that it had entered into a binding agreement with Swisscom AG (\u2018Swisscom\u2019) in relation to the disposal of 100% of Vodafone Italia S.p.A. (\u2019Vodafone Italy\u2019)."
+  },
+  {
+   "source": "Swisscom",
+   "type": "acquires",
+   "target": "Vodafone Italia",
+   "quote": "Vodafone Italia S.p.A\u2019s (\u2018Vodafone Italy\u2019s\u2019) defined contribution and defined benefit schemes have been transferred to Swisscom AG (see note 27 \u2018Acquisitions and disposals\u2019)."
+  },
+  {
+   "source": "CK Hutchison",
+   "type": "invests",
+   "target": "VodafoneThree Holdings Limited",
+   "quote": "Following completion, VTHL is a subsidiary of the Group, in which the Group owns 51% of the issued share capital and CKHGT indirectly owns 49%, and Vodafone UK and Three UK are wholly owned subsidiaries of VTHL."
+  },
+  {
+   "source": "Accenture",
+   "type": "invests",
+   "target": "Vodafone Shared Operations Limited",
+   "quote": "The aggregate net cash received in respect of other transactions with non-controlling shareholders in subsidiaries was \u20ac100 million (2025: \u20ac8 million) including \u20ac125 million (2025: \u20ac25 million) received from Accenture Holdings B.V. for a non-controlling interest in Vodafone Shared Operations Limited."
+  },
+  {
+   "source": "Accenture",
+   "type": "invests",
+   "target": "Vodafone Shared Operations",
+   "quote": "Accenture Holdings B.V. holds 20% of the total voting rights in Vodafone Shared Operations Limited."
+  }
+ ]
+}
