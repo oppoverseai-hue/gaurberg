@@ -1,0 +1,180 @@
+{
+ "ticker": "BIDU",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Baidu, Inc. Form 20-F for 2025",
+ "as_of": "2025-12-31",
+ "chunks": 16,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 36153,
+   "cache_read_tokens": 12600,
+   "output_tokens": 526,
+   "cost_usd": 0.1546971,
+   "seconds": 10.2,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30267,
+   "cache_read_tokens": 12600,
+   "output_tokens": 167,
+   "cost_usd": 0.126976,
+   "seconds": 7.1,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 26820,
+   "cache_read_tokens": 12600,
+   "output_tokens": 393,
+   "cost_usd": 0.1151023,
+   "seconds": 10.7,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 26981,
+   "cache_read_tokens": 12600,
+   "output_tokens": 418,
+   "cost_usd": 0.11601240000000002,
+   "seconds": 7.9,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28045,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.1162368,
+   "seconds": 4.5,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28964,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1197,
+   "cost_usd": 0.13193370000000001,
+   "seconds": 9.3,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28259,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2170,
+   "cost_usd": 0.1387727,
+   "seconds": 16.5,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 26774,
+   "cache_read_tokens": 12600,
+   "output_tokens": 129,
+   "cost_usd": 0.1122737,
+   "seconds": 4.9,
+   "is_error": false,
+   "chunk": 8
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27446,
+   "cache_read_tokens": 12600,
+   "output_tokens": 153,
+   "cost_usd": 0.11527040000000001,
+   "seconds": 7.3,
+   "is_error": false,
+   "chunk": 9
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29410,
+   "cache_read_tokens": 12600,
+   "output_tokens": 548,
+   "cost_usd": 0.1272743,
+   "seconds": 7.6,
+   "is_error": false,
+   "chunk": 10
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30868,
+   "cache_read_tokens": 12600,
+   "output_tokens": 755,
+   "cost_usd": 0.1353191,
+   "seconds": 8.1,
+   "is_error": false,
+   "chunk": 11
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29555,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1760,
+   "cost_usd": 0.1399873,
+   "seconds": 13.1,
+   "is_error": false,
+   "chunk": 12
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 34055,
+   "cache_read_tokens": 12600,
+   "output_tokens": 717,
+   "cost_usd": 0.1480063,
+   "seconds": 9.0,
+   "is_error": false,
+   "chunk": 13
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32972,
+   "cache_read_tokens": 12600,
+   "output_tokens": 710,
+   "cost_usd": 0.14349550000000003,
+   "seconds": 28.5,
+   "is_error": false,
+   "chunk": 14
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32329,
+   "cache_read_tokens": 12600,
+   "output_tokens": 418,
+   "cost_usd": 0.13794019999999999,
+   "seconds": 10.7,
+   "is_error": false,
+   "chunk": 15
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33219,
+   "cache_read_tokens": 12600,
+   "output_tokens": 570,
+   "cost_usd": 0.1431092,
+   "seconds": 8.6,
+   "is_error": false,
+   "chunk": 16
+  }
+ ],
+ "totals": {
+  "input_tokens": 32,
+  "cache_creation_tokens": 482117,
+  "cache_read_tokens": 201600,
+  "output_tokens": 10635,
+  "cost_usd": 2.102407,
+  "seconds": 164.0
+ },
+ "edges": 34,
+ "quotes_not_found": 0
+}
