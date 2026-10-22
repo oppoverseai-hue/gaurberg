@@ -1,0 +1,99 @@
+{
+ "ticker": "VOD",
+ "edges_in": 58,
+ "edges_out": 51,
+ "edges_merged": 7,
+ "new_nodes": [
+  "1&1",
+  "AST SpaceMobile",
+  "Accenture",
+  "Altice Luxembourg",
+  "BlackRock",
+  "CK Hutchison",
+  "Community Fibre",
+  "Digi Romania",
+  "Hutchison Telecommunications (Australia)",
+  "IBM",
+  "Idea Group",
+  "Indus Towers",
+  "Liberty Global",
+  "M-Pesa Holding Company Limited",
+  "Maziv",
+  "Norges Bank",
+  "OXG",
+  "Oak Holdings",
+  "Oak Holdings 1 GmbH",
+  "Recommerce",
+  "SIRO",
+  "Safaricom",
+  "Skaylink",
+  "Swisscom",
+  "TPG Telecom",
+  "Telecommunication Infrastructure Company of Iran",
+  "Telekom Romania",
+  "Telekom Romania Mobile Communications",
+  "Telenor",
+  "Three UK",
+  "Vantage Towers",
+  "Virgin Media O2",
+  "Vodafone Idea",
+  "Vodafone Italia",
+  "Vodafone Spain",
+  "VodafoneThree",
+  "VodafoneZiggo",
+  "Zegona"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "CK Hutchison Group Telecom Holding",
+   "resolved": "CK Hutchison",
+   "how": "alias"
+  },
+  {
+   "raw": "VodafoneZiggo Group Holding B.V.",
+   "resolved": "VodafoneZiggo",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodafone Italy",
+   "resolved": "Vodafone Italia",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodacom",
+   "resolved": "Vodafone Group",
+   "how": "alias"
+  },
+  {
+   "raw": "VodafoneThree Holdings Limited",
+   "resolved": "VodafoneThree",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodafone Shared Operations Limited",
+   "resolved": "Vodafone Shared Operations",
+   "how": "alias"
+  },
+  {
+   "raw": "Vodafone Shared Operations",
+   "resolved": "Vodafone Shared Operations",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": [
+  {
+   "counterparty": "safaricom",
+   "type": "acquires",
+   "directions": [
+    "Safaricom>M-Pesa Holding Company Limited",
+    "VOD>Safaricom"
+   ]
+  }
+ ],
+ "dropped_not_focal": []
+}

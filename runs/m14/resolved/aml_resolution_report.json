@@ -1,0 +1,53 @@
+{
+ "ticker": "AML",
+ "edges_in": 32,
+ "edges_out": 25,
+ "edges_merged": 7,
+ "new_nodes": [
+  "AMR GP",
+  "Aston Martin Aramco Formula One Team",
+  "Aston Martin Cognizant Formula One team",
+  "Aston Martin Performance Technologies",
+  "BERO",
+  "Champagne Bollinger",
+  "Classic Automobiles",
+  "ELEMIS",
+  "Ernesto Bertarelli",
+  "Geely",
+  "Glenfiddich",
+  "Lawrence Stroll",
+  "Public Investment Fund",
+  "St James Invest",
+  "Yew Tree Consortium",
+  "Yew Tree Overseas Ltd"
+ ],
+ "needs_review": [
+  {
+   "raw": "Mercedes-Benz AG",
+   "resolved": "Mercedes-Benz AG",
+   "how": "alias"
+  },
+  {
+   "raw": "Mercedes-Benz",
+   "resolved": "Mercedes-Benz AG",
+   "how": "alias"
+  },
+  {
+   "raw": "AMR GP Holdings Limited",
+   "resolved": "AMR GP",
+   "how": "alias"
+  },
+  {
+   "raw": "AMR GP Holdings",
+   "resolved": "AMR GP",
+   "how": "alias"
+  },
+  {
+   "raw": "MBAG",
+   "resolved": "Mercedes-Benz AG",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": []
+}

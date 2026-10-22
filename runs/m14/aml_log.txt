@@ -1,0 +1,10 @@
+chunk 2/9: 0 items, in=45847 out=126 $0.1879 9.2s
+chunk 3/9: 7 items, in=46069 out=1816 $0.2057 15.8s
+chunk 1/9: 6 items, in=47417 out=1806 $0.2112 17.0s
+chunk 4/9: 5 items, in=42818 out=1590 $0.1410 11.7s
+chunk 5/9: 1 items, in=46275 out=537 $0.1446 10.7s
+chunk 7/9: 4 items, in=43779 out=503 $0.1341 8.5s
+chunk 6/9: 11 items, in=45384 out=1483 $0.1505 13.4s
+chunk 8/9: 5 items, in=49250 out=1604 $0.1675 12.5s
+chunk 9/9: 11 items, in=45445 out=3196 $0.1678 20.9s
+AML extractor (claude-sonnet-5-5): 32 edges, tokens in=412284 out=12661 cost=$1.5103

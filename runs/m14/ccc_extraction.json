@@ -1,0 +1,278 @@
+[
+ {
+  "counterparty": "AgreeYa Solutions",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CCC",
+  "target": "AgreeYa Solutions",
+  "evidence": [
+   {
+    "section": "p22",
+    "quote": "At the start of 2026 we were pleased to complete the acquisition of AgreeYa, a focused Professional Services business, for US$120m, and we welcome our new colleagues in North America and India to the Group.",
+    "quote_found": true
+   },
+   {
+    "section": "p80",
+    "quote": "After the year end, we approved the acquisition of AgreeYa Solutions Inc. in North America, having spent considerable time during 2025 reviewing the transaction.",
+    "quote_found": true
+   },
+   {
+    "section": "p212",
+    "quote": "On 5 January 2026, the Group acquired 100% of the voting shares of AgreeYa Solutions Inc., a Professional Services business focused on the US enterprise market, and the assets of the associated business, AgreeYa India, for an enterprise value of up to $120m.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "BT",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "CCC",
+  "target": "BT Services",
+  "evidence": [
+   {
+    "section": "p22",
+    "quote": "Increasing the volume of business with the private sector, to bring greater balance to our customer portfolio, while at the same time reducing legacy costs associated with the acquisition of BT Services, are key priorities for 2026 and beyond.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Microsoft",
+  "target": "CCC",
+  "evidence": [
+   {
+    "section": "p12",
+    "quote": "We continue to invest in improving our platforms to provide improved customer service, efficiency and innovation, including Artificial Intelligence (AI), using technology from among the world’s leading providers, including Microsoft, SAP, ServiceNow and Salesforce.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "SAP",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "SAP",
+  "target": "CCC",
+  "evidence": [
+   {
+    "section": "p12",
+    "quote": "We continue to invest in improving our platforms to provide improved customer service, efficiency and innovation, including Artificial Intelligence (AI), using technology from among the world’s leading providers, including Microsoft, SAP, ServiceNow and Salesforce.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ServiceNow",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "ServiceNow",
+  "target": "CCC",
+  "evidence": [
+   {
+    "section": "p12",
+    "quote": "We continue to invest in improving our platforms to provide improved customer service, efficiency and innovation, including Artificial Intelligence (AI), using technology from among the world’s leading providers, including Microsoft, SAP, ServiceNow and Salesforce.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Salesforce",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Salesforce",
+  "target": "CCC",
+  "evidence": [
+   {
+    "section": "p12",
+    "quote": "We continue to invest in improving our platforms to provide improved customer service, efficiency and innovation, including Artificial Intelligence (AI), using technology from among the world’s leading providers, including Microsoft, SAP, ServiceNow and Salesforce.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Business IT Source Holdings",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CCC",
+  "target": "Business IT Source Holdings",
+  "evidence": [
+   {
+    "section": "p35",
+    "quote": "In 2024, the Group completed the final contingent consideration payments for the purchase of Business IT Source Holdings, Inc (BITS).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "HP",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "CCC",
+  "target": "HP",
+  "evidence": [
+   {
+    "section": "p53",
+    "quote": "We received continued recognition from value chain partners, including HP’s Amplify Impact 5-Star award and the Genesys Sustainability Award, and we strengthened our collaboration with customers to help them achieve their own sustainability goals.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Genesys",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "CCC",
+  "target": "Genesys",
+  "evidence": [
+   {
+    "section": "p53",
+    "quote": "We received continued recognition from value chain partners, including HP’s Amplify Impact 5-Star award and the Genesys Sustainability Award, and we strengthened our collaboration with customers to help them achieve their own sustainability goals.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "FusionStorm",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CCC",
+  "target": "FusionStorm",
+  "evidence": [
+   {
+    "section": "p95",
+    "quote": "He joined the Company in 2007 through Computacenter’s acquisition of FusionStorm and has served as the Senior Vice President of Sales for the US since 2018.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "The Hadley Trust",
+  "entity_type": "other",
+  "type": "invests",
+  "source": "The Hadley Trust",
+  "target": "CCC",
+  "evidence": [
+   {
+    "section": "p139",
+    "quote": "The Hadley Trust 7.09% Philip Willam Hulme 7.93%",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": 7.09,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Genesys",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Genesys",
+  "target": "CCC",
+  "evidence": [
+   {
+    "section": "p126",
+    "quote": "we have better visibility of the business through reporting insights and through deployment of automation tooling such as Genesys, helping us to deliver better service to Customers while reducing cost.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Business IT Source Holdings, Inc (BITS)",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CCC",
+  "target": "Business IT Source Holdings, Inc (BITS)",
+  "evidence": [
+   {
+    "section": "p177",
+    "quote": "£2.2m relating to a release of contingent consideration in relation to the Business IT Source Holdings, Inc (BITS) acquisition, net of £0.4m of costs incurred as per the share purchase agreement.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "ProSys Information Systems",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "CCC",
+  "target": "ProSys Information Systems",
+  "evidence": [
+   {
+    "section": "p189",
+    "quote": "On 29 August 2025, the Group acquired the non-controlling interest in ProSys for a cash consideration of $0.1 m and a deferred consideration of $1.8m, which was paid on 2 January 2026.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Computacenter plc Annual Report and Accounts 2025",
+  "as_of": "2025-12-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

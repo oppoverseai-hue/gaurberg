@@ -1,0 +1,9 @@
+chunk 3/8: 2 items, in=43921 out=306 $0.1818 8.6s
+chunk 2/8: 5 items, in=42710 out=1453 $0.1883 12.7s
+chunk 4/8: 2 items, in=42253 out=796 $0.1307 9.3s
+chunk 5/8: 7 items, in=44518 out=1250 $0.1446 12.1s
+chunk 6/8: 2 items, in=42076 out=287 $0.1249 8.9s
+chunk 7/8: 3 items, in=44350 out=504 $0.1364 7.4s
+chunk 8/8: 0 items, in=25784 out=238 $0.0576 6.0s
+chunk 1/8: 29 items, in=44089 out=6109 $0.2405 34.0s
+BYIT extractor (claude-sonnet-5-5): 43 edges, tokens in=329701 out=10943 cost=$1.2050

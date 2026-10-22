@@ -28,7 +28,13 @@ uq = sorted({v["quote"] for e in edges for v in e["evidence"]})
 qi = {t: i for i, t in enumerate(uq, 1)}
 cp = {}
 for e in edges:
-    cp.setdefault(e["counterparty"], e["entity_type"])
+    # The companies table allows public_company, private_company, institution, organization and segment_group.
+    cp.setdefault(e["counterparty"], {"government": "institution", "other": "organization"}.get(e["entity_type"], e["entity_type"]))
+# Extension edges (a deal between two other companies, for example a buyer and a unit the focal company sold): both ends need a node.
+for e in edges:
+    for end in (e["source"], e["target"]):
+        if end != a.ticker and end not in alias:
+            cp.setdefault(end, "private_company")  # unresearched extension node; entity type not stated by the report
 skip = set(alias)  # already in the seed list, matched by ticker
 L = ["do $do$", "declare run_id bigint; rid bigint; a bigint; b bigint; r record; k int; isnew boolean;", "begin"]
 # Optional seed columns: markets (US|LSE|HKEX, joined with |), exchange, country. A blank value stays null / empty. Nothing is guessed.
@@ -36,7 +42,7 @@ def _mk(r):
     return "array[" + ",".join(q(x) for x in (r.get("markets") or "").split("|") if x) + "]::text[]"
 _nul = lambda v: "null" if not v else q(v)
 L.append("insert into public.companies(ticker,name,segment,size_tier,is_seed,is_hero,markets,exchange,country) values " + ",".join(
-    f"({q(r['ticker'])},{q(r['name'])},{q(r['segment'])},{q(r['size_tier'])},true,{r['is_hero']},{_mk(r)},{_nul(r.get('exchange'))},{_nul(r.get('country'))})" for r in seed) +
+    f"({q(r['ticker'])},{q(r['name'])},{_nul(r['segment'])},{_nul(r['size_tier'])},true,{r['is_hero']},{_mk(r)},{_nul(r.get('exchange'))},{_nul(r.get('country'))})" for r in seed) +
     " on conflict (ticker) do update set is_seed=true, segment=excluded.segment, size_tier=excluded.size_tier, is_hero=excluded.is_hero,"
     " markets=case when cardinality(excluded.markets)>0 then excluded.markets else public.companies.markets end,"
     " exchange=coalesce(excluded.exchange, public.companies.exchange), country=coalesce(excluded.country, public.companies.country);")
@@ -53,7 +59,7 @@ for n, e in enumerate(edges, 1):
     pct = e.get("exposure_pct")
     rows.append(f"({n},{q(e['type'])},{q(e['source'])},{q(e['target'])},{q(qs)}::int[],{q(sec)}::text[],"
                 f"{'null' if pct is None else pct},{'null' if pct is None else q(e.get('exposure_qualifier') or 'exact')},"
-                f"{'null' if pct is None else q(e.get('exposure_basis') or 'source_revenue')},"
+                f"{'null' if pct is None else q(e.get('exposure_basis') or ('ownership' if e['type'] in ('invests', 'acquires') else 'source_revenue'))},"
                 f"{'null' if not e.get('note') else q(e['note'])})")
 L.append("insert into _e values " + ",".join(rows) + ";")
 L.append("create or replace function pg_temp.nid(l text) returns bigint language sql as $f$ select id from public.companies where case l "

@@ -1,0 +1,100 @@
+{
+ "ticker": "SCT",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Softcat plc Annual Report and Accounts 2025",
+ "as_of": "2025-07-31",
+ "chunks": 8,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30810,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1000,
+   "cost_usd": 0.1375337,
+   "seconds": 9.2,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29837,
+   "cache_read_tokens": 12600,
+   "output_tokens": 854,
+   "cost_usd": 0.1322214,
+   "seconds": 10.1,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30225,
+   "cache_read_tokens": 12600,
+   "output_tokens": 430,
+   "cost_usd": 0.1294372,
+   "seconds": 9.5,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29516,
+   "cache_read_tokens": 12600,
+   "output_tokens": 449,
+   "cost_usd": 0.1267198,
+   "seconds": 7.2,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32041,
+   "cache_read_tokens": 12600,
+   "output_tokens": 368,
+   "cost_usd": 0.13626080000000002,
+   "seconds": 6.0,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 29456,
+   "cache_read_tokens": 12600,
+   "output_tokens": 580,
+   "cost_usd": 0.1277848,
+   "seconds": 7.5,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30193,
+   "cache_read_tokens": 12600,
+   "output_tokens": 247,
+   "cost_usd": 0.12747450000000002,
+   "seconds": 5.1,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 28046,
+   "cache_read_tokens": 12600,
+   "output_tokens": 505,
+   "cost_usd": 0.1212518,
+   "seconds": 6.7,
+   "is_error": false,
+   "chunk": 8
+  }
+ ],
+ "totals": {
+  "input_tokens": 16,
+  "cache_creation_tokens": 240124,
+  "cache_read_tokens": 100800,
+  "output_tokens": 4433,
+  "cost_usd": 1.038684,
+  "seconds": 61.3
+ },
+ "edges": 19,
+ "quotes_not_found": 0
+}

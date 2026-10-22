@@ -130,3 +130,22 @@ table.fa td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--l
 table.fa tr.dim td { color:var(--muted); } .fa-chart { background:none; border:0; color:var(--muted); cursor:pointer; padding:0 0 0 6px; font-size:12px; } .fa-chart:hover, .fa-chart.on { color:var(--accent); } tr.fa-graph td { padding:8px; background:var(--surface-low); } table.fa td.ltm, table.fa th.ltm { background:var(--accent-dim); }
 table.fa td.neg { color:#f87171; } table.fa td.pos { color:#4ade80; } table.fa tr.dim td.neg, table.fa tr.dim td.pos { opacity:.8; }
 table.fa td.trend { width:72px; text-align:center; } table.fa th:last-child { text-align:center; }
+
+/* Landing search: type-ahead */
+.lsearch { position:relative; margin-top:24px; } .lsearch input[type=search] { padding:14px 16px; font-size:15px; border-radius:8px; }
+.ls-pop { position:absolute; left:0; right:0; top:calc(100% + 6px); z-index:20; background:var(--surface-mid); border:1px solid var(--line-strong); border-radius:8px; box-shadow:0 12px 32px rgba(0,0,0,.5); overflow:hidden; }
+.ls-head { padding:8px 14px 4px; font:700 10px var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.ls-row { display:flex; align-items:center; gap:10px; padding:10px 14px; cursor:pointer; border-left:2px solid transparent; font:13px var(--sans); color:var(--fg); }
+.ls-row.on { background:var(--surface-high); border-left-color:var(--accent); }
+.ls-name { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .ls-name b { color:var(--accent); font-weight:600; }
+.ls-row .mk { font:10px var(--mono); color:var(--fg2); border:1px solid var(--line); border-radius:3px; padding:1px 6px; }
+.ls-n { font:11px var(--mono); color:var(--muted); min-width:64px; text-align:right; }
+.ls-foot { display:flex; gap:16px; flex-wrap:wrap; padding:8px 14px; border-top:1px solid var(--line); background:var(--surface); font:10px var(--mono); color:var(--fg2); } .ls-foot kbd { margin-right:3px; }
+
+/* Index ticker: slow scroll, pauses on hover and for reduced motion */
+.ixbar { position:fixed; left:0; right:0; bottom:0; z-index:10; display:flex; align-items:center; background:var(--surface); border-top:1px solid var(--line); font:12px var(--mono); overflow:hidden; }
+.ix-track { display:flex; gap:40px; padding:8px 24px; white-space:nowrap; animation:ixmove 40s linear infinite; } .ixbar:hover .ix-track { animation-play-state:paused; }
+.ix { display:inline-flex; gap:10px; align-items:center; } .ix-n { color:var(--fg2); } .ix-p { color:var(--fg); font-feature-settings:"tnum" 1; } .ix-up { color:var(--up); } .ix-dn { color:var(--down); }
+.ix-note { margin-left:auto; padding:8px 12px; color:var(--muted); background:var(--surface); border-left:1px solid var(--line); position:relative; }
+@keyframes ixmove { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+@media (prefers-reduced-motion:reduce) { .ix-track { animation:none; overflow-x:auto; } }

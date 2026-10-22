@@ -3,7 +3,7 @@
 import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
 import { readSnapshot, type CoRow } from "@/lib/saved";
-import type { Rel } from "@/lib/graph";
+import type { CountryRegion, GeoMap, GeoRow, Rel } from "@/lib/graph";
 
 export type { CoRow };
 const CO = "id,ticker,name,is_seed,entity_type,segment,size_tier,markets,exchange,country";
@@ -38,4 +38,22 @@ export async function searchCompanies(q: string): Promise<{ ticker: string; name
   const supabase = await supabaseServer();
   const { data } = await supabase.from("companies").select("ticker,name").or(`ticker.ilike.${safe},name.ilike.%${safe}%`).not("ticker", "is", null).limit(10);
   return (data ?? []) as { ticker: string; name: string }[];
+}
+
+// Revenue by country (M16). Row-level security shows allowed users promoted rows only; the admin also sees staged rows.
+// The offline snapshot has no revenue rows yet, so offline shows none (a gap, not a guess).
+export async function getGeo(companyIds: number[]): Promise<{ geo: GeoMap; countryRegion: CountryRegion }> {
+  if (isOffline() || companyIds.length === 0) return { geo: {}, countryRegion: {} };
+  const supabase = await supabaseServer();
+  const [g, c] = await Promise.all([
+    supabase.from("company_geo_revenue").select("company_id,country,label,bucket_region,revenue_pct,revenue_amount,currency,unit,period_end,pct_basis,status").in("company_id", companyIds).order("period_end", { ascending: false }),
+    supabase.from("country_region").select("country,region"),
+  ]);
+  const geo: GeoMap = {};
+  // keep only the latest period per company
+  const latest = new Map<number, string>();
+  ((g.data ?? []) as GeoRow[]).forEach((r) => { if (!latest.has(r.company_id)) latest.set(r.company_id, r.period_end); });
+  ((g.data ?? []) as GeoRow[]).forEach((r) => { if (r.period_end === latest.get(r.company_id)) (geo[r.company_id] ??= []).push({ ...r, revenue_pct: r.revenue_pct == null ? null : Number(r.revenue_pct), revenue_amount: r.revenue_amount == null ? null : Number(r.revenue_amount) }); });
+  const countryRegion: CountryRegion = Object.fromEntries(((c.data ?? []) as { country: string; region: string }[]).map((x) => [x.country, x.region]));
+  return { geo, countryRegion };
 }

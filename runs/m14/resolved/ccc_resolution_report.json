@@ -1,0 +1,33 @@
+{
+ "ticker": "CCC",
+ "edges_in": 14,
+ "edges_out": 13,
+ "edges_merged": 1,
+ "new_nodes": [
+  "AgreeYa Solutions",
+  "BT",
+  "BT Services",
+  "FusionStorm",
+  "Genesys",
+  "HP",
+  "ProSys Information Systems",
+  "SAP",
+  "Salesforce",
+  "ServiceNow",
+  "The Hadley Trust"
+ ],
+ "needs_review": [
+  {
+   "raw": "Business IT Source Holdings",
+   "resolved": "Business IT Source Holdings, Inc (BITS)",
+   "how": "alias"
+  },
+  {
+   "raw": "Business IT Source Holdings, Inc (BITS)",
+   "resolved": "Business IT Source Holdings, Inc (BITS)",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": []
+}

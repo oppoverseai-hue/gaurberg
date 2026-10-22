@@ -1,0 +1,322 @@
+[
+ {
+  "counterparty": "Oakland Group Services Limited",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "SCT",
+  "target": "Oakland Group Services Limited",
+  "evidence": [
+   {
+    "section": "p26",
+    "quote": "In April 2025, Softcat acquired Oakland Group Services Limited, a specialist provider of data and AI consultancy services, significantly enhancing our capability in an exciting growth segment.",
+    "quote_found": true
+   },
+   {
+    "section": "p33",
+    "quote": "Following further review, the Board agreed that the opportunity to acquire Oakland would be beneficial for the identified stakeholders and it approved the acquisition.",
+    "quote_found": true
+   },
+   {
+    "section": "p74",
+    "quote": "considering and agreeing the acquisition of Oakland to accelerate our strategic objectives",
+    "quote_found": true
+   },
+   {
+    "section": "p86",
+    "quote": "Earlier in the year Softcat completed the acquisition of Oakland and management presented proposals to the Committee in respect of the associated accounting treatment.",
+    "quote_found": true
+   },
+   {
+    "section": "p106",
+    "quote": "Following review, the Committee confirmed that no adjustment was required to take account of the acquisition of Oakland Group Services Ltd during the year, as the FY2025 impact on underlying operating profit was not considered material for the purpose of determining the bonus outcome.",
+    "quote_found": true
+   },
+   {
+    "section": "p149",
+    "quote": "During the year, the Group completed the acquisition of Oakland Group Services Limited and its subsidiary.",
+    "quote_found": true
+   },
+   {
+    "section": "p138",
+    "quote": "We determined that centralised audit procedures can be performed on the entire consolidated financial statements, with the exception of Oakland Group Services Limited which was acquired during the period and was not identified as an individually relevant component.",
+    "quote_found": true
+   },
+   {
+    "section": "p166",
+    "quote": "On 4 April 2025, the Group acquired 100% of the share capital of Oakland Group Services Limited, a non-listed company based in the United Kingdom and specialising in the provision of data platform, data strategy, data governance, data analytics and artificial intelligence consultancy.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": 100,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "SCT",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "p9",
+    "quote": "In June, we hosted a customer summit, a unique Cyber-security was the most common technology priority among respondents 47% event delivered in partnership with Microsoft, to help business leaders understand the art of the possible and where to focus their efforts.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Park Place Technologies",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "SCT",
+  "target": "Park Place Technologies",
+  "evidence": [
+   {
+    "section": "p11",
+    "quote": "We have recently launched our first certified carbon neutral service for global third-party maintenance and monitoring, in collaboration with Softcat partner Park Place Technologies.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Blaby District Council",
+  "entity_type": "government",
+  "type": "sells_to",
+  "source": "SCT",
+  "target": "Blaby District Council",
+  "evidence": [
+   {
+    "section": "p20",
+    "quote": "Softcat arranged opportunities for BDC to try out various devices and ultimately decided on Samsung Galaxy Book 4 laptops.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Steel and Alloy",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "SCT",
+  "target": "Steel and Alloy",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "S&A began working with Softcat back in 2023.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Nutanix",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Nutanix",
+  "target": "SCT",
+  "evidence": [
+   {
+    "section": "p21",
+    "quote": "The Nutanix solution provides S&A with an infrastructure capable of securely and effectively meeting its demands now and into the future.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Microsoft",
+  "target": "SCT",
+  "evidence": [
+   {
+    "section": "p24",
+    "quote": "Workplace GP growth was more modest reflecting the impact of Microsoft incentive changes and ongoing subdued demand for devices.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Samsung",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Samsung",
+  "target": "SCT",
+  "evidence": [
+   {
+    "section": "p20",
+    "quote": "Softcat arranged opportunities for BDC to try out various devices and ultimately decided on Samsung Galaxy Book 4 laptops.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Exertis",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "SCT",
+  "target": "Exertis",
+  "evidence": [
+   {
+    "section": "p36",
+    "quote": "To celebrate LGBTQ+ History Month, Softcat partnered with Exertis and BCS to host an event focused on advancing LGBTQ+ inclusion in technology.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "11:11 Systems",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "SCT",
+  "target": "11:11 Systems",
+  "evidence": [
+   {
+    "section": "p36",
+    "quote": "The Ethnic and Cultural Diversity network celebrated Lunar New Year with an origami workshop and traditional Chinese food, in collaboration with our partners VIQU Recruitment, 11:11 Systems and Perspicuity.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Perspicuity",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "SCT",
+  "target": "Perspicuity",
+  "evidence": [
+   {
+    "section": "p36",
+    "quote": "The Ethnic and Cultural Diversity network celebrated Lunar New Year with an origami workshop and traditional Chinese food, in collaboration with our partners VIQU Recruitment, 11:11 Systems and Perspicuity.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Lenovo",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "SCT",
+  "target": "Lenovo",
+  "evidence": [
+   {
+    "section": "p36",
+    "quote": "Fifteen colleagues from our Armed Forces network, South Coast and Bristol offices, walked 110km around the Isle of Wight with support from Lenovo and Commvault, while another group of eight completed a",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Commvault",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "SCT",
+  "target": "Commvault",
+  "evidence": [
+   {
+    "section": "p36",
+    "quote": "Fifteen colleagues from our Armed Forces network, South Coast and Bristol offices, walked 110km around the Isle of Wight with support from Lenovo and Commvault, while another group of eight completed a",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Mawer Investment Management",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Mawer Investment Management",
+  "target": "SCT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "Mawer Investment Management Limited 9,946,370 4.9% 9,943,553 4.9% Capital Group 9,938,753 4.9% 9,938,753 4.9%",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": 4.9,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Capital Group",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Capital Group",
+  "target": "SCT",
+  "evidence": [
+   {
+    "section": "p133",
+    "quote": "Mawer Investment Management Limited 9,946,370 4.9% 9,943,553 4.9% Capital Group 9,938,753 4.9% 9,938,753 4.9%",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Softcat plc Annual Report and Accounts 2025",
+  "as_of": "2025-07-31",
+  "exposure_pct": 4.9,
+  "exposure_qualifier": "exact"
+ }
+]

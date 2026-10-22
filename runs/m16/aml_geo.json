@@ -1,0 +1,99 @@
+{
+ "ticker": "AML",
+ "document": "Aston Martin Lagonda Annual Report and Accounts 2025",
+ "as_of": "2025-12-31",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "pages_sent": [
+  78,
+  91,
+  166,
+  186,
+  224,
+  225,
+  235
+ ],
+ "rows": [
+  {
+   "label": "United Kingdom",
+   "country": "GB",
+   "bucket_region": null,
+   "revenue_amount": 261.9,
+   "unit": "m",
+   "currency": "GBP",
+   "revenue_pct": 20.82,
+   "page": 186,
+   "quote": "United Kingdom 261.9 262.1",
+   "quote_found": true,
+   "period_end": "2025-12-31",
+   "amount_on_page": true,
+   "pct_basis": "computed"
+  },
+  {
+   "label": "The Americas",
+   "country": null,
+   "bucket_region": null,
+   "revenue_amount": 426.2,
+   "unit": "m",
+   "currency": "GBP",
+   "revenue_pct": 33.89,
+   "page": 186,
+   "quote": "The Americas1 426.2 629.2",
+   "quote_found": true,
+   "period_end": "2025-12-31",
+   "amount_on_page": true,
+   "pct_basis": "computed"
+  },
+  {
+   "label": "Rest of Europe, Middle East and Africa",
+   "country": null,
+   "bucket_region": null,
+   "revenue_amount": 374.4,
+   "unit": "m",
+   "currency": "GBP",
+   "revenue_pct": 29.77,
+   "page": 186,
+   "quote": "Rest of Europe, Middle East and Africa2 374.4 434.7",
+   "quote_found": true,
+   "period_end": "2025-12-31",
+   "amount_on_page": true,
+   "pct_basis": "computed"
+  },
+  {
+   "label": "Asia Pacific",
+   "country": null,
+   "bucket_region": "APAC",
+   "revenue_amount": 195.2,
+   "unit": "m",
+   "currency": "GBP",
+   "revenue_pct": 15.52,
+   "page": 186,
+   "quote": "Asia Pacific3 195.2 257.9",
+   "quote_found": true,
+   "period_end": "2025-12-31",
+   "amount_on_page": true,
+   "pct_basis": "computed"
+  }
+ ],
+ "total": {
+  "revenue_amount": 1257.7,
+  "quote": "1,257.7 1,583.9",
+  "page": 186,
+  "quote_found": true,
+  "rows_sum": 1257.6999999999998,
+  "rows_add_up": true,
+  "share_of_total_rows": 100.0
+ },
+ "note": "Revenue by geographical location from Note 3 (FY2025, £m). Sub-country figures (US £386.8m, Germany £112.5m, Japan £80.4m) are footnoted sub-lines of listed regions and were excluded. No percentages printed. Total quote is the geography table's total line; the text shows the same figures for the category table.",
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_tokens": 24805,
+  "cache_read_tokens": 0,
+  "output_tokens": 535,
+  "cost_usd": 0.1059028,
+  "seconds": 12.0,
+  "is_error": false
+ },
+ "quotes_not_found": 0,
+ "amounts_not_on_page": 0
+}

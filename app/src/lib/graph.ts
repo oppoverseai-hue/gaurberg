@@ -5,6 +5,21 @@ export const MARKETS: Market[] = ["US", "LSE", "HKEX"];
 export const MARKET_LABEL: Record<Market, string> = { US: "US", LSE: "London (LSE)", HKEX: "Hong Kong (HKEX)" };
 // markets is empty when the listing is not yet known. A company can list in more than one market.
 export type Co = { id: number; ticker: string | null; name: string; is_seed: boolean | null; entity_type: string | null; markets?: string[] | null; exchange?: string | null; country?: string | null };
+// Regions (M16). A revenue row names a country; the region comes from the country_region lookup, never typed on the company.
+export const REGIONS = ["North America", "Latin America", "Europe", "MENA", "Sub-Saharan Africa", "APAC"] as const;
+export type Region = (typeof REGIONS)[number];
+export type GeoRow = { company_id: number; country: string | null; label: string; bucket_region: string | null; revenue_pct: number | null; revenue_amount: number | null; currency: string | null; unit: string | null; period_end: string; pct_basis: string; status: string };
+export type GeoMap = Record<number, GeoRow[]>;
+export type CountryRegion = Record<string, string>;
+export const regionOf = (g: GeoRow, cr: CountryRegion): string | null => (g.country ? cr[g.country] ?? null : g.bucket_region);
+/** Share of a company's revenue in one region, summed over the rows the report gives. Null when the company has no row in that region or a row has no share. */
+export function regionShare(rows: GeoRow[] | undefined, region: string, cr: CountryRegion): number | null {
+  const hit = (rows ?? []).filter((g) => regionOf(g, cr) === region);
+  if (hit.length === 0 || hit.some((g) => g.revenue_pct == null)) return null;
+  return Math.round(hit.reduce((a, g) => a + g.revenue_pct!, 0) * 10) / 10;
+}
+export const hasRegion = (rows: GeoRow[] | undefined, region: string, cr: CountryRegion) => (rows ?? []).some((g) => regionOf(g, cr) === region);
+
 export type Evidence = { quote: string | null; document_url: string | null; section: string | null; published_at: string | null; quote_found: boolean | null };
 export type Rel = {
   id: number; relationship_type: LinkType; source: Co; target: Co;

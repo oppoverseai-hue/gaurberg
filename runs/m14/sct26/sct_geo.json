@@ -1,0 +1,24 @@
+{
+ "ticker": "SCT",
+ "document": "Softcat plc Preliminary results for the year ended 31 July 2026",
+ "as_of": "2026-07-31",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "pages_sent": [
+  6
+ ],
+ "rows": [],
+ "total": null,
+ "note": "no geographic revenue table found",
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_tokens": 3628,
+  "cache_read_tokens": 12601,
+  "output_tokens": 29,
+  "cost_usd": 0.0163742,
+  "seconds": 3.5,
+  "is_error": false
+ },
+ "quotes_not_found": 0,
+ "amounts_not_on_page": 0
+}
