@@ -1,0 +1,16 @@
+chunk 3/15: 5 items, in=41867 out=1420 $0.1418 13.3s
+chunk 2/15: 10 items, in=43889 out=2749 $0.1633 18.4s
+chunk 4/15: 2 items, in=40245 out=878 $0.1233 10.4s
+chunk 1/15: 16 items, in=47268 out=3644 $0.1861 24.1s
+chunk 5/15: 9 items, in=41182 out=2660 $0.1450 16.9s
+chunk 6/15: 7 items, in=42821 out=2012 $0.1452 14.8s
+chunk 7/15: 7 items, in=42375 out=836 $0.1316 14.7s
+chunk 8/15: 3 items, in=43681 out=957 $0.1382 8.2s
+chunk 9/15: 2 items, in=41904 out=819 $0.1295 7.9s
+chunk 10/15: 5 items, in=43200 out=735 $0.1341 10.4s
+chunk 12/15: 8 items, in=45144 out=1562 $0.1504 10.4s
+chunk 13/15: 11 items, in=52051 out=1922 $0.1822 13.0s
+chunk 11/15: 13 items, in=46055 out=4513 $0.1837 27.9s
+chunk 14/15: 14 items, in=45503 out=2728 $0.1634 15.0s
+chunk 15/15: 12 items, in=30952 out=2155 $0.0980 17.2s
+VOD extractor (claude-sonnet-5-5): 75 edges, tokens in=648137 out=29590 cost=$2.2159

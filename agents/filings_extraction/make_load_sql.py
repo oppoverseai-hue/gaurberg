@@ -6,10 +6,12 @@ import argparse, csv, json, sys
 q = lambda s: "$q$" + s + "$q$"
 ap = argparse.ArgumentParser()
 ap.add_argument("extraction"); ap.add_argument("seed")
-ap.add_argument("--ticker", default="UBER"); ap.add_argument("--filed", default="2026-02-13")
+ap.add_argument("--ticker", default="UBER"); ap.add_argument("--filed", default="2026-02-13", help="publication date, or none when the report does not state it")
 ap.add_argument("--aliases", default="Lyft=LYFT,DoorDash=DASH")
 ap.add_argument("--target", default="UBER FY2025 10-K (spike)")
 ap.add_argument("--live-queue-id", type=int, default=0)  # M7: write status live / live_generated and finish this lookup_queue row
+ap.add_argument("--source-type", default="sec_filing", help="sec_filing (10-K, 20-F) or annual_report (UK and HK reports, M14 and M15)")
+ap.add_argument("--as-of", default="2025-12-31", help="period end of the report, YYYY-MM-DD")
 ap.add_argument("--cost", type=float, default=0.0)  # real cost_usd from the run file, never a placeholder
 a = ap.parse_args()
 TRUST = "$q$live_generated$q$" if a.live_queue_id else "null"
@@ -19,7 +21,9 @@ edges = json.load(open(a.extraction))
 seed = list(csv.DictReader(open(a.seed)))
 alias = dict(x.split("=") for x in a.aliases.split(",") if x)
 alias[a.ticker] = a.ticker
-URL = edges[0]["document_url"]
+URL = edges[0]["document_url"]  # may be None for a report supplied as a file; stored as null
+FILED = "null" if a.filed == "none" else "$q$" + a.filed + "$q$::date"
+QURL = "null" if URL is None else "$q$" + URL + "$q$"
 uq = sorted({v["quote"] for e in edges for v in e["evidence"]})
 qi = {t: i for i, t in enumerate(uq, 1)}
 cp = {}
@@ -27,9 +31,15 @@ for e in edges:
     cp.setdefault(e["counterparty"], e["entity_type"])
 skip = set(alias)  # already in the seed list, matched by ticker
 L = ["do $do$", "declare run_id bigint; rid bigint; a bigint; b bigint; r record; k int; isnew boolean;", "begin"]
-L.append("insert into public.companies(ticker,name,segment,size_tier,is_seed,is_hero) values " + ",".join(
-    f"({q(r['ticker'])},{q(r['name'])},{q(r['segment'])},{q(r['size_tier'])},true,{r['is_hero']})" for r in seed) +
-    " on conflict (ticker) do update set is_seed=true, segment=excluded.segment, size_tier=excluded.size_tier, is_hero=excluded.is_hero;")
+# Optional seed columns: markets (US|LSE|HKEX, joined with |), exchange, country. A blank value stays null / empty. Nothing is guessed.
+def _mk(r):
+    return "array[" + ",".join(q(x) for x in (r.get("markets") or "").split("|") if x) + "]::text[]"
+_nul = lambda v: "null" if not v else q(v)
+L.append("insert into public.companies(ticker,name,segment,size_tier,is_seed,is_hero,markets,exchange,country) values " + ",".join(
+    f"({q(r['ticker'])},{q(r['name'])},{q(r['segment'])},{q(r['size_tier'])},true,{r['is_hero']},{_mk(r)},{_nul(r.get('exchange'))},{_nul(r.get('country'))})" for r in seed) +
+    " on conflict (ticker) do update set is_seed=true, segment=excluded.segment, size_tier=excluded.size_tier, is_hero=excluded.is_hero,"
+    " markets=case when cardinality(excluded.markets)>0 then excluded.markets else public.companies.markets end,"
+    " exchange=coalesce(excluded.exchange, public.companies.exchange), country=coalesce(excluded.country, public.companies.country);")
 L.append("insert into public.companies(name,entity_type) select v.n,v.t from (values " + ",".join(
     f"({q(n)},{q(t)})" for n, t in sorted(cp.items()) if n not in skip) +
     ") v(n,t) where not exists (select 1 from public.companies c where lower(c.name)=lower(v.n));")
@@ -57,10 +67,10 @@ L.append("for r in select * from _e order by n loop "
          "isnew := false; rid := null; select id into rid from public.relationships where source_id=a and target_id=b and relationship_type=r.ty order by id limit 1; "
          "if rid is null then "
          "insert into public.relationships(source_id,target_id,relationship_type,exposure_pct,exposure_qualifier,exposure_basis,exposure_as_of,source_type,status,trust_status,run_id,as_of_date,note) "
-         f"values (a,b,r.ty,r.pct,r.qual,case when r.pct is null then 'none' else r.basis end,case when r.pct is null then null else '2025-12-31'::date end,'sec_filing',{STATUS},{TRUST},run_id,'2025-12-31',r.note) returning id into rid; isnew := true; end if; "
+         f"values (a,b,r.ty,r.pct,r.qual,case when r.pct is null then 'none' else r.basis end,case when r.pct is null then null else {q(a.as_of)}::date end,{q(a.source_type)},{STATUS},{TRUST},run_id,{q(a.as_of)}::date,r.note) returning id into rid; isnew := true; end if; "
          "if isnew then for k in 1..array_length(r.qs,1) loop "
          f"insert into public.evidence(relationship_id,document_url,section,quote,quote_found,published_at) "
-         f"select rid,{q(URL)},r.sec[k],t,true,{q(a.filed)} from _q where i=r.qs[k]; end loop; end if; end loop;")
+         f"select rid,{QURL},r.sec[k],t,true,{FILED} from _q where i=r.qs[k]; end loop; end if; end loop;")
 if a.live_queue_id:
     L.append(f"update public.lookup_queue set status='done', step='Done', links_found=(select count(*) from _e), run_id=(select max(id) from public.agent_runs), finished_at=now(), company_id=pg_temp.nid({q(a.ticker)}) where id={a.live_queue_id};")
 L.append("end $do$;")
