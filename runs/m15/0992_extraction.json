@@ -1,0 +1,488 @@
+[
+ {
+  "counterparty": "DreamWorks",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "0992",
+  "target": "DreamWorks",
+  "evidence": [
+   {
+    "section": "p4",
+    "quote": "As DreamWorks’ preferred compute services, solutions, and workstation provider, Lenovo supports every stage of the production process.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "FIFA",
+  "entity_type": "other",
+  "type": "partners",
+  "source": "0992",
+  "target": "FIFA",
+  "evidence": [
+   {
+    "section": "p8",
+    "quote": "As the Official Technology Partner of FIFA, Lenovo is powering the biggest event in the history of humanity; the FIFA World Cup 2026™.",
+    "quote_found": true
+   },
+   {
+    "section": "p79",
+    "quote": "The chief executive officers and senior leaders of Lenovo’s key business partners and industry peers, including AMD, FIFA, Intel, Microsoft, NVIDIA and Qualcomm, also joined Lenovo’s senior leadership team on stage.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Nscale",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "0992",
+  "target": "Nscale",
+  "evidence": [
+   {
+    "section": "p17",
+    "quote": "Nscale selected Lenovo and NVIDIA to help deploy the site, with the goal of improving the responsiveness of its AI solutions and reducing time to value for customers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NVIDIA",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "NVIDIA",
+  "evidence": [
+   {
+    "section": "p17",
+    "quote": "Nscale selected Lenovo and NVIDIA to help deploy the site, with the goal of improving the responsiveness of its AI solutions and reducing time to value for customers.",
+    "quote_found": true
+   },
+   {
+    "section": "p81",
+    "quote": "In November 2025, directors were invited to visit the headquarters of Lenovo’s key business partner, NVIDIA, in California, the United States.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Infinidat",
+  "entity_type": "private_company",
+  "type": "acquires",
+  "source": "0992",
+  "target": "Infinidat",
+  "evidence": [
+   {
+    "section": "p20",
+    "quote": "The Infinidat acquisition, completed in early April, further strengthened the Group’s position in high-end enterprise storage, expanding both in its addressable market and long-term margins opportunities.",
+    "quote_found": true
+   },
+   {
+    "section": "p268",
+    "quote": "On April 9, 2026, the Group completed the acquisition of 100% interests in Infinidat Ltd. (“Infinidat”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Formula 1",
+  "entity_type": "private_company",
+  "type": "sells_to",
+  "source": "0992",
+  "target": "Formula 1",
+  "evidence": [
+   {
+    "section": "p59",
+    "quote": "From the racetrack to the Media & Technology Centre in Biggin Hill, UK, Lenovo provides the AI devices, innovative solutions, and robust IT infrastructure that support everyone, from executives to trackside operational engineers.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Formula 1",
+  "entity_type": "private_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "Formula 1",
+  "evidence": [
+   {
+    "section": "p80",
+    "quote": "In 2025, Lenovo extended its technology partnership with Formula 1®, becoming a Global Partner of the organization.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AMD",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "AMD",
+  "evidence": [
+   {
+    "section": "p79",
+    "quote": "The chief executive officers and senior leaders of Lenovo’s key business partners and industry peers, including AMD, FIFA, Intel, Microsoft, NVIDIA and Qualcomm, also joined Lenovo’s senior leadership team on stage.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Intel",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "Intel",
+  "evidence": [
+   {
+    "section": "p79",
+    "quote": "The chief executive officers and senior leaders of Lenovo’s key business partners and industry peers, including AMD, FIFA, Intel, Microsoft, NVIDIA and Qualcomm, also joined Lenovo’s senior leadership team on stage.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Microsoft",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "Microsoft",
+  "evidence": [
+   {
+    "section": "p79",
+    "quote": "The chief executive officers and senior leaders of Lenovo’s key business partners and industry peers, including AMD, FIFA, Intel, Microsoft, NVIDIA and Qualcomm, also joined Lenovo’s senior leadership team on stage.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Qualcomm",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "Qualcomm",
+  "evidence": [
+   {
+    "section": "p79",
+    "quote": "The chief executive officers and senior leaders of Lenovo’s key business partners and industry peers, including AMD, FIFA, Intel, Microsoft, NVIDIA and Qualcomm, also joined Lenovo’s senior leadership team on stage.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Legend Holdings",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Legend Holdings",
+  "target": "0992",
+  "evidence": [
+   {
+    "section": "p118",
+    "quote": "The shareholding structure of the Company as of March 31, 2026 is illustrated as follows: 32.04% Legend Holdings Corporation Note 1 Mr. Yang Note 2 61.05% Other directors Note 3 6.15% Others Note 4 0.76%",
+    "quote_found": true
+   },
+   {
+    "section": "p162",
+    "quote": "As at March 31, 2026, Legend Holdings, together with Right Lane, Kind Jasper, Legion Elite and Honorific Promise, directly or indirectly held 32.04% ordinary shares of the Company.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": 32.04,
+  "exposure_qualifier": "approximate"
+ },
+ {
+  "counterparty": "Alat Technologies",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "Alat Technologies",
+  "target": "0992",
+  "evidence": [
+   {
+    "section": "p162",
+    "quote": "By virtue of the SFO, Alat Technologies and PI Fund are deemed to be interested in the 1,559,181,636 ordinary shares held by Alat International.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Public Investment Fund",
+  "entity_type": "government",
+  "type": "invests",
+  "source": "Public Investment Fund",
+  "target": "0992",
+  "evidence": [
+   {
+    "section": "p162",
+    "quote": "By virtue of the SFO, Alat Technologies and PI Fund are deemed to be interested in the 1,559,181,636 ordinary shares held by Alat International.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fujitsu",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "Fujitsu",
+  "target": "Fujitsu Client Computing Limited",
+  "evidence": [
+   {
+    "section": "p165",
+    "quote": "Fujitsu Client Computing Limited (“FCCL”) is an indirect non-wholly-owned subsidiary of the Company, held as to 51% by the Group and 49% by Fujitsu.",
+    "quote_found": true
+   },
+   {
+    "section": "p224",
+    "quote": "Fujitsu currently owns 49% interest in FCCL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": 49,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Fujitsu",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "Fujitsu",
+  "evidence": [
+   {
+    "section": "p165",
+    "quote": "At or prior to the completion of the FCCL joint venture taking place on May 2, 2018, FCCL entered into various agreements with members of the Fujitsu Group to facilitate the operation of its business.",
+    "quote_found": true
+   },
+   {
+    "section": "p224",
+    "quote": "Pursuant to the joint venture agreement entered into between the Company and Fujitsu Limited (“Fujitsu”), the Company and Fujitsu are respectively granted call and put options which entitle the Company to purchase from Fujitsu and Development Bank of Japan (“DBJ”), or Fujitsu and DBJ to sell to the Company, the 49% interest in Fujitsu Client Computing Limited and its subsidiaries (together “FCCL”).",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fujitsu",
+  "entity_type": "public_company",
+  "type": "sells_to",
+  "source": "0992",
+  "target": "Fujitsu",
+  "evidence": [
+   {
+    "section": "p167",
+    "quote": "Services provided/received: FCCL agreed to supply Fujitsu-branded products and such other products as agreed between the parties and services to Fujitsu.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fujitsu",
+  "entity_type": "public_company",
+  "type": "supplies",
+  "source": "Fujitsu",
+  "target": "0992",
+  "evidence": [
+   {
+    "section": "p168",
+    "quote": "Services provided/received: Fujitsu granted FCCL licenses to use Fujitsu name and trademarks.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "Fujitsu Isotec",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "Fujitsu Isotec",
+  "target": "0992",
+  "evidence": [
+   {
+    "section": "p167",
+    "quote": "Services provided/received: FIT agreed to provide manufacturing services to FCCL.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "NEC",
+  "entity_type": "public_company",
+  "type": "partners",
+  "source": "0992",
+  "target": "NEC",
+  "evidence": [
+   {
+    "section": "p231",
+    "quote": "Pursuant to the joint venture agreement entered into with NEC Corporation, the Group is required to pay in cash to NEC Corporation deferred consideration.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ },
+ {
+  "counterparty": "AleveR Robotics",
+  "entity_type": "private_company",
+  "type": "invests",
+  "source": "0992",
+  "target": "AleveR Robotics",
+  "evidence": [
+   {
+    "section": "p213",
+    "quote": "The Group holds 12.4% (2025: 11.6%) equity interest in AleveR Robotics Limited and is considered to have significant influence through its participation in the board of directors.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": 12.4,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "Compal Electronics",
+  "entity_type": "public_company",
+  "type": "acquires",
+  "source": "Hefei Zhi Ju Sheng Bao Equity Investment",
+  "target": "JV Co",
+  "evidence": [
+   {
+    "section": "p224",
+    "quote": "During the year ended March 31, 2019, Hefei Zhi Ju Sheng Bao Equity Investment Co., Ltd (“ZJSB”) acquired the 49% interest in a joint venture company (“JV Co”) from Compal Electronics, Inc.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": 49,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "NEC Corporation",
+  "entity_type": "public_company",
+  "type": "invests",
+  "source": "NEC Corporation",
+  "target": "Lenovo NEC Holdings B.V.",
+  "evidence": [
+   {
+    "section": "p267",
+    "quote": "At March 31, 2026 and 2025, the Group held 95.10% in the ordinary shares of Lenovo NEC Holdings B.V., the immediate holding company of Lenovo Japan LLC and NEC Personal Computers, Ltd., while the remaining 4.90% ordinary shares and 42,700 deferred shares of Lenovo NEC Holdings B.V. were held by NEC Corporation.",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": 4.9,
+  "exposure_qualifier": "exact"
+ },
+ {
+  "counterparty": "PCCW Solutions",
+  "entity_type": "private_company",
+  "type": "supplies",
+  "source": "PCCW Solutions",
+  "target": "0992",
+  "evidence": [
+   {
+    "section": "p258",
+    "quote": "PCCW Solutions Limited (a subsidiary of an associate) — Services received",
+    "quote_found": true
+   }
+  ],
+  "document_url": null,
+  "document": "Lenovo Group Limited 2025/26 Annual Report",
+  "as_of": "2026-03-31",
+  "exposure_pct": null,
+  "exposure_qualifier": null
+ }
+]

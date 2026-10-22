@@ -1,0 +1,36 @@
+{
+ "ticker": "0992",
+ "edges_in": 24,
+ "edges_out": 24,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Alat Technologies",
+  "AleveR Robotics",
+  "Compal Electronics",
+  "DreamWorks",
+  "FIFA",
+  "Formula 1",
+  "Fujitsu",
+  "Fujitsu Client Computing Limited",
+  "Fujitsu Isotec",
+  "Hefei Zhi Ju Sheng Bao Equity Investment",
+  "Infinidat",
+  "JV Co",
+  "Legend Holdings",
+  "Lenovo NEC Holdings B.V.",
+  "NEC",
+  "Nscale",
+  "PCCW Solutions",
+  "Public Investment Fund",
+  "Qualcomm"
+ ],
+ "needs_review": [
+  {
+   "raw": "NEC Corporation",
+   "resolved": "NEC",
+   "how": "merged_new"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": []
+}

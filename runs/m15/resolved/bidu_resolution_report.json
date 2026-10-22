@@ -1,0 +1,51 @@
+{
+ "ticker": "BIDU",
+ "edges_in": 34,
+ "edges_out": 34,
+ "edges_merged": 0,
+ "new_nodes": [
+  "Alibaba",
+  "Alibaba Cloud",
+  "AutoGo",
+  "Bilibili",
+  "BlackRock",
+  "ByteDance",
+  "China Mobile",
+  "China Telecom",
+  "China Unicom",
+  "Du Xiaoman",
+  "Geely",
+  "Handsome Reward Limited",
+  "Huawei",
+  "Integrity Partners V",
+  "JOYY",
+  "Kingsoft Cloud",
+  "Mango TV",
+  "PAG",
+  "PPStream",
+  "PostBus",
+  "Tencent",
+  "Tencent Video",
+  "Trip",
+  "Trip.com",
+  "Volcano Engine",
+  "Xiaomi",
+  "YY Live",
+  "Youku",
+  "iQIYI"
+ ],
+ "needs_review": [
+  {
+   "raw": "Google",
+   "resolved": "Alphabet",
+   "how": "alias"
+  },
+  {
+   "raw": "Facebook",
+   "resolved": "Meta Platforms",
+   "how": "alias"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": []
+}

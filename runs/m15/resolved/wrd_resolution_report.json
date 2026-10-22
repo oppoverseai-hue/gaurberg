@@ -1,0 +1,50 @@
+{
+ "ticker": "WRD",
+ "edges_in": 48,
+ "edges_out": 47,
+ "edges_merged": 1,
+ "new_nodes": [
+  "AiDriver",
+  "Alliance Automotive R&D (Shanghai)",
+  "Alliance Automotive Research & Development (Shanghai)",
+  "Alliance Ventures",
+  "Alliance affiliates",
+  "Baiyun Taxi Group",
+  "Bosch",
+  "Chery",
+  "Dubai Roads and Transport Authority",
+  "ELEVATE Slovakia",
+  "Ecar Tech",
+  "GAC",
+  "GAC Capital International",
+  "Geely Farizon",
+  "Get Ride",
+  "Golden Dragon",
+  "Guangqizhixing Holdings",
+  "Guangzhou Yuji",
+  "Hyundai",
+  "JMC-Ford Motors",
+  "JSC International Investment Fund SPC",
+  "Lenovo Vehicle Computing",
+  "Nissan",
+  "Nissan Mobility Service",
+  "Ourland Environmental Technical",
+  "Qiming",
+  "Renault",
+  "Yuji",
+  "Yutong",
+  "Yutong Bus",
+  "Yutong entities",
+  "Zhengzhou Yutong Heavy Industries",
+  "ioki"
+ ],
+ "needs_review": [
+  {
+   "raw": "GAC Capital",
+   "resolved": "GAC Capital International",
+   "how": "merged_new"
+  }
+ ],
+ "direction_conflicts": [],
+ "dropped_not_focal": []
+}
