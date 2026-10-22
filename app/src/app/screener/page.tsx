@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
@@ -21,6 +22,20 @@ function monthChange(ticker: string): { pct: number; from: string } | null {
   return { pct: ((last.c - base.c) / base.c) * 100, from: new Date(base.t * 1000).toISOString().slice(0, 10) };
 }
 
+type Past = { id: number; filters: { segment?: string; size?: string; market?: string; dir?: string }; used_at: string };
+const DIRW: Record<string, string> = { up: "up over 1 month", down: "down over 1 month" };
+const label = (f: Past["filters"]) => [f.market ? MARKET_LABEL[f.market as Market] ?? f.market : "", f.segment ? f.segment[0].toUpperCase() + f.segment.slice(1) : "", f.size ? `${f.size} size` : "", f.dir ? DIRW[f.dir] : ""].filter(Boolean).join(" · ");
+const href = (f: Past["filters"]) => "/screener?" + new URLSearchParams(Object.entries(f).filter(([, v]) => v) as [string, string][]).toString();
+
+async function forget(fd: FormData) {
+  "use server";
+  const id = Number(fd.get("id"));
+  if (!Number.isFinite(id)) return;
+  const supabase = await supabaseServer();
+  await supabase.from("saved_screens").delete().eq("id", id);
+  revalidatePath("/screener");
+}
+
 export default async function Screener({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
   const access = await getAccess();
   if (access.state !== "ok") redirect("/");
@@ -37,6 +52,14 @@ export default async function Screener({ searchParams }: { searchParams: Promise
   const rows = cos.map((c) => ({ c, ch: monthChange(c.ticker!) }))
     .filter(({ c, ch }) => (!seg || c.segment === seg) && (!size || c.size_tier === size) && (!mkt || (c.markets ?? []).includes(mkt)) && (!dir || (ch && (dir === "up" ? ch.pct >= 0 : ch.pct < 0))))
     .sort((a, b) => (b.ch?.pct ?? -1e9) - (a.ch?.pct ?? -1e9) || a.c.name.localeCompare(b.c.name));
+  // Previous screens: remember this screen if it has a filter, then list the latest eight (this user only; row-level security).
+  let past: Past[] = [];
+  if (!isOffline()) {
+    const supabase = await supabaseServer();
+    const filters = { segment: seg, size, market: mkt, dir };
+    if (seg || size || mkt || dir) await supabase.from("saved_screens").upsert({ filters, filters_key: [seg, size, mkt, dir].join("|"), used_at: new Date().toISOString() }, { onConflict: "user_id,filters_key" });
+    past = ((await supabase.from("saved_screens").select("id,filters,used_at").order("used_at", { ascending: false }).limit(8)).data ?? []) as Past[];
+  }
   const withData = cos.filter((c) => monthChange(c.ticker!)).length;
   return (
     <main className="narrow">
@@ -50,6 +73,17 @@ export default async function Screener({ searchParams }: { searchParams: Promise
         <select name="dir" defaultValue={dir}><option value="">Any 1-month change</option><option value="up">Up over 1 month</option><option value="down">Down over 1 month</option></select>
         <button className="btn">Apply</button> <Link href="/screener" className="mono" style={{ fontSize: 12 }}>Reset</Link>
       </form>
+      {past.length > 0 && (
+        <div className="card">
+          <div className="cardhead"><h3>Previous screens</h3><span className="tag">{past.length}</span></div>
+          {past.map((p) => (
+            <div key={p.id} className="resrow" style={{ cursor: "default" }}>
+              <Link href={href(p.filters)} style={{ flex: 1 }}>{label(p.filters)} <span className="muted mono" style={{ fontSize: 11 }}>· last run {p.used_at.slice(0, 10)}</span></Link>
+              <form action={forget}><input type="hidden" name="id" value={p.id} /><button className="linkbtn" aria-label="Forget this screen" title="Forget this screen">×</button></form>
+            </div>
+          ))}
+        </div>
+      )}
       <div className="card">
         <div className="cardhead"><h3>Results</h3><span className="tag">{rows.length} companies</span></div>
         {!rows.length && <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>No company matches these filters.</p>}
