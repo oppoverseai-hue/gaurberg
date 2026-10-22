@@ -92,8 +92,14 @@ def main():
     if a.max_chunks:
         parts = parts[:a.max_chunks]
     out_dir = pathlib.Path(a.out or ROOT / "runs" / a.role); out_dir.mkdir(parents=True, exist_ok=True)
-    extra = ("Quotes must not include the '=== page N ===' marker lines and must stay inside one page when possible. "
-             "The company reports in its own annual report, so a customer, supplier or partner may be named only once; read the notes and the strategic report alike.")
+    extra = ("Extra rules for annual reports:\n"
+             "A. Quotes must not include the '=== page N ===' marker lines and must stay inside one page when possible. A counterparty may be named only once, so read the notes and the strategic report alike.\n"
+             "B. Leave out auditors, banks, brokers, depositaries, recruiters, law firms, remuneration consultants, charities, NGOs, industry bodies, publishers and training providers. "
+             "'supplies' means the other party supplies what the group sells or runs (network equipment, devices, cloud, towers, content, wholesale access), not advice or financial services.\n"
+             "C. When the group sells a business unit or subsidiary to a buyer, the type is acquires with source = the buyer and target = the unit as the text names it (for example the unit, not the group). "
+             "The group's own ticker is a target only when the whole group is bought. When the group sells a stake to a buyer, source = the buyer, target = the company whose stake is sold.\n"
+             "D. A legal claim, tax dispute or regulator is not a competitor, customer or supplier. Do not make a relationship between the group and its own subsidiaries.\n"
+             "E. Shareholders: include an investor that the text lists as holding shares in the group (invests, source = investor, target = the group).")
 
     def one(i_ch):
         i, ch = i_ch
