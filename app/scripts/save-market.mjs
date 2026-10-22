@@ -1,6 +1,7 @@
 // Save market data for offline demo mode and as the fallback when a live call fails (DEM-1, DEM-3).
 // Run while online, from the app folder:   node --env-file=.env scripts/save-market.mjs            (all mapped companies)
 //                                          node --env-file=.env scripts/save-market.mjs UBER LYFT   (some)
+//                                          add --no-history to refresh only quote, fundamentals, profile and next earnings (keeps saved price bars)
 // Needs FINNHUB_API_KEY and TWELVEDATA_API_KEY in .env. Writes data/market/<TICKER>.json. About text and employees are not on
 // Finnhub's free plan: add them by hand under "profile" (and set "source" to "manual" if you filled the file in yourself).
 import fs from "node:fs";
@@ -18,13 +19,14 @@ const td = async (symbol, interval) => {
   return j.values.map((v) => ({ t: Math.floor(Date.parse(v.datetime) / 1000), c: Number(v.close) })).filter((p) => Number.isFinite(p.t) && Number.isFinite(p.c));
 };
 const snap = JSON.parse(fs.readFileSync("data/snapshot.json", "utf8"));
-const wanted = process.argv.slice(2).map((s) => s.toUpperCase());
+const noHistory = process.argv.includes("--no-history"); // keep the daily/weekly bars already saved from the sheet exports
+const wanted = process.argv.slice(2).filter((s) => !s.startsWith("--")).map((s) => s.toUpperCase());
 const tickers = wanted.length ? wanted : snap.companies.filter((c) => c.is_seed && c.ticker).map((c) => c.ticker);
 fs.mkdirSync("data/market", { recursive: true });
 for (const t of tickers) {
   const file = `data/market/${t}.json`;
   const old = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : {};
-  const out = { ...old, saved_at: new Date().toISOString().slice(0, 10), source: "finnhub+twelvedata" };
+  const out = { ...old, saved_at: new Date().toISOString().slice(0, 10), source: noHistory ? (old.source ?? "manual") : "finnhub+twelvedata" };
   const note = [];
   try { const q = await fh("/quote", { symbol: t }); out.quote = { price: q.c, change: q.d, changePct: q.dp, high: q.h, low: q.l, open: q.o, prevClose: q.pc, t: q.t || null }; } catch (e) { note.push(String(e.message)); }
   try {
@@ -34,7 +36,7 @@ for (const t of tickers) {
     out.profile = { ...(old.profile ?? {}), exchange: str(p.exchange), industry: str(p.finnhubIndustry), website: str(p.weburl) };
   } catch (e) { note.push(String(e.message)); }
   try { const c = await fh("/calendar/earnings", { symbol: t, from: new Date().toISOString().slice(0, 10), to: new Date(Date.now() + 120 * 864e5).toISOString().slice(0, 10) }); out.nextEarnings = str(c.earningsCalendar?.[0]?.date); } catch (e) { note.push(String(e.message)); }
-  try { out.daily = await td(t, "1day"); await new Promise((r) => setTimeout(r, 8000)); out.weekly = await td(t, "1week"); await new Promise((r) => setTimeout(r, 8000)); } catch (e) { note.push(String(e.message)); }
+  if (!noHistory) try { out.daily = await td(t, "1day"); await new Promise((r) => setTimeout(r, 8000)); out.weekly = await td(t, "1week"); await new Promise((r) => setTimeout(r, 8000)); } catch (e) { note.push(String(e.message)); }
   fs.writeFileSync(file, JSON.stringify(out));
   console.log(t, note.length ? `saved with gaps: ${note.join("; ")}` : "saved");
 }
