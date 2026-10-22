@@ -1,0 +1,100 @@
+{
+ "ticker": "LENOVO",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "document": "Lenovo Group Limited 2025/26 Annual Report",
+ "as_of": "2026-03-31",
+ "chunks": 8,
+ "calls": [
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31191,
+   "cache_read_tokens": 12600,
+   "output_tokens": 654,
+   "cost_usd": 0.1356334,
+   "seconds": 7.7,
+   "is_error": false,
+   "chunk": 1
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 31533,
+   "cache_read_tokens": 12600,
+   "output_tokens": 533,
+   "cost_usd": 0.13582309999999997,
+   "seconds": 12.2,
+   "is_error": false,
+   "chunk": 2
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 30191,
+   "cache_read_tokens": 12600,
+   "output_tokens": 1039,
+   "cost_usd": 0.13538340000000001,
+   "seconds": 8.5,
+   "is_error": false,
+   "chunk": 3
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 33691,
+   "cache_read_tokens": 12600,
+   "output_tokens": 676,
+   "cost_usd": 0.1461034,
+   "seconds": 7.5,
+   "is_error": false,
+   "chunk": 4
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 34854,
+   "cache_read_tokens": 12600,
+   "output_tokens": 2288,
+   "cost_usd": 0.16699370000000002,
+   "seconds": 17.5,
+   "is_error": false,
+   "chunk": 5
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 32673,
+   "cache_read_tokens": 12600,
+   "output_tokens": 4,
+   "cost_usd": 0.13521160000000002,
+   "seconds": 4.8,
+   "is_error": false,
+   "chunk": 6
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 34707,
+   "cache_read_tokens": 12600,
+   "output_tokens": 807,
+   "cost_usd": 0.15158000000000002,
+   "seconds": 7.0,
+   "is_error": false,
+   "chunk": 7
+  },
+  {
+   "input_tokens": 2,
+   "cache_creation_tokens": 27432,
+   "cache_read_tokens": 12600,
+   "output_tokens": 475,
+   "cost_usd": 0.11843350000000001,
+   "seconds": 6.5,
+   "is_error": false,
+   "chunk": 8
+  }
+ ],
+ "totals": {
+  "input_tokens": 16,
+  "cache_creation_tokens": 256272,
+  "cache_read_tokens": 100800,
+  "output_tokens": 6476,
+  "cost_usd": 1.1251621,
+  "seconds": 71.7
+ },
+ "edges": 24,
+ "quotes_not_found": 0
+}
