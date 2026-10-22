@@ -10,7 +10,7 @@ export async function GET(req: Request) {
   const access = await getAccess();
   if (access.state !== "ok") return NextResponse.json({ error: "not allowed" }, { status: 403 });
   if (isOffline()) return NextResponse.json({ items: [], note: "Index prices are not saved for offline mode." });
-  const { items, probes } = await getIndices();
   const probe = new URL(req.url).searchParams.get("probe") === "1" && access.role === "admin";
+  const { items, probes } = await getIndices(probe);
   return NextResponse.json(probe ? { items, probes } : { items });
 }
