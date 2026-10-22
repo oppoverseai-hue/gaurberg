@@ -24,7 +24,7 @@ export async function getRels(companyId: number): Promise<{ rels: Rel[]; error: 
     return { rels: (s?.rels ?? []).filter((r) => r.source.id === companyId || r.target.id === companyId), error: !s };
   }
   const supabase = await supabaseServer();
-  const { data, error } = await supabase.from("relationships").select(REL_SEL).or(`source_id.eq.${companyId},target_id.eq.${companyId}`);
+  const { data, error } = await supabase.from("relationships").select(REL_SEL).neq("status", "rejected").or(`source_id.eq.${companyId},target_id.eq.${companyId}`);
   return { rels: (data ?? []) as unknown as Rel[], error: !!error };
 }
 
@@ -46,7 +46,7 @@ export async function getGeo(companyIds: number[]): Promise<{ geo: GeoMap; count
   if (isOffline() || companyIds.length === 0) return { geo: {}, countryRegion: {} };
   const supabase = await supabaseServer();
   const [g, c] = await Promise.all([
-    supabase.from("company_geo_revenue").select("company_id,country,label,bucket_region,revenue_pct,revenue_amount,currency,unit,period_end,pct_basis,status").in("company_id", companyIds).order("period_end", { ascending: false }),
+    supabase.from("company_geo_revenue").select("company_id,country,label,bucket_region,revenue_pct,revenue_amount,currency,unit,period_end,pct_basis,status").in("company_id", companyIds).neq("status", "rejected").order("period_end", { ascending: false }),
     supabase.from("country_region").select("country,region"),
   ]);
   const geo: GeoMap = {};
