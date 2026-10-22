@@ -1,6 +1,7 @@
 import { getAccess } from "@/lib/supabase/server";
 import LoginButton from "@/components/LoginButton";
 import LandingSearch from "@/components/LandingSearch";
+import IndexTicker from "@/components/IndexTicker";
 
 export const dynamic = "force-dynamic";
 
@@ -29,6 +30,7 @@ export default async function Home() {
             <form action="/auth/signout" method="post"><button className="btn">Sign out</button></form>
           </div>
           <LandingSearch />
+          <IndexTicker />
         </>
       )}
     </main>

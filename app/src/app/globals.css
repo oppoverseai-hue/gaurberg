@@ -141,3 +141,11 @@ table.fa td.trend { width:72px; text-align:center; } table.fa th:last-child { te
 .ls-row .mk { font:10px var(--mono); color:var(--fg2); border:1px solid var(--line); border-radius:3px; padding:1px 6px; }
 .ls-n { font:11px var(--mono); color:var(--muted); min-width:64px; text-align:right; }
 .ls-foot { display:flex; gap:16px; flex-wrap:wrap; padding:8px 14px; border-top:1px solid var(--line); background:var(--surface); font:10px var(--mono); color:var(--fg2); } .ls-foot kbd { margin-right:3px; }
+
+/* Index ticker: slow scroll, pauses on hover and for reduced motion */
+.ixbar { position:fixed; left:0; right:0; bottom:0; z-index:10; display:flex; align-items:center; background:var(--surface); border-top:1px solid var(--line); font:12px var(--mono); overflow:hidden; }
+.ix-track { display:flex; gap:40px; padding:8px 24px; white-space:nowrap; animation:ixmove 40s linear infinite; } .ixbar:hover .ix-track { animation-play-state:paused; }
+.ix { display:inline-flex; gap:10px; align-items:center; } .ix-n { color:var(--fg2); } .ix-p { color:var(--fg); font-feature-settings:"tnum" 1; } .ix-up { color:var(--up); } .ix-dn { color:var(--down); }
+.ix-note { margin-left:auto; padding:8px 12px; color:var(--muted); background:var(--surface); border-left:1px solid var(--line); position:relative; }
+@keyframes ixmove { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+@media (prefers-reduced-motion:reduce) { .ix-track { animation:none; overflow-x:auto; } }
