@@ -28,7 +28,7 @@ export async function suggest(q: string, limit = 6): Promise<Suggestion[]> {
     cos = (data ?? []) as C[];
     const ids = cos.map((c) => c.id);
     if (!ids.length) return [];
-    const { data: rs } = await supabase.from("relationships").select("source_id,target_id").or(`source_id.in.(${ids.join(",")}),target_id.in.(${ids.join(",")})`).limit(5000);
+    const { data: rs } = await supabase.from("relationships").select("source_id,target_id").neq("status", "rejected").or(`source_id.in.(${ids.join(",")}),target_id.in.(${ids.join(",")})`).limit(5000);
     pairs = (rs ?? []) as { source_id: number; target_id: number }[];
   }
   const count = new Map<number, number>();
