@@ -447,6 +447,48 @@
    "priority": "M",
    "job": "J10",
    "group": "UX-7"
+  },
+  {
+   "id": "FIN-1",
+   "what": "The statements live on their own Financials tab of the company page, so the overview stays simple",
+   "priority": "S",
+   "job": "J11",
+   "group": "FIN-1"
+  },
+  {
+   "id": "FIN-2",
+   "what": "One compact table with the last 4 fiscal years plus LTM and a toggle for income statement, balance sheet and cash flow",
+   "priority": "S",
+   "job": "J11",
+   "group": "FIN-2"
+  },
+  {
+   "id": "FIN-3",
+   "what": "Growth and margin in dimmer sub-rows; EBITDA, free cash flow, EV, margins and LTM are derived and labelled as derived",
+   "priority": "S",
+   "job": "J11",
+   "group": "FIN-3"
+  },
+  {
+   "id": "FIN-4",
+   "what": "No estimate columns and no invented numbers; untagged lines show n/a and companies without a 10-K show Sample",
+   "priority": "M",
+   "job": "J11",
+   "group": "FIN-4"
+  },
+  {
+   "id": "FIN-5",
+   "what": "A Segments toggle with revenue by segment from the latest 10-K, shown only when it adds up to total revenue",
+   "priority": "C",
+   "job": "J11",
+   "group": "FIN-5"
+  },
+  {
+   "id": "FIN-6",
+   "what": "A small chart icon on each row that graphs that line",
+   "priority": "C",
+   "job": "J11",
+   "group": "FIN-6"
   }
  ],
  "job_milestones": {
@@ -459,6 +501,7 @@
   "J7": "M9",
   "J8": "M10, only if time allows",
   "J9": "M8",
-  "J10": "M1, M7 and M11"
+  "J10": "M1, M7 and M11",
+  "J11": "M10"
  }
 }
