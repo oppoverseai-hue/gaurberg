@@ -1,0 +1,17 @@
+chunk 2/16: 1 items, in=42869 out=167 $0.1270 7.1s
+chunk 1/16: 1 items, in=48755 out=526 $0.1547 10.2s
+chunk 3/16: 3 items, in=39422 out=393 $0.1151 10.7s
+chunk 5/16: 0 items, in=40647 out=4 $0.1162 4.5s
+chunk 4/16: 3 items, in=39583 out=418 $0.1160 7.9s
+chunk 8/16: 0 items, in=39376 out=129 $0.1123 4.9s
+chunk 6/16: 8 items, in=41566 out=1197 $0.1319 9.3s
+chunk 9/16: 0 items, in=40048 out=153 $0.1153 7.3s
+chunk 10/16: 3 items, in=42012 out=548 $0.1273 7.6s
+chunk 7/16: 15 items, in=40861 out=2170 $0.1388 16.5s
+chunk 11/16: 2 items, in=43470 out=755 $0.1353 8.1s
+chunk 13/16: 1 items, in=46657 out=717 $0.1480 9.0s
+chunk 12/16: 5 items, in=42157 out=1760 $0.1400 13.1s
+chunk 16/16: 1 items, in=45821 out=570 $0.1431 8.6s
+chunk 15/16: 3 items, in=44931 out=418 $0.1379 10.7s
+chunk 14/16: 1 items, in=45574 out=710 $0.1435 28.5s
+BIDU extractor (claude-sonnet-5-5): 34 edges, tokens in=683749 out=10635 cost=$2.1024
