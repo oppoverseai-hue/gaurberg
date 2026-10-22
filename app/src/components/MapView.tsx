@@ -148,6 +148,26 @@ export default function MapView({ focal, rels: allRels, isAdmin }: { focal: Co; 
 
 function Badge({ rel }: { rel: Rel }) { const b = badgeOf(rel); return <span className={`badge ${b.cls}`}><span aria-hidden>{glyph(b.cls)}</span>{b.label}</span>; }
 
+type Headline = { item: { headline: string; source: string; ts: number; url: string } | null; note: string | null };
+function HeadlineLine({ co }: { co: Co }) {
+  const [h, setH] = useState<Headline | null>(null);
+  const [err, setErr] = useState(false);
+  useEffect(() => {
+    setH(null); setErr(false);
+    if (!co.ticker) return;
+    fetch(`/api/headline/${co.ticker}`).then((r) => (r.ok ? r.json() : Promise.reject())).then(setH).catch(() => setErr(true));
+  }, [co.ticker]);
+  if (!co.ticker) return <div className="r"><span>{co.name}</span><span className="muted">Not listed, no news feed</span></div>;
+  const day = h?.item ? new Date(h.item.ts * 1000).toISOString().slice(0, 10) : "";
+  return (
+    <div className="r"><span>{co.name}</span>
+      <span>{err ? <span className="warn">News unavailable</span> : !h ? <span className="muted">Loading…</span> : h.item
+        ? <Link href={`/company/${co.ticker}#news`}>{h.item.headline} <span className="muted">· {h.item.source} · {day}</span></Link>
+        : <span className="muted">{h.note}</span>}</span>
+    </div>
+  );
+}
+
 function LinkPanel({ rel, onClose }: { rel: Rel; onClose: () => void }) {
   const active = badgeOf(rel).label;
   return (
@@ -181,6 +201,11 @@ function LinkPanel({ rel, onClose }: { rel: Rel; onClose: () => void }) {
               {e.document_url && <a href={e.document_url} target="_blank" rel="noreferrer">View source ↗</a>}</footer>
           </blockquote>
         ))}
+      </div>
+      <div className="attrs">
+        <div className="h">Latest news, last 7 days</div>
+        <HeadlineLine co={rel.source} />
+        <HeadlineLine co={rel.target} />
       </div>
       <div className="disc">Shows a disclosed relationship, not a prediction. The panel shows what the sources say. It does not say a news item or price move caused a link.</div>
     </div>
