@@ -28,9 +28,15 @@ async function forget(fd: FormData) {
 
 function Spark({ v, up }: { v: number[]; up: boolean }) {
   if (v.length < 2) return null;
-  const w = 80, h = 22, lo = Math.min(...v), hi = Math.max(...v), r = hi - lo || 1;
-  const pts = v.map((y, i) => `${((i / (v.length - 1)) * w).toFixed(1)},${(h - 2 - ((y - lo) / r) * (h - 4)).toFixed(1)}`).join(" ");
-  return <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true"><polyline points={pts} fill="none" stroke={up ? "var(--up)" : "var(--down)"} strokeWidth="1.5" strokeLinejoin="round" /></svg>;
+  const w = 200, h = 34, lo = Math.min(...v), hi = Math.max(...v), r = hi - lo || 1;
+  const P = v.map((y, i) => [(i / (v.length - 1)) * w, h - 3 - ((y - lo) / r) * (h - 6)] as const);
+  // Smooth line: Catmull-Rom converted to cubic curves.
+  let d = `M${P[0][0].toFixed(1)},${P[0][1].toFixed(1)}`;
+  for (let i = 0; i < P.length - 1; i++) {
+    const p0 = P[i - 1] ?? P[i], p1 = P[i], p2 = P[i + 1], p3 = P[i + 2] ?? p2;
+    d += `C${(p1[0] + (p2[0] - p0[0]) / 6).toFixed(1)},${(p1[1] + (p2[1] - p0[1]) / 6).toFixed(1)} ${(p2[0] - (p3[0] - p1[0]) / 6).toFixed(1)},${(p2[1] - (p3[1] - p1[1]) / 6).toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true" className="scr-spark"><path d={d} fill="none" stroke={up ? "var(--up)" : "var(--down)"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
 
 export default async function Screener({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
@@ -62,7 +68,7 @@ export default async function Screener({ searchParams }: { searchParams: Promise
           <h1>Screener</h1>
           <p className="muted">{rows.length} of {total} mapped companies · {up} up over 1 month · {withData} with saved price history</p>
         </div>
-        <a className="btn" href={exportHref}>Export CSV</a>
+        <a className="btn scr-export" href={exportHref}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" /></svg>Export CSV</a>
       </div>
 
       <div className="scr-bar">
@@ -101,7 +107,7 @@ export default async function Screener({ searchParams }: { searchParams: Promise
                 <th><Link href={sortHref("name")}>Company{arrow("name")}</Link></th>
                 <th className="num"><Link href={sortHref("links")}>Links{arrow("links")}</Link></th>
                 <th className="num"><Link href={sortHref("ret")}>1M change{arrow("ret")}</Link></th>
-                <th>30-day trend</th>
+                <th className="scr-trend">30-day trend</th>
                 <th aria-label="Actions" />
               </tr>
             </thead>
@@ -116,7 +122,7 @@ export default async function Screener({ searchParams }: { searchParams: Promise
                   <td className="num mono" style={{ color: ch ? (ch.pct >= 0 ? "var(--up)" : "var(--down)") : "var(--fg2)" }}>
                     {ch ? <>{ch.pct >= 0 ? "+" : ""}{ch.pct.toFixed(1)}%<span className="muted scr-sub">since {ch.from}</span></> : <span className="muted">no saved price history</span>}
                   </td>
-                  <td>{spark && ch ? <Spark v={spark} up={ch.pct >= 0} /> : null}</td>
+                  <td className="scr-trend">{spark && ch ? <Spark v={spark} up={ch.pct >= 0} /> : null}</td>
                   <td className="num"><Link href={`/map/${c.ticker}`} className="mono scr-map">Map →</Link></td>
                 </tr>
               ))}

@@ -209,3 +209,23 @@ main.hero > p.muted { color:var(--fg2); }
 .scr-table tbody tr{position:relative}
 .scr-sub{display:block;font-size:11px}
 .scr-map{position:relative;z-index:1;font-size:12px}
+
+/* Screener: roomier layout (reference design) */
+main.scr{max-width:1200px;padding-top:36px}
+.scr-head{margin-bottom:22px}.scr-head h1{font-size:30px}
+.scr-export{display:inline-flex;align-items:center;gap:8px;padding:9px 16px}
+.scr-bar{gap:14px;margin-bottom:20px}
+.scr-scope{padding:3px;border-radius:10px;background:rgba(255,255,255,.02)}
+.scr-scope a{padding:6px 14px;border-radius:7px}
+.scr-filters select{appearance:none;-webkit-appearance:none;padding:9px 34px 9px 14px;border-radius:8px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238b98a5' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.scr-card{border-radius:12px;background:rgba(255,255,255,.015)}
+.scr-table th{padding:16px 24px;font-family:var(--mono,"JetBrains Mono",monospace);font-size:11px;letter-spacing:.1em}
+.scr-table td{padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.05)}
+.scr-table tbody tr:last-child td{border-bottom:0}
+.scr-name strong{font-size:15px;font-weight:600}
+.scr-sub{margin-top:4px;font-size:11.5px;letter-spacing:.02em}
+.scr-table td.num{font-size:15px}
+.scr-table td.num .scr-sub{font-size:11px;color:var(--fg2)}
+.scr-trend{width:240px}.scr-spark{display:block}
+.scr-map{color:var(--accent);font-size:13px;white-space:nowrap}
+@media(max-width:820px){.scr-trend{display:none}.scr-table td,.scr-table th{padding:12px 14px}}
