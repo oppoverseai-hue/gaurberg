@@ -485,7 +485,7 @@
   },
   {
    "id": "FIN-6",
-   "what": "A small chart icon on each row that graphs that line",
+   "what": "A small trend line on each row (a Trend column) that graphs that line across the periods shown",
    "priority": "C",
    "job": "J11",
    "group": "FIN-6"
