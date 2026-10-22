@@ -25,6 +25,7 @@ from run_report import pages_from_pdf, pages_from_html  # noqa: E402
 SYSTEM = "You extract revenue by country or region from company reports for a market-data product. You output JSON only."
 SYN = {"türkiye": "TR", "turkiye": "TR", "uk": "GB", "u.k.": "GB", "usa": "US", "u.s.": "US", "mainland china": "CN", "prc": "CN",
        "republic of ireland": "IE", "korea": "KR", "czech republic": "CZ"}
+BUCKETS = ["north america", "western europe", "rest of europe", "other europe", "asia pacific", "rest of world", "middle east", "americas", "emea", "international"]
 REGIONS = ["North America", "Latin America", "Europe", "MENA", "Sub-Saharan Africa", "APAC"]
 
 
@@ -42,7 +43,10 @@ def pick_pages(pages, cmap, top):
         low = p.lower()
         if not re.search(r"\b(revenue|sales)\b", low):
             continue
+        if re.search(r"(revenue|sales)[^.]{0,40}by (geograph\w+|region\w*|countr\w+|location|market)|(geograph\w+|region\w*) (analysis|split|breakdown) of (revenue|sales)", low):
+            scored.append((50, i)); continue  # an explicitly titled revenue-by-geography table always goes in
         found = {c for n, c in cmap.items() if re.search(r"(?<![a-z])" + re.escape(n) + r"(?![a-z])", low)}
+        found |= {b for b in BUCKETS if re.search(r"(?<![a-z])" + re.escape(b) + r"(?![a-z])", low)}  # named buckets count as places too
         if len(found) >= 3:
             scored.append((len(found) + min(low.count("revenue"), 10) / 5, i))
     keep = sorted(i for _, i in sorted(scored, reverse=True)[:top])

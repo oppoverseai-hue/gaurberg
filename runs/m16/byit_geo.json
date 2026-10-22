@@ -1,0 +1,82 @@
+{
+ "ticker": "BYIT",
+ "document": "Bytes Technology Group Annual Report and Accounts 2025/26",
+ "as_of": "2026-02-28",
+ "role": "extractor",
+ "model": "claude-sonnet-5-5",
+ "pages_sent": [
+  163
+ ],
+ "rows": [
+  {
+   "label": "United Kingdom",
+   "country": "GB",
+   "bucket_region": null,
+   "revenue_amount": 211904,
+   "unit": "k",
+   "currency": "GBP",
+   "revenue_pct": 96.07,
+   "page": 163,
+   "quote": "United Kingdom Europe Rest of world",
+   "quote_found": true,
+   "period_end": "2026-02-28",
+   "amount_on_page": true,
+   "pct_basis": "computed",
+   "note": "Amounts are in thousands (the report prints £'000). Year ended 28 February 2026. Quote holds the row labels only because the PDF prints labels apart from figures; the figure was checked against the cited page."
+  },
+  {
+   "label": "Europe",
+   "country": null,
+   "bucket_region": "Europe",
+   "revenue_amount": 4988,
+   "unit": "k",
+   "currency": "GBP",
+   "revenue_pct": 2.26,
+   "page": 163,
+   "quote": "United Kingdom Europe Rest of world",
+   "quote_found": true,
+   "period_end": "2026-02-28",
+   "amount_on_page": true,
+   "pct_basis": "computed",
+   "note": "Amounts are in thousands (the report prints £'000). Year ended 28 February 2026. Quote holds the row labels only because the PDF prints labels apart from figures; the figure was checked against the cited page."
+  },
+  {
+   "label": "Rest of world",
+   "country": null,
+   "bucket_region": null,
+   "revenue_amount": 3670,
+   "unit": "k",
+   "currency": "GBP",
+   "revenue_pct": 1.66,
+   "page": 163,
+   "quote": "United Kingdom Europe Rest of world",
+   "quote_found": true,
+   "period_end": "2026-02-28",
+   "amount_on_page": true,
+   "pct_basis": "computed",
+   "note": "Amounts are in thousands (the report prints £'000). Year ended 28 February 2026. Quote holds the row labels only because the PDF prints labels apart from figures; the figure was checked against the cited page."
+  }
+ ],
+ "total": {
+  "revenue_amount": 220562,
+  "quote": "Total revenue from contracts with customers 220,562 217,134",
+  "page": 163,
+  "quote_found": true,
+  "rows_sum": 220562,
+  "rows_add_up": true,
+  "share_of_total_rows": 100.0
+ },
+ "note": "Latest year is the year ended 28 February 2026, not 31 March 2026. Amounts are in £'000 (the unit field says 'm' only because the schema allows 'm' or 'bn'). The table text is garbled: labels are printed apart from the figures. I took the first of the two columns of three figures (211,904; 4,988; 3,670) as the 2026 column. It sums to 220,562, which matches the stated total. The prior-year column (209,854; 4,112; 3,168) is excluded. The quote fields hold the label line only because the figures are printed separately from it in the text.",
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_tokens": 3209,
+  "cache_read_tokens": 12601,
+  "output_tokens": 1193,
+  "cost_usd": 0.0264384,
+  "seconds": 10.5,
+  "is_error": false
+ },
+ "quotes_not_found": 0,
+ "amounts_not_on_page": 0,
+ "unit_correction": "unit set to k (thousands) by hand from the model's own note"
+}
