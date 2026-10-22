@@ -1,0 +1,14 @@
+{
+ "symbol": "VOD.L",
+ "endpoints": {
+  "profile2": "HTTP 403 (not on the free plan)",
+  "metric": "HTTP 403 (not on the free plan)",
+  "recommendation": "HTTP 403 (not on the free plan)",
+  "calendar/earnings": "HTTP 403 (not on the free plan)"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-22T16:45:22.218147+00:00",
+ "fetch_finished": "2026-10-22T16:45:26.731825+00:00",
+ "status": "failed: profile2 HTTP 403 (not on the free plan); metric HTTP 403 (not on the free plan); recommendation HTTP 403 (not on the free plan); calendar/earnings HTTP 403 (not on the free plan)",
+ "events": 0
+}
