@@ -1,0 +1,3 @@
+chunk 2/12: 4 items, in=42186 out=711 $0.1296 9.9s
+chunk 3/12: 0 items, in=38709 out=4 $0.1083 10.8s
+chunk 1/12: 1 items, in=51178 out=591 $0.1653 10.9s
