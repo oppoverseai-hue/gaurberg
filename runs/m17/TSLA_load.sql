@@ -1,0 +1,9 @@
+do $do$
+declare run_id bigint; cid bigint;
+begin
+select id into cid from public.companies where ticker=$q$TSLA$q$;
+if cid is null then raise exception 'company % not found', $q$TSLA$q$; end if;
+insert into public.agent_runs(agent_name,mode,target,model,tokens_in,tokens_out,cost_usd,started_at,finished_at,status,review_status) values ('market_data','batch',$q$TSLA Finnhub metric, recommendation trends, earnings calendar (M17)$q$,'none (Finnhub API, no model call)',0,0,0,$q$2026-10-24T06:44:33.413192+00:00$q$::timestamptz,$q$2026-10-24T06:44:37.879107+00:00$q$::timestamptz,$q$completed_with_gaps$q$,'unreviewed') returning id into run_id;
+insert into public.company_metrics(company_id,as_of,data_period,pe_ttm,ev_ebitda,gross_margin,operating_margin,net_margin,revenue_growth_yoy,debt_to_equity,rec_period,rec_strong_buy,rec_buy,rec_hold,rec_sell,rec_strong_sell,source,fetched_at,status,run_id,note) values (cid,$q$2026-10-24$q$::date,$q$2026-09-30$q$::date,459.818,142.0541,19.29,3.35,3.11,8.3,0.1067,$q$2026-10-01$q$::date,10,17,22,5,0,'finnhub',$q$2026-10-24T06:44:37.879107+00:00$q$::timestamptz,'staged',run_id,null) on conflict (company_id,as_of,source) do update set data_period=excluded.data_period,pe_ttm=excluded.pe_ttm,ev_ebitda=excluded.ev_ebitda,gross_margin=excluded.gross_margin,operating_margin=excluded.operating_margin,net_margin=excluded.net_margin,revenue_growth_yoy=excluded.revenue_growth_yoy,debt_to_equity=excluded.debt_to_equity,rec_period=excluded.rec_period,rec_strong_buy=excluded.rec_strong_buy,rec_buy=excluded.rec_buy,rec_hold=excluded.rec_hold,rec_sell=excluded.rec_sell,rec_strong_sell=excluded.rec_strong_sell,fetched_at=excluded.fetched_at,run_id=excluded.run_id,note=excluded.note where public.company_metrics.status='staged';
+delete from public.company_events where company_id=cid and source='finnhub' and status='staged' and event_date>=$q$2026-10-24$q$::date and event_date not in (null);
+end $do$;

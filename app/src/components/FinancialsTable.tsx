@@ -38,7 +38,7 @@ export default function FinancialsTable({ fin, marketCap, shares }: { fin: Finan
   const head = (lbls: { label: string; kind?: string }[]) => lbls.map((c) => <th key={c.label} className={c.kind === "LTM" ? "ltm" : ""}>{c.label}</th>);
   const body = (rs: FinRow[], lbls: string[]) => rs.flatMap((r) => [
     <tr key={r.label}>
-      <td>{r.label}</td>
+      <td title={r.note}>{r.label}{r.note && <sup className="muted" aria-hidden="true"> *</sup>}</td>
       {r.values.map((v, i) => <td key={i} className={`${v == null ? "muted" : ""} ${lbls[i]?.startsWith("LTM") ? "ltm" : ""}`}>{cell(v, r.fmt)}</td>)}
       <td className="trend"><Spark values={r.values} /></td>
     </tr>,
@@ -63,7 +63,7 @@ export default function FinancialsTable({ fin, marketCap, shares }: { fin: Finan
         <div className="fa-wrap"><table className="fa">
           <thead><tr><th>USD, millions except EPS</th>{head(cols)}<th>Trend</th></tr></thead>
           <tbody>{body(rows, labels)}</tbody>
-        </table>{tab === "bs" && (fin.flags ?? []).map((f) => <p key={f} className="muted mono" style={{ fontSize: 11, color: "#fbbf24", margin: "6px 0 0" }}>⚠ {f}</p>)}</div>
+        </table>{rows.filter((r) => r.note).map((r) => <p key={r.label} className="muted mono" style={{ fontSize: 10, margin: "6px 0 0" }}>* {r.label}: {r.note}</p>)}{tab === "bs" && (fin.flags ?? []).map((f) => <p key={f} className="muted mono" style={{ fontSize: 11, color: "#fbbf24", margin: "6px 0 0" }}>⚠ {f}</p>)}</div>
       )}
     </>
   );

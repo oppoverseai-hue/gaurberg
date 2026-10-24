@@ -36,7 +36,7 @@ Uber,Uber Technologies,same_entity,"Duplicate node 429 merged into UBER (runs/m1
 AMD,Advanced Micro Devices,same_entity,"Duplicate node 524 merged into AMD (runs/m17/merge_duplicates.sql)"
 Neeva Inc.,Neeva,same_entity,"Duplicate node 290 merged into 287 (runs/m17/merge_duplicates.sql)"
 Trip,Trip.com,same_entity,"Duplicate node 490 merged into 494 (runs/m17/merge_duplicates.sql)"
-SAIC Motor,SAIC,same_entity,"Duplicate node 471 merged into 465 (runs/m17/merge_duplicates.sql)"
+SAIC,SAIC Motor,same_entity,"Duplicate node 471 merged into 465, which is renamed SAIC Motor (runs/m17/merge_duplicates.sql, runs/m17/rename_saic.sql)"
 Yutong,Yutong Bus,same_entity,"Duplicate node 447 merged into 451 (runs/m17/merge_duplicates.sql)"
 Yutong entities,Yutong Bus,same_entity,"Duplicate node 440 merged into 451 (runs/m17/merge_duplicates.sql)"
 Cyantron,"Cyantron Logistics Technology Co., Ltd.",same_entity,"Duplicate node 469 merged into 468 (runs/m17/merge_duplicates.sql)"

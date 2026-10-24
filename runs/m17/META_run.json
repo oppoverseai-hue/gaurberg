@@ -1,0 +1,14 @@
+{
+ "symbol": "META",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "empty"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-24T06:43:58.369690+00:00",
+ "fetch_finished": "2026-10-24T06:44:02.537293+00:00",
+ "status": "completed_with_gaps",
+ "events": 0
+}

@@ -1,0 +1,14 @@
+{
+ "symbol": "ORCL",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-24T06:44:20.385602+00:00",
+ "fetch_finished": "2026-10-24T06:44:24.614153+00:00",
+ "status": "completed",
+ "events": 1
+}

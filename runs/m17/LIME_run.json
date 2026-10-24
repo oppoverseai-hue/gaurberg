@@ -1,0 +1,22 @@
+{
+ "symbol": "LIME",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [
+  "peTTM",
+  "evEbitdaTTM",
+  "grossMarginTTM",
+  "operatingMarginTTM",
+  "netProfitMarginTTM",
+  "revenueGrowthTTMYoy",
+  "totalDebt/totalEquityQuarterly"
+ ],
+ "fetch_started": "2026-10-24T06:43:49.584962+00:00",
+ "fetch_finished": "2026-10-24T06:43:53.709431+00:00",
+ "status": "completed_with_gaps",
+ "events": 1
+}

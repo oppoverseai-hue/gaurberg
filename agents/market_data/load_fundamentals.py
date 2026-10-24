@@ -179,9 +179,9 @@ def build_sql(sym, run, metrics, events, today):
                  f"on conflict (company_id,as_of,source) do update set {upd} where public.company_metrics.status='staged';")
     if eps["calendar/earnings"] in ("ok", "empty"):
         # The calendar is the current truth: drop staged future dates it no longer lists (a moved date), then upsert.
-        keep = ",".join(q(e["event_date"]) + "::date" for e in events) or "null"
+        keep = ",".join(q(e["event_date"]) + "::date" for e in events)
         L.append(f"delete from public.company_events where company_id=cid and source='finnhub' and status='staged' "
-                 f"and event_date>={q(str(today))}::date and event_date not in ({keep});")
+                 f"and event_date>={q(str(today))}::date" + (f" and event_date not in ({keep});" if keep else ";"))
         for e in events:
             L.append("insert into public.company_events(company_id,event_date,event_type,detail,source,fetched_at,status,run_id) values "
                      f"(cid,{q(e['event_date'])}::date,'earnings',{q(e['detail'])},'finnhub',{q(run['fetch_finished'])}::timestamptz,'staged',run_id) "

@@ -1,0 +1,14 @@
+{
+ "symbol": "LYFT",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-24T06:43:53.710784+00:00",
+ "fetch_finished": "2026-10-24T06:43:58.367688+00:00",
+ "status": "completed",
+ "events": 1
+}
