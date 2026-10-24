@@ -8,7 +8,10 @@
 --                    today or later that this run no longer lists is set to rejected (the date moved or was dropped).
 --                    Skipped for a company whose latest run reports a failed calendar call (status names calendar/earnings),
 --                    so a failed call is never read as "no upcoming events".
---   agent_runs:      those runs, and failed market_data runs (no rows to review), -> review_status 'reviewed', reviewer = admin.
+--   agent_runs:      those runs, failed market_data runs (no rows to review), and pilot runs 65, 66, 68 (their six rows were
+--                    promoted earlier by the admin's own SQL) -> review_status 'reviewed', reviewer = admin.
+-- AUR lists two earnings dates (2026-10-28 "Q3 2027" and 2026-11-04 "Q3 2026"); both stay staged until the admin checks
+-- ir.aurora.tech. To reject one, uncomment the line marked AUR inside the block and set the wrong date.
 -- Never touches companies or relationships. Staged rows from earlier runs are left staged (not shown to reviewers).
 -- Prints before/after counts per company.
 
@@ -22,6 +25,9 @@ declare
   r record; listed date[];
 begin
   if approved_on is null then raise exception 'set approved_on to the admin approval date before running'; end if;
+
+  -- AUR: reject the wrong earnings date before promoting (admin to fill in after checking ir.aurora.tech).
+  -- update public.company_events set status = 'rejected' where company_id = (select id from public.companies where ticker = 'AUR') and event_date = 'YYYY-MM-DD' and status = 'staged';
 
   create temp table _latest on commit drop as
     select distinct on (c.id) c.id as company_id, c.ticker, a.id as run_id, a.status
@@ -57,7 +63,7 @@ begin
 
   update public.agent_runs set review_status = 'reviewed', reviewer = admin
   where agent_name = 'market_data' and review_status = 'unreviewed'
-    and (id in (select run_id from _latest) or status like 'failed%');
+    and (id in (select run_id from _latest) or status like 'failed%' or id in (65, 66, 68));
 
   insert into _pm select 'after', l.ticker, l.run_id,
     (select count(*) from public.company_metrics m where m.company_id = l.company_id and m.status = 'staged'),
