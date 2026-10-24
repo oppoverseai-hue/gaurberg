@@ -99,6 +99,13 @@
    "group": "GRF-15"
   },
   {
+   "id": "GRF-16",
+   "what": "Connection finder: pick two companies and see how they are connected. Direct links first, each with its quote and page; otherwise paths of up to 2 hops through a shared counterparty, labelled \"indirect (via X)\"; otherwise \"No documented connection in our sources.\" Promoted links only; every hop shows its link type and source",
+   "priority": "S",
+   "job": "J1",
+   "group": "GRF-16"
+  },
+  {
    "id": "LIV-4",
    "what": "Partnerships found in news are added to a live lookup",
    "priority": "C",
