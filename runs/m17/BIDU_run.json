@@ -1,0 +1,16 @@
+{
+ "symbol": "BIDU",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [
+  "peTTM"
+ ],
+ "fetch_started": "2026-10-24T05:31:35.480285+00:00",
+ "fetch_finished": "2026-10-24T05:31:40.637292+00:00",
+ "status": "completed_with_gaps",
+ "events": 1
+}

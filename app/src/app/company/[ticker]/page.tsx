@@ -28,7 +28,7 @@ function MetricsStrip({ mt, us }: { mt: Metrics | null; us: boolean }) {
   const x = (v: number | null) => (v == null ? null : `${v.toFixed(1)}x`);
   const recs = mt.rec_period == null ? null : [["Strong buy", mt.rec_strong_buy], ["Buy", mt.rec_buy], ["Hold", mt.rec_hold], ["Sell", mt.rec_sell], ["Strong sell", mt.rec_strong_sell]] as const;
   const tiles: [string, string | null][] = [
-    ["P/E (TTM)", x(mt.pe_ttm)], ["EV / EBITDA (TTM)", x(mt.ev_ebitda)], ["Gross margin (TTM)", pct(mt.gross_margin)],
+    ["P/E (TTM)", x(mt.pe_ttm)], ["EV / EBITDA (TTM)", x(mt.ev_ebitda)], ["Operating margin (TTM)", pct(mt.operating_margin)],
     ["Net margin (TTM)", pct(mt.net_margin)], ["Revenue growth (YoY, TTM)", pct(mt.revenue_growth_yoy)], ["Debt to equity", n2(mt.debt_to_equity)],
   ];
   return (

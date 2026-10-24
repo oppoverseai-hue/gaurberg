@@ -112,7 +112,7 @@ function build(cf) {
     is: [
       line("Revenue", rev, "usd", [pctRow("Growth, YoY", yoy(rev))]),
       line("Cost of revenue", val.costRev, "usd", [pctRow("% of revenue", ratio(val.costRev, rev))]),
-      line(gpDerived ? "Gross profit (derived: revenue - cost of revenue as tagged)" : "Gross profit", gp, "usd", [pctRow("Gross margin", ratio(gp, rev))]),
+      line(gpDerived ? "Gross profit (derived: revenue - cost of revenue as the filer tags it; may exclude D&A, so it can differ from data-service gross margin)" : "Gross profit", gp, "usd", [pctRow("Gross margin", ratio(gp, rev))]),
       ...[["Research and development", val.rd], ["Sales and marketing", val.sm], ["General and administrative", val.ga], ["Selling, general and administrative", val.sga]].filter(([, v]) => v.some((x) => x != null)).map(([l, v]) => line(l, v, "usd", [pctRow("% of revenue", ratio(v, rev))])),
       line("EBITDA (derived: operating income + D&A)", ebitda, "usd", [pctRow("EBITDA margin", ratio(ebitda, rev))]),
       line("Operating income", val.opIncome, "usd", [pctRow("Operating margin", ratio(val.opIncome, rev))]),

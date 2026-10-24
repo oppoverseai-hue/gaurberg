@@ -7,7 +7,8 @@ For each symbol it calls /stock/profile2, /stock/metric?metric=all, /stock/recom
 then writes two files to --out:
   <TICKER>_load.sql  writes STAGED rows only (company_metrics, company_events) and one agent_runs row. Apply it to Supabase
                      the same way as the other agents' load SQL. Re-running is safe: metrics upsert on company_id + as_of + source,
-                     and staged future earnings rows for the company are replaced. Promoted or rejected rows are never touched.
+                     and staged future earnings rows for the company are replaced. Promoted or rejected rows are never touched:
+                     every date the run lists is staged, even if a promoted row already holds it (promotion then drops the copy).
   <TICKER>_run.json  per-endpoint status and the fields that came back empty. No raw payloads are saved.
 
 Rules: a missing value is NULL with the reason in note, never an estimate. Analyst EPS and revenue estimates in the earnings
@@ -34,6 +35,7 @@ METRIC_KEYS = {
     "pe_ttm": "peTTM",
     "ev_ebitda": "evEbitdaTTM",
     "gross_margin": "grossMarginTTM",
+    "operating_margin": "operatingMarginTTM",
     "net_margin": "netProfitMarginTTM",
     "revenue_growth_yoy": "revenueGrowthTTMYoy",
     "debt_to_equity": "totalDebt/totalEquityQuarterly",
@@ -152,7 +154,9 @@ def build_sql(sym, run, metrics, events, today):
     if not ok:
         status = "failed: " + "; ".join(f"{k} {v}" for k, v in eps.items())
     elif len(ok) < 3 or run["missing"]:
-        status = "completed_with_gaps"
+        # Name the failed endpoints: promotion must not treat a failed calendar call as "no upcoming events".
+        bad = [f"{k} {v}" for k, v in eps.items() if k != "profile2" and v not in ("ok", "empty")]
+        status = "completed_with_gaps" + (": " + "; ".join(bad) if bad else "")
     else:
         status = "completed"
     run["status"] = status
@@ -181,8 +185,8 @@ def build_sql(sym, run, metrics, events, today):
         for e in events:
             L.append("insert into public.company_events(company_id,event_date,event_type,detail,source,fetched_at,status,run_id) values "
                      f"(cid,{q(e['event_date'])}::date,'earnings',{q(e['detail'])},'finnhub',{q(run['fetch_finished'])}::timestamptz,'staged',run_id) "
-                     "on conflict (company_id,event_date,event_type,source) do update set detail=excluded.detail,fetched_at=excluded.fetched_at,run_id=excluded.run_id "
-                     "where public.company_events.status='staged';")
+                     "on conflict (company_id,event_date,event_type,source) where status='staged' "
+                     "do update set detail=excluded.detail,fetched_at=excluded.fetched_at,run_id=excluded.run_id;")
     L.append("end $do$;")
     return ticker, "\n".join(L) + "\n"
 
