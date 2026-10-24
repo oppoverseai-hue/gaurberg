@@ -241,3 +241,11 @@ main.scr{max-width:1200px;padding-top:36px}
 .connect blockquote { margin:6px 0 0; padding:10px 12px; border-left:2px solid var(--accent); background:var(--surface-high); border-radius:0 6px 6px 0; font:italic 12px/18px var(--sans); color:var(--fg2); }
 .connect blockquote footer { color:var(--muted); font:11px var(--mono); margin-top:6px; font-style:normal; }
 @media (max-width: 720px) { .connect .cform, .connect .hops { grid-template-columns:1fr; } }
+/* Peer comps view (TRM-12) */
+.comps td, .comps th { white-space:nowrap; }
+.comps .warn { color:var(--b-staged); display:block; font-size:10px; }
+.comps .comps-rec { display:inline-flex; flex-direction:column; gap:3px; font-size:11px; }
+.comps .comps-rec svg { border-radius:2px; overflow:hidden; }
+.comps tr.comps-pinned td { background:var(--accent-dim); }
+.comps tr.comps-gap td { padding:0; border-bottom:2px solid var(--line-strong); }
+.scr-card:has(.comps) { overflow-x:auto; }
