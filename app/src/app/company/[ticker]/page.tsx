@@ -27,14 +27,16 @@ function MetricsStrip({ mt, us }: { mt: Metrics | null; us: boolean }) {
   if (!mt) return <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{us ? "Not loaded yet." : NOT_LOADED}</p>;
   const x = (v: number | null) => (v == null ? null : `${v.toFixed(1)}x`);
   const recs = mt.rec_period == null ? null : [["Strong buy", mt.rec_strong_buy], ["Buy", mt.rec_buy], ["Hold", mt.rec_hold], ["Sell", mt.rec_sell], ["Strong sell", mt.rec_strong_sell]] as const;
-  const tiles: [string, string | null][] = [
-    ["P/E (TTM)", x(mt.pe_ttm)], ["EV / EBITDA (TTM)", x(mt.ev_ebitda)], ["Operating margin (TTM)", pct(mt.operating_margin)],
-    ["Net margin (TTM)", pct(mt.net_margin)], ["Revenue growth (YoY, TTM)", pct(mt.revenue_growth_yoy)], ["Debt to equity", n2(mt.debt_to_equity)],
+  // Margins and growth beyond +/-1,000% are shown as n/m (not meaningful), with the stored value in the tooltip. Stored data is unchanged.
+  const nm = (v: number | null): [string | null, string | undefined] => (v != null && Math.abs(v) > 1000 ? ["n/m", `${pct(v)} as reported by Finnhub; not meaningful beyond ±1,000%`] : [pct(v), undefined]);
+  const tiles: [string, string | null, string?][] = [
+    ["P/E (TTM)", x(mt.pe_ttm)], ["EV / EBITDA (TTM)", x(mt.ev_ebitda)], ["Operating margin (TTM)", ...nm(mt.operating_margin)],
+    ["Net margin (TTM)", ...nm(mt.net_margin)], ["Revenue growth (YoY, TTM)", ...nm(mt.revenue_growth_yoy)], ["Debt to equity", n2(mt.debt_to_equity)],
   ];
   return (
     <>
       <div className="stats" style={{ marginTop: 0, paddingTop: 0, borderTop: 0 }}>
-        {tiles.map(([k, v]) => <div key={k}><div className="k">{k}</div><div className={`v ${v == null ? "muted" : ""}`}>{v ?? NA}</div></div>)}
+        {tiles.map(([k, v, tip]) => <div key={k}><div className="k">{k}</div><div className={`v ${v == null || tip ? "muted" : ""}`} title={tip}>{v ?? NA}</div></div>)}
       </div>
       <p className="mono" style={{ fontSize: 12, margin: "12px 0 0" }}>
         Analyst ratings{recs ? ` (${day(mt.rec_period!)})` : ""}: {recs ? recs.map(([k, v]) => `${v ?? NA} ${k.toLowerCase()}`).join(" · ") : <span className="muted">{NA}</span>}
