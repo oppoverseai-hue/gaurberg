@@ -1,0 +1,16 @@
+{
+ "symbol": "APLD",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [
+  "peTTM"
+ ],
+ "fetch_started": "2026-10-24T06:43:01.137479+00:00",
+ "fetch_finished": "2026-10-24T06:43:05.178212+00:00",
+ "status": "completed_with_gaps",
+ "events": 1
+}

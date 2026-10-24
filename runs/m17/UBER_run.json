@@ -1,0 +1,14 @@
+{
+ "symbol": "UBER",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-24T06:44:42.360447+00:00",
+ "fetch_finished": "2026-10-24T06:44:47.614482+00:00",
+ "status": "completed",
+ "events": 1
+}

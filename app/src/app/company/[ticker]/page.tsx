@@ -8,6 +8,7 @@ import { getAccess } from "@/lib/supabase/server";
 import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels, recordView } from "@/lib/data";
 import { getMarket } from "@/lib/market";
+import { getMetrics, getUpcomingEvents, isUSListed, type Metrics } from "@/lib/marketdb";
 import PeriodChart from "@/components/PeriodChart";
 import CompanyTabs from "@/components/CompanyTabs";
 import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
@@ -18,6 +19,32 @@ const NA = "Not available";
 const cap = (v: string | null | undefined) => (v ? v.charAt(0).toUpperCase() + v.slice(1) : null);
 const pct = (v: number | null | undefined) => (v == null ? null : `${v.toFixed(1)}%`);
 const n2 = (v: number | null | undefined) => (v == null ? null : v.toFixed(2));
+const day = (d: string) => new Date(d.length === 10 ? `${d}T00:00:00Z` : d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+const NOT_LOADED = "Not loaded: source is the annual report.";
+
+// Stored metrics strip (M17): one dated Finnhub fetch, never filled from another source. Staged rows are labelled.
+function MetricsStrip({ mt, us }: { mt: Metrics | null; us: boolean }) {
+  if (!mt) return <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{us ? "Not loaded yet." : NOT_LOADED}</p>;
+  const x = (v: number | null) => (v == null ? null : `${v.toFixed(1)}x`);
+  const recs = mt.rec_period == null ? null : [["Strong buy", mt.rec_strong_buy], ["Buy", mt.rec_buy], ["Hold", mt.rec_hold], ["Sell", mt.rec_sell], ["Strong sell", mt.rec_strong_sell]] as const;
+  const tiles: [string, string | null][] = [
+    ["P/E (TTM)", x(mt.pe_ttm)], ["EV / EBITDA (TTM)", x(mt.ev_ebitda)], ["Operating margin (TTM)", pct(mt.operating_margin)],
+    ["Net margin (TTM)", pct(mt.net_margin)], ["Revenue growth (YoY, TTM)", pct(mt.revenue_growth_yoy)], ["Debt to equity", n2(mt.debt_to_equity)],
+  ];
+  return (
+    <>
+      <div className="stats" style={{ marginTop: 0, paddingTop: 0, borderTop: 0 }}>
+        {tiles.map(([k, v]) => <div key={k}><div className="k">{k}</div><div className={`v ${v == null ? "muted" : ""}`}>{v ?? NA}</div></div>)}
+      </div>
+      <p className="mono" style={{ fontSize: 12, margin: "12px 0 0" }}>
+        Analyst ratings{recs ? ` (${day(mt.rec_period!)})` : ""}: {recs ? recs.map(([k, v]) => `${v ?? NA} ${k.toLowerCase()}`).join(" · ") : <span className="muted">{NA}</span>}
+      </p>
+      <p className="muted mono" style={{ fontSize: 10, margin: "8px 0 0" }}>
+        Source: Finnhub, fetched {day(mt.fetched_at)}{mt.data_period ? `; trailing figures through the quarter ended ${day(mt.data_period)}` : ""}.{mt.status === "staged" ? " Staged, not yet reviewed." : ""}{mt.note ? ` ${mt.note}.` : ""} Analyst counts describe ratings and are not a recommendation.
+      </p>
+    </>
+  );
+}
 
 function Rows({ rows }: { rows: [string, string | null | undefined][] }) {
   return <dl className="fund">{rows.map(([k, v]) => <div key={k}><dt>{k}</dt><dd className={v == null ? "muted" : ""}>{v ?? NA}</dd></div>)}</dl>;
@@ -31,10 +58,11 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   if (!company) notFound();
   await recordView(company.id);
   const insiders = isOffline() ? { trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } : await getInsiderTrades(ticker);
-  const [m, { rels }, news] = await Promise.all([getMarket(ticker), getRels(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(ticker)]);
+  const [m, { rels }, mt, events, news] = await Promise.all([getMarket(ticker), getRels(company.id), getMetrics(company.id), getUpcomingEvents(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(ticker)]);
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
+  const us = isUSListed(company.markets);
   const top = buildNodes(rels, company.id).slice(0, 5);
   return (
     <main>
@@ -47,6 +75,10 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
         <div className="meta">
           <span>{cap(company.segment) ?? NA}</span><span className="muted">•</span><span>{company.size_tier ? `${cap(company.size_tier)} cap` : NA}</span>
         </div>
+        <p className="mono" style={{ fontSize: 12, margin: "8px 0 0" }} id="events">
+          <span className="muted">Upcoming events: </span>
+          {events.length ? <>{events.map((e) => `${e.event_type === "earnings" ? "Earnings" : e.event_type} ${day(e.event_date)}${e.detail ? ` (${e.detail})` : ""}`).join(" · ")}<span className="muted"> · Finnhub, fetched {day(events[0].fetched_at)}{events.some((e) => e.status === "staged") ? ", staged" : ""}</span></> : <span className="muted">{us ? "none loaded" : NOT_LOADED}</span>}
+        </p>
       </div>
       <CompanyTabs ticker={company.ticker ?? ticker} active="overview" />
       {m.saved && <p className="savedbar">Showing saved data{m.saved.parts.length ? ` for ${m.saved.parts.join(", ")}` : ""} from {m.saved.at}{m.saved.source === "manual" ? " (provided by admin)" : ""}. Live data was not available.</p>}
@@ -77,14 +109,9 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             <div className="cardhead"><span className="t">Price <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span></div>
             {m.daily ? <PeriodChart daily={m.daily} weekly={m.weekly} /> : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {m.historyError ?? "no price history"}</p></div>}
           </div>
-          <div className="card" id="highlights">
-            <div className="cardhead"><h3>Financial highlights</h3><span className="label">Finnhub, trailing 12 months</span></div>
-            {m.filingNote && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 8px" }}>{m.filingNote}</p>}
-            <Rows rows={[
-              ["Revenue growth (year on year)", pct(f.revGrowth)], ["Revenue per share", n2(f.revPerShare) && `$${n2(f.revPerShare)}`],
-              ["Gross margin", pct(f.grossMargin)], ["Operating margin", pct(f.opMargin)], ["Net margin", pct(f.netMargin)],
-              ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Current ratio", n2(f.currentRatio)], ["Debt to equity", n2(f.debtEquity)],
-            ]} />
+          <div className="card" id="metrics">
+            <div className="cardhead"><h3>Key metrics</h3><span className="label">Finnhub, stored</span></div>
+            <MetricsStrip mt={mt} us={us} />
           </div>
           <div className="card" id="insiders">
             <div className="cardhead"><h3>Insider trades</h3><span className="label">SEC Form 4</span></div>
@@ -147,7 +174,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           </div>
         </aside>
       </div>
-      <p className="note">Prices and fundamentals from Finnhub, history from Twelve Data; delayed or end-of-day on the free plans.</p>
+      <p className="note">Sources: price and key numbers live from Finnhub (delayed); price history from Twelve Data (end of day; Finnhub candles are not on the free plan); key metrics and upcoming events from a stored Finnhub fetch, dated on each block; news from Finnhub and SEC EDGAR; insider trades from SEC Form 4; financial statements (Financials tab) from SEC EDGAR filings. Where live data fails, saved data is shown and labelled. Finnhub's free plan covers US listings only.</p>
     </main>
   );
 }

@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-export type FinRow = { label: string; values: (number | null)[]; fmt: "usd" | "eps" | "pct"; subs?: FinRow[] };
+export type FinRow = { label: string; values: (number | null)[]; fmt: "usd" | "eps" | "pct"; subs?: FinRow[]; note?: string }; // note: shown as a tooltip and a footnote
 export type Financials = {
   ticker: string; source: string; saved_at: string; units: string;
   status: "ok" | "no_filer" | "no_10k" | "error"; note?: string;

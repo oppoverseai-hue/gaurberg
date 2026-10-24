@@ -16,3 +16,6 @@ Status: scaffold only (M0). Nothing is applied to Supabase yet.
 
 ## Agent order
 market_data, filings_extraction, entity_resolution, verification, orchestrator (last).
+
+## Data licences
+- Finnhub free plan is for personal use: this is a demo build, not a licensed redistribution of Finnhub data.

@@ -1,0 +1,17 @@
+{
+ "symbol": "NET",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [
+  "peTTM",
+  "evEbitdaTTM"
+ ],
+ "fetch_started": "2026-10-24T06:44:11.660508+00:00",
+ "fetch_finished": "2026-10-24T06:44:15.752202+00:00",
+ "status": "completed_with_gaps",
+ "events": 1
+}

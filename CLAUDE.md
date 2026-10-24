@@ -14,3 +14,5 @@ Start by reading the "Start Here" doc (see docs/README.md for links). Then read 
 
 Language: English only for all communication and project files.
 Models are named by role in config/models.yaml. Never hardcode a model id elsewhere.
+
+Market-data tables (company_metrics, company_events; M17) are separate from the promoted-edge tables. The market_data loader writes only staged rows there and never writes companies or relationships.
