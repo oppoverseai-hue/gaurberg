@@ -309,6 +309,13 @@
    "group": "TRM-5"
   },
   {
+   "id": "TRM-12",
+   "what": "Peer comps in the screener: P/E (TTM), EV/EBITDA, operating margin, net margin, revenue growth (YoY), debt to equity, analyst recommendation counts and the next earnings date for each mapped company, from stored Finnhub data. Filters by segment, market, region and size (blank segment or size grouped as Unclassified); sort by any column with blanks last; pin up to 5 companies to compare; each cell shows its as-of date. A Peers shortcut on the company page opens it for that company's segment",
+   "priority": "S",
+   "job": "J7",
+   "group": "TRM-12"
+  },
+  {
    "id": "TRM-6",
    "what": "A watchlist saved for each person",
    "priority": "C",

@@ -4,6 +4,7 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
 import { readSnapshot, readMarket, type CoRow } from "@/lib/saved";
 import { MARKETS } from "@/lib/graph";
+import { groupOf, UNCLASSIFIED } from "@/lib/metrics-core";
 
 export const SEG = ["consumer", "business", "infrastructure"], SIZE = ["large", "mid", "small"];
 export type Filters = { segment: string; size: string; market: string; dir: string; scope: string; sort: string; order: string };
@@ -13,7 +14,8 @@ export function parseFilters(q: Record<string, string | undefined>): Filters {
   const pick = (v: string | undefined, ok: readonly string[]) => (v && ok.includes(v) ? v : "");
   const sort = pick(q.sort, ["ret", "links", "name"]) || "ret";
   return {
-    segment: pick(q.segment, SEG), size: pick(q.size, SIZE), market: pick(q.market, MARKETS as readonly string[]), dir: pick(q.dir, ["up", "down"]),
+    // A blank segment or size tier is the "Unclassified" group.
+    segment: pick(q.segment, [...SEG, UNCLASSIFIED]), size: pick(q.size, [...SIZE, UNCLASSIFIED]), market: pick(q.market, MARKETS as readonly string[]), dir: pick(q.dir, ["up", "down"]),
     scope: q.scope === "viewed" ? "viewed" : "all", sort, order: q.order === "asc" ? "asc" : q.order === "desc" ? "desc" : sort === "name" ? "asc" : "desc",
   };
 }
@@ -54,7 +56,7 @@ export async function loadRows(f: Filters): Promise<{ rows: Row[]; total: number
   const counts = await linkCounts(cos.map((c) => c.id));
   const all = cos.map((c) => { const h = history(c.ticker!); return { c, links: counts.get(c.id) ?? 0, ch: h ? { pct: h.pct, from: h.from } : null, spark: h ? h.spark : null } as Row; });
   const rows = all
-    .filter(({ c, ch }) => (!f.segment || c.segment === f.segment) && (!f.size || c.size_tier === f.size) && (!f.market || (c.markets ?? []).includes(f.market)) && (!f.dir || (ch && (f.dir === "up" ? ch.pct >= 0 : ch.pct < 0))))
+    .filter(({ c, ch }) => (!f.segment || groupOf(c.segment) === f.segment) && (!f.size || groupOf(c.size_tier) === f.size) && (!f.market || (c.markets ?? []).includes(f.market)) && (!f.dir || (ch && (f.dir === "up" ? ch.pct >= 0 : ch.pct < 0))))
     .sort((a, b) => {
       const s = f.order === "asc" ? 1 : -1;
       if (f.sort === "name") return s * a.c.name.localeCompare(b.c.name);
