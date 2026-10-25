@@ -17,7 +17,7 @@ export default async function Financials({ params }: { params: Promise<{ ticker:
   const ticker = (await params).ticker.toUpperCase();
   const company = await getCompany(ticker);
   if (!company) notFound();
-  const [m, fin] = [await getMarket(ticker), readFinancials(ticker)];
+  const [m, fin] = [await getMarket(company), readFinancials(ticker)];
   return (
     <main>
       <Link href="/" className="mono" style={{ fontSize: 12 }}>← Search</Link>

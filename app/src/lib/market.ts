@@ -3,6 +3,7 @@
 import { getFundamentals, getHistory, getNextEarnings, getQuote, type Fundamentals, type Profile, type Quote } from "@/lib/finnhub";
 import { isOffline } from "@/lib/mode";
 import { readMarket, type Pt, type SavedMarket } from "@/lib/saved";
+import { liveSymbol, NOT_LIVE_DATA, NOT_LIVE_PRICE, type Listing } from "@/lib/listing";
 
 export type Market = {
   quote: Quote | null; quoteError: string | null;
@@ -14,12 +15,18 @@ export type Market = {
   saved: { at: string; source: string; parts: string[] } | null; // which parts came from saved data
 };
 
-export async function getMarket(ticker: string): Promise<Market> {
-  const sv: SavedMarket | null = readMarket(ticker);
+// Takes the company, not a bare ticker: live calls go only through liveSymbol (US-primary listings). A non-US-primary company
+// gets its saved file if there is one (labelled with its date by the page), otherwise "Live price not available for this listing".
+export async function getMarket(co: Listing): Promise<Market> {
+  const ticker = co.ticker ?? "";
+  const sym = liveSymbol(co);
+  const sv: SavedMarket | null = ticker ? readMarket(ticker) : null;
   const used: string[] = [];
   const m: Market = { quote: null, quoteError: null, daily: null, weekly: null, historyError: null, f: null, fundError: null, profile: null, nextEarnings: null, filingNote: null, saved: null };
-  if (!isOffline()) {
-    const [q, d, w, f, ne] = await Promise.all([getQuote(ticker), getHistory(ticker), getHistory(ticker, 1825, "1week"), getFundamentals(ticker), getNextEarnings(ticker)]);
+  if (!sym) {
+    m.quoteError = NOT_LIVE_PRICE; m.historyError = NOT_LIVE_PRICE; m.fundError = NOT_LIVE_DATA;
+  } else if (!isOffline()) {
+    const [q, d, w, f, ne] = await Promise.all([getQuote(sym), getHistory(sym), getHistory(sym, 1825, "1week"), getFundamentals(sym), getNextEarnings(sym)]);
     if (q.ok) m.quote = q.quote; else { m.quoteError = q.reason; console.error("[market] quote", ticker, q.reason); }
     if (d.ok) m.daily = d.points; else { m.historyError = d.reason; console.error("[market] history", ticker, d.reason); }
     if (w.ok) m.weekly = w.points;

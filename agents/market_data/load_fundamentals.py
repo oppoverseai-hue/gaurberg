@@ -165,6 +165,8 @@ def build_sql(sym, run, metrics, events, today):
     L = ["do $do$", "declare run_id bigint; cid bigint;", "begin",
          f"select id into cid from public.companies where ticker={q(ticker)};",
          f"if cid is null then raise exception 'company % not found', {q(ticker)}; end if;",
+         # Never write a non-US-primary company's rows from a bare-ticker lookup: on Finnhub "CCC" is a different, Nasdaq company.
+         *([f"if (select markets[1] from public.companies where id=cid) is distinct from 'US' then raise exception 'company % is not US-primary; refusing to write market data looked up by %', {q(ticker)}, {q(sym)}; end if;"] if metrics or events else []),
          "insert into public.agent_runs(agent_name,mode,target,model,tokens_in,tokens_out,cost_usd,started_at,finished_at,status,review_status) values "
          f"('market_data','batch',{q(TARGET.format(sym=sym))},'none (Finnhub API, no model call)',0,0,0,"
          f"{q(run['fetch_started'])}::timestamptz,{q(run['fetch_finished'])}::timestamptz,{q(status)},'unreviewed') returning id into run_id;"]

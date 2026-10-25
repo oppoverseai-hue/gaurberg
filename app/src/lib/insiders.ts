@@ -1,5 +1,6 @@
 // Insider trades (SMX-3): open-market buys and sells reported on SEC Form 4, read straight from EDGAR by a program (no AI model). Server only.
 import { cikFor } from "@/lib/news";
+import { liveSymbol, type Listing } from "@/lib/listing";
 
 export type Trade = { insider: string; role: string; side: "Buy" | "Sell"; shares: number; price: number | null; date: string; filed: string; url: string };
 export type InsiderResult = { trades: Trade[]; checked: number; error?: string };
@@ -9,9 +10,12 @@ const DAYS = 90, MAX_FILINGS = 15;
 const tag = (x: string, t: string) => x.match(new RegExp(`<${t}>\\s*([\\s\\S]*?)\\s*</${t}>`))?.[1];
 const val = (x: string, t: string) => { const b = tag(x, t); return b ? (tag(b, "value") ?? b.replace(/<[^>]+>/g, "").trim()) : undefined; };
 
-export async function getInsiderTrades(ticker: string): Promise<InsiderResult> {
+// Takes the company: SEC's ticker list only identifies US listings ("CCC" there is CCC Intelligent Solutions), see lib/listing.ts.
+export async function getInsiderTrades(co: Listing): Promise<InsiderResult> {
+  const sym = liveSymbol(co);
+  if (!sym) return { trades: [], checked: 0, error: "SEC Form 4 insider trades cover US-primary listings only." };
   try {
-    const cik = await cikFor(ticker);
+    const cik = await cikFor(sym);
     if (!cik) return { trades: [], checked: 0 };
     const sres = await fetch(`https://data.sec.gov/submissions/CIK${cik.padStart(10, "0")}.json`, { headers: { "User-Agent": UA }, next: { revalidate: 1800 } });
     if (!sres.ok) return { trades: [], checked: 0, error: `SEC returned ${sres.status}.` };

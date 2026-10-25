@@ -5,6 +5,7 @@
 // Needs FINNHUB_API_KEY and TWELVEDATA_API_KEY in .env. Writes data/market/<TICKER>.json. About text and employees are not on
 // Finnhub's free plan: add them by hand under "profile" (and set "source" to "manual" if you filled the file in yourself).
 import fs from "node:fs";
+import { liveSymbol } from "../src/lib/listing.ts"; // live services only for US-primary listings (CCC on Finnhub is a different, Nasdaq company)
 const num = (v) => (typeof v === "number" && Number.isFinite(v) ? v : null);
 const str = (v) => (typeof v === "string" && v.trim() ? v.trim() : null);
 const fh = async (path, params) => {
@@ -21,7 +22,14 @@ const td = async (symbol, interval) => {
 const snap = JSON.parse(fs.readFileSync("data/snapshot.json", "utf8"));
 const noHistory = process.argv.includes("--no-history"); // keep the daily/weekly bars already saved from the sheet exports
 const wanted = process.argv.slice(2).filter((s) => !s.startsWith("--")).map((s) => s.toUpperCase());
-const tickers = wanted.length ? wanted : snap.companies.filter((c) => c.is_seed && c.ticker).map((c) => c.ticker);
+const byTicker = new Map(snap.companies.filter((c) => c.ticker).map((c) => [c.ticker.toUpperCase(), c]));
+const asked = wanted.length ? wanted : snap.companies.filter((c) => c.is_seed && c.ticker).map((c) => c.ticker);
+const tickers = asked.filter((t) => {
+  const c = byTicker.get(t.toUpperCase());
+  if (c && liveSymbol(c)) return true;
+  console.log(t, c ? "skipped: primary listing is not US, so a bare-ticker lookup could return another company" : "skipped: not in the snapshot, listing unknown");
+  return false;
+});
 fs.mkdirSync("data/market", { recursive: true });
 for (const t of tickers) {
   const file = `data/market/${t}.json`;
