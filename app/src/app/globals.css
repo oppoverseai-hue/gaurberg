@@ -249,3 +249,9 @@ main.scr{max-width:1200px;padding-top:36px}
 .comps tr.comps-pinned td { background:var(--accent-dim); }
 .comps tr.comps-gap td { padding:0; border-bottom:2px solid var(--line-strong); }
 .scr-card:has(.comps) { overflow-x:auto; }
+/* Earnings calendar (TRM-13) */
+.cal .cal-week { margin-top:16px; }
+.cal .cal-week td { vertical-align:middle; }
+.cal .cal-warn { color:var(--b-staged); font-size:11px; display:block; }
+.cal .cal-none { margin-top:12px; }
+.cal .cal-none summary { cursor:pointer; font-size:13px; }
