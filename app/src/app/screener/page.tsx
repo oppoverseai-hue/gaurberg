@@ -188,6 +188,7 @@ async function Comps({ f, region, sp }: { f: Filters; region: string; sp: Record
           values={{ market: f.market, segment: f.segment, size: f.size, region }}
           markets={MARKETS.map((m) => ({ v: m, l: MARKET_LABEL[m] }))}
           regions={REGIONS.map((g) => ({ v: g, l: g }))}
+          regionLabel="Region (revenue split where available, otherwise HQ)"
           segments={segOpts}
           sizes={sizeOpts}
           showDir={false}
@@ -213,7 +214,7 @@ async function Comps({ f, region, sp }: { f: Filters; region: string; sp: Record
       </div>
       <p className="muted mono" style={{ fontSize: 11 }}>
         Source: Finnhub (free plan, US listings only), stored per company{asOf ? `; metrics as of ${asOf}` : ""}. Hover a cell for its as-of date. Blank values read Not loaded and sort last; margins and growth beyond ±1,000% read n/m (the stored value is in the tooltip).
-        Region uses the revenue-by-region rows, as on the map: a company with no revenue split is not placed in any region. Analyst counts describe ratings and are not a recommendation.
+        Region (revenue split where available, otherwise HQ): a company with revenue-by-region rows is placed in every region it reports revenue in; otherwise in its headquarters&apos; region; with neither, in none. Hover a company for which applies. No split is estimated. Analyst counts describe ratings and are not a recommendation.
       </p>
     </main>
   );
