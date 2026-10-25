@@ -11,6 +11,7 @@ import { getMarket } from "@/lib/market";
 import { getMetrics, getUpcomingEvents, isUSListed, type Metrics } from "@/lib/marketdb";
 import { groupOf, pctCell } from "@/lib/metrics-core";
 import PeriodChart from "@/components/PeriodChart";
+import SourceTip from "@/components/SourceTip";
 import CompanyTabs from "@/components/CompanyTabs";
 import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
 
@@ -43,7 +44,7 @@ function MetricsStrip({ mt, us }: { mt: Metrics | null; us: boolean }) {
         Analyst ratings{recs ? ` (${day(mt.rec_period!)})` : ""}: {recs ? recs.map(([k, v]) => `${v ?? NA} ${k.toLowerCase()}`).join(" · ") : <span className="muted">{NA}</span>}
       </p>
       <p className="muted mono" style={{ fontSize: 10, margin: "8px 0 0" }}>
-        Source: Finnhub, fetched {day(mt.fetched_at)}{mt.data_period ? `; trailing figures through the quarter ended ${day(mt.data_period)}` : ""}.{mt.status === "staged" ? " Staged, not yet reviewed." : ""}{mt.note ? ` ${mt.note}.` : ""} Analyst counts describe ratings and are not a recommendation.
+        {mt.status === "staged" ? <span style={{ color: "var(--b-staged)" }}>Staged, not reviewed. </span> : null}Analyst counts describe ratings and are not a recommendation.
       </p>
     </>
   );
@@ -81,7 +82,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
         </div>
         <p className="mono" style={{ fontSize: 12, margin: "8px 0 0" }} id="events">
           <span className="muted">Upcoming events: </span>
-          {events.length ? <>{events.map((e) => `${e.event_type === "earnings" ? "Earnings" : e.event_type} ${day(e.event_date)}${e.detail ? ` (${e.detail})` : ""}`).join(" · ")}<span className="muted"> · Finnhub, fetched {day(events[0].fetched_at)}{events.some((e) => e.status === "staged") ? ", staged" : ""}</span></> : <span className="muted">{us ? "none loaded" : NOT_LOADED}</span>}
+          {events.length ? <>{events.map((e) => `${e.event_type === "earnings" ? "Earnings" : e.event_type} ${day(e.event_date)}${e.detail ? ` (${e.detail})` : ""}`).join(" · ")}{events.some((e) => e.status === "staged") && <span style={{ color: "var(--b-staged)" }}> · Staged, not reviewed</span>} <SourceTip text={`Finnhub earnings calendar, as of ${day(events[0].fetched_at)}`} /></> : <span className="muted">{us ? "none loaded" : NOT_LOADED}</span>}
         </p>
       </div>
       <CompanyTabs ticker={company.ticker ?? ticker} active="overview" />
@@ -94,7 +95,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
                 <div className="price">${q.price.toFixed(2)}
                   <span className={`pill ${up ? "up" : "down"}`}>{up ? "▲" : "▼"} {up ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span>
                 </div>
-                <p className="muted mono" style={{ fontSize: 11, margin: "8px 0 0" }}>{asOf ? `Price as of ${asOf}. ` : ""}Prices are delayed.</p>
+                <p className="muted mono" style={{ fontSize: 11, margin: "8px 0 0", display: "flex", gap: 6, alignItems: "center" }}>{asOf ? `Price as of ${asOf}. ` : ""}Prices are delayed. <SourceTip text={`Finnhub quote, delayed${asOf ? `, as of ${asOf}` : ""}${m.saved?.parts.includes("price") ? `; saved data from ${m.saved.at}` : ""}`} /></p>
                 <div className="stats">
                   <div><div className="k">Open</div><div className="v">{q.open.toFixed(2)}</div></div>
                   <div><div className="k">Day range</div><div className="v">{q.low.toFixed(2)} - {q.high.toFixed(2)}</div></div>
@@ -110,15 +111,15 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             )}
           </div>
           <div className="card" id="chart">
-            <div className="cardhead"><span className="t">Price <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span></div>
+            <div className="cardhead"><span className="t">Price <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span><SourceTip text={m.saved?.parts.includes("price history") ? `Saved daily closes from ${m.saved.at}` : "Twelve Data, end-of-day closes"} /></div>
             {m.daily ? <PeriodChart daily={m.daily} weekly={m.weekly} /> : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {m.historyError ?? "no price history"}</p></div>}
           </div>
           <div className="card" id="metrics">
-            <div className="cardhead"><h3>Key metrics</h3><span className="label">Finnhub, stored</span></div>
+            <div className="cardhead"><h3>Key metrics</h3><SourceTip text={mt ? `Finnhub, as of ${day(mt.as_of)}${mt.data_period ? `; trailing figures through the quarter ended ${day(mt.data_period)}` : ""}${mt.note ? `; ${mt.note}` : ""}` : us ? "Finnhub (not loaded yet)" : "The company's annual report (not loaded)"} /></div>
             <MetricsStrip mt={mt} us={us} />
           </div>
           <div className="card" id="insiders">
-            <div className="cardhead"><h3>Insider trades</h3><span className="label">SEC Form 4</span></div>
+            <div className="cardhead"><h3>Insider trades</h3><SourceTip text="SEC Form 4 filings (EDGAR), read live" /></div>
             {insiders.error && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 6px" }}>⚠ {insiders.error}</p>}
             {!insiders.trades.length ? <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{insiders.error ? "Insider trades are not available right now." : `No open-market buys or sells in the last 90 days (${insiders.checked} Form 4 filings read).`}</p> : (() => {
               const b = insiders.trades.filter((t) => t.side === "Buy"), sl = insiders.trades.filter((t) => t.side === "Sell");
@@ -138,13 +139,13 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             <p className="muted mono" style={{ fontSize: 10, margin: "8px 0 0" }}>Open-market purchases and sales only, from the latest {insiders.checked} Form 4 filings (within 90 days). Plans set in advance are not separated. This describes filings and is not a recommendation.</p>
           </div>
           <div className="card" id="news">
-            <div className="cardhead"><h3>Recent news</h3><span className="label">Finnhub and SEC EDGAR</span></div>
+            <div className="cardhead"><h3>Recent news</h3><SourceTip text="Finnhub company news and SEC EDGAR filings, last 30 days, read live" /></div>
             <NewsPanel items={news.items} errors={news.errors} />
           </div>
         </section>
         <aside className="stack">
           <div className="card" id="numbers">
-            <div className="cardhead"><h3>Key numbers</h3><span className="label">Finnhub</span></div>
+            <div className="cardhead"><h3>Key numbers</h3><SourceTip text={m.saved?.parts.includes("fundamentals") ? `Finnhub, saved data from ${m.saved.at}` : "Finnhub, live (delayed)"} /></div>
             <Rows rows={[
               ["Previous close", q ? q.prevClose.toFixed(2) : null],
               ["Day range", q ? `${q.low.toFixed(2)} - ${q.high.toFixed(2)}` : null],
@@ -157,16 +158,15 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             ]} />
           </div>
           <div className="card" id="about" style={{ marginTop: 24 }}>
-            <div className="cardhead"><h3>About</h3></div>
+            <div className="cardhead"><h3>About</h3>{p?.description && <SourceTip text={p.about_source ?? "Saved company profile"} />}</div>
             {p?.description ? <p style={{ margin: "0 0 12px", fontSize: 13, lineHeight: "20px" }}>{p.description}</p> : <p className="muted mono" style={{ fontSize: 12, margin: "0 0 12px" }}>Description: not available yet.</p>}
-            {p?.description && p.about_source && <p className="muted mono" style={{ fontSize: 10, margin: "-4px 0 12px" }}>Source: {p.about_source}</p>}
             <Rows rows={[
               ["Sector", p?.industry ?? cap(company.segment)], ["Size group", company.size_tier ? `${cap(company.size_tier)} cap` : null],
               ["Website", p?.website ?? null], ["Employees", p?.employees == null ? null : p.employees.toLocaleString("en-US")],
             ]} />
           </div>
           <div className="card" id="relationships" style={{ marginTop: 24 }}>
-            <div className="cardhead"><h3>Top linked companies</h3><span className="tag">{rels.length} links</span></div>
+            <div className="cardhead"><h3>Top linked companies</h3><span style={{ display: "flex", gap: 6, alignItems: "center" }}><span className="tag">{rels.length} links</span><SourceTip text="Quotes from SEC 10-K filings and annual reports; open the map for each link's evidence" /></span></div>
             {top.length === 0 ? <p className="muted">No disclosed relationships found for this company.</p> : (
               <>
                 {top.map((n) => (
@@ -178,7 +178,6 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           </div>
         </aside>
       </div>
-      <p className="note">Sources: price and key numbers live from Finnhub (delayed); price history from Twelve Data (end of day; Finnhub candles are not on the free plan); key metrics and upcoming events from a stored Finnhub fetch, dated on each block; news from Finnhub and SEC EDGAR; insider trades from SEC Form 4; financial statements (Financials tab) from SEC EDGAR filings. Where live data fails, saved data is shown and labelled. Finnhub's free plan covers US listings only.</p>
     </main>
   );
 }
