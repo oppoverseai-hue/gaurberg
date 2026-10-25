@@ -38,3 +38,14 @@ export async function getUpcomingEvents(companyId: number): Promise<CoEvent[]> {
 // Finnhub's free plan covers US listings only. The first market is taken as the primary listing, so a UK company with a US ADR
 // (VOD: LSE, US) counts as UK: no stored market data, and its statements point to the annual report.
 export { isUSListed } from "@/lib/listing"; // the rule lives in lib/listing.ts with the live-call gate
+
+// Next earnings date per company for the Exposure view (GRF-17): promoted rows only, for every viewer (the admin's staged dates are left out).
+export async function getPromotedEarnings(companyIds: number[]): Promise<Map<number, string>> {
+  const out = new Map<number, string>();
+  if (isOffline() || companyIds.length === 0) return out;
+  const supabase = await supabaseServer();
+  const today = new Date().toISOString().slice(0, 10);
+  const { data } = await supabase.from("company_events").select("company_id,event_date").eq("status", "promoted").eq("event_type", "earnings").in("company_id", companyIds).gte("event_date", today).order("event_date");
+  for (const e of (data ?? []) as { company_id: number; event_date: string }[]) if (!out.has(e.company_id)) out.set(e.company_id, e.event_date);
+  return out;
+}

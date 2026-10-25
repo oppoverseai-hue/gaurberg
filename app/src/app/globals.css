@@ -258,3 +258,14 @@ main.scr{max-width:1200px;padding-top:36px}
 .cal .cal-warn { color:var(--b-staged); font-size:11px; display:block; }
 .cal .cal-none { margin-top:12px; }
 .cal .cal-none summary { cursor:pointer; font-size:13px; }
+/* Exposure view (GRF-17) */
+.exposure .xrow { padding:10px 0; border-top:1px solid var(--line-subtle); } .exposure .xrow:first-of-type { border-top:0; }
+.exposure .xline { font-size:13px; display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+.exposure .xw { margin-left:auto; font:600 13px var(--mono); color:var(--fg); }
+.exposure .xtext { font-size:13px; margin:4px 0 0; }
+.exposure .xflag { color:var(--b-staged); font:11px var(--mono); margin:4px 0 0; }
+.exposure .xctx { color:var(--muted); font-size:12px; margin:6px 0 0; }
+.exposure blockquote { margin:6px 0 0; padding:10px 12px; border-left:2px solid var(--accent); background:var(--surface-high); border-radius:0 6px 6px 0; font:italic 12px/18px var(--sans); color:var(--fg2); }
+.exposure blockquote footer { color:var(--muted); font:11px var(--mono); margin-top:6px; font-style:normal; }
+/* Map exposure highlight (GRF-17): companies with no exposure link fade */
+.node.fade, .link.fade { opacity:.18; }

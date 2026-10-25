@@ -106,6 +106,13 @@
    "group": "GRF-16"
   },
   {
+   "id": "GRF-17",
+   "what": "Exposure view \"If [company] is hit\": the companies one promoted link away, each with its kind of share (seller's revenue, buyer's costs, ownership). A stated percentage is a weight only when it is the exposed company's own share and a saved quote contains the figure (trailing zeros ignored; \"wholly-owned\" and \"all of the outstanding shares\" count as 100%); weights are ranked only within one kind of share and worded as in GRF-11. Other figures appear as context lines; a figure missing from its quote is unranked and flagged \"stated figure not found in the saved quote\". Groups: No stated weight, partners (link strength not stated), competitors (effect can be positive or negative; never exposure). Empty: \"No documented exposure in our sources.\" Next earnings from promoted dates only. The map can fade companies with no exposure link and draws line width only from quoted weights",
+   "priority": "S",
+   "job": "J2",
+   "group": "GRF-17"
+  },
+  {
    "id": "LIV-4",
    "what": "Partnerships found in news are added to a live lookup",
    "priority": "C",
