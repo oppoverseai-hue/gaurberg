@@ -116,6 +116,14 @@ test("a stored figure missing from its quote is unranked and flagged (links 317,
   }
 });
 
+test("link 317 ranks once the 10-K sentence with the 4% is saved (runs/m25/link317_add_quote.sql)", () => {
+  const r = snapRel(317);
+  const quote = "During the quarter ended May 31, 2026, the Company sold $ 5.0 million of Corintis's shares to a third party, bringing the Company's investment in Corintis to $ 10.0 million, or approximately 4 % of Corintis\u2019s outstanding equity.";
+  const fixed = { ...r, evidence: [...r.evidence, { quote, document_url: null, section: "notes", published_at: "2026-07-29", quote_found: true }] };
+  const e = buildExposure(r.target.id, [fixed]);
+  assert.deepEqual(e.ranked.ownership.map((x) => [x.co.name, x.weight, x.flag]), [["Applied Digital", 4, null]]);
+});
+
 test("wholly-owned and 'all of the outstanding shares' count as a stated 100% (links 69, 370)", () => {
   for (const id of [69, 370]) {
     const r = snapRel(id);
