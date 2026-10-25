@@ -9,7 +9,7 @@ import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels, recordView } from "@/lib/data";
 import { getMarket } from "@/lib/market";
 import { getMetrics, getUpcomingEvents, isUSListed, type Metrics } from "@/lib/marketdb";
-import { groupOf } from "@/lib/metrics-core";
+import { groupOf, pctCell } from "@/lib/metrics-core";
 import PeriodChart from "@/components/PeriodChart";
 import CompanyTabs from "@/components/CompanyTabs";
 import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
@@ -29,7 +29,7 @@ function MetricsStrip({ mt, us }: { mt: Metrics | null; us: boolean }) {
   const x = (v: number | null) => (v == null ? null : `${v.toFixed(1)}x`);
   const recs = mt.rec_period == null ? null : [["Strong buy", mt.rec_strong_buy], ["Buy", mt.rec_buy], ["Hold", mt.rec_hold], ["Sell", mt.rec_sell], ["Strong sell", mt.rec_strong_sell]] as const;
   // Margins and growth beyond +/-1,000% are shown as n/m (not meaningful), with the stored value in the tooltip. Stored data is unchanged.
-  const nm = (v: number | null): [string | null, string | undefined] => (v != null && Math.abs(v) > 1000 ? ["n/m", `${pct(v)} as reported by Finnhub; not meaningful beyond ±1,000%`] : [pct(v), undefined]);
+  const nm = (v: number | null): [string | null, string | undefined] => { const c = pctCell(v); return [c.text, c.tip]; }; // shared n/m rule (lib/metrics-core)
   const tiles: [string, string | null, string?][] = [
     ["P/E (TTM)", x(mt.pe_ttm)], ["EV / EBITDA (TTM)", x(mt.ev_ebitda)], ["Operating margin (TTM)", ...nm(mt.operating_margin)],
     ["Net margin (TTM)", ...nm(mt.net_margin)], ["Revenue growth (YoY, TTM)", ...nm(mt.revenue_growth_yoy)], ["Debt to equity", n2(mt.debt_to_equity)],
