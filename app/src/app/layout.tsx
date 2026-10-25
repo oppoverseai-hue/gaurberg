@@ -19,7 +19,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <form className="cmd" action="/go" method="get" role="search">
             <input name="q" type="search" placeholder="Company or ticker, plus a word: Uber, Uber chart, Uber map, help" aria-label="Command bar" autoComplete="off" />
           </form>
-          <nav><a href="/help">Help</a><a href="/screener">Screener</a><a href="/connect">Connect</a><a href="/sources">Sources</a><a href="/hood">Under the hood</a>{access?.state === "ok" && <AccountMenu email={access.email} role={access.role} />}</nav>
+          <nav><a href="/help">Help</a><a href="/screener">Screener</a><a href="/connect">Connect</a><a href="/calendar">Calendar</a><a href="/sources">Sources</a><a href="/hood">Under the hood</a>{access?.state === "ok" && <AccountMenu email={access.email} role={access.role} />}</nav>
         </header>
         {children}
         <footer className="site"><div className="in">

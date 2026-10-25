@@ -316,6 +316,13 @@
    "group": "TRM-12"
   },
   {
+   "id": "TRM-13",
+   "what": "An earnings calendar: upcoming earnings for every mapped company from stored Finnhub dates, next 30 days by default with 60 and 90, grouped by week; each row shows the company, date and time (before or after market where given) and links to the company page. Two different dates for one company within 30 days are both flagged \"dates conflict, unverified\" until one is rejected. Companies without a date are listed, never hidden: no date in the next 90 days, not loaded yet, or not covered",
+   "priority": "S",
+   "job": "J6",
+   "group": "TRM-13"
+  },
+  {
    "id": "TRM-6",
    "what": "A watchlist saved for each person",
    "priority": "C",
