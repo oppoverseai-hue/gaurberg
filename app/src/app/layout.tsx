@@ -23,7 +23,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         </header>
         {children}
         <footer className="site"><div className="in">
-          <span>Company links come from SEC filings; prices from market-data providers (delayed). Links not yet reviewed are tagged Staged.</span>
+          <span>Links not yet reviewed are tagged Staged.</span>
           <span>·</span><a href="/sources">Sources</a><span>·</span><span>Not investment advice.</span>
         </div></footer>
       </body>
