@@ -61,8 +61,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const company = await getCompany(ticker);
   if (!company) notFound();
   await recordView(company.id);
-  const insiders = isOffline() ? { trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } : await getInsiderTrades(ticker);
-  const [m, { rels }, mt, events, news] = await Promise.all([getMarket(ticker), getRels(company.id), getMetrics(company.id), getUpcomingEvents(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(ticker)]);
+  const insiders = isOffline() ? { trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } : await getInsiderTrades(company);
+  const [m, { rels }, mt, events, news] = await Promise.all([getMarket(company), getRels(company.id), getMetrics(company.id), getUpcomingEvents(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(company)]);
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;

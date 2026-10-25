@@ -1,4 +1,5 @@
 // Recent news for one company (TRM-7): news and press releases from Finnhub (free plan), SEC filings from EDGAR. Server only.
+import { liveSymbol, type Listing } from "@/lib/listing";
 export type NewsItem = { kind: "news" | "press" | "filing"; headline: string; source: string; ts: number; url: string };
 export type NewsResult = { items: NewsItem[]; errors: string[] };
 
@@ -58,8 +59,11 @@ async function secFilings(ticker: string): Promise<{ items: NewsItem[]; error?: 
   }
 }
 
-export async function getNews(ticker: string): Promise<NewsResult> {
-  const [n, f] = await Promise.all([finnhubNews(ticker), secFilings(ticker)]);
+// Takes the company: Finnhub and SEC look up by bare ticker, which is only safe for a US-primary listing (lib/listing.ts).
+export async function getNews(co: Listing): Promise<NewsResult> {
+  const sym = liveSymbol(co);
+  if (!sym) return { items: [], errors: ["Live news covers US-primary listings only."] };
+  const [n, f] = await Promise.all([finnhubNews(sym), secFilings(sym)]);
   const items = [...n.items, ...f.items].sort((a, b) => b.ts - a.ts);
   return { items, errors: [n.error, f.error].filter((x): x is string => !!x) };
 }

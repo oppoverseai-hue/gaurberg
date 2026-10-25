@@ -37,4 +37,4 @@ export async function getUpcomingEvents(companyId: number): Promise<CoEvent[]> {
 
 // Finnhub's free plan covers US listings only. The first market is taken as the primary listing, so a UK company with a US ADR
 // (VOD: LSE, US) counts as UK: no stored market data, and its statements point to the annual report.
-export const isUSListed = (markets: string[] | null | undefined) => (markets ?? [])[0] === "US";
+export { isUSListed } from "@/lib/listing"; // the rule lives in lib/listing.ts with the live-call gate

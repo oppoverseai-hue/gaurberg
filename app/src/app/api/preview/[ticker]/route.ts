@@ -12,7 +12,7 @@ export async function GET(_: Request, { params }: { params: Promise<{ ticker: st
   const ticker = (await params).ticker.toUpperCase();
   const co = await getCompany(ticker);
   if (!co) return NextResponse.json({ error: "not found" }, { status: 404 });
-  const [m, { rels }] = await Promise.all([getMarket(ticker), getRels(co.id)]);
+  const [m, { rels }] = await Promise.all([getMarket(co), getRels(co.id)]);
   const counts = { suppliers: 0, customers: 0, partners: 0, rivals: 0 };
   for (const r of rels) {
     const other = r.source.id === co.id ? r.target : r.source;
