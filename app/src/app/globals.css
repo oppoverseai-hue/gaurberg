@@ -252,3 +252,9 @@ main.scr{max-width:1200px;padding-top:36px}
 /* Source tooltip (i) on each block */
 .srctip { display:inline-flex; align-items:center; justify-content:center; width:15px; height:15px; border:1px solid var(--line-strong); border-radius:50%; font:italic 600 10px/1 var(--sans); color:var(--fg2); cursor:help; flex:none; }
 .srctip:hover, .srctip:focus { color:var(--accent); border-color:var(--accent); outline:none; }
+/* Earnings calendar (TRM-13) */
+.cal .cal-week { margin-top:16px; }
+.cal .cal-week td { vertical-align:middle; }
+.cal .cal-warn { color:var(--b-staged); font-size:11px; display:block; }
+.cal .cal-none { margin-top:12px; }
+.cal .cal-none summary { cursor:pointer; font-size:13px; }
