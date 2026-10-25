@@ -1,8 +1,14 @@
 // Peer comps rules (TRM-12): filter, sort with blanks always last, and pin up to 5 companies at the top. Pure functions.
 import { groupOf, recs, UNCLASSIFIED, type MetricRow, type Upcoming } from "./metrics-core";
 
-export type CompCo = { id: number; ticker: string; name: string; segment: string | null; size_tier: string | null; markets: string[] | null };
-export type CompRow = { c: CompCo; m: MetricRow | null; next: Upcoming[]; regions: string[] };
+export type CompCo = { id: number; ticker: string; name: string; segment: string | null; size_tier: string | null; markets: string[] | null; country?: string | null };
+// regions: from the revenue-by-region rows when the company has any ("revenue"), otherwise its HQ country's region ("hq"); never an invented split.
+export type CompRow = { c: CompCo; m: MetricRow | null; next: Upcoming[]; regions: string[]; regionBasis?: "revenue" | "hq" | null };
+
+export function regionsFor(revenueRegions: string[], hqRegion: string | null | undefined): { regions: string[]; regionBasis: "revenue" | "hq" | null } {
+  if (revenueRegions.length) return { regions: revenueRegions, regionBasis: "revenue" };
+  return hqRegion ? { regions: [hqRegion], regionBasis: "hq" } : { regions: [], regionBasis: null };
+}
 export const SORT_KEYS = ["name", "pe", "ev", "opm", "npm", "growth", "de", "rec", "next"] as const;
 export type SortKey = (typeof SORT_KEYS)[number];
 export const MAX_PINS = 5;
