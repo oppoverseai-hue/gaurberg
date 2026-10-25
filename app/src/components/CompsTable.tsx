@@ -1,7 +1,7 @@
 // Peer comps table (TRM-12). Server component: every link is a plain URL, so sorting and pinning work without scripts.
 import Link from "next/link";
 import { dayLabel, pctCell, recs, type MetricRow } from "@/lib/metrics-core";
-import { MAX_PINS, type CompRow, type SortKey } from "@/lib/comps-core";
+import { MAX_PINS, regionNote, type CompRow, type SortKey } from "@/lib/comps-core";
 
 const NL = "Not loaded";
 type Col = { k: SortKey; l: string; cell: (r: CompRow) => { text: string | null; tip?: string } };
@@ -34,7 +34,7 @@ function Row({ r, pinned, pinHref, canPin }: { r: CompRow; pinned: boolean; pinH
   return (
     <tr className={pinned ? "comps-pinned" : ""}>
       <td>
-        <Link href={`/company/${r.c.ticker}`} className="scr-name" title={r.regionBasis === "revenue" ? `Region: ${r.regions.join(", ")} (revenue split)` : r.regionBasis === "hq" ? `Region: ${r.regions[0]} (headquarters; no revenue split loaded)` : "Region: not known (no revenue split or headquarters country)"}><strong>{r.c.name}</strong></Link>
+        <Link href={`/company/${r.c.ticker}`} className="scr-name" title={regionNote(r)}><strong>{r.c.name}</strong></Link>
         <span className="muted mono scr-sub">{r.c.ticker} · {(r.c.markets ?? []).join("/") || "n/a"} · {r.c.segment ?? "Unclassified"}{r.m?.status === "staged" ? " · staged" : ""}</span>
       </td>
       {COLS.map((c) => { const v = c.cell(r); return <td key={c.k} className={`num mono ${v.text == null || v.tip ? "muted" : ""}`} title={[v.tip, asOfTip(r.m)].filter(Boolean).join(" · ")}>{v.text ?? NL}</td>; })}
