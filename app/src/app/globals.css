@@ -229,3 +229,15 @@ main.scr{max-width:1200px;padding-top:36px}
 .scr-trend{width:240px}.scr-spark{display:block}
 .scr-map{color:var(--accent);font-size:13px;white-space:nowrap}
 @media(max-width:820px){.scr-trend{display:none}.scr-table td,.scr-table th{padding:12px 14px}}
+/* Connection finder (GRF-16) */
+.connect .cform { display:grid; grid-template-columns:1fr 1fr auto; gap:12px; align-items:end; }
+.connect .cpick { display:flex; flex-direction:column; gap:4px; }
+.connect .cpick input { padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:var(--surface-mid); color:var(--fg); font:13px var(--sans); }
+.connect .hop { padding:10px 0; border-top:1px solid var(--line-subtle); }
+.connect .hop:first-of-type { border-top:0; }
+.connect .hopline { font-size:13px; display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+.connect .cpath { padding:12px 0; border-top:1px solid var(--line); }
+.connect .hops { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.connect blockquote { margin:6px 0 0; padding:10px 12px; border-left:2px solid var(--accent); background:var(--surface-high); border-radius:0 6px 6px 0; font:italic 12px/18px var(--sans); color:var(--fg2); }
+.connect blockquote footer { color:var(--muted); font:11px var(--mono); margin-top:6px; font-style:normal; }
+@media (max-width: 720px) { .connect .cform, .connect .hops { grid-template-columns:1fr; } }
