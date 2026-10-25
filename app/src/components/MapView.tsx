@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, shown, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { exposureWeight, realWeight } from "@/lib/exposure-core";
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
 const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
@@ -47,6 +48,10 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
     [allRels, filter, region, geo, countryRegion, focal.id]);
   const nodes = useMemo(() => buildNodes(rels, focal.id), [rels, focal.id]);
   const [expanded, setExpanded] = useState<Record<Side, boolean>>({ left: false, right: false, top: false, bottom: false });
+  // Exposure highlight (GRF-17): fade companies that are not exposed to the focal company (competitors only), and draw line width from
+  // the exposed company's own quoted share. Off: width from any quoted figure. A figure missing from its quote never widens a line.
+  const [hit, setHit] = useState(false);
+  const exposed = (n: MapNode) => n.links.some((r) => r.relationship_type !== "competes");
   const [panel, setPanel] = useState<{ kind: "link"; rel: Rel } | { kind: "company"; co: Co } | null>(null);
 
   const placed = useMemo(() => {
@@ -74,7 +79,8 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
       <div className="mapbar">
         <div className="crumb">
           <Link href={`/company/${focal.ticker}`}>← Back to company page</Link><span className="muted">|</span>
-          <strong>{focal.name}</strong><span className="tag">{focal.ticker}</span><span>/</span><span>Ecosystem map</span>
+          <strong>{focal.name}</strong><span className="tag">{focal.ticker}</span><span>/</span><span>Ecosystem map</span><span className="muted">|</span>
+          <Link href={`/company/${focal.ticker}/exposure`}>If {focal.name} is hit →</Link>
         </div>
         <span style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {Object.entries(tally).map(([k, v]) => <span key={k} className={`badge ${v.cls}`}><span aria-hidden>{glyph(v.cls)}</span>{k}: {v.n}</span>)}
@@ -102,7 +108,8 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="14" y2="4" stroke="var(--accent)" strokeWidth="2" /><polygon points="14,0 22,4 14,8" fill="var(--accent)" /></svg>Supplies / invests / acquired</span>
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="var(--fg2)" strokeWidth="1.5" strokeDasharray="4 4" /></svg>Competes</span>
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="#60a5fa" strokeWidth="1.5" /></svg>Partners</span>
-          <span className="muted">Thicker line = larger disclosed size</span>
+          <span className="muted">{hit ? `Thicker line = larger stated share of the exposed company` : "Thicker line = larger disclosed size (figure found in the saved quote)"}</span>
+          <button className={`fpill ${hit ? "on" : ""}`} onClick={() => setHit(!hit)} aria-pressed={hit}>Highlight exposure</button>
         </div>
       </div>
       <div className="mapbody">
@@ -123,9 +130,10 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
             const nx = -(p2.y - p1.y), ny = p2.x - p1.x, len = Math.hypot(nx, ny) || 1;
             const cx = mx + (nx / len) * off * 4, cy = my + (ny / len) * off * 4;
             const sel = panel?.kind === "link" && panel.rel.id === r.id;
-            const lw = r.exposure_pct != null ? 1.5 + Math.min(r.exposure_pct, 100) / 25 : 1.5;
+            const w = hit ? exposureWeight(r, focal.id) : realWeight(r);
+            const lw = w != null ? 1.5 + Math.min(w, 100) / 25 : 1.5;
             return (
-              <g key={r.id} className={`link ${sel ? "sel" : ""} ${isMapped(node.co) ? "" : "dim"}`} onClick={() => setPanel({ kind: "link", rel: r })} tabIndex={0} role="button"
+              <g key={r.id} className={`link ${sel ? "sel" : ""} ${isMapped(node.co) ? "" : "dim"} ${hit && r.relationship_type === "competes" ? "fade" : ""}`} onClick={() => setPanel({ kind: "link", rel: r })} tabIndex={0} role="button"
                  aria-label={`${r.source.name} ${TYPE_LABEL[r.relationship_type]} ${r.target.name}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "link", rel: r })}>
                 <path d={`M${p1.x},${p1.y} Q${cx},${cy} ${p2.x},${p2.y}`} className="hit" />
                 <path d={`M${p1.x},${p1.y} Q${cx},${cy} ${p2.x},${p2.y}`} className={`line ${r.relationship_type === "competes" ? "dash" : r.relationship_type === "partners" ? "plain" : ""}`} strokeWidth={lw} markerEnd={directed ? "url(#arr)" : undefined} />
@@ -138,7 +146,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
             const m = isMapped(node.co);
             const sel = panel?.kind === "company" && panel.co.id === node.co.id;
             return (
-              <g key={node.co.id} className={`node ${m ? "" : "unmapped"} ${sel ? "sel" : ""}`} onClick={() => setPanel({ kind: "company", co: node.co })} tabIndex={0} role="button"
+              <g key={node.co.id} className={`node ${m ? "" : "unmapped"} ${sel ? "sel" : ""} ${hit && !exposed(node) ? "fade" : ""}`} onClick={() => setPanel({ kind: "company", co: node.co })} tabIndex={0} role="button"
                  aria-label={`${node.co.name}${m ? "" : ", not yet mapped"}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "company", co: node.co })}>
                 <rect x={x - NW / 2} y={y - NH / 2} width={NW} height={NH} rx={8} />
                 <text x={x} y={y - 2} textAnchor="middle" className="nn">{(() => { const v = viaLabel(node), t = v ? `${node.co.name} (${v})` : node.co.name; return t.length > 22 ? t.slice(0, 21) + "…" : t; })()}</text>
