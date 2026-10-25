@@ -2,12 +2,33 @@
 import { groupOf, recs, UNCLASSIFIED, type MetricRow, type Upcoming } from "./metrics-core";
 
 export type CompCo = { id: number; ticker: string; name: string; segment: string | null; size_tier: string | null; markets: string[] | null; country?: string | null };
-// regions: from the revenue-by-region rows when the company has any ("revenue"), otherwise its HQ country's region ("hq"); never an invented split.
-export type CompRow = { c: CompCo; m: MetricRow | null; next: Upcoming[]; regions: string[]; regionBasis?: "revenue" | "hq" | null };
+// regions: from the revenue-by-region rows when the company has any ("revenue"), otherwise its HQ country's region ("hq").
+// When the rows the report gives cover less than half of revenue, the HQ region is added too ("revenue+hq"), labelled, with no number.
+// Never an invented split.
+export type RegionBasis = "revenue" | "hq" | "revenue+hq" | null;
+export type CompRow = { c: CompCo; m: MetricRow | null; next: Upcoming[]; regions: string[]; regionBasis?: RegionBasis; hqRegion?: string | null; coveragePct?: number | null };
+export const PARTIAL_COVER = 50;
 
-export function regionsFor(revenueRegions: string[], hqRegion: string | null | undefined): { regions: string[]; regionBasis: "revenue" | "hq" | null } {
-  if (revenueRegions.length) return { regions: revenueRegions, regionBasis: "revenue" };
-  return hqRegion ? { regions: [hqRegion], regionBasis: "hq" } : { regions: [], regionBasis: null };
+/** coveragePct: sum of the stated revenue shares of the rows the report gives (null when any row has no stated share). */
+export function regionsFor(revenueRegions: string[], hqRegion: string | null | undefined, coveragePct: number | null = null): { regions: string[]; regionBasis: RegionBasis; hqRegion: string | null; coveragePct: number | null } {
+  const hq = hqRegion ?? null;
+  if (revenueRegions.length) {
+    if (hq && coveragePct != null && coveragePct < PARTIAL_COVER && !revenueRegions.includes(hq)) return { regions: [...revenueRegions, hq], regionBasis: "revenue+hq", hqRegion: hq, coveragePct };
+    return { regions: revenueRegions, regionBasis: "revenue", hqRegion: hq, coveragePct };
+  }
+  return hq ? { regions: [hq], regionBasis: "hq", hqRegion: hq, coveragePct } : { regions: [], regionBasis: null, hqRegion: null, coveragePct };
+}
+
+// Sum of stated shares; unknown (null) if there are no rows or any row has no stated share, so coverage is never assumed.
+export const coverageOf = (pcts: (number | null)[]) => (pcts.length && pcts.every((p) => p != null) ? Math.round(pcts.reduce((a: number, p) => a + (p as number), 0) * 10) / 10 : null);
+
+export function regionNote(r: Pick<CompRow, "regions" | "regionBasis" | "hqRegion" | "coveragePct">): string {
+  switch (r.regionBasis) {
+    case "revenue": return `Region: ${r.regions.join(", ")} (revenue split)`;
+    case "revenue+hq": return `Region: ${r.regions.filter((g) => g !== r.hqRegion).join(", ")} (revenue split); ${r.hqRegion} (headquarters, added because the reported rows cover ${r.coveragePct}% of revenue)`;
+    case "hq": return `Region: ${r.regions[0]} (headquarters; no revenue split loaded)`;
+    default: return "Region: not known (no revenue split or headquarters country)";
+  }
 }
 export const SORT_KEYS = ["name", "pe", "ev", "opm", "npm", "growth", "de", "rec", "next"] as const;
 export type SortKey = (typeof SORT_KEYS)[number];

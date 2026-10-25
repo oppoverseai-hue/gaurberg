@@ -8,7 +8,7 @@ import { readSnapshot } from "@/lib/saved";
 import { getGeo } from "@/lib/data";
 import { regionOf } from "@/lib/graph";
 import { latestMetrics, upcomingByCompany, type EventRow, type MetricRow } from "@/lib/metrics-core";
-import { regionsFor, type CompCo, type CompRow } from "@/lib/comps-core";
+import { coverageOf, regionsFor, type CompCo, type CompRow } from "@/lib/comps-core";
 
 export type CompsData = { rows: CompRow[]; loaded: number; staged: number; offline: boolean; error: boolean; asOf: string[] };
 
@@ -35,7 +35,8 @@ export async function loadComps(scope: "all" | "viewed"): Promise<CompsData> {
   const up = upcomingByCompany((e.data ?? []) as EventRow[], today);
   const rows = cos.map((c) => ({
     c, m: lm.get(c.id) ?? null, next: up.get(c.id) ?? [],
-    ...regionsFor([...new Set((g.geo[c.id] ?? []).map((r) => regionOf(r, g.countryRegion)).filter((x): x is string => !!x))], c.country ? g.countryRegion[c.country] : null),
+    ...regionsFor([...new Set((g.geo[c.id] ?? []).map((r) => regionOf(r, g.countryRegion)).filter((x): x is string => !!x))], c.country ? g.countryRegion[c.country] : null,
+      coverageOf((g.geo[c.id] ?? []).map((r) => r.revenue_pct))),
   }));
   const shown = [...lm.values()];
   return { rows, loaded: shown.length, staged: shown.filter((x) => x.status === "staged").length, offline: false, error: !!(m.error || e.error), asOf: [...new Set(shown.map((x) => x.as_of))].sort() };
