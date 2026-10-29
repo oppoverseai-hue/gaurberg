@@ -269,3 +269,11 @@ main.scr{max-width:1200px;padding-top:36px}
 .exposure blockquote footer { color:var(--muted); font:11px var(--mono); margin-top:6px; font-style:normal; }
 /* Map exposure highlight (GRF-17): companies with no exposure link fade */
 .node.fade, .link.fade { opacity:.18; }
+/* Phone width (landing check): the header wraps instead of widening the page; suggestion rows keep room for the company name */
+@media (max-width:600px) {
+  .sitebar { height:auto; min-height:48px; flex-wrap:wrap; row-gap:6px; padding:8px 16px; }
+  .sitebar nav { flex-wrap:wrap; row-gap:4px; column-gap:12px; }
+  .ls-row .mk, .ls-row .ls-enter { display:none; }
+  .ls-n { min-width:0; }
+  body:has(.lsearch) .sitebar .brand, body:has(.lsearch) .sitebar .cmd { display:none; }
+}
