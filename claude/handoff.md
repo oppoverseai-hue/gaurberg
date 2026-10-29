@@ -5,7 +5,7 @@ For a new Claude Code session. Read CLAUDE.md first, then Start Here (links in d
 ## State
 
 - Build is frozen: no new features. Deadline was Wed Oct 28 (dry run and outside viewer).
-- main: `1347686` (PR #64 merged). Repo: oppoverseai-hue/gaurberg. App in `app/`.
+- main: `82db4ea` or later (PRs #65 and #66 merged). Repo: oppoverseai-hue/gaurberg. App in `app/`.
 - Supabase project: `zyxrptpbifafmstoporw`.
 
 ## Merged to main
@@ -32,7 +32,6 @@ Earlier: M17 market data (metrics strip, events line), M14 London and M15 Hong K
 
 ## Open
 
-- PR #65 (final run files in `runs/m17_final/`, `runs/m17/promote_market_data_final.sql`) is not merged.
 - The full eval run (Monday item 1) was not done. Recall is measured for UBER, CRWV and LYFT only.
 - Softcat's FY2026 annual report (published Oct 27) is not extracted; only its preliminary results are.
 - Link 467 (CK Hutchison invests in VodafoneThree) may be out of date after the buyout.
@@ -46,6 +45,7 @@ Earlier: M17 market data (metrics strip, events line), M14 London and M15 Hong K
 - Revenue by region only for VOD, AML, CCC, BYIT, SCT; everyone else uses the HQ region.
 - Financial statements "Not loaded" for non-US companies.
 - News is not extracted into the graph.
+- The market_data loader re-stages earnings dates the admin rejected earlier (it keys staged rows only and ignores rejected ones). To fix after the interview.
 
 ## How to run
 
@@ -63,6 +63,6 @@ cd ~/gaurberg/app && npm run dev -- -p 3017
 - One agent at a time; staged rows only. Never write promoted tables: the admin runs promotion SQL in the Supabase editor.
 - Never invent data; label gaps. Cite requirement IDs in commits.
 - Each item on its own branch off main, in a separate copy. Open a PR, say what to click, then stop and wait.
-- Log every doc change as a new Start Here row (now at v1.44). Do not rewrite earlier decisions; add a dated note.
+- Log every doc change as a new Start Here row (now at v1.45). Do not rewrite earlier decisions; add a dated note.
 - Keys stay in server-side secrets; never print or commit them. Models are named by role in `config/models.yaml`.
 - If a command fails twice, stop and tell the admin.
