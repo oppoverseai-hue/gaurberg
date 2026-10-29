@@ -1,0 +1,21 @@
+{
+ "symbol": "CBRS",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [
+  "peTTM",
+  "evEbitdaTTM",
+  "grossMarginTTM",
+  "operatingMarginTTM",
+  "netProfitMarginTTM",
+  "revenueGrowthTTMYoy"
+ ],
+ "fetch_started": "2026-10-29T03:20:12.738671+00:00",
+ "fetch_finished": "2026-10-29T03:20:16.854345+00:00",
+ "status": "completed_with_gaps",
+ "events": 1
+}

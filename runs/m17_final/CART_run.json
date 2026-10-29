@@ -1,0 +1,14 @@
+{
+ "symbol": "CART",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-29T03:20:03.580900+00:00",
+ "fetch_finished": "2026-10-29T03:20:12.736510+00:00",
+ "status": "completed",
+ "events": 1
+}
