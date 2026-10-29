@@ -1,0 +1,14 @@
+{
+ "symbol": "GOOGL",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "empty"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-29T03:20:35.656967+00:00",
+ "fetch_finished": "2026-10-29T03:20:40.443159+00:00",
+ "status": "completed_with_gaps",
+ "events": 0
+}

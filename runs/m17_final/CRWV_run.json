@@ -1,0 +1,16 @@
+{
+ "symbol": "CRWV",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [
+  "peTTM"
+ ],
+ "fetch_started": "2026-10-29T03:20:16.856215+00:00",
+ "fetch_finished": "2026-10-29T03:20:27.319114+00:00",
+ "status": "completed_with_gaps",
+ "events": 1
+}

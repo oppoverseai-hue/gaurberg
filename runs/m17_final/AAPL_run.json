@@ -1,0 +1,14 @@
+{
+ "symbol": "AAPL",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [],
+ "fetch_started": "2026-10-29T03:19:20.066935+00:00",
+ "fetch_finished": "2026-10-29T03:19:29.089653+00:00",
+ "status": "completed",
+ "events": 2
+}

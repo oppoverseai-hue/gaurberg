@@ -1,0 +1,10 @@
+do $do$
+declare run_id bigint; cid bigint;
+begin
+select id into cid from public.companies where ticker=$q$GOOGL$q$;
+if cid is null then raise exception 'company % not found', $q$GOOGL$q$; end if;
+if (select markets[1] from public.companies where id=cid) is distinct from 'US' then raise exception 'company % is not US-primary; refusing to write market data looked up by %', $q$GOOGL$q$, $q$GOOGL$q$; end if;
+insert into public.agent_runs(agent_name,mode,target,model,tokens_in,tokens_out,cost_usd,started_at,finished_at,status,review_status) values ('market_data','batch',$q$GOOGL Finnhub metric, recommendation trends, earnings calendar (M17)$q$,'none (Finnhub API, no model call)',0,0,0,$q$2026-10-29T03:20:35.656967+00:00$q$::timestamptz,$q$2026-10-29T03:20:40.443159+00:00$q$::timestamptz,$q$completed_with_gaps$q$,'unreviewed') returning id into run_id;
+insert into public.company_metrics(company_id,as_of,data_period,pe_ttm,ev_ebitda,gross_margin,operating_margin,net_margin,revenue_growth_yoy,debt_to_equity,rec_period,rec_strong_buy,rec_buy,rec_hold,rec_sell,rec_strong_sell,source,fetched_at,status,run_id,note) values (cid,$q$2026-10-29$q$::date,$q$2026-06-30$q$::date,16.2808,25.6589,60.9,33.11,54.77,20.05,0.1533,$q$2026-10-01$q$::date,20,41,6,0,0,'finnhub',$q$2026-10-29T03:20:40.443159+00:00$q$::timestamptz,'staged',run_id,null) on conflict (company_id,as_of,source) do update set data_period=excluded.data_period,pe_ttm=excluded.pe_ttm,ev_ebitda=excluded.ev_ebitda,gross_margin=excluded.gross_margin,operating_margin=excluded.operating_margin,net_margin=excluded.net_margin,revenue_growth_yoy=excluded.revenue_growth_yoy,debt_to_equity=excluded.debt_to_equity,rec_period=excluded.rec_period,rec_strong_buy=excluded.rec_strong_buy,rec_buy=excluded.rec_buy,rec_hold=excluded.rec_hold,rec_sell=excluded.rec_sell,rec_strong_sell=excluded.rec_strong_sell,fetched_at=excluded.fetched_at,run_id=excluded.run_id,note=excluded.note where public.company_metrics.status='staged';
+delete from public.company_events where company_id=cid and source='finnhub' and status='staged' and event_date>=$q$2026-10-29$q$::date;
+end $do$;

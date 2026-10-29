@@ -1,0 +1,18 @@
+{
+ "symbol": "AUR",
+ "endpoints": {
+  "profile2": "ok",
+  "metric": "ok",
+  "recommendation": "ok",
+  "calendar/earnings": "ok"
+ },
+ "missing": [
+  "peTTM",
+  "evEbitdaTTM",
+  "revenueGrowthTTMYoy"
+ ],
+ "fetch_started": "2026-10-29T03:19:51.457303+00:00",
+ "fetch_finished": "2026-10-29T03:19:59.322177+00:00",
+ "status": "completed_with_gaps",
+ "events": 1
+}
