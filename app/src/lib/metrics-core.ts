@@ -1,6 +1,12 @@
 // Shared display and selection rules for stored market data (DEM-1, TRM-12). Pure functions: no data access here.
 // Rows come through row-level security, so an allowed user only ever passes promoted rows and the admin also passes staged ones.
 
+/** Where a price sits inside a range, 0 (low) to 1 (high), kept on the bar if the saved range is older than the price. Null when a figure is missing or the range is empty. */
+export function rangePosition(price: number | null | undefined, low: number | null | undefined, high: number | null | undefined): number | null {
+  if (price == null || low == null || high == null || !Number.isFinite(price) || !(high > low)) return null;
+  return Math.min(1, Math.max(0, (price - low) / (high - low)));
+}
+
 export type MetricRow = {
   company_id: number; as_of: string; data_period: string | null;
   pe_ttm: number | null; ev_ebitda: number | null; operating_margin: number | null; net_margin: number | null;

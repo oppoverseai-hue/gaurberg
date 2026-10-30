@@ -102,6 +102,7 @@ main.wide { max-width:none; padding:0; display:flex; flex-direction:column; }
 .disc { padding:10px; border:1px solid var(--line-subtle); border-radius:4px; background:rgba(0,0,0,.35); font:10px/14px var(--mono); color:var(--muted); }
 .x { position:absolute; right:12px; top:12px; background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer; line-height:1; } .x:hover { color:var(--fg); }
 .pv { border:1px solid var(--line); border-radius:8px; padding:12px; background:var(--surface-low); }
+.price .ccy { font:500 12px var(--mono); color:var(--fg2); letter-spacing:0; margin-left:-10px; } .rangebar { position:relative; height:4px; margin-top:8px; background:var(--surface-top); border-radius:2px; } .rangebar i { position:absolute; top:-2px; width:8px; height:8px; margin-left:-4px; border-radius:50%; background:var(--accent); }
 .pv .price { font-size:20px; line-height:24px; } .counts { display:grid; grid-template-columns:repeat(4,1fr); text-align:center; gap:4px; padding:8px 0; margin:8px 0; border-block:1px solid var(--line-subtle); font:10px var(--mono); color:var(--fg2); } .counts b { display:block; color:var(--fg); font-size:14px; }
 .actions { display:flex; gap:8px; flex-wrap:wrap; } .chip { background:var(--surface-high); color:var(--fg); border:1px solid var(--line); border-radius:4px; padding:6px 12px; font:12px var(--mono); cursor:pointer; text-decoration:none; } .chip:hover { border-color:var(--accent); text-decoration:none; color:var(--accent); }
 .empty { padding:32px 20px; color:var(--muted); font:12px/18px var(--mono); }

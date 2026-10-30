@@ -29,7 +29,7 @@ function edgePoint(c: { x: number; y: number }, to: { x: number; y: number }, hw
   return { x: c.x + dx * t, y: c.y + dy * t };
 }
 
-type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
+type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; currency: string | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
 
 export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, countryRegion = {} }: { focal: Co; rels: Rel[]; isAdmin: boolean; geo?: GeoMap; countryRegion?: CountryRegion }) {
   const router = useRouter();
@@ -329,9 +329,9 @@ function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { c
       ) : !data ? <p className="muted">Loading…</p> : (
         <div className="pv">
           {q ? (
-            <div className="price">${q.price.toFixed(2)} <span className={`pill ${q.change >= 0 ? "up" : "down"}`}>{q.change >= 0 ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span></div>
+            <div className="price">{q.price.toFixed(2)}{data?.currency && <span className="ccy">{data.currency}</span>} <span className={`pill ${q.change >= 0 ? "up" : "down"}`}>{q.change >= 0 ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span></div>
           ) : <p className="muted">Data unavailable: {data.quoteError}</p>}
-          {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Prev close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} to {q.high.toFixed(2)}</p>}
+          {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Previous close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} – {q.high.toFixed(2)}</p>}
           <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{data.company.segment} · {data.company.size_tier} cap</p>
           <div className="counts"><div><b>{data.counts.suppliers}</b>Suppliers</div><div><b>{data.counts.customers}</b>Customers</div><div><b>{data.counts.partners}</b>Partners</div><div><b>{data.counts.rivals}</b>Rivals</div></div>
           <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: {data.about ? data.about.split(/(?<=\.)\s/).slice(0, 2).join(" ") : "not available yet"}<br />Latest news: not available right now</p>
