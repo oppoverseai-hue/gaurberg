@@ -67,6 +67,19 @@ export function shown(nodes: MapNode[], side: Side, expanded: boolean): { visibl
   return expanded ? { visible: all, hidden: 0 } : { visible: all.slice(0, MAX_PER_SIDE), hidden: Math.max(0, all.length - MAX_PER_SIDE) };
 }
 
+export const SIDES: Side[] = ["left", "right", "top", "bottom"];
+export const SIDE_LABEL: Record<Side, string> = { left: "Into the company", right: "Out of the company", top: "Competitors", bottom: "Partners" };
+
+// Paging (J1 follow-up): a side with more than MAX_PER_SIDE companies is shown MAX_PER_SIDE at a time, best-scored first.
+// page is clamped, so a stale page number after a filter change still lands on a real batch.
+export function pageOf(nodes: MapNode[], side: Side, page: number): { visible: MapNode[]; all: MapNode[]; page: number; pages: number; from: number; to: number; total: number } {
+  const all = nodes.filter((n) => n.side === side);
+  const pages = Math.max(1, Math.ceil(all.length / MAX_PER_SIDE));
+  const p = Math.min(Math.max(0, Math.floor(page) || 0), pages - 1);
+  const start = p * MAX_PER_SIDE;
+  return { visible: all.slice(start, start + MAX_PER_SIDE), all, page: p, pages, from: all.length ? start + 1 : 0, to: Math.min(all.length, start + MAX_PER_SIDE), total: all.length };
+}
+
 export const isMapped = (c: Co) => !!c.is_seed && !!c.ticker;
 
 // Trust badge (UX-4). Rows not yet promoted by the admin carry their own "Staged" tag and never a Verified badge.
