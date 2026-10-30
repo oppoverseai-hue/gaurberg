@@ -9,7 +9,8 @@ import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels, recordView } from "@/lib/data";
 import { getMarket } from "@/lib/market";
 import { getMetrics, getUpcomingEvents, isUSListed, type Metrics } from "@/lib/marketdb";
-import { groupOf, pctCell } from "@/lib/metrics-core";
+import { groupOf, pctCell, rangePosition } from "@/lib/metrics-core";
+import { quoteCurrency } from "@/lib/listing";
 import PeriodChart from "@/components/PeriodChart";
 import SourceTip from "@/components/SourceTip";
 import CompanyTabs from "@/components/CompanyTabs";
@@ -67,6 +68,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
   const us = isUSListed(company.markets);
+  const currency = quoteCurrency(company.markets);
+  const pos = q ? rangePosition(q.price, f.low52, f.high52) : null;
   const top = buildNodes(rels, company.id).slice(0, 5);
   return (
     <main>
@@ -92,15 +95,17 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           <div className="card" id="price">
             {q ? (
               <>
-                <div className="price">${q.price.toFixed(2)}
+                <div className="price">{q.price.toFixed(2)}{currency && <span className="ccy">{currency}</span>}
                   <span className={`pill ${up ? "up" : "down"}`}>{up ? "▲" : "▼"} {up ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span>
                 </div>
                 <p className="muted mono" style={{ fontSize: 11, margin: "8px 0 0", display: "flex", gap: 6, alignItems: "center" }}>{asOf ? `Price as of ${asOf}. ` : ""}Prices are delayed. <SourceTip text={`Finnhub quote, delayed${asOf ? `, as of ${asOf}` : ""}${m.saved?.parts.includes("price") ? `; saved data from ${m.saved.at}` : ""}`} /></p>
                 <div className="stats">
                   <div><div className="k">Open</div><div className="v">{q.open.toFixed(2)}</div></div>
-                  <div><div className="k">Day range</div><div className="v">{q.low.toFixed(2)} - {q.high.toFixed(2)}</div></div>
-                  <div><div className="k">Prev close</div><div className="v">{q.prevClose.toFixed(2)}</div></div>
-                  <div><div className="k">52-week range</div><div className={`v ${f.low52 == null ? "muted" : ""}`}>{f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} - ${f.high52.toFixed(2)}` : NA}</div></div>
+                  <div><div className="k">Day range</div><div className="v">{q.low.toFixed(2)} – {q.high.toFixed(2)}</div></div>
+                  <div><div className="k">Previous close</div><div className="v">{q.prevClose.toFixed(2)}</div></div>
+                  <div><div className="k">52-week range</div><div className={`v ${f.low52 == null ? "muted" : ""}`}>{f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} – ${f.high52.toFixed(2)}` : NA}</div>
+                    {pos != null && <div className="rangebar" role="img" aria-label={`Price is ${Math.round(pos * 100)}% of the way from the 52-week low to the high`}><i style={{ left: `${pos * 100}%` }} /></div>}
+                  </div>
                 </div>
               </>
             ) : (
@@ -148,8 +153,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             <div className="cardhead"><h3>Key numbers</h3><SourceTip text={m.saved?.parts.includes("fundamentals") ? `Finnhub, saved data from ${m.saved.at}` : "Finnhub, live (delayed)"} /></div>
             <Rows rows={[
               ["Previous close", q ? q.prevClose.toFixed(2) : null],
-              ["Day range", q ? `${q.low.toFixed(2)} - ${q.high.toFixed(2)}` : null],
-              ["52-week range", f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} - ${f.high52.toFixed(2)}` : null],
+              ["Day range", q ? `${q.low.toFixed(2)} – ${q.high.toFixed(2)}` : null],
+              ["52-week range", f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} – ${f.high52.toFixed(2)}` : null],
               ["Avg volume", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
               ["Market cap", f.marketCap == null ? null : fmtBig(f.marketCap)],
               ["P/E (trailing)", n2(f.pe)], ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Beta", n2(f.beta)],

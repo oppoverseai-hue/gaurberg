@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.gaurberg.refresh-market</string>
+  <key>ProgramArguments</key>
+  <array><string>/bin/bash</string><string>/Users/agraug/gaurberg/app/scripts/refresh-market.sh</string></array>
+  <!-- 19:00 in the Mac's own time zone (set it to Makassar / WITA). If the Mac is asleep at 19:00, launchd runs the job on wake. -->
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>0</integer></dict>
+</dict>
+</plist>

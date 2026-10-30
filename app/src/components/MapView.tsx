@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, shown, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 import { exposureWeight, realWeight } from "@/lib/exposure-core";
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
@@ -29,7 +29,7 @@ function edgePoint(c: { x: number; y: number }, to: { x: number; y: number }, hw
   return { x: c.x + dx * t, y: c.y + dy * t };
 }
 
-type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
+type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; currency: string | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
 
 export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, countryRegion = {} }: { focal: Co; rels: Rel[]; isAdmin: boolean; geo?: GeoMap; countryRegion?: CountryRegion }) {
   const router = useRouter();
@@ -47,7 +47,11 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [allRels, filter, region, geo, countryRegion, focal.id]);
   const nodes = useMemo(() => buildNodes(rels, focal.id), [rels, focal.id]);
-  const [expanded, setExpanded] = useState<Record<Side, boolean>>({ left: false, right: false, top: false, bottom: false });
+  // Paging: each side shows MAX_PER_SIDE companies at a time. "List all" opens a searchable list of every company on that side.
+  const [pages, setPages] = useState<Record<Side, number>>({ left: 0, right: 0, top: 0, bottom: 0 });
+  const [listSide, setListSide] = useState<Side | null>(null);
+  const [listQ, setListQ] = useState("");
+  useEffect(() => { setPages({ left: 0, right: 0, top: 0, bottom: 0 }); }, [filter, region]);
   // Exposure highlight (GRF-17): fade companies that are not exposed to the focal company (competitors only), and draw line width from
   // the exposed company's own quoted share. Off: width from any quoted figure. A figure missing from its quote never widens a line.
   const [hit, setHit] = useState(false);
@@ -56,15 +60,16 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
 
   const placed = useMemo(() => {
     const out: { node: MapNode; x: number; y: number }[] = [];
-    const hidden: Record<Side, number> = { left: 0, right: 0, top: 0, bottom: 0 };
-    (["left", "right", "top", "bottom"] as Side[]).forEach((s) => {
-      const { visible, hidden: h } = shown(nodes, s, expanded[s]);
-      hidden[s] = h;
-      const sl = slots(s, visible.length);
-      visible.forEach((n, i) => out.push({ node: n, ...sl[i] }));
+    const info = {} as Record<Side, ReturnType<typeof pageOf>>;
+    SIDES.forEach((s) => {
+      const pg = pageOf(nodes, s, pages[s]);
+      info[s] = pg;
+      const sl = slots(s, pg.visible.length);
+      pg.visible.forEach((n, i) => out.push({ node: n, ...sl[i] }));
     });
-    return { out, hidden };
-  }, [nodes, expanded]);
+    return { out, info };
+  }, [nodes, pages]);
+  const pickFromList = (side: Side, i: number, n: MapNode) => { setPages((p) => ({ ...p, [side]: Math.floor(i / MAX_PER_SIDE) })); setPanel({ kind: "company", co: n.co }); };
 
   useEffect(() => {
     const k = (e: KeyboardEvent) => e.key === "Escape" && setPanel(null);
@@ -80,7 +85,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
         <div className="crumb">
           <Link href={`/company/${focal.ticker}`}>← Back to company page</Link><span className="muted">|</span>
           <strong>{focal.name}</strong><span className="tag">{focal.ticker}</span><span>/</span><span>Ecosystem map</span><span className="muted">|</span>
-          <Link href={`/company/${focal.ticker}/exposure`}>If {focal.name} is hit →</Link>
+          <Link href={`/company/${focal.ticker}/exposure`}>Who is exposed to {focal.name} →</Link>
         </div>
         <span style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {Object.entries(tally).map(([k, v]) => <span key={k} className={`badge ${v.cls}`}><span aria-hidden>{glyph(v.cls)}</span>{k}: {v.n}</span>)}
@@ -165,11 +170,57 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
         </aside>
       </div>
       <div className="more">
-        {(["left", "right", "top", "bottom"] as Side[]).filter((s) => placed.hidden[s] > 0 || expanded[s]).map((s) => (
-          <button key={s} className="chip" onClick={() => setExpanded({ ...expanded, [s]: !expanded[s] })}>
-            {expanded[s] ? `Show fewer on the ${s}` : `Show ${placed.hidden[s]} more on the ${s}`}
-          </button>
-        ))}
+        {SIDES.filter((s) => placed.info[s].total > MAX_PER_SIDE).map((s) => {
+          const g = placed.info[s];
+          const go = (p: number) => setPages({ ...pages, [s]: p });
+          return (
+            <div key={s} className="pager" role="group" aria-label={`Page through ${SIDE_LABEL[s].toLowerCase()}`}>
+              <span className="pg-label">{SIDE_LABEL[s]}</span>
+              <span className="pg-range">Batch {g.page + 1} of {g.pages} · {g.from}–{g.to} of {g.total}</span>
+              <button className="chip" disabled={g.page === 0} onClick={() => go(g.page - 1)}>◂ Prev {MAX_PER_SIDE}</button>
+              <button className="chip" disabled={g.page >= g.pages - 1} onClick={() => go(g.page + 1)}>Next {MAX_PER_SIDE} ▸</button>
+              <button className={`chip ${listSide === s ? "on" : ""}`} aria-expanded={listSide === s} onClick={() => { setListSide(listSide === s ? null : s); setListQ(""); }}>{listSide === s ? "Hide list" : `List all ${g.total}`}</button>
+            </div>
+          );
+        })}
+      </div>
+      {listSide && placed.info[listSide].total > MAX_PER_SIDE && (
+        <CohortList side={listSide} all={placed.info[listSide].all} page={placed.info[listSide].page} q={listQ} onQ={setListQ} onPick={(i, n) => pickFromList(listSide, i, n)} onClose={() => setListSide(null)} selId={panel?.kind === "company" ? panel.co.id : null} />
+      )}
+    </div>
+  );
+}
+
+function CohortList({ side, all, page, q, onQ, onPick, onClose, selId }: { side: Side; all: MapNode[]; page: number; q: string; onQ: (v: string) => void; onPick: (i: number, n: MapNode) => void; onClose: () => void; selId: number | null }) {
+  const needle = q.trim().toLowerCase();
+  const rows = all.map((n, i) => ({ n, i })).filter(({ n }) => !needle || n.co.name.toLowerCase().includes(needle) || (n.co.ticker ?? "").toLowerCase().includes(needle));
+  return (
+    <div className="cohort" role="region" aria-label={`All ${SIDE_LABEL[side].toLowerCase()}`}>
+      <div className="cohort-h">
+        <strong>{SIDE_LABEL[side]} · {all.length}</strong>
+        <input type="search" value={q} onChange={(e) => onQ(e.target.value)} placeholder="Search by name or ticker…" aria-label="Search this list" />
+        <button className="chip" onClick={onClose}>Close</button>
+      </div>
+      <div className="cohort-scroll">
+        <table>
+          <thead><tr><th>#</th><th>Company</th><th>Link</th><th>Size</th><th>Batch</th></tr></thead>
+          <tbody>
+            {rows.length === 0 && <tr><td colSpan={5} className="muted">No match in this list.</td></tr>}
+            {rows.map(({ n, i }) => {
+              const sized = n.links.find((l) => l.exposure_pct != null) ?? n.links[0];
+              const b = Math.floor(i / MAX_PER_SIDE);
+              return (
+                <tr key={n.co.id} className={`${b === page ? "cur" : ""} ${selId === n.co.id ? "sel" : ""}`} tabIndex={0} onClick={() => onPick(i, n)} onKeyDown={(e) => e.key === "Enter" && onPick(i, n)}>
+                  <td className="mono">{i + 1}</td>
+                  <td>{n.co.name}{n.co.ticker ? <span className="tag" style={{ marginLeft: 6 }}>{n.co.ticker}</span> : <span className="muted"> · no ticker</span>}</td>
+                  <td>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</td>
+                  <td className="muted">{exposureText(sized)}</td>
+                  <td className="mono">{b + 1}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );
@@ -278,9 +329,9 @@ function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { c
       ) : !data ? <p className="muted">Loading…</p> : (
         <div className="pv">
           {q ? (
-            <div className="price">${q.price.toFixed(2)} <span className={`pill ${q.change >= 0 ? "up" : "down"}`}>{q.change >= 0 ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span></div>
+            <div className="price">{q.price.toFixed(2)}{data?.currency && <span className="ccy">{data.currency}</span>} <span className={`pill ${q.change >= 0 ? "up" : "down"}`}>{q.change >= 0 ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span></div>
           ) : <p className="muted">Data unavailable: {data.quoteError}</p>}
-          {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Prev close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} to {q.high.toFixed(2)}</p>}
+          {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Previous close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} – {q.high.toFixed(2)}</p>}
           <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{data.company.segment} · {data.company.size_tier} cap</p>
           <div className="counts"><div><b>{data.counts.suppliers}</b>Suppliers</div><div><b>{data.counts.customers}</b>Customers</div><div><b>{data.counts.partners}</b>Partners</div><div><b>{data.counts.rivals}</b>Rivals</div></div>
           <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: {data.about ? data.about.split(/(?<=\.)\s/).slice(0, 2).join(" ") : "not available yet"}<br />Latest news: not available right now</p>

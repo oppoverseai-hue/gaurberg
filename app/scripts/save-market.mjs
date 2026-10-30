@@ -31,6 +31,7 @@ const tickers = asked.filter((t) => {
   return false;
 });
 fs.mkdirSync("data/market", { recursive: true });
+let failed = 0;
 for (const t of tickers) {
   const file = `data/market/${t}.json`;
   const old = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : {};
@@ -45,6 +46,9 @@ for (const t of tickers) {
   } catch (e) { note.push(String(e.message)); }
   try { const c = await fh("/calendar/earnings", { symbol: t, from: new Date().toISOString().slice(0, 10), to: new Date(Date.now() + 120 * 864e5).toISOString().slice(0, 10) }); out.nextEarnings = str(c.earningsCalendar?.[0]?.date); } catch (e) { note.push(String(e.message)); }
   if (!noHistory) try { out.daily = await td(t, "1day"); await new Promise((r) => setTimeout(r, 8000)); out.weekly = await td(t, "1week"); await new Promise((r) => setTimeout(r, 8000)); } catch (e) { note.push(String(e.message)); }
+  // Every call failed (no network, bad key, rate limit): keep the old file instead of stamping it with a fresh saved_at.
+  if (note.length >= (noHistory ? 3 : 4)) { console.log(t, `NOT saved, every call failed: ${note[0]}`); failed++; continue; }
   fs.writeFileSync(file, JSON.stringify(out));
   console.log(t, note.length ? `saved with gaps: ${note.join("; ")}` : "saved");
 }
+if (failed) { console.log(`${failed} of ${tickers.length} companies not saved`); process.exitCode = 1; }

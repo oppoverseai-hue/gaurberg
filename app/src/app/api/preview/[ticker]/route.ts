@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getAccess } from "@/lib/supabase/server";
 import { getCompany, getRels } from "@/lib/data";
 import { getMarket } from "@/lib/market";
+import { quoteCurrency } from "@/lib/listing";
 
 export const dynamic = "force-dynamic";
 
@@ -24,6 +25,6 @@ export async function GET(_: Request, { params }: { params: Promise<{ ticker: st
   }
   return NextResponse.json({
     company: { name: co.name, ticker: co.ticker, segment: co.segment, size_tier: co.size_tier },
-    quote: m.quote, quoteError: m.quote ? null : m.quoteError, counts, about: m.profile?.description ?? null, news: null,
+    quote: m.quote, currency: quoteCurrency(co.markets), quoteError: m.quote ? null : m.quoteError, counts, about: m.profile?.description ?? null, news: null,
   });
 }

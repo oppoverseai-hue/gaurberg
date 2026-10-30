@@ -11,5 +11,8 @@ export function liveSymbol(co: Listing): string | null {
   return co.ticker && isUSListed(co.markets) ? co.ticker : null;
 }
 
+/** The currency of a quote, from the listing. Live quotes are US listings only; for any other listing the currency is not stated. */
+export const quoteCurrency = (markets: string[] | null | undefined): string | null => (isUSListed(markets) ? "USD" : null);
+
 export const NOT_LIVE_PRICE = "Live price not available for this listing.";
 export const NOT_LIVE_DATA = "Live data covers US-primary listings only.";
