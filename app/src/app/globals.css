@@ -263,10 +263,16 @@ main.scr{max-width:1200px;padding-top:36px}
 .exposure .xline { font-size:13px; display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
 .exposure .xw { margin-left:auto; font:600 13px var(--mono); color:var(--fg); }
 .exposure .xtext { font-size:13px; margin:4px 0 0; }
+.exposure .muted { color:var(--fg2); } /* --muted is under 4.5:1 on these backgrounds */
+.exposure .xsum { font:500 14px/20px var(--sans); color:var(--fg); margin:0 0 6px; }
+.exposure .cardhead h3 { display:flex; align-items:center; gap:6px; font-family:var(--sans); }
+.exposure .xnote { color:var(--fg2); font:12px/16px var(--sans); margin:4px 0 0; }
+.exposure .xtk { font:12px var(--mono); color:var(--fg2); }
+.exposure .xmeta { color:var(--fg2); font:12px/18px var(--sans); margin:4px 0 0; }
 .exposure .xflag { color:var(--b-staged); font:11px var(--mono); margin:4px 0 0; }
-.exposure .xctx { color:var(--muted); font-size:12px; margin:6px 0 0; }
+.exposure .xctx { color:var(--fg2); font-size:12px; margin:6px 0 0; }
 .exposure blockquote { margin:6px 0 0; padding:10px 12px; border-left:2px solid var(--accent); background:var(--surface-high); border-radius:0 6px 6px 0; font:italic 12px/18px var(--sans); color:var(--fg2); }
-.exposure blockquote footer { color:var(--muted); font:11px var(--mono); margin-top:6px; font-style:normal; }
+.exposure blockquote footer { color:var(--fg2); font:11px var(--mono); margin-top:6px; font-style:normal; }
 /* Map exposure highlight (GRF-17): companies with no exposure link fade */
 .node.fade, .link.fade { opacity:.18; }
 /* Phone width (landing check): the header wraps instead of widening the page; suggestion rows keep room for the company name */

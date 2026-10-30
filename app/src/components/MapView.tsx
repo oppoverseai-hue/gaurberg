@@ -85,7 +85,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
         <div className="crumb">
           <Link href={`/company/${focal.ticker}`}>← Back to company page</Link><span className="muted">|</span>
           <strong>{focal.name}</strong><span className="tag">{focal.ticker}</span><span>/</span><span>Ecosystem map</span><span className="muted">|</span>
-          <Link href={`/company/${focal.ticker}/exposure`}>If {focal.name} is hit →</Link>
+          <Link href={`/company/${focal.ticker}/exposure`}>Who is exposed to {focal.name} →</Link>
         </div>
         <span style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {Object.entries(tally).map(([k, v]) => <span key={k} className={`badge ${v.cls}`}><span aria-hidden>{glyph(v.cls)}</span>{k}: {v.n}</span>)}
