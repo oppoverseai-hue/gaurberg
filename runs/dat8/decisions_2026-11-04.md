@@ -1,31 +1,41 @@
 # DAT-8 decisions (Nov 4, 2026)
 
-The admin's Keep/Fix/Drop for each row came as a pasted review. Part 1 SQL (`dat8_apply_part1.sql`) covers exactly the approved rows that are verified. The admin runs it; nothing has been run.
-That paste's T27-T29 company ids are off by one (it gives Sony as 177; 177 is Texas Instruments). The SQL uses the ids from the review table, matched by row ID.
+These are the admin's final decisions, which supersede the earlier pastes. `dat8_apply.sql` covers exactly these rows. The admin runs it; nothing has been run.
 
-## In part 1
+## Applied by dat8_apply.sql
 | Rows | What |
 | --- | --- |
-| T1-T80 | ticker, CIK, `markets = ['US']`, exchange (SEC list) |
-| X1 | Delivery Hero DHER, Xetra (Deutsche Börse page) |
-| X3 | Didi DIDIY, OTC, CIK 1764757 (SEC list); type to public_company; markets empty |
+| T1-T80 | ticker, CIK, `markets = ['US']`, exchange, from the SEC list |
+| X3 | Didi: DIDIY, OTC, CIK 1764757; type becomes public_company; markets empty |
+| X4-X16 | HKEX `NNNN.HK`, `markets = ['HKEX']` |
+| X19, X21, X22 | LSE `BA.L`, `ZEG.L`, `MNG.L`, `markets = ['LSE']` |
+| X1, X24-X32, X44-X51, X60-X62 | confirmed on the exchange's own site on Nov 4 (source in each SQL comment); suffixed ticker; markets empty |
 | A1-A3 | aliases TSMC, Facebook, Meta |
-| D1, D2, D5-D13 | merges; links 667, 671 and 672 get a "via" note; link 672's ends swap (competes needs source_id < target_id) |
-| D10 | link 486 rejected as a duplicate of 488 ("clear out the historical sponsor artifacts") |
-| D12 | link 426 rejected (same deal as 442) |
+| D1, D2, D5-D9, D11 | merge; links 667, 671 and 672 get a "via" note; link 672's ends swap, because 'competes' needs source_id < target_id |
+| D10 | 367 and 368 merge into 370 with all their links; no link is rejected (486 stays promoted). The two empty team nodes are then deleted like every other merge. |
+| D12 | merge 318 into 337; link 442 rejected, 426 kept |
+| D3 | node 386 (BT, 0 links) deleted; 422 kept |
 | F1 | link 704 source NEC -> Lenovo |
-| N1-N6, N8-N12, N16-N18 | entity_type to private_company (N13-N15 merged in D) |
-| D3, D4, D14, N19, X33 | no change, as decided |
+| N1-N6, N8-N12 | type becomes private_company, no ticker (N13-N15 are merged in D1, D2 and D9) |
+| C1-C3 | kept as groups: links 34, 35 and 36 stay promoted; no change |
 
-## Held: needs the admin
-| Row | Why held |
+Suffixes used: `.HK`, `.L`, `.DE` (Xetra), `.AS` (Euronext Amsterdam), `.PA` (Euronext Paris), `.SW` (SIX), `.OL` (Oslo), `.ST` (Stockholm), `.TW` (TWSE), `.TWO` (TPEx), `.JK` (IDX), `.AX` (ASX), `.NR` (Nairobi).
+- `.NR` is my choice: I know of no common suffix for Nairobi.
+- Volvo's exchange code "VOLV B" contains a space, so it's stored as `VOLV-B.ST` to keep the company URL working.
+- Existing tickers (`0992` Lenovo, `AML`, `VOD`) are unchanged and have no suffix.
+
+## Not applied
+| Row | Why |
 | --- | --- |
-| C1-C3 | The paste says reject the links and remove the nodes. The admin's own message earlier the same day says keep them as groups, so they stay. |
-| D13, link 462 | The paste says reject 462. Its note from an earlier review reads "re-pointed from Liberty Global to Ziggo Group; 10% stake per quote", so it may be the 10% stake rather than a duplicate of 423. The merge is in part 1; the rejection is not. |
-| X23 Mercedes | Renaming to Mercedes-Benz Group conflicts with the quotes: links 476, 478 and 483 name "Mercedes-Benz AG" / "MBAG" (the subsidiary) as the shareholder and partner. Leaving it without a ticker stays true. |
-| X42 Hyundai | Both quotes (122, 587) say only "Hyundai"; nothing says Hyundai Motor Company. |
-| X57 OmniVision | The SEC list names the listed parent "OmniVision Integrated Circuits Group, Inc.", not "Will Semiconductor". Link 261 is about OmniVision Technologies Inc. (2003). |
-| N7 Allscripts / MDRX | MDRX is not in the SEC list, and Expert Market quotes are not public, so it can't be checked on an exchange. |
-| X2, X4-X67 (except X23, X33, X42, X57) | Approved, but each code still has to be checked on the exchange's own site (part 2). |
-
-Confirmed from the quotes: X2 is Samsung Electronics (link 137: "Samsung Electronics Co., Ltd."); X32 is AB Volvo (link 83: "Level 4 Class 8 trucks").
+| D13 | **Held.** Link 462's quote: Vodafone will get "a 10% shareholding in a soon-to-be-formed Benelux entity ('Ziggo Group'), which will own 100% of both VodafoneZiggo and … Telenet". Link 423 is Vodafone's current 50% of VodafoneZiggo. So they are different facts, and Ziggo Group (371) is a different, new company that will own VodafoneZiggo (320). Merging would make 462 say Vodafone holds 10% of VodafoneZiggo, which is false. My review table had this wrong. Also, 462 is an agreed future stake, not a current holding. |
+| X54 | Link 673's quote names only "Mango TV", so there's no rename (admin's condition) and no ticker. |
+| X2 Samsung, X43 HD Hyundai | Korea Exchange: not tried. Samsung's own IR listing page returned 404 earlier. |
+| X17 SANY, X55 Yutong, X56 SAIC | Shanghai SE: the company page loads without data. |
+| X18 CATL, X52 Tongfu, X53 NavInfo | Shenzhen SE: not tried. |
+| X34-X41 (8 Tokyo codes) | JPX quote site returns 401; the listed-company search needs a form submission, which I did not make. |
+| X58 ComfortDelGro, X59 Singtel | SGX: "Page has been moved". |
+| X63 HTA | ASX: 404 for HTA. |
+| X64 Indus Towers, X65 Vodafone Idea | NSE India: quote page shows no data. |
+| X66 Coronation | JSE: no company page reached. |
+| X67 e& | ADX: profile page redirects to the home page. |
+| X20, X23, X33, X42, X57, N7, N16-N19 | Drop, as decided. |

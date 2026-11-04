@@ -1,9 +1,8 @@
--- DAT-8 part 1: approved rows that are verified. Written Nov 4, 2026 from the admin's decisions on PR #81.
+-- DAT-8: staged SQL for exactly the admin's final decisions (Nov 4, 2026, "supersedes all earlier pastes").
 -- The admin runs this in the Supabase SQL editor. It writes promoted tables (companies, relationships).
--- Every update is guarded so it changes nothing if the row already differs from what was reviewed.
--- Held back (see decisions_2026-11-04.md):
---   X2, X4-X67 (codes still to be checked on each exchange's site), X23, X42, X57, N7,
---   the rejection of link 462 (D13), and C1-C3 (kept as groups).
+-- Each statement is guarded, so it changes nothing if a row already differs from what was reviewed.
+-- Not included, with reasons, in decisions_2026-11-04.md: D13 (held: Ziggo Group is not VodafoneZiggo), and the X rows
+-- that could not be confirmed on the exchange's own site.
 begin;
 
 -- T1-T80: US listings, from SEC company_tickers_exchange.json (Nov 4, 2026).
@@ -88,35 +87,70 @@ update companies set ticker = 'BILI', cik = '0001723690', markets = array['US'],
 update companies set ticker = 'IQ', cik = '0001722608', markets = array['US'], exchange = 'Nasdaq' where id = 503 and ticker is null; -- T79 iQIYI
 update companies set ticker = 'BABA', cik = '0001577552', markets = array['US'], exchange = 'NYSE' where id = 507 and ticker is null; -- T80 Alibaba
 
--- X1: Delivery Hero, checked on Deutsche Börse (Symbol DHER, ISIN DE000A2E4K43, Xetra). markets stays empty.
-update companies set ticker = 'DHER', exchange = 'Xetra' where id = 32 and ticker is null;
--- X3: Didi, from the SEC list (OTC DIDIY, CIK 1764757). OTC is not a primary market, so markets stays empty.
+-- X3: Didi, from the SEC list (OTC DIDIY, CIK 1764757). markets stays empty (OTC is not a primary market).
 update companies set ticker = 'DIDIY', cik = '0001764757', exchange = 'OTC', entity_type = 'public_company' where id = 36 and ticker is null;
+
+-- X4-X16: HKEX, markets = ['HKEX'] (admin: Keep).
+update companies set ticker = '0700.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 480 and ticker is null; -- X4 Tencent
+update companies set ticker = '3690.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 466 and ticker is null; -- X5 Meituan
+update companies set ticker = '1810.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 488 and ticker is null; -- X6 Xiaomi
+update companies set ticker = '0001.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 331 and ticker is null; -- X7 CK Hutchison
+update companies set ticker = '0175.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 361 and ticker is null; -- X8 Geely
+update companies set ticker = '0981.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 180 and ticker is null; -- X9 SMIC
+update companies set ticker = '2238.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 435 and ticker is null; -- X10 GAC
+update companies set ticker = '0598.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 473 and ticker is null; -- X11 Sinotrans
+update companies set ticker = '1958.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 475 and ticker is null; -- X12 BAIC
+update companies set ticker = '0728.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 492 and ticker is null; -- X13 China Telecom
+update companies set ticker = '0762.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 495 and ticker is null; -- X14 China Unicom
+update companies set ticker = '0941.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 498 and ticker is null; -- X15 China Mobile
+update companies set ticker = '3396.HK', markets = array['HKEX'], exchange = 'HKEX' where id = 510 and ticker is null; -- X16 Legend Holdings
+
+-- X19, X21, X22: LSE, markets = ['LSE'] (admin: Keep).
+update companies set ticker = 'BA.L', markets = array['LSE'], exchange = 'LSE' where id = 304 and ticker is null; -- X19 BAE Systems
+update companies set ticker = 'ZEG.L', markets = array['LSE'], exchange = 'LSE' where id = 321 and ticker is null; -- X21 Zegona
+update companies set ticker = 'MNG.L', markets = array['LSE'], exchange = 'LSE' where id = 421 and ticker is null; -- X22 M&G
+
+-- X1 and the conditional X rows, each confirmed on the exchange's own site on Nov 4, 2026. markets stays empty.
+update companies set ticker = 'DHER.DE', exchange = 'Xetra' where id = 32 and ticker is null; -- X1 Delivery Hero (Deutsche Börse: DHER, DE000A2E4K43)
+update companies set ticker = 'AMV0.DE', exchange = 'Xetra' where id = 94 and ticker is null; -- X24 AUMOVIO (Deutsche Börse: AMV0, DE000AUM0V10)
+update companies set ticker = '1U1.DE', exchange = 'Xetra' where id = 324 and ticker is null; -- X25 1&1 (Deutsche Börse: 1U1, DE0005545503)
+update companies set ticker = 'ADYEN.AS', exchange = 'Euronext Amsterdam' where id = 228 and ticker is null; -- X26 Adyen (Euronext: ADYEN, NL0012969182)
+update companies set ticker = 'PRX.AS', exchange = 'Euronext Amsterdam' where id = 151 and ticker is null; -- X27 Prosus (Euronext: PRX, NL0013654783)
+update companies set ticker = 'RNO.PA', exchange = 'Euronext Paris' where id = 438 and ticker is null; -- X28 Renault (Euronext: RNO, FR0000131906)
+update companies set ticker = 'ABBN.SW', exchange = 'SIX Swiss Exchange' where id = 215 and ticker is null; -- X29 ABB (SIX: ABBN, CH0012221716)
+update companies set ticker = 'SCMN.SW', exchange = 'SIX Swiss Exchange' where id = 350 and ticker is null; -- X30 Swisscom (SIX: SCMN, CH0008742519)
+update companies set ticker = 'TEL.OL', exchange = 'Oslo Børs' where id = 330 and ticker is null; -- X31 Telenor (Euronext: TEL, NO0010063308, Oslo Børs)
+update companies set ticker = 'VOLV-B.ST', exchange = 'Nasdaq Stockholm' where id = 90 and ticker is null; -- X32 AB Volvo (Nasdaq: VOLV B; link 83 is about trucks)
+update companies set ticker = '2317.TW', exchange = 'TWSE' where id = 128 and ticker is null; -- X44 Hon Hai (TWSE list)
+update companies set ticker = '3231.TW', exchange = 'TWSE' where id = 122 and ticker is null; -- X45 Wistron (TWSE list)
+update companies set ticker = '2454.TW', exchange = 'TWSE' where id = 183 and ticker is null; -- X46 MediaTek (TWSE list)
+update companies set ticker = '2449.TW', exchange = 'TWSE' where id = 173 and ticker is null; -- X47 KYEC (TWSE list)
+update companies set ticker = '3443.TW', exchange = 'TWSE' where id = 192 and ticker is null; -- X48 GUC (TWSE list)
+update companies set ticker = '2324.TW', exchange = 'TWSE' where id = 519 and ticker is null; -- X49 Compal (TWSE list)
+update companies set ticker = '5347.TWO', exchange = 'TPEx' where id = 190 and ticker is null; -- X50 VIS (TPEx: Vanguard International Semiconductor)
+update companies set ticker = '3374.TWO', exchange = 'TPEx' where id = 191 and ticker is null; -- X51 Xintec (TPEx: Xintec Inc.)
+update companies set ticker = 'EMTK.JK', exchange = 'Indonesia Stock Exchange' where id = 246 and ticker is null; -- X60 Emtek (IDX: Elang Mahkota Teknologi)
+update companies set ticker = 'SCOM.NR', exchange = 'Nairobi Securities Exchange' where id = 317 and ticker is null; -- X61 Safaricom (NSE list: SCOM, KE1000001402)
+update companies set ticker = 'TPG.AX', exchange = 'ASX' where id = 336 and ticker is null; -- X62 TPG Telecom (ASX: TPG TELECOM LIMITED)
 
 -- A1-A3: search aliases.
 update companies set aliases = aliases || array['TSMC'] where id = 9 and not ('TSMC' = any(aliases));
 update companies set aliases = aliases || array['Facebook'] where id = 4 and not ('Facebook' = any(aliases));
 update companies set aliases = aliases || array['Meta'] where id = 4 and not ('Meta' = any(aliases));
 
--- D: merges. Links move to the kept company; evidence rows stay with their links. The merged name becomes an alias.
--- D9 first: link 672 (Youku competes with iQIYI) must keep source_id < target_id for 'competes', so its ends swap: iQIYI (503) -> Alibaba (507).
+-- D merges (D1, D2, D5-D12). Links move to the kept company; evidence stays with its link; no link is rejected except 442 (D12).
+-- D9 first: link 672 (Youku competes with iQIYI) must keep source_id < target_id for 'competes', so its ends swap to iQIYI (503) -> Alibaba (507).
 update relationships set source_id = 503, target_id = 507, note = 'via Youku' where id = 672 and source_id = 482 and target_id = 503;
--- D1 Alibaba Cloud (486) -> Alibaba (507); link 667 keeps the unit as "via".
-update relationships set note = 'via Alibaba Cloud' where id = 667 and note is null;
--- D2 Tencent Video (497) -> Tencent (480); link 671 keeps the unit as "via".
-update relationships set note = 'via Tencent Video' where id = 671 and note is null;
--- D10: link 486 (sponsorship, 2020, as amended 2022) repeats link 488 (the arrangement extended to 2045) once both point at AMR GP; rejected as a historical sponsor artifact.
-update relationships set status = 'rejected', note = 'Admin review 2026-11-04 (DAT-8 D10): duplicate of 488 after merging the F1 team into AMR GP' where id = 486 and status = 'promoted';
--- D12: links 426 and 442 are the same Telekom Romania deal; 426 is rejected.
-update relationships set status = 'rejected', note = 'Admin review 2026-11-04 (DAT-8 D12): duplicate of 442 after merging Telekom Romania' where id = 426 and status = 'promoted';
+update relationships set note = 'via Alibaba Cloud' where id = 667 and note is null; -- D1
+update relationships set note = 'via Tencent Video' where id = 671 and note is null; -- D2
+-- D12: links 426 and 442 are the same Telekom Romania deal; the admin keeps 426 and rejects 442.
+update relationships set status = 'rejected', note = 'Admin review 2026-11-04 (DAT-8 D12): same deal as 426' where id = 442 and status = 'promoted';
 
--- Repoint every remaining link of each merged company (keep id <- merged id).
-update relationships set source_id = case source_id when 486 then 507 when 482 then 507 when 497 then 480 when 341 then 334 when 445 then 433 when 479 then 456 when 275 then 362 when 367 then 370 when 368 then 370 when 455 then 436 when 318 then 337 when 371 then 320 end
-  where source_id in (486, 482, 497, 341, 445, 479, 275, 367, 368, 455, 318, 371);
-update relationships set target_id = case target_id when 486 then 507 when 482 then 507 when 497 then 480 when 341 then 334 when 445 then 433 when 479 then 456 when 275 then 362 when 367 then 370 when 368 then 370 when 455 then 436 when 318 then 337 when 371 then 320 end
-  where target_id in (486, 482, 497, 341, 445, 479, 275, 367, 368, 455, 318, 371);
+update relationships set source_id = case source_id when 486 then 507 when 482 then 507 when 497 then 480 when 341 then 334 when 445 then 433 when 479 then 456 when 275 then 362 when 367 then 370 when 368 then 370 when 455 then 436 when 318 then 337 end
+  where source_id in (486, 482, 497, 341, 445, 479, 275, 367, 368, 455, 318);
+update relationships set target_id = case target_id when 486 then 507 when 482 then 507 when 497 then 480 when 341 then 334 when 445 then 433 when 479 then 456 when 275 then 362 when 367 then 370 when 368 then 370 when 455 then 436 when 318 then 337 end
+  where target_id in (486, 482, 497, 341, 445, 479, 275, 367, 368, 455, 318);
 
--- Merged names become aliases of the kept company.
 update companies set aliases = aliases || array['Alibaba Cloud', 'Youku'] where id = 507 and not ('Alibaba Cloud' = any(aliases));
 update companies set aliases = aliases || array['Tencent Video'] where id = 480 and not ('Tencent Video' = any(aliases));
 update companies set aliases = aliases || array['Oak Holdings 1 GmbH'] where id = 334 and not ('Oak Holdings 1 GmbH' = any(aliases));
@@ -126,25 +160,32 @@ update companies set aliases = aliases || array['PIF'] where id = 362 and not ('
 update companies set aliases = aliases || array['Aston Martin Cognizant Formula One team', 'Aston Martin Aramco Formula One Team'] where id = 370 and not ('Aston Martin Aramco Formula One Team' = any(aliases));
 update companies set aliases = aliases || array['Yuji'] where id = 436 and not ('Yuji' = any(aliases));
 update companies set aliases = aliases || array['Telekom Romania Mobile Communications'] where id = 337 and not ('Telekom Romania Mobile Communications' = any(aliases));
-update companies set aliases = aliases || array['Ziggo Group'] where id = 320 and not ('Ziggo Group' = any(aliases));
 
--- Delete the merged companies, only if no link still points at them.
-delete from companies c where c.id in (486, 482, 497, 341, 445, 479, 275, 367, 368, 455, 318, 371)
+-- Delete the merged companies (D) and the empty BT node (D3: keep 422 BT Services), only if no link points at them.
+delete from companies c where c.id in (486, 482, 497, 341, 445, 479, 275, 367, 368, 455, 318, 386)
   and not exists (select 1 from relationships r where r.source_id = c.id or r.target_id = c.id);
 
 -- F1: link 704's quote is Lenovo's report ("the Group held 95.10%"), so the investor is Lenovo, not NEC.
 update relationships set source_id = 374, note = 'Admin review 2026-11-04 (DAT-8 F1): source corrected from NEC to Lenovo per quote' where id = 704 and source_id = 522;
 
--- N1-N6, N8-N12, N16-N18: no current listing found; type changes to private_company. Links keep their own dates.
--- (N13-N15 are merged above.)
+-- N1-N6, N8-N12: no current listing; type becomes private_company, no ticker. (N13-N15 are merged above.)
 update companies set entity_type = 'private_company'
-  where id in (121, 174, 162, 200, 407, 117, 157, 57, 152, 172, 446, 323, 229, 247) and entity_type = 'public_company';
+  where id in (121, 174, 162, 200, 407, 117, 157, 57, 152, 172, 446) and entity_type = 'public_company';
 
 commit;
 
--- Checks to run after commit (expected results in comments).
-select count(*) as us_tickers_added from companies where markets = array['US'] and cik is not null
-  and id in (28,29,55,66,88,93,95,105,116,123,124,125,126,127,129,130,131,134,141,148,149,155,164,167,168,170,176,177,178,184,187,193,197,199,201,205,206,208,209,210,211,212,213,214,216,218,219,220,221,223,224,225,226,237,249,254,297,298,299,300,319,343,345,353,373,381,387,392,397,400,401,405,406,409,485,487,494,502,503,507); -- 80
-select count(*) as merged_left from companies where id in (486, 482, 497, 341, 445, 479, 275, 367, 368, 455, 318, 371); -- 0
-select id, source_id, target_id, relationship_type, status, note from relationships where id in (426, 486, 667, 671, 672, 704) order by id;
-select id, name, aliases from companies where id in (4, 9, 320, 334, 337, 362, 370, 433, 436, 456, 480, 507) order by id;
+-- After-counts check. Expected values are in the comments; "before" was read on Nov 4, 2026.
+select (select count(*) from companies) companies,                                    -- before 489, after 477
+       (select count(*) from companies where ticker is not null) with_ticker,             -- before 45, after 163
+       (select count(*) from companies where 'US' = any(markets)) mkt_us,                 -- before 40, after 120
+       (select count(*) from companies where 'HKEX' = any(markets)) mkt_hkex,             -- before 4, after 17
+       (select count(*) from companies where 'LSE' = any(markets)) mkt_lse,               -- before 5, after 8
+       (select count(*) from companies where cik is not null) with_cik,                   -- before 1, after 82
+       (select count(*) from companies where cardinality(aliases) > 0) with_aliases,      -- before 5, after 16
+       (select count(*) from relationships where status = 'promoted') rel_promoted,       -- before 611, after 610
+       (select count(*) from relationships where status = 'rejected') rel_rejected,       -- before 60, after 61
+       (select count(*) from relationships where status = 'live') rel_live,               -- before 34, after 34
+       (select count(*) from evidence) evidence;                                          -- before 1013, after 1013
+select entity_type, count(*) from companies group by 1 order by 1;
+-- before: institution 20, organization 11, private_company 246, public_company 209, segment_group 3
+-- after:  institution 18, organization 11, private_company 250, public_company 195, segment_group 3
