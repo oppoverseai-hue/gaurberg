@@ -2,6 +2,7 @@ import { getAccess } from "@/lib/supabase/server";
 import LoginButton from "@/components/LoginButton";
 import LandingSearch from "@/components/LandingSearch";
 import IndexTicker from "@/components/IndexTicker";
+import RequestAccess from "@/components/RequestAccess";
 
 export const dynamic = "force-dynamic";
 
@@ -13,16 +14,11 @@ export default async function Home() {
       <p className="muted">Research any company through the businesses around it.</p>
       {access.state === "signed_out" && (
         <div className="card">
-          <p>This is an invite-only prototype. Sign in with the Google account you were invited with.</p>
+          <p>Gaurberg is in early access. Continue with Google: invited accounts go straight in, everyone else can request an invitation.</p>
           <LoginButton />
         </div>
       )}
-      {access.state === "not_invited" && (
-        <div className="card">
-          <p>{access.email} is not on the invite list yet. Ask the admin to add it, then sign in again.</p>
-          <form action="/auth/signout" method="post"><button className="btn">Sign out</button></form>
-        </div>
-      )}
+      {access.state === "not_invited" && <RequestAccess email={access.email} />}
       {access.state === "ok" && (
         <>
           <LandingSearch />

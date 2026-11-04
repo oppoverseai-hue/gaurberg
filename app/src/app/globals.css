@@ -298,3 +298,12 @@ main.scr{max-width:1200px;padding-top:36px}
 .cohort td { padding:6px 8px; border-top:1px solid var(--line); } .cohort tbody tr { cursor:pointer; }
 .cohort tbody tr:hover, .cohort tbody tr:focus { background:var(--surface-mid); }
 .cohort tr.cur td:first-child { box-shadow:inset 2px 0 0 var(--accent); } .cohort tr.sel { background:var(--surface-mid); }
+
+/* Request-access form (ACC-5); interim look until the Stitch design lands */
+.wl fieldset { border:0; padding:0; margin:16px 0 0; } .wl legend { font-weight:600; margin-bottom:8px; }
+.wl .chips { display:flex; flex-wrap:wrap; gap:8px; }
+.wl .chip { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:var(--canvas); cursor:pointer; }
+.wl .chip:has(input:checked) { border-color:var(--accent-border); background:var(--accent-dim); color:var(--accent); }
+.wl .wl-field { display:block; margin-top:16px; font-weight:600; } .wl .wl-field input { display:block; width:100%; margin-top:8px; padding:10px 12px; border-radius:4px; border:1px solid var(--line); background:var(--canvas); color:var(--fg); font:13px var(--sans); }
+.wl .wl-check { display:flex; gap:8px; align-items:flex-start; margin-top:12px; }
+.linkbtn { background:none; border:0; padding:0; color:var(--accent); font:inherit; cursor:pointer; } .linkbtn:hover { text-decoration:underline; }
