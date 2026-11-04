@@ -75,3 +75,15 @@ test("before typing: the best-connected mapped companies; matching 500 rows take
   for (let i = 0; i < 100; i++) search(index, ["ub", "tencent", "bolt", "semi", "0700"][i % 5]);
   assert.ok((performance.now() - t0) / 100 < 5, "under 5 ms a search");
 });
+
+test("the live-lookup test rows (Bumble 21, Braze 22, GREENLIT VENTURES INC. 296) are never offered; the same row under another id is (UX-4)", () => {
+  const cos = snap.companies.filter((c) => [21, 22, 296].includes(c.id));
+  assert.deepEqual(cos.map((c) => c.name).sort(), ["Braze", "Bumble", "GREENLIT VENTURES INC."], "ids match the snapshot");
+  const uber = snap.companies.find((c) => c.ticker === "UBER" && c.is_seed);
+  const withLinks = [...links, ...cos.map((c) => ({ source_id: c.id, target_id: uber.id }))];
+  const idx = buildIndex(snap.companies, withLinks);
+  for (const q of ["braze", "BRZE", "bumble", "BMBL", "greenlit", "GLVT"]) assert.equal(search(idx, q).length, 0, q);
+  const twin = { ...cos.find((c) => c.name === "Braze"), id: 99001 };
+  const idx2 = buildIndex([...snap.companies, twin], [...withLinks, { source_id: 99001, target_id: uber.id }]);
+  assert.equal(search(idx2, "braze")[0]?.id, 99001, "the rule is the id, not the name");
+});
