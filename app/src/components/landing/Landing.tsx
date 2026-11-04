@@ -37,16 +37,13 @@ export default function Landing({ state, email }: { state: "signed_out" | "not_i
       </header>
 
       <div className="pp-main" id="top">
-        {/* Hero: pitch on the left, the idea on the right */}
+        {/* Hero: one centred message, no image */}
         <section className="pp-hero2">
-          <div>
-            <p className="pp-over pp-mono"><span className="pp-dot" />By invitation · Early access</p>
-            <h1>Every stock has an {em("ecosystem.")}</h1>
-            <p className="pp-lede">Gaurberg shows the suppliers, customers, partners, rivals and investors around a company, and the sentence from the filing behind every link.</p>
-            <div className="pp-ctas pp-left"><a className="pp-btn" href="#access">Request an invitation</a><a className="pp-ghost" href="#features">See what it does ›</a></div>
-            <p className="pp-note pp-mono">Free during early access · Not investment advice</p>
-          </div>
-          <div className="pp-paperart"><Constellation dark={false} /></div>
+          <p className="pp-over pp-mono pp-center"><span className="pp-dot" />By invitation · Early access</p>
+          <h1>Every stock has an {em("ecosystem.")}</h1>
+          <p className="pp-lede">Gaurberg shows the suppliers, customers, partners, rivals and investors around a company, and the sentence from the filing behind every link.</p>
+          <div className="pp-ctas"><a className="pp-btn" href="#access">Request an invitation</a><a className="pp-ghost" href="#features">See what it does ›</a></div>
+          <p className="pp-note pp-mono">Free during early access · Not investment advice</p>
         </section>
 
         {/* Problem */}

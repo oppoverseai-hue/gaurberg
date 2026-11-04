@@ -48,13 +48,13 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 .pp-block h2, .pp-invite h2, .pp-faq h2 { font:700 28px/36px var(--sans); letter-spacing:-.02em; margin:0 0 16px; }
 @media (min-width:768px) { .pp-block h2, .pp-invite h2, .pp-faq h2 { font-size:40px; line-height:48px; letter-spacing:-.025em; } }
 
-/* Hero: text beside the illustration */
-.pp-hero2 { display:grid; grid-template-columns:1fr; gap:40px; align-items:center; padding:72px 0 24px; }
-@media (min-width:960px) { .pp-hero2 { grid-template-columns:5fr 6fr; gap:56px; padding:112px 0 48px; } }
-.pp-hero2 h1 { font:700 38px/44px var(--sans); letter-spacing:-.025em; margin:0; }
-@media (min-width:768px) { .pp-hero2 h1 { font-size:56px; line-height:64px; letter-spacing:-.03em; } }
-.pp-lede { color:var(--muted); margin:24px 0 0; max-width:520px; }
-.pp-ctas { display:flex; gap:12px; flex-wrap:wrap; margin-top:32px; }
+/* Hero: centred, text only */
+.pp-hero2 { text-align:center; max-width:860px; margin:0 auto; padding:120px 0 40px; }
+@media (min-width:960px) { .pp-hero2 { padding:176px 0 72px; } }
+.pp-hero2 h1 { font:700 40px/46px var(--sans); letter-spacing:-.025em; margin:0; }
+@media (min-width:768px) { .pp-hero2 h1 { font-size:72px; line-height:78px; letter-spacing:-.035em; } }
+.pp-lede { color:var(--muted); margin:28px auto 0; max-width:600px; font-size:19px; line-height:29px; }
+.pp-ctas { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:36px; }
 .pp-note { color:var(--muted); font-size:10px; margin:20px 0 0; }
 
 /* Dark plates: illustrations framed like hardware inserts on paper */
@@ -162,5 +162,3 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 .pp-pipe .pp-step { padding:8px 14px; border:1px solid var(--hair); border-radius:9999px; background:var(--card); font-size:10px; color:var(--ink); }
 .pp-pipe .pp-arrow { color:var(--muted); font-size:12px; }
 
-/* Hero art on paper (light version of the map) */
-.pp-paperart { background:var(--card); border:1px solid var(--hair); border-radius:16px; padding:8px; box-shadow:0 20px 40px -15px rgba(42,33,28,.06); }
