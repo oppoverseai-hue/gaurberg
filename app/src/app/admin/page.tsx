@@ -32,10 +32,14 @@ export default async function Admin() {
   if (access.state !== "ok" || access.role !== "admin") redirect("/");
   const supabase = await supabaseServer();
   const day = new Date(); day.setUTCHours(0, 0, 0, 0);
-  const [list, log] = await Promise.all([
+  const [list, log, refresh] = await Promise.all([
     supabase.from("allowlist").select("email,role,created_at").order("created_at"),
     supabase.from("lookup_log").select("id,email,query,cost_usd,outcome,created_at").order("id", { ascending: false }).limit(30),
+    supabase.from("agent_runs").select("id,status,target,finished_at").eq("agent_name", "market_refresh").order("id", { ascending: false }).limit(7),
   ]);
+  const runs = (refresh.data ?? []) as { id: number; status: string; target: string; finished_at: string | null }[];
+  const lastOk = runs.find((r) => r.status !== "failed");
+  const stale = !lastOk?.finished_at || Date.now() - Date.parse(lastOk.finished_at) > 36 * 3600e3;
   const rows = log.data ?? [];
   const today = rows.filter((r) => new Date(r.created_at) >= day);
   const spendToday = today.reduce((n, r) => n + Number(r.cost_usd ?? 0), 0);
@@ -62,6 +66,16 @@ export default async function Admin() {
           <button className="btn">Add</button>
         </form>
         <p className="muted mono" style={{ fontSize: 11, marginBottom: 0 }}>A change takes effect on the person&apos;s next page load. Reviewers read and run one live lookup a day; the admin has no limit.</p>
+      </div>
+
+      <div className="card">
+        <div className="cardhead"><h3>Daily market data refresh</h3><span className="tag" style={stale ? { color: "var(--down)" } : undefined}>{stale ? "stale" : "fresh"}</span></div>
+        <p style={{ margin: "0 0 8px" }}>{lastOk?.finished_at ? <>Last good run <b>{new Date(lastOk.finished_at).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Makassar" })}</b> Makassar.</> : "No successful run yet."} Runs daily at 19:00 Makassar (Vercel Cron).</p>
+        {runs.map((r) => (
+          <div key={r.id} className="resrow" style={{ display: "block" }}>
+            <span className="tag" style={r.status === "failed" ? { color: "var(--down)" } : undefined}>{r.status}</span> <span className="muted mono" style={{ fontSize: 11 }}>{r.finished_at ? new Date(r.finished_at).toISOString().slice(0, 16).replace("T", " ") + " UTC" : ""} · {r.target}</span>
+          </div>
+        ))}
       </div>
 
       <div className="card">

@@ -15,4 +15,6 @@ Start by reading the "Start Here" doc (see docs/README.md for links). Then read 
 Language: English only for all communication and project files.
 Models are named by role in config/models.yaml. Never hardcode a model id elsewhere.
 
-Market-data tables (company_metrics, company_events; M17) are separate from the promoted-edge tables. The market_data loader writes only staged rows there and never writes companies or relationships.
+Market-data tables (company_metrics, company_events, price_cache; M17) are separate from the promoted-edge tables. The market_data loader writes only staged rows there and never writes companies or relationships.
+
+Exception approved by the admin on Nov 4, 2026 (rule 4): the daily refresh (app/src/app/api/cron/refresh, Vercel Cron at 11:00 UTC) promotes market data automatically: daily closes, ratios and analyst counts, and earnings dates. Guards, in app/src/lib/refresh-core.ts: a date the admin rejected never returns; a report date that moves more than 7 days (and is not yet reported) is staged for review; a rejected metrics row is never overwritten. Links, evidence and companies are never written by it.
