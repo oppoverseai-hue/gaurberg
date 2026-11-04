@@ -17,6 +17,7 @@ import CompanyTabs from "@/components/CompanyTabs";
 import AroundStrip from "@/components/AroundStrip";
 import { getAround } from "@/lib/around";
 import { buildNodes, isGroup, isMapped, TYPE_LABEL } from "@/lib/graph";
+import { aboutRows, segmentLabel } from "@/lib/about-core";
 
 export const dynamic = "force-dynamic";
 
@@ -95,7 +96,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           <span className="tag">{company.ticker}</span>{p?.exchange && <span className="tag">{p.exchange}</span>}{(company.markets ?? []).map((m) => <span className="tag" key={m}>{m}</span>)}
         </div>
         <div className="meta">
-          <span>{cap(company.segment) ?? NA}</span><span className="muted">•</span><span>{company.size_tier ? `${cap(company.size_tier)} cap` : NA}</span><span className="muted">•</span>
+          <span title="Segment">{segmentLabel(company.segment) ?? NA}</span><span className="muted">•</span><span>{company.size_tier ? `${cap(company.size_tier)} cap` : NA}</span><span className="muted">•</span>
           <Link className="linkchip" href={`/screener?view=comps&segment=${groupOf(company.segment)}&pin=${encodeURIComponent(company.ticker ?? ticker)}`}>Peers →</Link>
         </div>
         <p className="mono" style={{ fontSize: 12, margin: "8px 0 0" }} id="events">
@@ -178,10 +179,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           <div className="card" id="about" style={{ marginTop: 24 }}>
             <div className="cardhead"><h3>About</h3>{p?.description && <SourceTip text={p.about_source ?? "Saved company profile"} />}</div>
             {p?.description ? <p style={{ margin: "0 0 12px", fontSize: 13, lineHeight: "20px" }}>{p.description}</p> : <p className="muted mono" style={{ fontSize: 12, margin: "0 0 12px" }}>Description: not available yet.</p>}
-            <Rows rows={[
-              ["Sector", p?.industry ?? cap(company.segment)], ["Size group", company.size_tier ? `${cap(company.size_tier)} cap` : null],
-              ["Website", p?.website ?? null], ["Employees", p?.employees == null ? null : p.employees.toLocaleString("en-US")],
-            ]} />
+            <Rows rows={aboutRows(company, p)} />
           </div>
           <div className="card" id="relationships" style={{ marginTop: 24 }}>
             <div className="cardhead"><h3>Top linked companies</h3><span style={{ display: "flex", gap: 6, alignItems: "center" }}><span className="tag">{rels.length} links</span><SourceTip text="Quotes from SEC 10-K filings and annual reports; open the map for each link's evidence" /></span></div>

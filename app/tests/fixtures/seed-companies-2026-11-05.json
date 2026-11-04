@@ -1,0 +1,350 @@
+{
+ "exported_at": "2026-11-05",
+ "note": "Every seed company with a ticker: id, ticker, name, segment, size_tier, markets, read from Supabase (read-only) on 2026-11-05.",
+ "companies": [
+  {
+   "id": 374,
+   "ticker": "0992",
+   "name": "Lenovo",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "HKEX"
+   ]
+  },
+  {
+   "id": 3,
+   "ticker": "AAPL",
+   "name": "Apple",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 10,
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 273,
+   "ticker": "AML",
+   "name": "Aston Martin Lagonda",
+   "segment": "consumer",
+   "size_tier": "small",
+   "markets": [
+    "LSE"
+   ]
+  },
+  {
+   "id": 47,
+   "ticker": "AMZN",
+   "name": "Amazon",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 26,
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "segment": "infrastructure",
+   "size_tier": "small",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 53,
+   "ticker": "AUR",
+   "name": "Aurora",
+   "segment": "business",
+   "size_tier": "small",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 63,
+   "ticker": "BIDU",
+   "name": "Baidu",
+   "segment": "consumer",
+   "size_tier": "mid",
+   "markets": [
+    "US",
+    "HKEX"
+   ]
+  },
+  {
+   "id": 395,
+   "ticker": "BYIT",
+   "name": "Bytes Technology Group",
+   "segment": "business",
+   "size_tier": "small",
+   "markets": [
+    "LSE"
+   ]
+  },
+  {
+   "id": 41,
+   "ticker": "CART",
+   "name": "Instacart",
+   "segment": "consumer",
+   "size_tier": "mid",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 18,
+   "ticker": "CBRS",
+   "name": "Cerebras Systems",
+   "segment": "infrastructure",
+   "size_tier": "mid",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 385,
+   "ticker": "CCC",
+   "name": "Computacenter",
+   "segment": "business",
+   "size_tier": "small",
+   "markets": [
+    "LSE"
+   ]
+  },
+  {
+   "id": 17,
+   "ticker": "CRWV",
+   "name": "CoreWeave",
+   "segment": "infrastructure",
+   "size_tier": "mid",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 11,
+   "ticker": "DASH",
+   "name": "DoorDash",
+   "segment": "consumer",
+   "size_tier": "mid",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 40,
+   "ticker": "GOOGL",
+   "name": "Alphabet",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 34,
+   "ticker": "GRAB",
+   "name": "Grab",
+   "segment": "consumer",
+   "size_tier": "mid",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 60,
+   "ticker": "INTC",
+   "name": "Intel",
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 33,
+   "ticker": "LCID",
+   "name": "Lucid",
+   "segment": "consumer",
+   "size_tier": "small",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 42,
+   "ticker": "LIME",
+   "name": "Lime",
+   "segment": "consumer",
+   "size_tier": "small",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 20,
+   "ticker": "LYFT",
+   "name": "Lyft",
+   "segment": "consumer",
+   "size_tier": "small",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 4,
+   "ticker": "META",
+   "name": "Meta Platforms",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 5,
+   "ticker": "MSFT",
+   "name": "Microsoft",
+   "segment": "business",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 19,
+   "ticker": "NBIS",
+   "name": "Nebius Group",
+   "segment": "infrastructure",
+   "size_tier": "mid",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 16,
+   "ticker": "NET",
+   "name": "Cloudflare",
+   "segment": "business",
+   "size_tier": "mid",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 8,
+   "ticker": "NVDA",
+   "name": "NVIDIA",
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 61,
+   "ticker": "ORCL",
+   "name": "Oracle",
+   "segment": "business",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 7,
+   "ticker": "PLTR",
+   "name": "Palantir Technologies",
+   "segment": "business",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 458,
+   "ticker": "PONY",
+   "name": "Pony.ai",
+   "segment": "business",
+   "size_tier": "small",
+   "markets": [
+    "US",
+    "HKEX"
+   ]
+  },
+  {
+   "id": 372,
+   "ticker": "SCT",
+   "name": "Softcat",
+   "segment": "business",
+   "size_tier": "small",
+   "markets": [
+    "LSE"
+   ]
+  },
+  {
+   "id": 43,
+   "ticker": "TSLA",
+   "name": "Tesla",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 9,
+   "ticker": "TSM",
+   "name": "Taiwan Semiconductor Manufacturing",
+   "segment": "infrastructure",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 1,
+   "ticker": "UBER",
+   "name": "Uber Technologies",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "US"
+   ]
+  },
+  {
+   "id": 316,
+   "ticker": "VOD",
+   "name": "Vodafone Group",
+   "segment": "consumer",
+   "size_tier": "large",
+   "markets": [
+    "LSE",
+    "US"
+   ]
+  },
+  {
+   "id": 424,
+   "ticker": "WRD",
+   "name": "WeRide",
+   "segment": "business",
+   "size_tier": "small",
+   "markets": [
+    "US",
+    "HKEX"
+   ]
+  }
+ ]
+}

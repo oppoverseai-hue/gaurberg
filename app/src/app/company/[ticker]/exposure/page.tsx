@@ -12,21 +12,14 @@ import { monthYear, relationText, summaryLine } from "@/lib/exposure-text";
 import SourceTip from "@/components/SourceTip";
 import { getComove } from "@/lib/comove";
 import { comoveText, COMOVE_NOTE, MIN_DAYS, WINDOW, type Comove } from "@/lib/comove-core";
-import { badgeOf, isGroup, isMapped, SIDES, SIDE_LABEL, type Evidence } from "@/lib/graph";
+import { badgeOf, BADGE_MEANING, isGroup, isMapped, SIDES, SIDE_LABEL, type Evidence } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
 
 // "Who is exposed to [company]" (GRF-17): companies one link away, from promoted links only, for every viewer.
 // Weights follow GRF-11 and are ranked only within one kind of share. A default is stated once on the group; rows tag only the exceptions.
 
-// Hover text for the labels on this page. Badge wording follows the Sources page.
-const BADGE_TIP: Record<string, string> = {
-  "Verified": "Found by an agent, the quote matches the filing word for word, it passed the checks, and the admin reviewed it.",
-  "Curated": "Entered by hand with a source note.",
-  "Live-generated, not reviewed": "Created on request. Nobody has reviewed it.",
-  "Sample data": "Placeholder data.",
-  "Staged, not reviewed": "Loaded by an agent but not yet reviewed by the admin.",
-};
+// Hover text for the labels on this page. Badge wording is BADGE_MEANING in graph.ts (as on the Sources page).
 const KIND_TIP: Record<string, string> = {
   "Seller's revenue": "The percentage is a share of the seller's revenue.",
   "Buyer's costs": "The percentage is a share of the buyer's costs.",
@@ -62,7 +55,7 @@ function LinkLine({ l, focal }: { l: ExpLink; focal: { id: number; name: string 
       <p className="xmeta">
         <strong className="xrel">{relationText(r, focal.id, focal.name)}</strong>
         {l.kind && <span className="tag" title={KIND_TIP[l.kindLabel]}>{l.kindLabel}</span>}
-        <span className={`badge ${b.cls}`} title={BADGE_TIP[b.label]}>{b.label}</span>
+        <span className={`badge ${b.cls}`} title={BADGE_MEANING[b.label]}>{b.label}</span>
         <span>{sourceLabel(r)}{asOf ? `, ${asOf}` : ""}</span>
       </p>
       {l.text !== NOT_DISCLOSED && l.text !== NO_SIZE && <p className="xtext">{l.text}</p>}

@@ -4,9 +4,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CompanyTabs from "@/components/CompanyTabs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, typeCounts, elsewhere, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, isGroup, countKinds, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, typeCounts, elsewhere, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, BADGE_MEANING, exposureText, isMapped, isGroup, countKinds, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 import { exposureWeight, realWeight } from "@/lib/exposure-core";
 import { comoveText, comoveWidth, COMOVE_NOTE, type Comove } from "@/lib/comove-core";
+import { segmentLabel } from "@/lib/about-core";
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
 const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
@@ -189,6 +190,10 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
           {panel?.kind === "link" && <LinkPanel rel={panel.rel} focal={focal} cm={comove[otherOf(panel.rel).id]} onClose={() => setPanel(null)} />}
           {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} geo={geo[panel.co.id]} countryRegion={countryRegion} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/company/${t}/map`)} />}
           {!panel && <div className="empty">Select a link to see what the filings say, or a company to preview it.</div>}
+          <details className="trustkey">
+            <summary>What the trust badges mean</summary>
+            <dl>{ALL_BADGES.map((b) => <div key={b.label}><dt><span className={`badge ${b.cls}`}><span aria-hidden>{glyph(b.cls)}</span>{b.label}</span></dt><dd>{BADGE_MEANING[b.label]}</dd></div>)}</dl>
+          </details>
           <div className="sidefoot"><kbd>Esc</kbd><span>closes this pane</span></div>
         </aside>
       </div>
@@ -276,7 +281,7 @@ function HeadlineLine({ co }: { co: Co }) {
 }
 
 function LinkPanel({ rel, focal, cm, onClose }: { rel: Rel; focal: Co; cm?: Comove; onClose: () => void }) {
-  const active = badgeOf(rel).label;
+  const b = badgeOf(rel);
   return (
     <div className="panel">
       <button className="x" onClick={onClose} aria-label="Close">×</button>
@@ -286,16 +291,13 @@ function LinkPanel({ rel, focal, cm, onClose }: { rel: Rel; focal: Co; cm?: Como
       </div>
       <div className="trust">
         <span className="label">Trust and review status</span>
-        <div className="set">
-          {[...ALL_BADGES].sort((a, b) => (b.label === active ? 1 : 0) - (a.label === active ? 1 : 0)).map((b) => (
-            <span key={b.label} className={`badge ${b.cls} ${b.label === active ? "active" : ""}`}><span aria-hidden>{glyph(b.cls)}</span>{b.label}{b.label === active && <span style={{ marginLeft: "auto", fontSize: 9, textTransform: "uppercase" }}>This link</span>}</span>
-          ))}
-        </div>
+        <span className={`badge ${b.cls} active`}><span aria-hidden>{glyph(b.cls)}</span>{b.label}</span>
+        <p className="muted" style={{ fontSize: 11, margin: "6px 0 0" }}>{BADGE_MEANING[b.label]}</p>
       </div>
       <div className="attrs">
         <div className="h">Disclosed attributes</div>
         <div className="r"><span>Size</span><span>{exposureText(rel)}</span></div>
-        <div className="r"><span>Confidence</span><span className={rel.confidence == null ? "warn" : ""}>{rel.confidence == null ? "Not scored yet" : rel.confidence.toFixed(2)}</span></div>
+        {rel.confidence != null && <div className="r"><span>Confidence</span><span>{rel.confidence.toFixed(2)}</span></div>}
         <div className="r"><span>As of</span><span>{rel.as_of_date ?? "Date not given"}</span></div>
         <div className="r"><span>Kind of source</span><span>{rel.source_type === "sec_filing" ? "SEC filing (10-K or 20-F)" : rel.source_type === "annual_report" ? "Company annual report" : rel.source_type ?? "Not given"}</span></div>
       </div>
@@ -366,7 +368,7 @@ function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { c
             <div className="price">{q.price.toFixed(2)}{data?.currency && <span className="ccy">{data.currency}</span>} <span className={`pill ${q.change >= 0 ? "up" : "down"}`}>{q.change >= 0 ? "+" : ""}{q.change.toFixed(2)} ({q.changePct.toFixed(2)}%)</span></div>
           ) : <p className="muted">Data unavailable: {data.quoteError}</p>}
           {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Previous close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} – {q.high.toFixed(2)}</p>}
-          <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{data.company.segment} · {data.company.size_tier} cap</p>
+          <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{segmentLabel(data.company.segment) ?? "Segment not set"} · {data.company.size_tier ? `${segmentLabel(data.company.size_tier)} cap` : "Size not set"}</p>
           <div className="counts"><div><b>{data.counts.suppliers}</b>Suppliers</div><div><b>{data.counts.customers}</b>Customers</div><div><b>{data.counts.partners}</b>Partners</div><div><b>{data.counts.rivals}</b>Rivals</div></div>
           <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: {data.about ? data.about.split(/(?<=\.)\s/).slice(0, 2).join(" ") : "not available yet"}<br />Latest news: not available right now</p>
           <div className="actions">

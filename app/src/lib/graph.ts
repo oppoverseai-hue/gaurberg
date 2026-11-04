@@ -117,6 +117,20 @@ export function countKinds(cos: Pick<Co, "id" | "entity_type">[]): { companies: 
   return { companies: seen.size - groups, groups };
 }
 
+// What each trust badge means (UX-4), worded as on the Sources page. The map shows this key once per page; a link shows only its own badge.
+export const BADGE_MEANING: Record<string, string> = {
+  "Verified": "Found by an agent, the quote matches the filing word for word, it passed the checks, and the admin reviewed it.",
+  "Curated": "Entered by hand with a source note.",
+  "Live-generated, not reviewed": "Created on request. Nobody has reviewed it.",
+  "Sample data": "Placeholder data.",
+  "Staged, not reviewed": "Loaded by an agent but not yet reviewed by the admin.",
+};
+
+// Live-lookup test rows (UX-4): Bumble (21), Braze (22) and GREENLIT VENTURES INC. (296) were created while testing live lookup
+// on Oct 21, 2026. They stay in the database untouched, but are left out of company pickers and search. Listed by id, never by name.
+export const TEST_LOOKUP_IDS: ReadonlySet<number> = new Set([21, 22, 296]);
+export const isTestLookup = (c: Pick<Co, "id">) => TEST_LOOKUP_IDS.has(c.id);
+
 // Trust badge (UX-4). Rows not yet promoted by the admin carry their own "Staged" tag and never a Verified badge.
 export function badgeOf(r: Rel): { label: string; cls: string } {
   if (r.status === "staged") return { label: "Staged, not reviewed", cls: "b-staged" };

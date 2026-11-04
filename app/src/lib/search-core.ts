@@ -1,8 +1,10 @@
 // Search over every company in the graph (TRM-1). Pure functions: no data access here.
 // One index of names, tickers and aliases (about 500 rows) is built once and matched in memory, so typing never queries the database.
 // Mapped companies open their page. A counterparty that is not mapped opens the map of the mapped company it is most linked to,
-// with its panel open (?focus=<id>), instead of a live lookup. Groups ("Riders") are not companies and are left out (GRF-1).
+// with its panel open (?focus=<id>), instead of a live lookup. Groups ("Riders") are not companies and are left out (GRF-1),
+// and so are the live-lookup test rows (isTestLookup in graph.ts, UX-4).
 // A company with no ticker and no link to a mapped company has nowhere to open, so it is left out too.
+import { isTestLookup } from "./graph.ts";
 
 export type IndexCo = { id: number; ticker: string | null; name: string; is_seed: boolean | null; entity_type: string | null; aliases?: string[] | null; markets?: string[] | null };
 export type IndexLink = { source_id: number; target_id: number };
@@ -32,7 +34,7 @@ export function buildIndex(cos: IndexCo[], links: IndexLink[]): Entry[] {
   }
   const out: Entry[] = [];
   for (const c of cos) {
-    if (isGroup(c)) continue;
+    if (isGroup(c) || isTestLookup(c)) continue;
     const isMapped = mapped(c);
     const ns = [...(toMapped.get(c.id) ?? new Map()).entries()].map(([id, n]) => ({ co: byId.get(id)!, n }))
       .sort((a, b) => b.n - a.n || a.co.name.localeCompare(b.co.name));
