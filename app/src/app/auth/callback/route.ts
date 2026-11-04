@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabaseServer } from "@/lib/supabase/server";
+import { getAccess, supabaseServer } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
@@ -8,5 +8,7 @@ export async function GET(request: Request) {
     const supabase = await supabaseServer();
     await supabase.auth.exchangeCodeForSession(code);
   }
-  return NextResponse.redirect(`${origin}/`);
+  // A person who is not invited goes straight to the request form (ACC-5); everyone else to the home page.
+  const access = await getAccess();
+  return NextResponse.redirect(`${origin}${access.state === "not_invited" ? "/request-access" : "/"}`);
 }
