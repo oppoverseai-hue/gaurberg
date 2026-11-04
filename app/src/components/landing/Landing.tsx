@@ -1,10 +1,9 @@
 // Public landing page (ACC-7), v2 (Nov 4, 2026): problem → solution → features → difference → how it works → invitation,
 // in the Stitch "Warm Paper Analytical" design system. Illustrations are abstract (no product data, names or figures).
-// Shown on "/" to signed-out visitors, and to signed-in people not yet invited (request form in the invitation card).
+// Shown on "/" to signed-out visitors and to signed-in people not yet invited (their request lives on /request-access).
 import "./landing.css";
 import LoginButton from "@/components/LoginButton";
 import Logo from "@/components/Logo";
-import RequestAccess from "@/components/RequestAccess";
 import { Around, Constellation, Exposure, Receipt } from "./Illustrations";
 
 const em = (t: string) => <span className="pp-em">{t}</span>;
@@ -33,7 +32,7 @@ export default function Landing({ state, email }: { state: "signed_out" | "not_i
         <nav className="pp-links" aria-label="Sections"><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav>
         <div className="pp-navcta">
           {state === "signed_out" && <LoginButton label="Sign in" className="pp-signin" />}
-          <a className="pp-btn pp-btn-sm" href="#access">Request an invitation</a>
+          <a className="pp-btn pp-btn-sm" href={state === "not_invited" ? "/request-access" : "#access"}>{state === "not_invited" ? "Your request" : "Request an invitation"}</a>
         </div>
       </header>
 
@@ -139,7 +138,14 @@ export default function Landing({ state, email }: { state: "signed_out" | "not_i
         <section className="pp-invite" id="access">
           <div className="pp-envelope" aria-hidden />
           <div className="pp-invcard">
-            {state === "not_invited" && email ? <RequestAccess email={email} /> : (
+            {state === "not_invited" && email ? (
+              <>
+                <p className="pp-mono pp-label pp-center">By invitation</p>
+                <h2 className="pp-center">Your request is {em("one step away.")}</h2>
+                <p className="pp-center pp-muted">You&apos;re signed in as {email}.</p>
+                <div className="pp-center" style={{ marginTop: 24 }}><a className="pp-btn" href="/request-access">Continue to your request</a></div>
+              </>
+            ) : (
               <>
                 <p className="pp-mono pp-label pp-center">By invitation</p>
                 <h2 className="pp-center">Join the {em("first 500.")}</h2>

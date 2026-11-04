@@ -105,23 +105,6 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 .pp-perks li::before { content:""; flex:none; width:20px; height:20px; margin-top:2px; border-radius:50%; background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%23FBF9F5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat; }
 .pp-tiny { color:var(--muted); font-size:10px; margin:16px 0 0; text-transform:none; letter-spacing:.02em; }
 
-/* Request form inside the card (RequestAccess) */
-.paper .pp-invcard .card { background:none; border:0; padding:0; margin:0; color:inherit; }
-.paper .pp-invcard .card h2 { font:700 28px/36px var(--sans); letter-spacing:-.02em; margin:8px 0 12px; }
-.paper .pp-invcard .card .label { color:var(--muted); font:500 10px var(--mono); letter-spacing:.1em; }
-.paper .pp-invcard .card p { color:var(--muted); }
-.paper .pp-invcard .btn { background:var(--cta); color:var(--cta-ink); border:0; border-radius:9999px; padding:12px 24px; font:500 15px var(--sans); cursor:pointer; }
-.paper .wl legend { font:600 15px var(--sans); color:var(--ink); }
-.paper .wl .chip { background:var(--card); border:1px solid var(--hair); color:var(--ink); font-size:14px; }
-.paper .wl .chip:has(input:checked) { background:var(--cta); border-color:var(--cta); color:var(--cta-ink); }
-.paper .wl .chip input, .paper .wl .wl-check input { accent-color:var(--cta); }
-.paper .wl .wl-field { font:600 15px var(--sans); color:var(--ink); }
-.paper .wl .wl-field input { background:var(--card); border:1px solid var(--hair); color:var(--ink); font:15px var(--sans); border-radius:8px; }
-.paper .wl .wl-field input:focus { outline:0; border-color:var(--cta); }
-.paper .wl .wl-check { font-size:14px; color:var(--ink); }
-.paper .wl .linkbtn { color:var(--ink); text-decoration:underline; font:inherit; text-transform:none; }
-.paper .wl .mono { font-family:var(--mono); }
-
 /* FAQ */
 .pp-faq { max-width:720px; margin:128px auto 0; }
 .pp-faq h2 { margin-bottom:32px; }
@@ -161,15 +144,3 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 .pp-pipe li { display:flex; align-items:center; gap:8px; }
 .pp-pipe .pp-step { padding:8px 14px; border:1px solid var(--hair); border-radius:9999px; background:var(--card); font-size:10px; color:var(--ink); }
 .pp-pipe .pp-arrow { color:var(--muted); font-size:12px; }
-
-
-/* Form controls in the request card: rounded squares bordered #6B645C, filled espresso with a cream tick (design system) */
-.paper .wl .wl-check { display:flex; gap:12px; align-items:flex-start; margin-top:14px; font-size:15px; line-height:22px; cursor:pointer; }
-.paper .wl .wl-check input { appearance:none; -webkit-appearance:none; flex:none; width:20px; height:20px; margin:1px 0 0; border:1.5px solid #6B645C; border-radius:6px; background:var(--card); cursor:pointer; display:grid; place-items:center; transition:background .12s, border-color .12s; }
-.paper .wl .wl-check input:checked { background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3L14.5 7' fill='none' stroke='%23FBF9F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat; border-color:var(--cta); }
-.paper .wl .wl-check input:focus-visible, .paper .wl .chip input:focus-visible + * { outline:2px solid var(--cta); outline-offset:2px; }
-.paper .wl .chips { gap:8px; }
-.paper .wl .chip { position:relative; padding:8px 14px; border-radius:9999px; transition:background .12s, border-color .12s, color .12s; }
-.paper .wl .chip input { position:absolute; opacity:0; width:1px; height:1px; pointer-events:none; }
-.paper .wl .chip:has(input:focus-visible) { outline:2px solid var(--cta); outline-offset:2px; }
-.paper .wl .chip:hover { border-color:#cfc5bb; }
