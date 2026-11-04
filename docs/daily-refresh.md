@@ -4,7 +4,7 @@ Runs in the cloud as a Vercel Cron job, every day at 11:00 UTC (19:00 Makassar).
 
 - Route: `app/src/app/api/cron/refresh/route.ts`. Schedule: `app/vercel.json`.
 - Rules for earnings dates: `app/src/lib/refresh-core.ts`, tested in `app/tests/refresh.test.mjs`.
-- Each run writes one `agent_runs` row (`agent_name = market_refresh`). The admin page shows the last 7 runs and turns "stale" after 36 hours without a good run.
+- Each run writes one `agent_runs` row (`agent_name = market_refresh`) when it starts (status `running`) and fills it in at the end. The run stops starting new work after 250 s, so it is always logged inside Vercel's 300 s limit. The admin page shows the last 7 runs and turns "stale" after 36 hours without a good run.
 
 ## What it writes (US-primary mapped companies only)
 
@@ -12,7 +12,7 @@ Runs in the cloud as a Vercel Cron job, every day at 11:00 UTC (19:00 Makassar).
 | --- | --- | --- |
 | price_cache | Last close from Finnhub, one row per New York trading day; missing closes from Twelve Data for up to 5 companies a run; first run seeds each company from its saved file | (no status column) |
 | company_metrics | Today's ratios and analyst counts | promoted; a row the admin rejected is never overwritten |
-| company_events | Earnings dates from 3 weeks back to 90 days ahead | promoted, except: a rejected date never returns; a report date that moves more than 7 days and is not yet reported is staged for review |
+| company_events | Earnings dates from 3 weeks back to 90 days ahead | new quarters promoted; a rejected date never returns; any change to a published date is staged for review while the published date stays |
 
 It never writes companies, relationships or evidence, and makes no model call.
 

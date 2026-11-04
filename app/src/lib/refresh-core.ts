@@ -8,10 +8,8 @@ export type CalendarEntry = { date: string; quarter: number | null; year: number
 export type EventAction =
   | { kind: "skip"; reason: string; date: string }
   | { kind: "touch"; id: number; date: string; detail: string | null } // same promoted date: refresh detail and fetched_at
-  | { kind: "move"; id: number; from: string; date: string; detail: string | null } // same quarter, date moved within the guard, or reported
   | { kind: "insert"; date: string; detail: string | null; status: "promoted" | "staged"; reason: string };
 
-export const MAX_AUTO_MOVE_DAYS = 7;
 const HOUR: Record<string, string> = { bmo: "before market open", amc: "after market close", dmh: "during market hours" };
 
 export const daysBetween = (a: string, b: string) => Math.round((Date.parse(`${b}T00:00:00Z`) - Date.parse(`${a}T00:00:00Z`)) / 864e5);
@@ -30,8 +28,7 @@ export const quarterKey = (detail: string | null | undefined): string | null => 
  * Decide what to do with each earnings date the calendar lists for one company.
  * - A date the admin rejected is never brought back (fixes the re-staging bug logged Oct 29).
  * - A promoted row for the same date is refreshed in place.
- * - The same quarter already promoted on another date: moved automatically when the calendar says it has been reported,
- *   or when it moved by at most MAX_AUTO_MOVE_DAYS; otherwise the new date is staged for review and the old one stays.
+ * - The same quarter already promoted on another date: the new date is staged for review and the published one stays.
  * - A new quarter is promoted, unless a staged row already holds that date (left for review).
  */
 export function planEvents(stored: StoredEvent[], cal: CalendarEntry[]): EventAction[] {
@@ -46,9 +43,10 @@ export function planEvents(stored: StoredEvent[], cal: CalendarEntry[]): EventAc
     const qk = quarterKey(detail);
     const sameQuarter = qk ? stored.find((s) => s.status === "promoted" && !used.has(s.id) && quarterKey(s.detail) === qk) : undefined;
     if (sameQuarter) {
-      const gap = Math.abs(daysBetween(sameQuarter.event_date, e.date));
-      if (e.reported || gap <= MAX_AUTO_MOVE_DAYS) { used.add(sameQuarter.id); out.push({ kind: "move", id: sameQuarter.id, from: sameQuarter.event_date, date: e.date, detail }); }
-      else out.push({ kind: "insert", date: e.date, detail, status: "staged", reason: `moved ${gap} days from ${sameQuarter.event_date}; needs review` });
+      // Any change to a date already published waits for the admin: the calendar service has listed wrong dates
+      // (DoorDash Q3 2026 showed Oct 29 on Nov 4, the day the company had announced). The old date stays live meanwhile.
+      const gap = daysBetween(sameQuarter.event_date, e.date);
+      out.push({ kind: "insert", date: e.date, detail, status: "staged", reason: `${qk} listed on ${e.date}, ${Math.abs(gap)} days ${gap < 0 ? "earlier" : "later"} than the published ${sameQuarter.event_date}; needs review` });
       continue;
     }
     out.push({ kind: "insert", date: e.date, detail, status: "promoted", reason: "new report date" });
