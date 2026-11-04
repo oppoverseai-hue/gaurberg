@@ -5,7 +5,7 @@
 // Writes, for US-primary mapped companies only (liveSymbol):
 //   price_cache       the last close from Finnhub /quote, plus missing daily closes from Twelve Data for up to GAP_FILL companies a run
 //   company_metrics   today's ratios and analyst counts, promoted (a rejected row for the day is left alone)
-//   company_events    earnings dates by the rules in lib/refresh-core.ts (rejected dates never return; big moves are staged)
+//   company_events    earnings dates by the rules in lib/refresh-core.ts (rejected dates never return; a changed date is staged)
 // Never writes companies, relationships or evidence.
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase/admin";
@@ -52,6 +52,10 @@ export async function GET(req: Request) {
     return { ok: false as const, why: `${path} unreachable after 3 tries` };
   };
 
+  const RUN = { agent_name: "market_refresh", mode: "batch", model: "none (Finnhub and Twelve Data APIs, no model call)", tokens_in: 0, tokens_out: 0, cost_usd: 0, started_at: started.toISOString(), review_status: "auto" };
+  const { data: runRow } = await db.from("agent_runs").insert({ ...RUN, status: "running", target: "started" }).select("id").single();
+  const runId = (runRow as { id: number } | null)?.id ?? null;
+  const deadline = started.getTime() + 250_000; // stop starting new work 50 s before Vercel's 300 s limit, so the run is always logged
   const { data: cos, error } = await db.from("companies").select("id,ticker,markets").eq("is_seed", true).not("ticker", "is", null);
   if (error || !cos) return NextResponse.json({ error: "could not read companies" }, { status: 500 });
   const live = (cos as Co[]).filter((c) => liveSymbol(c));
@@ -59,7 +63,9 @@ export async function GET(req: Request) {
   const log: string[] = [], gaps: string[] = [];
   const count = { closes: 0, metrics: 0, events: 0, staged: 0, skipped: 0, filled: 0 };
 
+  let cut = false;
   for (const c of live) {
+    if (Date.now() > deadline) { cut = true; gaps.push(`time limit: stopped before ${c.ticker}`); break; }
     const sym = liveSymbol(c)!;
     // 1. Last close.
     const q = await fh("/quote", { symbol: sym });
@@ -89,7 +95,6 @@ export async function GET(req: Request) {
         let e: { message: string } | null = null;
         if (a.kind === "skip") { count.skipped++; continue; }
         if (a.kind === "touch") ({ error: e } = await db.from("company_events").update({ detail: a.detail, fetched_at: now }).eq("id", a.id));
-        if (a.kind === "move") { ({ error: e } = await db.from("company_events").update({ event_date: a.date, detail: a.detail, fetched_at: now }).eq("id", a.id)); log.push(`${sym} report moved ${a.from} to ${a.date}`); }
         if (a.kind === "insert") {
           ({ error: e } = await db.from("company_events").insert({ company_id: c.id, event_date: a.date, event_type: "earnings", detail: a.detail, source: "finnhub", fetched_at: now, status: a.status }));
           if (a.status === "staged") { count.staged++; log.push(`${sym} ${a.date} staged: ${a.reason}`); }
@@ -100,16 +105,18 @@ export async function GET(req: Request) {
   }
 
   // 4. Top up daily closes. First the saved files bundled with the app (up to Oct 21), then Twelve Data for the gap since.
-  if (tkey) {
-    let filled = 0;
+  if (tkey && !cut) {
+    let filled = 0, tried = 0;
     for (const c of live) {
+      if (Date.now() > deadline) { gaps.push(`time limit: price history top-up stopped before ${c.ticker}`); break; }
       const { count: total } = await db.from("price_cache").select("ts", { count: "exact", head: true }).eq("company_id", c.id);
       if ((total ?? 0) < 100) { // empty or new: seed from the saved file first (no network call)
         const bars = readMarket(c.ticker!)?.daily ?? [];
         if (bars.length) await db.from("price_cache").upsert(bars.map((b) => ({ company_id: c.id, ts: barTs(nyDate(b.t * 1000)), close: b.c })), { onConflict: "company_id,ts", ignoreDuplicates: true });
       }
       const { count: recent } = await db.from("price_cache").select("ts", { count: "exact", head: true }).eq("company_id", c.id).gte("ts", new Date(started.getTime() - 20 * 864e5).toISOString());
-      if ((recent ?? 0) >= 12 || filled >= GAP_FILL) continue; // about three weeks of trading days already there, or this run's quota used
+      if ((recent ?? 0) >= 12 || tried >= GAP_FILL) continue; // about three weeks of trading days already there, or this run's quota used
+      tried++; // count attempts, not successes: a failing history service must not stall the run
       await sleep(TD_GAP_MS);
       try {
         const r = await fetch(`https://api.twelvedata.com/time_series?${new URLSearchParams({ symbol: liveSymbol(c)!, interval: "1day", outputsize: "30", order: "ASC", apikey: tkey })}`, { cache: "no-store" });
@@ -124,10 +131,9 @@ export async function GET(req: Request) {
 
   const status = gaps.length === 0 ? "completed" : count.closes + count.metrics === 0 ? "failed" : "completed_with_gaps";
   const summary = `${live.length} companies: ${count.closes} closes, ${count.metrics} metrics rows, ${count.events} date changes (${count.staged} staged), ${count.filled} histories topped up, ${count.skipped} skipped`;
-  await db.from("agent_runs").insert({
-    agent_name: "market_refresh", mode: "batch", target: `${summary}${gaps.length ? `; gaps: ${gaps.slice(0, 12).join("; ")}` : ""}${log.length ? `; ${log.slice(0, 12).join("; ")}` : ""}`.slice(0, 2000),
-    model: "none (Finnhub and Twelve Data APIs, no model call)", tokens_in: 0, tokens_out: 0, cost_usd: 0,
-    started_at: started.toISOString(), finished_at: new Date().toISOString(), status, review_status: "auto",
-  });
+  const target = `${summary}${gaps.length ? `; gaps: ${gaps.slice(0, 12).join("; ")}` : ""}${log.length ? `; ${log.slice(0, 12).join("; ")}` : ""}`.slice(0, 2000);
+  const done = { status, target, finished_at: new Date().toISOString() };
+  if (runId) await db.from("agent_runs").update(done).eq("id", runId);
+  else await db.from("agent_runs").insert({ ...RUN, ...done });
   return NextResponse.json({ status, summary, gaps, log });
 }

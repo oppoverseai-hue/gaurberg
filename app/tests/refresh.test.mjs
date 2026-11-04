@@ -15,16 +15,14 @@ test("the same promoted date is refreshed in place", () => {
   assert.equal(a[0].kind, "touch"); assert.equal(a[0].id, 7);
 });
 
-test("a small move of the same quarter is applied, a big one is staged", () => {
-  const stored = [{ id: 3, event_date: "2026-11-17", detail: "Q3 2026", status: "promoted" }];
-  assert.equal(planEvents(stored, [cal("2026-11-12")])[0].kind, "move");
-  const big = planEvents(stored, [cal("2026-12-10")])[0];
-  assert.equal(big.kind, "insert"); assert.equal(big.status, "staged");
-});
-
-test("a report that already happened moves the date even when the gap is large (Grab: Nov 17 stored, reported Nov 3)", () => {
-  const a = planEvents([{ id: 9, event_date: "2026-11-17", detail: "Q3 2026", status: "promoted" }], [cal("2026-11-03", 3, 2026, { epsActual: 0.02 })]);
-  assert.equal(a[0].kind, "move"); assert.equal(a[0].date, "2026-11-03");
+test("any change to a published date is staged, never applied (DoorDash: Nov 4 published, calendar later said Oct 29)", () => {
+  const stored = [{ id: 3, event_date: "2026-11-04", detail: "Q3 2026, after market close", status: "promoted" }];
+  for (const d of ["2026-11-05", "2026-10-29", "2026-12-10"]) {
+    const a = planEvents(stored, [cal(d)])[0];
+    assert.equal(a.kind, "insert"); assert.equal(a.status, "staged");
+  }
+  const reported = planEvents([{ id: 9, event_date: "2026-11-17", detail: "Q3 2026", status: "promoted" }], [cal("2026-11-03", 3, 2026, { epsActual: 0.02 })])[0];
+  assert.equal(reported.status, "staged", "a 'reported' flag from the calendar does not override the review");
 });
 
 test("a new quarter is promoted; a date already staged is left for review", () => {
