@@ -1,14 +1,13 @@
 import { isOffline } from "@/lib/mode";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsPanel from "@/components/NewsPanel";
-import { getNews } from "@/lib/news";
-import { getInsiderTrades } from "@/lib/insiders";
+import { getStoredInsiderTrades } from "@/lib/insiders";
+import { cachedMarket, cachedNews } from "@/lib/page-cache";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
 import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels, recordView } from "@/lib/data";
-import { getMarket } from "@/lib/market";
 import { getMetrics, getUpcomingEvents, isUSListed, type Metrics } from "@/lib/marketdb";
 import { groupOf, pctCell, rangePosition } from "@/lib/metrics-core";
 import { quoteCurrency } from "@/lib/listing";
@@ -66,10 +65,20 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const ticker = (await params).ticker.toUpperCase();
   const company = await getCompany(ticker);
   if (!company) notFound();
-  await recordView(company.id);
-  const insiders = isOffline() ? { trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } : await getInsiderTrades(company);
-  const [m, { rels }, mt, events, news] = await Promise.all([getMarket(company), getRels(company.id), getMetrics(company.id), getUpcomingEvents(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(company)]);
-  const around = await getAround(rels, company.id);
+  // NFR-1: everything below runs at once. Market data and news are cached for 5 minutes (lib/page-cache.ts); insider trades are stored
+  // by the daily job; the rest are database reads under row-level security. One timing line per load goes to the server log.
+  const t0 = Date.now(), ms: Record<string, number> = {};
+  const timed = <T,>(k: string, p: Promise<T>) => p.then((v) => { ms[k] = Date.now() - t0; return v; });
+  const [, m, { rels, around }, mt, events, news, insiders] = await Promise.all([
+    timed("view", recordView(company.id)),
+    timed("market", cachedMarket(company)),
+    timed("links", getRels(company.id).then(async (r) => ({ rels: r.rels, around: await getAround(r.rels, company.id) }))),
+    timed("metrics", getMetrics(company.id)),
+    timed("events", getUpcomingEvents(company.id)),
+    timed("news", isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : cachedNews(company)),
+    timed("insiders", isOffline() ? Promise.resolve({ trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } as Awaited<ReturnType<typeof getStoredInsiderTrades>>) : getStoredInsiderTrades(company)),
+  ]);
+  console.info(`[company] ${ticker} data in ${Date.now() - t0} ms (${Object.entries(ms).map(([k, v]) => `${k} ${v}`).join(", ")})`);
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
@@ -131,9 +140,9 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             <MetricsStrip mt={mt} us={us} />
           </div>
           <div className="card" id="insiders">
-            <div className="cardhead"><h3>Insider trades</h3><SourceTip text="SEC Form 4 filings (EDGAR), read live" /></div>
+            <div className="cardhead"><h3>Insider trades</h3><SourceTip text={`SEC Form 4 filings (EDGAR), checked daily${insiders.checkedAt ? `; last check ${day(insiders.checkedAt)}` : ""}`} /></div>
             {insiders.error && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 6px" }}>⚠ {insiders.error}</p>}
-            {!insiders.trades.length ? <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{insiders.error ? "Insider trades are not available right now." : `No open-market buys or sells in the last 90 days (${insiders.checked} Form 4 filings read).`}</p> : (() => {
+            {!insiders.trades.length ? <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{insiders.checked === 0 && insiders.error ? "Insider trades are not available yet." : `No open-market buys or sells in the last 90 days (${insiders.checked} Form 4 filings read).`}</p> : (() => {
               const b = insiders.trades.filter((t) => t.side === "Buy"), sl = insiders.trades.filter((t) => t.side === "Sell");
               const sum = (a: { shares: number }[]) => a.reduce((n, t) => n + t.shares, 0).toLocaleString("en-US");
               return (
@@ -148,16 +157,16 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
                 </>
               );
             })()}
-            <p className="muted mono" style={{ fontSize: 10, margin: "8px 0 0" }}>Open-market purchases and sales only, from the latest {insiders.checked} Form 4 filings (within 90 days). Plans set in advance are not separated. This describes filings and is not a recommendation.</p>
+            <p className="muted mono" style={{ fontSize: 10, margin: "8px 0 0" }}>Open-market purchases and sales only{insiders.checked ? `, from the latest ${insiders.checked} Form 4 filings (within 90 days)` : ""}. Plans set in advance are not separated. This describes filings and is not a recommendation.</p>
           </div>
           <div className="card" id="news">
-            <div className="cardhead"><h3>Recent news</h3><SourceTip text="Finnhub company news and SEC EDGAR filings, last 30 days, read live" /></div>
+            <div className="cardhead"><h3>Recent news</h3><SourceTip text="Finnhub company news and SEC EDGAR filings, last 30 days, refreshed every 5 minutes" /></div>
             <NewsPanel items={news.items} errors={news.errors} />
           </div>
         </section>
         <aside className="stack">
           <div className="card" id="numbers">
-            <div className="cardhead"><h3>Key numbers</h3><SourceTip text={m.saved?.parts.includes("fundamentals") ? `Finnhub, saved data from ${m.saved.at}` : "Finnhub, live (delayed)"} /></div>
+            <div className="cardhead"><h3>Key numbers</h3><SourceTip text={m.saved?.parts.includes("fundamentals") ? `Finnhub, saved data from ${m.saved.at}` : "Finnhub, delayed; refreshed every 5 minutes"} /></div>
             <Rows rows={[
               ["Avg volume", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
               ["Market cap", f.marketCap == null ? null : fmtBig(f.marketCap)],
