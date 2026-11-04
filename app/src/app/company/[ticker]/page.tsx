@@ -14,6 +14,8 @@ import { quoteCurrency } from "@/lib/listing";
 import PeriodChart from "@/components/PeriodChart";
 import SourceTip from "@/components/SourceTip";
 import CompanyTabs from "@/components/CompanyTabs";
+import AroundStrip from "@/components/AroundStrip";
+import { getAround } from "@/lib/around";
 import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
@@ -66,6 +68,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   await recordView(company.id);
   const insiders = isOffline() ? { trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } : await getInsiderTrades(company);
   const [m, { rels }, mt, events, news] = await Promise.all([getMarket(company), getRels(company.id), getMetrics(company.id), getUpcomingEvents(company.id), isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : getNews(company)]);
+  const around = await getAround(rels, company.id);
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;
@@ -91,6 +94,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
         </p>
       </div>
       <CompanyTabs ticker={company.ticker ?? ticker} active="overview" />
+      <AroundStrip name={company.name} {...around} />
       {m.saved && <p className="savedbar">Showing saved data{m.saved.parts.length ? ` for ${m.saved.parts.join(", ")}` : ""} from {m.saved.at}{m.saved.source === "manual" ? " (provided by admin)" : ""}. Live data was not available.</p>}
       <div className="grid2">
         <section className="stack">
