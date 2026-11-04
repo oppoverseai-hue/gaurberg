@@ -87,7 +87,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const pos = q ? rangePosition(q.price, f.low52, f.high52) : null;
   const top = buildNodes(rels, company.id).slice(0, 5);
   return (
-    <main>
+    <main className="co-overview">
       <Breadcrumbs items={[{ label: company.name }]} />
       <div className="head">
         <div className="row1">
@@ -104,7 +104,6 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
         </p>
       </div>
       <CompanyTabs ticker={company.ticker ?? ticker} active="overview" />
-      <AroundStrip name={company.name} {...around} />
       {m.saved && <p className="savedbar">Showing saved data{m.saved.parts.length ? ` for ${m.saved.parts.join(", ")}` : ""} from {m.saved.at}{m.saved.source === "manual" ? " (provided by admin)" : ""}. Live data was not available.</p>}
       <div className="grid2">
         <section className="stack">
@@ -131,6 +130,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               </div>
             )}
           </div>
+          <AroundStrip name={company.name} {...around} />
           <div className="card" id="chart">
             <div className="cardhead"><span className="t">Price <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span><SourceTip text={m.saved?.parts.includes("price history") ? `Saved daily closes from ${m.saved.at}` : "Twelve Data, end-of-day closes"} /></div>
             {m.daily ? <PeriodChart daily={m.daily} weekly={m.weekly} /> : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {m.historyError ?? "no price history"}</p></div>}
@@ -175,7 +175,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               ...(events.length || !us ? [] : [["Next earnings", m.nextEarnings] as [string, string | null]]),
             ]} />
           </div>
-          <div className="card" id="about" style={{ marginTop: 24 }}>
+          <div className="card" id="about">
             <div className="cardhead"><h3>About</h3>{p?.description && <SourceTip text={p.about_source ?? "Saved company profile"} />}</div>
             {p?.description ? <p style={{ margin: "0 0 12px", fontSize: 13, lineHeight: "20px" }}>{p.description}</p> : <p className="muted mono" style={{ fontSize: 12, margin: "0 0 12px" }}>Description: not available yet.</p>}
             <Rows rows={[
@@ -183,7 +183,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               ["Website", p?.website ?? null], ["Employees", p?.employees == null ? null : p.employees.toLocaleString("en-US")],
             ]} />
           </div>
-          <div className="card" id="relationships" style={{ marginTop: 24 }}>
+          <div className="card" id="relationships">
             <div className="cardhead"><h3>Top linked companies</h3><span style={{ display: "flex", gap: 6, alignItems: "center" }}><span className="tag">{rels.length} links</span><SourceTip text="Quotes from SEC 10-K filings and annual reports; open the map for each link's evidence" /></span></div>
             {top.length === 0 ? <p className="muted">No disclosed relationships found for this company.</p> : (
               <>

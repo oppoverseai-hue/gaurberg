@@ -309,7 +309,22 @@ main.scr{max-width:1200px;padding-top:36px}
 .around .around-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
 @media (max-width:760px) { .around .around-grid { grid-template-columns:1fr; } }
 .around .label { margin:0 0 8px; }
-.around-row { display:grid; grid-template-columns:150px 1fr; gap:12px; padding:6px 0; border-top:1px solid var(--line-subtle); font-size:13px; }
+.around-row { display:grid; grid-template-columns:190px 1fr; gap:12px; padding:6px 0; border-top:1px solid var(--line-subtle); font-size:13px; }
+.around-row > .mono:first-child { white-space:nowrap; }
+.around-quiet { font-size:12px; margin:0 0 12px; }
+.around-more summary { cursor:pointer; list-style:none; padding:6px 0 0; font:12px var(--mono); color:var(--accent); } .around-more summary::-webkit-details-marker { display:none; }
+.around-more .less, .around-more[open] .more { display:none; } .around-more[open] .less { display:inline; }
+/* Phone: the date sits above the company name. */
+@media (max-width:600px) { .around-row { grid-template-columns:1fr; gap:2px; } }
+/* Company overview (UX-4): price card first, then Around and the rest; one 24px gap between every card. Below 1000px the two
+   columns become one list in reading order: price, key numbers, Around, then the rest. */
+.co-overview .grid2 { margin-top:24px; } .co-overview .savedbar { margin:24px 0 0; }
+.co-overview .stack > .card { margin-top:24px; } .co-overview .stack > .card:first-child { margin-top:0; }
+@media (max-width:1000px) {
+  .co-overview .grid2 > .stack { display:contents; }
+  .co-overview .grid2 .stack > .card { margin-top:0; order:10; }
+  .co-overview .grid2 #price { order:1; } .co-overview .grid2 #numbers { order:2; } .co-overview .grid2 #around { order:3; }
+}
 .around-row .mono { font-size:12px; } .around-today { color:var(--accent); font-weight:700; }
 
 /* Breadcrumbs (UX-10) */
