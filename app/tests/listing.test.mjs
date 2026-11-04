@@ -35,7 +35,7 @@ const files = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (
 const rel = (f) => path.relative(SRC, f);
 
 test("no file calls Finnhub, Twelve Data or the SEC ticker lookup except the gated ones", () => {
-  const ALLOWED_FETCH = new Set(["lib/finnhub.ts", "lib/news.ts", "lib/indices.ts", "app/api/cron/refresh/route.ts"]); // indices.ts: fixed index symbols, not companies; the daily refresh is gated below
+  const ALLOWED_FETCH = new Set(["lib/finnhub.ts", "lib/news.ts", "lib/indices.ts", "lib/news-link.ts", "app/api/cron/refresh/route.ts"]); // indices.ts: fixed index symbols, not companies; news-link.ts: only classifies a news address, makes no call; the daily refresh is gated below
   const LOW = /\b(getQuote|getCandles|getHistory|getFundamentals|getNextEarnings|finnhubNews|secFilings|cikFor)\(/;
   const LOW_ALLOWED = new Set(["lib/finnhub.ts", "lib/market.ts", "lib/news.ts", "lib/insiders.ts"]);
   for (const f of files(SRC)) {
