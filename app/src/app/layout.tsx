@@ -5,6 +5,8 @@ import AccountMenu from "@/components/AccountMenu";
 import SourceCapture from "@/components/SourceCapture";
 import Logo from "@/components/Logo";
 import AppChrome from "@/components/AppChrome";
+// Top bar links. Desktop shows them in a row; under 600 px they sit behind one Menu button so the bar stays one row (UX-9).
+const LINKS = [["/help", "Help"], ["/screener", "Screener"], ["/connect", "Connect"], ["/calendar", "Calendar"], ["/sources", "Sources"], ["/hood", "Under the hood"]] as const;
 export const metadata = { title: "Gaurberg · Every stock has an ecosystem", description: "Gaurberg maps who supplies, buys from, partners with, competes with and invests in a company, with the filing sentence behind every link." };
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const access = isOffline() ? null : await getAccess().catch(() => null);
@@ -27,7 +29,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <form className="cmd" action="/go" method="get" role="search">
             <input name="q" type="search" placeholder="Company or ticker, plus a word: Uber, Uber chart, Uber map, help" aria-label="Command bar" autoComplete="off" />
           </form>
-          <nav><a href="/help">Help</a><a href="/screener">Screener</a><a href="/connect">Connect</a><a href="/calendar">Calendar</a><a href="/sources">Sources</a><a href="/hood">Under the hood</a>{access?.state === "ok" && <AccountMenu email={access.email} role={access.role} />}</nav>
+          <div className="sitebar-r">
+            <nav className="navlinks">{LINKS.map(([h, l]) => <a key={h} href={h}>{l}</a>)}</nav>
+            <details className="navmenu">
+              <summary aria-label="Menu">Menu</summary>
+              <nav>{LINKS.map(([h, l]) => <a key={h} href={h}>{l}</a>)}</nav>
+            </details>
+            {access?.state === "ok" && <AccountMenu email={access.email} role={access.role} />}
+          </div>
         </header>
         </AppChrome>
         )}
