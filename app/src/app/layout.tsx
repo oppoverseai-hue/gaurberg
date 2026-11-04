@@ -3,19 +3,22 @@ import { isOffline } from "@/lib/mode";
 import { getAccess } from "@/lib/supabase/server";
 import AccountMenu from "@/components/AccountMenu";
 import SourceCapture from "@/components/SourceCapture";
-export const metadata = { title: "Gaurberg", description: "Company pages and ecosystem maps for independent analysts" };
+export const metadata = { title: "Gaurberg · Every stock has an ecosystem", description: "Gaurberg maps who supplies, buys from, partners with, competes with and invests in a company, with the filing sentence behind every link." };
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const access = isOffline() ? null : await getAccess().catch(() => null);
+  // The app's top bar and footer are for invited users; the public landing page brings its own (ACC-7).
+  const chrome = isOffline() || access?.state === "ok";
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap" />
       </head>
       <body>
         <SourceCapture />
         {isOffline() && <div className="offbar" role="status">Offline: showing saved data</div>}
+        {chrome && (
         <header className="sitebar">
           <a className="brand" href="/">Gaurberg</a>
           <form className="cmd" action="/go" method="get" role="search">
@@ -23,11 +26,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </form>
           <nav><a href="/help">Help</a><a href="/screener">Screener</a><a href="/connect">Connect</a><a href="/calendar">Calendar</a><a href="/sources">Sources</a><a href="/hood">Under the hood</a>{access?.state === "ok" && <AccountMenu email={access.email} role={access.role} />}</nav>
         </header>
+        )}
         {children}
+        {chrome && (
         <footer className="site"><div className="in">
           <span>Unreviewed links are labelled.</span>
           <span>·</span><a href="/sources">Sources</a><span>·</span><span>Not investment advice.</span>
         </div></footer>
+        )}
       </body>
     </html>
   );
