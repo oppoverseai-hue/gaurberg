@@ -1,5 +1,8 @@
 -- SECURITY DEFINER functions (item 13; Supabase advisor lint 0029, "Signed-In Users Can Execute SECURITY DEFINER Function"). Written Nov 5, 2026.
--- Not applied until the admin approves. No table, row or policy is changed.
+-- Not applied until the admin approves. No table, row or policy is changed. Apply as one transaction (apply_migration or the SQL
+-- editor do): between steps 2 and 3 the hood_* bodies still name public.*. Rollback: 0018_definer_function_grants.rollback.sql.
+-- Tested on a local copy of these functions and policies (db/checks/0018-local/run.sh): reads are unchanged for every role,
+-- all five keep search_path = '' and their grants, and the rollback restores the state before 0018.
 --
 -- Callers (checked Nov 5 in the live database and the repo):
 --   is_admin(), is_allowed(): 26 RLS policies on 20 tables (all for the authenticated role), and the three hood_* functions below.
@@ -15,7 +18,8 @@ revoke execute on function public.is_admin(), public.is_allowed(), public.hood_t
 --    The policies keep working unchanged: a policy stores the function by id, not by name. authenticated keeps EXECUTE (see above).
 create schema if not exists private;
 revoke all on schema private from public, anon;
-grant usage on schema private to authenticated, service_role;
+grant usage on schema private to authenticated, service_role; -- for anything that names private.is_allowed()/is_admin() (stored
+                                                              -- policies call them by id and do not need it; tested)
 alter function public.is_admin() set schema private;
 alter function public.is_allowed() set schema private;
 
