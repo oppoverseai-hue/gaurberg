@@ -82,6 +82,17 @@ export function pageOf(nodes: MapNode[], side: Side, page: number): { visible: M
 
 export const isMapped = (c: Co) => !!c.is_seed && !!c.ticker;
 
+// A group of people or businesses named in a filing (Uber's "Mobility Drivers", "Riders", "Couriers"), not a company (GRF-1, UX-4).
+// Groups stay on the map and the Exposure page, but are never counted as companies or offered in a company picker.
+export const GROUP = "segment_group";
+export const isGroup = (c: Pick<Co, "entity_type">) => c.entity_type === GROUP;
+/** Companies and groups among the other ends of a set of nodes or rows, counted apart. */
+export function countKinds(cos: Pick<Co, "id" | "entity_type">[]): { companies: number; groups: number } {
+  const seen = new Map(cos.map((c) => [c.id, c]));
+  const groups = [...seen.values()].filter(isGroup).length;
+  return { companies: seen.size - groups, groups };
+}
+
 // Trust badge (UX-4). Rows not yet promoted by the admin carry their own "Staged" tag and never a Verified badge.
 export function badgeOf(r: Rel): { label: string; cls: string } {
   if (r.status === "staged") return { label: "Staged, not reviewed", cls: "b-staged" };

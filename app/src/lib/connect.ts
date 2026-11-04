@@ -4,17 +4,18 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
 import { readSnapshot } from "@/lib/saved";
 import { REL_SEL } from "@/lib/data";
-import type { Co, Rel } from "@/lib/graph";
+import { isGroup, type Co, type Rel } from "@/lib/graph";
 
 export type Pick = { co: Co | null; options: Co[] }; // options: close matches when the text did not pick one company
 
 const CO = "id,ticker,name,is_seed,entity_type,markets";
 
+// The pickers list companies only: groups such as "Riders" are left out (GRF-1, UX-4). A path may still pass through a group.
 export async function listCompanies(): Promise<Co[]> {
-  if (isOffline()) return (readSnapshot()?.companies ?? []).slice().sort((a, b) => a.name.localeCompare(b.name));
+  if (isOffline()) return (readSnapshot()?.companies ?? []).filter((c) => !isGroup(c)).sort((a, b) => a.name.localeCompare(b.name));
   const supabase = await supabaseServer();
   const { data } = await supabase.from("companies").select(CO).order("name").limit(2000);
-  return (data ?? []) as Co[];
+  return ((data ?? []) as Co[]).filter((c) => !isGroup(c));
 }
 
 // Ticker first, then exact name, then a unique partial name match.

@@ -45,3 +45,11 @@ test("summary line shows only counts that exist and adds up to the group headers
   const only = buildExposure(MSFT, rels.filter((r) => r.relationship_type === "competes" && r.source.id === MSFT).slice(0, 1));
   assert.equal(summaryLine(only), "1 linked company: 1 competitor");
 });
+
+test("the summary counts groups apart from companies (GRF-1, UX-4)", () => {
+  const row = (id, entity_type) => ({ co: { id, name: `c${id}`, entity_type } });
+  const e = { ranked: { source_revenue: [], target_cost: [], ownership: [] }, unweighted: [row(20, "public_company"), row(31, "segment_group"), row(50, "segment_group")], partners: [], competitors: [row(20, "public_company")] };
+  assert.equal(summaryLine(e), "1 linked company and 2 groups, 4 links: 3 give no size, 1 competitor");
+  const one = { ranked: { source_revenue: [], target_cost: [], ownership: [] }, unweighted: [row(46, "segment_group")], partners: [], competitors: [] };
+  assert.equal(summaryLine(one), "0 linked companies and 1 group: 1 gives no size");
+});

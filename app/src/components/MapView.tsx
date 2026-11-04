@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CompanyTabs from "@/components/CompanyTabs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, isGroup, countKinds, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 import { exposureWeight, realWeight } from "@/lib/exposure-core";
 import { comoveText, comoveWidth, COMOVE_NOTE, type Comove } from "@/lib/comove-core";
 
@@ -126,7 +126,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
       </div>
       <div className="mapbody">
         <div className="canvas">
-          <div className="info">{rels.length} links, {nodes.length} companies<small>Left: into {focal.name} · Right: out of it · Above: competitors · Below: partners</small></div>
+          <div className="info">{(() => { const k = countKinds(nodes.map((n) => n.co)); return `${rels.length} links, ${k.companies} ${k.companies === 1 ? "company" : "companies"}${k.groups ? `, ${k.groups} ${k.groups === 1 ? "group" : "groups"}` : ""}`; })()}<small>Left: into {focal.name} · Right: out of it · Above: competitors · Below: partners</small></div>
         <svg viewBox={`0 0 ${W} ${H}`} className="map" role="img" aria-label={`Ecosystem map of ${focal.name}`}>
           <defs>
             <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent)" /></marker>
@@ -159,11 +159,11 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
             const sel = panel?.kind === "company" && panel.co.id === node.co.id;
             return (
               <g key={node.co.id} className={`node ${m ? "" : "unmapped"} ${sel ? "sel" : ""} ${hit && !exposed(node) ? "fade" : ""}`} onClick={() => setPanel({ kind: "company", co: node.co })} tabIndex={0} role="button"
-                 aria-label={`${node.co.name}${m ? "" : ", not yet mapped"}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "company", co: node.co })}>
+                 aria-label={`${node.co.name}${m ? "" : isGroup(node.co) ? ", group" : ", not yet mapped"}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "company", co: node.co })}>
                 <rect x={x - NW / 2} y={y - NH / 2} width={NW} height={NH} rx={8} />
                 <text x={x} y={y - 2} textAnchor="middle" className="nn">{(() => { const v = viaLabel(node), t = v ? `${node.co.name} (${v})` : node.co.name; return t.length > 22 ? t.slice(0, 21) + "…" : t; })()}</text>
                 {m && <text x={x} y={y + 14} textAnchor="middle" className="nt">{node.co.ticker}{region !== "all" ? (() => { const sh = regionShare(geo[node.co.id], region, countryRegion); return sh != null ? ` · ${sh}% ${region}` : ""; })() : ""}</text>}
-                {!m && <text x={x} y={y + 14} textAnchor="middle" className="nt">Not yet mapped{region !== "all" ? (() => { const sh = regionShare(geo[node.co.id], region, countryRegion); return sh != null ? ` · ${sh}% ${region}` : ""; })() : ""}</text>}
+                {!m && <text x={x} y={y + 14} textAnchor="middle" className="nt">{isGroup(node.co) ? "Group" : "Not yet mapped"}{region !== "all" ? (() => { const sh = regionShare(geo[node.co.id], region, countryRegion); return sh != null ? ` · ${sh}% ${region}` : ""; })() : ""}</text>}
               </g>
             );
           })}
@@ -219,7 +219,7 @@ function CohortList({ side, all, page, q, onQ, onPick, onClose, selId }: { side:
               return (
                 <tr key={n.co.id} className={`${b === page ? "cur" : ""} ${selId === n.co.id ? "sel" : ""}`} tabIndex={0} onClick={() => onPick(i, n)} onKeyDown={(e) => e.key === "Enter" && onPick(i, n)}>
                   <td className="mono">{i + 1}</td>
-                  <td>{n.co.name}{n.co.ticker ? <span className="tag" style={{ marginLeft: 6 }}>{n.co.ticker}</span> : <span className="muted"> · no ticker</span>}</td>
+                  <td>{n.co.name}{n.co.ticker ? <span className="tag" style={{ marginLeft: 6 }}>{n.co.ticker}</span> : <span className="muted"> · {isGroup(n.co) ? "group" : "no ticker"}</span>}</td>
                   <td>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</td>
                   <td className="muted">{exposureText(sized)}</td>
                   <td className="mono">{b + 1}</td>
@@ -332,12 +332,12 @@ function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { c
     <div className="panel">
       <button className="x" onClick={onClose} aria-label="Close">×</button>
       <div>
-        <div className="kicker"><span>Company</span></div>
+        <div className="kicker"><span>{isGroup(co) ? "Group" : "Company"}</span></div>
         <h3 style={{ marginTop: 4 }}>{co.name} {co.ticker && <span className="tag">{co.ticker}</span>}</h3>
       </div>
       <GeoBlock rows={geo} cr={countryRegion} />
       {!mapped ? (
-        <p className="muted">{co.entity_type === "group" ? "A group with no stock ticker." : "This company is not yet mapped."} The map shows only what {focal.name}'s filings say about it.</p>
+        <p className="muted">{isGroup(co) ? "A group named in the filings, not a company: it has no ticker or company page." : "This company is not yet mapped."} The map shows only what {focal.name}'s filings say about it.</p>
       ) : err ? (
         <p>Could not load this company. <button className="chip" onClick={() => setN(n + 1)}>Retry</button></p>
       ) : !data ? <p className="muted">Loading…</p> : (

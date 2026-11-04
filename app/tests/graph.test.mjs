@@ -1,7 +1,7 @@
 // Paging rules for the ecosystem map: more than 5 companies on a side are shown 5 at a time.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { pageOf, MAX_PER_SIDE } from "../src/lib/graph.ts";
+import { pageOf, MAX_PER_SIDE, isGroup, countKinds } from "../src/lib/graph.ts";
 
 const node = (id, side) => ({ co: { id, name: `Co ${id}`, ticker: null, is_seed: false, entity_type: null }, side, links: [], score: 100 - id });
 const nodes = [...Array.from({ length: 19 }, (_, i) => node(i + 1, "top")), node(100, "left"), node(101, "left")];
@@ -28,4 +28,12 @@ test("a side with 5 or fewer needs one page; an empty side is 0 of 0", () => {
 test("every company appears on exactly one page", () => {
   const ids = [0, 1, 2, 3].flatMap((p) => pageOf(nodes, "top", p).visible.map((n) => n.co.id));
   assert.equal(new Set(ids).size, 19); assert.equal(MAX_PER_SIDE, 5);
+});
+
+test("groups (segment_group) are never counted as companies (GRF-1, UX-4)", () => {
+  const cos = [{ id: 1, entity_type: "public_company" }, { id: 31, entity_type: "segment_group" }, { id: 46, entity_type: "segment_group" }, { id: 1, entity_type: "public_company" }, { id: 7, entity_type: null }];
+  assert.deepEqual(countKinds(cos), { companies: 2, groups: 2 });
+  assert.equal(isGroup({ entity_type: "segment_group" }), true);
+  assert.equal(isGroup({ entity_type: "private_company" }), false);
+  assert.equal(isGroup({ entity_type: "group" }), false, "only the database value counts");
 });
