@@ -28,18 +28,6 @@ export async function getRels(companyId: number): Promise<{ rels: Rel[]; error: 
   return { rels: (data ?? []) as unknown as Rel[], error: !!error };
 }
 
-export async function searchCompanies(q: string): Promise<{ ticker: string; name: string }[]> {
-  const safe = q.replace(/[%,()]/g, "").trim();
-  if (!safe) return [];
-  if (isOffline()) {
-    const l = safe.toLowerCase();
-    return (readSnapshot()?.companies ?? []).filter((c) => c.ticker && c.is_seed && (c.ticker.toLowerCase() === l || c.name.toLowerCase().includes(l))).slice(0, 10) as { ticker: string; name: string }[];
-  }
-  const supabase = await supabaseServer();
-  const { data } = await supabase.from("companies").select("ticker,name").or(`ticker.ilike.${safe},name.ilike.%${safe}%`).not("ticker", "is", null).limit(10);
-  return (data ?? []) as { ticker: string; name: string }[];
-}
-
 // Revenue by country (M16). Row-level security shows allowed users promoted rows only; the admin also sees staged rows.
 // The offline snapshot has no revenue rows yet, so offline shows none (a gap, not a guess).
 export async function getGeo(companyIds: number[]): Promise<{ geo: GeoMap; countryRegion: CountryRegion }> {
