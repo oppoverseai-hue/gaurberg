@@ -286,8 +286,6 @@ main.scr{max-width:1200px;padding-top:36px}
 .node.fade, .link.fade { opacity:.18; }
 /* Phone width (landing check): the header wraps instead of widening the page; suggestion rows keep room for the company name */
 @media (max-width:600px) {
-  .sitebar { height:auto; min-height:48px; flex-wrap:wrap; row-gap:6px; padding:8px 16px; }
-  .sitebar nav { flex-wrap:wrap; row-gap:4px; column-gap:12px; }
   .ls-row .mk, .ls-row .ls-enter { display:none; }
   .ls-n { min-width:0; }
   body:has(.lsearch) .sitebar .brand, body:has(.lsearch) .sitebar .cmd { display:none; }
@@ -347,3 +345,41 @@ main.scr{max-width:1200px;padding-top:36px}
 @media (max-width:600px) { .ctabs a { padding:8px 10px; } .filters { padding:8px 12px; } }
 
 a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decoration:underline; }
+
+/* Phone layout (UX-9). Top bar: one row of logo, search and Menu (the links open under it). Map: one row of type filters that
+   scrolls sideways plus a region menu; the drawn map gives way to a list of the same groups below 600 px. */
+.sitebar-r { display:flex; align-items:center; gap:12px; flex:none; }
+.navmenu { display:none; position:relative; }
+.navmenu summary { list-style:none; cursor:pointer; border:1px solid var(--line); border-radius:4px; padding:5px 10px; color:var(--fg2); } .navmenu summary::-webkit-details-marker { display:none; }
+.navmenu[open] summary { border-color:var(--accent); color:var(--accent); }
+.navmenu nav { position:absolute; right:0; top:calc(100% + 8px); z-index:40; display:flex; flex-direction:column; gap:0; min-width:180px; background:var(--surface-mid); border:1px solid var(--line-strong); border-radius:8px; box-shadow:0 12px 32px rgba(0,0,0,.5); overflow:hidden; }
+.navmenu nav a { padding:10px 14px; color:var(--fg2); } .navmenu nav a:hover { background:var(--surface-high); color:var(--fg); text-decoration:none; }
+.region-pick { display:none; }
+.maplist { display:none; }
+@media (max-width:600px) {
+  .sitebar { padding:0 12px; gap:8px; }
+  .sitebar .cmd { margin:0; min-width:0; }
+  .sitebar .navlinks { display:none; } /* .sitebar nav (display:flex) would otherwise win */
+  .navmenu { display:block; }
+  .filters { flex-wrap:nowrap; gap:8px; }
+  .filters .pills.types { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; flex:1; min-width:0; } .filters .pills.types::-webkit-scrollbar { display:none; }
+  .filters .pills.types .fpill { flex:none; white-space:nowrap; }
+  .filters .pills.regions, .filters .legend { display:none; }
+  .region-pick { display:block; flex:none; max-width:120px; background:var(--surface-mid); color:var(--fg2); border:1px solid var(--line); border-radius:9999px; padding:2px 8px; font:12px var(--mono); }
+  .canvas .map, .canvas .info small, .mapshell .more, .mapshell .cohort { display:none; }
+  .maplist { display:block; padding:4px 12px 12px; }
+  /* Side pane as a bottom sheet: hidden until a company or link is picked, then over the list, closed with × or Esc. */
+  .mapshell .side { position:fixed; left:0; right:0; bottom:0; z-index:50; max-height:85vh; border-top:1px solid var(--line-strong); border-radius:12px 12px 0 0; box-shadow:0 -12px 32px rgba(0,0,0,.6); transform:translateY(100%); visibility:hidden; transition:transform .2s ease, visibility .2s; }
+  .mapshell .side.open { transform:none; visibility:visible; }
+  .mapshell .sidefoot { display:none; } /* no Esc key on a phone; the sheet closes with × */
+  .navmenu nav a { text-align:left; }
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce) { .mapshell .side { transition:none; } }
+.maplist section { margin-top:12px; }
+.maplist h4 { margin:0 0 4px; font:600 12px var(--sans); color:var(--fg); } .maplist h4 .muted { font:11px var(--mono); }
+.maplist .mnote { margin:0 0 4px; font:11px var(--mono); color:var(--muted); }
+.maplist .mrow { background:var(--surface-mid); border:1px solid var(--line); border-radius:8px; padding:8px 10px; margin-top:6px; }
+.maplist .mname { display:block; width:100%; text-align:left; background:none; border:0; padding:0; color:var(--fg); font:13px var(--sans); cursor:pointer; }
+.maplist .mrow.sel { border-color:var(--accent); }
+.maplist .mname small { display:block; color:var(--fg2); font:11px var(--mono); margin-top:2px; }
+.maplist .mlinks { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; } .maplist .mlinks button { font:11px var(--mono); }

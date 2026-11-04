@@ -70,6 +70,8 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
   const hasComove = Object.values(comove).some((c) => c.ok);
   const exposed = (n: MapNode) => n.links.some((r) => r.relationship_type !== "competes");
   const [panel, setPanel] = useState<{ kind: "link"; rel: Rel } | { kind: "company"; co: Co } | null>(null);
+  // On a phone the side pane is a bottom sheet over the list (UX-9): it shows while something is selected; × or Esc closes it.
+  const openPanel = (p: { kind: "link"; rel: Rel } | { kind: "company"; co: Co }) => setPanel(p);
 
   const placed = useMemo(() => {
     const out: { node: MapNode; x: number; y: number }[] = [];
@@ -114,7 +116,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
         </span>
       </div>
       <div className="filters">
-        <div className="pills" role="group" aria-label="Filter by relationship type">
+        <div className="pills types" role="group" aria-label="Filter by relationship type">
           <span className="label" style={{ marginRight: 4 }}>Filter</span>
           <button className={`fpill ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")} title="Companies on this map">All ({pill.all})</button>
           {FILTERS.map((f) => { const n = pill[f.key]; return n === 0 ? null : (
@@ -122,7 +124,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
           ); })}
         </div>
         {(Object.keys(regionCounts).length > 0 || (geo[focal.id] ?? []).length > 0) && (
-          <div className="pills" role="group" aria-label="Filter by region where the other company earns revenue">
+          <div className="pills regions" role="group" aria-label="Filter by region where the other company earns revenue">
             <span className="label" style={{ marginRight: 4 }}>Region</span>
             <button className={`fpill ${region === "all" ? "on" : ""}`} onClick={() => setRegion("all")}>All regions</button>
             {REGIONS.filter((g) => regionCounts[g]).map((g) => (
@@ -130,6 +132,12 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
             ))}
             {Object.keys(regionCounts).length === 0 && <span className="muted" style={{ fontSize: 12 }}>No other company on this map has reported revenue by region yet.</span>}
           </div>
+        )}
+        {Object.keys(regionCounts).length > 0 && (
+          <select className="region-pick" value={region} onChange={(e) => setRegion(e.target.value)} aria-label="Filter by region where the other company earns revenue">
+            <option value="all">All regions</option>
+            {REGIONS.filter((g) => regionCounts[g]).map((g) => <option key={g} value={g}>{g} ({regionCounts[g]})</option>)}
+          </select>
         )}
         <div className="legend">
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="14" y2="4" stroke="var(--accent)" strokeWidth="2" /><polygon points="14,0 22,4 14,8" fill="var(--accent)" /></svg>Supplies / invests / acquired</span>
@@ -185,8 +193,9 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
             );
           })}
         </svg>
+        <MapList nodes={nodes} focal={focal} sel={panel} onCompany={(co) => openPanel({ kind: "company", co })} onLink={(rel) => openPanel({ kind: "link", rel })} />
         </div>
-        <aside className="side">
+        <aside className={`side ${panel ? "open" : ""}`}>
           {panel?.kind === "link" && <LinkPanel rel={panel.rel} focal={focal} cm={comove[otherOf(panel.rel).id]} onClose={() => setPanel(null)} />}
           {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} geo={geo[panel.co.id]} countryRegion={countryRegion} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/company/${t}/map`)} />}
           {!panel && <div className="empty">Select a link to see what the filings say, or a company to preview it.</div>}
@@ -219,6 +228,33 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
       {listSide && placed.info[listSide].total > MAX_PER_SIDE && (
         <CohortList side={listSide} all={placed.info[listSide].all} page={placed.info[listSide].page} q={listQ} onQ={setListQ} onPick={(i, n) => pickFromList(listSide, i, n)} onClose={() => setListSide(null)} selId={panel?.kind === "company" ? panel.co.id : null} />
       )}
+    </div>
+  );
+}
+
+// Phone list (UX-9): below 600 px the drawn map is hidden and the same groups are listed in full, in the same order, so the
+// counts match the filter pills. A company opens its preview; each link type opens that link's panel.
+function MapList({ nodes, focal, sel, onCompany, onLink }: { nodes: MapNode[]; focal: Co; sel: { kind: "link"; rel: Rel } | { kind: "company"; co: Co } | null; onCompany: (co: Co) => void; onLink: (rel: Rel) => void }) {
+  const head = (s: Side) => (s === "left" ? `Into ${focal.name}` : s === "right" ? `Out of ${focal.name}` : SIDE_LABEL[s]);
+  return (
+    <div className="maplist" aria-label={`Companies linked to ${focal.name}, as a list`}>
+      {SIDES.map((s) => ({ s, ns: nodes.filter((n) => n.side === s), more: elsewhere(nodes, s) })).filter(({ ns, more }) => ns.length || more.length).map(({ s, ns, more }) => (
+        <section key={s}>
+          <h4>{head(s)} <span className="muted">· {ns.length}</span></h4>
+          {more.length > 0 && <p className="mnote">{more.length} more shown in other groups: {more.map((n) => n.co.name).join(", ")}</p>}
+          {ns.map((n) => (
+            <div key={n.co.id} className={`mrow ${sel?.kind === "company" && sel.co.id === n.co.id ? "sel" : ""}`}>
+              <button type="button" className="mname" onClick={() => onCompany(n.co)}>
+                {(() => { const v = viaLabel(n); return v ? `${n.co.name} (${v})` : n.co.name; })()}{n.co.ticker && <span className="tag" style={{ marginLeft: 6 }}>{n.co.ticker}</span>}
+                <small>{isMapped(n.co) ? "Mapped" : isGroup(n.co) ? "Group" : "Not yet mapped"} · {exposureText(n.links.find((l) => l.exposure_pct != null) ?? n.links[0])}</small>
+              </button>
+              <div className="mlinks">
+                {n.links.map((l) => <button type="button" key={l.id} className={`chip ${sel?.kind === "link" && sel.rel.id === l.id ? "on" : ""}`} onClick={() => onLink(l)}>{TYPE_LABEL[l.relationship_type]}</button>)}
+              </div>
+            </div>
+          ))}
+        </section>
+      ))}
     </div>
   );
 }
