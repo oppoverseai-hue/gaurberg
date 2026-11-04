@@ -266,6 +266,8 @@ main.scr{max-width:1200px;padding-top:36px}
 .exposure .xline { font-size:13px; display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
 .exposure .xw { margin-left:auto; font:600 13px var(--mono); color:var(--fg); }
 .exposure .xtext { font-size:13px; margin:4px 0 0; }
+.exposure .xlink { margin:6px 0 0; padding-left:10px; border-left:2px solid var(--line-subtle); }
+.exposure .xlink .xmeta { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:0; } .exposure .xrel { color:var(--fg); font-weight:600; }
 .exposure .muted { color:var(--fg2); } /* --muted is under 4.5:1 on these backgrounds */
 .exposure .xsum { font:500 14px/20px var(--sans); color:var(--fg); margin:0 0 6px; }
 .exposure .cardhead h3 { display:flex; align-items:center; gap:6px; font-family:var(--sans); }
