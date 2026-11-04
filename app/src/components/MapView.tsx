@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CompanyTabs from "@/components/CompanyTabs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, isGroup, countKinds, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
+import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, typeCounts, elsewhere, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, isGroup, countKinds, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 import { exposureWeight, realWeight } from "@/lib/exposure-core";
 import { comoveText, comoveWidth, COMOVE_NOTE, type Comove } from "@/lib/comove-core";
 
@@ -13,7 +13,8 @@ const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
 const ALL_BADGES = [{ label: "Verified", cls: "b-verified" }, { label: "Curated", cls: "b-curated" }, { label: "Live-generated, not reviewed", cls: "b-live" }, { label: "Sample data", cls: "b-sample" }, { label: "Staged, not reviewed", cls: "b-staged" }];
 const FILTERS: { key: LinkType; label: string }[] = [{ key: "supplies", label: "Supplies" }, { key: "sells_to", label: "Sells to" }, { key: "competes", label: "Competes" }, { key: "invests", label: "Invests in" }, { key: "acquires", label: "Acquired" }, { key: "partners", label: "Partners" }];
 
-const W = 1200, H = 660, NW = 150, NH = 50;
+const W = 1200, H = 720, NW = 150, NH = 50;
+const BOTH_Y = H - 165; // Both ways: a row between the company and its partners
 const FOCAL = { x: W / 2, y: H / 2 };
 
 function slots(side: Side, n: number): { x: number; y: number }[] {
@@ -21,6 +22,7 @@ function slots(side: Side, n: number): { x: number; y: number }[] {
     const x = side === "left" ? 100 : W - 100;
     return Array.from({ length: n }, (_, i) => ({ x, y: n === 1 ? H / 2 : 140 + (i * (H - 280)) / (n - 1) }));
   }
+  if (side === "both") return Array.from({ length: n }, (_, i) => ({ x: n === 1 ? W / 2 : 300 + (i * (W - 600)) / (n - 1), y: BOTH_Y }));
   const y = side === "top" ? 42 : H - 42;
   return Array.from({ length: n }, (_, i) => ({ x: n === 1 ? W / 2 : 260 + (i * (W - 520)) / (n - 1), y }));
 }
@@ -46,15 +48,18 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
     return c;
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allRels, geo, countryRegion, focal.id]);
-  const rels = useMemo(() => allRels.filter((r) => (filter === "all" || r.relationship_type === filter) && (region === "all" || hasRegion(geo[otherOf(r).id], region, countryRegion))),
+  const regionRels = useMemo(() => allRels.filter((r) => region === "all" || hasRegion(geo[otherOf(r).id], region, countryRegion)),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [allRels, filter, region, geo, countryRegion, focal.id]);
+    [allRels, region, geo, countryRegion, focal.id]);
+  const rels = useMemo(() => regionRels.filter((r) => filter === "all" || r.relationship_type === filter), [regionRels, filter]);
   const nodes = useMemo(() => buildNodes(rels, focal.id), [rels, focal.id]);
+  // Pills count companies, with the same grouping as the map (GRF-1): a pill's number is what the pagers add up to once it is on.
+  const pill = useMemo(() => ({ all: buildNodes(regionRels, focal.id).length, ...typeCounts(regionRels, focal.id) }), [regionRels, focal.id]);
   // Paging: each side shows MAX_PER_SIDE companies at a time. "List all" opens a searchable list of every company on that side.
-  const [pages, setPages] = useState<Record<Side, number>>({ left: 0, right: 0, top: 0, bottom: 0 });
+  const [pages, setPages] = useState<Record<Side, number>>({ left: 0, right: 0, both: 0, top: 0, bottom: 0 });
   const [listSide, setListSide] = useState<Side | null>(null);
   const [listQ, setListQ] = useState("");
-  useEffect(() => { setPages({ left: 0, right: 0, top: 0, bottom: 0 }); }, [filter, region]);
+  useEffect(() => { setPages({ left: 0, right: 0, both: 0, top: 0, bottom: 0 }); }, [filter, region]);
   // Exposure highlight (GRF-17): fade companies that are not exposed to the focal company (competitors only), and draw line width from
   // the exposed company's own quoted share. Off: width from any quoted figure. A figure missing from its quote never widens a line.
   const [hit, setHit] = useState(false);
@@ -110,9 +115,9 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
       <div className="filters">
         <div className="pills" role="group" aria-label="Filter by relationship type">
           <span className="label" style={{ marginRight: 4 }}>Filter</span>
-          <button className={`fpill ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")}>All ({allRels.length})</button>
-          {FILTERS.map((f) => { const n = allRels.filter((r) => r.relationship_type === f.key).length; return n === 0 ? null : (
-            <button key={f.key} className={`fpill ${filter === f.key ? "on" : ""}`} onClick={() => setFilter(f.key)}>{f.label} ({n})</button>
+          <button className={`fpill ${filter === "all" ? "on" : ""}`} onClick={() => setFilter("all")} title="Companies on this map">All ({pill.all})</button>
+          {FILTERS.map((f) => { const n = pill[f.key]; return n === 0 ? null : (
+            <button key={f.key} className={`fpill ${filter === f.key ? "on" : ""}`} onClick={() => setFilter(f.key)} title={`${n} ${n === 1 ? "company" : "companies"} with a ${f.label.toLowerCase()} link`}>{f.label} ({n})</button>
           ); })}
         </div>
         {(Object.keys(regionCounts).length > 0 || (geo[focal.id] ?? []).length > 0) && (
@@ -136,7 +141,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
       </div>
       <div className="mapbody">
         <div className="canvas">
-          <div className="info">{(() => { const k = countKinds(nodes.map((n) => n.co)); return `${rels.length} links, ${k.companies} ${k.companies === 1 ? "company" : "companies"}${k.groups ? `, ${k.groups} ${k.groups === 1 ? "group" : "groups"}` : ""}`; })()}<small>Left: into {focal.name} · Right: out of it · Above: competitors · Below: partners</small></div>
+          <div className="info">{(() => { const k = countKinds(nodes.map((n) => n.co)); return `${rels.length} links, ${k.companies} ${k.companies === 1 ? "company" : "companies"}${k.groups ? `, ${k.groups} ${k.groups === 1 ? "group" : "groups"}` : ""}`; })()}<small>Left: into {focal.name} · Right: out of it{placed.info.both.total ? " · Lower middle: both ways" : ""} · Above: competitors · Below: partners</small></div>
         <svg viewBox={`0 0 ${W} ${H}`} className="map" role="img" aria-label={`Ecosystem map of ${focal.name}`}>
           <defs>
             <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--accent)" /></marker>
@@ -163,6 +168,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
               </g>
             );
           }))}
+          {placed.info.both.total > 0 && <text x={W / 2} y={BOTH_Y - NH / 2 - 8} textAnchor="middle" className="lbl">Both ways: links into and out of {focal.name}</text>}
           <g className="focal"><rect x={FOCAL.x - 86} y={FOCAL.y - 34} width={172} height={68} rx={10} /><text x={FOCAL.x} y={FOCAL.y - 14} textAnchor="middle" className="fl">FOCAL ENTITY</text><text x={FOCAL.x} y={FOCAL.y + 5} textAnchor="middle" className="fn">{focal.name}</text><text x={FOCAL.x} y={FOCAL.y + 22} textAnchor="middle" className="ft">{focal.ticker}</text></g>
           {placed.out.map(({ node, x, y }) => {
             const m = isMapped(node.co);
@@ -187,16 +193,20 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
         </aside>
       </div>
       <div className="more">
-        {SIDES.filter((s) => placed.info[s].total > MAX_PER_SIDE).map((s) => {
-          const g = placed.info[s];
+        {SIDES.map((s) => ({ s, g: placed.info[s], more: elsewhere(nodes, s) })).filter(({ g, more }) => g.total > MAX_PER_SIDE || more.length > 0).map(({ s, g, more }) => {
           const go = (p: number) => setPages({ ...pages, [s]: p });
+          const paged = g.total > MAX_PER_SIDE;
           return (
-            <div key={s} className="pager" role="group" aria-label={`Page through ${SIDE_LABEL[s].toLowerCase()}`}>
+            <div key={s} className="pager" role="group" aria-label={`${paged ? "Page through " : ""}${SIDE_LABEL[s].toLowerCase()}`}>
               <span className="pg-label">{SIDE_LABEL[s]}</span>
-              <span className="pg-range">Batch {g.page + 1} of {g.pages} · {g.from}–{g.to} of {g.total}</span>
-              <button className="chip" disabled={g.page === 0} onClick={() => go(g.page - 1)}>◂ Prev {MAX_PER_SIDE}</button>
-              <button className="chip" disabled={g.page >= g.pages - 1} onClick={() => go(g.page + 1)}>Next {MAX_PER_SIDE} ▸</button>
-              <button className={`chip ${listSide === s ? "on" : ""}`} aria-expanded={listSide === s} onClick={() => { setListSide(listSide === s ? null : s); setListQ(""); }}>{listSide === s ? "Hide list" : `List all ${g.total}`}</button>
+              <span className="pg-range">{paged ? `Batch ${g.page + 1} of ${g.pages} · ${g.from}–${g.to} of ${g.total}` : g.total}
+                {more.length > 0 && <span title={`${more.map((n) => n.co.name).join(", ")}: also ${more.length === 1 ? "has" : "have"} other links with ${focal.name}, so ${more.length === 1 ? "it sits" : "they sit"} in ${[...new Set(more.map((n) => SIDE_LABEL[n.side]))].join(", ")}`}> · {more.length} more shown in other groups</span>}
+              </span>
+              {paged && <>
+                <button className="chip" disabled={g.page === 0} onClick={() => go(g.page - 1)}>◂ Prev {MAX_PER_SIDE}</button>
+                <button className="chip" disabled={g.page >= g.pages - 1} onClick={() => go(g.page + 1)}>Next {MAX_PER_SIDE} ▸</button>
+                <button className={`chip ${listSide === s ? "on" : ""}`} aria-expanded={listSide === s} onClick={() => { setListSide(listSide === s ? null : s); setListQ(""); }}>{listSide === s ? "Hide list" : `List all ${g.total}`}</button>
+              </>}
             </div>
           );
         })}

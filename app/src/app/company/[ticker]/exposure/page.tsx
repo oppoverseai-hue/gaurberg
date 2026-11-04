@@ -3,16 +3,16 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CompanyTabs from "@/components/CompanyTabs";
 import { notFound, redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
-import { getCompany } from "@/lib/data";
+import { getCompany, getRels } from "@/lib/data";
 import { promotedRelsFor } from "@/lib/connect";
 import { sourceLabel } from "@/lib/connect-core";
 import { getPromotedEarnings } from "@/lib/marketdb";
-import { buildExposure, figureInQuote, KINDS, KIND_LABEL, EMPTY, NOT_DISCLOSED, NO_SIZE, type ExpRow } from "@/lib/exposure-core";
+import { buildExposure, figureInQuote, KINDS, KIND_LABEL, EMPTY, NOT_DISCLOSED, NO_SIZE, type ExpLink, type ExpRow } from "@/lib/exposure-core";
 import { monthYear, relationText, summaryLine } from "@/lib/exposure-text";
 import SourceTip from "@/components/SourceTip";
 import { getComove } from "@/lib/comove";
 import { comoveText, COMOVE_NOTE, MIN_DAYS, WINDOW, type Comove } from "@/lib/comove-core";
-import { badgeOf, isGroup, isMapped, type Evidence } from "@/lib/graph";
+import { badgeOf, isGroup, isMapped, SIDES, SIDE_LABEL, type Evidence } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
 
@@ -52,34 +52,51 @@ function Quote({ e }: { e: Evidence }) {
   );
 }
 
+// One link on a company's row: what it says, its kind of share and trust badge, and its evidence.
+function LinkLine({ l, focal }: { l: ExpLink; focal: { id: number; name: string } }) {
+  const r = l.rel, b = badgeOf(r), asOf = monthYear(r.as_of_date);
+  // For a ranked link, show the saved quote that states the figure.
+  const proof = l.weight != null ? r.evidence.find((e) => figureInQuote(l.weight!, [e.quote])) : undefined;
+  return (
+    <div className="xlink">
+      <p className="xmeta">
+        <strong className="xrel">{relationText(r, focal.id, focal.name)}</strong>
+        {l.kind && <span className="tag" title={KIND_TIP[l.kindLabel]}>{l.kindLabel}</span>}
+        <span className={`badge ${b.cls}`} title={BADGE_TIP[b.label]}>{b.label}</span>
+        <span>{sourceLabel(r)}{asOf ? `, ${asOf}` : ""}</span>
+      </p>
+      {l.text !== NOT_DISCLOSED && l.text !== NO_SIZE && <p className="xtext">{l.text}</p>}
+      {l.flag && <p className="xflag">⚠ {l.flag}</p>}
+      {proof && <Quote e={proof} />}
+      {l.context.map((c, i) => (
+        <div key={i}>
+          <p className="xctx">Context: {c.text}</p>
+          {c.quote && <Quote e={c.quote} />}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// One row per company (GRF-17): every link it has with the focal company, lead link first.
 function Row({ x, earnings, focal, cm }: { x: ExpRow; earnings?: string; focal: { id: number; name: string }; cm?: Comove }) {
-  const r = x.rel, b = badgeOf(r), asOf = monthYear(r.as_of_date);
-  // For a ranked row, show the saved quote that states the figure.
-  const proof = x.weight != null ? r.evidence.find((e) => figureInQuote(x.weight!, [e.quote])) : undefined;
   return (
     <div className="xrow">
       <div className="xline">
         {isMapped(x.co) ? <Link href={`/company/${x.co.ticker}`}><strong>{x.co.name}</strong></Link> : <strong>{x.co.name}</strong>}
         {x.co.ticker && <span className="xtk">{x.co.ticker}</span>}
         {isGroup(x.co) && <span className="tag" title="A group named in the filings (for example drivers or riders), not a company">Group</span>}
-        {x.kind && <span className="tag" title={KIND_TIP[x.kindLabel]}>{x.kindLabel}</span>}
-        <span className={`badge ${b.cls}`} title={BADGE_TIP[b.label]}>{b.label}</span>
+        {x.place === "both" && <span className="tag" title={`Links both into and out of ${focal.name}, as on the map`}>Both ways</span>}
+        {x.links.length > 1 && <span className="muted mono" style={{ fontSize: 11 }}>{x.links.length} links</span>}
         {x.weight != null && <span className="xw">{x.weight}%</span>}
       </div>
-      {x.text !== NOT_DISCLOSED && x.text !== NO_SIZE && <p className="xtext">{x.text}</p>}
-      {x.flag && <p className="xflag">⚠ {x.flag}</p>}
-      <p className="xmeta">
-        {relationText(r, focal.id, focal.name)} · {sourceLabel(r)}{asOf ? `, ${asOf}` : ""}
-        {earnings ? ` · next earnings ${earnings}` : ""}
-      </p>
-      {cm && <p className="xcm" title={COMOVE_NOTE}>Measured price pattern: {comoveText(cm, focal.name)}</p>}
-      {proof && <Quote e={proof} />}
-      {x.context.map((c, i) => (
-        <div key={i}>
-          <p className="xctx">Context: {c.text}</p>
-          {c.quote && <Quote e={c.quote} />}
-        </div>
-      ))}
+      {x.links.map((l) => <LinkLine key={l.rel.id} l={l} focal={focal} />)}
+      {(earnings || cm) && (
+        <p className="xmeta">
+          {earnings ? `Next earnings ${earnings}` : ""}
+          {cm && <span className="xcm" title={COMOVE_NOTE}>{earnings ? " · " : ""}Measured price pattern: {comoveText(cm, focal.name)}</span>}
+        </p>
+      )}
     </div>
   );
 }
@@ -94,7 +111,7 @@ function Group({ title, rows, earnings, focal, note, info, cm }: { title: string
           {note && <p className="xnote">{note}</p>}
         </div>
       </div>
-      {rows.map((x) => <Row key={x.rel.id} x={x} earnings={earnings.get(x.co.id)} focal={focal} cm={cm[x.co.id]} />)}
+      {rows.map((x) => <Row key={x.co.id} x={x} earnings={earnings.get(x.co.id)} focal={focal} cm={cm[x.co.id]} />)}
     </section>
   );
 }
@@ -105,11 +122,17 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
   const ticker = (await params).ticker.toUpperCase();
   const co = await getCompany(ticker);
   if (!co) notFound();
-  const { rels, error } = await promotedRelsFor([co.id]);
+  // Reviewed (promoted) links only. The map also shows live-generated links, so say how many are left out here.
+  const [{ rels, error }, { rels: mapRels }] = await Promise.all([promotedRelsFor([co.id]), getRels(co.id)]);
+  const live = mapRels.filter((r) => r.status === "live").length;
   const e = buildExposure(co.id, rels);
   const earnings = await getPromotedEarnings([...new Set([co.id, ...rels.flatMap((r) => [r.source.id, r.target.id])])]);
   const cm = error ? {} : await getComove(co.id, rels);
   const summary = summaryLine(e);
+  // Same wording as the map's pagers: a company sits in one group, so a rival that also supplies is listed above with all its links.
+  const also = (n: number, what: string) => (n ? ` ${n} more ${what} shown in other groups.` : "");
+  const all = [...KINDS.flatMap((k) => e.ranked[k]), ...e.unweighted, ...e.partners, ...e.competitors];
+  const mapLine = SIDES.map((s) => [SIDE_LABEL[s], all.filter((x) => x.place === s).length] as const).filter(([, n]) => n > 0).map(([l, n]) => `${l} ${n}`).join(" · ");
   const focal = { id: co.id, name: co.name };
   return (
     <main className="narrow exposure">
@@ -117,6 +140,10 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
       <CompanyTabs ticker={ticker} active="exposure" />
       <h1 style={{ marginTop: 12 }}>Who is exposed to {co.name} <span className="tag">{ticker}</span></h1>
       {!error && summary && <p className="xsum">{summary}</p>}
+      {!error && mapLine && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 8px" }} title="Each company sits in one group, by the same rule as the ecosystem map">Map groups: {mapLine}</p>}
+      {!error && live > 0 && (
+        <p className="xflag">Reviewed links only: {live} live-generated {live === 1 ? "link" : "links"} (not reviewed) {live === 1 ? "is" : "are"} on the map but not on this page, so some counts here are lower than the map's.</p>
+      )}
       <p className="muted">
         Companies linked to {co.name} in its filings, from reviewed links only. A percentage is shown only when the source states it.
         {earnings.get(co.id) ? ` ${co.name} next reports earnings on ${earnings.get(co.id)}.` : ""}
@@ -128,8 +155,8 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
           {e.empty && <div className="card"><p style={{ margin: 0 }}>{EMPTY}</p></div>}
           {KINDS.map((k) => <Group key={k} title={`${KIND_LABEL[k]} · ranked by stated share`} rows={e.ranked[k]} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.ranked} />)}
           <Group title="Linked, size not given" rows={e.unweighted} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.unweighted} note="The filings confirm these links but don't say how big they are." />
-          <Group title="Partners" rows={e.partners} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.partners} note="Named in the filings; no strength given." />
-          <Group title="Competitors" rows={e.competitors} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.competitors} note={`Not counted as exposure. ${co.name}'s trouble could help or hurt them.`} />
+          <Group title="Partners" rows={e.partners} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.partners} note={`Named in the filings; no strength given.${also(e.alsoPartner, "partners")}`} />
+          <Group title="Competitors" rows={e.competitors} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.competitors} note={`Not counted as exposure. ${co.name}'s trouble could help or hurt them.${also(e.alsoCompete, "competitors")}`} />
           <p className="muted mono" style={{ fontSize: 10, margin: "12px 0 0" }}>
             One hop only. Shows what our sources disclose about each link, not a prediction of how a company would be affected. No figure is estimated,
             averaged or filled in. This describes sources and is not a recommendation.

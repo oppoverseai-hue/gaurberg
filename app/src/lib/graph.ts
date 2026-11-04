@@ -27,7 +27,7 @@ export type Rel = {
   confidence: number | null; trust_status: string | null; source_type: string | null; status: string; as_of_date: string | null; note?: string | null;
   evidence: Evidence[];
 };
-export type Side = "left" | "right" | "top" | "bottom";
+export type Side = "left" | "right" | "both" | "top" | "bottom";
 export type MapNode = { co: Co; side: Side; links: Rel[]; score: number };
 
 export const TYPE_LABEL: Record<LinkType, string> = {
@@ -35,31 +35,55 @@ export const TYPE_LABEL: Record<LinkType, string> = {
 };
 export const MAX_PER_SIDE = 5;
 
-// Left: links pointing into the focal company. Right: links pointing out. Above: competitors. Below: partners.
-export function sideOf(r: Rel, focalId: number): Side {
-  if (r.relationship_type === "competes") return "top";
-  if (r.relationship_type === "partners") return "bottom";
-  return r.target.id === focalId ? "left" : "right";
+// Direction (GRF-1). A link is stored as a sentence, "source <verb> target", and its direction is read from that sentence only.
+// For supplies, sells_to, invests and acquires, a link whose target is the focal company points INTO it ("Lyft sells to Uber",
+// "Toyota invests in Pony.ai"), and a link whose source is the focal company points OUT of it ("Uber invests in Aurora").
+// Competes and partners have no direction. Who pays whom is not inferred.
+export const DIRECTED: ReadonlySet<LinkType> = new Set(["supplies", "sells_to", "invests", "acquires"]);
+export function directionOf(r: Rel, focalId: number): "in" | "out" | null {
+  if (!DIRECTED.has(r.relationship_type)) return null;
+  return r.target.id === focalId ? "in" : "out";
 }
 
-const PRIORITY: Record<Side, number> = { left: 0, right: 0, bottom: 1, top: 2 };
+// The one grouping rule for the map, its pager and filter counts, and the Exposure page. Every company the focal company is
+// linked to sits in exactly one group, read from all its links together:
+//   directed links both into and out of the focal company -> Both ways ("both")
+//   directed links into it only -> Into ("left"); out of it only -> Out ("right")
+//   no directed link, but a partnership -> Partners ("bottom"); otherwise -> Competitors ("top")
+// So a competitor that also supplies (Alphabet to Uber) sits with the suppliers, and its competes link is drawn to it there.
+export function groupOf(links: Rel[], focalId: number): Side {
+  const dirs = new Set(links.map((r) => directionOf(r, focalId)));
+  if (dirs.has("in") && dirs.has("out")) return "both";
+  if (dirs.has("in")) return "left";
+  if (dirs.has("out")) return "right";
+  return links.some((r) => r.relationship_type === "partners") ? "bottom" : "top";
+}
 
-// One node per counterparty. The node sits on the side of its highest-priority link; its other links are drawn to it too.
+// One node per counterparty, placed by groupOf; all its links are drawn to it.
 export function buildNodes(rels: Rel[], focalId: number): MapNode[] {
   const by = new Map<number, MapNode>();
   for (const r of rels) {
     const other = r.source.id === focalId ? r.target : r.source;
-    const side = sideOf(r, focalId);
     const score = (r.confidence ?? 0) + Math.min(r.evidence.length, 3) / 10;
     const n = by.get(other.id);
-    if (!n) by.set(other.id, { co: other, side, links: [r], score });
-    else {
-      n.links.push(r);
-      n.score = Math.max(n.score, score);
-      if (PRIORITY[side] < PRIORITY[n.side]) n.side = side;
-    }
+    if (!n) by.set(other.id, { co: other, side: "top", links: [r], score });
+    else { n.links.push(r); n.score = Math.max(n.score, score); }
   }
+  for (const n of by.values()) n.side = groupOf(n.links, focalId);
   return [...by.values()].sort((a, b) => b.score - a.score || a.co.name.localeCompare(b.co.name));
+}
+
+/** Filter pill counts: companies (and groups) with at least one link of each type. Built with buildNodes, so a pill's number is
+ *  exactly the number of companies the map and its pagers show once that filter is on. */
+export function typeCounts(rels: Rel[], focalId: number): Record<LinkType, number> {
+  return Object.fromEntries((Object.keys(TYPE_LABEL) as LinkType[]).map((t) => [t, buildNodes(rels.filter((r) => r.relationship_type === t), focalId).length])) as Record<LinkType, number>;
+}
+
+/** Companies with a link of this group's own kind (competes for Competitors, partners for Partners) that sit in another group
+ *  because of their other links. With these, a group's count adds up to its filter pill: Uber's 16 competitors + 3 = Competes (19). */
+export function elsewhere(nodes: MapNode[], side: Side): MapNode[] {
+  const own: LinkType | null = side === "top" ? "competes" : side === "bottom" ? "partners" : null;
+  return own ? nodes.filter((n) => n.side !== side && n.links.some((r) => r.relationship_type === own)) : [];
 }
 
 export function shown(nodes: MapNode[], side: Side, expanded: boolean): { visible: MapNode[]; hidden: number } {
@@ -67,8 +91,8 @@ export function shown(nodes: MapNode[], side: Side, expanded: boolean): { visibl
   return expanded ? { visible: all, hidden: 0 } : { visible: all.slice(0, MAX_PER_SIDE), hidden: Math.max(0, all.length - MAX_PER_SIDE) };
 }
 
-export const SIDES: Side[] = ["left", "right", "top", "bottom"];
-export const SIDE_LABEL: Record<Side, string> = { left: "Into the company", right: "Out of the company", top: "Competitors", bottom: "Partners" };
+export const SIDES: Side[] = ["left", "right", "both", "top", "bottom"];
+export const SIDE_LABEL: Record<Side, string> = { left: "Into the company", right: "Out of the company", both: "Both ways", top: "Competitors", bottom: "Partners" };
 
 // Paging (J1 follow-up): a side with more than MAX_PER_SIDE companies is shown MAX_PER_SIDE at a time, best-scored first.
 // page is clamped, so a stale page number after a filter change still lands on a real batch.

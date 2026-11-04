@@ -1,8 +1,9 @@
 // Exposure view rules (GRF-17, on the GRF-11 exposure rules). Pure functions: no data access here.
-// "If X is hit": every promoted link touching X, one row per link, the other company being the exposed one.
+// "If X is hit": every promoted link touching X, one row per company, the other company being the exposed one. A company's row
+// carries all its links. Its group comes from groupOf in graph.ts, the same rule as the map, so the counts match the map.
 // A stored percentage is a weight only when it is the exposed company's own share and a saved quote contains the figure.
 // Weights are ranked only within one kind of share; they are never converted, estimated or back-filled.
-import type { Co, Evidence, Rel } from "./graph";
+import { groupOf, type Co, type Evidence, type Rel, type Side } from "./graph.ts";
 
 export type Kind = "source_revenue" | "target_cost" | "ownership";
 export const KINDS: Kind[] = ["source_revenue", "target_cost", "ownership"];
@@ -15,14 +16,21 @@ export const EMPTY = "No documented exposure in our sources.";
 export const GROUP = { unweighted: "No stated weight", partners: "partner (link strength not stated)", competitors: "competitors (effect can be positive or negative)" } as const;
 
 export type Context = { text: string; quote?: Evidence };
-export type ExpRow = {
+/** One link, read for the company exposed when X is hit. */
+export type ExpLink = {
   rel: Rel; co: Co; // co: the exposed company (the other end of the link)
   kind: Kind | null; kindLabel: string;
-  weight: number | null; // set only for a ranked row
-  text: string; // GRF-11 sentence for a ranked row, otherwise NOT_DISCLOSED or NO_SIZE
+  weight: number | null; // set only when the link ranks
+  text: string; // GRF-11 sentence for a ranked link, otherwise NOT_DISCLOSED or NO_SIZE
   context: Context[]; flag: string | null;
 };
-export type Exposure = { ranked: Record<Kind, ExpRow[]>; unweighted: ExpRow[]; partners: ExpRow[]; competitors: ExpRow[]; empty: boolean };
+/** One company: its lead link's fields (the ranked figure, or the most informative link), plus every link and its map group. */
+export type ExpRow = ExpLink & { links: ExpLink[]; place: Side };
+export type Exposure = {
+  ranked: Record<Kind, ExpRow[]>; unweighted: ExpRow[]; partners: ExpRow[]; competitors: ExpRow[]; empty: boolean;
+  // Companies that compete with (or partner) X but sit in another group because of their other links, as on the map.
+  alsoCompete: number; alsoPartner: number;
+};
 
 const isKind = (b: string | null): b is Kind => b === "source_revenue" || b === "target_cost" || b === "ownership";
 const otherOf = (r: Rel, id: number) => (r.source.id === id ? r.target : r.source);
@@ -64,7 +72,7 @@ const MONEY = /revenue|income|\bGII\b|\bGP\b|sales|profit|costs?\b|purchases|spe
 const quoteContext = (r: Rel): Context[] =>
   r.exposure_pct != null ? [] : r.evidence.filter((e) => e.quote && /\d\s?%|\bper ?cent\b/i.test(e.quote) && MONEY.test(e.quote)).map((e) => ({ text: "Stated in the source, not a stored weight", quote: e }));
 
-function row(r: Rel, hitId: number): ExpRow {
+function linkRow(r: Rel, hitId: number): ExpLink {
   const co = otherOf(r, hitId);
   const t = r.relationship_type;
   if (t === "competes" || t === "partners") return { rel: r, co, kind: null, kindLabel: "None", weight: null, text: NO_SIZE, context: t === "partners" ? quoteContext(r) : [], flag: null };
@@ -77,18 +85,34 @@ function row(r: Rel, hitId: number): ExpRow {
   return { ...base, weight: r.exposure_pct, text: shareSentence(r)! };
 }
 
-const byName = (a: ExpRow, b: ExpRow) => a.co.name.localeCompare(b.co.name) || a.rel.id - b.rel.id;
+const byName = (a: ExpRow, b: ExpRow) => a.co.name.localeCompare(b.co.name) || a.co.id - b.co.id;
+const undirected = (x: ExpLink) => x.rel.relationship_type === "competes" || x.rel.relationship_type === "partners";
+// Lead link: the highest ranked figure; else a directed link, one with a kind of share or context first; else a partnership.
+const leadRank = (x: ExpLink) => (x.weight != null ? 0 : !undirected(x) ? (x.kind || x.context.length ? 1 : 2) : x.rel.relationship_type === "partners" ? 3 : 4);
+const byLead = (a: ExpLink, b: ExpLink) => leadRank(a) - leadRank(b) || (b.weight ?? 0) - (a.weight ?? 0) || a.rel.id - b.rel.id;
 
 export function buildExposure(hitId: number, rels: Rel[]): Exposure {
-  const rows = rels.filter((r) => (r.source.id === hitId) !== (r.target.id === hitId)).map((r) => row(r, hitId));
-  const ranked = Object.fromEntries(KINDS.map((k) => [k, rows.filter((x) => x.weight != null && x.kind === k).sort((a, b) => b.weight! - a.weight! || byName(a, b))])) as Record<Kind, ExpRow[]>;
-  const directed = rows.filter((x) => x.rel.relationship_type !== "competes" && x.rel.relationship_type !== "partners");
-  const unweighted = directed.filter((x) => x.weight == null).sort((a, b) => a.kindLabel.localeCompare(b.kindLabel) || byName(a, b));
+  const by = new Map<number, ExpLink[]>();
+  for (const r of rels) {
+    if ((r.source.id === hitId) === (r.target.id === hitId)) continue; // a link must have X at exactly one end
+    const x = linkRow(r, hitId);
+    (by.get(x.co.id) ?? by.set(x.co.id, []).get(x.co.id)!).push(x);
+  }
+  const rows: ExpRow[] = [...by.values()].map((links) => {
+    const sorted = [...links].sort(byLead);
+    return { ...sorted[0], links: sorted, place: groupOf(links.map((x) => x.rel), hitId) };
+  });
+  const directed = rows.filter((x) => x.place !== "top" && x.place !== "bottom");
+  const ranked = Object.fromEntries(KINDS.map((k) => [k, directed.filter((x) => x.weight != null && x.kind === k).sort((a, b) => b.weight! - a.weight! || byName(a, b))])) as Record<Kind, ExpRow[]>;
+  const has = (x: ExpRow, t: string) => x.links.some((l) => l.rel.relationship_type === t);
   return {
-    ranked, unweighted,
-    partners: rows.filter((x) => x.rel.relationship_type === "partners").sort(byName),
-    competitors: rows.filter((x) => x.rel.relationship_type === "competes").sort(byName),
+    ranked,
+    unweighted: directed.filter((x) => x.weight == null).sort((a, b) => a.kindLabel.localeCompare(b.kindLabel) || byName(a, b)),
+    partners: rows.filter((x) => x.place === "bottom").sort(byName),
+    competitors: rows.filter((x) => x.place === "top").sort(byName),
     empty: directed.length === 0,
+    alsoCompete: rows.filter((x) => x.place !== "top" && has(x, "competes")).length,
+    alsoPartner: rows.filter((x) => x.place !== "bottom" && has(x, "partners")).length,
   };
 }
 
