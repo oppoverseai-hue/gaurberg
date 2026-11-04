@@ -1,5 +1,6 @@
 // Privacy notice for the waitlist and sign-in (ACC-5). Public page, warm-paper style like the landing page.
 import "@/components/landing/landing.css";
+import Logo from "@/components/Logo";
 
 export const metadata = { title: "Privacy · Gaurberg" };
 
@@ -7,7 +8,7 @@ export default function Privacy() {
   return (
     <div className="paper">
       <div className="pp-doc">
-        <p className="pp-mono" style={{ color: "#6B645C" }}><a href="/">← Gaurberg</a></p>
+        <p style={{ margin: "0 0 32px" }}><a href="/" aria-label="Gaurberg home"><Logo /></a></p>
         <h1>Privacy</h1>
         <p>Last updated 4 November 2026. Gaurberg is an early-access research tool run by Abhishek. This page says what we keep about you and why.</p>
         <h2>What we keep</h2>

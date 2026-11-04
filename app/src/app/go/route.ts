@@ -28,6 +28,6 @@ export async function GET(req: Request) {
   const exact = hits.filter((h) => h.ticker.toLowerCase() === name.toLowerCase());
   const pick = exact.length === 1 ? exact[0] : hits.length === 1 ? hits[0] : null;
   if (!pick) return to(`/search?q=${encodeURIComponent(name)}`);
-  if (isCmd && MAP_WORDS.has(last)) return to(`/map/${pick.ticker}`);
+  if (isCmd && MAP_WORDS.has(last)) return to(`/company/${pick.ticker}/map`);
   return to(`/company/${pick.ticker}${isCmd ? `#${SECTIONS[last]}` : ""}`);
 }

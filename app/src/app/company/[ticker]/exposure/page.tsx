@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import CompanyTabs from "@/components/CompanyTabs";
 import { notFound, redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
 import { getCompany } from "@/lib/data";
@@ -110,9 +112,8 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
   const focal = { id: co.id, name: co.name };
   return (
     <main className="narrow exposure">
-      <div className="crumb mono" style={{ fontSize: 12 }}>
-        <Link href={`/map/${ticker}`}>← Ecosystem map</Link><span className="muted">|</span><Link href={`/company/${ticker}`}>Company page</Link>
-      </div>
+      <Breadcrumbs items={[{ label: co.name, href: `/company/${ticker}` }, { label: "Who is exposed" }]} />
+      <CompanyTabs ticker={ticker} active="exposure" />
       <h1 style={{ marginTop: 12 }}>Who is exposed to {co.name} <span className="tag">{ticker}</span></h1>
       {!error && summary && <p className="xsum">{summary}</p>}
       <p className="muted">

@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
@@ -75,6 +76,7 @@ export default async function Screener({ searchParams }: { searchParams: Promise
 
   return (
     <main className="narrow scr">
+      <Breadcrumbs items={[{ label: "Screener" }]} />
       <div className="scr-head">
         <div>
           <h1>Screener</h1>
@@ -136,7 +138,7 @@ export default async function Screener({ searchParams }: { searchParams: Promise
                     {ch ? <>{ch.pct >= 0 ? "+" : ""}{ch.pct.toFixed(1)}%<span className="muted scr-sub">since {ch.from}</span></> : <span className="muted">no saved price history</span>}
                   </td>
                   <td className="scr-trend">{spark && ch ? <Spark v={spark} up={ch.pct >= 0} /> : null}</td>
-                  <td className="num"><Link href={`/map/${c.ticker}`} className="mono scr-map">Map →</Link></td>
+                  <td className="num"><Link href={`/company/${c.ticker}/map`} className="mono scr-map">Map →</Link></td>
                 </tr>
               ))}
             </tbody>
@@ -172,6 +174,7 @@ async function Comps({ f, region, sp }: { f: Filters; region: string; sp: Record
   const asOf = data.asOf.length ? data.asOf.map(dayLabel).join(", ") : null;
   return (
     <main className="narrow scr">
+      <Breadcrumbs items={[{ label: "Screener" }]} />
       <div className="scr-head">
         <div>
           <h1>Screener</h1>

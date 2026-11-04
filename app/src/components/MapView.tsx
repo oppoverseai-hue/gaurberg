@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import CompanyTabs from "@/components/CompanyTabs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
@@ -87,10 +89,9 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
   return (
     <div className="mapshell">
       <div className="mapbar">
-        <div className="crumb">
-          <Link href={`/company/${focal.ticker}`}>← Back to company page</Link><span className="muted">|</span>
-          <strong>{focal.name}</strong><span className="tag">{focal.ticker}</span><span>/</span><span>Ecosystem map</span><span className="muted">|</span>
-          <Link href={`/company/${focal.ticker}/exposure`}>Who is exposed to {focal.name} →</Link>
+        <div>
+          <Breadcrumbs items={[{ label: focal.name, href: `/company/${focal.ticker}` }, { label: "Ecosystem map" }]} />
+          {focal.ticker && <CompanyTabs ticker={focal.ticker} active="map" />}
         </div>
         <span style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {Object.entries(tally).map(([k, v]) => <span key={k} className={`badge ${v.cls}`}><span aria-hidden>{glyph(v.cls)}</span>{k}: {v.n}</span>)}
@@ -170,7 +171,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
         </div>
         <aside className="side">
           {panel?.kind === "link" && <LinkPanel rel={panel.rel} focal={focal} cm={comove[otherOf(panel.rel).id]} onClose={() => setPanel(null)} />}
-          {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} geo={geo[panel.co.id]} countryRegion={countryRegion} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/map/${t}`)} />}
+          {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} geo={geo[panel.co.id]} countryRegion={countryRegion} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/company/${t}/map`)} />}
           {!panel && <div className="empty">Select a link to see what the filings say, or a company to preview it.</div>}
           <div className="sidefoot"><kbd>Esc</kbd><span>closes this pane</span></div>
         </aside>

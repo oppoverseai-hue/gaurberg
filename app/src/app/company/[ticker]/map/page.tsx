@@ -27,7 +27,7 @@ export default async function MapPage({ params }: { params: Promise<{ ticker: st
   return (
     <main className="wide">
       {error ? (
-        <div className="card" style={{ margin: 24 }}><p>Could not load links. <Link href={`/map/${ticker}`}>Retry</Link></p></div>
+        <div className="card" style={{ margin: 24 }}><p>Could not load links. <Link href={`/company/${ticker}/map`}>Retry</Link></p></div>
       ) : rels.length === 0 ? (
         <div style={{ margin: 24 }}>
           <div className="card"><p>{focal.is_seed ? "No disclosed relationships found for this company." : "This company is not yet mapped."}</p></div>

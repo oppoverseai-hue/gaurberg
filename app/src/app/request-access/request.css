@@ -1,0 +1,43 @@
+/* Request-access page (ACC-5): warm paper, one centred card. Own class names (rq-*) so the app's .chip and .wl rules never leak in. */
+.rq-top { max-width:720px; margin:0 auto; padding:24px 20px 0; display:flex; justify-content:space-between; align-items:center; font:600 16px var(--sans); }
+.rq-link { background:none; border:0; padding:0; font:14px var(--sans); color:var(--muted); cursor:pointer; } .rq-link:hover { color:var(--ink); }
+.rq-wrap { max-width:720px; margin:0 auto; padding:40px 20px 96px; }
+.rq-card { background:var(--card); border:1px solid var(--hair); border-radius:16px; padding:40px; box-shadow:0 20px 40px -15px rgba(42,33,28,.06); }
+@media (max-width:560px) { .rq-card { padding:28px 20px; } }
+.rq-card h1 { font:700 32px/40px var(--sans); letter-spacing:-.025em; margin:0; }
+@media (min-width:768px) { .rq-card h1 { font-size:40px; line-height:48px; } }
+.rq-over { color:var(--muted); font-size:10px; margin:0 0 12px; }
+.rq-who { color:var(--muted); font-size:14px; margin:12px 0 0; }
+.rq-lede { margin:20px 0 0; font-size:18px; line-height:28px; } .rq-lede b { font-weight:600; }
+.rq-small { color:var(--muted); font-size:15px; line-height:23px; margin:16px 0 0; }
+
+.rq-form { margin-top:32px; display:grid; gap:28px; }
+.rq-form fieldset { border:0; padding:0; margin:0; min-width:0; }
+.rq-form legend, .rq-q { display:block; font:600 16px/22px var(--sans); color:var(--ink); margin:0 0 12px; padding:0; }
+.rq-hint { font-weight:400; color:var(--muted); font-size:14px; margin-left:6px; }
+
+/* Answer chips: the input is hidden, the whole pill is the control */
+.rq-chips { display:flex; flex-wrap:wrap; gap:8px; }
+.rq-chip { position:relative; display:inline-flex; align-items:center; min-height:40px; padding:8px 16px; border:1px solid var(--hair); border-radius:9999px; background:var(--card);
+  font:400 15px/20px var(--sans); color:var(--ink); cursor:pointer; transition:background .12s, border-color .12s, color .12s; user-select:none; }
+.rq-chip:hover { border-color:#cfc5bb; }
+.rq-chip input { position:absolute; inset:0; opacity:0; margin:0; cursor:pointer; }
+.rq-chip:has(input:checked) { background:var(--cta); border-color:var(--cta); color:var(--cta-ink); }
+.rq-chip:has(input[type=checkbox]:checked) span::before { content:"✓ "; }
+.rq-chip:has(input:focus-visible) { outline:2px solid var(--cta); outline-offset:2px; }
+
+.rq-field input { display:block; width:100%; padding:12px 14px; border:1px solid var(--hair); border-radius:10px; background:#fff; color:var(--ink); font:16px var(--sans); }
+.rq-field input:focus { outline:0; border-color:var(--cta); }
+
+/* Tick boxes: 20 px rounded squares, text aligned to the box's centre line */
+.rq-checks { display:grid; gap:14px; }
+.rq-check { display:grid; grid-template-columns:20px 1fr; column-gap:12px; align-items:start; font:400 15px/22px var(--sans); color:var(--ink); cursor:pointer; }
+.rq-check input { appearance:none; -webkit-appearance:none; width:20px; height:20px; margin:1px 0 0; border:1.5px solid #6B645C; border-radius:6px; background:#fff; cursor:pointer; transition:background .12s, border-color .12s; }
+.rq-check input:checked { background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3L14.5 7' fill='none' stroke='%23FBF9F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat; border-color:var(--cta); }
+.rq-check input:focus-visible { outline:2px solid var(--cta); outline-offset:2px; }
+
+.rq-btn { justify-self:start; background:var(--cta); color:var(--cta-ink); border:0; border-radius:9999px; padding:14px 28px; font:500 16px var(--sans); cursor:pointer; transition:background .15s; }
+.rq-btn:hover { background:var(--cta-hover); } .rq-btn:disabled { opacity:.7; cursor:progress; }
+.rq-error { color:#ba1a1a; margin:0; font-size:15px; }
+.rq-fine { color:var(--muted); font-size:13px; line-height:20px; margin:0; } .rq-fine a { text-decoration:underline; }
+.rq-card > .rq-fine { margin-top:28px; }

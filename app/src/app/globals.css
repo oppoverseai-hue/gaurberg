@@ -24,7 +24,7 @@ h2 { font-size:16px; line-height:22px; font-weight:600; letter-spacing:-.01em; m
 
 /* Site bar and footer */
 .sitebar { flex:none; height:48px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; background:var(--surface); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:30; font-family:var(--mono); font-size:12px; }
-.sitebar .brand { color:var(--fg); font-weight:700; letter-spacing:.12em; font-size:13px; text-transform:uppercase; } .sitebar .brand:hover { text-decoration:none; }
+.sitebar .brand { color:var(--fg); font-weight:600; letter-spacing:-.01em; font-size:15px; display:inline-flex; align-items:center; } .sitebar .brand:hover { text-decoration:none; }
 .sitebar nav { display:flex; gap:16px; color:var(--fg2); } .sitebar nav a { color:var(--fg2); } .sitebar nav a:hover { color:var(--accent); }
 footer.site { border-top:1px solid var(--line); background:var(--surface); padding:12px 24px; color:var(--muted); font:11px/16px var(--mono); }
 footer.site .in { max-width:1440px; margin:0 auto; display:flex; gap:8px; flex-wrap:wrap; }
@@ -300,14 +300,6 @@ main.scr{max-width:1200px;padding-top:36px}
 .cohort tbody tr:hover, .cohort tbody tr:focus { background:var(--surface-mid); }
 .cohort tr.cur td:first-child { box-shadow:inset 2px 0 0 var(--accent); } .cohort tr.sel { background:var(--surface-mid); }
 
-/* Request-access form (ACC-5); interim look until the Stitch design lands */
-.wl fieldset { border:0; padding:0; margin:16px 0 0; } .wl legend { font-weight:600; margin-bottom:8px; }
-.wl .chips { display:flex; flex-wrap:wrap; gap:8px; }
-.wl .chip { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:var(--canvas); cursor:pointer; }
-.wl .chip:has(input:checked) { border-color:var(--accent-border); background:var(--accent-dim); color:var(--accent); }
-.wl .wl-field { display:block; margin-top:16px; font-weight:600; } .wl .wl-field input { display:block; width:100%; margin-top:8px; padding:10px 12px; border-radius:4px; border:1px solid var(--line); background:var(--canvas); color:var(--fg); font:13px var(--sans); }
-.wl .wl-check { display:flex; gap:8px; align-items:flex-start; margin-top:12px; }
-.linkbtn { background:none; border:0; padding:0; color:var(--accent); font:inherit; cursor:pointer; } .linkbtn:hover { text-decoration:underline; }
 
 /* Around this company (GRF-18) */
 .around .around-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
@@ -315,3 +307,11 @@ main.scr{max-width:1200px;padding-top:36px}
 .around .label { margin:0 0 8px; }
 .around-row { display:grid; grid-template-columns:150px 1fr; gap:12px; padding:6px 0; border-top:1px solid var(--line-subtle); font-size:13px; }
 .around-row .mono { font-size:12px; } .around-today { color:var(--accent); font-weight:700; }
+
+/* Breadcrumbs (UX-10) */
+.crumbs { display:flex; flex-wrap:wrap; align-items:center; gap:12px; font-size:12px; color:var(--fg2); margin:0 0 12px; }
+.crumbs ol { list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; }
+.crumbs li + li::before { content:"›"; margin-right:6px; color:var(--muted); }
+.crumbs li a { color:var(--fg2); } .crumbs li a:hover { color:var(--accent); } .crumbs [aria-current] { color:var(--fg); }
+.crumbs-back { padding-right:12px; border-right:1px solid var(--line); }
+@media (max-width:600px) { .crumbs ol { display:none; } .crumbs-back { border:0; } }

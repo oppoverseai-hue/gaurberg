@@ -1,4 +1,5 @@
 import { notFound, redirect } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
 import { getCompany } from "@/lib/data";
@@ -20,7 +21,7 @@ export default async function Financials({ params }: { params: Promise<{ ticker:
   const [m, fin] = [await getMarket(company), readFinancials(ticker)];
   return (
     <main>
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Search</Link>
+      <Breadcrumbs items={[{ label: company.name, href: `/company/${company.ticker ?? ticker}` }, { label: "Financials" }]} />
       <div className="head"><div className="row1"><h1>{company.name}</h1><span className="tag">{company.ticker}</span></div></div>
       <CompanyTabs ticker={company.ticker ?? ticker} active="financials" />
       <div className="card" id="financials" style={{ marginTop: 0 }}>

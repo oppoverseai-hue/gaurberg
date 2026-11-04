@@ -1,4 +1,5 @@
 import { isOffline } from "@/lib/mode";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsPanel from "@/components/NewsPanel";
 import { getNews } from "@/lib/news";
 import { getInsiderTrades } from "@/lib/insiders";
@@ -78,7 +79,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   const top = buildNodes(rels, company.id).slice(0, 5);
   return (
     <main>
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Search</Link>
+      <Breadcrumbs items={[{ label: company.name }]} />
       <div className="head">
         <div className="row1">
           <h1>{company.name}</h1>
@@ -180,7 +181,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
                 {top.map((n) => (
                   <div className="relitem" key={n.co.id}><span>{isMapped(n.co) ? <Link href={`/company/${n.co.ticker}`}>{n.co.name} ({n.co.ticker})</Link> : n.co.name}</span><span>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</span></div>
                 ))}
-                <Link className="cta" href={`/map/${company.ticker}`}>Open the ecosystem map →</Link>
+                <Link className="cta" href={`/company/${company.ticker}/map`}>Open the ecosystem map →</Link>
               </>
             )}
           </div>
