@@ -3,6 +3,7 @@
 import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
 import { readSnapshot } from "@/lib/saved";
+import { GROUP } from "@/lib/graph";
 
 export type Suggestion = { ticker: string; name: string; markets: string[]; links: number };
 type C = { id: number; ticker: string | null; name: string; markets: string[] | null };
@@ -18,11 +19,11 @@ export async function suggest(q: string, limit = 6): Promise<Suggestion[]> {
   if (isOffline()) {
     const s = readSnapshot();
     const l = safe.toLowerCase();
-    cos = (s?.companies ?? []).filter((c) => c.ticker && c.is_seed && (!l || c.ticker.toLowerCase().startsWith(l) || c.name.toLowerCase().includes(l))) as C[];
+    cos = (s?.companies ?? []).filter((c) => c.ticker && c.is_seed && c.entity_type !== GROUP && (!l || c.ticker.toLowerCase().startsWith(l) || c.name.toLowerCase().includes(l))) as C[];
     pairs = (s?.rels ?? []).map((r) => ({ source_id: r.source.id, target_id: r.target.id }));
   } else {
     const supabase = await supabaseServer();
-    let qb = supabase.from("companies").select("id,ticker,name,markets").eq("is_seed", true).not("ticker", "is", null);
+    let qb = supabase.from("companies").select("id,ticker,name,markets").eq("is_seed", true).not("ticker", "is", null).neq("entity_type", GROUP);
     if (safe) qb = qb.or(`ticker.ilike.${safe}%,name.ilike.%${safe}%`);
     const { data } = await qb.limit(60);
     cos = (data ?? []) as C[];

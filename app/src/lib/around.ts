@@ -2,14 +2,15 @@
 // Reads company_events (promoted rows for allowed users) and price_cache, both written by the daily refresh.
 import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
-import type { Rel } from "@/lib/graph";
+import { isGroup, type Rel } from "@/lib/graph";
 import { AHEAD_DAYS, BEHIND_DAYS, moves, neighbours, reports, type Move, type Report } from "@/lib/around-core";
 
 const nyToday = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 const shift = (d: string, n: number) => new Date(Date.parse(`${d}T00:00:00Z`) + n * 864e5).toISOString().slice(0, 10);
 
 export async function getAround(rels: Rel[], focalId: number): Promise<{ reports: Report[]; moves: Move[]; linked: number; withPrices: number }> {
-  const ns = neighbours(rels.filter((r) => r.status === "promoted"), focalId);
+  // Groups (drivers, riders) have no prices or report dates and are not companies, so they are left out (GRF-1).
+  const ns = neighbours(rels.filter((r) => r.status === "promoted"), focalId).filter((n) => !isGroup(n.co));
   const ids = ns.map((n) => n.co.id);
   if (isOffline() || !ids.length) return { reports: [], moves: [], linked: ns.length, withPrices: 0 };
   const supabase = await supabaseServer();

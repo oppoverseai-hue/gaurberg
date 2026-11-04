@@ -12,7 +12,7 @@ import { monthYear, relationText, summaryLine } from "@/lib/exposure-text";
 import SourceTip from "@/components/SourceTip";
 import { getComove } from "@/lib/comove";
 import { comoveText, COMOVE_NOTE, MIN_DAYS, WINDOW, type Comove } from "@/lib/comove-core";
-import { badgeOf, isMapped, type Evidence } from "@/lib/graph";
+import { badgeOf, isGroup, isMapped, type Evidence } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +61,7 @@ function Row({ x, earnings, focal, cm }: { x: ExpRow; earnings?: string; focal: 
       <div className="xline">
         {isMapped(x.co) ? <Link href={`/company/${x.co.ticker}`}><strong>{x.co.name}</strong></Link> : <strong>{x.co.name}</strong>}
         {x.co.ticker && <span className="xtk">{x.co.ticker}</span>}
+        {isGroup(x.co) && <span className="tag" title="A group named in the filings (for example drivers or riders), not a company">Group</span>}
         {x.kind && <span className="tag" title={KIND_TIP[x.kindLabel]}>{x.kindLabel}</span>}
         <span className={`badge ${b.cls}`} title={BADGE_TIP[b.label]}>{b.label}</span>
         {x.weight != null && <span className="xw">{x.weight}%</span>}

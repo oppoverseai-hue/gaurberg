@@ -4,7 +4,7 @@
 import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
 import { readSnapshot, readMarket, type CoRow } from "@/lib/saved";
-import { MARKETS } from "@/lib/graph";
+import { GROUP, isGroup, MARKETS } from "@/lib/graph";
 import { groupOf, UNCLASSIFIED } from "@/lib/metrics-core";
 
 export const SEG = ["consumer", "business", "infrastructure"], SIZE = ["large", "mid", "small"];
@@ -61,10 +61,11 @@ async function linkCounts(ids: number[]): Promise<Map<number, number>> {
 
 export async function loadRows(f: Filters): Promise<{ rows: Row[]; total: number; up: number; withData: number; through: string | null }> {
   let cos: CoRow[];
-  if (isOffline()) cos = (readSnapshot()?.companies ?? []).filter((c) => c.is_seed && c.ticker);
+  // Companies only: groups such as "Riders" are never listed (GRF-1, UX-4).
+  if (isOffline()) cos = (readSnapshot()?.companies ?? []).filter((c) => c.is_seed && c.ticker && !isGroup(c));
   else {
     const supabase = await supabaseServer();
-    cos = ((await supabase.from("companies").select("id,ticker,name,is_seed,entity_type,segment,size_tier,markets").eq("is_seed", true).not("ticker", "is", null)).data ?? []) as CoRow[];
+    cos = ((await supabase.from("companies").select("id,ticker,name,is_seed,entity_type,segment,size_tier,markets").eq("is_seed", true).not("ticker", "is", null).neq("entity_type", GROUP)).data ?? []) as CoRow[];
     if (f.scope === "viewed") {
       const v = new Set(((await supabase.from("viewed_companies").select("company_id")).data ?? []).map((x: { company_id: number }) => x.company_id));
       cos = cos.filter((c) => v.has(c.id));

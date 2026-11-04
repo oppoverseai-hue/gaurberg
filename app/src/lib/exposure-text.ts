@@ -26,14 +26,18 @@ export function relationText(r: Rel, focalId: number, focalName: string): string
 
 const count = (n: number, one: string, many: string) => (n === 0 ? null : `${n} ${n === 1 ? one : many}`);
 
-/** "54 linked companies: 3 state a share, 23 give no size, 19 competitors". Only counts that exist. Null when there is nothing to count. */
+/** "54 linked companies: 3 state a share, 23 give no size, 19 competitors". Only counts that exist. Null when there is nothing to count.
+ *  Groups (GRF-1) are counted apart: "45 linked companies and 3 groups, 49 links: …". */
 export function summaryLine(e: Exposure): string | null {
   const ranked = Object.values(e.ranked).flat();
   const rows = [...ranked, ...e.unweighted, ...e.partners, ...e.competitors];
   if (rows.length === 0) return null;
-  const companies = new Set(rows.map((x) => x.co.id)).size;
+  // Same rule as isGroup in graph.ts; repeated here because these pure modules share types only, never values.
+  const others = new Map(rows.map((x) => [x.co.id, x.co.entity_type === "segment_group"]));
+  const groups = [...others.values()].filter(Boolean).length, companies = others.size - groups;
   // One company can hold several links; the counts below follow the group headers, which count links.
-  const total = `${companies} linked ${companies === 1 ? "company" : "companies"}${companies === rows.length ? "" : `, ${rows.length} links`}`;
+  const label = `${companies} linked ${companies === 1 ? "company" : "companies"}${groups ? ` and ${groups} ${groups === 1 ? "group" : "groups"}` : ""}`;
+  const total = `${label}${companies + groups === rows.length ? "" : `, ${rows.length} links`}`;
   const parts = [
     count(ranked.length, "states a share", "state a share"),
     count(e.unweighted.length, "gives no size", "give no size"),

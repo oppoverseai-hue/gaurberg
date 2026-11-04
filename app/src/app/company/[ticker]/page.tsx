@@ -17,7 +17,7 @@ import SourceTip from "@/components/SourceTip";
 import CompanyTabs from "@/components/CompanyTabs";
 import AroundStrip from "@/components/AroundStrip";
 import { getAround } from "@/lib/around";
-import { buildNodes, isMapped, TYPE_LABEL } from "@/lib/graph";
+import { buildNodes, isGroup, isMapped, TYPE_LABEL } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
 
@@ -179,7 +179,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             {top.length === 0 ? <p className="muted">No disclosed relationships found for this company.</p> : (
               <>
                 {top.map((n) => (
-                  <div className="relitem" key={n.co.id}><span>{isMapped(n.co) ? <Link href={`/company/${n.co.ticker}`}>{n.co.name} ({n.co.ticker})</Link> : n.co.name}</span><span>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</span></div>
+                  <div className="relitem" key={n.co.id}><span>{isMapped(n.co) ? <Link href={`/company/${n.co.ticker}`}>{n.co.name} ({n.co.ticker})</Link> : n.co.name}{isGroup(n.co) && <span className="muted"> · group</span>}</span><span>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</span></div>
                 ))}
                 <Link className="cta" href={`/company/${company.ticker}/map`}>Open the ecosystem map →</Link>
               </>
