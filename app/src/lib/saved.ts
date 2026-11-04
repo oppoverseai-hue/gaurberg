@@ -14,7 +14,7 @@ export type SavedMarket = {
   // filing: annual figures from the 10-K, used only where the data service has none
   filing?: { period: string; filed: string; source: string; url: string; revGrowth?: number; opMargin?: number; netMargin?: number } | null; profile?: SavedProfile | null; nextEarnings?: string | null;
 };
-export type CoRow = Co & { segment: string | null; size_tier: string | null };
+export type CoRow = Co & { segment: string | null; size_tier: string | null; aliases?: string[] | null };
 export type Snapshot = { generated_at: string; companies: CoRow[]; rels: Rel[] };
 
 const dir = () => path.join(process.cwd(), "data");

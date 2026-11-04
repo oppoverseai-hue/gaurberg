@@ -1,0 +1,89 @@
+{
+ "exported_at": "2026-11-05",
+ "note": "Real headlines from Finnhub company-news (7 days to Nov 5, 2026), a random sample per ticker. Test data for the relevance rule only.",
+ "headlines": {
+  "UBER": [
+   "Rivian Soars 15% in a Week on R2 Beat and Two Upgrades: \u201cInitial R2 Demand Looks Solid\u201d",
+   "Why Dumping Uber Stock Before Q3 Earnings May Not Be the Smartest Move",
+   "Uber Poised for In-Line Quarterly Gross Bookings, With Focus on AV Strategy, BofA Says",
+   "Uber Bookings Jump 20% as Profit Grows Faster: Rapid Earnings Reaction",
+   "Why Is Uber Technologies (UBER) Facing New UK Tax And FTC Pressure?",
+   "Early Uber Investor: Tesla and Uber Will \u201cSplit 80%\u201d of the Robotaxi Market",
+   "Uber revenue beats forecasts despite steep quarterly profit drop",
+   "Uber Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts",
+   "Uber: From AV Victim To A Potential Threat To Tesla (Rating Downgrade)",
+   "Rivian Soars 4% on R2-Driven Beat and Raised Guidance, CEO \u201cVery Confident\u201d on Uber Milestone",
+   "DoorDash Soars 6% on Earnings Beat, $17 Billion Instacart Deal: \u201cHardest Things to Get Right Online\u201d",
+   "Rivian Stock Gains Despite Bearish Technicals, Earnings and Autonomy Impress"
+  ],
+  "NET": [
+   "Why Did Cloudflare Stock Jump?",
+   "Buy, Sell, or Hold? Tuesday\u2019s Top Upgrades and Downgrades: AON, Bloom Energy, Chevron, Cloudflare, Marvell Technologies, Lumentum Holdings, Merck & Co., Roku, X-Energy, and More",
+   "F5 Beat on Revenue and Still Dropped 20%. One Soft Guide Was All It Took for a Stock Up 80% This Year.",
+   "Netskope shares are trading lower after the company reported Q4 financial results. Also, multiple analysts lowered their price targets on the stock.",
+   "Cloudflare, MongoDB, Datadog, JFrog, and Elastic shares plummet, what you need to know",
+   "Dear Cloudflare Stock Fans, Mark Your Calendar for November 5",
+   "Dow Jones Futures: Stock Market Sells Off As Apple, Palantir, Midterm Elections Loom; What To Do",
+   "Cloudflare to Post Q3 Earnings: Buy, Sell or Hold the Stock?",
+   "Zscaler Sinks 14% in a Week as Fortinet\u2019s Plunge and a Tech Selloff Hit Security Stocks",
+   "Cloudflare Sinks 14% and Datadog 13% in a Week as Software Selloff Hits Cloud Stocks",
+   "Cogent Security Makes the Fortune Cyber 60 for a Second Year, With a Plan to Run Cyber Defense Like a Factory",
+   "Cloudflare upgraded, Marvell downgraded: Wall Street's top analyst calls"
+  ],
+  "GRAB": [
+   "Grab's Mixed Quarter Comes With a Stronger 2026 View",
+   "IPO Edge Nasdaq Firesides Scheduled for Dec 8",
+   "3 Penny Stocks To Watch With Revenue Growth Up To 63%",
+   "Grab Stock Jumps On Raised Outlook After Strong Quarter",
+   "Grab Holdings: Misunderstood And Mispriced",
+   "Reddit Inc. (RDDT) Q3 Earnings and Revenues Beat Estimates",
+   "Grab Holdings Limited (GRAB) Outperforms Broader Market: What You Need to Know",
+   "Most Active US Stocks: MERC and HUBC Top Volume; PARA Jumps 85.17% in Latest Session",
+   "These ETFs May Provide Traction After Transports Stall",
+   "Grab Holdings And 2 Top Penny Stocks To Watch",
+   "Grab Is Still Down 37% in 2026: Did Earnings Just Mark the Bottom?",
+   "Grab Holdings Raises FY2026 Sales Guidance from $4.100B-$4.150B to $4.150B-$4.200B vs $4.185B Est"
+  ],
+  "LIME": [
+   "Neutron Holdings (NASDAQ:LIME) Falls After Q3 EPS Miss and Cautious Q4 Revenue Guidance",
+   "Neutron Holdings, Inc. (LIME) Q3 2026 Earnings Call Transcript",
+   "Neutron Q3 Earnings Call Highlights",
+   "Neutron Holdings Affirms FY2026 Sales Guidance of $1.040B-$1.100B vs $1.072B Est",
+   "Evercore ISI Group Maintains Outperform on Neutron Holdings, Lowers Price Target to $35",
+   "Neutron Holdings Sees Q4 Sales $240.000M-$250.000M vs $245.402M Est",
+   "Lime Announces Third Quarter 2026 Financial Results",
+   "Neutron Holdings Q3 2026 Earnings Call Transcript",
+   "Neutron Holdings Q3 EPS $0.63 Misses $0.67 Estimate, Sales $361.000M Beat $352.305M Estimate",
+   "Citizens Maintains Market Outperform on Neutron Holdings, Lowers Price Target to $27",
+   "Needham Maintains Buy on Neutron Holdings, Lowers Price Target to $29"
+  ],
+  "AAPL": [
+   "Apple\u2019s Hardware Strength Fuels Analyst Optimism, Multiple Analysts Raise Price Targets",
+   "State Street Tech Select SPDR (XLK) Buys $74.3 Million More Apple on Monday",
+   "The Reaction to Apple Earnings Reveals a Sensitive Market",
+   "NEOS Nasdaq 100 High Income (QQQI) Buys $148.8 Million More SpaceX on Monday",
+   "Review & Preview: A Divided Market on Election Day",
+   "Amazon Rallies 7%, Apple and Microsoft Climb 5% as Big Tech Leads Post-Election Rebound",
+   "Update: US Equity Indexes Mixed as Apple's Fiscal Q4 Disappoints While Investors Await Midterm Election Results",
+   "Apple, Palantir, Pfizer, Marvell, AMD, Bloom Energy, Gartner, and More Stocks That Explain Today\u2019s Market",
+   "Apple\u2019s Siri AI Could Become a Paid Upgrade \u2014 CEO John Ternus Reveals Plans to Charge for More Server-Side Apple Intelligence Usage",
+   "EXCLUSIVE: Top 12 Most-Searched Tickers in October on Benzinga Pro \u2013 SpaceX Soars, Micron Rises, Nvidia Falls, CoreWeave and Microsoft Join List",
+   "Apple Lost About $140 Billion After Hours as Its New CEO Calls Memory Prices \u201cUnprecedented\u201d",
+   "Apple\u2019s Pain Could Be Micron\u2019s Gain as Memory Prices Surge"
+  ],
+  "META": [
+   "Scott Galloway: Zuckerberg Is \u201cClearly Coming for YouTube\u201d and Its 16% of TV Time",
+   "Meta Readies Cross-Border Investment Bond Offering",
+   "\u2018They sell the big hot dogs\u2019: The companies that hyperscalers trail in valuations",
+   "Growth And Cyclical Lead Sectors Tuesday",
+   "What Has Changed About Owning Alphabet Stock?",
+   "Meta Stocks Gain as Preferred Issue Implies $812.5 Million Annual Dividends",
+   "Stocks continue sell-off as AI worries mount, Wall Street braces for midterms, Palantir outlook",
+   "ETFs Are Net Sellers of Meta Platforms (META) on Thursday",
+   "Top VC Warns: \u201cDepreciation Is Going to Start Hitting\u201d Microsoft, Google and Meta. Here\u2019s Where Things Get Ugly",
+   "Micron: A $150 Billion AI Reckoning Is Coming",
+   "Marvell Is Making a $115 Billion Mistake With Lumentum Purchase",
+   "Top Midday Stories: Apple Fiscal Q4 EPS, Revenue Top Estimates, Shares Fall; Meta Reportedly Targeting Up to $25 Billion in Bond Sale"
+  ]
+ }
+}
