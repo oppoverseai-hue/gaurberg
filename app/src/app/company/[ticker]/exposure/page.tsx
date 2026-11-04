@@ -8,6 +8,8 @@ import { getPromotedEarnings } from "@/lib/marketdb";
 import { buildExposure, figureInQuote, KINDS, KIND_LABEL, EMPTY, NOT_DISCLOSED, NO_SIZE, type ExpRow } from "@/lib/exposure-core";
 import { monthYear, relationText, summaryLine } from "@/lib/exposure-text";
 import SourceTip from "@/components/SourceTip";
+import { getComove } from "@/lib/comove";
+import { comoveText, COMOVE_NOTE, MIN_DAYS, WINDOW, type Comove } from "@/lib/comove-core";
 import { badgeOf, isMapped, type Evidence } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
@@ -48,7 +50,7 @@ function Quote({ e }: { e: Evidence }) {
   );
 }
 
-function Row({ x, earnings, focal }: { x: ExpRow; earnings?: string; focal: { id: number; name: string } }) {
+function Row({ x, earnings, focal, cm }: { x: ExpRow; earnings?: string; focal: { id: number; name: string }; cm?: Comove }) {
   const r = x.rel, b = badgeOf(r), asOf = monthYear(r.as_of_date);
   // For a ranked row, show the saved quote that states the figure.
   const proof = x.weight != null ? r.evidence.find((e) => figureInQuote(x.weight!, [e.quote])) : undefined;
@@ -67,6 +69,7 @@ function Row({ x, earnings, focal }: { x: ExpRow; earnings?: string; focal: { id
         {relationText(r, focal.id, focal.name)} · {sourceLabel(r)}{asOf ? `, ${asOf}` : ""}
         {earnings ? ` · next earnings ${earnings}` : ""}
       </p>
+      {cm && <p className="xcm" title={COMOVE_NOTE}>Measured price pattern: {comoveText(cm, focal.name)}</p>}
       {proof && <Quote e={proof} />}
       {x.context.map((c, i) => (
         <div key={i}>
@@ -78,7 +81,7 @@ function Row({ x, earnings, focal }: { x: ExpRow; earnings?: string; focal: { id
   );
 }
 
-function Group({ title, rows, earnings, focal, note, info }: { title: string; rows: ExpRow[]; earnings: Map<number, string>; focal: { id: number; name: string }; note?: string; info: string }) {
+function Group({ title, rows, earnings, focal, note, info, cm }: { title: string; rows: ExpRow[]; earnings: Map<number, string>; focal: { id: number; name: string }; note?: string; info: string; cm: Record<number, Comove> }) {
   if (rows.length === 0) return null;
   return (
     <section className="card">
@@ -88,7 +91,7 @@ function Group({ title, rows, earnings, focal, note, info }: { title: string; ro
           {note && <p className="xnote">{note}</p>}
         </div>
       </div>
-      {rows.map((x) => <Row key={x.rel.id} x={x} earnings={earnings.get(x.co.id)} focal={focal} />)}
+      {rows.map((x) => <Row key={x.rel.id} x={x} earnings={earnings.get(x.co.id)} focal={focal} cm={cm[x.co.id]} />)}
     </section>
   );
 }
@@ -102,6 +105,7 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
   const { rels, error } = await promotedRelsFor([co.id]);
   const e = buildExposure(co.id, rels);
   const earnings = await getPromotedEarnings([...new Set([co.id, ...rels.flatMap((r) => [r.source.id, r.target.id])])]);
+  const cm = error ? {} : await getComove(co.id, rels);
   const summary = summaryLine(e);
   const focal = { id: co.id, name: co.name };
   return (
@@ -120,13 +124,14 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
       ) : (
         <>
           {e.empty && <div className="card"><p style={{ margin: 0 }}>{EMPTY}</p></div>}
-          {KINDS.map((k) => <Group key={k} title={`${KIND_LABEL[k]} · ranked by stated share`} rows={e.ranked[k]} earnings={earnings} focal={focal} info={GROUP_TIP.ranked} />)}
-          <Group title="Linked, size not given" rows={e.unweighted} earnings={earnings} focal={focal} info={GROUP_TIP.unweighted} note="The filings confirm these links but don't say how big they are." />
-          <Group title="Partners" rows={e.partners} earnings={earnings} focal={focal} info={GROUP_TIP.partners} note="Named in the filings; no strength given." />
-          <Group title="Competitors" rows={e.competitors} earnings={earnings} focal={focal} info={GROUP_TIP.competitors} note={`Not counted as exposure. ${co.name}'s trouble could help or hurt them.`} />
+          {KINDS.map((k) => <Group key={k} title={`${KIND_LABEL[k]} · ranked by stated share`} rows={e.ranked[k]} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.ranked} />)}
+          <Group title="Linked, size not given" rows={e.unweighted} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.unweighted} note="The filings confirm these links but don't say how big they are." />
+          <Group title="Partners" rows={e.partners} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.partners} note="Named in the filings; no strength given." />
+          <Group title="Competitors" rows={e.competitors} earnings={earnings} focal={focal} cm={cm} info={GROUP_TIP.competitors} note={`Not counted as exposure. ${co.name}'s trouble could help or hurt them.`} />
           <p className="muted mono" style={{ fontSize: 10, margin: "12px 0 0" }}>
             One hop only. Shows what our sources disclose about each link, not a prediction of how a company would be affected. No figure is estimated,
             averaged or filled in. This describes sources and is not a recommendation.
+            {Object.keys(cm).length > 0 && ` "Measured price pattern" lines use daily closes over the last ${WINDOW} shared trading days (at least ${MIN_DAYS} needed). They are not a disclosed size and not a prediction.`}
           </p>
         </>
       )}

@@ -72,7 +72,7 @@ main.wide { max-width:none; padding:0; display:flex; flex-direction:column; }
 .pills { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
 .fpill { border:1px solid var(--line); background:var(--surface-mid); color:var(--fg2); border-radius:9999px; padding:2px 12px; font:12px var(--mono); cursor:pointer; } .fpill:hover { border-color:var(--line-strong); color:var(--fg); }
 .fpill.on { background:var(--accent-dim); color:var(--accent); border-color:var(--accent-border); }
-.legend { display:flex; gap:16px; align-items:center; color:var(--fg2); font-size:11px; } .legend span { display:inline-flex; align-items:center; gap:6px; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; color:var(--fg2); font-size:11px; } .legend span { display:inline-flex; align-items:center; gap:6px; }
 .mapbody { display:grid; grid-template-columns:minmax(0,1fr) 400px; flex:1; min-height:640px; } @media (max-width:1000px) { .mapbody { grid-template-columns:1fr; } }
 .canvas { position:relative; background:var(--canvas) radial-gradient(rgba(255,255,255,.08) 1.1px, transparent 1.1px) 0 0/20px 20px; border-right:1px solid var(--line); }
 .canvas .info { padding:10px 16px 0; font:11px/14px var(--mono); color:var(--fg2); } .canvas .info small { display:block; color:var(--muted); font-size:10px; }
@@ -272,6 +272,7 @@ main.scr{max-width:1200px;padding-top:36px}
 .exposure .xmeta { color:var(--fg2); font:12px/18px var(--sans); margin:4px 0 0; }
 .exposure .xflag { color:var(--b-staged); font:11px var(--mono); margin:4px 0 0; }
 .exposure .xctx { color:var(--fg2); font-size:12px; margin:6px 0 0; }
+.exposure .xcm { color:var(--fg2); font:11px var(--mono); margin:4px 0 0; }
 .exposure blockquote { margin:6px 0 0; padding:10px 12px; border-left:2px solid var(--accent); background:var(--surface-high); border-radius:0 6px 6px 0; font:italic 12px/18px var(--sans); color:var(--fg2); }
 .exposure blockquote footer { color:var(--fg2); font:11px var(--mono); margin-top:6px; font-style:normal; }
 /* Map exposure highlight (GRF-17): companies with no exposure link fade */

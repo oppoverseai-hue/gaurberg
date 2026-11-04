@@ -6,6 +6,7 @@ import type { Rel } from "@/lib/graph";
 import MapView from "@/components/MapView";
 import LiveLookup from "@/components/LiveLookup";
 import { isOffline } from "@/lib/mode";
+import { getComove } from "@/lib/comove";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +20,10 @@ export default async function MapPage({ params }: { params: Promise<{ ticker: st
   // RLS decides what is visible online: allowed users see promoted links only; the admin also sees staged links. Offline shows the saved promoted links.
   const { rels, error: relError } = await getRels(focal.id);
   const error = relError;
-  const { geo, countryRegion } = await getGeo([...new Set([focal.id, ...rels.flatMap((r) => [r.source.id, r.target.id])])]);
+  const [{ geo, countryRegion }, comove] = await Promise.all([
+    getGeo([...new Set([focal.id, ...rels.flatMap((r) => [r.source.id, r.target.id])])]),
+    error ? Promise.resolve({}) : getComove(focal.id, rels),
+  ]);
   return (
     <main className="wide">
       {error ? (
@@ -30,7 +34,7 @@ export default async function MapPage({ params }: { params: Promise<{ ticker: st
           {!focal.is_seed && (isOffline() ? <p className="muted mono" style={{ fontSize: 12 }}>Live lookup needs the network and is off in the offline demo.</p> : <LiveLookup query={focal.ticker ?? focal.name} />)}
         </div>
       ) : (
-        <MapView focal={focal} rels={rels} isAdmin={access.role === "admin"} geo={geo} countryRegion={countryRegion} />
+        <MapView focal={focal} rels={rels} isAdmin={access.role === "admin"} geo={geo} countryRegion={countryRegion} comove={comove} />
       )}
     </main>
   );

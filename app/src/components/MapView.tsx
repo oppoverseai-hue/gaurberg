@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { REGIONS, regionShare, hasRegion, regionOf, type CountryRegion, type GeoMap, type GeoRow, buildNodes, pageOf, SIDES, SIDE_LABEL, MAX_PER_SIDE, badgeOf, exposureText, isMapped, viaLabel, TYPE_LABEL, type Co, type LinkType, type MapNode, type Rel, type Side } from "@/lib/graph";
 import { exposureWeight, realWeight } from "@/lib/exposure-core";
+import { comoveText, comoveWidth, COMOVE_NOTE, type Comove } from "@/lib/comove-core";
 
 const GLYPH: Record<string, string> = { b_verified: "✓", b_curated: "◆", b_live: "⚡", b_sample: "○", b_staged: "⚠" };
 const glyph = (cls: string) => GLYPH[cls.replace("-", "_")] ?? "";
@@ -31,7 +32,7 @@ function edgePoint(c: { x: number; y: number }, to: { x: number; y: number }, hw
 
 type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; currency: string | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
 
-export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, countryRegion = {} }: { focal: Co; rels: Rel[]; isAdmin: boolean; geo?: GeoMap; countryRegion?: CountryRegion }) {
+export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, countryRegion = {}, comove = {} }: { focal: Co; rels: Rel[]; isAdmin: boolean; geo?: GeoMap; countryRegion?: CountryRegion; comove?: Record<number, Comove> }) {
   const router = useRouter();
   const [filter, setFilter] = useState<LinkType | "all">("all");
   // Region filter (M16): keep links whose other company reports revenue in the chosen region. A company with no revenue row is not guessed into any region.
@@ -55,6 +56,10 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
   // Exposure highlight (GRF-17): fade companies that are not exposed to the focal company (competitors only), and draw line width from
   // the exposed company's own quoted share. Off: width from any quoted figure. A figure missing from its quote never widens a line.
   const [hit, setHit] = useState(false);
+  // Co-movement (GRF-19): optional line width from the measured correlation of daily returns. Exclusive with the exposure highlight,
+  // so a line width always means one thing.
+  const [thick, setThick] = useState(false);
+  const hasComove = Object.values(comove).some((c) => c.ok);
   const exposed = (n: MapNode) => n.links.some((r) => r.relationship_type !== "competes");
   const [panel, setPanel] = useState<{ kind: "link"; rel: Rel } | { kind: "company"; co: Co } | null>(null);
 
@@ -113,8 +118,9 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="14" y2="4" stroke="var(--accent)" strokeWidth="2" /><polygon points="14,0 22,4 14,8" fill="var(--accent)" /></svg>Supplies / invests / acquired</span>
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="var(--fg2)" strokeWidth="1.5" strokeDasharray="4 4" /></svg>Competes</span>
           <span><svg width="22" height="8"><line x1="0" y1="4" x2="22" y2="4" stroke="#60a5fa" strokeWidth="1.5" /></svg>Partners</span>
-          <span className="muted">{hit ? `Thicker line = larger stated share of the exposed company` : "Thicker line = larger disclosed size (figure found in the saved quote)"}</span>
-          <button className={`fpill ${hit ? "on" : ""}`} onClick={() => setHit(!hit)} aria-pressed={hit}>Highlight exposure</button>
+          <span className="muted">{thick ? "Thicker line = prices moved more closely together. A measured pattern, not a disclosed size or a prediction" : hit ? `Thicker line = larger stated share of the exposed company` : "Thicker line = larger disclosed size (figure found in the saved quote)"}</span>
+          <button className={`fpill ${hit ? "on" : ""}`} onClick={() => { setHit(!hit); setThick(false); }} aria-pressed={hit}>Highlight exposure</button>
+          {hasComove && <button className={`fpill ${thick ? "on" : ""}`} onClick={() => { setThick(!thick); setHit(false); }} aria-pressed={thick} title={COMOVE_NOTE}>Thicken by co-movement</button>}
         </div>
       </div>
       <div className="mapbody">
@@ -136,7 +142,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
             const cx = mx + (nx / len) * off * 4, cy = my + (ny / len) * off * 4;
             const sel = panel?.kind === "link" && panel.rel.id === r.id;
             const w = hit ? exposureWeight(r, focal.id) : realWeight(r);
-            const lw = w != null ? 1.5 + Math.min(w, 100) / 25 : 1.5;
+            const lw = thick ? comoveWidth(comove[node.co.id]) : w != null ? 1.5 + Math.min(w, 100) / 25 : 1.5;
             return (
               <g key={r.id} className={`link ${sel ? "sel" : ""} ${isMapped(node.co) ? "" : "dim"} ${hit && r.relationship_type === "competes" ? "fade" : ""}`} onClick={() => setPanel({ kind: "link", rel: r })} tabIndex={0} role="button"
                  aria-label={`${r.source.name} ${TYPE_LABEL[r.relationship_type]} ${r.target.name}`} onKeyDown={(e) => e.key === "Enter" && setPanel({ kind: "link", rel: r })}>
@@ -163,7 +169,7 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
         </svg>
         </div>
         <aside className="side">
-          {panel?.kind === "link" && <LinkPanel rel={panel.rel} onClose={() => setPanel(null)} />}
+          {panel?.kind === "link" && <LinkPanel rel={panel.rel} focal={focal} cm={comove[otherOf(panel.rel).id]} onClose={() => setPanel(null)} />}
           {panel?.kind === "company" && <CompanyPane co={panel.co} focal={focal} geo={geo[panel.co.id]} countryRegion={countryRegion} onClose={() => setPanel(null)} onRecenter={(t) => router.push(`/map/${t}`)} />}
           {!panel && <div className="empty">Select a link to see what the filings say, or a company to preview it.</div>}
           <div className="sidefoot"><kbd>Esc</kbd><span>closes this pane</span></div>
@@ -248,7 +254,7 @@ function HeadlineLine({ co }: { co: Co }) {
   );
 }
 
-function LinkPanel({ rel, onClose }: { rel: Rel; onClose: () => void }) {
+function LinkPanel({ rel, focal, cm, onClose }: { rel: Rel; focal: Co; cm?: Comove; onClose: () => void }) {
   const active = badgeOf(rel).label;
   return (
     <div className="panel">
@@ -272,6 +278,13 @@ function LinkPanel({ rel, onClose }: { rel: Rel; onClose: () => void }) {
         <div className="r"><span>As of</span><span>{rel.as_of_date ?? "Date not given"}</span></div>
         <div className="r"><span>Kind of source</span><span>{rel.source_type === "sec_filing" ? "SEC filing (10-K or 20-F)" : rel.source_type === "annual_report" ? "Company annual report" : rel.source_type ?? "Not given"}</span></div>
       </div>
+      {cm && (
+        <div className="attrs">
+          <div className="h">Measured price pattern</div>
+          <p className="mono" style={{ fontSize: 11, margin: 0, padding: "10px 12px 4px" }}>{comoveText(cm, focal.name)}</p>
+          <p className="muted mono" style={{ fontSize: 10, margin: 0, padding: "0 12px 10px" }}>{COMOVE_NOTE}</p>
+        </div>
+      )}
       <div>
         <div className="sub"><span>Evidence</span></div>
         {rel.evidence.length === 0 ? <p className="muted">No source quote saved for this link.</p> : rel.evidence.map((e, i) => (
