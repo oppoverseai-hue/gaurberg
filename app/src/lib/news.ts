@@ -1,6 +1,7 @@
 // Recent news for one company (TRM-7): news and press releases from Finnhub (free plan), SEC filings from EDGAR. Server only.
 import { liveSymbol, type Listing } from "@/lib/listing";
-export type NewsItem = { kind: "news" | "press" | "filing"; headline: string; source: string; ts: number; url: string };
+import { isFinnhubNewsUrl, newsHref } from "@/lib/news-link";
+export type NewsItem = { kind: "news" | "press" | "filing"; headline: string; source: string; ts: number; url: string; link: string };
 export type NewsResult = { items: NewsItem[]; errors: string[] };
 
 const UA = "Gaurberg Research abhishek.g16@fms.edu";
@@ -21,11 +22,29 @@ async function finnhubNews(symbol: string): Promise<{ items: NewsItem[]; error?:
     const j = (await res.json()) as { headline?: string; source?: string; datetime?: number; url?: string }[];
     if (!Array.isArray(j)) return { items: [], error: "News service returned no list." };
     const items = j.filter((x) => x.headline && x.url && typeof x.datetime === "number" && x.datetime > 0)
-      .map((x) => ({ kind: WIRE.test(x.source ?? "") ? ("press" as const) : ("news" as const), headline: x.headline!, source: x.source || "Unknown source", ts: x.datetime!, url: x.url! }));
+      .map((x) => ({ kind: WIRE.test(x.source ?? "") ? ("press" as const) : ("news" as const), headline: x.headline!, source: x.source || "Unknown source", ts: x.datetime!, url: x.url!, link: newsHref(x.url!, x.headline!, x.source || "") }));
     return { items };
   } catch {
     return { items: [], error: "News service is unreachable." };
   }
+}
+
+/** Follows the data service's news redirect once, on the server, and returns the publisher's address. Null when it cannot (timeout, no redirect, loop, non-web address). */
+export async function resolveNewsUrl(u: string): Promise<string | null> {
+  if (!isFinnhubNewsUrl(u)) return null;
+  try {
+    let cur = u;
+    for (let hop = 0; hop < 4; hop++) {
+      const r = await fetch(cur, { redirect: "manual", signal: AbortSignal.timeout(6000), headers: { "User-Agent": "Mozilla/5.0 (compatible; GaurbergResearch)" }, next: { revalidate: 3600 } });
+      const loc = r.headers.get("location");
+      if (r.status < 300 || r.status >= 400 || !loc) return null;
+      const next = new URL(loc, cur);
+      if (next.protocol !== "https:" && next.protocol !== "http:") return null;
+      if (!/(^|\.)finnhub\.io$/.test(next.hostname)) return next.href;
+      cur = next.href;
+    }
+  } catch { /* fall through */ }
+  return null;
 }
 
 export async function cikFor(ticker: string): Promise<string | null> {
@@ -51,7 +70,8 @@ async function secFilings(ticker: string): Promise<{ items: NewsItem[]; error?: 
       const label = FORMS[r.form[i]];
       if (!label) continue;
       const what = r.form[i] === "8-K" ? (r.items?.[i] ?? "").split(",").map((c) => ITEMS[c.trim()]).filter(Boolean).slice(0, 2).join(", ") : "";
-      items.push({ kind: "filing", headline: `${r.form[i]}: ${label}${what ? ` (${what})` : ""}`, source: "SEC EDGAR", ts: Math.floor(t / 1000), url: `https://www.sec.gov/Archives/edgar/data/${cik}/${r.accessionNumber[i].replace(/-/g, "")}/${r.primaryDocument[i]}` });
+      const url = `https://www.sec.gov/Archives/edgar/data/${cik}/${r.accessionNumber[i].replace(/-/g, "")}/${r.primaryDocument[i]}`;
+      items.push({ kind: "filing", headline: `${r.form[i]}: ${label}${what ? ` (${what})` : ""}`, source: "SEC EDGAR", ts: Math.floor(t / 1000), url, link: url });
     }
     return { items };
   } catch {

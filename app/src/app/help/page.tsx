@@ -8,7 +8,7 @@ export default function Help() {
     ["Uber about", "Jump to the About section."],
     ["Uber highlights", "Jump to financial highlights (also: financials, fundamentals)."],
     ["Uber links", "Jump to the top linked companies."],
-    ["Uber news", "Jump to Recent news (not built yet; the section says so)."],
+    ["Uber news", "Jump to Recent news and SEC filings (last 30 days)."],
     ["Uber map", "Open the ecosystem map (also: Uber ecosystem)."],
     ["help", "This page."],
   ];

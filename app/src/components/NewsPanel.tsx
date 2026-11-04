@@ -20,8 +20,8 @@ export default function NewsPanel({ items, errors }: { items: NewsItem[]; errors
       {errors.map((e) => <p key={e} className="muted mono" style={{ fontSize: 11, margin: "0 0 6px" }}>⚠ {e}</p>)}
       {!shown.length && <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{errors.length && !items.length ? "News is not available right now." : "Nothing in this window. Try a longer one."}</p>}
       {shown.slice(0, 30).map((i) => (
-        <a key={i.url + i.ts} className="resrow" style={{ display: "block" }} href={i.url} target="_blank" rel="noopener noreferrer">
-          <div>{i.headline}</div>
+        <a key={i.url + i.ts} className="resrow" style={{ display: "block" }} href={i.link} target="_blank" rel="noopener noreferrer" title="Opens the article in a new tab">
+          <div>{i.headline} <span className="muted" aria-hidden>↗</span></div>
           <div className="muted mono" style={{ fontSize: 11 }}>{i.source} · {new Date(i.ts * 1000).toISOString().slice(0, 16).replace("T", " ")} UTC · {i.kind === "filing" ? "SEC filing" : i.kind === "press" ? "Press release" : "News"}</div>
         </a>
       ))}

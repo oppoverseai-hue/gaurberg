@@ -325,3 +325,5 @@ main.scr{max-width:1200px;padding-top:36px}
 .mapbar > div { min-width:0; max-width:100%; }
 .filters .pills, .filters .legend { display:flex; flex-wrap:wrap; align-items:center; gap:6px; min-width:0; max-width:100%; }
 @media (max-width:600px) { .ctabs a { padding:8px 10px; } .filters { padding:8px 12px; } }
+
+a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decoration:underline; }
