@@ -2,6 +2,7 @@ import "./globals.css";
 import { isOffline } from "@/lib/mode";
 import { getAccess } from "@/lib/supabase/server";
 import AccountMenu from "@/components/AccountMenu";
+import SourceCapture from "@/components/SourceCapture";
 export const metadata = { title: "Gaurberg", description: "Company pages and ecosystem maps for independent analysts" };
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const access = isOffline() ? null : await getAccess().catch(() => null);
@@ -13,6 +14,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500;700&display=swap" />
       </head>
       <body>
+        <SourceCapture />
         {isOffline() && <div className="offbar" role="status">Offline: showing saved data</div>}
         <header className="sitebar">
           <a className="brand" href="/">Gaurberg</a>
@@ -23,7 +25,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         </header>
         {children}
         <footer className="site"><div className="in">
-          <span>Links not yet reviewed are tagged Staged.</span>
+          <span>Unreviewed links are labelled.</span>
           <span>·</span><a href="/sources">Sources</a><span>·</span><span>Not investment advice.</span>
         </div></footer>
       </body>
