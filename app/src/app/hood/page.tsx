@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
 import reqData from "../../../data/requirements.json";
@@ -57,7 +58,7 @@ export default async function Hood() {
 
   return (
     <main className="narrow" style={{ maxWidth: 1000 }}>
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Home</Link>
+      <Breadcrumbs items={[{ label: "Under the hood" }]} />
       <h1 style={{ marginTop: 12 }}>Under the hood</h1>
       <p className="muted">How the information is collected, structured and tested. Every result below is read from a stored test or run record.</p>
       {failedLoad && <div className="card"><p style={{ margin: 0 }}>Could not load the stored test results right now. Nothing is shown as passed.</p></div>}

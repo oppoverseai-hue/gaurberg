@@ -25,12 +25,12 @@ export default function LiveLookup({ query }: { query: string }) {
     setBusy(true);
     const r = await call({ action: "start", query });
     setRes(r);
-    if (r.state === "cached" && r.ticker) { router.push(`/map/${r.ticker}`); return; }
+    if (r.state === "cached" && r.ticker) { router.push(`/company/${r.ticker}/map`); return; }
     if (r.state === "running" && r.id) {
       timer.current = setInterval(async () => {
         const s = await call({ action: "status", id: r.id });
         setRes({ ...s, ticker: r.ticker, name: r.name });
-        if (s.state !== "running") { if (timer.current) clearInterval(timer.current); setBusy(false); if (s.state === "done" && (s.links_found ?? 0) > 0) router.push(`/map/${r.ticker}`); }
+        if (s.state !== "running") { if (timer.current) clearInterval(timer.current); setBusy(false); if (s.state === "done" && (s.links_found ?? 0) > 0) router.push(`/company/${r.ticker}/map`); }
       }, 2000);
     } else setBusy(false);
   };

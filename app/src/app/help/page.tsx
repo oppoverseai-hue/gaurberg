@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 export default function Help() {
   const rows: [string, string][] = [
     ["Uber  or  UBER", "Open the company page. Type a company name or its ticker."],
@@ -13,7 +14,7 @@ export default function Help() {
   ];
   return (
     <main className="narrow">
-      <Link href="/">← Home</Link>
+      <Breadcrumbs items={[{ label: "Help" }]} />
       <h1 style={{ marginTop: 12 }}>Commands</h1>
       <p className="muted">Use the command bar at the top of every screen. A company name or ticker, plus an optional plain word.</p>
       <div className="card"><table className="helptable"><thead><tr><th>Type</th><th>What it does</th></tr></thead><tbody>

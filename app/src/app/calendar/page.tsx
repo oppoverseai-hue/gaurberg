@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
 import { isUSListed } from "@/lib/marketdb";
@@ -35,7 +36,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: Pro
   const fetched = [...new Set(data.events.map((e) => e.fetched_at.slice(0, 10)))].sort();
   return (
     <main className="narrow cal">
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Home</Link>
+      <Breadcrumbs items={[{ label: "Earnings calendar" }]} />
       <h1 style={{ marginTop: 12 }}>Earnings calendar</h1>
       <p className="muted">Upcoming earnings for the mapped companies, next {w} days, by week (weeks start on Monday).</p>
       <div className="scr-scope" role="tablist" aria-label="Window">

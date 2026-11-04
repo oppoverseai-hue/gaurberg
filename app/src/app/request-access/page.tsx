@@ -23,7 +23,7 @@ function headline(place: number | null, first: string) {
 
 export default async function RequestAccessPage() {
   const access = await getAccess();
-  if (access.state === "signed_out") redirect("/#access");
+  if (access.state === "signed_out") redirect("/");
   if (access.state === "ok") redirect("/");
   const supabase = await supabaseServer();
   const [{ data: u }, { data: row }] = await Promise.all([supabase.auth.getUser(), supabase.from("waitlist").select("id,status,created_at").maybeSingle()]);
@@ -47,7 +47,7 @@ export default async function RequestAccessPage() {
               <h1>{headline(place, first)}</h1>
               <p className="rq-lede">We&apos;ll email <b>{access.email}</b> as soon as your invitation is ready. Then sign in with this Google account and you&apos;re in.</p>
               <p className="rq-small">A confirmation is on its way now. Invitations go out a few at a time, because every link in Gaurberg is still checked by hand.</p>
-              <p className="rq-fine"><a href="/#features">See what Gaurberg does</a></p>
+              <p className="rq-fine"><a href="/features">See what Gaurberg does</a></p>
             </>
           ) : (
             <>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
 import { listCompanies, pickCompany, promotedRelsFor, type Pick } from "@/lib/connect";
@@ -33,7 +34,7 @@ function LinkCard({ r }: { r: Rel }) {
           </footer>
         </blockquote>
       ))}
-      {r.evidence.length > 2 && (() => { const t = r.source.ticker ?? r.target.ticker; const n = r.evidence.length - 2; return <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{n} more quote{n === 1 ? "" : "s"}{t ? <> on the <Link href={`/map/${t}`}>map</Link></> : " not shown"}.</p>; })()}
+      {r.evidence.length > 2 && (() => { const t = r.source.ticker ?? r.target.ticker; const n = r.evidence.length - 2; return <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{n} more quote{n === 1 ? "" : "s"}{t ? <> on the <Link href={`/company/${t}/map`}>map</Link></> : " not shown"}.</p>; })()}
     </div>
   );
 }
@@ -60,7 +61,7 @@ export default async function Connect({ searchParams }: { searchParams: Promise<
   const conn = ready && data ? findConnection(a.id, b.id, data.rels) : null;
   return (
     <main className="narrow connect">
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Home</Link>
+      <Breadcrumbs items={[{ label: "Connection finder" }]} />
       <h1 style={{ marginTop: 12 }}>Connection finder</h1>
       <p className="muted">Pick two companies to see how our sources connect them: a direct link, or a path through one shared company.</p>
       <form className="card cform" method="get" action="/connect">
