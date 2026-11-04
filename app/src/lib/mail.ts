@@ -18,7 +18,7 @@ function layout(body: string, button: { label: string; href: string }) {
   return `<!doctype html><html><body style="margin:0;background:#F4F1EC;font-family:Inter,Arial,sans-serif;color:#1C1916">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:32px 16px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#FBFAF7;border:1px solid #E4DED5;border-radius:12px">
-<tr><td style="padding:32px 32px 8px;font:700 14px/20px Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase">Gaurberg</td></tr>
+<tr><td style="padding:32px 32px 8px;font:600 16px/22px Inter,Arial,sans-serif"><span style="display:inline-block;width:22px;height:22px;border-radius:11px;background:#2A211C;color:#FBF9F5;text-align:center;line-height:22px;font-size:10px;vertical-align:-5px;margin-right:8px">&#9670;</span>Gaurberg</td></tr>
 <tr><td style="padding:8px 32px 8px;font:16px/26px Inter,Arial,sans-serif">${body}</td></tr>
 <tr><td style="padding:16px 32px 32px"><a href="${button.href}" style="display:inline-block;background:#2A211C;color:#FBFAF7;text-decoration:none;padding:12px 22px;border-radius:999px;font:600 15px Inter,Arial,sans-serif">${esc(button.label)}</a></td></tr>
 </table>

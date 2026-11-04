@@ -3,6 +3,7 @@
 // Shown on "/" to signed-out visitors, and to signed-in people not yet invited (request form in the invitation card).
 import "./landing.css";
 import LoginButton from "@/components/LoginButton";
+import Logo from "@/components/Logo";
 import RequestAccess from "@/components/RequestAccess";
 import { Around, Constellation, Exposure, Receipt } from "./Illustrations";
 
@@ -28,7 +29,7 @@ export default function Landing({ state, email }: { state: "signed_out" | "not_i
   return (
     <div className="paper">
       <header className="pp-nav">
-        <a className="pp-brand" href="#top"><span className="pp-mark" aria-hidden>◆</span>Gaurberg</a>
+        <a className="pp-brand" href="#top" aria-label="Gaurberg, back to top"><Logo /></a>
         <nav className="pp-links" aria-label="Sections"><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav>
         <div className="pp-navcta">
           {state === "signed_out" && <LoginButton label="Sign in" className="pp-signin" />}
@@ -93,15 +94,16 @@ export default function Landing({ state, email }: { state: "signed_out" | "not_i
         <section className="pp-block pp-people" id="checked">
           <h2 className="pp-center">Agents do the reading. A {em("person")} does the checking.</h2>
           <div className="pp-duo" aria-hidden>
-            <div className="pp-agent"><span>◆</span><i /></div>
-            <div className="pp-person"><span>A</span>
+            <div className="pp-agent"><svg viewBox="0 0 32 32" width="64" height="64" aria-hidden><path d="M16 4 L28 16 L16 28 L4 16 Z" fill="#f1f5f9" /></svg><i /></div>
+            <div className="pp-person">
+              <svg viewBox="0 0 64 64" className="pp-person-ico"><circle cx="32" cy="24" r="11" fill="none" stroke="#2A211C" strokeWidth="2.5" /><path d="M12 54c2-11 10-17 20-17s18 6 20 17" fill="none" stroke="#2A211C" strokeWidth="2.5" strokeLinecap="round" /></svg>
               <svg viewBox="0 0 100 100" className="pp-stamp"><defs><path id="stampc" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" /></defs>
                 <circle cx="50" cy="50" r="48" fill="#FBFAF7" stroke="#1C1916" /><circle cx="50" cy="50" r="28" fill="none" stroke="#1C1916" />
                 <text className="pp-stamp-t"><textPath href="#stampc">REVIEWED BY HAND · REVIEWED BY HAND ·</textPath></text>
-                <text x="50" y="56" textAnchor="middle" className="pp-stamp-m">◆</text></svg>
+                <path d="M50 40 L60 50 L50 60 L40 50 Z" fill="#1C1916" /></svg>
             </div>
           </div>
-          <p className="pp-center pp-who"><b>Gaurberg agents</b> and <b>Abhishek</b>, founder</p>
+          <p className="pp-center pp-who"><b>Gaurberg agents</b> read every filing. <b>A Gaurberg analyst</b> reviews every link.</p>
           <ol className="pp-pipe pp-mono">
             {["Agent reads the filing", "Finds each named company", "Checks the quote word for word", "A person keeps, fixes or drops it", "Published with its source"].map((t, i) => (
               <li key={t}>{i > 0 && <span className="pp-arrow" aria-hidden>→</span>}<span className="pp-step">{t}</span></li>
@@ -158,7 +160,7 @@ export default function Landing({ state, email }: { state: "signed_out" | "not_i
       </div>
 
       <footer className="pp-footer">
-        <a className="pp-brand" href="#top"><span className="pp-mark" aria-hidden>◆</span>Gaurberg</a>
+        <a className="pp-brand" href="#top" aria-label="Gaurberg, back to top"><Logo /></a>
         <p className="pp-em pp-tag">Know what moves a stock before it moves.</p>
         <nav><a href="/privacy">Privacy</a><a href="mailto:oppoverseai@gmail.com">Contact</a></nav>
         <p className="pp-fine">Gaurberg provides research information only. It is not investment advice, does not recommend securities and does not place trades. Market data is delayed. Signing in with Google shares only your name, email and profile picture, which we use to manage your access.</p>
