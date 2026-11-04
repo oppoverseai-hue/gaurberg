@@ -314,3 +314,11 @@ main.scr{max-width:1200px;padding-top:36px}
 .crumbs li a { color:var(--fg2); } .crumbs li a:hover { color:var(--accent); } .crumbs [aria-current] { color:var(--fg); }
 .crumbs-back { padding-right:12px; border-right:1px solid var(--line); }
 @media (max-width:600px) { .crumbs ol { display:none; } .crumbs-back { border:0; } }
+
+/* Phone width (UX-9): nothing may push the page wider than the screen. Company tabs scroll sideways inside their own bar;
+   map header, filter groups and legend wrap. */
+.ctabs { overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch; } .ctabs::-webkit-scrollbar { display:none; }
+.ctabs a { flex:none; white-space:nowrap; }
+.mapbar > div { min-width:0; max-width:100%; }
+.filters .pills, .filters .legend { display:flex; flex-wrap:wrap; align-items:center; gap:6px; min-width:0; max-width:100%; }
+@media (max-width:600px) { .ctabs a { padding:8px 10px; } .filters { padding:8px 12px; } }
