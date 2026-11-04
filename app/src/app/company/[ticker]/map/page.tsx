@@ -10,10 +10,12 @@ import { getComove } from "@/lib/comove";
 
 export const dynamic = "force-dynamic";
 
-export default async function MapPage({ params }: { params: Promise<{ ticker: string }> }) {
+// ?focus=<company id> opens the map with that company selected (TRM-1: search results for unmapped companies land here).
+export default async function MapPage({ params, searchParams }: { params: Promise<{ ticker: string }>; searchParams: Promise<{ focus?: string }> }) {
   const access = await getAccess();
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
+  const focusId = Number((await searchParams).focus) || undefined;
   const focal = await getCompany(ticker);
   if (!focal) notFound();
   await recordView(focal.id);
@@ -34,7 +36,7 @@ export default async function MapPage({ params }: { params: Promise<{ ticker: st
           {!focal.is_seed && (isOffline() ? <p className="muted mono" style={{ fontSize: 12 }}>Live lookup needs the network and is off in the offline demo.</p> : <LiveLookup query={focal.ticker ?? focal.name} />)}
         </div>
       ) : (
-        <MapView focal={focal} rels={rels} isAdmin={access.role === "admin"} geo={geo} countryRegion={countryRegion} comove={comove} />
+        <MapView focal={focal} rels={rels} isAdmin={access.role === "admin"} geo={geo} countryRegion={countryRegion} comove={comove} focusId={focusId} />
       )}
     </main>
   );

@@ -163,6 +163,8 @@ body:has(.ixbar) footer.site { padding-bottom:44px; }
 .ls-k { position:absolute; right:14px; top:50%; transform:translateY(-50%); color:var(--muted); }
 .ls-enter { color:var(--accent); border-color:var(--accent-border); } .ls-unm { font:700 10px var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--b-staged); border:1px solid var(--b-staged); border-radius:3px; padding:1px 6px; margin-left:6px; }
 .ls-row .ls-name b { display:inline-block; margin-top:4px; } .ls-row .ls-name:has(.ls-unm) { white-space:normal; }
+/* TRM-1: on a phone the map badge already says an unmapped company has no page; drop the "no ticker" tag so the name has room. */
+@media (max-width:600px) { .ls-row .ls-notk { display:none; } .ls-row .ls-unm { white-space:nowrap; } }
 body:has(.lsearch) .brand { visibility:hidden; }
 
 /* Account menu (top right) */

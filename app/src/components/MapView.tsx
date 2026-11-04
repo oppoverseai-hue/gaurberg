@@ -34,7 +34,7 @@ function edgePoint(c: { x: number; y: number }, to: { x: number; y: number }, hw
 
 type Preview = { company: { name: string; ticker: string; segment: string; size_tier: string }; quote: { price: number; change: number; changePct: number; prevClose: number; high: number; low: number } | null; currency: string | null; quoteError: string | null; counts: { suppliers: number; customers: number; partners: number; rivals: number }; about: string | null; news: string | null };
 
-export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, countryRegion = {}, comove = {} }: { focal: Co; rels: Rel[]; isAdmin: boolean; geo?: GeoMap; countryRegion?: CountryRegion; comove?: Record<number, Comove> }) {
+export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, countryRegion = {}, comove = {}, focusId }: { focal: Co; rels: Rel[]; isAdmin: boolean; geo?: GeoMap; countryRegion?: CountryRegion; comove?: Record<number, Comove>; focusId?: number }) {
   const router = useRouter();
   const [filter, setFilter] = useState<LinkType | "all">("all");
   // Region filter (M16): keep links whose other company reports revenue in the chosen region. A company with no revenue row is not guessed into any region.
@@ -76,6 +76,16 @@ export default function MapView({ focal, rels: allRels, isAdmin, geo = {}, count
     });
     return { out, info };
   }, [nodes, pages]);
+  // Opened from search with ?focus=<id>: show the batch that holds that company and open its panel. Once, on arrival.
+  useEffect(() => {
+    if (!focusId) return;
+    const n = nodes.find((x) => x.co.id === focusId);
+    if (!n) return;
+    const i = pageOf(nodes, n.side, 0).all.findIndex((x) => x.co.id === focusId);
+    setPages((p) => ({ ...p, [n.side]: Math.floor(i / MAX_PER_SIDE) }));
+    setPanel({ kind: "company", co: n.co });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusId]);
   const pickFromList = (side: Side, i: number, n: MapNode) => { setPages((p) => ({ ...p, [side]: Math.floor(i / MAX_PER_SIDE) })); setPanel({ kind: "company", co: n.co }); };
 
   useEffect(() => {

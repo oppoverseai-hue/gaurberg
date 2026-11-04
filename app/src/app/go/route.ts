@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { getAccess } from "@/lib/supabase/server";
-import { searchCompanies } from "@/lib/data";
+import { getIndex } from "@/lib/search";
+import { pick } from "@/lib/search-core";
 
 export const dynamic = "force-dynamic";
 
-// Command bar (TRM-1, UX-1): "Uber", "UBER news", "Uber map", "help". A company name or ticker plus an optional plain word.
+// Command bar (TRM-1, UX-1): "Uber", "UBER news", "Uber map", "help". A company name, ticker or alias plus an optional plain word.
+// Matches every company in the graph (the search index). An unmapped company opens the map it sits on.
 const SECTIONS: Record<string, string> = {
   chart: "chart", price: "price", numbers: "numbers", key: "numbers", about: "about", highlights: "highlights", financials: "highlights",
   fundamentals: "highlights", news: "news", links: "relationships", relationships: "relationships",
@@ -24,10 +26,11 @@ export async function GET(req: Request) {
   const last = words.length > 1 ? words[words.length - 1].toLowerCase() : "";
   const isCmd = !!last && (last in SECTIONS || MAP_WORDS.has(last));
   const name = isCmd ? words.slice(0, -1).join(" ") : raw;
-  const hits = await searchCompanies(name);
-  const exact = hits.filter((h) => h.ticker.toLowerCase() === name.toLowerCase());
-  const pick = exact.length === 1 ? exact[0] : hits.length === 1 ? hits[0] : null;
-  if (!pick) return to(`/search?q=${encodeURIComponent(name)}`);
-  if (isCmd && MAP_WORDS.has(last)) return to(`/company/${pick.ticker}/map`);
-  return to(`/company/${pick.ticker}${isCmd ? `#${SECTIONS[last]}` : ""}`);
+  const index = await getIndex(access.role).catch(() => null);
+  const hit = index ? pick(index, name) : null;
+  if (!hit) return to(`/search?q=${encodeURIComponent(name)}`);
+  if (isCmd && MAP_WORDS.has(last)) return to(hit.mapHref);
+  // Section words only apply to a company page; an unmapped company opens its map context.
+  const companyPage = hit.mapped || !hit.context;
+  return to(`${hit.href}${isCmd && companyPage ? `#${SECTIONS[last]}` : ""}`);
 }
