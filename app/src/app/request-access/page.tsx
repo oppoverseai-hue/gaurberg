@@ -12,6 +12,15 @@ import RequestForm from "./RequestForm";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Request an invitation · Gaurberg" };
 
+// Place in line, said truthfully: the exact number once there are enough requests for it to mean something, before that
+// the true band ("among the first 50 / 500"). Never a made-up number.
+function headline(place: number | null, first: string) {
+  if (place == null) return <>You&apos;re on the list, {first}.</>;
+  if (place <= 50) return <>You&apos;re among the <span className="pp-em">first 50</span>, {first}.</>;
+  if (place <= 500) return <>You&apos;re among the <span className="pp-em">first 500</span>, {first}.</>;
+  return <>You&apos;re <span className="pp-em">#{place.toLocaleString("en-US")}</span> on the list, {first}.</>;
+}
+
 export default async function RequestAccessPage() {
   const access = await getAccess();
   if (access.state === "signed_out") redirect("/#access");
@@ -35,7 +44,7 @@ export default async function RequestAccessPage() {
           {row ? (
             <>
               <p className="pp-mono rq-over">Request received</p>
-              <h1>{place ? <>You&apos;re <span className="pp-em">#{place.toLocaleString("en-US")}</span> on the list, {first}.</> : <>You&apos;re on the list, {first}.</>}</h1>
+              <h1>{headline(place, first)}</h1>
               <p className="rq-lede">We&apos;ll email <b>{access.email}</b> as soon as your invitation is ready. Then sign in with this Google account and you&apos;re in.</p>
               <p className="rq-small">A confirmation is on its way now. Invitations go out a few at a time, because every link in Gaurberg is still checked by hand.</p>
               <p className="rq-fine"><a href="/#features">See what Gaurberg does</a></p>
