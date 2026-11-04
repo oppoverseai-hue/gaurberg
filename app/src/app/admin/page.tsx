@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
@@ -72,7 +73,7 @@ export default async function Admin() {
   const spendAll = rows.reduce((n, r) => n + Number(r.cost_usd ?? 0), 0);
   return (
     <main className="narrow">
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Home</Link>
+      <Breadcrumbs items={[{ label: "Admin" }]} />
       <h1 style={{ marginTop: 12 }}>Admin</h1>
 
       <div className="card">

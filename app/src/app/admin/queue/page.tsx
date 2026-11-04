@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Link from "next/link";
 import { getAccess, supabaseServer } from "@/lib/supabase/server";
 
@@ -12,7 +13,7 @@ export default async function Queue() {
   const { data } = await supabase.from("lookup_queue").select("id,email,query,ticker,status,step,links_found,error,created_at,finished_at").order("id", { ascending: false }).limit(50);
   return (
     <main className="narrow">
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Home</Link>
+      <Breadcrumbs items={[{ label: "Admin", href: "/admin" }, { label: "Lookup queue" }]} />
       <h1 style={{ marginTop: 12 }}>Live lookups</h1>
       <div className="card">
         {!data?.length && <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>No lookups yet.</p>}

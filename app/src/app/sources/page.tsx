@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 // One home for where each kind of data comes from (DEM-2). Company pages carry no visible source sentences, only an (i)
 // tooltip per block with its source and as-of date; this page is the full list. Keep it in step with what the app shows.
 export default function Sources() {
   return (
     <main className="narrow">
-      <Link href="/" className="mono" style={{ fontSize: 12 }}>← Home</Link>
+      <Breadcrumbs items={[{ label: "Sources" }]} />
       <h1 style={{ marginTop: 12 }}>Sources</h1>
       <p className="muted">Where each kind of data comes from. On a company page, hover the (i) beside a block for its source and as-of date.</p>
       <div className="card"><ul className="srclist">
