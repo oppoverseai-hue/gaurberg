@@ -24,7 +24,7 @@ h2 { font-size:16px; line-height:22px; font-weight:600; letter-spacing:-.01em; m
 
 /* Site bar and footer */
 .sitebar { flex:none; height:48px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; background:var(--surface); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:30; font-family:var(--mono); font-size:12px; }
-.sitebar .brand { color:var(--fg); font-weight:700; letter-spacing:.12em; font-size:13px; text-transform:uppercase; } .sitebar .brand:hover { text-decoration:none; }
+.sitebar .brand { color:var(--fg); font-weight:600; letter-spacing:-.01em; font-size:15px; display:inline-flex; align-items:center; } .sitebar .brand:hover { text-decoration:none; }
 .sitebar nav { display:flex; gap:16px; color:var(--fg2); } .sitebar nav a { color:var(--fg2); } .sitebar nav a:hover { color:var(--accent); }
 footer.site { border-top:1px solid var(--line); background:var(--surface); padding:12px 24px; color:var(--muted); font:11px/16px var(--mono); }
 footer.site .in { max-width:1440px; margin:0 auto; display:flex; gap:8px; flex-wrap:wrap; }

@@ -21,8 +21,7 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 /* Floating frosted pill nav */
 .pp-nav { position:sticky; top:16px; z-index:20; margin:16px auto 0; max-width:1040px; width:calc(100% - 32px); display:flex; align-items:center; justify-content:space-between; gap:16px;
   padding:8px 8px 8px 20px; border-radius:9999px; background:rgba(251,250,247,.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(228,222,213,.8); }
-.pp-brand { display:inline-flex; align-items:center; gap:8px; font:600 16px var(--sans); letter-spacing:-.01em; }
-.pp-mark { display:inline-grid; place-items:center; width:22px; height:22px; border-radius:50%; background:var(--cta); color:var(--cta-ink); font-size:10px; }
+.pp-brand { display:inline-flex; align-items:center; font:600 16px var(--sans); letter-spacing:-.01em; }
 .pp-links { display:flex; gap:22px; font-size:14px; } .pp-links a { color:var(--muted); } .pp-links a:hover { color:var(--ink); }
 .pp-navcta { display:flex; align-items:center; gap:12px; }
 .pp-signin { background:none; border:0; font:14px var(--sans); color:var(--ink); cursor:pointer; padding:0; }
@@ -87,7 +86,7 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 .pp-ftext > p { color:var(--muted); margin:0; }
 .pp-ftext ul { list-style:none; padding:0; margin:20px 0 0; display:grid; gap:10px; font-size:15px; }
 .pp-ftext li { display:flex; gap:10px; align-items:flex-start; }
-.pp-ftext li::before { content:"✓"; flex:none; display:inline-grid; place-items:center; width:18px; height:18px; margin-top:3px; border:1px solid var(--muted); border-radius:4px; font-size:11px; }
+.pp-ftext li::before { content:""; flex:none; width:18px; height:18px; margin-top:4px; border-radius:50%; background:var(--hair) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%232A211C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat; }
 
 /* How it works: four numbered steps */
 .pp-steps { list-style:none; padding:0; margin:48px auto 0; max-width:1100px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; counter-reset:step; }
@@ -103,7 +102,7 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 .pp-invcard h2 { margin-bottom:12px; }
 .pp-perks { list-style:none; padding:0; margin:24px auto; max-width:360px; display:grid; gap:10px; font-size:15px; }
 .pp-perks li { display:flex; align-items:flex-start; gap:10px; }
-.pp-perks li::before { content:"✓"; flex:none; display:inline-grid; place-items:center; width:18px; height:18px; margin-top:3px; border:1px solid var(--muted); border-radius:4px; font-size:11px; }
+.pp-perks li::before { content:""; flex:none; width:20px; height:20px; margin-top:2px; border-radius:50%; background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%23FBF9F5' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat; }
 .pp-tiny { color:var(--muted); font-size:10px; margin:16px 0 0; text-transform:none; letter-spacing:.02em; }
 
 /* Request form inside the card (RequestAccess) */
@@ -153,12 +152,24 @@ html:has(.paper), body:has(.paper) { background:#F4F1EC; scroll-behavior:smooth;
 .pp-agent i { position:absolute; top:42px; right:44px; width:10px; height:10px; border-radius:50%; background:var(--cyan); box-shadow:0 0 0 6px rgba(56,189,248,.18); animation:pp-pulse 2.4s ease-in-out infinite; }
 @keyframes pp-pulse { 50% { box-shadow:0 0 0 12px rgba(56,189,248,0); } }
 @media (prefers-reduced-motion:reduce) { .pp-agent i { animation:none; } }
-.pp-person { background:#E8DED4; margin-left:-28px; color:var(--cta); font:600 72px var(--serif); font-style:italic; border:1px solid var(--hair); }
+.pp-person { background:#E8DED4; margin-left:-28px; border:1px solid var(--hair); }
+.pp-person-ico { width:84px; height:84px; }
 .pp-stamp { position:absolute; right:-36px; bottom:-14px; width:96px; height:96px; }
-.pp-stamp-t { font:500 9px var(--mono); letter-spacing:.14em; fill:#1C1916; } .pp-stamp-m { font-size:18px; fill:#1C1916; }
+.pp-stamp-t { font:500 9px var(--mono); letter-spacing:.14em; fill:#1C1916; }
 .pp-who { margin:28px 0 0; color:var(--muted); } .pp-who b { color:var(--ink); font-weight:600; }
 .pp-pipe { list-style:none; padding:0; margin:40px auto 24px; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; max-width:1000px; }
 .pp-pipe li { display:flex; align-items:center; gap:8px; }
 .pp-pipe .pp-step { padding:8px 14px; border:1px solid var(--hair); border-radius:9999px; background:var(--card); font-size:10px; color:var(--ink); }
 .pp-pipe .pp-arrow { color:var(--muted); font-size:12px; }
 
+
+/* Form controls in the request card: rounded squares bordered #6B645C, filled espresso with a cream tick (design system) */
+.paper .wl .wl-check { display:flex; gap:12px; align-items:flex-start; margin-top:14px; font-size:15px; line-height:22px; cursor:pointer; }
+.paper .wl .wl-check input { appearance:none; -webkit-appearance:none; flex:none; width:20px; height:20px; margin:1px 0 0; border:1.5px solid #6B645C; border-radius:6px; background:var(--card); cursor:pointer; display:grid; place-items:center; transition:background .12s, border-color .12s; }
+.paper .wl .wl-check input:checked { background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3L14.5 7' fill='none' stroke='%23FBF9F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat; border-color:var(--cta); }
+.paper .wl .wl-check input:focus-visible, .paper .wl .chip input:focus-visible + * { outline:2px solid var(--cta); outline-offset:2px; }
+.paper .wl .chips { gap:8px; }
+.paper .wl .chip { position:relative; padding:8px 14px; border-radius:9999px; transition:background .12s, border-color .12s, color .12s; }
+.paper .wl .chip input { position:absolute; opacity:0; width:1px; height:1px; pointer-events:none; }
+.paper .wl .chip:has(input:focus-visible) { outline:2px solid var(--cta); outline-offset:2px; }
+.paper .wl .chip:hover { border-color:#cfc5bb; }

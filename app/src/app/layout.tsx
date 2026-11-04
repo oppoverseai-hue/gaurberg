@@ -3,6 +3,7 @@ import { isOffline } from "@/lib/mode";
 import { getAccess } from "@/lib/supabase/server";
 import AccountMenu from "@/components/AccountMenu";
 import SourceCapture from "@/components/SourceCapture";
+import Logo from "@/components/Logo";
 export const metadata = { title: "Gaurberg · Every stock has an ecosystem", description: "Gaurberg maps who supplies, buys from, partners with, competes with and invests in a company, with the filing sentence behind every link." };
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const access = isOffline() ? null : await getAccess().catch(() => null);
@@ -20,7 +21,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         {isOffline() && <div className="offbar" role="status">Offline: showing saved data</div>}
         {chrome && (
         <header className="sitebar">
-          <a className="brand" href="/">Gaurberg</a>
+          <a className="brand" href="/" aria-label="Gaurberg home"><Logo tone="dark" size={20} /></a>
           <form className="cmd" action="/go" method="get" role="search">
             <input name="q" type="search" placeholder="Company or ticker, plus a word: Uber, Uber chart, Uber map, help" aria-label="Command bar" autoComplete="off" />
           </form>
