@@ -1,4 +1,5 @@
-// Screener data (server only): mapped companies with link counts, 1-month change and a 30-day trend from saved daily closes.
+// Screener data (server only): mapped companies with link counts, 1-month change and a 30-day trend from stored daily closes
+// (price_cache, refreshed daily), else the saved files.
 // Nothing is estimated: a company with no saved price history has no change and no trend, and is left out as soon as a change filter is set.
 import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
@@ -8,7 +9,7 @@ import { groupOf, UNCLASSIFIED } from "@/lib/metrics-core";
 
 export const SEG = ["consumer", "business", "infrastructure"], SIZE = ["large", "mid", "small"];
 export type Filters = { segment: string; size: string; market: string; dir: string; scope: string; sort: string; order: string };
-export type Row = { c: CoRow; links: number; ch: { pct: number; from: string } | null; spark: number[] | null };
+export type Row = { c: CoRow; links: number; ch: { pct: number; from: string; to: string } | null; spark: number[] | null };
 
 export function parseFilters(q: Record<string, string | undefined>): Filters {
   const pick = (v: string | undefined, ok: readonly string[]) => (v && ok.includes(v) ? v : "");
@@ -21,13 +22,29 @@ export function parseFilters(q: Record<string, string | undefined>): Filters {
 }
 export const hasFilter = (f: Filters) => !!(f.segment || f.size || f.market || f.dir);
 
-function history(ticker: string): { pct: number; from: string; spark: number[] } | null {
-  const d = readMarket(ticker)?.daily;
+type Pt = { t: number; c: number };
+function historyOf(d: Pt[] | null | undefined): { pct: number; from: string; to: string; spark: number[] } | null {
   if (!d || d.length < 2) return null;
   const last = d[d.length - 1], target = last.t - 30 * 86400;
   const base = [...d].reverse().find((p) => p.t <= target);
   if (!base || base.c === 0) return null;
-  return { pct: ((last.c - base.c) / base.c) * 100, from: new Date(base.t * 1000).toISOString().slice(0, 10), spark: d.filter((p) => p.t >= target).map((p) => p.c) };
+  return { pct: ((last.c - base.c) / base.c) * 100, from: new Date(base.t * 1000).toISOString().slice(0, 10), to: new Date(last.t * 1000).toISOString().slice(0, 10), spark: d.filter((p) => p.t >= target).map((p) => p.c) };
+}
+
+// Daily closes from price_cache (written by the daily refresh, api/cron/refresh), last 45 days per company.
+// A company with too few stored closes falls back to its saved file, so nothing goes blank while the cache fills.
+async function storedCloses(ids: number[]): Promise<Map<number, Pt[]>> {
+  const out = new Map<number, Pt[]>();
+  if (isOffline() || !ids.length) return out;
+  const supabase = await supabaseServer();
+  const since = new Date(Date.now() - 45 * 864e5).toISOString();
+  const { data } = await supabase.from("price_cache").select("company_id,ts,close").in("company_id", ids).gte("ts", since).order("ts").limit(5000);
+  for (const r of (data ?? []) as { company_id: number; ts: string; close: number | string }[]) {
+    const a = out.get(r.company_id) ?? [];
+    a.push({ t: Math.floor(Date.parse(r.ts) / 1000), c: Number(r.close) });
+    out.set(r.company_id, a);
+  }
+  return out;
 }
 
 async function linkCounts(ids: number[]): Promise<Map<number, number>> {
@@ -42,7 +59,7 @@ async function linkCounts(ids: number[]): Promise<Map<number, number>> {
   return n;
 }
 
-export async function loadRows(f: Filters): Promise<{ rows: Row[]; total: number; up: number; withData: number }> {
+export async function loadRows(f: Filters): Promise<{ rows: Row[]; total: number; up: number; withData: number; through: string | null }> {
   let cos: CoRow[];
   if (isOffline()) cos = (readSnapshot()?.companies ?? []).filter((c) => c.is_seed && c.ticker);
   else {
@@ -53,8 +70,8 @@ export async function loadRows(f: Filters): Promise<{ rows: Row[]; total: number
       cos = cos.filter((c) => v.has(c.id));
     }
   }
-  const counts = await linkCounts(cos.map((c) => c.id));
-  const all = cos.map((c) => { const h = history(c.ticker!); return { c, links: counts.get(c.id) ?? 0, ch: h ? { pct: h.pct, from: h.from } : null, spark: h ? h.spark : null } as Row; });
+  const [counts, stored] = await Promise.all([linkCounts(cos.map((c) => c.id)), storedCloses(cos.map((c) => c.id))]);
+  const all = cos.map((c) => { const s = stored.get(c.id); const h = historyOf(s && s.length >= 15 ? s : readMarket(c.ticker!)?.daily); return { c, links: counts.get(c.id) ?? 0, ch: h ? { pct: h.pct, from: h.from, to: h.to } : null, spark: h ? h.spark : null } as Row; });
   const rows = all
     .filter(({ c, ch }) => (!f.segment || groupOf(c.segment) === f.segment) && (!f.size || groupOf(c.size_tier) === f.size) && (!f.market || (c.markets ?? []).includes(f.market)) && (!f.dir || (ch && (f.dir === "up" ? ch.pct >= 0 : ch.pct < 0))))
     .sort((a, b) => {
@@ -64,7 +81,8 @@ export async function loadRows(f: Filters): Promise<{ rows: Row[]; total: number
       if (a.ch == null || b.ch == null) return a.ch == null ? (b.ch == null ? a.c.name.localeCompare(b.c.name) : 1) : -1; // no history always last
       return s * (a.ch.pct - b.ch.pct);
     });
-  return { rows, total: cos.length, up: rows.filter((r) => r.ch && r.ch.pct >= 0).length, withData: all.filter((r) => r.ch).length };
+  const through = all.reduce<string | null>((m, r) => (r.ch && (!m || r.ch.to > m) ? r.ch.to : m), null);
+  return { rows, total: cos.length, up: rows.filter((r) => r.ch && r.ch.pct >= 0).length, withData: all.filter((r) => r.ch).length, through };
 }
 
 const q = (s: string | number | null) => { const t = s == null ? "" : String(s); return /[",\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t; };

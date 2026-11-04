@@ -35,7 +35,7 @@ const files = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (
 const rel = (f) => path.relative(SRC, f);
 
 test("no file calls Finnhub, Twelve Data or the SEC ticker lookup except the gated ones", () => {
-  const ALLOWED_FETCH = new Set(["lib/finnhub.ts", "lib/news.ts", "lib/indices.ts"]); // indices.ts: fixed index symbols, not companies
+  const ALLOWED_FETCH = new Set(["lib/finnhub.ts", "lib/news.ts", "lib/indices.ts", "app/api/cron/refresh/route.ts"]); // indices.ts: fixed index symbols, not companies; the daily refresh is gated below
   const LOW = /\b(getQuote|getCandles|getHistory|getFundamentals|getNextEarnings|finnhubNews|secFilings|cikFor)\(/;
   const LOW_ALLOWED = new Set(["lib/finnhub.ts", "lib/market.ts", "lib/news.ts", "lib/insiders.ts"]);
   for (const f of files(SRC)) {
@@ -55,4 +55,9 @@ test("inside the gated files, live calls use the gated symbol", () => {
   const ins = fs.readFileSync(path.join(SRC, "lib/insiders.ts"), "utf8");
   assert.match(ins, /cikFor\(sym\)/);
   assert.match(market + news + ins, /liveSymbol\(co\)/);
+  // The daily refresh (api/cron/refresh) only looks up companies that pass the gate, and only by the gated symbol.
+  const cron = fs.readFileSync(path.join(SRC, "app/api/cron/refresh/route.ts"), "utf8");
+  assert.match(cron, /const live = \(cos as Co\[\]\)\.filter\(\(c\) => liveSymbol\(c\)\)/);
+  for (const m of cron.matchAll(/symbol: ([^,}]+)/g)) assert.ok(["sym", "liveSymbol(c)!"].includes(m[1].trim()), `refresh route symbol: ${m[1]}`);
+  assert.match(cron, /const sym = liveSymbol\(c\)!/);
 });

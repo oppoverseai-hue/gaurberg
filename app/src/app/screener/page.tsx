@@ -14,7 +14,7 @@ import { REGIONS } from "@/lib/graph";
 
 export const dynamic = "force-dynamic";
 
-// Screener (TRM-5): mapped companies by market, segment, size and 1-month change, from saved daily closes.
+// Screener (TRM-5): mapped companies by market, segment, size and 1-month change, from stored daily closes (refreshed daily).
 // A company with no saved price history shows "no saved price history" and is left out once a change filter is set. Nothing is estimated.
 // view=comps (TRM-12): the same companies with stored Finnhub metrics, analyst counts and next earnings; filters add region; pin up to 5.
 type Past = { id: number; filters: Partial<Filters>; used_at: string };
@@ -55,7 +55,7 @@ export default async function Screener({ searchParams }: { searchParams: Promise
   const view = sp.view === "comps" ? "comps" : "price";
   const region = view === "comps" && (REGIONS as readonly string[]).includes(sp.region ?? "") ? sp.region! : "";
   if (view === "comps") return <Comps f={f} region={region} sp={sp} />;
-  const { rows, total, up, withData } = await loadRows(f);
+  const { rows, total, up, withData, through } = await loadRows(f);
 
   let past: Past[] = [];
   if (!isOffline()) {
@@ -143,7 +143,7 @@ export default async function Screener({ searchParams }: { searchParams: Promise
           </table>
         )}
       </div>
-      <p className="muted mono" style={{ fontSize: 11 }}>Prices are end-of-day closes from saved data. Companies without saved history are listed last and dropped when a change filter is set.</p>
+      <p className="muted mono" style={{ fontSize: 11 }}>Prices are end-of-day closes{through ? `, latest ${through}` : ""}, refreshed daily at 19:00 Makassar. Companies without saved history are listed last and dropped when a change filter is set.</p>
     </main>
   );
 }

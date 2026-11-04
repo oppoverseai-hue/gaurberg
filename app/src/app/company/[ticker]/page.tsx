@@ -24,6 +24,8 @@ const pct = (v: number | null | undefined) => (v == null ? null : `${v.toFixed(1
 const n2 = (v: number | null | undefined) => (v == null ? null : v.toFixed(2));
 const day = (d: string) => new Date(d.length === 10 ? `${d}T00:00:00Z` : d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 const NOT_LOADED = "Not loaded: source is the annual report.";
+// Report dates are New York trading dates.
+const todayNY = () => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 
 // Stored metrics strip (M17): one dated Finnhub fetch, never filled from another source. Staged rows are labelled.
 function MetricsStrip({ mt, us }: { mt: Metrics | null; us: boolean }) {
@@ -85,7 +87,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
         </div>
         <p className="mono" style={{ fontSize: 12, margin: "8px 0 0" }} id="events">
           <span className="muted">Upcoming events: </span>
-          {events.length ? <>{events.map((e) => `${e.event_type === "earnings" ? "Earnings" : e.event_type} ${day(e.event_date)}${e.detail ? ` (${e.detail})` : ""}`).join(" · ")}{events.some((e) => e.status === "staged") && <span style={{ color: "var(--b-staged)" }}> · Staged, not reviewed</span>} <SourceTip text={`Finnhub earnings calendar, as of ${day(events[0].fetched_at)}`} /></> : <span className="muted">{us ? "none loaded" : NOT_LOADED}</span>}
+          {events.length ? <>{events.map((e) => `${e.event_type === "earnings" ? "Earnings" : e.event_type} ${e.event_date === todayNY() ? "today" : day(e.event_date)}${e.detail ? ` (${e.detail})` : ""}`).join(" · ")}{events.some((e) => e.status === "staged") && <span style={{ color: "var(--b-staged)" }}> · Staged, not reviewed</span>} <SourceTip text={`Finnhub earnings calendar, as of ${day(events[0].fetched_at)}`} /></> : <span className="muted">{us ? "none loaded" : NOT_LOADED}</span>}
         </p>
       </div>
       <CompanyTabs ticker={company.ticker ?? ticker} active="overview" />
@@ -152,14 +154,11 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           <div className="card" id="numbers">
             <div className="cardhead"><h3>Key numbers</h3><SourceTip text={m.saved?.parts.includes("fundamentals") ? `Finnhub, saved data from ${m.saved.at}` : "Finnhub, live (delayed)"} /></div>
             <Rows rows={[
-              ["Previous close", q ? q.prevClose.toFixed(2) : null],
-              ["Day range", q ? `${q.low.toFixed(2)} – ${q.high.toFixed(2)}` : null],
-              ["52-week range", f.low52 != null && f.high52 != null ? `${f.low52.toFixed(2)} – ${f.high52.toFixed(2)}` : null],
               ["Avg volume", f.avgVolume == null ? null : `${f.avgVolume.toFixed(2)}M`],
               ["Market cap", f.marketCap == null ? null : fmtBig(f.marketCap)],
-              ["P/E (trailing)", n2(f.pe)], ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Beta", n2(f.beta)],
+              ...(mt ? [] : [["P/E (trailing)", n2(f.pe)] as [string, string | null]]), ["Earnings per share", n2(f.eps) && `$${n2(f.eps)}`], ["Beta", n2(f.beta)],
               ["Shares outstanding", f.shares == null ? null : fmtShares(f.shares)],
-              ["Next earnings", m.nextEarnings],
+              ...(events.length || !us ? [] : [["Next earnings", m.nextEarnings] as [string, string | null]]),
             ]} />
           </div>
           <div className="card" id="about" style={{ marginTop: 24 }}>
@@ -175,7 +174,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
             {top.length === 0 ? <p className="muted">No disclosed relationships found for this company.</p> : (
               <>
                 {top.map((n) => (
-                  <div className="relitem" key={n.co.id}><span>{isMapped(n.co) ? `${n.co.name} (${n.co.ticker})` : n.co.name}</span><span>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</span></div>
+                  <div className="relitem" key={n.co.id}><span>{isMapped(n.co) ? <Link href={`/company/${n.co.ticker}`}>{n.co.name} ({n.co.ticker})</Link> : n.co.name}</span><span>{[...new Set(n.links.map((l) => TYPE_LABEL[l.relationship_type]))].join(", ")}</span></div>
                 ))}
                 <Link className="cta" href={`/map/${company.ticker}`}>Open the ecosystem map →</Link>
               </>
