@@ -2,6 +2,11 @@
 // Market data (closes, ratios, earnings dates) is promoted automatically, with guards; links are never touched here.
 // Admin-approved rule change, Nov 4 2026: see CLAUDE.md rule 4.
 
+// The refresh reads, plans and writes earnings rows of its own source only. Rows from other sources (the SEC 8-K report dates
+// staged for review, GRF-20) are never read here, so the refresh can neither touch, reject nor overwrite them.
+export const REFRESH_SOURCE = "finnhub";
+export const refreshOwns = (row: { source: string }) => row.source === REFRESH_SOURCE;
+
 export type StoredEvent = { id: number; event_date: string; detail: string | null; status: "staged" | "promoted" | "rejected" };
 export type CalendarEntry = { date: string; quarter: number | null; year: number | null; hour: string | null; reported: boolean };
 

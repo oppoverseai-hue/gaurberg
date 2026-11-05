@@ -384,5 +384,16 @@ a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decora
 .maplist .mname small { display:block; color:var(--fg2); font:11px var(--mono); margin-top:2px; }
 .maplist .mlinks { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; } .maplist .mlinks button { font:11px var(--mono); }
 
+/* Earnings-day reaction (GRF-20): the table scrolls inside its card on a phone, never the page */
+.rx-scroll { overflow-x:auto; margin:0 -4px; max-width:100%; }
+#reaction { min-width:0; }
+/* A single grid column must not grow to its widest content (the reaction table), or the page scrolls sideways on a phone. */
+@media (max-width:1000px) { .co-overview .grid2 { grid-template-columns:minmax(0,1fr); } }
+.rx { border-collapse:collapse; width:100%; font-size:13px; }
+.rx th, .rx td { padding:6px 8px; border-top:1px solid var(--line-subtle); text-align:right; white-space:nowrap; vertical-align:top; }
+.rx th:first-child, .rx td:first-child { text-align:left; white-space:normal; min-width:140px; }
+.rx th { font:600 12px var(--sans); color:var(--fg); } .rx th small { display:block; font:11px var(--mono); color:var(--fg2); font-weight:400; }
+.rx tr.focal td { font-weight:600; background:var(--surface-high); }
+.rx-notes { margin:8px 0 0; padding-left:18px; font:11px var(--mono); color:var(--fg2); }
 /* Market news (TRM-4): the rest of a company's feed, apart and collapsed */
 .market-news { margin-top:12px; border-top:1px solid var(--line-subtle); padding-top:8px; } .market-news summary { cursor:pointer; font:12px var(--mono); color:var(--fg2); }

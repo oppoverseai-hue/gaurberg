@@ -1,0 +1,1202 @@
+{
+ "today": "2026-11-04",
+ "keep": 4,
+ "companies": {
+  "AAPL": {
+   "cik": "320193",
+   "kept": [
+    {
+     "accession": "0000320193-26-000024",
+     "date": "2026-11-02",
+     "accepted_utc": "2026-11-02T21:30:23Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/aapl-20261102.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000024/a8-kex991q4202609262026.htm",
+     "quarter": "Q4 FY2026",
+     "named_as": "fiscal 2026 fourth quarter",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000320193-26-000018",
+     "date": "2026-07-30",
+     "accepted_utc": "2026-07-30T20:30:28Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+     "quarter": "Q3 FY2026",
+     "named_as": "fiscal 2026 third quarter",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000320193-26-000011",
+     "date": "2026-04-30",
+     "accepted_utc": "2026-04-30T20:30:41Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/a8-kex991q2202603282026.htm",
+     "quarter": "Q2 FY2026",
+     "named_as": "fiscal 2026 second quarter",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000320193-26-000005",
+     "date": "2026-01-29",
+     "accepted_utc": "2026-01-29T21:30:33Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000005/aapl-20260129.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000005/a8-kex991q1202612272025.htm",
+     "quarter": "Q1 FY2026",
+     "named_as": "fiscal 2026 first quarter",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "AMD": {
+   "cik": "2488",
+   "kept": [
+    {
+     "accession": "0000002488-26-000188",
+     "date": "2026-11-03",
+     "accepted_utc": "2026-11-03T21:16:27Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/amd-20261103.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000188/q32026991.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000002488-26-000121",
+     "date": "2026-08-04",
+     "accepted_utc": "2026-08-04T20:16:24Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/amd-20260804.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000121/q22026991.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000002488-26-000072",
+     "date": "2026-05-05",
+     "accepted_utc": "2026-05-05T20:16:06Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/amd-20260505.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000072/q12026991.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000002488-26-000014",
+     "date": "2026-02-03",
+     "accepted_utc": "2026-02-03T21:16:18Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/amd-20260203.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000014/q42025991.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter and Full Year 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "AMZN": {
+   "cik": "1018724",
+   "kept": [
+    {
+     "accession": "0001018724-26-000038",
+     "date": "2026-10-29",
+     "accepted_utc": "2026-10-29T20:05:27Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20261029.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm",
+     "quarter": "Q3 2026",
+     "named_as": "third quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001018724-26-000024",
+     "date": "2026-07-30",
+     "accepted_utc": "2026-07-30T20:06:23Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260730.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001018724-26-000012",
+     "date": "2026-04-29",
+     "accepted_utc": "2026-04-29T20:18:55Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260429.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001018724-26-000002",
+     "date": "2026-02-05",
+     "accepted_utc": "2026-02-05T21:25:12Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20260205.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "APLD": {
+   "cik": "1144879",
+   "kept": [
+    {
+     "accession": "0001144879-26-000057",
+     "date": "2026-10-07",
+     "accepted_utc": "2026-10-07T20:43:31Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000057/apld-20261007.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000057/apldq127earningsrelease.htm",
+     "quarter": "quarter ended 2026-08-31",
+     "named_as": "quarter ended August 31, 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001144879-26-000044",
+     "date": "2026-07-27",
+     "accepted_utc": "2026-07-27T21:04:53Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000044/apld-20260727.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000044/apldq426earningsreleaseasf.htm",
+     "quarter": "quarter ended 2026-05-31",
+     "named_as": "quarter ended May 31, 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001144879-26-000029",
+     "date": "2026-04-08",
+     "accepted_utc": "2026-04-08T20:18:41Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000029/apld-20260408.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000029/apldq326earningsrelease.htm",
+     "quarter": "quarter ended 2026-02-28",
+     "named_as": "quarter ended February 28, 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001144879-26-000002",
+     "date": "2026-01-07",
+     "accepted_utc": "2026-01-07T21:51:51Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000002/apld-20260107.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000002/apldq226earningsrelease.htm",
+     "quarter": "quarter ended 2025-11-30",
+     "named_as": "quarter ended November 30, 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "AUR": {
+   "cik": "1828108",
+   "kept": [
+    {
+     "accession": "0001828108-26-000092",
+     "date": "2026-10-28",
+     "accepted_utc": "2026-10-28T20:20:18Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000092/aur-20261028.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000092/aurora26q3shareholderlet.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001828108-26-000075",
+     "date": "2026-07-29",
+     "accepted_utc": "2026-07-29T20:17:23Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000075/aur-20260729.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000075/aurora26q2shareholderlet.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001828108-26-000050",
+     "date": "2026-05-06",
+     "accepted_utc": "2026-05-06T20:17:20Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000050/aur-20260506.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000050/aurora26q1shareholderlet.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001828108-26-000014",
+     "date": "2026-02-11",
+     "accepted_utc": "2026-02-11T21:19:53Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000014/aur-20260211.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1828108/000182810826000014/finalaurora25q4sharehold.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "BIDU": {
+   "cik": "1329099",
+   "kept": [],
+   "skipped": [],
+   "note": "no 8-K item 2.02 filings (files 6-K/20-F as a foreign private issuer)"
+  },
+  "CART": {
+   "cik": "1579091",
+   "kept": [
+    {
+     "accession": "0001193125-26-437014",
+     "date": "2026-10-29",
+     "accepted_utc": "2026-10-29T11:38:32Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1579091/000119312526437014/d24470d8k.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1579091/000119312526437014/d24470dex991.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third Quarter 2026",
+     "timing": "before market open"
+    },
+    {
+     "accession": "0001579091-26-000040",
+     "date": "2026-08-06",
+     "accepted_utc": "2026-08-06T20:09:47Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000040/cart-20260806.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000040/q22026pressrelease.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001579091-26-000032",
+     "date": "2026-05-06",
+     "accepted_utc": "2026-05-06T11:03:46Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000032/cart-20260501.htm",
+     "items": "1.01,2.02,2.03,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000032/q12026pressrelease.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "before market open"
+    },
+    {
+     "accession": "0001579091-26-000006",
+     "date": "2026-02-12",
+     "accepted_utc": "2026-02-12T21:09:54Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000006/cart-20260212.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1579091/000157909126000006/cartfourthquarter2025sha.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Q4'25",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "CBRS": {
+   "cik": "2021728",
+   "kept": [
+    {
+     "accession": "0001628280-26-056186",
+     "date": "2026-08-12",
+     "accepted_utc": "2026-08-12T20:09:19Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056186/cbrs-20260812.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056186/cbrsannouncesfinancialresu.htm",
+     "quarter": "Q2 2026",
+     "named_as": "second quarter of 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-044941",
+     "date": "2026-06-23",
+     "accepted_utc": "2026-06-23T20:43:37Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026044941/cbrs-20260623.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026044941/cbrsannouncesfinancialresu.htm",
+     "quarter": "Q1 FY2026",
+     "named_as": "first quarter of fiscal year 2026",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "CRWV": {
+   "cik": "1769628",
+   "kept": [
+    {
+     "accession": "0001769628-26-000362",
+     "date": "2026-08-11",
+     "accepted_utc": "2026-08-11T20:10:26Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000362/crwv-20260811.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000362/coreweave2q26earningspress.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001769628-26-000220",
+     "date": "2026-05-07",
+     "accepted_utc": "2026-05-07T20:10:37Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000220/crwv-20260507.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000220/coreweave1q26earningspress.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001769628-26-000094",
+     "date": "2026-02-26",
+     "accepted_utc": "2026-02-26T21:06:14Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000094/crwv-20260226.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000094/coreweave4q25earningspress.htm",
+     "quarter": "Q4 FY2025",
+     "named_as": "Fourth Quarter and Fiscal Year 2025",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001769628-25-000059",
+     "date": "2025-11-10",
+     "accepted_utc": "2025-11-10T21:08:52Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000059/crwv-20251110.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000059/coreweave3q25earningspress.htm",
+     "quarter": "Q3 2025",
+     "named_as": "Third Quarter 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "DASH": {
+   "cik": "1792789",
+   "kept": [
+    {
+     "accession": "0001792789-26-000062",
+     "date": "2026-10-29",
+     "accepted_utc": "2026-10-29T11:21:00Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/dash-20261029.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/proddashex991-pressrelease.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third Quarter 2026",
+     "timing": "before market open"
+    },
+    {
+     "accession": "0001792789-26-000048",
+     "date": "2026-08-05",
+     "accepted_utc": "2026-08-05T20:12:32Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000048/dash-20260805.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000048/proddashex991-pressrelease.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001792789-26-000036",
+     "date": "2026-05-06",
+     "accepted_utc": "2026-05-06T20:10:12Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000036/dash-20260506.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000036/proddashex991-pressrelease.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001792789-26-000012",
+     "date": "2026-02-18",
+     "accepted_utc": "2026-02-18T21:08:24Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000012/dash-20260218.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000012/prodq4dashex991-pressrelea.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter and Full Year 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "GOOGL": {
+   "cik": "1652044",
+   "kept": [
+    {
+     "accession": "0001652044-26-000080",
+     "date": "2026-10-28",
+     "accepted_utc": "2026-10-28T20:01:33Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/goog-20261028.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001652044-26-000066",
+     "date": "2026-07-22",
+     "accepted_utc": "2026-07-22T20:01:36Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/goog-20260722.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001652044-26-000043",
+     "date": "2026-04-29",
+     "accepted_utc": "2026-04-29T20:01:35Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/goog-20260429.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001652044-26-000012",
+     "date": "2026-02-04",
+     "accepted_utc": "2026-02-04T21:01:37Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/goog-20260204.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm",
+     "quarter": "Q4 FY2025",
+     "named_as": "Fourth Quarter and Fiscal Year 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "GRAB": {
+   "cik": "1855612",
+   "kept": [],
+   "skipped": [],
+   "note": "no 8-K item 2.02 filings (files 6-K/20-F as a foreign private issuer)"
+  },
+  "INTC": {
+   "cik": "50863",
+   "kept": [
+    {
+     "accession": "0000050863-26-000188",
+     "date": "2026-10-29",
+     "accepted_utc": "2026-10-29T20:08:53Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/intc-20261029.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000188/q326earningsrelease.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third-Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000050863-26-000155",
+     "date": "2026-07-23",
+     "accepted_utc": "2026-07-23T20:09:00Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/intc-20260723.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000155/q226earningsrelease.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second-Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000050863-26-000077",
+     "date": "2026-04-23",
+     "accepted_utc": "2026-04-23T20:07:02Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/intc-20260423.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000077/q126earningsrelease.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First-Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0000050863-26-000009",
+     "date": "2026-01-22",
+     "accepted_utc": "2026-01-22T21:10:56Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/intc-20260122.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000009/q425earningsrelease.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth-Quarter and Full-Year 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "LCID": {
+   "cik": "1811210",
+   "kept": [
+    {
+     "accession": "0001628280-26-052548",
+     "date": "2026-08-04",
+     "accepted_utc": "2026-08-04T20:07:05Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026052548/lcid-20260804.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026052548/q2fy26ex991earnings.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-030509",
+     "date": "2026-05-05",
+     "accepted_utc": "2026-05-05T20:07:16Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026030509/lcid-20260505.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026030509/q1fy26ex991earnings.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-011118",
+     "date": "2026-02-24",
+     "accepted_utc": "2026-02-24T21:21:23Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011118/lcid-20260220.htm",
+     "items": "2.02,2.05,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026011118/q4fy25ex991earnings.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter and Full Year 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [
+    {
+     "accession": "0001628280-26-064910",
+     "date": "2026-10-05",
+     "accepted_utc": "2026-10-05T20:06:06Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026064910/lcid-20261005.htm",
+     "items": "2.02,9.01",
+     "reason": "exhibit 99 is an update, not the quarter's report (production and deliveries, or the date of the report)",
+     "exhibits": [
+      "https://www.sec.gov/Archives/edgar/data/1811210/000162828026064910/q3fy26ex991-productionandd.htm"
+     ]
+    },
+    {
+     "accession": "0001628280-26-046718",
+     "date": "2026-07-02",
+     "accepted_utc": "2026-07-02T13:01:58Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026046718/lcid-20260701.htm",
+     "items": "2.02,5.02,7.01,9.01",
+     "reason": "exhibit 99 is an update, not the quarter's report (production and deliveries, or the date of the report)",
+     "exhibits": [
+      "https://www.sec.gov/Archives/edgar/data/1811210/000162828026046718/q2fy26ex991-productionandd.htm"
+     ]
+    },
+    {
+     "accession": "0001104659-26-042847",
+     "date": "2026-04-14",
+     "accepted_utc": "2026-04-14T11:07:17Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000110465926042847/tm2611666d2_8k.htm",
+     "items": "1.01,2.02,3.02,3.03,7.01,8.01,9.01",
+     "reason": "exhibit 99 reports no financial results",
+     "exhibits": [
+      "https://www.sec.gov/Archives/edgar/data/1811210/000110465926042847/tm2611666d2_ex99-1.htm"
+     ]
+    },
+    {
+     "accession": "0001628280-26-023714",
+     "date": "2026-04-03",
+     "accepted_utc": "2026-04-03T21:06:01Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026023714/lcid-20260403.htm",
+     "items": "2.02,9.01",
+     "reason": "exhibit 99 is an update, not the quarter's report (production and deliveries, or the date of the report)",
+     "exhibits": [
+      "https://www.sec.gov/Archives/edgar/data/1811210/000162828026023714/q1fy26ex991-productionandd.htm"
+     ]
+    },
+    {
+     "accession": "0001628280-26-000236",
+     "date": "2026-01-05",
+     "accepted_utc": "2026-01-05T14:02:07Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1811210/000162828026000236/lcid-20260105.htm",
+     "items": "2.02,9.01",
+     "reason": "exhibit 99 is an update, not the quarter's report (production and deliveries, or the date of the report)",
+     "exhibits": [
+      "https://www.sec.gov/Archives/edgar/data/1811210/000162828026000236/fy25ex991-productionanddel.htm"
+     ]
+    }
+   ],
+   "note": null
+  },
+  "LIME": {
+   "cik": "1699963",
+   "kept": [
+    {
+     "accession": "0001628280-26-069478",
+     "date": "2026-11-03",
+     "accepted_utc": "2026-11-03T21:06:52Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1699963/000162828026069478/lime-20261103.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1699963/000162828026069478/neutronholdingsinc-q326xea.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001140361-26-031146",
+     "date": "2026-08-04",
+     "accepted_utc": "2026-08-04T20:05:09Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1699963/000114036126031146/ef20079411_8k.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1699963/000114036126031146/ef20079411_ex99-1.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "LYFT": {
+   "cik": "1759509",
+   "kept": [
+    {
+     "accession": "0001628280-26-054305",
+     "date": "2026-08-06",
+     "accepted_utc": "2026-08-06T20:10:24Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026054305/lyft-20260806.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026054305/lyft-20260630xpressrelease.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Q2 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-032102",
+     "date": "2026-05-07",
+     "accepted_utc": "2026-05-07T20:10:44Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026032102/lyft-20260507.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026032102/lyft-20260331xpressrelease.htm",
+     "quarter": "Q1 2026",
+     "named_as": "Q1 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-006817",
+     "date": "2026-02-10",
+     "accepted_utc": "2026-02-10T21:05:19Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006817/lyft-20260210.htm",
+     "items": "2.02,7.01,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1759509/000162828026006817/lyft-2025x12x31pressreleas.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter of 2025",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-25-049556",
+     "date": "2025-11-05",
+     "accepted_utc": "2025-11-05T21:11:38Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1759509/000162828025049556/lyft-20251105.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1759509/000162828025049556/lyft-20250930xpressrelease.htm",
+     "quarter": "Q3 2025",
+     "named_as": "Q3 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "META": {
+   "cik": "1326801",
+   "kept": [
+    {
+     "accession": "0001628280-26-066700",
+     "date": "2026-10-21",
+     "accepted_utc": "2026-10-21T20:03:35Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-20261019.htm",
+     "items": "1.01,2.02,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Third Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-050596",
+     "date": "2026-07-29",
+     "accepted_utc": "2026-07-29T20:03:23Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-20260729.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-06302026xexhibit991.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-028364",
+     "date": "2026-04-29",
+     "accepted_utc": "2026-04-29T20:05:41Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-20260429.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-03312026xexhibit991.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-003832",
+     "date": "2026-01-28",
+     "accepted_utc": "2026-01-28T21:04:20Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-20260128.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003832/meta-12312025xexhibit991.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter and Full Year 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "MSFT": {
+   "cik": "789019",
+   "kept": [
+    {
+     "accession": "0001193125-26-436122",
+     "date": "2026-10-28",
+     "accepted_utc": "2026-10-28T20:04:44Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-20261028.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm",
+     "quarter": "quarter ended 2026-09-30",
+     "named_as": "quarter ended September 30, 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001193125-26-323632",
+     "date": "2026-07-29",
+     "accepted_utc": "2026-07-29T20:04:53Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+     "quarter": "quarter ended 2026-06-30",
+     "named_as": "quarter ended June 30, 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001193125-26-191457",
+     "date": "2026-04-29",
+     "accepted_utc": "2026-04-29T20:03:31Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-20260429.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-ex99_1.htm",
+     "quarter": "quarter ended 2026-03-31",
+     "named_as": "quarter ended March 31, 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001193125-26-027198",
+     "date": "2026-01-28",
+     "accepted_utc": "2026-01-28T21:04:38Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-20260128.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-ex99_1.htm",
+     "quarter": "quarter ended 2025-12-31",
+     "named_as": "quarter ended December 31, 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "NBIS": {
+   "cik": "1513845",
+   "kept": [],
+   "skipped": [],
+   "note": "no 8-K item 2.02 filings (files 6-K/20-F as a foreign private issuer)"
+  },
+  "NET": {
+   "cik": "1477333",
+   "kept": [
+    {
+     "accession": "0001477333-26-000053",
+     "date": "2026-08-06",
+     "accepted_utc": "2026-08-06T20:20:52Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000053/cloud-20260806.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000053/q226exhibit991.htm",
+     "quarter": "Q2 FY2026",
+     "named_as": "Second Quarter Fiscal 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001477333-26-000033",
+     "date": "2026-05-07",
+     "accepted_utc": "2026-05-07T20:21:23Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000033/cloud-20260507.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000033/q126exhibit991.htm",
+     "quarter": "Q1 FY2026",
+     "named_as": "First Quarter Fiscal 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001477333-26-000008",
+     "date": "2026-02-10",
+     "accepted_utc": "2026-02-10T21:15:47Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000008/cloud-20260210.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1477333/000147733326000008/q425exhibit991.htm",
+     "quarter": "Q4 FY2025",
+     "named_as": "Fourth Quarter and Fiscal Year 2025",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001477333-25-000140",
+     "date": "2025-10-30",
+     "accepted_utc": "2025-10-30T20:16:10Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1477333/000147733325000140/cloud-20251030.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1477333/000147733325000140/q325exhibit991.htm",
+     "quarter": "Q3 FY2025",
+     "named_as": "Third Quarter Fiscal 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "NVDA": {
+   "cik": "1045810",
+   "kept": [
+    {
+     "accession": "0001045810-26-000073",
+     "date": "2026-08-26",
+     "accepted_utc": "2026-08-26T20:21:19Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+     "quarter": "Q2 FY2027",
+     "named_as": "Second Quarter Fiscal 2027",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001045810-26-000051",
+     "date": "2026-05-20",
+     "accepted_utc": "2026-05-20T20:21:19Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/nvda-20260520.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000051/q1fy27pr.htm",
+     "quarter": "Q1 FY2027",
+     "named_as": "First Quarter Fiscal 2027",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001045810-26-000019",
+     "date": "2026-02-25",
+     "accepted_utc": "2026-02-25T21:31:25Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/nvda-20260225.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000019/q4fy26pr.htm",
+     "quarter": "Q4 FY2026",
+     "named_as": "Fourth Quarter and Fiscal 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001045810-25-000228",
+     "date": "2025-11-19",
+     "accepted_utc": "2025-11-19T21:20:44Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/nvda-20251119.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000228/q3fy26pr.htm",
+     "quarter": "Q3 FY2026",
+     "named_as": "Third Quarter Fiscal 2026",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "ORCL": {
+   "cik": "1341439",
+   "kept": [
+    {
+     "accession": "0001193125-26-387905",
+     "date": "2026-09-10",
+     "accepted_utc": "2026-09-10T20:16:50Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/orcl-20260910.htm",
+     "items": "2.02,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526387905/orcl-ex99_1.htm",
+     "quarter": "Q1 FY2027",
+     "named_as": "Q1 FY27",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001193125-26-265848",
+     "date": "2026-06-10",
+     "accepted_utc": "2026-06-10T20:13:46Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-20260610.htm",
+     "items": "2.02,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm",
+     "quarter": "Q4 FY2026",
+     "named_as": "Q4 and FY 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001193125-26-100148",
+     "date": "2026-03-10",
+     "accepted_utc": "2026-03-10T20:12:51Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526100148/orcl-20260310.htm",
+     "items": "2.02,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526100148/orcl-ex99_1.htm",
+     "quarter": "Q3 FY2026",
+     "named_as": "Fiscal Year 2026 Third Quarter",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001193125-25-314207",
+     "date": "2025-12-10",
+     "accepted_utc": "2025-12-10T21:14:38Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525314207/orcl-20251210.htm",
+     "items": "2.02,8.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1341439/000119312525314207/orcl-ex99_1.htm",
+     "quarter": "Q2 FY2026",
+     "named_as": "Fiscal Year 2026 Second Quarter",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "PLTR": {
+   "cik": "1321655",
+   "kept": [
+    {
+     "accession": "0001321655-26-000045",
+     "date": "2026-11-02",
+     "accepted_utc": "2026-11-02T21:06:48Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/pltr-20261102.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
+     "quarter": "Q3 2026",
+     "named_as": "Q3 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001321655-26-000039",
+     "date": "2026-08-03",
+     "accepted_utc": "2026-08-03T20:06:14Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/pltr-20260803.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Q2 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001321655-26-000026",
+     "date": "2026-05-04",
+     "accepted_utc": "2026-05-04T20:06:32Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/pltr-20260504.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+     "quarter": "Q1 2026",
+     "named_as": "Q1 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001321655-26-000004",
+     "date": "2026-02-02",
+     "accepted_utc": "2026-02-02T21:06:08Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/pltr-20260202.htm",
+     "items": "2.02,7.01,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Q4 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [],
+   "note": null
+  },
+  "PONY": {
+   "cik": "1969302",
+   "kept": [],
+   "skipped": [],
+   "note": "no 8-K item 2.02 filings (files 6-K/20-F as a foreign private issuer)"
+  },
+  "TSLA": {
+   "cik": "1318605",
+   "kept": [
+    {
+     "accession": "0001628280-26-066738",
+     "date": "2026-10-21",
+     "accepted_utc": "2026-10-21T20:41:42Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/tsla-20261021.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
+     "quarter": "Q3 2026",
+     "named_as": "third quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-049213",
+     "date": "2026-07-22",
+     "accepted_utc": "2026-07-22T20:35:52Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/tsla-20260722.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049213/exhibit991.htm",
+     "quarter": "Q2 2026",
+     "named_as": "second quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-026551",
+     "date": "2026-04-22",
+     "accepted_utc": "2026-04-22T20:10:44Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026551/tsla-20260422.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026551/exhibit991.htm",
+     "quarter": "Q1 2026",
+     "named_as": "first quarter 2026",
+     "timing": "after market close"
+    },
+    {
+     "accession": "0001628280-26-003837",
+     "date": "2026-01-28",
+     "accepted_utc": "2026-01-28T21:11:04Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003837/tsla-20260128.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003837/exhibit991.htm",
+     "quarter": "Q4 FY2025",
+     "named_as": "Q4 and FY 2025",
+     "timing": "after market close"
+    }
+   ],
+   "skipped": [
+    {
+     "accession": "0001628280-26-064366",
+     "date": "2026-10-02",
+     "accepted_utc": "2026-10-02T13:04:26Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/tsla-20261002.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/exhibit991111111.htm",
+     "reason": "names Q3 2026, the same quarter as a newer kept filing"
+    },
+    {
+     "accession": "0001628280-26-046717",
+     "date": "2026-07-02",
+     "accepted_utc": "2026-07-02T13:01:26Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026046717/tsla-20260702.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026046717/exhibit99111111.htm",
+     "reason": "names Q2 2026, the same quarter as a newer kept filing"
+    },
+    {
+     "accession": "0001628280-26-022956",
+     "date": "2026-04-02",
+     "accepted_utc": "2026-04-02T13:07:13Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026022956/tsla-20260402.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026022956/exhibit9911111.htm",
+     "reason": "names Q1 2026, the same quarter as a newer kept filing"
+    }
+   ],
+   "note": null
+  },
+  "TSM": {
+   "cik": "1046179",
+   "kept": [],
+   "skipped": [],
+   "note": "no 8-K item 2.02 filings (files 6-K/20-F as a foreign private issuer)"
+  },
+  "UBER": {
+   "cik": "1543151",
+   "kept": [
+    {
+     "accession": "0001543151-26-000027",
+     "date": "2026-08-05",
+     "accepted_utc": "2026-08-05T10:56:58Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uber-20260805.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000027/uberq226earningspressrelea.htm",
+     "quarter": "Q2 2026",
+     "named_as": "Second Quarter 2026",
+     "timing": "before market open"
+    },
+    {
+     "accession": "0001543151-26-000019",
+     "date": "2026-05-06",
+     "accepted_utc": "2026-05-06T10:56:33Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000019/uber-20260506.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000019/uberq126earningspressrelea.htm",
+     "quarter": "Q1 2026",
+     "named_as": "First Quarter 2026",
+     "timing": "before market open"
+    },
+    {
+     "accession": "0001543151-26-000011",
+     "date": "2026-02-04",
+     "accepted_utc": "2026-02-04T11:56:12Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000011/uber-20260130.htm",
+     "items": "2.02,5.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000011/uberq425earningspressrelea.htm",
+     "quarter": "Q4 2025",
+     "named_as": "Fourth Quarter and Full Year 2025",
+     "timing": "before market open"
+    },
+    {
+     "accession": "0001543151-25-000030",
+     "date": "2025-11-04",
+     "accepted_utc": "2025-11-04T11:56:06Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000030/uber-20251104.htm",
+     "items": "2.02,9.01",
+     "release": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000030/uberq325earningspressrelea.htm",
+     "quarter": "Q3 2025",
+     "named_as": "Third Quarter 2025",
+     "timing": "before market open"
+    }
+   ],
+   "skipped": [
+    {
+     "accession": "0001543151-26-000039",
+     "date": "2026-11-04",
+     "accepted_utc": "2026-11-04T11:55:39Z",
+     "filing": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uber-20261104.htm",
+     "items": "2.02,5.02,9.01",
+     "reason": "dated 2026-11-04, not before 2026-11-04"
+    }
+   ],
+   "note": null
+  },
+  "WRD": {
+   "cik": "1867729",
+   "kept": [],
+   "skipped": [],
+   "note": "no 8-K item 2.02 filings (files 6-K/20-F as a foreign private issuer)"
+  }
+ }
+}
