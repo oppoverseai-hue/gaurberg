@@ -412,3 +412,40 @@ a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decora
 .mcell-btn.up { color:var(--up); } .mcell-btn.down { color:var(--down); } .mcell-btn.muted { color:var(--muted); }
 .mcell-btn:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
 .mcell-pop { position:fixed; z-index:60; width:max-content; white-space:normal; text-align:left; padding:6px 8px; border-radius:6px; background:var(--surface-high); border:1px solid var(--line-strong); color:var(--fg); font:11px/15px var(--mono); box-shadow:0 8px 20px rgba(0,0,0,.45); }
+
+/* Who is exposed as a matrix (GRF-19, GRF-17, UX-4). Group colours match the map's sides; plain SVG, no chart library. */
+:root { --xm-into:#60a5fa; --xm-out:#34d399; --xm-both:#c084fc; --xm-part:#fbbf24; --xm-comp:#f87171; }
+.xm-page { max-width:1240px; }
+.xm-bar { display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; justify-content:space-between; margin:12px 0; }
+.xm-dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+.xm-body { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:16px; align-items:start; }
+.xm-main { min-width:0; }
+.xm-off { display:none; }
+.xm-chart { width:100%; height:auto; background:var(--surface-mid); border:1px solid var(--line); border-radius:12px; }
+.xm-grid { stroke:var(--line-subtle); } .xm-zero { stroke:var(--line-strong); }
+.xm-tick { fill:var(--muted); font:10px var(--mono); } .xm-axis { fill:var(--fg2); font:11px var(--mono); }
+.xm-pt { cursor:pointer; outline:none; } .xm-pt circle { stroke:var(--surface-mid); stroke-width:2; }
+.xm-pt:focus-visible circle, .xm-pt.sel circle { stroke:var(--fg); stroke-width:2.5; }
+.xm-lbl { fill:var(--fg2); font:10px var(--mono); pointer-events:none; }
+.xm-note { font:11px var(--mono); color:var(--fg2); margin:8px 0 0; }
+.xm-table td { white-space:normal; } .xm-table td.mono { white-space:nowrap; }
+.xm-sort { background:none; border:0; padding:0; color:inherit; font:inherit; cursor:pointer; }
+.xm-name { background:none; border:0; padding:0; color:var(--accent); font:600 13px var(--sans); cursor:pointer; text-align:left; }
+.xm-table tr.sel td { background:var(--surface-high); }
+.xm-src { font:11px var(--mono); color:var(--fg2); margin-top:2px; } .xm-table td.xm-kinds { font-size:12px; color:var(--fg2); min-width:180px; text-align:left; }
+.xm-table .xtk { margin-left:6px; } .xm-table .tag { margin-left:6px; }
+.xm-na { text-align:left !important; } .xm-na small { display:block; color:var(--muted); font-size:11px; }
+.xm-panel { background:var(--surface-mid); border:1px solid var(--line); border-radius:12px; padding:16px; position:sticky; top:64px; max-height:calc(100vh - 88px); overflow:auto; }
+.xm-panel h3 { margin:0 0 6px; } .xm-kv { margin:0 0 6px; font-size:12px; color:var(--fg2); }
+.xm-links { margin:0 0 8px; padding-left:18px; font-size:13px; }
+.xm-dl { margin:0 0 10px; } .xm-dl div { display:flex; justify-content:space-between; gap:12px; padding:4px 0; border-top:1px solid var(--line-subtle); font-size:12px; } .xm-dl dt { color:var(--fg2); } .xm-dl dd { margin:0; text-align:right; }
+.xm-moves { list-style:none; margin:0 0 10px; padding:0; font-size:12px; } .xm-moves li { display:flex; justify-content:space-between; gap:8px; padding:3px 0; flex-wrap:wrap; }
+.xm-ev { margin-bottom:10px; } .xm-evh { margin:0 0 4px; font-weight:600; font-size:13px; }
+.xm-ev blockquote { margin:4px 0; padding:6px 10px; border-left:2px solid var(--line-strong); font-size:12px; color:var(--fg2); } .xm-ev footer { font:11px var(--mono); margin-top:4px; }
+@media (max-width:1000px) { .xm-body { grid-template-columns:minmax(0,1fr); } .xm-panel { position:static; max-height:none; } }
+/* Phone: the table is the view (the chart and its toggle are hidden), and the panel sits above the table. */
+@media (max-width:600px) {
+  .xm-chartwrap, .xm-toggle { display:none; }
+  .xm-phone-on { display:block; }
+  .xm-body { display:flex; flex-direction:column; align-items:stretch; } .xm-main { width:100%; } .xm-panel { order:-1; }
+}
