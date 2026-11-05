@@ -1,0 +1,555 @@
+{
+ "_note": "Read-only export from Supabase on 2026-11-06: seed companies, promoted Finnhub earnings rows dated 2026-11-06 or later (no staged rows existed), promoted link counts, companies with promoted SEC 8-K report dates, companies with a company_metrics row.",
+ "today": "2026-11-06",
+ "cos": [
+  {
+   "id": 10,
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 40,
+   "ticker": "GOOGL",
+   "name": "Alphabet",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 47,
+   "ticker": "AMZN",
+   "name": "Amazon",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 3,
+   "ticker": "AAPL",
+   "name": "Apple",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 26,
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 273,
+   "ticker": "AML",
+   "name": "Aston Martin Lagonda",
+   "markets": [
+    "LSE"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 53,
+   "ticker": "AUR",
+   "name": "Aurora",
+   "markets": [
+    "US"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 63,
+   "ticker": "BIDU",
+   "name": "Baidu",
+   "markets": [
+    "US",
+    "HKEX"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 395,
+   "ticker": "BYIT",
+   "name": "Bytes Technology Group",
+   "markets": [
+    "LSE"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 18,
+   "ticker": "CBRS",
+   "name": "Cerebras Systems",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 16,
+   "ticker": "NET",
+   "name": "Cloudflare",
+   "markets": [
+    "US"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 385,
+   "ticker": "CCC",
+   "name": "Computacenter",
+   "markets": [
+    "LSE"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 17,
+   "ticker": "CRWV",
+   "name": "CoreWeave",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 11,
+   "ticker": "DASH",
+   "name": "DoorDash",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 34,
+   "ticker": "GRAB",
+   "name": "Grab",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 41,
+   "ticker": "CART",
+   "name": "Instacart",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 60,
+   "ticker": "INTC",
+   "name": "Intel",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 374,
+   "ticker": "0992",
+   "name": "Lenovo",
+   "markets": [
+    "HKEX"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 42,
+   "ticker": "LIME",
+   "name": "Lime",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 33,
+   "ticker": "LCID",
+   "name": "Lucid",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 20,
+   "ticker": "LYFT",
+   "name": "Lyft",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 4,
+   "ticker": "META",
+   "name": "Meta Platforms",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 5,
+   "ticker": "MSFT",
+   "name": "Microsoft",
+   "markets": [
+    "US"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 19,
+   "ticker": "NBIS",
+   "name": "Nebius Group",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 8,
+   "ticker": "NVDA",
+   "name": "NVIDIA",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 61,
+   "ticker": "ORCL",
+   "name": "Oracle",
+   "markets": [
+    "US"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 7,
+   "ticker": "PLTR",
+   "name": "Palantir Technologies",
+   "markets": [
+    "US"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 458,
+   "ticker": "PONY",
+   "name": "Pony.ai",
+   "markets": [
+    "US",
+    "HKEX"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 372,
+   "ticker": "SCT",
+   "name": "Softcat",
+   "markets": [
+    "LSE"
+   ],
+   "segment": "business"
+  },
+  {
+   "id": 9,
+   "ticker": "TSM",
+   "name": "Taiwan Semiconductor Manufacturing",
+   "markets": [
+    "US"
+   ],
+   "segment": "infrastructure"
+  },
+  {
+   "id": 43,
+   "ticker": "TSLA",
+   "name": "Tesla",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 1,
+   "ticker": "UBER",
+   "name": "Uber Technologies",
+   "markets": [
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 316,
+   "ticker": "VOD",
+   "name": "Vodafone Group",
+   "markets": [
+    "LSE",
+    "US"
+   ],
+   "segment": "consumer"
+  },
+  {
+   "id": 424,
+   "ticker": "WRD",
+   "name": "WeRide",
+   "markets": [
+    "US",
+    "HKEX"
+   ],
+   "segment": "business"
+  }
+ ],
+ "events": [
+  {
+   "company_id": 33,
+   "event_date": "2026-11-09",
+   "detail": "Q3 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:21:26Z"
+  },
+  {
+   "company_id": 17,
+   "event_date": "2026-11-10",
+   "detail": "Q3 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:19Z"
+  },
+  {
+   "company_id": 18,
+   "event_date": "2026-11-12",
+   "detail": "Q3 2026",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:21:30Z"
+  },
+  {
+   "company_id": 19,
+   "event_date": "2026-11-12",
+   "detail": "Q3 2026",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:23Z"
+  },
+  {
+   "company_id": 63,
+   "event_date": "2026-11-16",
+   "detail": "Q3 2026, before market open",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:21:22Z"
+  },
+  {
+   "company_id": 8,
+   "event_date": "2026-11-17",
+   "detail": "Q3 2027, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:20:58Z"
+  },
+  {
+   "company_id": 458,
+   "event_date": "2026-11-18",
+   "detail": "Q3 2026",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:10Z"
+  },
+  {
+   "company_id": 424,
+   "event_date": "2026-11-23",
+   "detail": "Q3 2026",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:15Z"
+  },
+  {
+   "company_id": 61,
+   "event_date": "2026-12-08",
+   "detail": "Q2 2027",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:28Z"
+  },
+  {
+   "company_id": 26,
+   "event_date": "2027-01-05",
+   "detail": "Q2 2027",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:21:39Z"
+  },
+  {
+   "company_id": 9,
+   "event_date": "2027-01-13",
+   "detail": "Q4 2026, before market open",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:21:03Z"
+  },
+  {
+   "company_id": 60,
+   "event_date": "2027-01-20",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:06Z"
+  },
+  {
+   "company_id": 5,
+   "event_date": "2027-01-26",
+   "detail": "Q2 2027",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:20:50Z"
+  },
+  {
+   "company_id": 4,
+   "event_date": "2027-01-26",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:20:45Z"
+  },
+  {
+   "company_id": 43,
+   "event_date": "2027-01-26",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:21:57Z"
+  },
+  {
+   "company_id": 3,
+   "event_date": "2027-01-27",
+   "detail": "Q1 2027",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:20:41Z"
+  },
+  {
+   "company_id": 10,
+   "event_date": "2027-02-01",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:21:08Z"
+  },
+  {
+   "company_id": 7,
+   "event_date": "2027-02-01",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:20:54Z"
+  },
+  {
+   "company_id": 1,
+   "event_date": "2027-02-02",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:20:36Z"
+  },
+  {
+   "company_id": 40,
+   "event_date": "2027-02-02",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:32Z"
+  },
+  {
+   "company_id": 47,
+   "event_date": "2027-02-03",
+   "detail": "Q4 2026, after market close",
+   "status": "promoted",
+   "fetched_at": "2026-11-05T11:22:37Z"
+  }
+ ],
+ "links": {
+  "10": 30,
+  "40": 16,
+  "47": 19,
+  "3": 2,
+  "26": 24,
+  "273": 16,
+  "53": 21,
+  "63": 28,
+  "395": 25,
+  "18": 31,
+  "16": 3,
+  "385": 10,
+  "17": 22,
+  "11": 14,
+  "34": 42,
+  "41": 7,
+  "60": 31,
+  "374": 22,
+  "42": 3,
+  "33": 14,
+  "20": 21,
+  "4": 10,
+  "5": 21,
+  "19": 22,
+  "8": 34,
+  "61": 22,
+  "7": 4,
+  "458": 32,
+  "372": 10,
+  "9": 20,
+  "43": 9,
+  "1": 54,
+  "316": 37,
+  "424": 43
+ },
+ "secIds": [
+  10,
+  40,
+  47,
+  3,
+  26,
+  53,
+  18,
+  16,
+  17,
+  11,
+  41,
+  60,
+  42,
+  33,
+  20,
+  4,
+  5,
+  8,
+  61,
+  7,
+  43,
+  1
+ ],
+ "loadedIds": [
+  10,
+  40,
+  47,
+  3,
+  26,
+  53,
+  63,
+  18,
+  16,
+  17,
+  11,
+  34,
+  41,
+  60,
+  42,
+  33,
+  20,
+  4,
+  5,
+  19,
+  8,
+  61,
+  7,
+  458,
+  9,
+  43,
+  1,
+  424
+ ]
+}
