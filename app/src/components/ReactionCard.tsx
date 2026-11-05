@@ -6,6 +6,7 @@ import { isMapped, type Co } from "@/lib/graph";
 import type { ReactionData } from "@/lib/reaction";
 import type { ReportCol } from "@/lib/reaction-core";
 import { possessive } from "@/lib/about-core";
+import MoveCell from "@/components/MoveCell";
 
 const day = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 const short = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
@@ -43,7 +44,7 @@ export default function ReactionCard({ name, data }: { name: string; data: React
                     <td>{!r.focal && isMapped(r.co as Co) ? <Link href={`/company/${r.co.ticker}`}>{r.co.name}</Link> : r.co.name}</td>
                     {r.moves.map((m, i) => (
                       <td key={t.cols[i].date} className="mono">
-                        {"pct" in m ? <span className={m.pct >= 0 ? "up" : "down"} title={compared(t.cols[i]) ?? undefined}>{m.pct >= 0 ? "+" : ""}{m.pct.toFixed(1)}%</span> : <span className="muted" title={m.missing}>n/a</span>}
+                        {"pct" in m ? <MoveCell text={`${m.pct >= 0 ? "+" : ""}${m.pct.toFixed(1)}%`} cls={m.pct >= 0 ? "up" : "down"} note={compared(t.cols[i]) ?? ""} /> : <MoveCell text="n/a" cls="muted" note={m.missing} />}
                       </td>
                     ))}
                   </tr>
@@ -55,7 +56,7 @@ export default function ReactionCard({ name, data }: { name: string; data: React
             <ul className="rx-notes">{t.cols.filter((c) => c.reaction.kind === "flag").map((c) => <li key={c.date}>{c.quarter}: {c.reaction.kind === "flag" ? c.reaction.reason : ""}.</li>)}</ul>
           )}
           <p className="muted mono" style={{ fontSize: 11, margin: "8px 0 0" }}>
-            1-day close-to-close move. Reports before the open use that day against the previous close; reports after the close use the next trading day against that day&apos;s close. Hover a move for the dates compared, or n/a for the missing close.
+            1-day close-to-close move. Reports before the open use that day against the previous close; reports after the close use the next trading day against that day&apos;s close. Hover or tap a move for the dates compared, or n/a for the missing close.
             {t.unpriced ? ` ${t.unpriced} linked ${t.unpriced === 1 ? "company has" : "companies have"} no stored prices (listed outside the US, or not loaded yet).` : ""}
             {" "}A move on that day is a fact about the price, not a claim that the report caused it.
           </p>

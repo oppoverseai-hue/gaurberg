@@ -103,3 +103,16 @@ export function reactionTable<C extends { id: number; name: string }>(reports: R
   const priced = others.filter((c) => (closes.get(c.id)?.size ?? 0) > 0);
   return { cols, rows: [rowOf(focal, true), ...priced.map((c) => rowOf(c, false))], unpriced: others.length - priced.length };
 }
+
+export type OwnReport = { quarter: string; date: string; url: string; timing: Timing; move: Move; compared: string | null };
+
+/** The focal company's own last reports for the Earnings tab: each column of the reaction table with the company's own move
+ *  (its row is always first). Nothing new is read or estimated. */
+export function ownReports<C extends { id: number; name: string }>(t: ReturnType<typeof reactionTable<C>>): OwnReport[] {
+  const own = t.rows.find((r) => r.focal);
+  return t.cols.map((c, i) => ({
+    quarter: c.quarter, date: c.date, url: c.url, timing: c.reaction.timing,
+    move: own?.moves[i] ?? { missing: "No stored closes" },
+    compared: c.reaction.kind === "day" ? `${c.reaction.day} close vs ${c.reaction.prev} close` : null,
+  }));
+}
