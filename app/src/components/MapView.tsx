@@ -297,14 +297,19 @@ function CohortList({ side, all, page, q, onQ, onPick, onClose, selId }: { side:
 function Badge({ rel }: { rel: Rel }) { const b = badgeOf(rel); return <span className={`badge ${b.cls}`}><span aria-hidden>{glyph(b.cls)}</span>{b.label}</span>; }
 
 type Headline = { item: { headline: string; source: string; ts: number; url: string } | null; note: string | null };
-function HeadlineLine({ co }: { co: Co }) {
+// Latest headline naming the company, last 7 days (/api/headline; TRM-4). Shared by the link panel and the company preview.
+function useHeadline(ticker: string | null): { h: Headline | null; err: boolean } {
   const [h, setH] = useState<Headline | null>(null);
   const [err, setErr] = useState(false);
   useEffect(() => {
     setH(null); setErr(false);
-    if (!co.ticker) return;
-    fetch(`/api/headline/${co.ticker}`).then((r) => (r.ok ? r.json() : Promise.reject())).then(setH).catch(() => setErr(true));
-  }, [co.ticker]);
+    if (!ticker) return;
+    fetch(`/api/headline/${ticker}`).then((r) => (r.ok ? r.json() : Promise.reject())).then(setH).catch(() => setErr(true));
+  }, [ticker]);
+  return { h, err };
+}
+function HeadlineLine({ co }: { co: Co }) {
+  const { h, err } = useHeadline(co.ticker);
   if (!co.ticker) return <div className="r"><span>{co.name}</span><span className="muted">Not listed, no news feed</span></div>;
   const day = h?.item ? new Date(h.item.ts * 1000).toISOString().slice(0, 10) : "";
   return (
@@ -375,6 +380,14 @@ function GeoBlock({ rows, cr }: { rows?: GeoRow[]; cr: CountryRegion }) {
   );
 }
 
+function PreviewNews({ co }: { co: Co }) {
+  const { h, err } = useHeadline(co.ticker);
+  if (err) return <span className="warn">news unavailable</span>;
+  if (!h) return <span>loading…</span>;
+  if (!h.item) return <span>{h.note}</span>;
+  return <Link href={`/company/${co.ticker}#news`}>{h.item.headline} · {h.item.source} · {new Date(h.item.ts * 1000).toISOString().slice(0, 10)}</Link>;
+}
+
 function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { co: Co; focal: Co; onClose: () => void; onRecenter: (t: string) => void; geo?: GeoRow[]; countryRegion: CountryRegion }) {
   const mapped = isMapped(co);
   const [data, setData] = useState<Preview | null>(null);
@@ -406,7 +419,7 @@ function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { c
           {q && <p className="muted mono" style={{ fontSize: 11, margin: "6px 0 0" }}>Previous close {q.prevClose.toFixed(2)} · Day range {q.low.toFixed(2)} – {q.high.toFixed(2)}</p>}
           <p className="muted mono" style={{ fontSize: 11, margin: "4px 0 0" }}>{segmentLabel(data.company.segment) ?? "Segment not set"} · {data.company.size_tier ? `${segmentLabel(data.company.size_tier)} cap` : "Size not set"}</p>
           <div className="counts"><div><b>{data.counts.suppliers}</b>Suppliers</div><div><b>{data.counts.customers}</b>Customers</div><div><b>{data.counts.partners}</b>Partners</div><div><b>{data.counts.rivals}</b>Rivals</div></div>
-          <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: {data.about ? data.about.split(/(?<=\.)\s/).slice(0, 2).join(" ") : "not available yet"}<br />Latest news: not available right now</p>
+          <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: {data.about ? data.about.split(/(?<=\.)\s/).slice(0, 2).join(" ") : "not available yet"}<br />Latest news: <PreviewNews co={co} /></p>
           <div className="actions">
             <Link className="chip" href={`/company/${co.ticker}`}>Open full page</Link>
             {co.id !== focal.id && <button className="chip" onClick={() => onRecenter(co.ticker!)}>Recenter map here</button>}

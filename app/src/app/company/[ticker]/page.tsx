@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsPanel from "@/components/NewsPanel";
 import { getStoredInsiderTrades } from "@/lib/insiders";
 import { cachedMarket, cachedNews } from "@/lib/page-cache";
+import { offlineNews } from "@/lib/news";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
@@ -78,7 +79,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
     timed("links", getRels(company.id).then(async (r) => { const [around, reaction] = await Promise.all([getAround(r.rels, company.id), getReaction(company, r.rels)]); return { rels: r.rels, around, reaction }; })),
     timed("metrics", getMetrics(company.id)),
     timed("events", getUpcomingEvents(company.id)),
-    timed("news", isOffline() ? Promise.resolve({ items: [], errors: ["Offline: news is not saved for the offline demo."] }) : cachedNews(company)),
+    timed("news", isOffline() ? Promise.resolve(offlineNews(company)) : cachedNews(company)),
     timed("insiders", isOffline() ? Promise.resolve({ trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } as Awaited<ReturnType<typeof getStoredInsiderTrades>>) : getStoredInsiderTrades(company)),
   ]);
   console.info(`[company] ${ticker} data in ${Date.now() - t0} ms (${Object.entries(ms).map(([k, v]) => `${k} ${v}`).join(", ")})`);
@@ -165,7 +166,7 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
           </div>
           <div className="card" id="news">
             <div className="cardhead"><h3>Recent news</h3><SourceTip text="Finnhub company news and SEC EDGAR filings, last 30 days, refreshed every 5 minutes" /></div>
-            <NewsPanel items={news.items} errors={news.errors} />
+            <NewsPanel items={news.items} market={news.market} name={company.name} ticker={company.ticker} errors={news.errors} />
           </div>
         </section>
         <aside className="stack">

@@ -1,8 +1,11 @@
 // Recent news for one company (TRM-7): news and press releases from Finnhub (free plan), SEC filings from EDGAR. Server only.
+import fs from "node:fs";
 import { liveSymbol, type Listing } from "@/lib/listing";
 import { isFinnhubNewsUrl, newsHref } from "@/lib/news-link";
+import { splitNews, type NewsCo } from "@/lib/news-core";
 export type NewsItem = { kind: "news" | "press" | "filing"; headline: string; source: string; ts: number; url: string; link: string };
-export type NewsResult = { items: NewsItem[]; errors: string[] };
+// items: news that names the company, and its SEC filings. market: the rest of the feed, shown apart as "Market news" (TRM-4).
+export type NewsResult = { items: NewsItem[]; market: NewsItem[]; errors: string[] };
 
 const UA = "Gaurberg Research abhishek.g16@fms.edu";
 const WIRE = /business wire|pr newswire|prnewswire|globenewswire|accesswire|newsfile/i;
@@ -79,11 +82,22 @@ async function secFilings(ticker: string): Promise<{ items: NewsItem[]; error?: 
   }
 }
 
+// Offline demo: news is not saved. For local screenshots only (the offline demo never runs on Vercel), DEV_NEWS_FIXTURE can name a
+// saved read-only export of Finnhub items by ticker, run through the same relevance split as live news.
+export function offlineNews(co: Listing & NewsCo): NewsResult {
+  const f = process.env.DEV_NEWS_FIXTURE;
+  const raw = f && co.ticker ? (JSON.parse(fs.readFileSync(f, "utf8")) as Record<string, { headline: string; source: string; datetime: number; url: string }[]>)[co.ticker] : undefined;
+  if (!raw) return { items: [], market: [], errors: ["Offline: news is not saved for the offline demo."] };
+  const items = raw.map((x) => ({ kind: WIRE.test(x.source) ? ("press" as const) : ("news" as const), headline: x.headline, source: x.source || "Unknown source", ts: x.datetime, url: x.url, link: newsHref(x.url, x.headline, x.source || "") }));
+  const { company, market } = splitNews(items.sort((a, b) => b.ts - a.ts), co);
+  return { items: company, market, errors: [] };
+}
+
 // Takes the company: Finnhub and SEC look up by bare ticker, which is only safe for a US-primary listing (lib/listing.ts).
-export async function getNews(co: Listing): Promise<NewsResult> {
+export async function getNews(co: Listing & NewsCo): Promise<NewsResult> {
   const sym = liveSymbol(co);
-  if (!sym) return { items: [], errors: ["Live news covers US-primary listings only."] };
+  if (!sym) return { items: [], market: [], errors: ["Live news covers US-primary listings only."] };
   const [n, f] = await Promise.all([finnhubNews(sym), secFilings(sym)]);
-  const items = [...n.items, ...f.items].sort((a, b) => b.ts - a.ts);
-  return { items, errors: [n.error, f.error].filter((x): x is string => !!x) };
+  const { company, market } = splitNews([...n.items, ...f.items].sort((a, b) => b.ts - a.ts), co);
+  return { items: company, market, errors: [n.error, f.error].filter((x): x is string => !!x) };
 }

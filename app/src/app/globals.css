@@ -395,3 +395,5 @@ a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decora
 .rx th { font:600 12px var(--sans); color:var(--fg); } .rx th small { display:block; font:11px var(--mono); color:var(--fg2); font-weight:400; }
 .rx tr.focal td { font-weight:600; background:var(--surface-high); }
 .rx-notes { margin:8px 0 0; padding-left:18px; font:11px var(--mono); color:var(--fg2); }
+/* Market news (TRM-4): the rest of a company's feed, apart and collapsed */
+.market-news { margin-top:12px; border-top:1px solid var(--line-subtle); padding-top:8px; } .market-news summary { cursor:pointer; font:12px var(--mono); color:var(--fg2); }

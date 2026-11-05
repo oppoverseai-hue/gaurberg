@@ -6,9 +6,10 @@ import { unstable_cache } from "next/cache";
 import { getMarket } from "@/lib/market";
 import { getNews } from "@/lib/news";
 import type { Listing } from "@/lib/listing";
+import type { NewsCo } from "@/lib/news-core";
 
 export const PAGE_CACHE_S = 300;
 const key = (co: Listing) => [co.ticker ?? "", (co.markets ?? []).join(",")];
 
 export const cachedMarket = (co: Listing) => unstable_cache(() => getMarket(co), ["company-market", ...key(co)], { revalidate: PAGE_CACHE_S })();
-export const cachedNews = (co: Listing) => unstable_cache(() => getNews(co), ["company-news", ...key(co)], { revalidate: PAGE_CACHE_S })();
+export const cachedNews = (co: Listing & NewsCo) => unstable_cache(() => getNews(co), ["company-news", ...key(co)], { revalidate: PAGE_CACHE_S })();
