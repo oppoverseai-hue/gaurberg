@@ -46,8 +46,15 @@ function Quote({ e }: { e: Evidence }) {
 }
 
 // One link on a company's row: what it says, its kind of share and trust badge, and its evidence.
+// Reviewed links carry no badge (the page says once that its links are reviewed); a badge marks only a link that is not
+// reviewed, such as live-generated or sample data (UX-4).
+const REVIEWED = new Set(["b-verified", "b-curated"]);
+const unreviewed = (r: ExpLink["rel"]) => !REVIEWED.has(badgeOf(r).cls);
+// "SEC filing, Dec 2025" for a link, and its document when one is saved.
+const sourceOf = (r: ExpLink["rel"]) => { const asOf = monthYear(r.as_of_date); return `${sourceLabel(r)}${asOf ? `, ${asOf}` : ""}`; };
+
 function LinkLine({ l, focal }: { l: ExpLink; focal: { id: number; name: string } }) {
-  const r = l.rel, b = badgeOf(r), asOf = monthYear(r.as_of_date);
+  const r = l.rel, b = badgeOf(r);
   // For a ranked link, show the saved quote that states the figure.
   const proof = l.weight != null ? r.evidence.find((e) => figureInQuote(l.weight!, [e.quote])) : undefined;
   return (
@@ -55,8 +62,7 @@ function LinkLine({ l, focal }: { l: ExpLink; focal: { id: number; name: string 
       <p className="xmeta">
         <strong className="xrel">{relationText(r, focal.id, focal.name)}</strong>
         {l.kind && <span className="tag" title={KIND_TIP[l.kindLabel]}>{l.kindLabel}</span>}
-        <span className={`badge ${b.cls}`} title={BADGE_MEANING[b.label]}>{b.label}</span>
-        <span>{sourceLabel(r)}{asOf ? `, ${asOf}` : ""}</span>
+        {unreviewed(r) && <span className={`badge ${b.cls}`} title={BADGE_MEANING[b.label]}>{b.label}</span>}
       </p>
       {l.text !== NOT_DISCLOSED && l.text !== NO_SIZE && <p className="xtext">{l.text}</p>}
       {l.flag && <p className="xflag">⚠ {l.flag}</p>}
@@ -72,6 +78,16 @@ function LinkLine({ l, focal }: { l: ExpLink; focal: { id: number; name: string 
 }
 
 // One row per company (GRF-17): every link it has with the focal company, lead link first.
+// The sources of a company's links, once each ("SEC filing, Dec 2025"), each linked to its first saved document.
+function sources(x: ExpRow): { label: string; url: string | null }[] {
+  const by = new Map<string, string | null>();
+  for (const l of x.links) {
+    const label = sourceOf(l.rel), url = l.rel.evidence.find((e) => e.document_url)?.document_url ?? null;
+    if (!by.has(label) || (!by.get(label) && url)) by.set(label, url);
+  }
+  return [...by].map(([label, url]) => ({ label, url }));
+}
+
 function Row({ x, earnings, focal, cm }: { x: ExpRow; earnings?: string; focal: { id: number; name: string }; cm?: Comove }) {
   return (
     <div className="xrow">
@@ -83,6 +99,7 @@ function Row({ x, earnings, focal, cm }: { x: ExpRow; earnings?: string; focal: 
         {x.links.length > 1 && <span className="muted mono" style={{ fontSize: 11 }}>{x.links.length} links</span>}
         {x.weight != null && <span className="xw">{x.weight}%</span>}
       </div>
+      <p className="xmeta xsrc">{sources(x).map((s, i) => <span key={s.label}>{i ? " · " : ""}{s.url ? <a href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a> : s.label}</span>)}</p>
       {x.links.map((l) => <LinkLine key={l.rel.id} l={l} focal={focal} />)}
       {(earnings || cm) && (
         <p className="xmeta">
@@ -134,6 +151,10 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
       <h1 style={{ marginTop: 12 }}>Who is exposed to {co.name} <span className="tag">{ticker}</span></h1>
       {!error && summary && <p className="xsum">{summary}</p>}
       {!error && mapLine && <p className="muted mono" style={{ fontSize: 11, margin: "0 0 8px" }} title="Each company sits in one group, by the same rule as the ecosystem map">Map groups: {mapLine}</p>}
+      {!error && (() => {
+        const n = all.reduce((a, x) => a + x.links.filter((l) => unreviewed(l.rel)).length, 0);
+        return <p className="muted mono" style={{ fontSize: 11, margin: "0 0 8px" }}>{n === 0 ? "All links shown are reviewed." : `All links shown are reviewed except ${n} marked ${n === 1 ? "link" : "links"}.`}</p>;
+      })()}
       {!error && live > 0 && (
         <p className="xflag">Reviewed links only: {live} live-generated {live === 1 ? "link" : "links"} (not reviewed) {live === 1 ? "is" : "are"} on the map but not on this page, so some counts here are lower than the map's.</p>
       )}

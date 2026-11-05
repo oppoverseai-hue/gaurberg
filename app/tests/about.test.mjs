@@ -38,3 +38,10 @@ test("Finnhub's industry is its own row, and the row is left out when Finnhub ha
   assert.equal(row(aboutRows({ segment: "business", size_tier: null }, { industry: "" }), INDUSTRY), undefined, "an empty value is no value");
   assert.equal(row(aboutRows({ segment: null, size_tier: null }, { industry: "Technology" }), SEGMENT)[1], null, "no segment reads Not available, never the industry");
 });
+
+test("possessive: a name ending in s takes only an apostrophe", async () => {
+  const { possessive } = await import("../src/lib/about-core.ts");
+  assert.equal(possessive("Uber Technologies"), "Uber Technologies'");
+  assert.equal(possessive("Lyft"), "Lyft's");
+  assert.equal(possessive("Meta Platforms"), "Meta Platforms'");
+});

@@ -6,6 +6,7 @@ import Link from "next/link";
 import SourceTip from "@/components/SourceTip";
 import { isMapped } from "@/lib/graph";
 import type { Move, Report } from "@/lib/around-core";
+import { possessive } from "@/lib/about-core";
 
 const day = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
 const timing = (detail: string | null) => (detail?.includes("before market open") ? "before open" : detail?.includes("after market close") ? "after close" : null);
@@ -40,7 +41,8 @@ export default function AroundStrip({ name, reports, moves, linked, withPrices }
   );
   return (
     <div className="card around" id="around">
-      <div className="cardhead"><h3>Around {name}</h3><SourceTip text={`The ${linked} companies linked to ${name} in reviewed filings: their earnings dates (Finnhub calendar) and last closes, refreshed daily. A listed date or move is a fact about that company, not a claim that it affects ${name}.`} /></div>
+      <div className="cardhead"><h3>Linked companies reporting soon</h3><SourceTip text={`The ${linked} companies linked to ${name} in reviewed filings: their earnings dates (Finnhub calendar) and last closes, refreshed daily. A listed date or move is a fact about that company, not a claim that it affects ${name}.`} /></div>
+      <p className="muted around-lede">Reports from companies linked to {name}. {possessive(name)} own date is in the key numbers.</p>
       {moves.length ? (
         <div className="around-grid">
           {reportList}
