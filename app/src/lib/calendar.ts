@@ -1,29 +1,65 @@
-// Events calendar data (TRM-13, server only). Reads companies, company_events and which companies have a visible
-// company_metrics row, all through row-level security (allowed users: promoted rows; the admin: staged too). No writes.
+// Earnings calendar data (TRM-13, GRF-20, server only). Reads only; no writes.
+// Through row-level security: seed companies, promoted Finnhub earnings rows from today on, promoted link counts, which companies have
+// a promoted SEC 8-K report date, and which have a visible company_metrics row. Staged Finnhub rows from today on ("date changes under
+// review") are read for the admin only, as the admin page reads: the role is checked first, then the signed-in client under RLS.
+import fs from "node:fs";
 import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
 import { readSnapshot } from "@/lib/saved";
-import type { EventRow } from "@/lib/metrics-core";
-import type { CalCo } from "@/lib/calendar-core";
+import { readStagedForAdmin, type CalCo, type CalEvent, type StagedRow } from "@/lib/calendar-core";
 
-export type CalData = { cos: CalCo[]; events: EventRow[]; loadedIds: Set<number>; offline: boolean; error: boolean };
+export type CalData = { cos: CalCo[]; events: CalEvent[]; links: Record<number, number>; secIds: number[]; loadedIds: number[]; review: boolean; offline: boolean; error: boolean };
+const asStaged = (rows: StagedRow[]): CalEvent[] => rows.map((x) => ({ ...x, detail: null, status: "staged", fetched_at: "" }));
 
-export async function loadCalendar(today: string, until: string): Promise<CalData> {
+const PAGE = 1000; // the API's row limit per request
+
+export async function loadCalendar(today: string, role: string): Promise<CalData> {
   if (isOffline()) {
-    const cos = (readSnapshot()?.companies ?? []).filter((c) => c.is_seed && c.ticker) as unknown as CalCo[];
-    return { cos, events: [], loadedIds: new Set(), offline: true, error: false };
+    // Local screenshots only (the offline demo never runs on Vercel): a saved read-only export, as in tests/fixtures.
+    const f = process.env.DEV_CALENDAR_FIXTURE;
+    if (f) {
+      const fx = JSON.parse(fs.readFileSync(f, "utf8")) as { cos: CalCo[]; events: CalEvent[]; links: Record<number, number>; secIds: number[]; loadedIds: number[] };
+      const staged = await readStagedForAdmin(role, async () => fx.events.filter((e) => e.status === "staged"));
+      return { ...fx, events: [...fx.events.filter((e) => e.status === "promoted"), ...asStaged(staged.rows)], review: staged.shown, offline: false, error: false };
+    }
+    const cos = (readSnapshot()?.companies ?? []).filter((c) => c.is_seed) as unknown as CalCo[];
+    return { cos, events: [], links: {}, secIds: [], loadedIds: [], review: false, offline: true, error: false };
   }
   const supabase = await supabaseServer();
-  const cos = ((await supabase.from("companies").select("id,ticker,name,markets").eq("is_seed", true).not("ticker", "is", null)).data ?? []) as CalCo[];
-  const ids = cos.map((c) => c.id);
-  if (!ids.length) return { cos, events: [], loadedIds: new Set(), offline: false, error: false };
-  const [e, m] = await Promise.all([
-    supabase.from("company_events").select("company_id,event_date,event_type,detail,source,fetched_at,status").in("company_id", ids).neq("status", "rejected").gte("event_date", today).lte("event_date", until),
+  const c = await supabase.from("companies").select("id,ticker,name,markets,segment").eq("is_seed", true);
+  const cos = (c.data ?? []) as CalCo[];
+  const ids = cos.map((x) => x.id);
+  if (!ids.length) return { cos, events: [], links: {}, secIds: [], loadedIds: [], review: false, offline: false, error: !!c.error };
+  let stagedError = false;
+  const [e, s, sec, m] = await Promise.all([
+    supabase.from("company_events").select("company_id,event_date,detail,status,fetched_at").in("company_id", ids).eq("event_type", "earnings").eq("source", "finnhub").eq("status", "promoted").gte("event_date", today),
+    readStagedForAdmin(role, async () => {
+      const r = await supabase.from("company_events").select("company_id,event_date").in("company_id", ids).eq("event_type", "earnings").eq("source", "finnhub").eq("status", "staged").gte("event_date", today);
+      stagedError = !!r.error;
+      return (r.data ?? []) as StagedRow[];
+    }),
+    supabase.from("company_events").select("company_id").in("company_id", ids).eq("event_type", "earnings").eq("status", "promoted").like("source", "https://www.sec.gov/%"),
     supabase.from("company_metrics").select("company_id").in("company_id", ids).neq("status", "rejected"),
   ]);
+  const links: Record<number, number> = {};
+  const seed = new Set(ids);
+  let linkError = false;
+  for (let from = 0; ; from += PAGE) {
+    const r = await supabase.from("relationships").select("source_id,target_id").eq("status", "promoted").or(`source_id.in.(${ids.join(",")}),target_id.in.(${ids.join(",")})`).order("id").range(from, from + PAGE - 1);
+    if (r.error) { linkError = true; break; }
+    for (const x of (r.data ?? []) as { source_id: number; target_id: number }[]) {
+      if (seed.has(x.source_id)) links[x.source_id] = (links[x.source_id] ?? 0) + 1;
+      if (seed.has(x.target_id)) links[x.target_id] = (links[x.target_id] ?? 0) + 1;
+    }
+    if (!r.data || r.data.length < PAGE) break;
+  }
   return {
-    cos, events: (e.data ?? []) as EventRow[],
-    loadedIds: new Set(((m.data ?? []) as { company_id: number }[]).map((x) => x.company_id)),
-    offline: false, error: !!(e.error || m.error),
+    cos,
+    events: [...((e.data ?? []) as CalEvent[]), ...asStaged(s.rows)],
+    links,
+    secIds: [...new Set(((sec.data ?? []) as { company_id: number }[]).map((x) => x.company_id))],
+    loadedIds: [...new Set(((m.data ?? []) as { company_id: number }[]).map((x) => x.company_id))],
+    review: s.shown,
+    offline: false, error: !!(c.error || e.error || stagedError || sec.error || m.error || linkError),
   };
 }
