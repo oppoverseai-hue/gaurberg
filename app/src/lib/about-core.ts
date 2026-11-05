@@ -6,6 +6,15 @@
 export const SEGMENT = "Segment";
 export const INDUSTRY = "Industry (Finnhub)";
 
+// Short display name for titles and sentences (UX-4): "Uber Technologies" reads "Uber", "Nebius Group" reads "Nebius". Only these
+// endings are dropped, as often as they end the name; the page header, search and pickers keep the full name.
+const ENDINGS = /[,\s]+(Technologies|Holdings|Inc\.?|Corp\.?|Group)$/i;
+export function shortName(name: string): string {
+  let s = name.trim();
+  while (ENDINGS.test(s)) s = s.replace(ENDINGS, "").trim();
+  return s || name;
+}
+
 /** "Uber Technologies" becomes "Uber Technologies'", "Lyft" becomes "Lyft's". */
 export const possessive = (name: string) => (/s$/i.test(name) ? `${name}'` : `${name}'s`);
 

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import type { NewsItem } from "@/lib/news";
+import { shortName } from "@/lib/about-core";
 
 const TABS = [["all", "All"], ["news", "News"], ["press", "Press releases"], ["filing", "SEC filings"]] as const;
 const WINDOWS = [["1", "Last 24 hours"], ["7", "7 days"], ["30", "30 days"], ["0", "All"]] as const;
@@ -15,7 +16,7 @@ export default function NewsPanel({ items, market = [], name, ticker, errors }: 
   const keep = (i: NewsItem) => (tab === "all" || i.kind === tab) && (win === "0" || now - i.ts <= Number(win) * 86400);
   const shown = items.filter(keep), marketShown = market.filter(keep);
   const [open, setOpen] = useState({ company: true, market: false });
-  const who = name ?? "this company";
+  const who = name ? shortName(name) : "this company";
   const named = shown.filter((i) => i.kind !== "filing").length; // headlines, not filings: "83 of 152 headlines name Uber"
   return (
     <div>
@@ -30,8 +31,8 @@ export default function NewsPanel({ items, market = [], name, ticker, errors }: 
         {shown.slice(0, 30).map((i) => <Row key={i.url + i.ts} i={i} />)}
       </Section>
       {marketShown.length > 0 && (
-        <Section id="news-market" title={`Sector and market headlines (don't name ${who})`} count={marketShown.length} open={open.market} onToggle={() => setOpen((o) => ({ ...o, market: !o.market }))}
-          lede={<>Headlines from the news feed{ticker ? ` for ${ticker}` : ""} that don&apos;t mention {who}: peers, sector and market stories. Shown separately so company news isn&apos;t padded. <span className="mono">{named} of {named + marketShown.length} headlines name {who}.</span></>}>
+        <Section id="news-market" title="Related market news" count={marketShown.length} open={open.market} onToggle={() => setOpen((o) => ({ ...o, market: !o.market }))}
+          lede={<>Peer, sector and market headlines that don&apos;t mention {who}. <span className="mono">{named} of {named + marketShown.length} headlines name {who}.</span></>}>
           {marketShown.slice(0, 30).map((i) => <Row key={i.url + i.ts} i={i} />)}
         </Section>
       )}

@@ -11,7 +11,7 @@ import { possessive } from "@/lib/about-core";
 
 export type MatrixCo = {
   id: number; name: string; ticker: string | null; href: string | null; group: boolean; place: Side;
-  point: MatrixPoint | null; reason: string | null; next: string | null; sources: { label: string; url: string | null }[];
+  point: MatrixPoint | null; reason: string | null; next: string | null;
   links: { text: string; share: string | null; badge: string | null; quotes: { quote: string; url: string | null; section: string | null; filed: string | null }[]; url: string | null }[];
   moves: { quarter: string; date: string; pct: number | null; note: string }[];
 };
@@ -65,14 +65,14 @@ export default function ExposureMatrix({ focal, cos, counts }: { focal: string; 
             </button>
           ))}
         </div>
-        <div className="pills xm-toggle" role="group" aria-label="View">
-          <button type="button" className={`fpill ${view === "chart" ? "on" : ""}`} aria-pressed={view === "chart"} onClick={() => setView("chart")}>Chart</button>
-          <button type="button" className={`fpill ${view === "table" ? "on" : ""}`} aria-pressed={view === "table"} onClick={() => setView("table")}>Table</button>
+        <div className="xm-seg xm-toggle" role="tablist" aria-label="View">
+          <button type="button" role="tab" id="xm-tab-chart" aria-selected={view === "chart"} aria-controls="xm-view-chart" className={view === "chart" ? "on" : ""} onClick={() => setView("chart")}>Chart</button>
+          <button type="button" role="tab" id="xm-tab-table" aria-selected={view === "table"} aria-controls="xm-view-table" className={view === "table" ? "on" : ""} onClick={() => setView("table")}>Table</button>
         </div>
       </div>
       <div className="xm-body">
         <div className="xm-main">
-          <div className={`xm-chartwrap ${view === "chart" ? "" : "xm-off"}`}>
+          <div id="xm-view-chart" role="tabpanel" aria-labelledby="xm-tab-chart" className={`xm-chartwrap ${view === "chart" ? "" : "xm-off"}`}>
             <svg viewBox={`0 0 ${W} ${H}`} className="xm-chart" role="group" aria-label={`Linked companies by correlation and beta of daily returns with ${focal}`}>
               {ticks(xd, 0.2).map((t) => <g key={`x${t}`}><line x1={x(t)} x2={x(t)} y1={T} y2={H - B} className={t === 0 ? "xm-zero" : "xm-grid"} /><text x={x(t)} y={H - B + 14} textAnchor="middle" className="xm-tick">{t.toFixed(1)}</text></g>)}
               {ticks(yd, 0.25).map((t) => <g key={`y${t}`}><line x1={L} x2={W - R} y1={y(t)} y2={y(t)} className={t === 0 ? "xm-zero" : "xm-grid"} /><text x={L - 6} y={y(t) + 3} textAnchor="end" className="xm-tick">{t.toFixed(2)}</text></g>)}
@@ -90,7 +90,7 @@ export default function ExposureMatrix({ focal, cos, counts }: { focal: string; 
             <p className="xm-note">Measured price pattern, last 12 months. Not a disclosed size and not a prediction.
               {" "}{points.length} of {shown.length} linked {shown.length === 1 ? "company" : "companies"} plotted; the rest are in the table with the reason.</p>
           </div>
-          <div className={`xm-tablewrap ${view === "table" ? "" : "xm-off xm-phone-on"}`}>
+          <div id="xm-view-table" role="tabpanel" aria-labelledby="xm-tab-table" className={`xm-tablewrap ${view === "table" ? "" : "xm-off xm-phone-on"}`}>
             <div className="rx-scroll">
               <table className="rx xm-table">
                 <thead><tr>{th("name", "Company")}<th>Links to {focal}</th>{th("corr", "Correlation")}{th("beta", "Beta")}<th>Next report</th></tr></thead>
@@ -101,8 +101,7 @@ export default function ExposureMatrix({ focal, cos, counts }: { focal: string; 
                         <button type="button" className="xm-name" aria-pressed={sel === c.id} onClick={() => pick(c.id)}>
                           <span className="xm-dot" style={{ background: COLOR[c.place] }} aria-hidden />{c.name}
                         </button>
-                        {c.ticker && <span className="xtk">{c.ticker}</span>}{c.group && <span className="tag">Group</span>}
-                        <div className="xm-src">{c.sources.map((s, i) => <span key={s.label}>{i ? " · " : ""}{s.url ? <a href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a> : s.label}</span>)}</div>
+                        {c.ticker && <>{" "}<span className="tkchip">{c.ticker}</span></>}{c.group && <>{" "}<span className="tkchip">Group</span></>}
                       </td>
                       <td className="xm-kinds">{c.links.map((l) => l.text).join("; ")}{c.links.some((l) => l.badge) && <> <span className="badge b-live">{c.links.find((l) => l.badge)!.badge}</span></>}</td>
                       {c.point ? <><td className="mono">{f2(c.point.corr)}</td><td className="mono">{f2(c.point.beta)}</td></>
@@ -118,7 +117,7 @@ export default function ExposureMatrix({ focal, cos, counts }: { focal: string; 
         <aside ref={panel} className="xm-panel" aria-live="polite">
           {!picked ? <p className="muted">Select a company in the chart or the table to see its links, measured pattern and evidence.</p> : (
             <>
-              <h3>{picked.href ? <Link href={picked.href}>{picked.name}</Link> : picked.name} {picked.ticker && <span className="tag">{picked.ticker}</span>}</h3>
+              <h3>{picked.href ? <Link href={picked.href}>{picked.name}</Link> : picked.name}{picked.ticker && <>{" "}<span className="tkchip">{picked.ticker}</span></>}</h3>
               <p className="xm-kv"><span className="xm-dot" style={{ background: COLOR[picked.place] }} aria-hidden />{SIDE_LABEL[picked.place]}</p>
               <ul className="xm-links">{picked.links.map((l, i) => <li key={i}>{l.text}{l.badge && <> <span className="badge b-live">{l.badge}</span></>}</li>)}</ul>
               <dl className="xm-dl">
