@@ -59,7 +59,7 @@ export function reactionDay(acceptedUtc: string, tradingDays: string[]): Reactio
     day = after(date); prev = days.filter((x) => x <= date).at(-1);
     rule = timing === "after_close" ? `accepted ${time} ET, after the close: next trading day against ${date}'s close` : `accepted ${time} ET on ${date}, not a trading day: next trading day against the last close`;
   }
-  if (!day) return { kind: "flag", timing, reason: `The trading day after the report (${date}) has no stored close yet` };
+  if (!day) return { kind: "flag", timing, reason: `Reported ${date}: no stored close yet for the trading day that reacted` };
   if (!prev) return { kind: "flag", timing, reason: `No stored close before ${day}` };
   if (daysBetween(date, day) > GAP_DAYS) return { kind: "flag", timing, reason: `The next stored close after the report (${date}) is ${day}; the trading days between are not stored` };
   if (daysBetween(prev, day) > GAP_DAYS) return { kind: "flag", timing, reason: `The stored close before ${day} is ${prev}; the trading days between are not stored` };
