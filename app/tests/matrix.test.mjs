@@ -66,3 +66,16 @@ test("no NaN or infinite value reaches the chart", () => {
   }
   assert.deepEqual(axisDomain([0.58, 0.31], 0.2), [-0.2, 0.8]);
 });
+
+test("sources: each filing once, filer and form read from the file name, never guessed", async () => {
+  const { sourceDocs } = await import("../src/lib/exposure-core.ts");
+  const parties = [{ ticker: "UBER", name: "Uber" }, { ticker: "WRD", name: "WeRide" }, { ticker: null, name: "Bolt" }];
+  const u = "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm";
+  const docs = sourceDocs([
+    { url: u, kind: "SEC filing", period: "Dec 2025" }, { url: u, kind: "SEC filing", period: "Dec 2025" },
+    { url: "https://www.sec.gov/Archives/edgar/data/1/2/wrd-20251231x20f.htm", kind: "SEC filing", period: "Dec 2025" },
+    { url: "https://www.sec.gov/Archives/edgar/data/3/4/d38065d20f.htm", kind: "SEC filing", period: "Dec 2025" },
+  ], parties);
+  assert.deepEqual(docs.map((d) => [d.filer, d.form]), [["Uber", "SEC filing"], ["WeRide", "20-F"], [null, "20-F"]]);
+  assert.equal(docs[2].file, "d38065d20f.htm");
+});

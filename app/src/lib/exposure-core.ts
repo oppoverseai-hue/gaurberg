@@ -161,3 +161,22 @@ export function axisDomain(values: number[], step: number): [number, number] {
 /** Evenly spaced ticks on a domain from axisDomain. */
 export const ticks = ([a, b]: [number, number], step: number): number[] =>
   Array.from({ length: Math.round((b - a) / step) + 1 }, (_, i) => Number((a + i * step).toFixed(6)));
+
+// The Sources block (UX-4): each distinct filing behind the links shown, once, labelled with the filer and form read from the
+// filing's own file name ("uber-20251231.htm" is Uber's; "...x20f.htm" is a 20-F). A name that says neither keeps the file name and
+// says the filer is not recorded; nothing is guessed.
+export type SourceDoc = { url: string; filer: string | null; form: string; period: string | null; file: string };
+export function sourceDocs(docs: { url: string; kind: string; period: string | null }[], parties: { ticker: string | null; name: string }[]): SourceDoc[] {
+  const byTicker = new Map(parties.filter((p) => p.ticker).map((p) => [p.ticker!.toLowerCase(), p.name]));
+  const out = new Map<string, SourceDoc>();
+  for (const d of docs) {
+    if (out.has(d.url)) continue;
+    const file = decodeURIComponent(d.url.split(/[?#]/)[0].split("/").pop() ?? d.url);
+    const lower = file.toLowerCase();
+    const filer = byTicker.get(lower.split(/[-_]/)[0]) ?? null;
+    const form = /20-?f/.test(lower) ? "20-F" : /10-?k/.test(lower) ? "10-K" : /10-?q/.test(lower) ? "10-Q" : d.kind;
+    out.set(d.url, { url: d.url, filer, form, period: d.period, file });
+  }
+  // Named filers first, by name; filings with no recorded filer last.
+  return [...out.values()].sort((a, b) => (a.filer === null ? 1 : 0) - (b.filer === null ? 1 : 0) || (a.filer ?? "").localeCompare(b.filer ?? "") || a.file.localeCompare(b.file));
+}

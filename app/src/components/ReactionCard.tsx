@@ -5,7 +5,7 @@ import SourceTip from "@/components/SourceTip";
 import { isMapped, type Co } from "@/lib/graph";
 import type { ReactionData } from "@/lib/reaction";
 import type { ReportCol } from "@/lib/reaction-core";
-import { possessive } from "@/lib/about-core";
+import { possessive, shortName } from "@/lib/about-core";
 import MoveCell from "@/components/MoveCell";
 
 const day = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
@@ -20,8 +20,8 @@ export default function ReactionCard({ name, data }: { name: string; data: React
   return (
     <div className="card" id="reaction">
       <div className="cardhead">
-        <h3>Linked companies&apos; moves on {possessive(name)} earnings days</h3>
-        <SourceTip text={`Report dates and times from ${possessive(name)} SEC 8-K item 2.02 filings, reviewed by the admin. Before 9:30 ET: that day's close against the previous close. After 16:00 ET: the next trading day's close against that day's close. During market hours: not shown. Closes are stored daily; nothing is estimated.${perColumn ? ` Dates compared: ${perColumn}.` : ""}`} />
+        <h3>Linked companies&apos; moves on {possessive(shortName(name))} earnings days</h3>
+        <SourceTip text={`Report dates and times from ${possessive(shortName(name))} SEC 8-K item 2.02 filings, reviewed by the admin. Before 9:30 ET: that day's close against the previous close. After 16:00 ET: the next trading day's close against that day's close. During market hours: not shown. Closes are stored daily; nothing is estimated.${perColumn ? ` Dates compared: ${perColumn}.` : ""}`} />
       </div>
       {!t ? <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>{data.why}</p> : (
         <>

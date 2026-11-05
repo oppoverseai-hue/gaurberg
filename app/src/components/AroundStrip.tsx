@@ -5,6 +5,7 @@ import Link from "next/link";
 import SourceTip from "@/components/SourceTip";
 import { isMapped } from "@/lib/graph";
 import type { Move, Report } from "@/lib/around-core";
+import { shortName } from "@/lib/about-core";
 
 const day = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
 const timing = (detail: string | null) => (detail?.includes("before market open") ? "before open" : detail?.includes("after market close") ? "after close" : null);
@@ -27,7 +28,7 @@ export default function AroundMoves({ name, ticker, moves, linked, withPrices, s
   if (!linked) return null;
   return (
     <div className="card around" id="around">
-      <div className="cardhead"><h3>Linked companies&apos; price moves</h3><SourceTip text={`The ${linked} companies linked to ${name} in reviewed filings: their last closes, refreshed daily. A listed move is a fact about that company, not a claim that it affects ${name}.`} /></div>
+      <div className="cardhead"><h3>Linked companies&apos; price moves</h3><SourceTip text={`The ${linked} companies linked to ${shortName(name)} in reviewed filings: their last closes, refreshed daily. A listed move is a fact about that company, not a claim that it affects ${shortName(name)}.`} /></div>
       {moves.length ? (
         <>
           <p className="label">Moved 4% or more at the last close</p>
@@ -52,7 +53,7 @@ export function ReportsSoon({ name, reports }: { name: string; reports: Report[]
   const soon = reports.filter((r) => r.when !== "reported");
   return (
     <div className="card around" id="reporting-soon">
-      <div className="cardhead"><h3>Linked companies reporting in the next 14 days</h3><SourceTip text={`Earnings dates of the companies linked to ${name} in reviewed filings (Finnhub calendar and SEC filings, reviewed). A date is a fact about that company, not a claim that it affects ${name}.`} /></div>
+      <div className="cardhead"><h3>Linked companies reporting in the next 14 days</h3><SourceTip text={`Earnings dates of the companies linked to ${shortName(name)} in reviewed filings (Finnhub calendar and SEC filings, reviewed). A date is a fact about that company, not a claim that it affects ${shortName(name)}.`} /></div>
       {soon.length ? soon.slice(0, MAX_REPORTS).map(reportRow) : <p className="muted mono" style={{ fontSize: 12, margin: 0 }}>None of the linked companies has a known date in the next 14 days.</p>}
       {soon.length > MAX_REPORTS && (
         <details className="around-more">

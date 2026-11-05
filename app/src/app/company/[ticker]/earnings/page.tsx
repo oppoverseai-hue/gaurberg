@@ -11,7 +11,7 @@ import { getAround } from "@/lib/around";
 import { getReaction } from "@/lib/reaction";
 import { getUpcomingEvents } from "@/lib/marketdb";
 import { ownReports, TIMING_WORDS } from "@/lib/reaction-core";
-import { possessive } from "@/lib/about-core";
+import { possessive, shortName } from "@/lib/about-core";
 
 export const dynamic = "force-dynamic";
 
@@ -38,7 +38,7 @@ export default async function Earnings({ params }: { params: Promise<{ ticker: s
       <CompanyTabs ticker={company.ticker ?? ticker} active="earnings" />
 
       <div className="card" id="own-earnings" style={{ marginTop: 0 }}>
-        <div className="cardhead"><h3>{possessive(company.name)} own earnings</h3><SourceTip text="Next date: the earnings calendar, reviewed. Past reports: SEC 8-K item 2.02 filings, reviewed by the admin, with the acceptance time. The move is the company's own 1-day close-to-close move, by the same rule as the table below." /></div>
+        <div className="cardhead"><h3>{possessive(shortName(company.name))} own earnings</h3><SourceTip text="Next date: the earnings calendar, reviewed. Past reports: SEC 8-K item 2.02 filings, reviewed by the admin, with the acceptance time. The move is the company's own 1-day close-to-close move, by the same rule as the table below." /></div>
         <p className="mono" style={{ fontSize: 12, margin: "0 0 10px" }}>
           <span className="muted">Next report: </span>{next ? <>{day(next.event_date)}{timingOfDetail(next.detail) ? `, ${timingOfDetail(next.detail)}` : ""}</> : "not known"}
         </p>

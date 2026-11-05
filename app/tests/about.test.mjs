@@ -45,3 +45,16 @@ test("possessive: a name ending in s takes only an apostrophe", async () => {
   assert.equal(possessive("Lyft"), "Lyft's");
   assert.equal(possessive("Meta Platforms"), "Meta Platforms'");
 });
+
+test("shortName drops only the listed endings and never returns an empty name", async () => {
+  const { shortName, possessive } = await import("../src/lib/about-core.ts");
+  assert.equal(shortName("Uber Technologies"), "Uber");
+  assert.equal(shortName("Nebius Group"), "Nebius");
+  assert.equal(shortName("Palantir Technologies"), "Palantir");
+  assert.equal(shortName("Grab Holdings Inc."), "Grab");
+  assert.equal(shortName("Bytes Technology Group"), "Bytes Technology");
+  assert.equal(shortName("Meta Platforms"), "Meta Platforms", "Platforms is not on the list");
+  assert.equal(shortName("Taiwan Semiconductor Manufacturing"), "Taiwan Semiconductor Manufacturing");
+  assert.equal(shortName("Group"), "Group", "stripping everything falls back to the full name");
+  assert.equal(possessive(shortName("Uber Technologies")), "Uber's");
+});

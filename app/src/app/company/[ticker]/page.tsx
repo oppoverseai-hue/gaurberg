@@ -132,12 +132,12 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               </div>
             )}
           </div>
-          <AroundStrip name={company.name} ticker={company.ticker ?? ticker} moves={around.moves} linked={around.linked} withPrices={around.withPrices}
-            soon={around.reports.filter((r) => r.when !== "reported").length} nextReport={events.find((e) => e.event_type === "earnings" && e.status === "promoted")?.event_date ?? null} />
           <div className="card" id="chart">
             <div className="cardhead"><span className="t">Price <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span><SourceTip text={m.saved?.parts.includes("price history") ? `Saved daily closes from ${m.saved.at}` : "Twelve Data, end-of-day closes"} /></div>
             {m.daily ? <PeriodChart daily={m.daily} weekly={m.weekly} /> : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {m.historyError ?? "no price history"}</p></div>}
           </div>
+          <AroundStrip name={company.name} ticker={company.ticker ?? ticker} moves={around.moves} linked={around.linked} withPrices={around.withPrices}
+            soon={around.reports.filter((r) => r.when !== "reported").length} nextReport={events.find((e) => e.event_type === "earnings" && e.status === "promoted")?.event_date ?? null} />
           <div className="card" id="metrics">
             <div className="cardhead"><h3>Key metrics</h3><SourceTip text={mt ? `Finnhub, as of ${day(mt.as_of)}${mt.data_period ? `; trailing figures through the quarter ended ${day(mt.data_period)}` : ""}${mt.note ? `; ${mt.note}` : ""}` : us ? "Finnhub (not loaded yet)" : "The company's annual report (not loaded)"} /></div>
             <MetricsStrip mt={mt} us={us} />
