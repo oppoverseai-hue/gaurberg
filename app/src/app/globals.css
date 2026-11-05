@@ -313,6 +313,7 @@ main.scr{max-width:1200px;padding-top:36px}
 .around-row { display:grid; grid-template-columns:190px 1fr; gap:12px; padding:6px 0; border-top:1px solid var(--line-subtle); font-size:13px; }
 .around-row > .mono:first-child { white-space:nowrap; }
 .around-quiet { font-size:12px; margin:0 0 12px; }
+.around-lede { font-size:12px; margin:-4px 0 12px; }
 .around-more summary { cursor:pointer; list-style:none; padding:6px 0 0; font:12px var(--mono); color:var(--accent); } .around-more summary::-webkit-details-marker { display:none; }
 .around-more .less, .around-more[open] .more { display:none; } .around-more[open] .less { display:inline; }
 /* Phone: the date sits above the company name. */
@@ -324,7 +325,7 @@ main.scr{max-width:1200px;padding-top:36px}
 @media (max-width:1000px) {
   .co-overview .grid2 > .stack { display:contents; }
   .co-overview .grid2 .stack > .card { margin-top:0; order:10; }
-  .co-overview .grid2 #price { order:1; } .co-overview .grid2 #numbers { order:2; } .co-overview .grid2 #around { order:3; }
+  .co-overview .grid2 #price { order:1; } .co-overview .grid2 #numbers { order:2; } .co-overview .grid2 #around { order:3; } .co-overview .grid2 #reaction { order:4; }
 }
 .around-row .mono { font-size:12px; } .around-today { color:var(--accent); font-weight:700; }
 
@@ -395,5 +396,9 @@ a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decora
 .rx th { font:600 12px var(--sans); color:var(--fg); } .rx th small { display:block; font:11px var(--mono); color:var(--fg2); font-weight:400; }
 .rx tr.focal td { font-weight:600; background:var(--surface-high); }
 .rx-notes { margin:8px 0 0; padding-left:18px; font:11px var(--mono); color:var(--fg2); }
-/* Market news (TRM-4): the rest of a company's feed, apart and collapsed */
-.market-news { margin-top:12px; border-top:1px solid var(--line-subtle); padding-top:8px; } .market-news summary { cursor:pointer; font:12px var(--mono); color:var(--fg2); }
+
+/* News sections (TRM-4, UX-4): company news and market headlines, each folding with a button */
+.news-sec + .news-sec { margin-top:12px; border-top:1px solid var(--line-subtle); padding-top:8px; }
+.news-sec h4 { margin:0 0 6px; } .news-toggle { background:none; border:0; padding:4px 0; color:var(--fg); font:600 13px var(--sans); cursor:pointer; text-align:left; }
+.news-toggle:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.news-lede { font-size:12px; margin:0 0 6px; }

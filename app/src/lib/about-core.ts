@@ -6,6 +6,9 @@
 export const SEGMENT = "Segment";
 export const INDUSTRY = "Industry (Finnhub)";
 
+/** "Uber Technologies" becomes "Uber Technologies'", "Lyft" becomes "Lyft's". */
+export const possessive = (name: string) => (/s$/i.test(name) ? `${name}'` : `${name}'s`);
+
 /** "consumer" reads "Consumer". Null when the company has no segment. */
 export const segmentLabel = (s: string | null | undefined): string | null => (s ? s.charAt(0).toUpperCase() + s.slice(1) : null);
 
