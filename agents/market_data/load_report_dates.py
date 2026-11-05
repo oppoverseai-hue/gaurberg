@@ -11,8 +11,8 @@ The newest --keep kept filings dated before --today (New York) become report dat
 
 Writes to --out:
   report_dates_load.sql  ONE statement: an agent_runs row and STAGED company_events rows only
-                         (source = the filing link, detail = "<quarter>, <timing>; 8-K accepted <UTC time>"). A staged row that
-                         already exists is left alone. Never touches promoted or rejected rows, companies or relationships.
+                         (source = the filing link, detail = "<quarter>, <timing>; 8-K accepted <UTC time>"). A filing already
+                         stored in any status (staged, promoted, rejected) is skipped, so a rerun adds only new filings. Never touches promoted or rejected rows, companies or relationships.
   report_dates.json      every kept and skipped filing with the reason, for the review table.
 Rules: a date is the New York date of the 8-K's acceptance time; nothing is estimated. No model call: tokens and cost are 0.
 """
@@ -257,6 +257,9 @@ with run as (
 insert into public.company_events(company_id, event_date, event_type, detail, source, status, run_id)
 select c.id, v.event_date, 'earnings', v.detail, v.source, 'staged', run.id
 from v join public.companies c on c.ticker = v.ticker and c.is_seed cross join run
+-- A filing already stored in any status (staged, promoted or rejected) is left alone: no second copy, nothing revived.
+where not exists (select 1 from public.company_events e where e.company_id = c.id and e.event_date = v.event_date
+                  and e.event_type = 'earnings' and e.source = v.source)
 on conflict (company_id, event_date, event_type, source) where status = 'staged' do nothing
 returning company_id, event_date, source;
 """

@@ -402,3 +402,13 @@ a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decora
 .news-sec h4 { margin:0 0 6px; } .news-toggle { background:none; border:0; padding:4px 0; color:var(--fg); font:600 13px var(--sans); cursor:pointer; text-align:left; }
 .news-toggle:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
 .news-lede { font-size:12px; margin:0 0 6px; }
+
+/* Earnings tab and teaser (GRF-20, UX-4) */
+.earnings .card + .card { margin-top:24px; }
+.around-teaser { font-size:12px; margin:12px 0 0; padding-top:10px; border-top:1px solid var(--line-subtle); color:var(--fg2); }
+/* A move with its note: hover on a desktop (title), tap or Enter opens the note; a second tap or Escape closes it */
+.mcell { position:relative; display:inline-block; }
+.mcell-btn { background:none; border:0; padding:2px 4px; margin:-2px -4px; font:inherit; color:inherit; cursor:pointer; border-radius:4px; text-decoration:underline dotted; text-underline-offset:3px; }
+.mcell-btn.up { color:var(--up); } .mcell-btn.down { color:var(--down); } .mcell-btn.muted { color:var(--muted); }
+.mcell-btn:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+.mcell-pop { position:fixed; z-index:60; width:max-content; white-space:normal; text-align:left; padding:6px 8px; border-radius:6px; background:var(--surface-high); border:1px solid var(--line-strong); color:var(--fg); font:11px/15px var(--mono); box-shadow:0 8px 20px rgba(0,0,0,.45); }

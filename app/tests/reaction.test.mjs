@@ -104,3 +104,18 @@ test("table: the focal company first, then linked companies with stored closes; 
   assert.deepEqual(t.rows[2].moves[0], { missing: "No stored close for 2026-11-03" });
   assert.equal(t.unpriced, 1, "Bolt has no stored prices");
 });
+
+test("own reports: the company's own move for each report column, with its timing; nothing estimated", async () => {
+  const { reactionTable, ownReports } = await import("../src/lib/reaction-core.ts");
+  const reports = lastReports([
+    { event_date: "2026-11-04", source: FILING, detail: secDetail("Q3 2026", "2026-11-04T11:55:00Z") },
+    { event_date: "2026-11-02", source: FILING.replace("1104", "1102"), detail: secDetail("Q2 2026", "2026-11-02T16:00:00Z") },
+  ]);
+  const closes = new Map([[1, new Map([["2026-11-03", 100], ["2026-11-04", 90]])]]);
+  const own = ownReports(reactionTable(reports, { id: 1, name: "Uber" }, [], closes));
+  assert.deepEqual(own.map((o) => [o.quarter, o.timing]), [["Q3 2026", "before_open"], ["Q2 2026", "market_hours"]]);
+  assert.ok(Math.abs(own[0].move.pct + 10) < 1e-9);
+  assert.equal(own[0].compared, "2026-11-04 close vs 2026-11-03 close");
+  assert.match(own[1].move.missing, /during market hours/);
+  assert.equal(own[1].compared, null);
+});

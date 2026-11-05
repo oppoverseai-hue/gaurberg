@@ -17,8 +17,6 @@ import SourceTip from "@/components/SourceTip";
 import CompanyTabs from "@/components/CompanyTabs";
 import AroundStrip from "@/components/AroundStrip";
 import { getAround } from "@/lib/around";
-import ReactionCard from "@/components/ReactionCard";
-import { getReaction } from "@/lib/reaction";
 import { buildNodes, isGroup, isMapped, TYPE_LABEL } from "@/lib/graph";
 import { aboutRows, segmentLabel } from "@/lib/about-core";
 
@@ -73,10 +71,10 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
   // by the daily job; the rest are database reads under row-level security. One timing line per load goes to the server log.
   const t0 = Date.now(), ms: Record<string, number> = {};
   const timed = <T,>(k: string, p: Promise<T>) => p.then((v) => { ms[k] = Date.now() - t0; return v; });
-  const [, m, { rels, around, reaction }, mt, events, news, insiders] = await Promise.all([
+  const [, m, { rels, around }, mt, events, news, insiders] = await Promise.all([
     timed("view", recordView(company.id)),
     timed("market", cachedMarket(company)),
-    timed("links", getRels(company.id).then(async (r) => { const [around, reaction] = await Promise.all([getAround(r.rels, company.id), getReaction(company, r.rels)]); return { rels: r.rels, around, reaction }; })),
+    timed("links", getRels(company.id).then(async (r) => ({ rels: r.rels, around: await getAround(r.rels, company.id) }))),
     timed("metrics", getMetrics(company.id)),
     timed("events", getUpcomingEvents(company.id)),
     timed("news", isOffline() ? Promise.resolve(offlineNews(company)) : cachedNews(company)),
@@ -134,8 +132,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
               </div>
             )}
           </div>
-          <AroundStrip name={company.name} {...around} />
-          <ReactionCard name={company.name} data={reaction} />
+          <AroundStrip name={company.name} ticker={company.ticker ?? ticker} moves={around.moves} linked={around.linked} withPrices={around.withPrices}
+            soon={around.reports.filter((r) => r.when !== "reported").length} nextReport={events.find((e) => e.event_type === "earnings" && e.status === "promoted")?.event_date ?? null} />
           <div className="card" id="chart">
             <div className="cardhead"><span className="t">Price <span className="label" style={{ marginLeft: 8 }}>Daily closing</span></span><SourceTip text={m.saved?.parts.includes("price history") ? `Saved daily closes from ${m.saved.at}` : "Twelve Data, end-of-day closes"} /></div>
             {m.daily ? <PeriodChart daily={m.daily} weekly={m.weekly} /> : <div className="errcard" style={{ border: 0, padding: 0 }}><p>⚠ Data unavailable: {m.historyError ?? "no price history"}</p></div>}
