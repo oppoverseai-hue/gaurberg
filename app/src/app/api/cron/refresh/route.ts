@@ -11,7 +11,7 @@ import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import { liveSymbol } from "@/lib/listing";
 import { readMarket } from "@/lib/saved";
-import { metricsRow, parseCalendar, planEvents, type StoredEvent } from "@/lib/refresh-core";
+import { metricsRow, parseCalendar, planEvents, REFRESH_SOURCE, type StoredEvent } from "@/lib/refresh-core";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
@@ -89,14 +89,14 @@ export async function GET(req: Request) {
     // 3. Earnings dates, from three weeks back (to catch reports that already happened) to 90 days ahead.
     const cal = await fh("/calendar/earnings", { symbol: sym, from, to });
     if (cal.ok) {
-      const { data: stored } = await db.from("company_events").select("id,event_date,detail,status").eq("company_id", c.id).eq("event_type", "earnings").eq("source", "finnhub").gte("event_date", from);
+      const { data: stored } = await db.from("company_events").select("id,event_date,detail,status").eq("company_id", c.id).eq("event_type", "earnings").eq("source", REFRESH_SOURCE).gte("event_date", from);
       const now = new Date().toISOString();
       for (const a of planEvents((stored ?? []) as StoredEvent[], parseCalendar(cal.json?.earningsCalendar))) {
         let e: { message: string } | null = null;
         if (a.kind === "skip") { count.skipped++; continue; }
         if (a.kind === "touch") ({ error: e } = await db.from("company_events").update({ detail: a.detail, fetched_at: now }).eq("id", a.id));
         if (a.kind === "insert") {
-          ({ error: e } = await db.from("company_events").insert({ company_id: c.id, event_date: a.date, event_type: "earnings", detail: a.detail, source: "finnhub", fetched_at: now, status: a.status }));
+          ({ error: e } = await db.from("company_events").insert({ company_id: c.id, event_date: a.date, event_type: "earnings", detail: a.detail, source: REFRESH_SOURCE, fetched_at: now, status: a.status }));
           if (a.status === "staged") { count.staged++; log.push(`${sym} ${a.date} staged: ${a.reason}`); }
         }
         if (e) gaps.push(`${sym} event ${a.date}: ${e.message}`); else if (a.kind !== "touch") count.events++;
