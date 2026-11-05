@@ -3,7 +3,8 @@
 // carries all its links. Its group comes from groupOf in graph.ts, the same rule as the map, so the counts match the map.
 // A stored percentage is a weight only when it is the exposed company's own share and a saved quote contains the figure.
 // Weights are ranked only within one kind of share; they are never converted, estimated or back-filled.
-import { groupOf, type Co, type Evidence, type Rel, type Side } from "./graph.ts";
+import { groupOf, isGroup, SIDES, type Co, type Evidence, type Rel, type Side } from "./graph.ts";
+import type { Comove } from "./comove-core.ts";
 
 export type Kind = "source_revenue" | "target_cost" | "ownership";
 export const KINDS: Kind[] = ["source_revenue", "target_cost", "ownership"];
@@ -116,3 +117,47 @@ export function buildExposure(hitId: number, rels: Rel[]): Exposure {
   };
 }
 
+
+
+// Quant matrix (GRF-19 on GRF-17): every linked company as a point at (correlation, beta) of its daily returns against the focal
+// company, both from comove-core, or in the excluded list with the reason it has no point. Groups (drivers, riders) are never plotted.
+// The group counts are the groupOf counts of all rows, groups included, so they equal the map's pills and pagers.
+export type MatrixPoint = { id: number; place: Side; corr: number; beta: number; days: number };
+export type MatrixExcluded = { id: number; place: Side; reason: string };
+export type Matrix = { points: MatrixPoint[]; excluded: MatrixExcluded[]; counts: Record<Side, number> };
+
+/** Why a linked company has no point. Null when it has one. */
+export function noPointReason(co: Co, cm: Comove | undefined): string | null {
+  if (isGroup(co)) return "A group named in the filings, not a listed company";
+  if (!co.ticker) return "No ticker: not listed, or not identified on an exchange";
+  if (!co.is_seed) return "Not loaded yet: prices are stored for mapped companies only";
+  if ((co.markets ?? [])[0] !== "US") return "Not listed in the US: no stored daily prices";
+  if (!cm) return "Not loaded yet: no stored daily prices";
+  if (!cm.ok) return cm.gap;
+  if (!Number.isFinite(cm.corr) || !Number.isFinite(cm.beta)) return "Price pattern could not be measured";
+  return null;
+}
+
+export function buildMatrix(rows: ExpRow[], cm: Record<number, Comove>): Matrix {
+  const counts = Object.fromEntries(SIDES.map((s) => [s, 0])) as Record<Side, number>;
+  const points: MatrixPoint[] = [], excluded: MatrixExcluded[] = [];
+  for (const x of rows) {
+    counts[x.place]++;
+    const c = cm[x.co.id], why = noPointReason(x.co, c);
+    if (why || !c?.ok) excluded.push({ id: x.co.id, place: x.place, reason: why ?? "Price pattern could not be measured" });
+    else points.push({ id: x.co.id, place: x.place, corr: c.corr, beta: c.beta, days: c.days });
+  }
+  return { points, excluded, counts };
+}
+
+/** An axis domain that always holds 0 and every value, padded and rounded out to `step`. Always finite, never empty. */
+export function axisDomain(values: number[], step: number): [number, number] {
+  const ok = values.filter(Number.isFinite);
+  const lo = Math.min(0, ...ok), hi = Math.max(0, ...ok);
+  const a = Math.floor((lo - step / 2) / step) * step, b = Math.ceil((hi + step / 2) / step) * step;
+  return [Number(a.toFixed(6)), Number(b.toFixed(6))];
+}
+
+/** Evenly spaced ticks on a domain from axisDomain. */
+export const ticks = ([a, b]: [number, number], step: number): number[] =>
+  Array.from({ length: Math.round((b - a) / step) + 1 }, (_, i) => Number((a + i * step).toFixed(6)));
