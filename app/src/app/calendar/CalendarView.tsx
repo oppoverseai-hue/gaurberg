@@ -17,7 +17,7 @@ function download(name: string, type: string, text: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function Row({ r }: { r: CalRow }) {
+function Row({ r, review }: { r: CalRow; review: boolean }) {
   const t = r.co.ticker ?? "";
   return (
     <li className="cal-row">
@@ -26,7 +26,7 @@ function Row({ r }: { r: CalRow }) {
       <span className="cal-q mono muted">{r.quarter ?? "Quarter not given"}</span>
       <span className="cal-chips">
         <span className={`cal-chip mono${r.timing === "none" ? " muted" : ""}`} title={TIMING_HOVER[r.timing]}>{TIMING_LABEL[r.timing]}</span>
-        {r.underReview && <span className="cal-chip cal-review mono" title="A different date from Finnhub is staged and waiting for the admin's review. The date shown is the reviewed one.">Date under review</span>}
+        {review && r.underReview && <span className="cal-chip cal-review mono" title="A different date from Finnhub is staged and waiting for the admin's review. The date shown is the reviewed one.">Date under review</span>}
       </span>
       <span className="cal-links mono muted" title="Reviewed links in the graph">{r.links} reviewed link{r.links === 1 ? "" : "s"}</span>
       <Link className="chip cal-open" href={`/company/${t}/earnings`} aria-label={`Open ${r.co.name} earnings`}>Open</Link>
@@ -52,7 +52,8 @@ function Reasons({ title, items }: { title: string; items: Prepared["noDate"] })
   );
 }
 
-export default function CalendarView({ data, today, isAdmin, initialRange, notice }: { data: Prepared; today: string; isAdmin: boolean; initialRange: Range; notice: string | null }) {
+// review: the admin's view. Only then were staged rows read, and only then are the review tile, chips and CSV column shown.
+export default function CalendarView({ data, today, review, initialRange, notice }: { data: Prepared; today: string; review: boolean; initialRange: Range; notice: string | null }) {
   const [range, setRange] = useState<Range>(initialRange);
   const [q, setQ] = useState("");
   const [timing, setTiming] = useState<TimingFilter>("all");
@@ -90,12 +91,14 @@ export default function CalendarView({ data, today, isAdmin, initialRange, notic
         <div><span className="label" title={TIMING_HOVER.before}>Before open</span><b className="mono">{sum.before}</b></div>
         <div><span className="label" title={TIMING_HOVER.after}>After close</span><b className="mono">{sum.after}</b></div>
         <div><span className="label">Time not given</span><b className="mono">{sum.none}</b></div>
-        <div>
-          <span className="label" title="Different dates from Finnhub that are staged and wait for the admin's review">Date changes under review</span>
-          <b className="mono">{isAdmin && sum.underReview > 0 ? <Link href="/admin">{sum.underReview}</Link> : sum.underReview}</b>
-        </div>
+        {review && (
+          <div>
+            <span className="label" title="Different dates from Finnhub that are staged and wait for your review">Date changes under review</span>
+            <b className="mono">{sum.underReview > 0 ? <Link href="/admin">{sum.underReview}</Link> : 0}</b>
+          </div>
+        )}
         <div className="cal-export">
-          <button type="button" className="chip" disabled={!shown.length} onClick={() => download(`gaurberg-earnings-${stamp}.csv`, "text/csv;charset=utf-8", toCSV(shown))}>CSV</button>
+          <button type="button" className="chip" disabled={!shown.length} onClick={() => download(`gaurberg-earnings-${stamp}.csv`, "text/csv;charset=utf-8", toCSV(shown, review))}>CSV</button>
           <button type="button" className="chip" disabled={!shown.length} onClick={() => download(`gaurberg-earnings-${stamp}.ics`, "text/calendar;charset=utf-8", toICS(shown, new Date().toISOString()))}>iCal</button>
         </div>
       </div>
@@ -108,7 +111,7 @@ export default function CalendarView({ data, today, isAdmin, initialRange, notic
           {w.days.map((d) => (
             <div key={d.date} className="cal-day">
               <p className="cal-dayhead mono">{weekday(d.date)}{d.date === today ? " · today" : ""}</p>
-              <ul className="cal-rows">{d.rows.map((r) => <Row key={`${r.co.id}-${r.date}`} r={r} />)}</ul>
+              <ul className="cal-rows">{d.rows.map((r) => <Row key={`${r.co.id}-${r.date}`} r={r} review={review} />)}</ul>
             </div>
           ))}
         </details>

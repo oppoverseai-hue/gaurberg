@@ -3,7 +3,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { prepare, applyFilter, rangeCounts, summarize, groupWeeks, weekStart, splitDetail, toCSV, toICS, icsEscape, icsSummary } from "../src/lib/calendar-core.ts";
+import { prepare, applyFilter, rangeCounts, summarize, groupWeeks, weekStart, splitDetail, toCSV, toICS, icsEscape, icsSummary, nyToday, readStagedForAdmin } from "../src/lib/calendar-core.ts";
 
 const fx = JSON.parse(fs.readFileSync(new URL("./fixtures/calendar-2026-11-06.json", import.meta.url), "utf8"));
 const isCovered = (c) => (c.markets ?? [])[0] === "US";
@@ -100,10 +100,59 @@ test("real data: every company without a date in 90 days is listed with a reason
 test("CSV escapes quotes, commas and formula-looking cells", () => {
   const rows = [{ co: co(1, "AAA", 'Alpha, "the" Co'), date: "2026-11-10", quarter: "Q3 2026", timing: "after", underReview: true, links: 3, fetched_at: "" },
     { co: co(2, "BBB", "=HYPERLINK(1)"), date: "2026-11-11", quarter: null, timing: "none", underReview: false, links: 0, fetched_at: "" }];
-  const csv = toCSV(rows).split("\r\n");
+  const csv = toCSV(rows, true).split("\r\n");
   assert.equal(csv[0], "date,ticker,company,segment,quarter,timing,date_under_review,reviewed_links,source");
   assert.equal(csv[1], '2026-11-10,AAA,"Alpha, ""the"" Co",consumer,Q3 2026,After close,yes,3,Finnhub earnings calendar');
   assert.equal(csv[2], "2026-11-11,BBB,'=HYPERLINK(1),consumer,,Time not given,no,0,Finnhub earnings calendar");
+  // Anyone but the admin: no review column at all.
+  const plain = toCSV(rows).split("\r\n");
+  assert.equal(plain[0], "date,ticker,company,segment,quarter,timing,reviewed_links,source");
+  assert.equal(plain[1], '2026-11-10,AAA,"Alpha, ""the"" Co",consumer,Q3 2026,After close,3,Finnhub earnings calendar');
+});
+
+test("the staged read runs for the admin only; a reviewer never calls it", async () => {
+  let calls = 0;
+  const read = async () => { calls++; return [{ company_id: 8, event_date: "2026-11-19" }]; };
+  for (const role of ["reviewer", "", "anything"]) {
+    assert.deepEqual(await readStagedForAdmin(role, read), { shown: false, rows: [] });
+  }
+  assert.equal(calls, 0, "no staged read for a non-admin");
+  assert.deepEqual(await readStagedForAdmin("admin", read), { shown: true, rows: [{ company_id: 8, event_date: "2026-11-19" }] });
+  assert.equal(calls, 1, "one staged read for the admin");
+  // As the loader does: promoted rows for everyone, staged rows only from the admin-only read.
+  const source = [...fx.events, ev(8, "2026-11-19", null, "staged")];
+  const view = async (role) => {
+    const st = await readStagedForAdmin(role, async () => source.filter((e) => e.status === "staged"));
+    return prepare(input({ events: [...source.filter((e) => e.status === "promoted"), ...st.rows] }));
+  };
+  const reviewer = await view("reviewer");
+  assert.ok(reviewer.rows.every((r) => !r.underReview) && reviewer.staged.length === 0);
+  const admin = await view("admin");
+  assert.deepEqual(admin.rows.filter((r) => r.underReview).map((r) => r.co.ticker), ["NVDA"]);
+  assert.equal(admin.staged.length, 1);
+});
+
+test("today is the New York date (America/New_York, winter time UTC-5)", () => {
+  assert.equal(nyToday("2026-11-05T23:18:00Z"), "2026-11-05");
+  assert.equal(nyToday("2026-11-06T04:30:00Z"), "2026-11-05");
+  assert.equal(nyToday("2026-11-06T05:30:00Z"), "2026-11-06");
+  assert.equal(nyToday("2026-07-01T03:59:00Z"), "2026-06-30"); // summer time, UTC-4
+});
+
+test("a report dated today stays in this week for the whole New York day", () => {
+  const cos = [co(1, "AAA", "Alpha")];
+  const events = [ev(1, "2026-11-05")]; // Thursday
+  for (const now of ["2026-11-05T05:00:00Z", "2026-11-05T23:18:00Z", "2026-11-06T04:59:00Z"]) {
+    const today = nyToday(now);
+    assert.equal(today, "2026-11-05", now);
+    const { rows } = prepare({ cos, events, links: {}, secIds: [], loadedIds: [1], isCovered, today });
+    const weeks = groupWeeks(applyFilter(rows, today, { range: 30, q: "", timing: "all" }).shown);
+    assert.deepEqual(weeks.map((w) => [w.start, w.count]), [["2026-11-02", 1]], now);
+  }
+  // Once New York reaches 6 Nov, the 5 Nov report is past and no longer listed.
+  const next = nyToday("2026-11-06T05:00:00Z");
+  const { rows } = prepare({ cos, events, links: {}, secIds: [], loadedIds: [1], isCovered, today: next });
+  assert.equal(rows.length, 0);
 });
 
 test("iCal: all-day events, stable UID, escaped and folded text, no clock time", () => {

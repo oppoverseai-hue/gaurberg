@@ -1,7 +1,9 @@
 // Earnings calendar rules (TRM-13, UX-4, GRF-20). Pure functions: no data access here.
 // Upcoming dates are promoted Finnhub rows only. A staged Finnhub row dated today or later is a date change under review: it is
-// counted and flags its company, but its date is never shown. Companies without a date are listed with a stated reason, never hidden.
+// counted and flags its company, but its date is never shown, and only the admin reads it. Companies without a date are listed with a
+// stated reason, never hidden. "Today" is the New York date, the exchange's day.
 import { shortName } from "./about-core.ts";
+import { nyParts } from "./reaction-core.ts";
 
 export type CalCo = { id: number; ticker: string | null; name: string; markets: string[] | null; segment: string | null };
 export type CalEvent = { company_id: number; event_date: string; detail: string | null; status: string; fetched_at: string };
@@ -20,6 +22,16 @@ export const TIMING_HOVER: Record<Timing, string> = {
   before: "Before the market opens (BMO)", after: "After the market closes (AMC)", during: "During market hours (DMH)", none: "Finnhub gives no time for this report",
 };
 const TIMES: Record<string, Timing> = { "before market open": "before", "after market close": "after", "during market hours": "during" };
+
+/** Today in New York (America/New_York, daylight saving included) for a UTC instant. */
+export const nyToday = (nowUtc: string) => nyParts(nowUtc).date;
+
+export type StagedRow = { company_id: number; event_date: string };
+// Date changes under review are for the admin only. The role is checked first; for anyone else the staged read is never called.
+export async function readStagedForAdmin(role: string, read: () => Promise<StagedRow[]>): Promise<{ shown: boolean; rows: StagedRow[] }> {
+  if (role !== "admin") return { shown: false, rows: [] };
+  return { shown: true, rows: await read() };
+}
 
 export const addDays = (d: string, n: number) => new Date(Date.parse(`${d}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
 export const dayShort = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
@@ -132,14 +144,15 @@ export function groupWeeks(rows: CalRow[]): Week[] {
 export const short = (co: CalCo) => shortName(co.name);
 
 // CSV of the rows shown. A cell a spreadsheet would read as a formula gets a leading apostrophe.
-export function toCSV(rows: CalRow[]): string {
+// The review column is written only for the admin (review = true).
+export function toCSV(rows: CalRow[], review = false): string {
   const cell = (v: string | number) => {
     let s = String(v);
     if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`;
     return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
   };
-  const head = ["date", "ticker", "company", "segment", "quarter", "timing", "date_under_review", "reviewed_links", "source"];
-  const body = rows.map((r) => [r.date, r.co.ticker ?? "", r.co.name, r.co.segment ?? "", r.quarter ?? "", TIMING_LABEL[r.timing], r.underReview ? "yes" : "no", r.links, "Finnhub earnings calendar"].map(cell).join(","));
+  const head = ["date", "ticker", "company", "segment", "quarter", "timing", ...(review ? ["date_under_review"] : []), "reviewed_links", "source"];
+  const body = rows.map((r) => [r.date, r.co.ticker ?? "", r.co.name, r.co.segment ?? "", r.quarter ?? "", TIMING_LABEL[r.timing], ...(review ? [r.underReview ? "yes" : "no"] : []), r.links, "Finnhub earnings calendar"].map(cell).join(","));
   return [head.join(","), ...body].join("\r\n") + "\r\n";
 }
 

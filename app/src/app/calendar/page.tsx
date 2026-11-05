@@ -2,7 +2,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
 import { isUSListed } from "@/lib/marketdb";
-import { prepare, RANGES, type Range } from "@/lib/calendar-core";
+import { isOffline } from "@/lib/mode";
+import { nyToday, prepare, RANGES, type Range } from "@/lib/calendar-core";
 import { loadCalendar } from "@/lib/calendar";
 import CalendarView from "./CalendarView";
 
@@ -14,8 +15,10 @@ export default async function CalendarPage({ searchParams }: { searchParams: Pro
   if (access.state !== "ok") redirect("/");
   const sp = await searchParams;
   const range = (RANGES.find((r) => String(r) === sp.w) ?? 30) as Range;
-  const today = new Date().toISOString().slice(0, 10);
-  const data = await loadCalendar(today);
+  const today = nyToday(new Date().toISOString()); // the New York day, as for report dates
+  // The offline demo is always the admin; DEV_CALENDAR_ROLE=reviewer shows the reviewer view in local screenshots only.
+  const role = isOffline() && process.env.DEV_CALENDAR_ROLE === "reviewer" ? "reviewer" : access.role;
+  const data = await loadCalendar(today, role);
   const prepared = prepare({ ...data, isCovered: (c) => isUSListed(c.markets), today });
   const notice = data.offline ? "Offline: earnings dates are not saved for the offline demo."
     : data.error ? "Some earnings data could not be loaded. Try again."
@@ -26,7 +29,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: Pro
       <Breadcrumbs items={[{ label: "Earnings calendar" }]} />
       <h1 style={{ marginTop: 12 }}>Earnings calendar</h1>
       <p className="muted">Upcoming reports for companies in the graph, by week.</p>
-      <CalendarView data={prepared} today={today} isAdmin={access.role === "admin"} initialRange={range} notice={notice} />
+      <CalendarView data={prepared} today={today} review={data.review} initialRange={range} notice={notice} />
       <p className="muted mono cal-foot">
         Dates come from Finnhub&apos;s earnings calendar and are not company-confirmed until the SEC 8-K appears; Finnhub has listed wrong dates before. Prices delayed. Not investment advice.
       </p>
