@@ -2,6 +2,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CompanyTabs from "@/components/CompanyTabs";
 import ExposureMatrix, { type MatrixCo } from "@/components/ExposureMatrix";
+import Collapsible from "@/components/Collapsible";
 import { notFound, redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
 import { getCompany, getRels } from "@/lib/data";
@@ -75,30 +76,29 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
       <Breadcrumbs items={[{ label: co.name, href: `/company/${ticker}` }, { label: "Who is exposed" }]} />
       <CompanyTabs ticker={ticker} active="exposure" />
       <h1 style={{ marginTop: 12 }}>How linked companies move with {short} <span className="tag">{ticker}</span></h1>
-      <p className="xm-lede">Each dot is a linked company, placed by how its daily returns moved with {short} over the last 12 months. Measured from prices, not a disclosed size.</p>
-      {!error && <p className="muted mono xm-stat">{all.length - groups} linked {all.length - groups === 1 ? "company" : "companies"} · {groups} {groups === 1 ? "group" : "groups"} · {links} {links === 1 ? "link" : "links"}</p>}
-      {!error && live > 0 && (
-        <p className="xflag">Reviewed links only: {live} live-generated {live === 1 ? "link" : "links"} (not reviewed) {live === 1 ? "is" : "are"} on the map but not on this page, so some counts here are lower than the map&apos;s.</p>
-      )}
       {error ? (
         <div className="card"><p>Could not load links. <Link href={`/company/${ticker}/exposure`}>Retry</Link></p></div>
       ) : e.empty && !all.length ? (
         <div className="card"><p style={{ margin: 0 }}>{EMPTY}</p></div>
       ) : (
         <>
-          <ExposureMatrix focal={short} cos={cos} counts={matrix.counts} />
+          <ExposureMatrix focal={short} cos={cos} counts={matrix.counts}
+            stat={`${all.length - groups} linked ${all.length - groups === 1 ? "company" : "companies"} · ${groups} ${groups === 1 ? "group" : "groups"} · ${links} ${links === 1 ? "link" : "links"}`}>
+            {live > 0 && (
+              <p className="xflag">Reviewed links only: {live} live-generated {live === 1 ? "link" : "links"} (not reviewed) {live === 1 ? "is" : "are"} on the map but not on this page, so some counts here are lower than the map&apos;s.</p>
+            )}
+          </ExposureMatrix>
           <p className="muted mono" style={{ fontSize: 10, margin: "12px 0 0" }}>
             One hop only. Correlation and beta use daily closes over the last {WINDOW} shared trading days (at least {MIN_DAYS} needed): a measured
             price pattern, not a disclosed size and not a prediction. Links, shares and quotes are stored as the sources give them; nothing is
             estimated or filled in. This describes sources and is not a recommendation.
           </p>
-          <section className="card xm-sources" aria-labelledby="xm-sources-h">
-            <div className="cardhead"><h3 id="xm-sources-h">Sources</h3></div>
+          <Collapsible className="xm-sources" title={`Sources (${docs.length} ${docs.length === 1 ? "filing" : "filings"})`}>
             <p className="muted mono" style={{ fontSize: 11, margin: "0 0 8px" }}>{marked === 0 ? "All links shown are reviewed." : `All links shown are reviewed except ${marked} marked ${marked === 1 ? "link" : "links"}.`}</p>
             {docs.length ? <ul>{docs.map((d) => (
               <li key={d.url}><a href={d.url} target="_blank" rel="noreferrer">{d.filer ?? "Filer not recorded"} · {d.form}{d.period ? ` · ${d.period}` : ""} ↗</a>{!d.filer && <span className="muted mono"> {d.file}</span>}</li>
             ))}</ul> : <p className="muted">No filing links saved for these links.</p>}
-          </section>
+          </Collapsible>
         </>
       )}
     </main>

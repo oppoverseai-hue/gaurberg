@@ -3,8 +3,9 @@
 // of its daily returns against the focal company, coloured by its map group. Table: every linked company, points or not, with the
 // stated reason for a missing pattern. Chips filter both and carry the map's counts. Selecting a company fills the side panel.
 // Plain SVG; every number comes from the server (comove-core, reaction-core, stored rows).
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
+import MoveCell from "@/components/MoveCell";
 import { SIDES, SIDE_LABEL, type Side } from "@/lib/graph";
 import { axisDomain, ticks, type MatrixPoint } from "@/lib/exposure-core";
 import { possessive } from "@/lib/about-core";
@@ -22,7 +23,8 @@ const day = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB"
 const f2 = (n: number) => n.toFixed(2);
 type Sort = { key: "name" | "corr" | "beta"; dir: 1 | -1 };
 
-export default function ExposureMatrix({ focal, cos, counts }: { focal: string; cos: MatrixCo[]; counts: Record<Side, number> }) {
+// The header says "dot" only where dots are on screen: the chart view on a desktop. The table view and phones (table only) say "row".
+export default function ExposureMatrix({ focal, cos, counts, stat, children }: { focal: string; cos: MatrixCo[]; counts: Record<Side, number>; stat: string; children?: ReactNode }) {
   const [only, setOnly] = useState<Side | "all">("all");
   const [view, setView] = useState<"chart" | "table">("chart");
   const [sel, setSel] = useState<number | null>(null);
@@ -56,6 +58,12 @@ export default function ExposureMatrix({ focal, cos, counts }: { focal: string; 
   const total = cos.length;
   return (
     <div className="xm">
+      <p className="xm-lede">
+        <span className={`xm-lede-dots ${view === "chart" ? "" : "xm-off"}`}>Each dot is a linked company, placed by how its daily returns moved with {focal} over the last 12 months. Measured from prices, not a disclosed size.</span>
+        <span className={`xm-lede-rows ${view === "chart" ? "xm-desk-off" : ""}`}>Each row is a linked company with its measured price co-movement with {focal} over the last 12 months. Measured from prices, not a disclosed size.</span>
+      </p>
+      <p className="muted mono xm-stat">{stat}</p>
+      {children}
       <div className="xm-bar">
         <div className="pills" role="group" aria-label="Filter by map group">
           <button type="button" className={`fpill ${only === "all" ? "on" : ""}`} aria-pressed={only === "all"} onClick={() => setOnly("all")}>All ({total})</button>
@@ -105,7 +113,7 @@ export default function ExposureMatrix({ focal, cos, counts }: { focal: string; 
                       </td>
                       <td className="xm-kinds">{c.links.map((l) => l.text).join("; ")}{c.links.some((l) => l.badge) && <> <span className="badge b-live">{c.links.find((l) => l.badge)!.badge}</span></>}</td>
                       {c.point ? <><td className="mono">{f2(c.point.corr)}</td><td className="mono">{f2(c.point.beta)}</td></>
-                        : <td colSpan={2} className="xm-na"><span className="mono">n/a</span> <small>{c.reason}</small></td>}
+                        : <>{[0, 1].map((k) => <td key={k} className="mono xm-na"><MoveCell text="n/a" cls="muted" note={c.reason ?? "No measured price pattern"} /></td>)}</>}
                       <td className="mono">{c.next ? day(c.next) : <span className="muted">not known</span>}</td>
                     </tr>
                   ))}
