@@ -1,6 +1,8 @@
 # Staged SEC report dates for review (GRF-20)
 
-Loaded by `agents/market_data/load_report_dates.py` for New York dates before 2026-11-04: the last 4 8-K item 2.02 filings per US-primary seed company whose press release (exhibit 99) names the quarter. Nothing here is promoted.
+Loaded by `agents/market_data/load_report_dates.py` for New York dates before 2026-11-04: the last 4 8-K item 2.02 filings per US-primary seed company whose press release (exhibit 99) names the quarter.
+
+**Status (Nov 5, 2026): reviewed and promoted by the admin.** All 83 rows of run 127 are promoted; 3 stale Finnhub rows are rejected (see Review decisions).
 Rule column: the app's reaction-day rule on the stored trading days (2025-10-22 to 2026-11-03).
 
 | Company | Quarter (as named) | Report date | Accepted (ET / UTC) | Rule applied | Filing |
@@ -89,13 +91,16 @@ Rule column: the app's reaction-day rule on the stored trading days (2025-10-22 
 | UBER | Q4 2025 ("Fourth Quarter and Full Year 2025") | 2026-02-04 | 06:56 ET / 11:56 UTC | before market open: 2026-02-04 vs 2026-02-03 | [8-K](https://www.sec.gov/Archives/edgar/data/1543151/000154315126000011/uber-20260130.htm) · [release](https://www.sec.gov/Archives/edgar/data/1543151/000154315126000011/uberq425earningspressrelea.htm) |
 | UBER | Q3 2025 ("Third Quarter 2025") | 2025-11-04 | 06:56 ET / 11:56 UTC | before market open: 2025-11-04 vs 2025-11-03 | [8-K](https://www.sec.gov/Archives/edgar/data/1543151/000154315125000030/uber-20251104.htm) · [release](https://www.sec.gov/Archives/edgar/data/1543151/000154315125000030/uberq325earningspressrelea.htm) |
 
-83 report dates staged. Applied to Supabase on 2026-11-05 as STAGED rows (agent_runs id 127); none promoted.
+83 report dates. Applied to Supabase on 2026-11-05 as STAGED rows (agent_runs id 127), then promoted by the admin after review on 2026-11-05.
 
-## Notes for review
-- **DoorDash and Instacart, Oct 29, 2026 (before the open).** Both releases are full Q3 2026 results ("DoorDash Releases Third Quarter 2026 Financial Results, October 29, 2026"; "Instacart Announces Third Quarter 2026 Financial Results"), published with the acquisition agreement. Our notes say DoorDash had announced Nov 4; the 8-K shows the results came out on Oct 29, so Finnhub's Oct 29 was right this time.
-- **Uber, Nov 4, 2026** is not staged: it is dated today in New York (only past dates are staged). Its 8-K was accepted 06:55 ET, before the open; Finnhub lists it "after market close". Rerun the loader tomorrow to stage it.
-- **Labels** are the release's own words: fiscal labels (Apple, Microsoft's dates, NVIDIA, Oracle) are the company's fiscal quarters; calendar-year companies whose Q4 release says "Fourth Quarter and Fiscal Year 2025" read "Q4 FY2025".
-- **Timing**: every row is before the open or after the close; none was accepted during market hours.
+## Review decisions (admin, Nov 5, 2026)
+- **Run 127: all 83 rows promoted** by the admin.
+- **DoorDash and Instacart, Oct 29 (before the open): no longer held; promoted with the rest.** Both are full Q3 2026 results. Each 8-K's Item 2.02 says the press release announces the financial results for the quarter ended September 30, 2026, and neither release calls them preliminary. DoorDash held its earnings call that morning and filed its 10-Q on Oct 30. Instacart cancelled the call it had scheduled for Nov 5. Neither filed another earnings 8-K. The loader rules are unchanged.
+- **3 stale Finnhub rows rejected** by the admin: `company_events` id 14 (DoorDash, Nov 4, was promoted: the schedule before the deal), id 11 (Instacart, Nov 5, was promoted: the cancelled call date) and id 71 (DoorDash Oct 29 Finnhub copy, was staged; the SEC row covers that date).
+- **Meta, Oct 21: confirmed.** The file name `meta-20261019` follows the 8-K's Date of Report, which belongs to Item 1.01 in the same filing; Item 2.02 and the release both say the results came out on October 21, after the close.
+- **Uber, Nov 4, 2026** is not in run 127: it was dated today in New York at load time. Its 8-K was accepted at 06:55 ET, before the open; Finnhub lists it as "after market close". Rerun the loader to stage it.
+- **Labels** are the release's own words: fiscal labels (Apple, NVIDIA, Oracle) are the company's fiscal quarters; Microsoft's read as dates; calendar-year companies whose Q4 release says "Fourth Quarter and Fiscal Year 2025" read "Q4 FY2025".
+- **Timing:** every row is before the open or after the close; none was accepted during market hours.
 
 ## Skipped filings (9)
 
