@@ -15,4 +15,6 @@ Reading order: 1 Start Here, 2 Product Brief, 3 Job Specs, 4 Eval Spec, 5 Techni
 
 Outside the six: the presenter's script for the Deriv panel, Gaurberg: Demo Guide v1.0 (Nov 5, 2026), https://claude.ai/code/artifact/4a669f6e-5b70-4b76-8fb0-6c0355a5cd0b
 
-Versions checked against each doc's "About this doc" table on Nov 5, 2026, 17:05 (Makassar). The current state and known limits are in Start Here; the hand-off for a new session is claude/handoff.md in the Project.
+The change log in Start Here is the source of truth for doc versions; this table follows it.
+
+Versions checked against each doc's "About this doc" table on Nov 5, 2026, 17:05 (Makassar), and again on Nov 6, 2026. The current state and known limits are in Start Here; the hand-off for a new session is claude/handoff.md in the Project.
