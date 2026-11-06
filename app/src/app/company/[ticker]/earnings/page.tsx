@@ -6,6 +6,7 @@ import MoveCell from "@/components/MoveCell";
 import ReactionCard from "@/components/ReactionCard";
 import { ReportsRecent, ReportsSoon } from "@/components/AroundStrip";
 import { getAccess } from "@/lib/supabase/server";
+import { renderTimer } from "@/lib/render-timing";
 import { getCompany, getRels } from "@/lib/data";
 import { getAround } from "@/lib/around";
 import { getReaction } from "@/lib/reaction";
@@ -22,13 +23,15 @@ const short = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-G
 const timingOfDetail = (detail: string | null) => (detail?.includes("before market open") ? "before the open" : detail?.includes("after market close") ? "after the close" : null);
 
 export default async function Earnings({ params }: { params: Promise<{ ticker: string }> }) {
-  const access = await getAccess();
+  const t = renderTimer("earnings");
+  const access = t.step("access", await getAccess());
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const company = await getCompany(ticker);
+  const company = t.step("company", await getCompany(ticker));
   if (!company) notFound();
-  const [{ rels }, events] = await Promise.all([getRels(company.id), getUpcomingEvents(company.id)]);
-  const [around, reaction] = await Promise.all([getAround(rels, company.id), getReaction(company, rels)]);
+  const [{ rels }, events] = t.step("links", await Promise.all([getRels(company.id), getUpcomingEvents(company.id)]));
+  const [around, reaction] = t.step("moves", await Promise.all([getAround(rels, company.id), getReaction(company, rels)]));
+  t.done(ticker);
   const next = events.find((e) => e.event_type === "earnings" && e.status === "promoted");
   const own = reaction.table ? ownReports(reaction.table) : [];
   return (

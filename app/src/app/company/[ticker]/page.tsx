@@ -7,6 +7,7 @@ import { offlineNews } from "@/lib/news";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
+import { renderTimer } from "@/lib/render-timing";
 import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels, recordView } from "@/lib/data";
 import { getMetrics, getUpcomingEvents, isUSListed, type Metrics } from "@/lib/marketdb";
@@ -62,10 +63,11 @@ function Rows({ rows }: { rows: [string, string | null | undefined][] }) {
 }
 
 export default async function Company({ params }: { params: Promise<{ ticker: string }> }) {
-  const access = await getAccess();
+  const t = renderTimer("overview");
+  const access = t.step("access", await getAccess());
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const company = await getCompany(ticker);
+  const company = t.step("company", await getCompany(ticker));
   if (!company) notFound();
   // NFR-1: everything below runs at once. Market data and news are cached for 5 minutes (lib/page-cache.ts); insider trades are stored
   // by the daily job; the rest are database reads under row-level security. One timing line per load goes to the server log.
@@ -81,6 +83,8 @@ export default async function Company({ params }: { params: Promise<{ ticker: st
     timed("insiders", isOffline() ? Promise.resolve({ trades: [], checked: 0, error: "Offline: insider trades are not saved for the offline demo." } as Awaited<ReturnType<typeof getStoredInsiderTrades>>) : getStoredInsiderTrades(company)),
   ]);
   console.info(`[company] ${ticker} data in ${Date.now() - t0} ms (${Object.entries(ms).map(([k, v]) => `${k} ${v}`).join(", ")})`);
+  t.step("data");
+  t.done(ticker);
   const q = m.quote, f = m.f ?? {}, p = m.profile;
   const up = !!q && q.change >= 0;
   const asOf = q?.t ? new Date(q.t * 1000).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }) + " UTC" : null;

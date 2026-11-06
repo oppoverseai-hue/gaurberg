@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
+import { renderTimer } from "@/lib/render-timing";
 import { getCompany } from "@/lib/data";
 import { getMarket } from "@/lib/market";
 import { readFinancials } from "@/lib/financials";
@@ -13,12 +14,14 @@ import SourceTip from "@/components/SourceTip";
 export const dynamic = "force-dynamic";
 
 export default async function Financials({ params }: { params: Promise<{ ticker: string }> }) {
-  const access = await getAccess();
+  const t = renderTimer("financials");
+  const access = t.step("access", await getAccess());
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const company = await getCompany(ticker);
+  const company = t.step("company", await getCompany(ticker));
   if (!company) notFound();
-  const [m, fin] = [await getMarket(company), readFinancials(ticker)];
+  const [m, fin] = [t.step("market", await getMarket(company)), readFinancials(ticker)];
+  t.done(ticker);
   return (
     <main>
       <Breadcrumbs items={[{ label: company.name, href: `/company/${company.ticker ?? ticker}` }, { label: "Financials" }]} />

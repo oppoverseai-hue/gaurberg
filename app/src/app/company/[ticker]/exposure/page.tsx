@@ -5,6 +5,7 @@ import ExposureMatrix, { type MatrixCo } from "@/components/ExposureMatrix";
 import Collapsible from "@/components/Collapsible";
 import { notFound, redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
+import { renderTimer } from "@/lib/render-timing";
 import { getCompany, getRels } from "@/lib/data";
 import { promotedRelsFor } from "@/lib/connect";
 import { sourceLabel } from "@/lib/connect-core";
@@ -30,13 +31,14 @@ const unreviewed = (r: ExpLink["rel"]) => !REVIEWED.has(badgeOf(r).cls);
 const shortDay = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
 
 export default async function Exposure({ params }: { params: Promise<{ ticker: string }> }) {
-  const access = await getAccess();
+  const t = renderTimer("exposure");
+  const access = t.step("access", await getAccess());
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const co = await getCompany(ticker);
+  const co = t.step("company", await getCompany(ticker));
   if (!co) notFound();
   // Reviewed (promoted) links only. The map also shows live-generated links, so say how many are left out here.
-  const [{ rels, error }, { rels: mapRels }] = await Promise.all([promotedRelsFor([co.id]), getRels(co.id)]);
+  const [{ rels, error }, { rels: mapRels }] = t.step("links", await Promise.all([promotedRelsFor([co.id]), getRels(co.id)]));
   const live = mapRels.filter((r) => r.status === "live").length;
   const e = buildExposure(co.id, rels);
   const [earnings, cm, reaction] = await Promise.all([
@@ -44,6 +46,8 @@ export default async function Exposure({ params }: { params: Promise<{ ticker: s
     error ? Promise.resolve({}) : getComove(co.id, rels),
     getReaction(co, rels),
   ]);
+  t.step("prices");
+  t.done(ticker);
   const all = [...KINDS.flatMap((k) => e.ranked[k]), ...e.unweighted, ...e.partners, ...e.competitors];
   const matrix = buildMatrix(all, cm);
   const short = shortName(co.name);
