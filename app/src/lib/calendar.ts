@@ -4,7 +4,7 @@
 // review") are read for the admin only, as the admin page reads: the role is checked first, then the signed-in client under RLS.
 import fs from "node:fs";
 import { supabaseServer } from "@/lib/supabase/server";
-import { isOffline } from "@/lib/mode";
+import { devSwitch, isOffline } from "@/lib/mode";
 import { readSnapshot } from "@/lib/saved";
 import { readStagedForAdmin, type CalCo, type CalEvent, type StagedRow } from "@/lib/calendar-core";
 
@@ -18,7 +18,7 @@ const PAGE = 1000; // the API's row limit per request
 export async function loadCalendar(today: string, roleP: Promise<string>): Promise<CalData> {
   if (isOffline()) {
     // Local screenshots only (the offline demo never runs on Vercel): a saved read-only export, as in tests/fixtures.
-    const f = process.env.DEV_CALENDAR_FIXTURE;
+    const f = devSwitch("DEV_CALENDAR_FIXTURE");
     if (f) {
       const fx = JSON.parse(fs.readFileSync(f, "utf8")) as { cos: CalCo[]; events: CalEvent[]; links: Record<number, number>; secIds: number[]; loadedIds: number[] };
       const staged = await readStagedForAdmin(await roleP, async () => fx.events.filter((e) => e.status === "staged"));

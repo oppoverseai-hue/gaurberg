@@ -7,4 +7,6 @@ For the dry run on your own laptop with the network off. Not for the hosted app:
 3. The graph (companies, promoted links, quotes) is in `app/data/snapshot.json`. Refresh it after any promotion.
 4. Run: `cd app && npm run build && DEMO_OFFLINE=1 npm start`. Sign-in is skipped in this mode and a banner says "Offline: showing saved data".
 
+5. Screenshot fixtures (`DEV_CALENDAR_FIXTURE`, `DEV_CALENDAR_ROLE`, `DEV_AROUND_FIXTURE`, `DEV_REACTION_FIXTURE`, `DEV_NEWS_FIXTURE`, `DEV_MAP_FIXTURE`) work only in local development: `cd app && DEMO_OFFLINE=1 DEV_…=… npx next dev`. A production build (`npm start`) and Vercel ignore them even when they are set (`devSwitch` in `app/src/lib/mode.ts`).
+
 If a live call fails in the normal app, the page falls back to the same saved files and says so; without a saved file it shows "Data unavailable: <reason>".
