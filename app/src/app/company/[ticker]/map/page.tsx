@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
+import { after } from "next/server";
 import Link from "next/link";
-import { getAccess } from "@/lib/supabase/server";
+import { getAccess, supabaseServer } from "@/lib/supabase/server";
 import { renderTimer } from "@/lib/render-timing";
 import { getCompany, getRels, getGeo, recordView } from "@/lib/data";
 import type { Rel } from "@/lib/graph";
@@ -14,13 +15,16 @@ export const dynamic = "force-dynamic";
 // ?focus=<company id> opens the map with that company selected (TRM-1: search results for unmapped companies land here).
 export default async function MapPage({ params, searchParams }: { params: Promise<{ ticker: string }>; searchParams: Promise<{ focus?: string }> }) {
   const t = renderTimer("map");
-  const access = t.step("access", await getAccess());
-  if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
   const focusId = Number((await searchParams).focus) || undefined;
-  const focal = t.step("company", await getCompany(ticker));
+  // NFR-1: the sign-in check, the allowlist and the company lookup at once (the company read is under RLS; the role is still checked
+  // before anything renders).
+  const [access, focal] = t.step("access+company", await Promise.all([getAccess(), getCompany(ticker)]));
+  if (access.state !== "ok") redirect("/");
   if (!focal) notFound();
-  t.step("view", await recordView(focal.id));
+  // The "viewed" row is written after the page is sent: it never delays the page, and a failure never blocks it.
+  const db = await supabaseServer();
+  after(() => recordView(db, focal.id));
   // RLS decides what is visible online: allowed users see promoted links only; the admin also sees staged links. Offline shows the saved promoted links.
   const { rels, error: relError } = t.step("links", await getRels(focal.id));
   const error = relError;

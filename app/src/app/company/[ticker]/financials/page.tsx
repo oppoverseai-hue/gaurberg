@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
 import { renderTimer } from "@/lib/render-timing";
 import { getCompany } from "@/lib/data";
-import { getMarket } from "@/lib/market";
+import { cachedMarket } from "@/lib/page-cache";
 import { readFinancials } from "@/lib/financials";
 import { isUSListed } from "@/lib/marketdb";
 import CompanyTabs from "@/components/CompanyTabs";
@@ -15,12 +15,15 @@ export const dynamic = "force-dynamic";
 
 export default async function Financials({ params }: { params: Promise<{ ticker: string }> }) {
   const t = renderTimer("financials");
-  const access = t.step("access", await getAccess());
-  if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const company = t.step("company", await getCompany(ticker));
+  // NFR-1: the sign-in check, the allowlist and the company lookup at once (the company read is under RLS; the role is still checked
+  // before anything renders).
+  const [access, company] = t.step("access+company", await Promise.all([getAccess(), getCompany(ticker)]));
+  if (access.state !== "ok") redirect("/");
   if (!company) notFound();
-  const [m, fin] = [t.step("market", await getMarket(company)), readFinancials(ticker)];
+  // Market data behind the same 5-minute cache as Overview (lib/page-cache.ts, shared key), not 5 live outside calls per visit. This
+  // page uses only market cap and shares outstanding from it (Finnhub /stock/metric and /stock/profile2); the statements are saved files.
+  const [m, fin] = [t.step("market", await cachedMarket(company)), readFinancials(ticker)];
   t.done(ticker);
   return (
     <main>

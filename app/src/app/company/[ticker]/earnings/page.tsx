@@ -24,13 +24,15 @@ const timingOfDetail = (detail: string | null) => (detail?.includes("before mark
 
 export default async function Earnings({ params }: { params: Promise<{ ticker: string }> }) {
   const t = renderTimer("earnings");
-  const access = t.step("access", await getAccess());
-  if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const company = t.step("company", await getCompany(ticker));
+  // NFR-1: the sign-in check, the allowlist and the company lookup at once (the company read is under RLS; the role is still checked
+  // before anything renders).
+  const [access, company] = t.step("access+company", await Promise.all([getAccess(), getCompany(ticker)]));
+  if (access.state !== "ok") redirect("/");
   if (!company) notFound();
-  const [{ rels }, events] = t.step("links", await Promise.all([getRels(company.id), getUpcomingEvents(company.id)]));
-  const [around, reaction] = t.step("moves", await Promise.all([getAround(rels, company.id), getReaction(company, rels)]));
+  // Links, upcoming dates and the SEC report dates start together; nearby moves and report-day prices follow the links.
+  const relsP = getRels(company.id).then((r) => r.rels);
+  const [around, reaction, events] = t.step("data", await Promise.all([relsP.then((rels) => getAround(rels, company.id)), getReaction(company, relsP), getUpcomingEvents(company.id)]));
   t.done(ticker);
   const next = events.find((e) => e.event_type === "earnings" && e.status === "promoted");
   const own = reaction.table ? ownReports(reaction.table) : [];
