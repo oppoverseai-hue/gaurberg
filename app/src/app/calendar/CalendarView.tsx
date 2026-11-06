@@ -1,5 +1,7 @@
 "use client";
 // Earnings calendar view (TRM-13, UX-4, GRF-20). Filters, weeks and exports run in the browser on the rows the server read.
+// Links to other companies' pages here are prefetch={false}: a long list would prefetch every page it shows (item 25). The tab bar,
+// breadcrumb and header keep the default prefetch.
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
@@ -29,7 +31,7 @@ function Row({ r, review }: { r: CalRow; review: boolean }) {
         {review && r.underReview && <span className="cal-chip cal-review mono" title="A different date from Finnhub is staged and waiting for the admin's review. The date shown is the reviewed one.">Date under review</span>}
       </span>
       <span className="cal-links mono muted" title="Reviewed links in the graph">{r.links} reviewed link{r.links === 1 ? "" : "s"}</span>
-      <Link className="chip cal-open" href={`/company/${t}/earnings`} aria-label={`Open ${r.co.name} earnings`}>Open</Link>
+      <Link className="chip cal-open" href={`/company/${t}/earnings`} prefetch={false} aria-label={`Open ${r.co.name} earnings`}>Open</Link>
     </li>
   );
 }
@@ -42,7 +44,7 @@ function Reasons({ title, items }: { title: string; items: Prepared["noDate"] })
       <ul className="cal-reasons">
         {items.map((x) => (
           <li key={x.co.id}>
-            {x.co.ticker ? <Link href={`/company/${x.co.ticker}`}>{x.co.name}</Link> : <span>{x.co.name}</span>}
+            {x.co.ticker ? <Link href={`/company/${x.co.ticker}`} prefetch={false}>{x.co.name}</Link> : <span>{x.co.name}</span>}
             {x.co.ticker && <span className="muted mono"> {x.co.ticker}</span>}
             <span className="muted"> · {x.reason}</span>
           </li>
@@ -122,7 +124,7 @@ export default function CalendarView({ data, today, review, initialRange, notice
           <div className="cardhead"><h3>Later in the next {HORIZON} days</h3><span className="label">{later.length}</span></div>
           <ul>
             {later.map((r) => (
-              <li key={r.co.id}><Link href={`/company/${r.co.ticker}/earnings`}><span className="mono">{r.co.ticker}</span> {short(r.co)}</Link><span className="mono muted">{dayShort(r.date)}</span></li>
+              <li key={r.co.id}><Link href={`/company/${r.co.ticker}/earnings`} prefetch={false}><span className="mono">{r.co.ticker}</span> {short(r.co)}</Link><span className="mono muted">{dayShort(r.date)}</span></li>
             ))}
           </ul>
         </section>

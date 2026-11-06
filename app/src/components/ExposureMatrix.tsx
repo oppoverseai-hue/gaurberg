@@ -3,6 +3,8 @@
 // of its daily returns against the focal company, coloured by its map group. Table: every linked company, points or not, with the
 // stated reason for a missing pattern. Chips filter both and carry the map's counts. Selecting a company fills the side panel.
 // Plain SVG; every number comes from the server (comove-core, reaction-core, stored rows).
+// Links to other companies' pages here are prefetch={false}: a long list would prefetch every page it shows (item 25). The tab bar,
+// breadcrumb and header keep the default prefetch.
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import MoveCell from "@/components/MoveCell";
@@ -125,7 +127,7 @@ export default function ExposureMatrix({ focal, cos, counts, stat, children }: {
         <aside ref={panel} className="xm-panel" aria-live="polite">
           {!picked ? <p className="muted">Select a company in the chart or the table to see its links, measured pattern and evidence.</p> : (
             <>
-              <h3>{picked.href ? <Link href={picked.href}>{picked.name}</Link> : picked.name}{picked.ticker && <>{" "}<span className="tkchip">{picked.ticker}</span></>}</h3>
+              <h3>{picked.href ? <Link href={picked.href} prefetch={false}>{picked.name}</Link> : picked.name}{picked.ticker && <>{" "}<span className="tkchip">{picked.ticker}</span></>}</h3>
               <p className="xm-kv"><span className="xm-dot" style={{ background: COLOR[picked.place] }} aria-hidden />{SIDE_LABEL[picked.place]}</p>
               <ul className="xm-links">{picked.links.map((l, i) => <li key={i}>{l.text}{l.badge && <> <span className="badge b-live">{l.badge}</span></>}</li>)}</ul>
               <dl className="xm-dl">
@@ -155,7 +157,7 @@ export default function ExposureMatrix({ focal, cos, counts, stat, children }: {
                   )) : l.url ? <p className="muted"><a href={l.url} target="_blank" rel="noreferrer">Filing ↗</a></p> : <p className="muted">No quote or filing link saved.</p>}
                 </div>
               ))}
-              {picked.href && <p><Link href={picked.href}>Open {picked.name}&apos;s page →</Link></p>}
+              {picked.href && <p><Link href={picked.href} prefetch={false}>Open {picked.name}&apos;s page →</Link></p>}
             </>
           )}
         </aside>

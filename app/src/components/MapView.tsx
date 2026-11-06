@@ -1,4 +1,6 @@
 "use client";
+// Links to other companies' pages here are prefetch={false}: a long list would prefetch every page it shows (item 25). The tab bar,
+// breadcrumb and header keep the default prefetch.
 import { useEffect, useMemo, useState } from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CompanyTabs from "@/components/CompanyTabs";
@@ -315,7 +317,7 @@ function HeadlineLine({ co }: { co: Co }) {
   return (
     <div className="r"><span>{co.name}</span>
       <span>{err ? <span className="warn">News unavailable</span> : !h ? <span className="muted">Loading…</span> : h.item
-        ? <Link href={`/company/${co.ticker}#news`}>{h.item.headline} <span className="muted">· {h.item.source} · {day}</span></Link>
+        ? <Link href={`/company/${co.ticker}#news`} prefetch={false}>{h.item.headline} <span className="muted">· {h.item.source} · {day}</span></Link>
         : <span className="muted">{h.note}</span>}</span>
     </div>
   );
@@ -385,7 +387,7 @@ function PreviewNews({ co }: { co: Co }) {
   if (err) return <span className="warn">news unavailable</span>;
   if (!h) return <span>loading…</span>;
   if (!h.item) return <span>{h.note}</span>;
-  return <Link href={`/company/${co.ticker}#news`}>{h.item.headline} · {h.item.source} · {new Date(h.item.ts * 1000).toISOString().slice(0, 10)}</Link>;
+  return <Link href={`/company/${co.ticker}#news`} prefetch={false}>{h.item.headline} · {h.item.source} · {new Date(h.item.ts * 1000).toISOString().slice(0, 10)}</Link>;
 }
 
 function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { co: Co; focal: Co; onClose: () => void; onRecenter: (t: string) => void; geo?: GeoRow[]; countryRegion: CountryRegion }) {
@@ -421,7 +423,7 @@ function CompanyPane({ co, focal, onClose, onRecenter, geo, countryRegion }: { c
           <div className="counts"><div><b>{data.counts.suppliers}</b>Suppliers</div><div><b>{data.counts.customers}</b>Customers</div><div><b>{data.counts.partners}</b>Partners</div><div><b>{data.counts.rivals}</b>Rivals</div></div>
           <p className="muted mono" style={{ fontSize: 11, margin: "0 0 12px" }}>About: {data.about ? data.about.split(/(?<=\.)\s/).slice(0, 2).join(" ") : "not available yet"}<br />Latest news: <PreviewNews co={co} /></p>
           <div className="actions">
-            <Link className="chip" href={`/company/${co.ticker}`}>Open full page</Link>
+            <Link className="chip" href={`/company/${co.ticker}`} prefetch={false}>Open full page</Link>
             {co.id !== focal.id && <button className="chip" onClick={() => onRecenter(co.ticker!)}>Recenter map here</button>}
           </div>
         </div>
