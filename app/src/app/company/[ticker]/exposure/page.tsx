@@ -32,19 +32,23 @@ const shortDay = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString("e
 
 export default async function Exposure({ params }: { params: Promise<{ ticker: string }> }) {
   const t = renderTimer("exposure");
-  const access = t.step("access", await getAccess());
-  if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const co = t.step("company", await getCompany(ticker));
+  // NFR-1: the sign-in check, the allowlist and the company lookup at once (the company read is under RLS; the role is still checked
+  // before anything renders).
+  const [access, co] = t.step("access+company", await Promise.all([getAccess(), getCompany(ticker)]));
+  if (access.state !== "ok") redirect("/");
   if (!co) notFound();
   // Reviewed (promoted) links only. The map also shows live-generated links, so say how many are left out here.
-  const [{ rels, error }, { rels: mapRels }] = t.step("links", await Promise.all([promotedRelsFor([co.id]), getRels(co.id)]));
+  // The SEC report dates (getReaction) start with the links; everything else that needs the links follows them.
+  const promotedP = promotedRelsFor([co.id]);
+  const reactionP = getReaction(co, promotedP.then((x) => x.rels));
+  const [{ rels, error }, { rels: mapRels }] = t.step("links", await Promise.all([promotedP, getRels(co.id)]));
   const live = mapRels.filter((r) => r.status === "live").length;
   const e = buildExposure(co.id, rels);
   const [earnings, cm, reaction] = await Promise.all([
     getPromotedEarnings([...new Set([co.id, ...rels.flatMap((r) => [r.source.id, r.target.id])])]),
     error ? Promise.resolve({}) : getComove(co.id, rels),
-    getReaction(co, rels),
+    reactionP,
   ]);
   t.step("prices");
   t.done(ticker);

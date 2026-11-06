@@ -5,8 +5,9 @@ import { getStoredInsiderTrades } from "@/lib/insiders";
 import { cachedMarket, cachedNews } from "@/lib/page-cache";
 import { offlineNews } from "@/lib/news";
 import { notFound, redirect } from "next/navigation";
+import { after } from "next/server";
 import Link from "next/link";
-import { getAccess } from "@/lib/supabase/server";
+import { getAccess, supabaseServer } from "@/lib/supabase/server";
 import { renderTimer } from "@/lib/render-timing";
 import { fmtBig, fmtShares } from "@/lib/finnhub";
 import { getCompany, getRels, recordView } from "@/lib/data";
@@ -64,17 +65,19 @@ function Rows({ rows }: { rows: [string, string | null | undefined][] }) {
 
 export default async function Company({ params }: { params: Promise<{ ticker: string }> }) {
   const t = renderTimer("overview");
-  const access = t.step("access", await getAccess());
-  if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
-  const company = t.step("company", await getCompany(ticker));
+  // NFR-1: the sign-in check, the allowlist and the company lookup at once (the company read is under RLS, so it shows nothing to a
+  // viewer who is not allowed; the role is still checked before anything renders). The view is recorded after the page is sent.
+  const [access, company] = t.step("access+company", await Promise.all([getAccess(), getCompany(ticker)]));
+  if (access.state !== "ok") redirect("/");
   if (!company) notFound();
+  const db = await supabaseServer();
+  after(() => recordView(db, company.id));
   // NFR-1: everything below runs at once. Market data and news are cached for 5 minutes (lib/page-cache.ts); insider trades are stored
   // by the daily job; the rest are database reads under row-level security. One timing line per load goes to the server log.
   const t0 = Date.now(), ms: Record<string, number> = {};
   const timed = <T,>(k: string, p: Promise<T>) => p.then((v) => { ms[k] = Date.now() - t0; return v; });
-  const [, m, { rels, around }, mt, events, news, insiders] = await Promise.all([
-    timed("view", recordView(company.id)),
+  const [m, { rels, around }, mt, events, news, insiders] = await Promise.all([
     timed("market", cachedMarket(company)),
     timed("links", getRels(company.id).then(async (r) => ({ rels: r.rels, around: await getAround(r.rels, company.id) }))),
     timed("metrics", getMetrics(company.id)),
