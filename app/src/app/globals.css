@@ -505,3 +505,15 @@ a.resrow:hover > div:first-child, a.resrow:focus > div:first-child { text-decora
 .xm-seg button:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }
 @media (max-width:600px) { .xm-seg { display:none; } }
 .xm-sources ul { margin:0; padding-left:18px; font-size:13px; } .xm-sources li { margin:4px 0; } .xm-sources li .muted { font-size:11px; }
+
+/* Loading frames (NFR-1): shown at once on a tap while the page renders. Placeholders only, no data. */
+.sk-line { display:inline-block; height:12px; border-radius:4px; background:var(--surface-high); }
+.sk-crumb { display:block; width:180px; margin:0 0 12px; }
+.sk-title { width:min(260px, 60vw); height:28px; }
+.sk-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:16px; }
+.sk-card { min-height:160px; margin-top:16px; background:var(--surface-mid); }
+.sk-wide { min-height:240px; }
+.sk-note { font-size:11px; margin-top:12px; }
+.sk-line, .sk-card { animation:sk-pulse 1.2s ease-in-out infinite alternate; }
+@keyframes sk-pulse { from { opacity:.55; } to { opacity:1; } }
+@media (prefers-reduced-motion:reduce) { .sk-line, .sk-card { animation:none; } }

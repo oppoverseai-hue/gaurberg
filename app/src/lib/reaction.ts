@@ -22,21 +22,24 @@ export function whyNone(co: { name: string; markets?: string[] | null }): string
     : `Report dates come from SEC 8-K filings (item 2.02). ${co.name}'s main listing is outside the US, so none are stored.`;
 }
 
-export async function getReaction(focal: Co & { markets?: string[] | null }, rels: Rel[]): Promise<ReactionData> {
-  const linked = neighbours(rels.filter((r) => r.status === "promoted"), focal.id).map((n) => n.co).filter((c) => !isGroup(c));
-  let events: EventRow[], closes: Close[];
+// The links may still be loading (NFR-1): the report dates depend only on the company, so they are read at once, and the links are
+// awaited only for the report-day prices.
+export async function getReaction(focal: Co & { markets?: string[] | null }, relsIn: Rel[] | Promise<Rel[]>): Promise<ReactionData> {
+  let events: EventRow[], closes: Close[], rels: Rel[];
   if (isOffline()) {
     // Local screenshots only (the offline demo never runs on Vercel): a saved read-only export of promoted rows and closes.
     const f = process.env.DEV_REACTION_FIXTURE;
     const fx = f ? (JSON.parse(fs.readFileSync(f, "utf8")) as Record<string, { events: EventRow[]; closes: Close[] }>)[String(focal.id)] : undefined;
+    rels = await relsIn;
     if (!fx) return { table: null, why: "Offline: report dates and closes are not saved for the offline demo." };
     ({ events, closes } = fx);
   } else {
     const supabase = await supabaseServer();
-    const { data } = await supabase.from("company_events").select("event_date,source,detail").eq("company_id", focal.id).eq("event_type", "earnings").eq("status", "promoted").like("source", "https://www.sec.gov/%").order("event_date", { ascending: false }).limit(12);
+    const [{ data }, r] = await Promise.all([supabase.from("company_events").select("event_date,source,detail").eq("company_id", focal.id).eq("event_type", "earnings").eq("status", "promoted").like("source", "https://www.sec.gov/%").order("event_date", { ascending: false }).limit(12), relsIn]);
     events = (data ?? []) as EventRow[];
+    rels = r;
     const reports = lastReports(events);
-    const ids = [focal.id, ...linked.map((c) => c.id)];
+    const ids = [focal.id, ...linkedOf(focal, rels).map((c) => c.id)];
     const parts = await Promise.all(reports.map((r) => supabase.from("price_cache").select("company_id,ts,close").in("company_id", ids).gte("ts", shift(r.date, -8)).lte("ts", `${shift(r.date, 8)}T23:59:59Z`).order("ts")));
     closes = parts.flatMap((p) => (p.data ?? []) as Close[]);
   }
@@ -44,5 +47,7 @@ export async function getReaction(focal: Co & { markets?: string[] | null }, rel
   if (!reports.length) return { table: null, why: whyNone(focal) };
   const byCo = new Map<number, Map<string, number>>();
   for (const c of closes) (byCo.get(c.company_id) ?? byCo.set(c.company_id, new Map()).get(c.company_id)!).set(c.ts.slice(0, 10), Number(c.close));
-  return { table: reactionTable(reports, focal, linked, byCo), why: null };
+  return { table: reactionTable(reports, focal, linkedOf(focal, rels), byCo), why: null };
 }
+
+const linkedOf = (focal: Co, rels: Rel[]) => neighbours(rels.filter((r) => r.status === "promoted"), focal.id).map((n) => n.co).filter((c) => !isGroup(c));

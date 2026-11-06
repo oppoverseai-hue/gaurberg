@@ -1,5 +1,6 @@
 // One place for company and link data. Online it reads Supabase (row-level security decides what is visible);
 // in offline demo mode it reads the saved snapshot (promoted links only).
+import { cache } from "react";
 import { supabaseServer } from "@/lib/supabase/server";
 import { isOffline } from "@/lib/mode";
 import { readSnapshot, type CoRow } from "@/lib/saved";
@@ -11,12 +12,13 @@ export const REL_SEL = "id,relationship_type,exposure_pct,exposure_basis,exposur
   "source:companies!relationships_source_id_fkey(id,ticker,name,is_seed,entity_type,markets),target:companies!relationships_target_id_fkey(id,ticker,name,is_seed,entity_type,markets)," +
   "evidence(quote,document_url,section,published_at,quote_found)";
 
-export async function getCompany(ticker: string): Promise<CoRow | null> {
+// Once per request (React cache), shared by everything in the same render. Under RLS, so it returns nothing to a viewer who is not allowed.
+export const getCompany = cache(async (ticker: string): Promise<CoRow | null> => {
   if (isOffline()) return readSnapshot()?.companies.find((c) => c.ticker === ticker) ?? null;
   const supabase = await supabaseServer();
   const { data } = await supabase.from("companies").select(CO).eq("ticker", ticker).maybeSingle();
   return (data as CoRow | null) ?? null;
-}
+});
 
 export async function getRels(companyId: number): Promise<{ rels: Rel[]; error: boolean }> {
   if (isOffline()) {
@@ -47,12 +49,12 @@ export async function getGeo(companyIds: number[]): Promise<{ geo: GeoMap; count
 }
 
 // Remember that this user opened a company (feeds Screener "Viewed by me"). Best effort: skipped offline, never blocks the page.
-export async function recordView(companyId: number): Promise<void> {
+// NFR-1: pages call it inside after(), once the page has been sent, so it never delays the render. Request data (cookies) can't be read
+// inside after() in a page, so the page passes in its database client, made during the render. The page has already checked that the
+// viewer is signed in and invited; RLS ties the row to that user.
+export async function recordView(supabase: Awaited<ReturnType<typeof supabaseServer>>, companyId: number): Promise<void> {
   if (isOffline()) return;
   try {
-    const supabase = await supabaseServer();
-    const { data: u } = await supabase.auth.getUser();
-    if (!u.user) return;
     const { data: row } = await supabase.from("viewed_companies").select("id,views").eq("company_id", companyId).maybeSingle();
     if (row) await supabase.from("viewed_companies").update({ views: row.views + 1, last_viewed_at: new Date().toISOString() }).eq("id", row.id);
     else await supabase.from("viewed_companies").insert({ company_id: companyId });
