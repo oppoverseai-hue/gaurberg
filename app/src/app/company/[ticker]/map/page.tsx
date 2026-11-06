@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { getAccess } from "@/lib/supabase/server";
+import { renderTimer } from "@/lib/render-timing";
 import { getCompany, getRels, getGeo, recordView } from "@/lib/data";
 import type { Rel } from "@/lib/graph";
 import MapView from "@/components/MapView";
@@ -12,20 +13,23 @@ export const dynamic = "force-dynamic";
 
 // ?focus=<company id> opens the map with that company selected (TRM-1: search results for unmapped companies land here).
 export default async function MapPage({ params, searchParams }: { params: Promise<{ ticker: string }>; searchParams: Promise<{ focus?: string }> }) {
-  const access = await getAccess();
+  const t = renderTimer("map");
+  const access = t.step("access", await getAccess());
   if (access.state !== "ok") redirect("/");
   const ticker = (await params).ticker.toUpperCase();
   const focusId = Number((await searchParams).focus) || undefined;
-  const focal = await getCompany(ticker);
+  const focal = t.step("company", await getCompany(ticker));
   if (!focal) notFound();
-  await recordView(focal.id);
+  t.step("view", await recordView(focal.id));
   // RLS decides what is visible online: allowed users see promoted links only; the admin also sees staged links. Offline shows the saved promoted links.
-  const { rels, error: relError } = await getRels(focal.id);
+  const { rels, error: relError } = t.step("links", await getRels(focal.id));
   const error = relError;
   const [{ geo, countryRegion }, comove] = await Promise.all([
     getGeo([...new Set([focal.id, ...rels.flatMap((r) => [r.source.id, r.target.id])])]),
     error ? Promise.resolve({}) : getComove(focal.id, rels),
   ]);
+  t.step("prices");
+  t.done(ticker);
   return (
     <main className="wide">
       {error ? (
