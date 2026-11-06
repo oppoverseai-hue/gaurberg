@@ -13,14 +13,18 @@ export const dynamic = "force-dynamic";
 // Earnings calendar (TRM-13, UX-4, GRF-20): upcoming reports for every seed company from reviewed Finnhub dates, grouped by week.
 export default async function CalendarPage({ searchParams }: { searchParams: Promise<{ w?: string }> }) {
   const t = renderTimer("calendar");
-  const access = t.step("access", await getAccess());
-  if (access.state !== "ok") redirect("/");
   const sp = await searchParams;
   const range = (RANGES.find((r) => String(r) === sp.w) ?? 30) as Range;
   const today = nyToday(new Date().toISOString()); // the New York day, as for report dates
+  // NFR-1: the sign-in check and the calendar reads start together (all under RLS). The role is still checked before anything renders,
+  // and the admin-only staged read waits for it.
+  const accessP = getAccess();
   // The offline demo is always the admin; DEV_CALENDAR_ROLE=reviewer shows the reviewer view in local screenshots only.
-  const role = isOffline() && process.env.DEV_CALENDAR_ROLE === "reviewer" ? "reviewer" : access.role;
-  const data = t.step("data", await loadCalendar(today, role));
+  const roleP = accessP.then((a) => (isOffline() && process.env.DEV_CALENDAR_ROLE === "reviewer" ? "reviewer" : a.state === "ok" ? a.role : "none"));
+  const dataP = loadCalendar(today, roleP);
+  const access = t.step("access", await accessP);
+  if (access.state !== "ok") redirect("/");
+  const data = t.step("data", await dataP);
   t.done();
   const prepared = prepare({ ...data, isCovered: (c) => isUSListed(c.markets), today });
   const notice = data.offline ? "Offline: earnings dates are not saved for the offline demo."
