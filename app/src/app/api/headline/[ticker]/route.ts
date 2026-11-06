@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getAccess } from "@/lib/supabase/server";
 import { getNews, offlineNews } from "@/lib/news";
-import { isOffline } from "@/lib/mode";
+import { devSwitch, isOffline } from "@/lib/mode";
 import { getCompany } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
@@ -14,7 +14,7 @@ export async function GET(_: Request, { params }: { params: Promise<{ ticker: st
   const ticker = (await params).ticker.toUpperCase();
   const co = await getCompany(ticker);
   if (!co) return NextResponse.json({ item: null, note: "Company not found." });
-  if (isOffline() && !process.env.DEV_NEWS_FIXTURE) return NextResponse.json({ item: null, note: "News is not saved for offline mode." });
+  if (isOffline() && !devSwitch("DEV_NEWS_FIXTURE")) return NextResponse.json({ item: null, note: "News is not saved for offline mode." });
   const { items, errors } = isOffline() ? offlineNews(co) : await getNews(co);
   const cutoff = Date.now() / 1000 - 7 * 86400;
   const recent = items.filter((i) => i.ts >= cutoff);

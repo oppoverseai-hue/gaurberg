@@ -2,7 +2,7 @@
 // Reads company_events (promoted rows for allowed users) and price_cache, both written by the daily refresh.
 import fs from "node:fs";
 import { supabaseServer } from "@/lib/supabase/server";
-import { isOffline } from "@/lib/mode";
+import { devSwitch, isOffline } from "@/lib/mode";
 import { isGroup, type Rel } from "@/lib/graph";
 import { AHEAD_DAYS, BEHIND_DAYS, moves, neighbours, reports, type Move, type Report } from "@/lib/around-core";
 
@@ -13,10 +13,11 @@ export async function getAround(rels: Rel[], focalId: number): Promise<{ reports
   // Groups (drivers, riders) have no prices or report dates and are not companies, so they are left out (GRF-1).
   const ns = neighbours(rels.filter((r) => r.status === "promoted"), focalId).filter((n) => !isGroup(n.co));
   const ids = ns.map((n) => n.co.id);
-  if (isOffline() && ids.length && process.env.DEV_AROUND_FIXTURE) {
+  const fixture = devSwitch("DEV_AROUND_FIXTURE");
+  if (isOffline() && ids.length && fixture) {
     // Local screenshots only (isOffline() is never true on Vercel): a saved read-only export of a company's report dates and
     // closes, keyed by company id with the day it was read for, run through the same rules as the live card.
-    const f = JSON.parse(fs.readFileSync(process.env.DEV_AROUND_FIXTURE, "utf8"))[focalId] as { today: string; events: { company_id: number; event_date: string; detail: string | null }[]; closes: { company_id: number; ts: string; close: number }[] } | undefined;
+    const f = JSON.parse(fs.readFileSync(fixture, "utf8"))[focalId] as { today: string; events: { company_id: number; event_date: string; detail: string | null }[]; closes: { company_id: number; ts: string; close: number }[] } | undefined;
     if (f) return { reports: reports(ns, f.events, f.today), moves: moves(ns, f.closes), linked: ns.length, withPrices: new Set(f.closes.map((c) => c.company_id)).size };
   }
   if (isOffline() || !ids.length) return { reports: [], moves: [], linked: ns.length, withPrices: 0 };

@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { getAccess } from "@/lib/supabase/server";
 import { renderTimer } from "@/lib/render-timing";
 import { isUSListed } from "@/lib/marketdb";
-import { isOffline } from "@/lib/mode";
+import { devSwitch, isOffline } from "@/lib/mode";
 import { nyToday, prepare, RANGES, type Range } from "@/lib/calendar-core";
 import { loadCalendar } from "@/lib/calendar";
 import CalendarView from "./CalendarView";
@@ -20,7 +20,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: Pro
   // and the admin-only staged read waits for it.
   const accessP = getAccess();
   // The offline demo is always the admin; DEV_CALENDAR_ROLE=reviewer shows the reviewer view in local screenshots only.
-  const roleP = accessP.then((a) => (isOffline() && process.env.DEV_CALENDAR_ROLE === "reviewer" ? "reviewer" : a.state === "ok" ? a.role : "none"));
+  const roleP = accessP.then((a) => (isOffline() && devSwitch("DEV_CALENDAR_ROLE") === "reviewer" ? "reviewer" : a.state === "ok" ? a.role : "none"));
   const dataP = loadCalendar(today, roleP);
   const access = t.step("access", await accessP);
   if (access.state !== "ok") redirect("/");

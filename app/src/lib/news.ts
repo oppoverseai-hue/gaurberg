@@ -1,6 +1,7 @@
 // Recent news for one company (TRM-7): news and press releases from Finnhub (free plan), SEC filings from EDGAR. Server only.
 import fs from "node:fs";
 import { liveSymbol, type Listing } from "@/lib/listing";
+import { devSwitch } from "@/lib/mode";
 import { isFinnhubNewsUrl, newsHref } from "@/lib/news-link";
 import { splitNews, type NewsCo } from "@/lib/news-core";
 export type NewsItem = { kind: "news" | "press" | "filing"; headline: string; source: string; ts: number; url: string; link: string };
@@ -85,7 +86,7 @@ async function secFilings(ticker: string): Promise<{ items: NewsItem[]; error?: 
 // Offline demo: news is not saved. For local screenshots only (the offline demo never runs on Vercel), DEV_NEWS_FIXTURE can name a
 // saved read-only export of Finnhub items by ticker, run through the same relevance split as live news.
 export function offlineNews(co: Listing & NewsCo): NewsResult {
-  const f = process.env.DEV_NEWS_FIXTURE;
+  const f = devSwitch("DEV_NEWS_FIXTURE");
   const raw = f && co.ticker ? (JSON.parse(fs.readFileSync(f, "utf8")) as Record<string, { headline: string; source: string; datetime: number; url: string }[]>)[co.ticker] : undefined;
   if (!raw) return { items: [], market: [], errors: ["Offline: news is not saved for the offline demo."] };
   const items = raw.map((x) => ({ kind: WIRE.test(x.source) ? ("press" as const) : ("news" as const), headline: x.headline, source: x.source || "Unknown source", ts: x.datetime, url: x.url, link: newsHref(x.url, x.headline, x.source || "") }));

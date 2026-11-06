@@ -3,7 +3,7 @@
 // reviewed on the admin page first). Server only.
 import fs from "node:fs";
 import { supabaseServer } from "@/lib/supabase/server";
-import { isOffline } from "@/lib/mode";
+import { devSwitch, isOffline } from "@/lib/mode";
 import { isUSListed } from "@/lib/listing";
 import { isGroup, type Co, type Rel } from "@/lib/graph";
 import { neighbours } from "@/lib/around-core";
@@ -28,7 +28,7 @@ export async function getReaction(focal: Co & { markets?: string[] | null }, rel
   let events: EventRow[], closes: Close[], rels: Rel[];
   if (isOffline()) {
     // Local screenshots only (the offline demo never runs on Vercel): a saved read-only export of promoted rows and closes.
-    const f = process.env.DEV_REACTION_FIXTURE;
+    const f = devSwitch("DEV_REACTION_FIXTURE");
     const fx = f ? (JSON.parse(fs.readFileSync(f, "utf8")) as Record<string, { events: EventRow[]; closes: Close[] }>)[String(focal.id)] : undefined;
     rels = await relsIn;
     if (!fx) return { table: null, why: "Offline: report dates and closes are not saved for the offline demo." };
